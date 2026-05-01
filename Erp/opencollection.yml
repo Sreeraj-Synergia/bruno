@@ -86,23 +86,8 @@ request:
       value: http://172.105.39.211:8069
     - name: Proserve-Test
       value: http://172.105.39.211:8071
-  actions:
-    - type: set-variable
-      phase: after-response
-      selector:
-        expression: res.body.result.payload.database_list[0]
-        method: jsonq
-      variable:
-        name: db
-        scope: runtime
-    - type: set-variable
-      phase: after-response
-      selector:
-        expression: ""
-        method: jsonq
-      variable:
-        name: ""
-        scope: runtime
+    - name: db
+      value: ""
 bundled: false
 extensions:
   bruno:

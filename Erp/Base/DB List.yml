@@ -11,6 +11,18 @@ http:
     data: "{}"
   auth: inherit
 
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const databaseList = res.body?.result?.payload?.database_list;
+        console.log(databaseList);
+        console.log((Array.isArray(databaseList) && databaseList.length > 0));
+        if (Array.isArray(databaseList) && databaseList.length > 0) {
+          bru.setEnvVar('db', databaseList[0]);
+          bru.setVar('db', databaseList[0]);
+        }
+
 settings:
   encodeUrl: true
   timeout: 0

@@ -16,7 +16,7 @@ http:
       {
           "params": {
               "db": "Erp3",
-              "login": "ajfar",
+              "login": "rijash",
               "password": "12345",
               "device_name": "BrunoSmile",
               "imei_no": false,

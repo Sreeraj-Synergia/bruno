@@ -1,0 +1,18 @@
+info:
+  name: Debug Details
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{Erp3-Local-8072}}/web/user_debug_details"
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
