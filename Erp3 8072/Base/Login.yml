@@ -1,0 +1,182 @@
+info:
+  name: Login
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:8072/web/session/mobile_login?db=Erp3
+  params:
+    - name: db
+      value: Erp3
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+          "params": {
+              "db": "Erp3",
+              "login": "ajfar",
+              "password": "12345",
+              "device_name": "BrunoSmile",
+              "imei_no": false,
+              "latitude": false,
+              "ip_address": "192.168.1.119",
+              "longitude": false,
+              "fcm_id": false
+          }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Successful Login
+    request:
+      url: http://localhost:8072/web/session/mobile_login?db=Erp3
+      method: POST
+      params:
+        - name: db
+          value: Erp3
+          type: query
+      body:
+        type: json
+        data: |-
+          {
+              "params": {
+                  "db": "Erp3",
+                  "login": "ajfar",
+                  "password": "12345",
+                  "device_name": "BrunoSmile",
+                  "imei_no": false,
+                  "latitude": false,
+                  "ip_address": "192.168.1.119",
+                  "longitude": false,
+                  "fcm_id": false
+              }
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: Werkzeug/3.0.1 Python/3.12.3
+        - name: date
+          value: Fri, 01 May 2026 08:31:29 GMT
+        - name: content-length
+          value: "2298"
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: set-cookie
+          value: session_id=wQC7j6eLBliS-c3W9urexclX6e6Rjqu5J56z5lj3nEnbkp0AVEMh6yBf_NSZSa0Ye4XS2MCyFLJE7FHacNWG; Expires=Sat, 01 May 2027 08:31:29 GMT; Max-Age=604800; HttpOnly; Path=/,session_id=wQC7j6eLBliS-c3W9urexclX6e6Rjqu5J56z5lj3nEnbkp0AVEMh6yBf_NSZSa0Ye4XS2MCyFLJE7FHacNWG; Expires=Sat, 01 May 2027 08:31:29 GMT; Max-Age=604800; HttpOnly; Path=/
+        - name: x-content-type-options
+          value: nosniff
+        - name: connection
+          value: close
+      body:
+        type: json
+        data: |-
+          {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+              "success": true,
+              "payload": {
+                "name": "AJFAR TK",
+                "username": "AJFAR TK",
+                "user_name": "AJFAR TK",
+                "user_id": 114,
+                "uid": 114,
+                "login_id": "ajfar",
+                "logo_url": "http://localhost:8072/web/url_image?model=hr.employee&id=136&field=image_1920",
+                "user_signature": "http://localhost:8072/web/url_image?model=res.users&id=114&field=user_signature",
+                "employee_id": 136,
+                "employee_name": "AJFAR TK",
+                "manager": null,
+                "coach": null,
+                "department": "SUPPLY CHAIN & LOGISTICS",
+                "job_pos": "PICKER – WAREHOUSE",
+                "work_phone": "+971 4 2202898",
+                "work_mobile": null,
+                "work_email": "ajfar",
+                "logo": "http://localhost:8072/web/url_image?model=res.company&id=1&field=logo",
+                "contact_us_link": false,
+                "about_us_link": false,
+                "faq_link": false,
+                "company_id": 1,
+                "company_name": "Synergia Softwares IT infrastructure LLC",
+                "disable_offline_sales": false,
+                "auto_pay_cash_invoice": true,
+                "show_comp_details": "main_company",
+                "user_journey_available": false,
+                "running_actual_journey_id": null,
+                "running_actual_journey_name": null,
+                "create_direct_inv_delivery_after": true,
+                "create_direct_inv_delivery_before": false,
+                "validate_direct_inv_delivery_auto": true,
+                "validate_direct_inv_delivery_manual": false,
+                "picking_role": "picking",
+                "allow_manual_batch_picking": true,
+                "allow_lot_change_from_verify": false,
+                "allow_scanning_batch_picking": true,
+                "is_picking": false,
+                "can_verify_batch": false,
+                "show_mob_batch_loading": false,
+                "support_email": null,
+                "currency_ids": [
+                  {
+                    "currency_id": 128,
+                    "name": "AED",
+                    "full_name": "United Arab Emirates dirham",
+                    "currency_unit_label": "Dirham",
+                    "currency_subunit_label": "Fils",
+                    "symbol": "AED",
+                    "position": "after",
+                    "rounding": 0.01,
+                    "digits": [
+                      69,
+                      2
+                    ]
+                  },
+                  {
+                    "currency_id": 20,
+                    "name": "INR",
+                    "full_name": "Indian rupee",
+                    "currency_unit_label": "Rupees",
+                    "currency_subunit_label": "Paise",
+                    "symbol": "₹",
+                    "position": "before",
+                    "rounding": 0.01,
+                    "digits": [
+                      69,
+                      2
+                    ]
+                  },
+                  {
+                    "currency_id": 1,
+                    "name": "USD",
+                    "full_name": "United States dollar",
+                    "currency_unit_label": "Dollars",
+                    "currency_subunit_label": "Cents",
+                    "symbol": "$",
+                    "position": "before",
+                    "rounding": 0.01,
+                    "digits": [
+                      69,
+                      2
+                    ]
+                  }
+                ],
+                "user_companies": false,
+                "session_id": "wQC7j6eLBliS-c3W9urexclX6e6Rjqu5J56z5lj3nEnbkp0AVEMh6yBf_NSZSa0Ye4XS2MCyFLJE7FHacNWG"
+              },
+              "error": {
+                "code": 0,
+                "message": ""
+              }
+            }
+          }

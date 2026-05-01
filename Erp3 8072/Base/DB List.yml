@@ -1,0 +1,18 @@
+info:
+  name: DB List
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8072/web/database_list
+  body:
+    type: json
+    data: "{}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
