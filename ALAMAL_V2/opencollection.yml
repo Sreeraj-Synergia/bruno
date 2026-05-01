@@ -1,0 +1,17 @@
+opencollection: 1.0.0
+
+info:
+  name: ALAMAL_V2
+
+request:
+  variables:
+    - name: DynamicsURL
+      value: https://icecreamalamal.sandbox.operations.dynamics.com
+    - name: Token
+      value: ""
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

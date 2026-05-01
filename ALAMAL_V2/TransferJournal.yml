@@ -1,0 +1,102 @@
+info:
+  name: TransferJournal
+  type: http
+  seq: 81
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/api/services/GxGalaxy/GxGalaxyService/createTransferJournal"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Inp4ZWcyV09OcFRrd041R21lWWN1VGR0QzZKMCIsImtpZCI6Inp4ZWcyV09OcFRrd041R21lWWN1VGR0QzZKMCJ9.eyJhdWQiOiJodHRwczovL2Rldi1hbGFtYWw5YWVkNDFkMTlhYWRmYWQ4ZGV2YW9zLmF4Y2xvdWQuZHluYW1pY3MuY29tLyIsImlzcyI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2NjM2NhZDlkLTQxZWEtNGM1Ni1hNDM4LWRhNzU3ZDUwNTAxNi8iLCJpYXQiOjE3MzQyNDU0MzAsIm5iZiI6MTczNDI0NTQzMCwiZXhwIjoxNzM0MjQ5MzMwLCJhaW8iOiJrMkJnWUJETmMvaGgxWkZ6emJuSGFHcmFGOGJOQUE9PSIsImFwcGlkIjoiZjliMGRlZGQtNTQzNC00YjdhLWJjZDQtMTBlNWUxMGU2NmFiIiwiYXBwaWRhY3IiOiIxIiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvY2MzY2FkOWQtNDFlYS00YzU2LWE0MzgtZGE3NTdkNTA1MDE2LyIsImlkdHlwIjoiYXBwIiwib2lkIjoiMmEwNDlmYmItYTQxOS00Mjk2LWI1MjEtZTg4ZDJjYmM4OTE5IiwicmgiOiIxLkFhOEFuYTA4ek9wQlZreWtPTnAxZlZCUUZoVUFBQUFBQUFBQXdBQUFBQUFBQUFDdkFBQ3ZBQS4iLCJzdWIiOiIyYTA0OWZiYi1hNDE5LTQyOTYtYjUyMS1lODhkMmNiYzg5MTkiLCJ0aWQiOiJjYzNjYWQ5ZC00MWVhLTRjNTYtYTQzOC1kYTc1N2Q1MDUwMTYiLCJ1dGkiOiJGRDFmby1zTW1FMnN1eDEwMzJJNkFBIiwidmVyIjoiMS4wIiwieG1zX2lkcmVsIjoiNyAyIn0.UTndul8sfTjUsCbCpW06Wxbbt7Ywf2XSCV_eBqcSeU2bON6EgRFiXV1faqFUqja41JVrNcpJUJ130pgVBgcp5rNnPgZuwdCGFJ1ojyQPpeuGntyEqmGNehfdzdInygBwmYvruU9dHeNRMvHTVtAhcqnmLb04R2ZxX9lDcDPkXbaCw_gzauhxC8D20HUWlxcVNhWgWhBaMCqJu7H73LicGA6AsZXRyjAjuJ1ZB57ogT8JxE1JMKiKCI5bj3MNMkwPaxItTn7PqMHGd2GVVyeKCY15YU2zzL8GCMbvmXQl2mnOQWJsyFyT76c9mdSeWar5rI5ctk_h9m6g31fMSGrLpw
+  body:
+    type: json
+    data: |-
+      {
+          "_request": [
+              {
+                  "Company": "amic",
+                  "ExternalId": "JED-22E0000339",
+                  "journalNameId":"Default",
+                  "Description": "5",
+                  "Lines": [
+                      {
+                          "ItemId": "3101001",
+                          "unit": "Carton",
+                          "unitQty": "15",
+                          "FromWarehouse": "FG11",
+                          "ToWarehouse": "JED-22",
+                          "FromSite": "Main",
+                          "ToSite": "Main",
+                          "FromLocation": "Default",
+                          "ToLocation": "Default",
+                          "FromBatch": "",
+                          "ToBatch": ""
+                      },
+                      {
+                          "ItemId": "3101003",
+                          "unit": "Carton",
+                          "unitQty": "15",
+                          "FromWarehouse": "FG11",
+                          "ToWarehouse": "JED-22",
+                          "FromSite": "Main",
+                          "ToSite": "Main",
+                          "FromLocation": "Default",
+                          "ToLocation": "Default",
+                          "FromBatch": "",
+                          "ToBatch": ""
+                      },
+                      {
+                          "ItemId": "3109003",
+                          "unit": "Carton",
+                          "unitQty": "15",
+                          "FromWarehouse": "FG11",
+                          "ToWarehouse": "JED-22",
+                          "FromSite": "Main",
+                          "ToSite": "Main",
+                          "FromLocation": "Default",
+                          "ToLocation": "Default",
+                          "FromBatch": "",
+                          "ToBatch": ""
+                      },
+                      {
+                          "ItemId": "3109006",
+                          "unit": "Carton",
+                          "unitQty": "20",
+                          "FromWarehouse": "FG11",
+                          "ToWarehouse": "JED-22",
+                          "FromSite": "Main",
+                          "ToSite": "Main",
+                          "FromLocation": "Default",
+                          "ToLocation": "Default",
+                          "FromBatch": "",
+                          "ToBatch": ""
+                      },
+                      {
+                          "ItemId": "3110001",
+                          "unit": "Carton",
+                          "unitQty": "5",
+                          "FromWarehouse": "FG11",
+                          "ToWarehouse": "JED-22",
+                          "FromSite": "Main",
+                          "ToSite": "Main",
+                          "FromLocation": "Default",
+                          "ToLocation": "Default",
+                          "FromBatch": "",
+                          "ToBatch": ""
+                      }
+                  ]
+              }
+          ]
+      }
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IllUY2VPNUlKeXlxUjZqekRTNWlBYnBlNDJKdyIsImtpZCI6IllUY2VPNUlKeXlxUjZqekRTNWlBYnBlNDJKdyJ9.eyJhdWQiOiJodHRwczovL2FsYW1hbGljZWNyZWFtLXByb2Qub3BlcmF0aW9ucy5keW5hbWljcy5jb20vIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvY2MzY2FkOWQtNDFlYS00YzU2LWE0MzgtZGE3NTdkNTA1MDE2LyIsImlhdCI6MTczODA1OTg5OSwibmJmIjoxNzM4MDU5ODk5LCJleHAiOjE3MzgwNjM3OTksImFpbyI6ImsyUmdZTmc2MCt2YzNLaXdXZWVZSndycEhWc2tEZ0E9IiwiYXBwaWQiOiJhYWY2MTEyYy03NDNlLTQ1ZjgtOWU5ZS01NWQxYTNhNzdiNTciLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jYzNjYWQ5ZC00MWVhLTRjNTYtYTQzOC1kYTc1N2Q1MDUwMTYvIiwiaWR0eXAiOiJhcHAiLCJvaWQiOiIwYjI2NWJkNS02ZGQzLTRhNmItOGMwMy0zZGY5NTU3ODZkMzAiLCJyaCI6IjEuQWE4QW5hMDh6T3BCVmt5a09OcDFmVkJRRmhVQUFBQUFBQUFBd0FBQUFBQUFBQUN2QUFDdkFBLiIsInJvbGVzIjpbIkNvbm5lY3Rvci5GdWxsQWNjZXNzIl0sInN1YiI6IjBiMjY1YmQ1LTZkZDMtNGE2Yi04YzAzLTNkZjk1NTc4NmQzMCIsInRpZCI6ImNjM2NhZDlkLTQxZWEtNGM1Ni1hNDM4LWRhNzU3ZDUwNTAxNiIsInV0aSI6InMtZTktWEprRkVTLW1ZVnUtUGMzQUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfaWRyZWwiOiI3IDI2In0.Vww0MIMyo4Aj6jZngmjq0Oo2ULgb08uWWZ9VWq1QLrHfroOiso7g6K3-hwlp4SOYzcpXDeYT6jlVFeQ8GqMM0VTc9tE8-FmKjeByDRx_HNHp0b3uCYJ5M4AphUgx84ne7vGeBqRRfWM1NrZMVedRuE0Ot-ZYVmWDoKHQ1gxbdSPQdbHiTfuke1G8bu47pNAHATpW4rf5BW7awPxGhO2EdBw8YKAlMbRdGoEnEVxmxB0d1X0ow-u0JOhE79ftbph9pWDNyHNrX4W6I4NgGIKvPlDFNNf-wqdxHMSrSkFjfcCvmbl5Lt0Z3IfQUAGge9FCS484oFbqdhIHKYyXpKD69Q
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

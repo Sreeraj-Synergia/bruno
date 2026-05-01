@@ -1,0 +1,62 @@
+info:
+  name: PostCustomer
+  type: http
+  seq: 58
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/data/CustomersV3"
+  body:
+    type: json
+    data: "{\r
+
+      \            \"dataAreaId\": \"amic\",\r
+
+      \            \"CustomerAccount\": \"10000888\",\r
+
+      \            \"PartyType\": \"Organization\",\r
+
+      \            \"CustomerGroupId\": \"Trd Trade\",\r
+
+      \            \"SalesCurrencyCode\": \"USD\",\r
+
+      \            \"OrganizationName\": \"CustTest\",\r
+
+      \            \"OrganizationNumber\": \"10000888\",\r
+
+      \            \"EInvoiceType\": \"Standard\",\r
+
+      \            \"WarehouseId\": \"JED-01\",\r
+
+      \            \"IdentificationNumber\": \"310158373900003\",\r
+
+      \            \"AddressCountryRegionISOCode\": \"SA\",\r
+
+      \            \"AddressDescription\": \"Address1\",\r
+
+      \            \"PrimaryContactPhoneDescription\": \"\",\r
+
+      \            \"PrimaryContactEmailDescription\": \"\",\r
+
+      \            \"PrimaryContactPhone\": \"\"\r
+
+      \r
+
+      \            \r
+
+      \r
+
+      \r
+
+      \ \r
+
+      }\t "
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

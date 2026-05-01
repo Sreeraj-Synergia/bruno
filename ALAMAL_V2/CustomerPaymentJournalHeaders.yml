@@ -1,0 +1,28 @@
+info:
+  name: CustomerPaymentJournalHeaders
+  type: http
+  seq: 46
+
+http:
+  method: POST
+  url: https://icecreamalamal.sandbox.operations.dynamics.com/data/CustomerPaymentJournalHeaders
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dataAreaId\":\"amic\",\r
+
+      \    \"JournalName\":\"SFA\",\r
+
+      \    \"Description\":\"SFA\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,50 @@
+info:
+  name: SalesRepCollectionLines
+  type: http
+  seq: 64
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/data/LedgerJournalLines"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dataAreaId\": \"amic\",\r
+
+      \    \"JournalBatchNumber\": \"JBN-000003194\",\r
+
+      \    \"OffsetAccountType\": \"\",\r
+
+      \    \"DebitAmount\": 0,\r
+
+      \    \"OffsetAccountDisplayValue\": \"\",\r
+
+      \    \"AccountDisplayValue\": \"11010305|3139||||||||||\",\r
+
+      \    \"AccountType\": \"Ledger\",\r
+
+      \    \"ReportingCurrencyExchRate\": 100.000,\r
+
+      \    \"PostingProfile\": \"\",\r
+
+      \    \"CreditAmount\": 300,\r
+
+      \    \"CurrencyCode\": \"SAR\",\r
+
+      \    \"PaymentReference\": \"\",\r
+
+      \    \"PaymentMethod\": \"CASH\",\r
+
+      \    \"TransDate\": \"2024-01-09T12:00:00Z\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

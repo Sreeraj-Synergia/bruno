@@ -1,0 +1,38 @@
+info:
+  name: TransferOrderLinesFilterByTransaction
+  type: http
+  seq: 35
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/TransferOrderLines?$filter=TransferOrderNumber eq 'TRN-000098'"
+  params:
+    - name: $filter
+      value: TransferOrderNumber eq 'TRN-000098'
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dataAreaId\": \"amic\",\r
+
+      \    \"TransferOrderNumber\": \"AMIC-000016\",\r
+
+      \    \"ItemNumber\": \"0801-01-104\",\r
+
+      \    \"TransferQuantity\": 1\r
+
+      \   \r
+
+      \    \r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,50 @@
+info:
+  name: Cust Invoice header
+  type: http
+  seq: 77
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/GXCustInvoiceJourBiEntities?$filter=CreatedOn ge 2024-01-21T12:16:46Z and SysCreatedBy ne 'Admin'"
+  params:
+    - name: $filter
+      value: CreatedOn ge 2024-01-21T12:16:46Z and SysCreatedBy ne 'Admin'
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"CustomerLegalEntityId\" : \"amic\", \r
+
+      \    \"CustomerAccountNumber\" : \"11010001\", //Customer account\r
+
+      \    \"AddressDescription\" : \"Address\", \r
+
+      \    \"IsRoleBusiness\" : \"Yes\", \r
+
+      \    //\"IsPostalAddress \" : \"Yes\", \r
+
+      \    \"AddressLocationRoles\" : \"role\", \r
+
+      \    \"AddressCountryRegionId\": \"SA\",\r
+
+      \    \"AddressStreet\": \"Default Street\",\r
+
+      \    \"AddressZipCode\": \"22233\",\r
+
+      \    \"AddressCity\": \"7\",//Jeddah-جدة\r
+
+      \    \"AddressDefaultRoles\": \"Business\",\r
+
+      \    \"AddressState\": \"1\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InEtMjNmYWxldlpoaEQzaG05Q1Fia1A1TVF5VSIsImtpZCI6InEtMjNmYWxldlpoaEQzaG05Q1Fia1A1TVF5VSJ9.eyJhdWQiOiJodHRwczovL2ljZWNyZWFtYWxhbWFsLnNhbmRib3gub3BlcmF0aW9ucy5keW5hbWljcy5jb20vIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvY2MzY2FkOWQtNDFlYS00YzU2LWE0MzgtZGE3NTdkNTA1MDE2LyIsImlhdCI6MTcxMzM2Mzk0MywibmJmIjoxNzEzMzYzOTQzLCJleHAiOjE3MTMzNjc4NDMsImFpbyI6IkUyTmdZR0NmUGswby9scXhRc01rbWVyZmp2V3BBQT09IiwiYXBwaWQiOiJhYWY2MTEyYy03NDNlLTQ1ZjgtOWU5ZS01NWQxYTNhNzdiNTciLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jYzNjYWQ5ZC00MWVhLTRjNTYtYTQzOC1kYTc1N2Q1MDUwMTYvIiwib2lkIjoiMGIyNjViZDUtNmRkMy00YTZiLThjMDMtM2RmOTU1Nzg2ZDMwIiwicmgiOiIwLkFhOEFuYTA4ek9wQlZreWtPTnAxZlZCUUZoVUFBQUFBQUFBQXdBQUFBQUFBQUFDdkFBQS4iLCJyb2xlcyI6WyJDb25uZWN0b3IuRnVsbEFjY2VzcyJdLCJzdWIiOiIwYjI2NWJkNS02ZGQzLTRhNmItOGMwMy0zZGY5NTU3ODZkMzAiLCJ0aWQiOiJjYzNjYWQ5ZC00MWVhLTRjNTYtYTQzOC1kYTc1N2Q1MDUwMTYiLCJ1dGkiOiJYcVd4UjJGWHFVcTNuYjR6TmMwaEFBIiwidmVyIjoiMS4wIn0.hiMoCBqNO2rqo90Us2UpZ9GhlLVZnN040coY9LDtdVJ1_RkY0snKuLSu1BhEAdyuYWaIE5Bb9E5AnxYtj8l7FCNkPomvt8pQ5SGLU5N6rtVNNvEgVtDh-f3WWSFe4U8Ok9eNjCqCLEFIVMlIGp3AnCQCmYwWdM3ugaARtS9J9MYBpvNg9lSAYWzV81brG4VxibXcBxwHt6FsvWDzeAZo2kVnEAIYMPtslxB0UntWv9vouiTn7e8zXOE8njhZsmr7UPaErLnjviqB-C0IqGjfo4djNHLMY6UwJVdq-qjCM-yxqB66qnk2_-MUJZNRzGL6uqKPeLobDfsOFS4Ycc9NJw
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

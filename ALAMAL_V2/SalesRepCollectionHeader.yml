@@ -1,0 +1,28 @@
+info:
+  name: SalesRepCollectionHeader
+  type: http
+  seq: 63
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/data/LedgerJournalHeaders"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dataAreaId\":\"amic\",\r
+
+      \    \"JournalName\":\"COL-FG14\",\r
+
+      \    \"Description\":\"SFA-CASH-SalesMandId-5Jen\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,42 @@
+info:
+  name: SalesOrderLines
+  type: http
+  seq: 29
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/data/SalesOrderLines"
+  body:
+    type: json
+    data: "{\r
+
+      \   \r
+
+      \    \"ItemNumber\": \"3101001\",\r
+
+      \     \"OrderedSalesQuantity\": 1,\r
+
+      \      \"SalesOrderNumber\": \"SO-000000297\",\r
+
+      \      \"SalesPrice\": 100,\r
+
+      \      \"SalesUnitSymbol\": \"Carton\",\r
+
+      \       \"ShippingWarehouseLocationId\": \"Default\",\r
+
+      \       \"ShippingWarehouseId\": \"FG11\",\r
+
+      \       \"ShippingSiteId\": \"Main\",\r
+
+      \       \"LineDiscountAmount\":0\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,58 @@
+info:
+  name: CustomerPaymentJournalLines_1
+  type: http
+  seq: 80
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/CustomerPaymentJournalLines?$filter=JournalBatchNumber eq 'JBN-000000003'"
+  params:
+    - name: $filter
+      value: JournalBatchNumber eq 'JBN-000000003'
+      type: query
+  body:
+    type: json
+    data: "[\r
+
+      \    {\r
+
+      \        \"dataAreaId\": \"amic\",\r
+
+      \        \"JournalBatchNumber\": \"AMIC-000004\",\r
+
+      \        \"LineNumber\": 1,\r
+
+      \        \"OffsetAccountType\": \"Bank\",\r
+
+      \        \"DebitAmount\": 0,\r
+
+      \        \"OffsetAccountDisplayValue\": \"SalesRep1\",\r
+
+      \        \"AccountDisplayValue\": \"1210050\",\r
+
+      \        \"AccountType\": \"Cust\",\r
+
+      \        \"TaxGroup\": \"VTAX\",\r
+
+      \        \"ExchangeRate\": 100,\r
+
+      \        \"ReportingCurrencyExchRate\": 100,\r
+
+      \        \"PostingProfile\": \"AR\",\r
+
+      \        \"CreditAmount\": 100,\r
+
+      \        \"CurrencyCode\": \"SAR\"\r
+
+      \    }\r
+
+      ]"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

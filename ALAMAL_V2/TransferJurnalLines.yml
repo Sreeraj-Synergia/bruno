@@ -1,0 +1,110 @@
+info:
+  name: TransferJurnalLines
+  type: http
+  seq: 40
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/data/InventoryTransferJournalEntries?$filter=JournalNumber eq 'AMIC-000214'"
+  params:
+    - name: $filter
+      value: JournalNumber eq 'AMIC-000214'
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dataAreaId\": \"amic\",\r
+
+      \    \"JournalNumber\": \"    \",\r
+
+      \    \"LineNumber\": 3,\r
+
+      \    \"SourceInventorySiteId\": \"Main\",\r
+
+      \    \"SourceProductVersionId\": \"\",\r
+
+      \    \"SourceProductConfigurationId\": \"\",\r
+
+      \    \"DestinationInventoryOwnerId\": \"\",\r
+
+      \    \"SourceItemSerialNumber\": \"\",\r
+
+      \    \"DestinationProductConfigurationId\": \"\",\r
+
+      \    \"DestinationInventoryStatusId\": \"\",\r
+
+      \    \"DestinationProductSizeId\": \"\",\r
+
+      \    \"ItemNumber\": \"3101001\",\r
+
+      \    \"DestinationLicensePlateNumber\": \"\",\r
+
+      \    \"SourceLicensePlateNumber\": \"\",\r
+
+      \    \"InventoryQuantity\": -1,\r
+
+      \    \"SourceInventoryProfileId\": \"\",\r
+
+      \    \"DestinationItemSerialNumber\": \"\",\r
+
+      \    \"DestinationInventorySiteId\": \"Main\",\r
+
+      \    \"UnitCostQuantity\": 1,\r
+
+      \    \"SourceInventoryStatusId\": \"\",\r
+
+      \    \"SourceProductSizeId\": \"\",\r
+
+      \    \"DestinationProductVersionId\": \"\",\r
+
+      \    \"DestinationWarehouseId\": \"BHA-02\",\r
+
+      \    \"SourceProductColorId\": \"\",\r
+
+      \    \"SourceItemBatchNumber\": \"\",\r
+
+      \    \"TransactionDate\": \"2023-12-02T12:00:00Z\",\r
+
+      \    \"DestinationProductStyleId\": \"\",\r
+
+      \    \"DestinationWarehouseLocationId\": \"Default\",\r
+
+      \    \"SourceInventoryGtdId\": \"\",\r
+
+      \    \"SourceProductStyleId\": \"\",\r
+
+      \    \"DefaultLedgerDimensionDisplayValue\": \"\",\r
+
+      \    \"DestinationProductColorId\": \"\",\r
+
+      \    \"CatchWeightQuantity\": 0,\r
+
+      \    \"DestinationInventoryProfileId\": \"\",\r
+
+      \    \"JournalNameId\": \"SFA-FG24\",\r
+
+      \    \"SourceInventoryOwnerId\": \"\",\r
+
+      \    \"SourceWarehouseLocationId\": \"Default\",\r
+
+      \    \"DestinationItemBatchNumber\": \"\",\r
+
+      \    \"SourceWarehouseId\": \"FG24\",\r
+
+      \    \"DestinationInventoryGtdId\": \"\",\r
+
+      \    \"Qty\": -1,\r
+
+      \    \"Unit\": \"Carton\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

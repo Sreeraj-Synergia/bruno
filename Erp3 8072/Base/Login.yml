@@ -5,10 +5,10 @@ info:
 
 http:
   method: POST
-  url: http://localhost:8072/web/session/mobile_login?db=Erp3
+  url: "{{Erp3-Local-8072}}/web/session/mobile_login?db={{db}}"
   params:
     - name: db
-      value: Erp3
+      value: "{{db}}"
       type: query
   body:
     type: json
@@ -35,13 +35,13 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Successful Login
+  - name: Login
     request:
-      url: http://localhost:8072/web/session/mobile_login?db=Erp3
+      url: "{{Erp3-Local-8072}}/web/session/mobile_login?db={{db}}"
       method: POST
       params:
         - name: db
-          value: Erp3
+          value: "{{db}}"
           type: query
       body:
         type: json
@@ -66,13 +66,13 @@ examples:
         - name: server
           value: Werkzeug/3.0.1 Python/3.12.3
         - name: date
-          value: Fri, 01 May 2026 08:31:29 GMT
+          value: Fri, 01 May 2026 10:23:40 GMT
         - name: content-length
           value: "2298"
         - name: content-type
           value: application/json; charset=utf-8
         - name: set-cookie
-          value: session_id=wQC7j6eLBliS-c3W9urexclX6e6Rjqu5J56z5lj3nEnbkp0AVEMh6yBf_NSZSa0Ye4XS2MCyFLJE7FHacNWG; Expires=Sat, 01 May 2027 08:31:29 GMT; Max-Age=604800; HttpOnly; Path=/,session_id=wQC7j6eLBliS-c3W9urexclX6e6Rjqu5J56z5lj3nEnbkp0AVEMh6yBf_NSZSa0Ye4XS2MCyFLJE7FHacNWG; Expires=Sat, 01 May 2027 08:31:29 GMT; Max-Age=604800; HttpOnly; Path=/
+          value: session_id=73Ar0EwZwSYCSDmUzUknNUi9VpXafgn9SSwzdc_5jVcciVwbvEdVyZSxL-MdmbYqjRUZS4MudCXlJKiTC-pW; Expires=Sat, 01 May 2027 10:23:40 GMT; Max-Age=604800; HttpOnly; Path=/,session_id=73Ar0EwZwSYCSDmUzUknNUi9VpXafgn9SSwzdc_5jVcciVwbvEdVyZSxL-MdmbYqjRUZS4MudCXlJKiTC-pW; Expires=Sat, 01 May 2027 10:23:40 GMT; Max-Age=604800; HttpOnly; Path=/
         - name: x-content-type-options
           value: nosniff
         - name: connection
@@ -172,7 +172,7 @@ examples:
                   }
                 ],
                 "user_companies": false,
-                "session_id": "wQC7j6eLBliS-c3W9urexclX6e6Rjqu5J56z5lj3nEnbkp0AVEMh6yBf_NSZSa0Ye4XS2MCyFLJE7FHacNWG"
+                "session_id": "73Ar0EwZwSYCSDmUzUknNUi9VpXafgn9SSwzdc_5jVcciVwbvEdVyZSxL-MdmbYqjRUZS4MudCXlJKiTC-pW"
               },
               "error": {
                 "code": 0,

@@ -1,0 +1,30 @@
+info:
+  name: GetToken
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://login.microsoftonline.com/cc3cad9d-41ea-4c56-a438-da757d505016/oauth2/token
+  body:
+    type: multipart-form
+    data:
+      - name: grant_type
+        type: text
+        value: client_credentials
+      - name: Client_Id
+        type: text
+        value: aaf6112c-743e-45f8-9e9e-55d1a3a77b57
+      - name: client_secret
+        type: text
+        value: jOD8Q~CBnEWF4NKvjR-gd-6djH6w6w_Puo7lHa8G
+      - name: resource
+        type: text
+        value: https://icecreamalamal.sandbox.operations.dynamics.com
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

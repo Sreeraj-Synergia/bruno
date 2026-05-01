@@ -1,0 +1,76 @@
+info:
+  name: TransferJournal Copy
+  type: http
+  seq: 82
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/api/services/GxGalaxy/GxGalaxyService/createTransferJournal"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Inp4ZWcyV09OcFRrd041R21lWWN1VGR0QzZKMCIsImtpZCI6Inp4ZWcyV09OcFRrd041R21lWWN1VGR0QzZKMCJ9.eyJhdWQiOiJodHRwczovL2Rldi1hbGFtYWw5YWVkNDFkMTlhYWRmYWQ4ZGV2YW9zLmF4Y2xvdWQuZHluYW1pY3MuY29tLyIsImlzcyI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2NjM2NhZDlkLTQxZWEtNGM1Ni1hNDM4LWRhNzU3ZDUwNTAxNi8iLCJpYXQiOjE3MzQyNDU0MzAsIm5iZiI6MTczNDI0NTQzMCwiZXhwIjoxNzM0MjQ5MzMwLCJhaW8iOiJrMkJnWUJETmMvaGgxWkZ6emJuSGFHcmFGOGJOQUE9PSIsImFwcGlkIjoiZjliMGRlZGQtNTQzNC00YjdhLWJjZDQtMTBlNWUxMGU2NmFiIiwiYXBwaWRhY3IiOiIxIiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvY2MzY2FkOWQtNDFlYS00YzU2LWE0MzgtZGE3NTdkNTA1MDE2LyIsImlkdHlwIjoiYXBwIiwib2lkIjoiMmEwNDlmYmItYTQxOS00Mjk2LWI1MjEtZTg4ZDJjYmM4OTE5IiwicmgiOiIxLkFhOEFuYTA4ek9wQlZreWtPTnAxZlZCUUZoVUFBQUFBQUFBQXdBQUFBQUFBQUFDdkFBQ3ZBQS4iLCJzdWIiOiIyYTA0OWZiYi1hNDE5LTQyOTYtYjUyMS1lODhkMmNiYzg5MTkiLCJ0aWQiOiJjYzNjYWQ5ZC00MWVhLTRjNTYtYTQzOC1kYTc1N2Q1MDUwMTYiLCJ1dGkiOiJGRDFmby1zTW1FMnN1eDEwMzJJNkFBIiwidmVyIjoiMS4wIiwieG1zX2lkcmVsIjoiNyAyIn0.UTndul8sfTjUsCbCpW06Wxbbt7Ywf2XSCV_eBqcSeU2bON6EgRFiXV1faqFUqja41JVrNcpJUJ130pgVBgcp5rNnPgZuwdCGFJ1ojyQPpeuGntyEqmGNehfdzdInygBwmYvruU9dHeNRMvHTVtAhcqnmLb04R2ZxX9lDcDPkXbaCw_gzauhxC8D20HUWlxcVNhWgWhBaMCqJu7H73LicGA6AsZXRyjAjuJ1ZB57ogT8JxE1JMKiKCI5bj3MNMkwPaxItTn7PqMHGd2GVVyeKCY15YU2zzL8GCMbvmXQl2mnOQWJsyFyT76c9mdSeWar5rI5ctk_h9m6g31fMSGrLpw
+  body:
+    type: json
+    data: |-
+      {
+          "_request": [
+              {
+                  "company": "AMIC",
+                  "externalId": "DMM-05U0000160",
+                  "JournalNameId": "SFA-FG12",
+                  "description": "postman testing 50",
+                  "lines": [
+                      {
+                          "itemId": "3102012",
+                          "unitQty": "1",
+                          "unit":"carton",
+                          "fromWarehouse": "BHA-02",
+                          "toWarehouse": "BHA-03",
+                          "fromSite": "Main",
+                          "toSite": "Main",
+                          "fromLocation": "Default",
+                          "toLocation": "Default",
+                          "fromBatch": "BM2A10240529",
+                          "toBatch": "BM2A10240529"
+                      },
+                        {
+                          "itemId": "3102011",
+                          "unitQty": "1",
+                          "unit":"PCs",
+                          "fromWarehouse": "BHA-02",
+                          "toWarehouse": "BHA-03",
+                          "fromSite": "Main",
+                          "toSite": "Main",
+                          "fromLocation": "Default",
+                          "toLocation": "Default",
+                          "fromBatch": "AM2CA3240116",
+                          "toBatch": "AM2CA3240116"
+                      },
+                        {
+                          "itemId": "3102010",
+                          "unitQty": "2",
+                          "unit":"PCs",
+                          "fromWarehouse": "BHA-02",
+                          "toWarehouse": "BHA-03",
+                          "fromSite": "Main",
+                          "toSite": "Main",
+                          "fromLocation": "Default",
+                          "toLocation": "Default",
+                          "fromBatch": "AM2A10240612",
+                          "toBatch": "AM2A10240612"
+                      }
+                  ]
+              }
+          ]
+      }
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

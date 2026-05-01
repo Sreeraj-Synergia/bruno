@@ -1,0 +1,24 @@
+info:
+  name: GetSalesOrderLines
+  type: http
+  seq: 30
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/SalesOrderLines?$filter=SalesOrderNumber eq 'AMIC-000399'"
+  params:
+    - name: $filter
+      value: SalesOrderNumber eq 'AMIC-000399'
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

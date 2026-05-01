@@ -1,0 +1,17 @@
+info:
+  name: DirPartyTableBiEntities Copy
+  type: http
+  seq: 73
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/InventTransOriginBiEntities"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

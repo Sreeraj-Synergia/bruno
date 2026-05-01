@@ -1,0 +1,40 @@
+info:
+  name: DraftTransferJournalHeader
+  type: http
+  seq: 83
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/data/InventoryTransferJournalHeaders"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dataAreaId\": \"amic\",\r
+
+      \    \"JournalNumber\": \"ABC013\",\r
+
+      \    \"Description\": \"Transfer Journal\",\r
+
+      \    \"DefaultWarehouseId\": \"\",\r
+
+      \    \"ReservationMode\": \"None\",\r
+
+      \    \"PostingDetailLevel\": \"Detail\",\r
+
+      \    \"DefaultInventorySiteId\": \"\",\r
+
+      \    \"JournalNameId\": \"SFA\",\r
+
+      \    \"VoucherNumberSelectionRule\": \"DateChange\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: http://localhost:8072/web/database_list
+  url: "{{Erp3-Local-8072}}/web/database_list"
   body:
     type: json
     data: "{}"
@@ -16,3 +16,49 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: DB List
+    request:
+      url: "{{Erp3-Local-8072}}/web/database_list"
+      method: POST
+      body:
+        type: json
+        data: "{}"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: Werkzeug/3.0.1 Python/3.12.3
+        - name: date
+          value: Fri, 01 May 2026 10:23:22 GMT
+        - name: content-length
+          value: "136"
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: set-cookie
+          value: session_id=v3RTl9KT3q_23mZecLYV5lGEZYyiNBuW_Lq0-S_Eb7_5ZEqqAd7NEUYVr8CuVCiXOElrIm9wZSPfbWiSv7ZJ; Expires=Sat, 01 May 2027 10:23:22 GMT; Max-Age=604800; HttpOnly; Path=/
+        - name: x-content-type-options
+          value: nosniff
+        - name: connection
+          value: close
+      body:
+        type: json
+        data: |-
+          {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+              "success": true,
+              "payload": {
+                "database_list": [
+                  "Erp3"
+                ]
+              },
+              "error": {
+                "code": 0,
+                "message": ""
+              }
+            }
+          }

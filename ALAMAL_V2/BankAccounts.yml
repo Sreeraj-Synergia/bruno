@@ -1,0 +1,40 @@
+info:
+  name: BankAccounts
+  type: http
+  seq: 62
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/BankAccounts?$filter=BankGroupId eq 'CASHBOX'"
+  params:
+    - name: $filter
+      value: BankGroupId eq 'CASHBOX'
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"PrimaryContactPhone\":\"01006920061\",\r
+
+      \    \"PersonFirstName\":\"ahmed\",\r
+
+      \    \"PersonLastName\":\"asd\",\r
+
+      \    \"CustomerGroupId\":\"1000\",\r
+
+      \    \"SalesCurrencyCode\": \"EGP\"\r
+
+      \r
+
+      \r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

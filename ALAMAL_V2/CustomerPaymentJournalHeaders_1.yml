@@ -1,0 +1,32 @@
+info:
+  name: CustomerPaymentJournalHeaders_1
+  type: http
+  seq: 79
+
+http:
+  method: GET
+  url: https://icecreamalamal.sandbox.operations.dynamics.com/data/CustomerPaymentJournalHeaders?$filter=GXCreatedBy ne 'Admin' and IsPosted  eq Microsoft.Dynamics.DataEntities.NoYes'Yes'
+  params:
+    - name: $filter
+      value: GXCreatedBy ne 'Admin' and IsPosted  eq Microsoft.Dynamics.DataEntities.NoYes'Yes'
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dataAreaId\":\"amic\",\r
+
+      \    \"JournalName\":\"SFA\",\r
+
+      \    \"Description\":\"SFA\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InEtMjNmYWxldlpoaEQzaG05Q1Fia1A1TVF5VSIsImtpZCI6InEtMjNmYWxldlpoaEQzaG05Q1Fia1A1TVF5VSJ9.eyJhdWQiOiJodHRwczovL2ljZWNyZWFtYWxhbWFsLnNhbmRib3gub3BlcmF0aW9ucy5keW5hbWljcy5jb20vIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvY2MzY2FkOWQtNDFlYS00YzU2LWE0MzgtZGE3NTdkNTA1MDE2LyIsImlhdCI6MTcxMzY5Nzk5OSwibmJmIjoxNzEzNjk3OTk5LCJleHAiOjE3MTM3MDE4OTksImFpbyI6IkUyTmdZTGlUN0dub25NejhJS0puQzQvdmptbGJBUT09IiwiYXBwaWQiOiJhYWY2MTEyYy03NDNlLTQ1ZjgtOWU5ZS01NWQxYTNhNzdiNTciLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jYzNjYWQ5ZC00MWVhLTRjNTYtYTQzOC1kYTc1N2Q1MDUwMTYvIiwib2lkIjoiMGIyNjViZDUtNmRkMy00YTZiLThjMDMtM2RmOTU1Nzg2ZDMwIiwicmgiOiIwLkFhOEFuYTA4ek9wQlZreWtPTnAxZlZCUUZoVUFBQUFBQUFBQXdBQUFBQUFBQUFDdkFBQS4iLCJyb2xlcyI6WyJDb25uZWN0b3IuRnVsbEFjY2VzcyJdLCJzdWIiOiIwYjI2NWJkNS02ZGQzLTRhNmItOGMwMy0zZGY5NTU3ODZkMzAiLCJ0aWQiOiJjYzNjYWQ5ZC00MWVhLTRjNTYtYTQzOC1kYTc1N2Q1MDUwMTYiLCJ1dGkiOiJDeFRtb0F1R1NrS2NoYjdPNTZVcUFBIiwidmVyIjoiMS4wIn0.pV-4ebYLzbyMI-dY-xhxh3vPmgdQuhM4s2O6KtHm-dzPW_4eeNuqgvGqwtM9fHs3LByFTIgLOmP195JJfcCR2j6rPiPlFTE11DFUHAkztV5cHgOnQQZyN0TibyzZKffGlCeXzSNejEmDjXbDVPWrbnlKJjqWsqLxvZkjWBhu0W8wtbRH_atJ0k6VuOpgk_f4UzsPmsmgTCLZ13yVUIA248fsdvCNDRINTQiK2AdsOvxTptqGidVh-6bxIZyulbXHlL4aLQGGo28krXIoe-NzItH8_TvVSdwg0C1797_0an4Dv9y1LXBP8rU3hzG8RstpHD3mVs8OxTAI1LSpw3uRcQ
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

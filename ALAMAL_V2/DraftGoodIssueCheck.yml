@@ -1,0 +1,24 @@
+info:
+  name: DraftGoodIssueCheck
+  type: http
+  seq: 85
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/InventoryTransferJournalHeaders?$filter=IsPosted eq Microsoft.Dynamics.DataEntities.NoYes'Yes' and JournalNumber eq 'AMIC-000021'"
+  params:
+    - name: $filter
+      value: IsPosted eq Microsoft.Dynamics.DataEntities.NoYes'Yes' and JournalNumber eq 'AMIC-000021'
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

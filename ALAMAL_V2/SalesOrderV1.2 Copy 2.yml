@@ -1,0 +1,120 @@
+info:
+  name: SalesOrderV1.2 Copy 2
+  type: http
+  seq: 27
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/api/services/IntegrationGrp/SalesInServ/CreateSalesTrans?company=AMIC"
+  params:
+    - name: company
+      value: AMIC
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"_company\": \"AMIC\",\r
+
+      \    \"_Contract\": {\r
+
+      \        \"RequestNumber\": \"23-DMM-141002044\",\r
+
+      \        \"SalesOrders\": [\r
+
+      \            {\r
+
+      \                \"CustAccount\": \"42010612\",\r
+
+      \                \"CurrencyCode\": \"SAR\",\r
+
+      \                \"IntegrationSource\": 0,\r
+
+      \                \"SiteId\": \"Main\",\r
+
+      \                \"Pool\": \"SFA\",\r
+
+      \                \"LocationId\": \"DMM-13\",\r
+
+      \                \"SalesDate\": \"2024-10-20T00:00:00\",\r
+
+      \                \"Reference\": \"DMM-141002088\",\r
+
+      \                \"Comment\": \"DMM-141002065\",\r
+
+      \                \"Status\": 0,\r
+
+      \                \"InvoiceDescription\": \"\",\r
+
+      \                \"dimensionsHeader\": [],\r
+
+      \                \"Lines\": [\r
+
+      \                    {\r
+
+      \                        \"ItemID\": \"3103010\",\r
+
+      \                        \"SalesQty\": 2.0,\r
+
+      \                        \"SalesPrice\": 50,\r
+
+      \                        \"DiscAmount\": 0.0,\r
+
+      \                        \"DiscPct\": 0.0,\r
+
+      \                        \"Comment\": \"\",\r
+
+      \                        \"ResponseDescription\": \"\",\r
+
+      \                        \"IntegrationStatus\": 0,\r
+
+      \                        \"SiteId\": \"Main\",\r
+
+      \                        \"Warehouse\": \"DMM-13\",\r
+
+      \                        \"location\": \"Default\",\r
+
+      \                        \"Size\": \"\",\r
+
+      \                        \"Color\": \"\",\r
+
+      \                        \"Batch\": \"3103010\",\r
+
+      \                        \"Configuration\": \"\",\r
+
+      \                        \"SalesUnit\": \"Carton\",\r
+
+      \                        \"dimensionsHeader\": [\r
+
+      \                            {\r
+
+      \                                \"dimensionName\": \"\",\r
+
+      \                                \"dimensionValue\": \"\"\r
+
+      \                            }\r
+
+      \                        ]\r
+
+      \                    }\r
+
+      \                    \r
+
+      \                ]\r
+
+      \            }\r
+
+      \        ]\r
+
+      \    }\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

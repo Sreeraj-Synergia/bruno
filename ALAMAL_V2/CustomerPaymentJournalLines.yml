@@ -1,0 +1,56 @@
+info:
+  name: CustomerPaymentJournalLines
+  type: http
+  seq: 47
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/data/CustomerPaymentJournalLines"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dataAreaId\": \"amic\",\r
+
+      \    \"JournalBatchNumber\": \"JBN-000000008\",\r
+
+      \    \"LineNumber\": 1,\r
+
+      \    \"OffsetAccountType\": \"Ledger\",\r
+
+      \    \"DebitAmount\": 0.000,\r
+
+      \    \"OffsetAccountDisplayValue\": \"11010305|3139||||||||||\",\r
+
+      \    \"AccountDisplayValue\": \"11010009\",\r
+
+      \    \"AccountType\": \"Cust\",\r
+
+      \    \"TaxGroup\": \"\",\r
+
+      \    \"ExchangeRate\": 100.000,\r
+
+      \    \"ReportingCurrencyExchRate\": 100.000,\r
+
+      \    \"PostingProfile\": \"\",\r
+
+      \    \"CreditAmount\": 19.280,\r
+
+      \    \"CurrencyCode\": \"SAR\",\r
+
+      \    \"MarkedInvoice\": \"\",\r
+
+      \    \"PaymentMethodName\": \"Cash\",\r
+
+      \    \"PaymentReference\": \"\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

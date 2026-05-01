@@ -1,0 +1,21 @@
+info:
+  name: DraftGetCustBalance
+  type: http
+  seq: 86
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/DocumentCustTrans?$filter=AccountNum eq '11010007'"
+  params:
+    - name: $filter
+      value: AccountNum eq '11010007'
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,17 @@
+info:
+  name: PaymentTerms
+  type: http
+  seq: 13
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/PaymentTerms"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

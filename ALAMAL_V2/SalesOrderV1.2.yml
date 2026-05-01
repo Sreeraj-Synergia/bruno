@@ -1,0 +1,216 @@
+info:
+  name: SalesOrderV1.2
+  type: http
+  seq: 25
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/api/services/IntegrationGrp/SalesInServ/CreateSalesTrans?company=AMIC"
+  params:
+    - name: company
+      value: AMIC
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"_company\": \"AMIC\",\r
+
+      \    \"_Contract\":\r
+
+      \    {\r
+
+      \    \"RequestNumber\":\"D365-SALE-151\",\r
+
+      \    \"SalesOrders\" : \r
+
+      \    [\r
+
+      \        {\r
+
+      \            \"CustAccount\":\"21030182\",\r
+
+      \            \"CurrencyCode\": \"SAR\",\r
+
+      \            \"IntegrationSource\":0,\r
+
+      \            \"SiteId\": \"Main\",\r
+
+      \            \"Pool\": \"SFA\",\r
+
+      \            \"LocationId\":\"BHA-01\",\r
+
+      \            \"SalesDate\": \"7/17/2024\",\r
+
+      \            \"Reference\":\"SO_SFA_0151\",\r
+
+      \            \"Comment\": \"BTTD-000000151\",\r
+
+      \            \"Status\":0,\r
+
+      \            \"InvoiceDescription\": \"\",\r
+
+      \r
+
+      \            \"dimensionsHeader\": [\r
+
+      \                {\r
+
+      \                    \"dimensionName\": \"\",\r
+
+      \                    \"dimensionValue\": \"\"\r
+
+      \                },\r
+
+      \                {\r
+
+      \                    \"dimensionName\": \"\",\r
+
+      \                    \"dimensionValue\": \"\"\r
+
+      \                }\r
+
+      \            ],\r
+
+      \            \"Lines\": \r
+
+      \            [\r
+
+      \                {\r
+
+      \                    \"ItemID\": \"3103001\",\r
+
+      \                    \"SalesQty\": 1,\r
+
+      \                    \"SalesPrice\": 100,\r
+
+      \                    \"DiscAmount\": 0,\r
+
+      \                    \"DiscPct\": 0,\r
+
+      \                    \"Comment\": \"\",\r
+
+      \                    \"ResponseDescription\": \"\",\r
+
+      \                    \"IntegrationStatus\": 0,\r
+
+      \                    \"SiteId\": \"Main\",\r
+
+      \                    \"Warehouse\": \"BHA-01\",\r
+
+      \                    \"location\": \"Default\",\r
+
+      \                    \"Size\": \"\",\r
+
+      \                    \"Color\": \"\",\r
+
+      \                    \"Batch\": \"AM2A8240215\",\r
+
+      \                    \"Configuration\": \"\",\r
+
+      \                    \"SalesUnit\": \"Carton\",\r
+
+      \                    \"dimensionsHeader\":\r
+
+      \                    [\r
+
+      \                        {\r
+
+      \                            \"dimensionName\" : \"\",\r
+
+      \                            \"dimensionValue\" : \"\"\r
+
+      \                        },\r
+
+      \                        {\r
+
+      \                            \"dimensionName\" : \"\",\r
+
+      \                            \"dimensionValue\" : \"\"\r
+
+      \                        }\r
+
+      \                    ]\r
+
+      \                },\r
+
+      \r
+
+      \                {\r
+
+      \                    \"ItemID\": \"3103001\",\r
+
+      \                    \"SalesQty\": 1,\r
+
+      \                    \"SalesPrice\": 100,\r
+
+      \                    \"DiscAmount\": 0,\r
+
+      \                    \"DiscPct\": 0,\r
+
+      \                    \"Comment\": \"\",\r
+
+      \                    \"ResponseDescription\": \"\",\r
+
+      \                    \"IntegrationStatus\": 0,\r
+
+      \                    \"SiteId\": \"Main\",\r
+
+      \                    \"Warehouse\": \"BHA-01\",\r
+
+      \                    \"location\": \"Default\",\r
+
+      \                    \"Size\": \"\",\r
+
+      \                    \"Color\": \"\",\r
+
+      \                    \"Batch\": \"AM2A8240215\",\r
+
+      \                    \"Configuration\": \"\",\r
+
+      \                    \"SalesUnit\": \"Carton\",\r
+
+      \                    \"dimensionsHeader\":\r
+
+      \                    [\r
+
+      \                        {\r
+
+      \                            \"dimensionName\" : \"\",\r
+
+      \                            \"dimensionValue\" : \"\"\r
+
+      \                        },\r
+
+      \                        {\r
+
+      \                            \"dimensionName\" : \"\",\r
+
+      \                            \"dimensionValue\" : \"\"\r
+
+      \                        }\r
+
+      \                    ]\r
+
+      \                }\r
+
+      \               \r
+
+      \            ]\r
+
+      \        }\r
+
+      \    ]\r
+
+      \  }\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

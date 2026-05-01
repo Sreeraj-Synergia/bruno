@@ -1,0 +1,32 @@
+info:
+  name: CustomerPostalAddressesUpdate_1
+  type: http
+  seq: 61
+
+http:
+  method: PATCH
+  url: "{{DynamicsURL}}/data/CustomerPostalAddresses(dataAreaId='amic',CustomerAccountNumber='11010001',CustomerLegalEntityId='amic',AddressLocationId='000000207',Effective=2023-12-30T19:04:15Z)?cross-company=true"
+  params:
+    - name: cross-company
+      value: "true"
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"AddressStreet\": \"Test Street\",\r
+
+      \    \"AddressZipCode\": \"22234\"\r
+
+      \r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImtXYmthYTZxczh3c1RuQndpaU5ZT2hIYm5BdyIsImtpZCI6ImtXYmthYTZxczh3c1RuQndpaU5ZT2hIYm5BdyJ9.eyJhdWQiOiJodHRwczovL2ljZWNyZWFtYWxhbWFsLnNhbmRib3gub3BlcmF0aW9ucy5keW5hbWljcy5jb20iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jYzNjYWQ5ZC00MWVhLTRjNTYtYTQzOC1kYTc1N2Q1MDUwMTYvIiwiaWF0IjoxNzA4NzcyOTMzLCJuYmYiOjE3MDg3NzI5MzMsImV4cCI6MTcwODc3NjgzMywiYWlvIjoiRTJOZ1lQaHZXZUg5dzdqT05hajRyM2pmbDZsN0FRPT0iLCJhcHBpZCI6ImFhZjYxMTJjLTc0M2UtNDVmOC05ZTllLTU1ZDFhM2E3N2I1NyIsImFwcGlkYWNyIjoiMSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2NjM2NhZDlkLTQxZWEtNGM1Ni1hNDM4LWRhNzU3ZDUwNTAxNi8iLCJvaWQiOiIwYjI2NWJkNS02ZGQzLTRhNmItOGMwMy0zZGY5NTU3ODZkMzAiLCJyaCI6IjAuQWE4QW5hMDh6T3BCVmt5a09OcDFmVkJRRmhVQUFBQUFBQUFBd0FBQUFBQUFBQUN2QUFBLiIsInJvbGVzIjpbIkNvbm5lY3Rvci5GdWxsQWNjZXNzIl0sInN1YiI6IjBiMjY1YmQ1LTZkZDMtNGE2Yi04YzAzLTNkZjk1NTc4NmQzMCIsInRpZCI6ImNjM2NhZDlkLTQxZWEtNGM1Ni1hNDM4LWRhNzU3ZDUwNTAxNiIsInV0aSI6IjlIRk9teU1nazBtOFlvLVJZUHNmQUEiLCJ2ZXIiOiIxLjAifQ.WI5x4BwcCVJxPY3EvMkHrmUe0PCZnlnfX2ZubCOCtHw6eaTd6sTMhcGtxtbD2DTM6NNbQCQWfNJq_ZZbPYqdLkQl9gGwGTim8FFm4wE8fXxRycD_HgxaX9n6aRJhrJFDCWs17x8sobMKVGEQOvsSFcQXrxK6HQ1YmzvH9dIgRtC3dsk_AtQphfPCJiGCzy-g_qH28tg02wAAsl4kJ52tKc8V5jiLOfZUeRivXM_T7vp-rEL_fHo5ybEOu-e9eriDyxcFm6599v7F2mGBr_yYo9bQtOdgPxCEG5S3ggeH2LUhfMmop1rw1X3hWX32cI_3tJYQU3KOE5bC6mzhBWS4Pw
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

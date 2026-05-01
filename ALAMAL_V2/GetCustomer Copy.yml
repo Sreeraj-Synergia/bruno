@@ -1,0 +1,108 @@
+info:
+  name: GetCustomer Copy
+  type: http
+  seq: 20
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/CustomersV3?$filter=AccountNum eq '11000001'"
+  params:
+    - name: $filter
+      value: AccountNum eq '11000001'
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"CustomerCode\": \"100201\",\r
+
+      \    \"ERPCustomerCode\": \"ERPCustomerCode\",\r
+
+      \    \"CustomerName\": \"Transport Authority-Ajman\", \r
+
+      \    \"SFACustomerCode\":\"12345\", \r
+
+      \    \"AltCustomerName\": \"\", \r
+
+      \    \"IsActive\": 1,\r
+
+      \    \"IsBlocked\": 0,\r
+
+      \    \"TaxRegistrationNumber\": \"100259815700003\",\r
+
+      \    \"SoldToCustomerCode\": \"\",\r
+
+      \    \"CustomerClass\": \"\",\r
+
+      \    \"CustomerType\": \"Local-Credit\",\r
+
+      \    \"CreditLimit\": \"0\", \r
+
+      \    \"CreditDays\": \"30\", \r
+
+      \    \"PaymentTermCode\": \"Net 30 Days\",\r
+
+      \    \"PaymentTermDescription\": \"Net 30 Days\", \r
+
+      \    \"ChannelCode\": \"Government\", \r
+
+      \    \"CustomerGroupCode\": \"104\", \r
+
+      \    \"CustomerGroupDescription\": \"Local-Credit\", \r
+
+      \    \"AddressLine1\": \"Bill to\", \r
+
+      \    \"AddressLine2\": \"\",\r
+
+      \    \"AddressLine3\": \"\",\r
+
+      \    \"PostalCode\": \"\", \r
+
+      \    \"CityCode\": \"Ajman\", \r
+
+      \    \"CityName\": \"Ajman\", \r
+
+      \    \"CountryCode\": \"UAE\", \r
+
+      \    \"CountryName\": \"UAE\", \r
+
+      \    \"RegionCode\": \"\", \r
+
+      \    \"RegionName\": \"\", \r
+
+      \    \"Telephone\": \"0501555107\", \r
+
+      \    \"MobilePhone\": \"\", \r
+
+      \    \"EmailAddress\": \"\", \r
+
+      \    \"TeleFax\": \"\", \r
+
+      \    \"Latitude\": \"\", \r
+
+      \    \"Longitude\": \"\", \r
+
+      \    \"ModeOfDelivery\": \"\", \r
+
+      \    \"VisitFrequency\": \" Custom field \",\r
+
+      \    \"RouteCode\": \" Custom field \",\r
+
+      \    \"CustomerContactPerson\": \".\", \r
+
+      \    \"CustomerTaxGroup\": \"\", \r
+
+      \    \"CRNumber\": \" Custom field \"\r
+
+      \ \r
+
+      }\t "
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

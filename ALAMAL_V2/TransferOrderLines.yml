@@ -1,0 +1,34 @@
+info:
+  name: TransferOrderLines
+  type: http
+  seq: 34
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/data/TransferOrderLines"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dataAreaId\": \"amic\",\r
+
+      \    \"TransferOrderNumber\": \"AMIC-000016\",\r
+
+      \    \"ItemNumber\": \"0801-01-104\",\r
+
+      \    \"TransferQuantity\": 1\r
+
+      \   \r
+
+      \    \r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

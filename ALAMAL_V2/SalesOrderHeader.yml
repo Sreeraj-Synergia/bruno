@@ -1,0 +1,44 @@
+info:
+  name: SalesOrderHeader
+  type: http
+  seq: 24
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/data/SalesOrderHeadersV2"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dataAreaId\": \"amic\",\r
+
+      \    \"CustomerPaymentMethodName\": \"\",\r
+
+      \    \"CustomerPostingProfileId\": \"AR\",\r
+
+      \    \"CurrencyCode\": \"SAR\",\r
+
+      \    \"DeliveryTermsCode\":\"\",\r
+
+      \    \"InvoiceCustomerAccountNumber\":\"11010004\",\r
+
+      \    \"OrderingCustomerAccountNumber\":\"11010004\",\r
+
+      \    \"PaymentTermsName\":\"Cash\",\r
+
+      \     \"SalesTaxGroupCode\":\"VTAX\"\r
+
+      \r
+
+      \   \r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

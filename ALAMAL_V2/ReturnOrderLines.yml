@@ -1,0 +1,44 @@
+info:
+  name: ReturnOrderLines
+  type: http
+  seq: 32
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/data/ReturnOrderLines"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dataAreaId\": \"amic\",\r
+
+      \    \"ReturnOrderNumber\": \"AMIC-000609\",\r
+
+      \    \"SalesUnitSymbol\": \"Pcs\",\r
+
+      \    \"ReturnSiteId\": \"Main\",\r
+
+      \    \"ItemNumber\": \"0801-01-104\",\r
+
+      \    \"ReturnSalesQuantity\": -2,\r
+
+      \    \"ReturnWarehouseId\": \"CH01\",\r
+
+      \    \"ItemBatchNumber\": \"001\",\r
+
+      \    \"SalesPrice\": 100\r
+
+      \    \r
+
+      \r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

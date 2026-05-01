@@ -1,0 +1,58 @@
+info:
+  name: PostCustomer Update
+  type: http
+  seq: 59
+
+http:
+  method: PATCH
+  url: "{{DynamicsURL}}/data/CustomersV3(CustomerAccount='10000999',dataAreaId='amic')?cross-company=true"
+  params:
+    - name: cross-company
+      value: "true"
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \            \"dataAreaId\": \"amic\",\r
+
+      \            \"CustomerAccount\": \"10000999\",\r
+
+      \            \"OrganizationNumber\": \"10000999\",\r
+
+      \            \"PartyType\": \"Organization\",\r
+
+      \            \"CustomerGroupId\": \"Trd Trade\",\r
+
+      \            \"SalesCurrencyCode\": \"SAR\",\r
+
+      \            \"OrganizationName\": \"CustTest10000999\",\r
+
+      \            \"EInvoiceType\": \"Standard\",\r
+
+      \            \"WarehouseId\": \"JED-01\",\r
+
+      \            \"IdentificationNumber\": \"310158373900003\",\r
+
+      \            \"AddressCountryRegionISOCode\": \"SA\",\r
+
+      \            \"AddressDescription\": \"test001\",\r
+
+      \            \"AddressCity\": \"1\",\r
+
+      \            \"DefaultDimensionDisplayValue\": \"|||||||||||\"\r
+
+      \            \r
+
+      \ \r
+
+      }\t "
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

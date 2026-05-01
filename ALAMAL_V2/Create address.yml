@@ -1,0 +1,46 @@
+info:
+  name: Create address
+  type: http
+  seq: 75
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/data/CustomerPostalAddresses"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"CustomerLegalEntityId\" : \"amic\", \r
+
+      \    \"CustomerAccountNumber\" : \"11010001\", //Customer account\r
+
+      \    \"AddressDescription\" : \"Address\", \r
+
+      \    \"IsRoleBusiness\" : \"Yes\", \r
+
+      \    //\"IsPostalAddress \" : \"Yes\", \r
+
+      \    \"AddressLocationRoles\" : \"role\", \r
+
+      \    \"AddressCountryRegionId\": \"SA\",\r
+
+      \    \"AddressStreet\": \"Default Street\",\r
+
+      \    \"AddressZipCode\": \"22233\",\r
+
+      \    \"AddressCity\": \"7\",//Jeddah-جدة\r
+
+      \    \"AddressDefaultRoles\": \"Business\",\r
+
+      \    \"AddressState\": \"1\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InEtMjNmYWxldlpoaEQzaG05Q1Fia1A1TVF5VSIsImtpZCI6InEtMjNmYWxldlpoaEQzaG05Q1Fia1A1TVF5VSJ9.eyJhdWQiOiJodHRwczovL2ljZWNyZWFtYWxhbWFsLnNhbmRib3gub3BlcmF0aW9ucy5keW5hbWljcy5jb20vIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvY2MzY2FkOWQtNDFlYS00YzU2LWE0MzgtZGE3NTdkNTA1MDE2LyIsImlhdCI6MTcxMzI4NTA0OCwibmJmIjoxNzEzMjg1MDQ4LCJleHAiOjE3MTMyODg5NDgsImFpbyI6IkUyTmdZRkRQYkRpdStmV3V3WTRKOWJOUGVpLzRCQUE9IiwiYXBwaWQiOiJhYWY2MTEyYy03NDNlLTQ1ZjgtOWU5ZS01NWQxYTNhNzdiNTciLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9jYzNjYWQ5ZC00MWVhLTRjNTYtYTQzOC1kYTc1N2Q1MDUwMTYvIiwib2lkIjoiMGIyNjViZDUtNmRkMy00YTZiLThjMDMtM2RmOTU1Nzg2ZDMwIiwicmgiOiIwLkFhOEFuYTA4ek9wQlZreWtPTnAxZlZCUUZoVUFBQUFBQUFBQXdBQUFBQUFBQUFDdkFBQS4iLCJyb2xlcyI6WyJDb25uZWN0b3IuRnVsbEFjY2VzcyJdLCJzdWIiOiIwYjI2NWJkNS02ZGQzLTRhNmItOGMwMy0zZGY5NTU3ODZkMzAiLCJ0aWQiOiJjYzNjYWQ5ZC00MWVhLTRjNTYtYTQzOC1kYTc1N2Q1MDUwMTYiLCJ1dGkiOiJ5VjhUaW9BOU5rMi1PNkJXRkFvNUFBIiwidmVyIjoiMS4wIn0.Vky14vIqjHBTDfwyr5idcuRjbWeBVyDZsbWEDB4QgOATde0ZGkw6b0EYCPZSpclwwgJLY7dqoVAt1pkwoDyErXSByjvAVCRb93Ywg6qgX9Oah1XGWfqc4e9y5RmT6ZeteWMmfwV5S7tYQApOEG-_Y3v0neYzzyNO83YCeTJ1TcBCEnIzG7M42MS_e1huesIVLCyR0I0skCU9szjOpy7zDeg5RI_U-ku4lB9vBTdwY3Udszp-7_clXHXx6-E2gDTs0MRoTEUsuaqAG2LGRTgG_h21bT5QFqo3rrjLd4b20q9a3jPh3bCH4aR2c5EIpg_YNnDptp5lvKyn9f89btmHEw
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

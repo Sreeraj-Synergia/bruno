@@ -1,0 +1,110 @@
+info:
+  name: DraftTransferJurnalLines
+  type: http
+  seq: 84
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/data/InventoryTransferJournalEntries"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dataAreaId\": \"amic\",\r
+
+      \    \"JournalNumber\": \"ABC012\",\r
+
+      \    \"LineNumber\": 1,\r
+
+      \    \"SourceInventorySiteId\": \"Main\",\r
+
+      \    \"SourceProductVersionId\": \"\",\r
+
+      \    \"SourceProductConfigurationId\": \"\",\r
+
+      \    \"DestinationInventoryOwnerId\": \"\",\r
+
+      \    \"SourceItemSerialNumber\": \"\",\r
+
+      \    \"DestinationProductConfigurationId\": \"\",\r
+
+      \    \"DestinationInventoryStatusId\": \"\",\r
+
+      \    \"DestinationProductSizeId\": \"\",\r
+
+      \    \"ItemNumber\": \"0801-01-104\",\r
+
+      \    \"DestinationLicensePlateNumber\": \"\",\r
+
+      \    \"SourceLicensePlateNumber\": \"\",\r
+
+      \    \"InventoryQuantity\": -10,\r
+
+      \    \"SourceInventoryProfileId\": \"\",\r
+
+      \    \"DestinationItemSerialNumber\": \"\",\r
+
+      \    \"DestinationInventorySiteId\": \"Main\",\r
+
+      \    \"UnitCostQuantity\": 1,\r
+
+      \    \"SourceInventoryStatusId\": \"\",\r
+
+      \    \"SourceProductSizeId\": \"\",\r
+
+      \    \"DestinationProductVersionId\": \"\",\r
+
+      \    \"DestinationWarehouseId\": \"CH02\",\r
+
+      \    \"SourceProductColorId\": \"\",\r
+
+      \    \"SourceItemBatchNumber\": \"\",\r
+
+      \    \"TransactionDate\": \"2023-12-02T12:00:00Z\",\r
+
+      \    \"DestinationProductStyleId\": \"\",\r
+
+      \    \"DestinationWarehouseLocationId\": \"Default\",\r
+
+      \    \"SourceInventoryGtdId\": \"\",\r
+
+      \    \"SourceProductStyleId\": \"\",\r
+
+      \    \"DefaultLedgerDimensionDisplayValue\": \"\",\r
+
+      \    \"DestinationProductColorId\": \"\",\r
+
+      \    \"CatchWeightQuantity\": 0,\r
+
+      \    \"DestinationInventoryProfileId\": \"\",\r
+
+      \    \"JournalNameId\": \"TJ\",\r
+
+      \    \"SourceInventoryOwnerId\": \"\",\r
+
+      \    \"SourceWarehouseLocationId\": \"Default\",\r
+
+      \    \"DestinationItemBatchNumber\": \"\",\r
+
+      \    \"SourceWarehouseId\": \"CH01\",\r
+
+      \    \"DestinationInventoryGtdId\": \"\",\r
+
+      \    \"Qty\": 0,\r
+
+      \    \"Unit\": \"\",\r
+
+      \    \"UnitQtyNew\": -1,\r
+
+      \    \"UnitNew\": \"Carton\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

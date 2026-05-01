@@ -1,0 +1,24 @@
+info:
+  name: AllInventTrans
+  type: http
+  seq: 74
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/InventTransCDSEntities?$count=true&$filter=RecordId gt 5640541464"
+  params:
+    - name: $count
+      value: "true"
+      type: query
+    - name: $filter
+      value: RecordId gt 5640541464
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

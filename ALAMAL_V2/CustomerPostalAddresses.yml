@@ -1,0 +1,17 @@
+info:
+  name: CustomerPostalAddresses
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/CustomerPostalAddresses"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

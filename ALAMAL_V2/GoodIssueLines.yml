@@ -1,0 +1,24 @@
+info:
+  name: GoodIssueLines
+  type: http
+  seq: 44
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/InventoryTransferJournalEntries?$filter=JournalNumber eq 'QSM-04E0000015'"
+  params:
+    - name: $filter
+      value: JournalNumber eq 'QSM-04E0000015'
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

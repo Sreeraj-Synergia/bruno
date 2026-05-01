@@ -1,0 +1,44 @@
+info:
+  name: TransferJournalHeader Get Copy
+  type: http
+  seq: 37
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/InventoryTransferJournalHeaders?$filter=JournalNumber eq 'ABC0033'"
+  params:
+    - name: $filter
+      value: JournalNumber eq 'ABC0033'
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"dataAreaId\": \"amic\",\r
+
+      \    \"JournalNumber\": \"AMIC-000031\",\r
+
+      \    \"Description\": \"Transfer Journal\",\r
+
+      \    \"DefaultWarehouseId\": \"\",\r
+
+      \    \"ReservationMode\": \"None\",\r
+
+      \    \"PostingDetailLevel\": \"Detail\",\r
+
+      \    \"DefaultInventorySiteId\": \"\",\r
+
+      \    \"JournalNameId\": \"TJ\",\r
+
+      \    \"VoucherNumberSelectionRule\": \"DateChange\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

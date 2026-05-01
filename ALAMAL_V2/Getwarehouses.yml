@@ -1,0 +1,21 @@
+info:
+  name: Getwarehouses
+  type: http
+  seq: 54
+
+http:
+  method: GET
+  url: "{{DynamicsURL}}/data/Warehouses?$filter=PrimaryAddressDescription eq 'SFA'"
+  params:
+    - name: $filter
+      value: PrimaryAddressDescription eq 'SFA'
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

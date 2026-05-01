@@ -1,0 +1,38 @@
+info:
+  name: Zatca
+  type: http
+  seq: 55
+
+http:
+  method: POST
+  url: "{{DynamicsURL}}/api/services/ZatkaQRGRP/ZatkaQROneServ/getQR?company=AMIC"
+  params:
+    - name: company
+      value: AMIC
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"_company\": \"AMIC\",\r
+
+      \    \"_Contract\":\r
+
+      \    {\r
+
+      \        \"SalesId\":\"SOInv-000691969\"\r
+
+      \    \r
+
+      \    }\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

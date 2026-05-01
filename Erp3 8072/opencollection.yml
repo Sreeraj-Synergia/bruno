@@ -1,7 +1,7 @@
 opencollection: 1.0.0
 
 info:
-  name: Erp3 8072
+  name: ERP
 config:
   proxy:
     inherit: true
@@ -16,8 +16,93 @@ config:
 
 request:
   variables:
-    - name: LocalUrl
+    - name: Dms-Local-8069
+      value: http://localhost:8069
+    - name: Ckm-Local-8070
+      value: http://localhost:8070
+    - name: Hadeel-Local-8071
+      value: http://localhost:8071
+    - name: Erp3-Local-8072
       value: http://localhost:8072
+    - name: Maskari-Local-8073
+      value: http://localhost:8073
+    - name: ERP
+      value: http://172.105.49.63:8069
+    - name: ERP2
+      value: http://172.105.49.63:8070
+    - name: ERP3
+      value: http://172.105.49.63:8071
+    - name: MHP
+      value: http://172.105.253.36:8070
+    - name: Richoos-Production
+      value: http://45.79.124.212:8069
+    - name: Richoos-Test
+      value: http://45.79.124.212:8071
+    - name: CKM-Production
+      value: http://172.104.206.12:8069
+    - name: CKM-Test
+      value: http://172.104.206.12:8071
+    - name: SONAS-HRMS-Production
+      value: https://sonaserp.synergiasoft.net
+    - name: SONAS-Vansales-Production
+      value: http://192.46.211.20:8071
+    - name: SONAS-DMS-Production
+      value: http://192.46.211.20:8070
+    - name: Balade-Production
+      value: http://83.111.180.137:8069
+    - name: Balade-Test
+      value: http://83.111.180.137:8070/
+    - name: Zaramiz-Production
+      value: http://172.105.59.38:8069
+    - name: Omanfoods-Production
+      value: http://172.105.41.106:8069
+    - name: Omanfoods-Test
+      value: http://172.105.41.106:8070
+    - name: Barik-Production
+      value: http://194.195.117.22:8069
+    - name: KargoBox-Production
+      value: http://45.79.122.9:8069
+    - name: KargoBox-Test
+      value: http://45.79.122.9:8070
+    - name: Pharmacy-Production
+      value: http://45.79.121.115:8071
+    - name: Pharmacy-Test
+      value: http://45.79.121.115:8069
+    - name: Rx-Production
+      value: http://172.105.41.251:8077
+    - name: Rx-Test
+      value: http://172.105.41.251:8070
+    - name: Maiblue-Production
+      value: http://maiblue.synergiasoft.net
+    - name: SONAS-Vansales-Test
+      value: http://172.105.51.189:8069
+    - name: Ostrich-Production
+      value: http://194.195.117.203:8069
+    - name: Maskari-Production
+      value: http://65.0.53.144:8069
+    - name: Maskari-Test
+      value: http://65.0.53.144:8070
+    - name: Proserve-Production
+      value: http://172.105.39.211:8069
+    - name: Proserve-Test
+      value: http://172.105.39.211:8071
+  actions:
+    - type: set-variable
+      phase: after-response
+      selector:
+        expression: res.body.result.payload.database_list[0]
+        method: jsonq
+      variable:
+        name: db
+        scope: runtime
+    - type: set-variable
+      phase: after-response
+      selector:
+        expression: ""
+        method: jsonq
+      variable:
+        name: ""
+        scope: runtime
 bundled: false
 extensions:
   bruno:
