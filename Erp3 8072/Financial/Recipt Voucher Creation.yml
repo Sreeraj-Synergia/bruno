@@ -1,0 +1,319 @@
+info:
+  name: Recipt Voucher Creation
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{Erp3-Local-8072}}/web/create_invoice_payment"
+  body:
+    type: json
+    data: |-
+      {
+        "params": {
+          "data": {
+            "payment_details": [
+              {
+                "amount": 1000,
+                "cheque_reference": "",
+                "currency_id": 128,
+                "date": "2026-05-01",
+                "invoice_id": 43277,
+                "invoice_origin": "INV/2026/01144",
+                "journal_id": 37,
+                "move_narration": "Electronic",
+                "customer_id": 47622,
+                "payment_method_line_id": 146,
+                "payment_origin": "RVPO174290092712830",
+                "transaction_no": "TCRN484545461",
+                "payment_difference": false,
+                "writeoff_journal_id": false,
+                "writeoff_account_id": false,
+                "writeoff_label": false,
+                "payment_difference_handling": false,
+                "writeoff_type": false
+              },
+              {
+                "amount": 260,
+                "cheque_reference": "",
+                "currency_id": 128,
+                "date": "2026-05-01",
+                "invoice_id": 43277,
+                "invoice_origin": "INV/2026/01144",
+                "journal_id": 37,
+                "move_narration": "Electronic",
+                "customer_id": 47622,
+                "payment_method_line_id": 146,
+                "payment_origin": "RVPO174290092712831",
+                "transaction_no": "TCRN484545461",
+                "payment_difference": 8.72,
+                "writeoff_journal_id": 64,
+                "writeoff_account_id": 1742,
+                "writeoff_label": "Write Off",
+                "payment_difference_handling": "reconcile", //"open",//"reconcile",
+                "writeoff_type": "rebate" //"rebate"//"adjustment"
+              }
+            ]
+          }
+        },
+        "user_lang": "en_us"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Receipt Voucher Created
+    request:
+      url: "{{Erp3-Local-8072}}/web/create_invoice_payment"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "params": {
+              "data": {
+                "payment_details": [
+                  {
+                    "amount": 1000,
+                    "cheque_reference": "",
+                    "currency_id": 128,
+                    "date": "2026-05-01",
+                    "invoice_id": 43277,
+                    "invoice_origin": "INV/2026/01144",
+                    "journal_id": 37,
+                    "move_narration": "Electronic",
+                    "customer_id": 47622,
+                    "payment_method_line_id": 146,
+                    "payment_origin": "RVPO174290092712830",
+                    "transaction_no": "TCRN484545461",
+                    "payment_difference": false,
+                    "writeoff_journal_id": false,
+                    "writeoff_account_id": false,
+                    "writeoff_label": false,
+                    "payment_difference_handling": false,
+                    "writeoff_type": false
+                  },
+                  {
+                    "amount": 260,
+                    "cheque_reference": "",
+                    "currency_id": 128,
+                    "date": "2026-05-01",
+                    "invoice_id": 43277,
+                    "invoice_origin": "INV/2026/01144",
+                    "journal_id": 37,
+                    "move_narration": "Electronic",
+                    "customer_id": 47622,
+                    "payment_method_line_id": 146,
+                    "payment_origin": "RVPO174290092712831",
+                    "transaction_no": "TCRN484545461",
+                    "payment_difference": 8.72,
+                    "writeoff_journal_id": 64,
+                    "writeoff_account_id": 1742,
+                    "writeoff_label": "Write Off",
+                    "payment_difference_handling": "reconcile", //"open",//"reconcile",
+                    "writeoff_type": "rebate" //"rebate"//"adjustment"
+                  }
+                ]
+              }
+            },
+            "user_lang": "en_us"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: Werkzeug/3.0.1 Python/3.12.3
+        - name: date
+          value: Mon, 04 May 2026 07:38:40 GMT
+        - name: content-length
+          value: "4533"
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: x-content-type-options
+          value: nosniff
+        - name: connection
+          value: close
+      body:
+        type: json
+        data: |-
+          {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+              "success": true,
+              "payload": {
+                "receipt_voucher_create_details": [
+                  {
+                    "id": 2499,
+                    "number": "RV20261379",
+                    "customer_id": 47622,
+                    "partner_name": "ZAHRAT AL BATOOL FOODSTUFF TR. L.L.C ",
+                    "journal_id": 37,
+                    "journal_name": "Cash in Hand- Van 01",
+                    "payment_method_line_id": 146,
+                    "payment_method_line_name": "Manual Payment",
+                    "currency_id": 128,
+                    "currency_name": "AED",
+                    "rate_with_comp_currency": 1.0,
+                    "account_id": 1568,
+                    "account_name": "CASH IN HAND-VAN 01",
+                    "date": "2026-05-01",
+                    "account_date": "2026-05-04",
+                    "cheque_date": null,
+                    "name": null,
+                    "move_narration": "Electronic",
+                    "transaction_no": "TCRN484545461",
+                    "transaction_date": null,
+                    "pdc_state": null,
+                    "pdc_account_id": null,
+                    "pdc_account_name": null,
+                    "bank_reference": null,
+                    "cheque_reference": null,
+                    "effective_date": null,
+                    "payment_origin": "RVPO174290092712830",
+                    "bounce_reason_id": null,
+                    "bounce_reason_name": null,
+                    "payee_id": null,
+                    "payee_name": null,
+                    "payee_no": null,
+                    "payee_id_img": "http://192.168.1.119:8072/web/url_image?model=account.voucher&id=2499&field=payee_identity",
+                    "payee_sign": "http://192.168.1.119:8072/web/url_image?model=account.voucher&id=2499&field=payee_signature",
+                    "line_ids": [],
+                    "payment_invoice_line_ids": [
+                      {
+                        "id": 5106,
+                        "line_number": 2,
+                        "customer_id": 47622,
+                        "partner_name": "ZAHRAT AL BATOOL FOODSTUFF TR. L.L.C ",
+                        "move_id": 43277,
+                        "move_name": "INV/2026/01144",
+                        "invoice_date": "2026-04-13",
+                        "due_date": "2026-07-12",
+                        "due_days": "2026-07-12",
+                        "amount_total": 1268.72,
+                        "residual": 1268.72,
+                        "alloc_amount": 1000.0,
+                        "balance_amount": 268.72,
+                        "currency_id": 128,
+                        "currency_name": "AED"
+                      }
+                    ],
+                    "partner_account_id": 10,
+                    "partner_account_name": "Accounts Receivable",
+                    "trans_amount": 1000.0,
+                    "untaxed_amount": 1000.0,
+                    "tax_amount": 1000.0,
+                    "amount": 1000.0,
+                    "comp_untaxed_amount": 1000.0,
+                    "comp_tax_amount": 1000.0,
+                    "comp_amount": 1000.0,
+                    "payment_state": "posted",
+                    "eligible_reconciled_amount": 1000.0,
+                    "eligible_reconciled_amount_currency": 1000.0,
+                    "reconciled_amount": 1000.0,
+                    "residual_amount": null,
+                    "reconciled_amount_currency": 1000.0,
+                    "residual_amount_currency": null,
+                    "reconciliation_state": "full_reconciled",
+                    "rebate_from": null,
+                    "rebate_to": null,
+                    "rebate_amount": null,
+                    "rebate_percent": null,
+                    "is_rebate_journal": null,
+                    "loading_note_id": null,
+                    "loading_note_name": null,
+                    "loading_note_state": null
+                  },
+                  {
+                    "id": 2500,
+                    "number": "RV20261380",
+                    "customer_id": 47622,
+                    "partner_name": "ZAHRAT AL BATOOL FOODSTUFF TR. L.L.C ",
+                    "journal_id": 37,
+                    "journal_name": "Cash in Hand- Van 01",
+                    "payment_method_line_id": 146,
+                    "payment_method_line_name": "Manual Payment",
+                    "currency_id": 128,
+                    "currency_name": "AED",
+                    "rate_with_comp_currency": 1.0,
+                    "account_id": 1568,
+                    "account_name": "CASH IN HAND-VAN 01",
+                    "date": "2026-05-04",
+                    "account_date": "2026-05-01",
+                    "cheque_date": null,
+                    "name": null,
+                    "move_narration": null,
+                    "transaction_no": "TCRN484545461",
+                    "transaction_date": null,
+                    "pdc_state": null,
+                    "pdc_account_id": null,
+                    "pdc_account_name": null,
+                    "bank_reference": "TCRN484545461",
+                    "cheque_reference": null,
+                    "effective_date": null,
+                    "payment_origin": "RVPO174290092712831",
+                    "bounce_reason_id": null,
+                    "bounce_reason_name": null,
+                    "payee_id": null,
+                    "payee_name": null,
+                    "payee_no": null,
+                    "payee_id_img": "http://192.168.1.119:8072/web/url_image?model=account.voucher&id=2500&field=payee_identity",
+                    "payee_sign": "http://192.168.1.119:8072/web/url_image?model=account.voucher&id=2500&field=payee_signature",
+                    "line_ids": [],
+                    "payment_invoice_line_ids": [
+                      {
+                        "id": 5109,
+                        "line_number": 1,
+                        "customer_id": 47622,
+                        "partner_name": "ZAHRAT AL BATOOL FOODSTUFF TR. L.L.C ",
+                        "move_id": 43277,
+                        "move_name": "INV/2026/01144",
+                        "invoice_date": "2026-04-13",
+                        "due_date": "2026-07-12",
+                        "due_days": "2026-07-12",
+                        "amount_total": 1268.72,
+                        "residual": 268.72,
+                        "alloc_amount": 260.0,
+                        "balance_amount": 8.72,
+                        "currency_id": 128,
+                        "currency_name": "AED"
+                      }
+                    ],
+                    "partner_account_id": 10,
+                    "partner_account_name": "Accounts Receivable",
+                    "trans_amount": 260.0,
+                    "untaxed_amount": 260.0,
+                    "tax_amount": 260.0,
+                    "amount": 260.0,
+                    "comp_untaxed_amount": 260.0,
+                    "comp_tax_amount": 260.0,
+                    "comp_amount": 260.0,
+                    "payment_state": "posted",
+                    "eligible_reconciled_amount": 260.0,
+                    "eligible_reconciled_amount_currency": 260.0,
+                    "reconciled_amount": 260.0,
+                    "residual_amount": null,
+                    "reconciled_amount_currency": 260.0,
+                    "residual_amount_currency": null,
+                    "reconciliation_state": "full_reconciled",
+                    "rebate_from": null,
+                    "rebate_to": null,
+                    "rebate_amount": "fixed",
+                    "rebate_percent": null,
+                    "is_rebate_journal": null
+                  }
+                ],
+                "invoice_details": {}
+              },
+              "error": {
+                "code": 0,
+                "message": ""
+              }
+            }
+          }
