@@ -1,0 +1,25 @@
+meta {
+  name: Mobilisation Details
+  type: http
+  seq: 74
+}
+
+post {
+  url: https://grako.syntrack.app/web/get_mobilisation_info
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "mobilisation_id": 109
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

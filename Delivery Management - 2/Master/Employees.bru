@@ -1,0 +1,384 @@
+meta {
+  name: Employees
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://194.195.116.73:8070/web/get_employee_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Employees
+  
+  request: {
+    url: http://194.195.116.73:8070/web/get_employee_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 8250
+      Set-Cookie: session_id=77868c19f24ec98fe5604f368e59ade6a68f3fcd; Expires=Wed, 11-Dec-2024 08:07:21 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Thu, 12 Sep 2024 08:07:21 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "employee_details": [
+                        {
+                            "id": 152,
+                            "name": "Hamsheer Panikkaveettil Haneefa",
+                            "street": "Right Medical Center Building",
+                            "street2": null,
+                            "city": "Abu Shagara",
+                            "state_id": 551,
+                            "state_name": "Sharjah",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "31343",
+                            "department_id": 29,
+                            "department_name": "Retail- Pharmacies",
+                            "job_id": 43,
+                            "job_name": "Delivery Drivers",
+                            "job_position_title": "Delivery Drivers",
+                            "work_phone": null,
+                            "work_mobile": "+971 521109798",
+                            "work_email": "hamsheer",
+                            "user_id": 114,
+                            "user_name": "Hamsheer Panikkaveettil Haneefa",
+                            "work_location_ids": [
+                                {
+                                    "customer_id": 940,
+                                    "name": "Al Afdhal Pharmacy LLC",
+                                    "street": "Shop No: 1 & 2 , Muweilah Commercial",
+                                    "street2": "Industrial Area",
+                                    "city": null,
+                                    "zip": "31343",
+                                    "state_id": 551,
+                                    "state_name": "Sharjah",
+                                    "country_id": 2,
+                                    "country_name": "United Arab Emirates",
+                                    "email": "alafdhalphy@gmail.com",
+                                    "website": null,
+                                    "phone": "+9716 5217622",
+                                    "mobile": "+971 523010341",
+                                    "trn": "100244673800003",
+                                    "trade_reg": null,
+                                    "latitude": null,
+                                    "longitude": null,
+                                    "customer_ref": null,
+                                    "logo_url": "http://194.195.116.73:8070/web/url_image/res.partner/940/image_1920",
+                                    "arabic_name": null,
+                                    "customer": false,
+                                    "supplier": false,
+                                    "contact_list": [],
+                                    "area_code_id": null,
+                                    "area_code_code": null,
+                                    "area_code_name": null,
+                                    "sales_person_ids": [],
+                                    "sales_executive_ids": [],
+                                    "sales_supervisor_ids": [],
+                                    "delivery_person_ids": [],
+                                    "is_contact": false
+                                },
+                                {
+                                    "customer_id": 939,
+                                    "name": "Al Sabah Pharmacy LLC",
+                                    "street": "Opposit Aster Clinic Building No:19",
+                                    "street2": "Muweilah Road",
+                                    "city": "New Muweilah",
+                                    "zip": "31343",
+                                    "state_id": 551,
+                                    "state_name": "Sharjah",
+                                    "country_id": 2,
+                                    "country_name": "United Arab Emirates",
+                                    "email": "alsabahphy@gmail.com",
+                                    "website": null,
+                                    "phone": "+9716 5302468",
+                                    "mobile": "+971 524939218",
+                                    "trn": "100244673800003",
+                                    "trade_reg": null,
+                                    "latitude": null,
+                                    "longitude": null,
+                                    "customer_ref": null,
+                                    "logo_url": "http://194.195.116.73:8070/web/url_image/res.partner/939/image_1920",
+                                    "arabic_name": null,
+                                    "customer": false,
+                                    "supplier": false,
+                                    "contact_list": [],
+                                    "area_code_id": null,
+                                    "area_code_code": null,
+                                    "area_code_name": null,
+                                    "sales_person_ids": [],
+                                    "sales_executive_ids": [],
+                                    "sales_supervisor_ids": [],
+                                    "delivery_person_ids": [],
+                                    "is_contact": false
+                                }
+                            ],
+                            "employee_photo": "http://194.195.116.73:8070/web/url_image/hr.employee/152/image_1920"
+                        },
+                        {
+                            "id": 202,
+                            "name": "Majida PV",
+                            "street": "Opposit Aster Clinic Building No:19",
+                            "street2": "Muweilah Road",
+                            "city": "New Muweilah",
+                            "state_id": 551,
+                            "state_name": "Sharjah",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "31343",
+                            "department_id": 29,
+                            "department_name": "Retail- Pharmacies",
+                            "job_id": 39,
+                            "job_name": "Pharmacist",
+                            "job_position_title": "Pharmacist",
+                            "work_phone": "+9716 5302468",
+                            "work_mobile": "+971 507962496",
+                            "work_email": "pvmajida@gmail.com",
+                            "user_id": null,
+                            "user_name": null,
+                            "work_location_ids": [],
+                            "employee_photo": "http://194.195.116.73:8070/web/url_image/hr.employee/202/image_1920"
+                        },
+                        {
+                            "id": 237,
+                            "name": "Mary Mancy PM",
+                            "street": "Opposit Aster Clinic Building No:19",
+                            "street2": "Muweilah Road",
+                            "city": "New Muweilah",
+                            "state_id": 551,
+                            "state_name": "Sharjah",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "31343",
+                            "department_id": 29,
+                            "department_name": "Retail- Pharmacies",
+                            "job_id": 40,
+                            "job_name": "Pharmacy Assistant",
+                            "job_position_title": "Pharmacy Assistant",
+                            "work_phone": "+9716 5302468",
+                            "work_mobile": "+971 545253767",
+                            "work_email": "mancyjoby1989@gmail.com",
+                            "user_id": null,
+                            "user_name": null,
+                            "work_location_ids": [],
+                            "employee_photo": "http://194.195.116.73:8070/web/url_image/hr.employee/237/image_1920"
+                        },
+                        {
+                            "id": 201,
+                            "name": "Mohammed Ramshad KV",
+                            "street": "Opposit Aster Clinic Building No:19",
+                            "street2": "Muweilah Road",
+                            "city": "New Muweilah",
+                            "state_id": 551,
+                            "state_name": "Sharjah",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "31343",
+                            "department_id": 29,
+                            "department_name": "Retail- Pharmacies",
+                            "job_id": 38,
+                            "job_name": "Pharmacy manager",
+                            "job_position_title": "Pharmacy manager",
+                            "work_phone": "+9716 5302468",
+                            "work_mobile": "+971 566556805",
+                            "work_email": "ramshad",
+                            "user_id": 67,
+                            "user_name": "Mohammed Ramshad KV",
+                            "work_location_ids": [],
+                            "employee_photo": "http://194.195.116.73:8070/web/url_image/hr.employee/201/image_1920"
+                        },
+                        {
+                            "id": 269,
+                            "name": "Muhammad Qasim Nazir Ahmad",
+                            "street": "Opposit Aster Clinic Building No:19",
+                            "street2": "Muweilah Road",
+                            "city": "New Muweilah",
+                            "state_id": 551,
+                            "state_name": "Sharjah",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "31343",
+                            "department_id": 29,
+                            "department_name": "Retail- Pharmacies",
+                            "job_id": 43,
+                            "job_name": "Delivery Drivers",
+                            "job_position_title": "Delivery Drivers",
+                            "work_phone": "+9716 5302468",
+                            "work_mobile": null,
+                            "work_email": "shahswar",
+                            "user_id": 132,
+                            "user_name": "Muhammad Qasim Nazir Ahmad",
+                            "work_location_ids": [
+                                {
+                                    "customer_id": 940,
+                                    "name": "Al Afdhal Pharmacy LLC",
+                                    "street": "Shop No: 1 & 2 , Muweilah Commercial",
+                                    "street2": "Industrial Area",
+                                    "city": null,
+                                    "zip": "31343",
+                                    "state_id": 551,
+                                    "state_name": "Sharjah",
+                                    "country_id": 2,
+                                    "country_name": "United Arab Emirates",
+                                    "email": "alafdhalphy@gmail.com",
+                                    "website": null,
+                                    "phone": "+9716 5217622",
+                                    "mobile": "+971 523010341",
+                                    "trn": "100244673800003",
+                                    "trade_reg": null,
+                                    "latitude": null,
+                                    "longitude": null,
+                                    "customer_ref": null,
+                                    "logo_url": "http://194.195.116.73:8070/web/url_image/res.partner/940/image_1920",
+                                    "arabic_name": null,
+                                    "customer": false,
+                                    "supplier": false,
+                                    "contact_list": [],
+                                    "area_code_id": null,
+                                    "area_code_code": null,
+                                    "area_code_name": null,
+                                    "sales_person_ids": [],
+                                    "sales_executive_ids": [],
+                                    "sales_supervisor_ids": [],
+                                    "delivery_person_ids": [],
+                                    "is_contact": false
+                                },
+                                {
+                                    "customer_id": 939,
+                                    "name": "Al Sabah Pharmacy LLC",
+                                    "street": "Opposit Aster Clinic Building No:19",
+                                    "street2": "Muweilah Road",
+                                    "city": "New Muweilah",
+                                    "zip": "31343",
+                                    "state_id": 551,
+                                    "state_name": "Sharjah",
+                                    "country_id": 2,
+                                    "country_name": "United Arab Emirates",
+                                    "email": "alsabahphy@gmail.com",
+                                    "website": null,
+                                    "phone": "+9716 5302468",
+                                    "mobile": "+971 524939218",
+                                    "trn": "100244673800003",
+                                    "trade_reg": null,
+                                    "latitude": null,
+                                    "longitude": null,
+                                    "customer_ref": null,
+                                    "logo_url": "http://194.195.116.73:8070/web/url_image/res.partner/939/image_1920",
+                                    "arabic_name": null,
+                                    "customer": false,
+                                    "supplier": false,
+                                    "contact_list": [],
+                                    "area_code_id": null,
+                                    "area_code_code": null,
+                                    "area_code_name": null,
+                                    "sales_person_ids": [],
+                                    "sales_executive_ids": [],
+                                    "sales_supervisor_ids": [],
+                                    "delivery_person_ids": [],
+                                    "is_contact": false
+                                },
+                                {
+                                    "customer_id": 921,
+                                    "name": "Muhammad Ayaz Pharmacy LLC",
+                                    "street": "Opposit Karachi Darbar",
+                                    "street2": "Al Wasit Steet",
+                                    "city": "Al Shahabah",
+                                    "zip": null,
+                                    "state_id": 551,
+                                    "state_name": "Sharjah",
+                                    "country_id": 2,
+                                    "country_name": "United Arab Emirates",
+                                    "email": "m.ayazpharmacy@gmail.com",
+                                    "website": null,
+                                    "phone": "+9716 5526224",
+                                    "mobile": "+971 547939767",
+                                    "trn": "10006740830003",
+                                    "trade_reg": null,
+                                    "latitude": null,
+                                    "longitude": null,
+                                    "customer_ref": null,
+                                    "logo_url": "http://194.195.116.73:8070/web/url_image/res.partner/921/image_1920",
+                                    "arabic_name": null,
+                                    "customer": false,
+                                    "supplier": false,
+                                    "contact_list": [],
+                                    "area_code_id": null,
+                                    "area_code_code": null,
+                                    "area_code_name": null,
+                                    "sales_person_ids": [],
+                                    "sales_executive_ids": [],
+                                    "sales_supervisor_ids": [],
+                                    "delivery_person_ids": [],
+                                    "is_contact": false
+                                }
+                            ],
+                            "employee_photo": "http://194.195.116.73:8070/web/url_image/hr.employee/269/image_1920"
+                        },
+                        {
+                            "id": 276,
+                            "name": "Nasriya.B",
+                            "street": "Opposit Aster Clinic Building No:19",
+                            "street2": "Muweilah Road",
+                            "city": "New Muweilah",
+                            "state_id": 551,
+                            "state_name": "Sharjah",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "31343",
+                            "department_id": 29,
+                            "department_name": "Retail- Pharmacies",
+                            "job_id": 40,
+                            "job_name": "Pharmacy Assistant",
+                            "job_position_title": "Pharmacy Assistant",
+                            "work_phone": "+9716 5302468",
+                            "work_mobile": "971 526523730",
+                            "work_email": "nasriyaash93@gmail.com",
+                            "user_id": null,
+                            "user_name": null,
+                            "work_location_ids": [],
+                            "employee_photo": "http://194.195.116.73:8070/web/url_image/hr.employee/276/image_1920"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,723 @@
+meta {
+  name: Get Current User Stock
+  type: http
+  seq: 20
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_current_user_stock
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  This api is used to get the current stock available in the vehicle the mobile user assigned to .
+}
+
+example {
+  name: Get Current User Stock
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_current_user_stock
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 10 Feb 2025 13:30:35 GMT
+      Content-Length: 655
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "stock_details": [
+                        {
+                            "product_id": 2390,
+                            "tracking": "lot",
+                            "product_name": "ALMOND NPX 27/30 CAMPOS",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 113,
+                                            "batch_number": "BX",
+                                            "batch_qty": 45.36,
+                                            "expiry_date": "2026-09-08 20:00:00",
+                                            "alert_date": "2026-06-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 114,
+                                            "batch_number": "BY",
+                                            "batch_qty": 68.04,
+                                            "expiry_date": "2027-08-08 20:00:00",
+                                            "alert_date": "2027-05-10 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": true,
+                                    "location_name": "MS/Route 5",
+                                    "location_id": 38
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Get Current User Stock latest
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_current_user_stock
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 11 Feb 2025 13:54:22 GMT
+      Content-Length: 4767
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "stock_details": [
+                        {
+                            "product_id": 2519,
+                            "tracking": "lot",
+                            "product_name": "APRICOT SOFT NO.1",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 179,
+                                            "batch_number": "ASN001",
+                                            "batch_qty": 97,
+                                            "expiry_date": "2026-02-08 20:00:00",
+                                            "alert_date": "2025-11-10 20:00:00",
+                                            "manu_date": "2025-11-10 20:00:00",
+                                            "remove_date": "2025-11-10 20:00:00",
+                                            "best_before_date": "2025-11-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 180,
+                                            "batch_number": "ASN002",
+                                            "batch_qty": 125,
+                                            "expiry_date": "2026-07-03 20:00:00",
+                                            "alert_date": "2026-04-04 20:00:00",
+                                            "manu_date": "2026-04-04 20:00:00",
+                                            "remove_date": "2026-04-04 20:00:00",
+                                            "best_before_date": "2026-04-04 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": true,
+                                    "location_name": "MS/90814",
+                                    "location_id": 31,
+                                    "location_full_info": {
+                                        "id": 31,
+                                        "name": "90814",
+                                        "display_name": "MS/90814",
+                                        "parent_location_id": 7,
+                                        "parent_location_name": "MS",
+                                        "type": "internal",
+                                        "scrap_location": false,
+                                        "dock": false,
+                                        "replenish": false,
+                                        "removal_strategy_id": 5,
+                                        "removal_strategy_name": "First Expiry First Out (FEFO)",
+                                        "location_employee_id": 7,
+                                        "location_employee_name": "Sales User 2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2373,
+                            "tracking": "lot",
+                            "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 97,
+                                            "batch_number": "X0001",
+                                            "batch_qty": 113.4,
+                                            "expiry_date": "2026-08-08 20:00:00",
+                                            "alert_date": "2026-05-10 20:00:00",
+                                            "manu_date": "2026-05-10 20:00:00",
+                                            "remove_date": "2026-05-10 20:00:00",
+                                            "best_before_date": "2026-05-10 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": true,
+                                    "location_name": "MS/90814",
+                                    "location_id": 31,
+                                    "location_full_info": {
+                                        "id": 31,
+                                        "name": "90814",
+                                        "display_name": "MS/90814",
+                                        "parent_location_id": 7,
+                                        "parent_location_name": "MS",
+                                        "type": "internal",
+                                        "scrap_location": false,
+                                        "dock": false,
+                                        "replenish": false,
+                                        "removal_strategy_id": 5,
+                                        "removal_strategy_name": "First Expiry First Out (FEFO)",
+                                        "location_employee_id": 7,
+                                        "location_employee_name": "Sales User 2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2855,
+                            "tracking": "none",
+                            "product_name": "Fine Soft Facial 100s Ply",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 10,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": true,
+                                    "location_name": "MS/90814",
+                                    "location_id": 31,
+                                    "location_full_info": {
+                                        "id": 31,
+                                        "name": "90814",
+                                        "display_name": "MS/90814",
+                                        "parent_location_id": 7,
+                                        "parent_location_name": "MS",
+                                        "type": "internal",
+                                        "scrap_location": false,
+                                        "dock": false,
+                                        "replenish": false,
+                                        "removal_strategy_id": 5,
+                                        "removal_strategy_name": "First Expiry First Out (FEFO)",
+                                        "location_employee_id": 7,
+                                        "location_employee_name": "Sales User 2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2518,
+                            "tracking": "lot",
+                            "product_name": "APRICOT SOFT JUMBO",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 160,
+                                            "batch_number": "MY124",
+                                            "batch_qty": 25,
+                                            "expiry_date": "2025-02-16 05:14:36",
+                                            "alert_date": "2024-11-18 05:14:36",
+                                            "manu_date": "2024-11-18 05:14:36",
+                                            "remove_date": "2024-11-18 05:14:36",
+                                            "best_before_date": "2024-11-18 05:14:36"
+                                        },
+                                        {
+                                            "batch_id": 161,
+                                            "batch_number": "TR245",
+                                            "batch_qty": 25,
+                                            "expiry_date": "2026-01-16 18:30:00",
+                                            "alert_date": "2025-10-18 18:30:00",
+                                            "manu_date": "2025-10-18 18:30:00",
+                                            "remove_date": "2025-10-18 18:30:00",
+                                            "best_before_date": "2025-10-18 18:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": true,
+                                    "location_name": "MS/90814",
+                                    "location_id": 31,
+                                    "location_full_info": {
+                                        "id": 31,
+                                        "name": "90814",
+                                        "display_name": "MS/90814",
+                                        "parent_location_id": 7,
+                                        "parent_location_name": "MS",
+                                        "type": "internal",
+                                        "scrap_location": false,
+                                        "dock": false,
+                                        "replenish": false,
+                                        "removal_strategy_id": 5,
+                                        "removal_strategy_name": "First Expiry First Out (FEFO)",
+                                        "location_employee_id": 7,
+                                        "location_employee_name": "Sales User 2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2390,
+                            "tracking": "lot",
+                            "product_name": "ALMOND NPX 27/30 CAMPOS",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 113,
+                                            "batch_number": "BX",
+                                            "batch_qty": 226.8,
+                                            "expiry_date": "2026-09-08 20:00:00",
+                                            "alert_date": "2026-06-10 20:00:00",
+                                            "manu_date": "2026-06-10 20:00:00",
+                                            "remove_date": "2026-06-10 20:00:00",
+                                            "best_before_date": "2026-06-10 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": true,
+                                    "location_name": "MS/90814",
+                                    "location_id": 31,
+                                    "location_full_info": {
+                                        "id": 31,
+                                        "name": "90814",
+                                        "display_name": "MS/90814",
+                                        "parent_location_id": 7,
+                                        "parent_location_name": "MS",
+                                        "type": "internal",
+                                        "scrap_location": false,
+                                        "dock": false,
+                                        "replenish": false,
+                                        "removal_strategy_id": 5,
+                                        "removal_strategy_name": "First Expiry First Out (FEFO)",
+                                        "location_employee_id": 7,
+                                        "location_employee_name": "Sales User 2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Get Current User Stock latest
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_current_user_stock
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 11 Feb 2025 13:54:22 GMT
+      Content-Length: 4767
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "stock_details": [
+                        {
+                            "product_id": 2519,
+                            "tracking": "lot",
+                            "product_name": "APRICOT SOFT NO.1",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 179,
+                                            "batch_number": "ASN001",
+                                            "batch_qty": 97,
+                                            "expiry_date": "2026-02-08 20:00:00",
+                                            "alert_date": "2025-11-10 20:00:00",
+                                            "manu_date": "2025-11-10 20:00:00",
+                                            "remove_date": "2025-11-10 20:00:00",
+                                            "best_before_date": "2025-11-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 180,
+                                            "batch_number": "ASN002",
+                                            "batch_qty": 125,
+                                            "expiry_date": "2026-07-03 20:00:00",
+                                            "alert_date": "2026-04-04 20:00:00",
+                                            "manu_date": "2026-04-04 20:00:00",
+                                            "remove_date": "2026-04-04 20:00:00",
+                                            "best_before_date": "2026-04-04 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": true,
+                                    "location_name": "MS/90814",
+                                    "location_id": 31,
+                                    "location_full_info": {
+                                        "id": 31,
+                                        "name": "90814",
+                                        "display_name": "MS/90814",
+                                        "parent_location_id": 7,
+                                        "parent_location_name": "MS",
+                                        "type": "internal",
+                                        "scrap_location": false,
+                                        "dock": false,
+                                        "replenish": false,
+                                        "removal_strategy_id": 5,
+                                        "removal_strategy_name": "First Expiry First Out (FEFO)",
+                                        "location_employee_id": 7,
+                                        "location_employee_name": "Sales User 2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2373,
+                            "tracking": "lot",
+                            "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 97,
+                                            "batch_number": "X0001",
+                                            "batch_qty": 113.4,
+                                            "expiry_date": "2026-08-08 20:00:00",
+                                            "alert_date": "2026-05-10 20:00:00",
+                                            "manu_date": "2026-05-10 20:00:00",
+                                            "remove_date": "2026-05-10 20:00:00",
+                                            "best_before_date": "2026-05-10 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": true,
+                                    "location_name": "MS/90814",
+                                    "location_id": 31,
+                                    "location_full_info": {
+                                        "id": 31,
+                                        "name": "90814",
+                                        "display_name": "MS/90814",
+                                        "parent_location_id": 7,
+                                        "parent_location_name": "MS",
+                                        "type": "internal",
+                                        "scrap_location": false,
+                                        "dock": false,
+                                        "replenish": false,
+                                        "removal_strategy_id": 5,
+                                        "removal_strategy_name": "First Expiry First Out (FEFO)",
+                                        "location_employee_id": 7,
+                                        "location_employee_name": "Sales User 2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2855,
+                            "tracking": "none",
+                            "product_name": "Fine Soft Facial 100s Ply",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 10,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": true,
+                                    "location_name": "MS/90814",
+                                    "location_id": 31,
+                                    "location_full_info": {
+                                        "id": 31,
+                                        "name": "90814",
+                                        "display_name": "MS/90814",
+                                        "parent_location_id": 7,
+                                        "parent_location_name": "MS",
+                                        "type": "internal",
+                                        "scrap_location": false,
+                                        "dock": false,
+                                        "replenish": false,
+                                        "removal_strategy_id": 5,
+                                        "removal_strategy_name": "First Expiry First Out (FEFO)",
+                                        "location_employee_id": 7,
+                                        "location_employee_name": "Sales User 2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2518,
+                            "tracking": "lot",
+                            "product_name": "APRICOT SOFT JUMBO",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 160,
+                                            "batch_number": "MY124",
+                                            "batch_qty": 25,
+                                            "expiry_date": "2025-02-16 05:14:36",
+                                            "alert_date": "2024-11-18 05:14:36",
+                                            "manu_date": "2024-11-18 05:14:36",
+                                            "remove_date": "2024-11-18 05:14:36",
+                                            "best_before_date": "2024-11-18 05:14:36"
+                                        },
+                                        {
+                                            "batch_id": 161,
+                                            "batch_number": "TR245",
+                                            "batch_qty": 25,
+                                            "expiry_date": "2026-01-16 18:30:00",
+                                            "alert_date": "2025-10-18 18:30:00",
+                                            "manu_date": "2025-10-18 18:30:00",
+                                            "remove_date": "2025-10-18 18:30:00",
+                                            "best_before_date": "2025-10-18 18:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": true,
+                                    "location_name": "MS/90814",
+                                    "location_id": 31,
+                                    "location_full_info": {
+                                        "id": 31,
+                                        "name": "90814",
+                                        "display_name": "MS/90814",
+                                        "parent_location_id": 7,
+                                        "parent_location_name": "MS",
+                                        "type": "internal",
+                                        "scrap_location": false,
+                                        "dock": false,
+                                        "replenish": false,
+                                        "removal_strategy_id": 5,
+                                        "removal_strategy_name": "First Expiry First Out (FEFO)",
+                                        "location_employee_id": 7,
+                                        "location_employee_name": "Sales User 2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2390,
+                            "tracking": "lot",
+                            "product_name": "ALMOND NPX 27/30 CAMPOS",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 113,
+                                            "batch_number": "BX",
+                                            "batch_qty": 226.8,
+                                            "expiry_date": "2026-09-08 20:00:00",
+                                            "alert_date": "2026-06-10 20:00:00",
+                                            "manu_date": "2026-06-10 20:00:00",
+                                            "remove_date": "2026-06-10 20:00:00",
+                                            "best_before_date": "2026-06-10 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": true,
+                                    "location_name": "MS/90814",
+                                    "location_id": 31,
+                                    "location_full_info": {
+                                        "id": 31,
+                                        "name": "90814",
+                                        "display_name": "MS/90814",
+                                        "parent_location_id": 7,
+                                        "parent_location_name": "MS",
+                                        "type": "internal",
+                                        "scrap_location": false,
+                                        "dock": false,
+                                        "replenish": false,
+                                        "removal_strategy_id": 5,
+                                        "removal_strategy_name": "First Expiry First Out (FEFO)",
+                                        "location_employee_id": 7,
+                                        "location_employee_name": "Sales User 2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Get Current User Stock
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_current_user_stock
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 10 Feb 2025 13:30:35 GMT
+      Content-Length: 655
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "stock_details": [
+                        {
+                            "product_id": 2390,
+                            "tracking": "lot",
+                            "product_name": "ALMOND NPX 27/30 CAMPOS",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 113,
+                                            "batch_number": "BX",
+                                            "batch_qty": 45.36,
+                                            "expiry_date": "2026-09-08 20:00:00",
+                                            "alert_date": "2026-06-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 114,
+                                            "batch_number": "BY",
+                                            "batch_qty": 68.04,
+                                            "expiry_date": "2027-08-08 20:00:00",
+                                            "alert_date": "2027-05-10 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": true,
+                                    "location_name": "MS/Route 5",
+                                    "location_id": 38
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

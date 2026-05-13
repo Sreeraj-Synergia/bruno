@@ -1,0 +1,3588 @@
+meta {
+  name: Get WH Current Stock
+  type: http
+  seq: 19
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_current_wh_stock
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {}
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Get WH Current Stock
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_current_wh_stock
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 10 Feb 2025 13:10:17 GMT
+      Content-Length: 59333
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "stock_details": [
+                        {
+                            "product_id": 2,
+                            "tracking": "lot",
+                            "product_name": "Coco Cola 300 Ml",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 1,
+                                            "batch_number": "SN0000101",
+                                            "batch_qty": 450,
+                                            "expiry_date": "2026-09-08 20:00:00",
+                                            "alert_date": "2026-09-08 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 83,
+                                            "batch_number": "SN00293001",
+                                            "batch_qty": 150,
+                                            "expiry_date": "2027-08-07 20:00:00",
+                                            "alert_date": "2027-08-07 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 3,
+                            "tracking": "serial",
+                            "product_name": "Iphone 16 Pro Max ",
+                            "selling_price": 3000,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 4,
+                                            "batch_number": "109100000103",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 5,
+                                            "batch_number": "109100000104",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 6,
+                                            "batch_number": "109100000105",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 7,
+                                            "batch_number": "109100000106",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 8,
+                                            "batch_number": "109100000107",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 9,
+                                            "batch_number": "109100000108",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 10,
+                                            "batch_number": "109100000109",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 11,
+                                            "batch_number": "109100000110",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 13,
+                                            "batch_number": "SN001900101",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 14,
+                                            "batch_number": "SN001900102",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 15,
+                                            "batch_number": "SN001900103",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 16,
+                                            "batch_number": "SN001900104",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 17,
+                                            "batch_number": "SN001900105",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 18,
+                                            "batch_number": "SN001900106",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 19,
+                                            "batch_number": "SN001900107",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 20,
+                                            "batch_number": "SN001900108",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 21,
+                                            "batch_number": "SN001900109",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 22,
+                                            "batch_number": "SN001900110",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 9,
+                            "tracking": "serial",
+                            "product_name": "Samsung Flip",
+                            "selling_price": 6500,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 23,
+                                            "batch_number": "S0009011",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 24,
+                                            "batch_number": "S0009012",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 25,
+                                            "batch_number": "S0009013",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 26,
+                                            "batch_number": "S0009014",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 27,
+                                            "batch_number": "S0009015",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 28,
+                                            "batch_number": "S0009016",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 29,
+                                            "batch_number": "S0009017",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 30,
+                                            "batch_number": "S0009018",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 31,
+                                            "batch_number": "S0009019",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 32,
+                                            "batch_number": "S0009020",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 11,
+                            "tracking": "serial",
+                            "product_name": "Samsung Flip",
+                            "selling_price": 6500,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 33,
+                                            "batch_number": "S0009021",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 34,
+                                            "batch_number": "S0009022",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 35,
+                                            "batch_number": "S0009023",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 36,
+                                            "batch_number": "S0009024",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 37,
+                                            "batch_number": "S0009025",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 38,
+                                            "batch_number": "S0009026",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 39,
+                                            "batch_number": "S0009027",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 40,
+                                            "batch_number": "S0009028",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 41,
+                                            "batch_number": "S0009029",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 42,
+                                            "batch_number": "S0009030",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 13,
+                            "tracking": "serial",
+                            "product_name": "Samsung Flip",
+                            "selling_price": 6500,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 43,
+                                            "batch_number": "S0009031",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 44,
+                                            "batch_number": "S0009032",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 45,
+                                            "batch_number": "S0009033",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 46,
+                                            "batch_number": "S0009034",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 47,
+                                            "batch_number": "S0009035",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 48,
+                                            "batch_number": "S0009036",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 49,
+                                            "batch_number": "S0009037",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 50,
+                                            "batch_number": "S0009038",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 51,
+                                            "batch_number": "S0009039",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 52,
+                                            "batch_number": "S0009040",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 10,
+                            "tracking": "serial",
+                            "product_name": "Samsung Flip",
+                            "selling_price": 6500,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 53,
+                                            "batch_number": "S0009041",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 54,
+                                            "batch_number": "S0009042",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 55,
+                                            "batch_number": "S0009043",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 56,
+                                            "batch_number": "S0009044",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 57,
+                                            "batch_number": "S0009045",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 58,
+                                            "batch_number": "S0009046",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 59,
+                                            "batch_number": "S0009047",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 60,
+                                            "batch_number": "S0009048",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 61,
+                                            "batch_number": "S0009049",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 62,
+                                            "batch_number": "S0009050",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 14,
+                            "tracking": "serial",
+                            "product_name": "Samsung Flip",
+                            "selling_price": 6500,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 63,
+                                            "batch_number": "S0009051",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 64,
+                                            "batch_number": "S0009052",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 65,
+                                            "batch_number": "S0009053",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 66,
+                                            "batch_number": "S0009054",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 67,
+                                            "batch_number": "S0009055",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 68,
+                                            "batch_number": "S0009056",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 69,
+                                            "batch_number": "S0009057",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 70,
+                                            "batch_number": "S0009058",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 71,
+                                            "batch_number": "S0009059",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 72,
+                                            "batch_number": "S0009060",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 12,
+                            "tracking": "serial",
+                            "product_name": "Samsung Flip",
+                            "selling_price": 6500,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 73,
+                                            "batch_number": "S0009061",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 74,
+                                            "batch_number": "S0009062",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 75,
+                                            "batch_number": "S0009063",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 76,
+                                            "batch_number": "S0009064",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 77,
+                                            "batch_number": "S0009065",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 78,
+                                            "batch_number": "S0009066",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 79,
+                                            "batch_number": "S0009067",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 80,
+                                            "batch_number": "S0009068",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 81,
+                                            "batch_number": "S0009069",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        },
+                                        {
+                                            "batch_id": 82,
+                                            "batch_number": "S0009070",
+                                            "batch_qty": 1,
+                                            "expiry_date": null
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 15,
+                            "tracking": "lot",
+                            "product_name": "Mirinda 330 ML",
+                            "selling_price": 3.5,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 85,
+                                            "batch_number": "MIR0001",
+                                            "batch_qty": 120,
+                                            "expiry_date": "2025-02-01 20:00:00",
+                                            "alert_date": "2025-02-01 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 86,
+                                            "batch_number": "MIR0002",
+                                            "batch_qty": 300,
+                                            "expiry_date": "2025-03-02 20:00:00",
+                                            "alert_date": "2025-03-02 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 87,
+                                            "batch_number": "MI0003",
+                                            "batch_qty": 900,
+                                            "expiry_date": "2026-04-03 20:00:00",
+                                            "alert_date": "2026-04-03 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 88,
+                                            "batch_number": "MIR0004",
+                                            "batch_qty": 1200,
+                                            "expiry_date": "2024-11-29 04:29:22",
+                                            "alert_date": "2024-11-29 04:29:22"
+                                        },
+                                        {
+                                            "batch_id": 85,
+                                            "batch_number": "MIR0001",
+                                            "batch_qty": -300,
+                                            "expiry_date": "2025-02-01 20:00:00",
+                                            "alert_date": "2025-02-01 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2837,
+                            "tracking": "lot",
+                            "product_name": "AL MASSA MILK POWDER 2.25KG",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 89,
+                                            "batch_number": "SN000901",
+                                            "batch_qty": 300,
+                                            "expiry_date": "2025-09-08 20:00:00",
+                                            "alert_date": "2025-06-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 90,
+                                            "batch_number": "Sn000902",
+                                            "batch_qty": 300,
+                                            "expiry_date": "2025-01-09 06:05:52",
+                                            "alert_date": "2024-10-11 06:05:52"
+                                        },
+                                        {
+                                            "batch_id": 93,
+                                            "batch_number": "111111",
+                                            "batch_qty": 588,
+                                            "expiry_date": "2025-01-11 13:55:13",
+                                            "alert_date": "2024-10-13 13:55:13"
+                                        },
+                                        {
+                                            "batch_id": 95,
+                                            "batch_number": "324",
+                                            "batch_qty": 450,
+                                            "expiry_date": "2025-01-11 13:56:10",
+                                            "alert_date": "2024-10-13 13:56:10"
+                                        },
+                                        {
+                                            "batch_id": 90,
+                                            "batch_number": "Sn000902",
+                                            "batch_qty": -18,
+                                            "expiry_date": "2025-01-09 06:05:52",
+                                            "alert_date": "2024-10-11 06:05:52"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2368,
+                            "tracking": "lot",
+                            "product_name": "ALMOND BLANCHED DICED 11.34KG",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 91,
+                                            "batch_number": "SQ001",
+                                            "batch_qty": 226.8,
+                                            "expiry_date": "2025-01-09 06:05:52",
+                                            "alert_date": "2024-10-11 06:05:52"
+                                        },
+                                        {
+                                            "batch_id": 92,
+                                            "batch_number": "SQ003",
+                                            "batch_qty": 907.2,
+                                            "expiry_date": "2025-01-09 06:05:52",
+                                            "alert_date": "2024-10-11 06:05:52"
+                                        },
+                                        {
+                                            "batch_id": 94,
+                                            "batch_number": "32323",
+                                            "batch_qty": 1134,
+                                            "expiry_date": "2025-01-11 13:55:13",
+                                            "alert_date": "2024-10-13 13:55:13"
+                                        },
+                                        {
+                                            "batch_id": 96,
+                                            "batch_number": "123",
+                                            "batch_qty": 1134,
+                                            "expiry_date": "2025-01-11 13:56:10",
+                                            "alert_date": "2024-10-13 13:56:10"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2373,
+                            "tracking": "lot",
+                            "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 97,
+                                            "batch_number": "X0001",
+                                            "batch_qty": 1020.6,
+                                            "expiry_date": "2026-08-08 20:00:00",
+                                            "alert_date": "2026-05-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 99,
+                                            "batch_number": "SN0093001",
+                                            "batch_qty": 1077.3,
+                                            "expiry_date": "2025-01-17 09:43:27",
+                                            "alert_date": "2024-10-19 09:43:27"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 99,
+                                            "batch_number": "SN0093001",
+                                            "batch_qty": 56.7,
+                                            "expiry_date": "2025-01-17 09:43:27",
+                                            "alert_date": "2024-10-19 09:43:27"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "Vehicle Location-1",
+                                    "location_id": 17
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2500,
+                            "tracking": "lot",
+                            "product_name": "ATRIN SAFFRON 4GM",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 98,
+                                            "batch_number": "X0002",
+                                            "batch_qty": 1080,
+                                            "expiry_date": "2025-01-16 04:26:27",
+                                            "alert_date": "2024-10-18 04:26:27"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2841,
+                            "tracking": "lot",
+                            "product_name": "Alceta Paracetamol Tablet",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 100,
+                                            "batch_number": "24121064",
+                                            "batch_qty": 1080,
+                                            "expiry_date": "2028-04-29 20:00:00",
+                                            "alert_date": "2028-04-29 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 101,
+                                            "batch_number": "SN0901",
+                                            "batch_qty": 600,
+                                            "expiry_date": "3038-05-04 20:00:00",
+                                            "alert_date": "3038-05-04 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 102,
+                                            "batch_number": "X0203902",
+                                            "batch_qty": 600,
+                                            "expiry_date": "2026-09-08 20:00:00",
+                                            "alert_date": "2026-09-08 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2834,
+                            "tracking": "lot",
+                            "product_name": "AIWA VINEGAR 1 GALLON(3.78L)",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 104,
+                                            "batch_number": "U2222",
+                                            "batch_qty": 96,
+                                            "expiry_date": "2025-01-22 05:37:10",
+                                            "alert_date": "2024-10-24 05:37:10"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 103,
+                                            "batch_number": "U1111",
+                                            "batch_qty": 100,
+                                            "expiry_date": "2025-01-22 05:37:10",
+                                            "alert_date": "2024-10-24 05:37:10"
+                                        },
+                                        {
+                                            "batch_id": 104,
+                                            "batch_number": "U2222",
+                                            "batch_qty": 4,
+                                            "expiry_date": "2025-01-22 05:37:10",
+                                            "alert_date": "2024-10-24 05:37:10"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "Vehicle Location-1",
+                                    "location_id": 17
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2835,
+                            "tracking": "lot",
+                            "product_name": "AIWA WHITE VINEGAR 473ML",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 105,
+                                            "batch_number": "U1234",
+                                            "batch_qty": 2280,
+                                            "expiry_date": "2025-12-26 05:30:00",
+                                            "alert_date": "2025-09-27 05:30:00"
+                                        },
+                                        {
+                                            "batch_id": 106,
+                                            "batch_number": "U4567",
+                                            "batch_qty": 2400,
+                                            "expiry_date": "2025-01-25 05:54:06",
+                                            "alert_date": "2024-10-27 05:54:06"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 105,
+                                            "batch_number": "U1234",
+                                            "batch_qty": 120,
+                                            "expiry_date": "2025-12-26 05:30:00",
+                                            "alert_date": "2025-09-27 05:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "Vehicle Location-1",
+                                    "location_id": 17
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2376,
+                            "tracking": "lot",
+                            "product_name": "ALMOND INDY 18/20 SUPREME",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 107,
+                                            "batch_number": "90101",
+                                            "batch_qty": 2041.2,
+                                            "expiry_date": "2026-12-09 20:00:00",
+                                            "alert_date": "2026-09-10 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2381,
+                            "tracking": "lot",
+                            "product_name": "ALMOND INDY 22/24 BLUE DIAMOND",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 108,
+                                            "batch_number": "X0290301",
+                                            "batch_qty": 2258,
+                                            "expiry_date": "2026-09-09 20:00:00",
+                                            "alert_date": "2026-06-11 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2523,
+                            "tracking": "lot",
+                            "product_name": "APRICOT SUN DRIED",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 109,
+                                            "batch_number": "A10010",
+                                            "batch_qty": 450,
+                                            "expiry_date": "2026-08-08 20:00:00",
+                                            "alert_date": "2026-05-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 110,
+                                            "batch_number": "M002930",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2028-05-05 20:00:00",
+                                            "alert_date": "2028-02-05 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2522,
+                            "tracking": "lot",
+                            "product_name": "ALU BUKHARA 5KG ",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 111,
+                                            "batch_number": "Test567",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2026-01-25 18:30:00",
+                                            "alert_date": "2025-10-27 18:30:00"
+                                        },
+                                        {
+                                            "batch_id": 112,
+                                            "batch_number": "Test780",
+                                            "batch_qty": 750,
+                                            "expiry_date": "2025-01-26 05:35:51",
+                                            "alert_date": "2024-10-28 05:35:51"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2390,
+                            "tracking": "lot",
+                            "product_name": "ALMOND NPX 27/30 CAMPOS",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 113,
+                                            "batch_number": "BX",
+                                            "batch_qty": 878.62,
+                                            "expiry_date": "2026-09-08 20:00:00",
+                                            "alert_date": "2026-06-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 114,
+                                            "batch_number": "BY",
+                                            "batch_qty": 1065.96,
+                                            "expiry_date": "2027-08-08 20:00:00",
+                                            "alert_date": "2027-05-10 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 113,
+                                            "batch_number": "BX",
+                                            "batch_qty": 45.36,
+                                            "expiry_date": "2026-09-08 20:00:00",
+                                            "alert_date": "2026-06-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 114,
+                                            "batch_number": "BY",
+                                            "batch_qty": 68.04,
+                                            "expiry_date": "2027-08-08 20:00:00",
+                                            "alert_date": "2027-05-10 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": true,
+                                    "location_name": "MS/Route 5",
+                                    "location_id": 38
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2731,
+                            "tracking": "lot",
+                            "product_name": "ARONA CHOCOLATE - SINGLE TWIST",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 115,
+                                            "batch_number": "AR10901",
+                                            "batch_qty": 372,
+                                            "expiry_date": "2026-08-08 20:00:00",
+                                            "alert_date": "2026-05-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 116,
+                                            "batch_number": "AR10902",
+                                            "batch_qty": 600,
+                                            "expiry_date": "2027-06-06 20:00:00",
+                                            "alert_date": "2027-03-08 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 115,
+                                            "batch_number": "AR10901",
+                                            "batch_qty": 120,
+                                            "expiry_date": "2026-08-08 20:00:00",
+                                            "alert_date": "2026-05-10 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "Vehicle Location-1",
+                                    "location_id": 17
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2377,
+                            "tracking": "lot",
+                            "product_name": "ALMOND INDY 18/20 MARIANI",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 117,
+                                            "batch_number": "AC009",
+                                            "batch_qty": 907.2,
+                                            "expiry_date": "2027-08-08 20:00:00",
+                                            "alert_date": "2027-05-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 118,
+                                            "batch_number": "AC010",
+                                            "batch_qty": 1020.6,
+                                            "expiry_date": "2026-02-01 20:00:00",
+                                            "alert_date": "2025-11-03 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 119,
+                                            "batch_number": "AX101",
+                                            "batch_qty": 340.2,
+                                            "expiry_date": "2026-04-03 20:00:00",
+                                            "alert_date": "2026-01-03 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 120,
+                                            "batch_number": "AX102",
+                                            "batch_qty": 567,
+                                            "expiry_date": "2027-04-03 20:00:00",
+                                            "alert_date": "2027-01-03 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2811,
+                            "tracking": "lot",
+                            "product_name": "ABUSALIM SUNFLOWER SEED ROASTED 25GM",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 125,
+                                            "batch_number": "Y234",
+                                            "batch_qty": 1250,
+                                            "expiry_date": "2025-02-06 05:32:01",
+                                            "alert_date": "2024-11-08 05:32:01"
+                                        },
+                                        {
+                                            "batch_id": 126,
+                                            "batch_number": "y8990",
+                                            "batch_qty": 1250,
+                                            "expiry_date": "2025-02-06 05:32:01",
+                                            "alert_date": "2024-11-08 05:32:01"
+                                        },
+                                        {
+                                            "batch_id": 127,
+                                            "batch_number": "Ui45643",
+                                            "batch_qty": 2500,
+                                            "expiry_date": "2025-02-06 05:58:42",
+                                            "alert_date": "2024-11-08 05:58:42"
+                                        },
+                                        {
+                                            "batch_id": 128,
+                                            "batch_number": "yu34",
+                                            "batch_qty": 2500,
+                                            "expiry_date": "2025-02-06 06:01:24",
+                                            "alert_date": "2024-11-08 06:01:24"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2518,
+                            "tracking": "lot",
+                            "product_name": "APRICOT SOFT JUMBO",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 129,
+                                            "batch_number": "B0190019",
+                                            "batch_qty": 185,
+                                            "expiry_date": "2028-02-06 20:00:00",
+                                            "alert_date": "2027-11-08 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 130,
+                                            "batch_number": "B0190020",
+                                            "batch_qty": 65,
+                                            "expiry_date": "2025-02-07 05:28:19",
+                                            "alert_date": "2024-11-09 05:28:19"
+                                        },
+                                        {
+                                            "batch_id": 131,
+                                            "batch_number": "B2000293",
+                                            "batch_qty": 150,
+                                            "expiry_date": "2025-02-07 05:34:41",
+                                            "alert_date": "2024-11-09 05:34:41"
+                                        },
+                                        {
+                                            "batch_id": 132,
+                                            "batch_number": "S0203004",
+                                            "batch_qty": 250,
+                                            "expiry_date": "2028-08-08 20:00:00",
+                                            "alert_date": "2028-05-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 133,
+                                            "batch_number": "BN00005",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2026-02-08 05:13:43",
+                                            "alert_date": "2025-11-10 05:13:43"
+                                        },
+                                        {
+                                            "batch_id": 138,
+                                            "batch_number": "B225",
+                                            "batch_qty": 250,
+                                            "expiry_date": "2026-02-09 11:09:12",
+                                            "alert_date": "2025-11-11 11:09:12"
+                                        },
+                                        {
+                                            "batch_id": 139,
+                                            "batch_number": "B5345",
+                                            "batch_qty": 250,
+                                            "expiry_date": "2026-02-09 11:09:12",
+                                            "alert_date": "2025-11-11 11:09:12"
+                                        },
+                                        {
+                                            "batch_id": 140,
+                                            "batch_number": "M1213",
+                                            "batch_qty": 250,
+                                            "expiry_date": "2026-02-09 11:15:12",
+                                            "alert_date": "2025-11-11 11:15:12"
+                                        },
+                                        {
+                                            "batch_id": 141,
+                                            "batch_number": "Test7800",
+                                            "batch_qty": 250,
+                                            "expiry_date": "2026-02-09 11:15:12",
+                                            "alert_date": "2025-11-11 11:15:12"
+                                        },
+                                        {
+                                            "batch_id": 160,
+                                            "batch_number": "MY124",
+                                            "batch_qty": 250,
+                                            "expiry_date": "2025-02-16 05:14:36",
+                                            "alert_date": "2024-11-18 05:14:36"
+                                        },
+                                        {
+                                            "batch_id": 161,
+                                            "batch_number": "TR245",
+                                            "batch_qty": 250,
+                                            "expiry_date": "2026-01-16 18:30:00",
+                                            "alert_date": "2025-10-18 18:30:00"
+                                        },
+                                        {
+                                            "batch_id": 162,
+                                            "batch_number": "T679",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2026-02-16 18:30:00",
+                                            "alert_date": "2025-11-18 18:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2848,
+                            "tracking": "none",
+                            "product_name": "Rennet",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 14.95,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2849,
+                            "tracking": "none",
+                            "product_name": "Culture",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 16.47,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2847,
+                            "tracking": "lot",
+                            "product_name": "Culture",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 137,
+                                            "batch_number": "M020304",
+                                            "batch_qty": 42.9,
+                                            "expiry_date": "2029-09-08 20:00:00",
+                                            "alert_date": null
+                                        },
+                                        {
+                                            "batch_id": 147,
+                                            "batch_number": "M0020304",
+                                            "batch_qty": 50,
+                                            "expiry_date": "2028-09-08 20:00:00",
+                                            "alert_date": null
+                                        },
+                                        {
+                                            "batch_id": null,
+                                            "batch_number": null,
+                                            "batch_qty": -1,
+                                            "expiry_date": null,
+                                            "alert_date": null
+                                        },
+                                        {
+                                            "batch_id": 150,
+                                            "batch_number": "LM478",
+                                            "batch_qty": 50,
+                                            "expiry_date": "2026-01-13 11:30:00",
+                                            "alert_date": null
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2844,
+                            "tracking": "lot",
+                            "product_name": "Labneh Mix 2500",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 142,
+                                            "batch_number": "0000002",
+                                            "batch_qty": 1869.75,
+                                            "expiry_date": "2025-04-10 12:45:47",
+                                            "alert_date": "2025-04-10 12:45:47"
+                                        },
+                                        {
+                                            "batch_id": 151,
+                                            "batch_number": "0000003",
+                                            "batch_qty": 1000,
+                                            "expiry_date": "2025-04-13 12:40:36",
+                                            "alert_date": "2025-04-13 12:40:36"
+                                        },
+                                        {
+                                            "batch_id": 152,
+                                            "batch_number": "0000004",
+                                            "batch_qty": 950,
+                                            "expiry_date": "2025-04-14 05:19:23",
+                                            "alert_date": "2025-04-14 05:19:23"
+                                        },
+                                        {
+                                            "batch_id": 153,
+                                            "batch_number": "0000005",
+                                            "batch_qty": 950,
+                                            "expiry_date": "2025-04-14 05:37:57",
+                                            "alert_date": "2025-04-14 05:37:57"
+                                        },
+                                        {
+                                            "batch_id": 157,
+                                            "batch_number": "0000006",
+                                            "batch_qty": 1000,
+                                            "expiry_date": "2025-04-14 11:16:27",
+                                            "alert_date": "2025-04-14 11:16:27"
+                                        },
+                                        {
+                                            "batch_id": 183,
+                                            "batch_number": "0000015",
+                                            "batch_qty": 98,
+                                            "expiry_date": "2025-04-22 11:16:45",
+                                            "alert_date": "2025-04-22 11:16:45"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2769,
+                            "tracking": "lot",
+                            "product_name": "BLACK PEPPER WHOLE NO:1",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 143,
+                                            "batch_number": "QQ101",
+                                            "batch_qty": 36090,
+                                            "expiry_date": "2026-06-05 20:00:00",
+                                            "alert_date": "2026-03-07 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 144,
+                                            "batch_number": "QQ102",
+                                            "batch_qty": 12500,
+                                            "expiry_date": "2026-07-06 20:00:00",
+                                            "alert_date": "2026-04-07 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 143,
+                                            "batch_number": "QQ101",
+                                            "batch_qty": 1270,
+                                            "expiry_date": "2026-06-05 20:00:00",
+                                            "alert_date": "2026-03-07 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "Vehicle Location-1",
+                                    "location_id": 17
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2845,
+                            "tracking": "lot",
+                            "product_name": "Milk Powder",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 145,
+                                            "batch_number": "SO0200343",
+                                            "batch_qty": 1700,
+                                            "expiry_date": "2028-09-08 20:00:00",
+                                            "alert_date": "2028-09-08 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 148,
+                                            "batch_number": "LM124",
+                                            "batch_qty": 2450,
+                                            "expiry_date": "2026-01-13 12:11:54",
+                                            "alert_date": "2026-01-13 12:11:54"
+                                        },
+                                        {
+                                            "batch_id": 135,
+                                            "batch_number": "MP1200203",
+                                            "batch_qty": 1.62,
+                                            "expiry_date": "2027-08-08 20:00:00",
+                                            "alert_date": "2027-08-08 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 145,
+                                            "batch_number": "SO0200343",
+                                            "batch_qty": 0.15,
+                                            "expiry_date": "2028-09-08 20:00:00",
+                                            "alert_date": "2028-09-08 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2846,
+                            "tracking": "lot",
+                            "product_name": "Skimmed Milk",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 146,
+                                            "batch_number": "02093040",
+                                            "batch_qty": 1000,
+                                            "expiry_date": "2029-03-07 20:00:00",
+                                            "alert_date": "2029-03-07 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 149,
+                                            "batch_number": "LM345",
+                                            "batch_qty": 1850.05,
+                                            "expiry_date": "2026-01-13 12:11:54",
+                                            "alert_date": "2026-01-13 12:11:54"
+                                        },
+                                        {
+                                            "batch_id": 136,
+                                            "batch_number": "M200234",
+                                            "batch_qty": 1.62,
+                                            "expiry_date": "2027-08-08 20:00:00",
+                                            "alert_date": "2027-08-08 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2852,
+                            "tracking": "lot",
+                            "product_name": "Ostrich Burger 250G",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 154,
+                                            "batch_number": "OS101",
+                                            "batch_qty": 990,
+                                            "expiry_date": "2026-05-04 20:00:00",
+                                            "alert_date": "2026-01-04 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2853,
+                            "tracking": "lot",
+                            "product_name": "Ostrich Burger  400G",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 155,
+                                            "batch_number": "OS102",
+                                            "batch_qty": 960,
+                                            "expiry_date": "2026-06-05 20:00:00",
+                                            "alert_date": "2026-02-05 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2854,
+                            "tracking": "lot",
+                            "product_name": "Ostrich Burger 500G",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 156,
+                                            "batch_number": "OS103",
+                                            "batch_qty": 990,
+                                            "expiry_date": "2026-05-03 20:00:00",
+                                            "alert_date": "2026-01-03 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2850,
+                            "tracking": "lot",
+                            "product_name": "Labneh 250 Strawberry",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 158,
+                                            "batch_number": "0000006",
+                                            "batch_qty": 9,
+                                            "expiry_date": "2025-01-14 11:24:27",
+                                            "alert_date": "2025-01-14 11:24:27"
+                                        },
+                                        {
+                                            "batch_id": 166,
+                                            "batch_number": "0000011",
+                                            "batch_qty": 100,
+                                            "expiry_date": "2025-01-17 11:41:42",
+                                            "alert_date": "2025-01-17 11:41:42"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2855,
+                            "tracking": "none",
+                            "product_name": "Fine Soft Facial 100s Ply",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 100,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2856,
+                            "tracking": "lot",
+                            "product_name": "Yoghurt Mix",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 164,
+                                            "batch_number": "0000009",
+                                            "batch_qty": 999,
+                                            "expiry_date": "2025-01-17 10:53:46",
+                                            "alert_date": "2025-01-17 10:53:46"
+                                        },
+                                        {
+                                            "batch_id": 165,
+                                            "batch_number": "0000010",
+                                            "batch_qty": 950,
+                                            "expiry_date": "2025-01-17 10:57:36",
+                                            "alert_date": "2025-01-17 10:57:36"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2857,
+                            "tracking": "none",
+                            "product_name": "Cup 250 Grms",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 99900,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2858,
+                            "tracking": "none",
+                            "product_name": "Lid 250 Gr",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 99900,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2859,
+                            "tracking": "none",
+                            "product_name": "Carton 250 Grm",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 2000,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2860,
+                            "tracking": "none",
+                            "product_name": "Strawberry Flavor",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 9900,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2862,
+                            "tracking": "lot",
+                            "product_name": "Frozen Ostrich Burger",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 167,
+                                            "batch_number": "OS201",
+                                            "batch_qty": 995,
+                                            "expiry_date": "2026-06-05 20:00:00",
+                                            "alert_date": "2026-02-05 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2861,
+                            "tracking": "lot",
+                            "product_name": "\u2060Frozen Ostrich Sausages",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 168,
+                                            "batch_number": "OS202",
+                                            "batch_qty": 995,
+                                            "expiry_date": "2026-05-05 20:00:00",
+                                            "alert_date": "2026-01-05 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2502,
+                            "tracking": "lot",
+                            "product_name": "AROMA SAFFRON POWDER 15GM",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 169,
+                                            "batch_number": "ML0001",
+                                            "batch_qty": 240,
+                                            "expiry_date": "2026-01-21 04:30:00",
+                                            "alert_date": "2025-10-23 04:30:00"
+                                        },
+                                        {
+                                            "batch_id": 170,
+                                            "batch_number": "ML0002",
+                                            "batch_qty": 120,
+                                            "expiry_date": "2025-02-20 05:21:39",
+                                            "alert_date": "2024-11-22 05:21:39"
+                                        },
+                                        {
+                                            "batch_id": 171,
+                                            "batch_number": "ML0003",
+                                            "batch_qty": 120,
+                                            "expiry_date": "2025-02-20 05:21:39",
+                                            "alert_date": "2024-11-22 05:21:39"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 170,
+                                            "batch_number": "ML0002",
+                                            "batch_qty": -6,
+                                            "expiry_date": "2025-02-20 05:21:39",
+                                            "alert_date": "2024-11-22 05:21:39"
+                                        },
+                                        {
+                                            "batch_id": 171,
+                                            "batch_number": "ML0003",
+                                            "batch_qty": 6,
+                                            "expiry_date": "2025-02-20 05:21:39",
+                                            "alert_date": "2024-11-22 05:21:39"
+                                        },
+                                        {
+                                            "batch_id": 169,
+                                            "batch_number": "ML0001",
+                                            "batch_qty": 60,
+                                            "expiry_date": "2026-01-21 04:30:00",
+                                            "alert_date": "2025-10-23 04:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/FLOC",
+                                    "location_id": 28
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2503,
+                            "tracking": "lot",
+                            "product_name": "AROMA SAFFRON SPRAY 150ML",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 172,
+                                            "batch_number": "PL0001",
+                                            "batch_qty": 240,
+                                            "expiry_date": "2026-05-21 18:30:00",
+                                            "alert_date": "2026-02-20 18:30:00"
+                                        },
+                                        {
+                                            "batch_id": 173,
+                                            "batch_number": "PL0002",
+                                            "batch_qty": 240,
+                                            "expiry_date": "2025-02-20 05:21:39",
+                                            "alert_date": "2024-11-22 05:21:39"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 173,
+                                            "batch_number": "PL0002",
+                                            "batch_qty": 54,
+                                            "expiry_date": "2025-02-20 05:21:39",
+                                            "alert_date": "2024-11-22 05:21:39"
+                                        },
+                                        {
+                                            "batch_id": 172,
+                                            "batch_number": "PL0001",
+                                            "batch_qty": 54,
+                                            "expiry_date": "2026-05-21 18:30:00",
+                                            "alert_date": "2026-02-20 18:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/FLOC",
+                                    "location_id": 28
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2785,
+                            "tracking": "lot",
+                            "product_name": "BLACK CARDAMOM",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 174,
+                                            "batch_number": "BC0001",
+                                            "batch_qty": 250,
+                                            "expiry_date": "2025-12-31 18:30:00",
+                                            "alert_date": "2025-10-02 18:30:00"
+                                        },
+                                        {
+                                            "batch_id": 175,
+                                            "batch_number": "BC0002",
+                                            "batch_qty": 250,
+                                            "expiry_date": "2026-12-31 18:30:00",
+                                            "alert_date": "2026-10-02 18:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2817,
+                            "tracking": "lot",
+                            "product_name": "BLACK FOREST HONEY",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 176,
+                                            "batch_number": "BF0001",
+                                            "batch_qty": 700,
+                                            "expiry_date": "2027-12-31 18:30:00",
+                                            "alert_date": "2027-10-02 18:30:00"
+                                        },
+                                        {
+                                            "batch_id": 177,
+                                            "batch_number": "BF0002",
+                                            "batch_qty": 700,
+                                            "expiry_date": "2028-12-31 18:30:00",
+                                            "alert_date": "2028-10-02 18:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 176,
+                                            "batch_number": "BF0001",
+                                            "batch_qty": 420,
+                                            "expiry_date": "2027-12-31 18:30:00",
+                                            "alert_date": "2027-10-02 18:30:00"
+                                        },
+                                        {
+                                            "batch_id": 177,
+                                            "batch_number": "BF0002",
+                                            "batch_qty": 700,
+                                            "expiry_date": "2028-12-31 18:30:00",
+                                            "alert_date": "2028-10-02 18:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/FLOC",
+                                    "location_id": 28
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2519,
+                            "tracking": "lot",
+                            "product_name": "APRICOT SOFT NO.1",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 179,
+                                            "batch_number": "ASN001",
+                                            "batch_qty": 125,
+                                            "expiry_date": "2026-02-08 20:00:00",
+                                            "alert_date": "2025-11-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 180,
+                                            "batch_number": "ASN002",
+                                            "batch_qty": 125,
+                                            "expiry_date": "2026-07-03 20:00:00",
+                                            "alert_date": "2026-04-04 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 179,
+                                            "batch_number": "ASN001",
+                                            "batch_qty": 97,
+                                            "expiry_date": "2026-02-08 20:00:00",
+                                            "alert_date": "2025-11-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 180,
+                                            "batch_number": "ASN002",
+                                            "batch_qty": 125,
+                                            "expiry_date": "2026-07-03 20:00:00",
+                                            "alert_date": "2026-04-04 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/90814",
+                                    "location_id": 31
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2469,
+                            "tracking": "lot",
+                            "product_name": "COFFEE BEANS BRAZIL",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 184,
+                                            "batch_number": "CB001",
+                                            "batch_qty": 3000,
+                                            "expiry_date": "2027-02-26 20:00:00",
+                                            "alert_date": "2026-11-28 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 185,
+                                            "batch_number": "CB002",
+                                            "batch_qty": 3000,
+                                            "expiry_date": "2026-02-08 20:00:00",
+                                            "alert_date": "2025-11-10 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2470,
+                            "tracking": "lot",
+                            "product_name": "COFFEE BEANS VIETNAM",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 186,
+                                            "batch_number": "CBV01",
+                                            "batch_qty": 3000,
+                                            "expiry_date": "2026-01-08 20:00:00",
+                                            "alert_date": "2025-10-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 187,
+                                            "batch_number": "CBV02",
+                                            "batch_qty": 3000,
+                                            "expiry_date": "2027-01-30 20:00:00",
+                                            "alert_date": "2026-11-01 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2870,
+                            "tracking": "lot",
+                            "product_name": "Milk Powder Arla 26%",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 188,
+                                            "batch_number": "MP0001",
+                                            "batch_qty": 9400,
+                                            "expiry_date": "2027-09-08 20:00:00",
+                                            "alert_date": "2027-09-08 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2871,
+                            "tracking": "lot",
+                            "product_name": "Milk Powder DFA 26%",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 189,
+                                            "batch_number": "MP00002",
+                                            "batch_qty": 9700,
+                                            "expiry_date": "2027-03-08 20:00:00",
+                                            "alert_date": "2027-03-08 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2872,
+                            "tracking": "lot",
+                            "product_name": "MPC 70% Fonterra",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 190,
+                                            "batch_number": "MP0003",
+                                            "batch_qty": 9895,
+                                            "expiry_date": "3202-02-02 03:00:00",
+                                            "alert_date": "3202-02-02 03:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2873,
+                            "tracking": "lot",
+                            "product_name": "Palm Oil-Advoc",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 191,
+                                            "batch_number": "PM0001",
+                                            "batch_qty": 9910,
+                                            "expiry_date": "2026-09-08 20:00:00",
+                                            "alert_date": "2026-09-08 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2874,
+                            "tracking": "lot",
+                            "product_name": "Palm Cernal Oil Wilkote 340",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 192,
+                                            "batch_number": "PC0001",
+                                            "batch_qty": 9994,
+                                            "expiry_date": "2027-04-04 20:00:00",
+                                            "alert_date": "2027-04-04 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2875,
+                            "tracking": "lot",
+                            "product_name": "MPC 70% DairyGold",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 193,
+                                            "batch_number": "MPC0002",
+                                            "batch_qty": 9895,
+                                            "expiry_date": "2027-01-01 20:00:00",
+                                            "alert_date": "2027-01-01 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2876,
+                            "tracking": "none",
+                            "product_name": "Water",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 5206,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2877,
+                            "tracking": "lot",
+                            "product_name": "Rennet (Reniplus)",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 194,
+                                            "batch_number": "RP0001",
+                                            "batch_qty": 997.6,
+                                            "expiry_date": "2028-03-03 20:00:00",
+                                            "alert_date": "2028-03-03 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2878,
+                            "tracking": "lot",
+                            "product_name": "Natamycin",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 195,
+                                            "batch_number": "NM0001",
+                                            "batch_qty": 997.6,
+                                            "expiry_date": "2028-02-03 20:00:00",
+                                            "alert_date": "2028-02-03 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2879,
+                            "tracking": "lot",
+                            "product_name": "Gluocn GDL IN 25 Kg",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 196,
+                                            "batch_number": "GD0001",
+                                            "batch_qty": 999.1,
+                                            "expiry_date": "2028-04-04 20:00:00",
+                                            "alert_date": "2028-04-04 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2880,
+                            "tracking": "lot",
+                            "product_name": "Salt",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 197,
+                                            "batch_number": "SL0001",
+                                            "batch_qty": 994,
+                                            "expiry_date": "2028-02-03 20:00:00",
+                                            "alert_date": "2028-02-03 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2881,
+                            "tracking": "none",
+                            "product_name": "Cup Greek Yogurt ( Low Fat ) 450",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 7500,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2882,
+                            "tracking": "none",
+                            "product_name": "Lid Greek Yogurt ( Low Fat )",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 12300,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2883,
+                            "tracking": "none",
+                            "product_name": "Lid Greek Yogurt Cup 180g",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 34375,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2884,
+                            "tracking": "none",
+                            "product_name": "Cup Greek Yogurt 180g Plain",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 4800,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2885,
+                            "tracking": "none",
+                            "product_name": "Cup Greek Yogurt  180g Strawberry",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 6400,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2886,
+                            "tracking": "none",
+                            "product_name": "Lid Greek Yogurt ( Stawberry )",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 6400,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2887,
+                            "tracking": "none",
+                            "product_name": "Strawberry Preparation 10% - Old",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 9980.56,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2888,
+                            "tracking": "none",
+                            "product_name": "Cup Greek Yogurt 180g Blueberry",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 8675,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2889,
+                            "tracking": "none",
+                            "product_name": "Lid Greek Yogurt ( Blue Berry )",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 8675,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2890,
+                            "tracking": "none",
+                            "product_name": "Blueberry Preparation 10% - Old",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 9995.7,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2891,
+                            "tracking": "none",
+                            "product_name": "Cup Greek Yogurt 180g Vanilla",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 7000,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2892,
+                            "tracking": "none",
+                            "product_name": "Lid Greek Yogurt ( Vanilla )",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 7000,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2893,
+                            "tracking": "none",
+                            "product_name": "Vanilla Preparation  Old",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 9990.28,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2894,
+                            "tracking": "none",
+                            "product_name": "Bucket Jokey 5kg",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 9650,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2895,
+                            "tracking": "none",
+                            "product_name": "Natural Yoghurt Original 5 kg Label",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "onhand_qty": 9650,
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2864,
+                            "tracking": "lot",
+                            "product_name": "BALADE - Protein - Greek Yogurt Low fat 450g",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 199,
+                                            "batch_number": "0000017",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2025-02-12 10:26:18",
+                                            "alert_date": "2025-01-31 10:26:18"
+                                        },
+                                        {
+                                            "batch_id": 215,
+                                            "batch_number": "0000030",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2025-02-12 14:29:31",
+                                            "alert_date": "2025-01-31 14:29:31"
+                                        },
+                                        {
+                                            "batch_id": 219,
+                                            "batch_number": "0000034",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2025-02-13 05:46:59",
+                                            "alert_date": "2025-02-01 05:46:59"
+                                        },
+                                        {
+                                            "batch_id": 225,
+                                            "batch_number": "0000040",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2025-02-14 05:28:43",
+                                            "alert_date": "2025-02-02 05:28:43"
+                                        },
+                                        {
+                                            "batch_id": 232,
+                                            "batch_number": "0000047",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2025-02-14 10:46:27",
+                                            "alert_date": "2025-02-02 10:46:27"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2865,
+                            "tracking": "lot",
+                            "product_name": "BALADE - Protein - Greek Yog Low Fat 180g",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 200,
+                                            "batch_number": "0000018",
+                                            "batch_qty": 1040,
+                                            "expiry_date": "2025-02-12 10:28:01",
+                                            "alert_date": "2025-01-31 10:28:01"
+                                        },
+                                        {
+                                            "batch_id": 216,
+                                            "batch_number": "0000031",
+                                            "batch_qty": 1040,
+                                            "expiry_date": "2025-02-12 14:30:28",
+                                            "alert_date": "2025-01-31 14:30:28"
+                                        },
+                                        {
+                                            "batch_id": 221,
+                                            "batch_number": "0000036",
+                                            "batch_qty": 1040,
+                                            "expiry_date": "2025-02-13 05:49:45",
+                                            "alert_date": "2025-02-01 05:49:45"
+                                        },
+                                        {
+                                            "batch_id": 226,
+                                            "batch_number": "0000041",
+                                            "batch_qty": 1040,
+                                            "expiry_date": "2025-02-14 05:29:47",
+                                            "alert_date": "2025-02-02 05:29:47"
+                                        },
+                                        {
+                                            "batch_id": 233,
+                                            "batch_number": "0000048",
+                                            "batch_qty": 1040,
+                                            "expiry_date": "2025-02-14 10:48:48",
+                                            "alert_date": "2025-02-02 10:48:48"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2866,
+                            "tracking": "lot",
+                            "product_name": "BALADE - Protein - Greek Yog Low Fat Strawberry 180g",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 201,
+                                            "batch_number": "0000019",
+                                            "batch_qty": 600,
+                                            "expiry_date": "2025-02-12 10:36:55",
+                                            "alert_date": "2025-01-31 10:36:55"
+                                        },
+                                        {
+                                            "batch_id": 206,
+                                            "batch_number": "0000024",
+                                            "batch_qty": 600,
+                                            "expiry_date": "2025-02-12 13:35:24",
+                                            "alert_date": "2025-01-31 13:35:24"
+                                        },
+                                        {
+                                            "batch_id": 211,
+                                            "batch_number": "0000026",
+                                            "batch_qty": 600,
+                                            "expiry_date": "2025-02-12 14:18:53",
+                                            "alert_date": "2025-01-31 14:18:53"
+                                        },
+                                        {
+                                            "batch_id": 220,
+                                            "batch_number": "0000035",
+                                            "batch_qty": 600,
+                                            "expiry_date": "2025-02-13 05:48:03",
+                                            "alert_date": "2025-02-01 05:48:03"
+                                        },
+                                        {
+                                            "batch_id": 227,
+                                            "batch_number": "0000042",
+                                            "batch_qty": 600,
+                                            "expiry_date": "2025-02-14 05:30:39",
+                                            "alert_date": "2025-02-02 05:30:39"
+                                        },
+                                        {
+                                            "batch_id": 234,
+                                            "batch_number": "0000049",
+                                            "batch_qty": 600,
+                                            "expiry_date": "2025-02-14 10:53:10",
+                                            "alert_date": "2025-02-02 10:53:10"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2867,
+                            "tracking": "lot",
+                            "product_name": "BALADE - Protein - Greek Yog Low Fat Blueberry 180g",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 202,
+                                            "batch_number": "0000020",
+                                            "batch_qty": 265,
+                                            "expiry_date": "2025-02-12 10:39:59",
+                                            "alert_date": "2025-01-31 10:39:59"
+                                        },
+                                        {
+                                            "batch_id": 212,
+                                            "batch_number": "0000027",
+                                            "batch_qty": 265,
+                                            "expiry_date": "2025-02-12 14:24:48",
+                                            "alert_date": "2025-01-31 14:24:48"
+                                        },
+                                        {
+                                            "batch_id": 222,
+                                            "batch_number": "0000037",
+                                            "batch_qty": 265,
+                                            "expiry_date": "2025-02-13 05:50:42",
+                                            "alert_date": "2025-02-01 05:50:42"
+                                        },
+                                        {
+                                            "batch_id": 228,
+                                            "batch_number": "0000043",
+                                            "batch_qty": 265,
+                                            "expiry_date": "2025-02-14 05:31:34",
+                                            "alert_date": "2025-02-02 05:31:34"
+                                        },
+                                        {
+                                            "batch_id": 235,
+                                            "batch_number": "0000050",
+                                            "batch_qty": 265,
+                                            "expiry_date": "2025-02-14 10:54:04",
+                                            "alert_date": "2025-02-02 10:54:04"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2868,
+                            "tracking": "lot",
+                            "product_name": "BALADE - Protein - Greek Yog Low Fat Vanilla 180g",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 203,
+                                            "batch_number": "0000021",
+                                            "batch_qty": 600,
+                                            "expiry_date": "2025-02-12 10:41:30",
+                                            "alert_date": "2025-01-31 10:41:30"
+                                        },
+                                        {
+                                            "batch_id": 213,
+                                            "batch_number": "0000028",
+                                            "batch_qty": 600,
+                                            "expiry_date": "2025-02-12 14:27:09",
+                                            "alert_date": "2025-01-31 14:27:09"
+                                        },
+                                        {
+                                            "batch_id": 223,
+                                            "batch_number": "0000038",
+                                            "batch_qty": 600,
+                                            "expiry_date": "2025-02-13 05:51:38",
+                                            "alert_date": "2025-02-01 05:51:38"
+                                        },
+                                        {
+                                            "batch_id": 229,
+                                            "batch_number": "0000044",
+                                            "batch_qty": 600,
+                                            "expiry_date": "2025-02-14 05:32:28",
+                                            "alert_date": "2025-02-02 05:32:28"
+                                        },
+                                        {
+                                            "batch_id": 236,
+                                            "batch_number": "0000051",
+                                            "batch_qty": 600,
+                                            "expiry_date": "2025-02-14 10:56:14",
+                                            "alert_date": "2025-02-02 10:56:14"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2869,
+                            "tracking": "lot",
+                            "product_name": "BALADE - Premium - Greek Style Yogurt 5Kg",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 204,
+                                            "batch_number": "0000022",
+                                            "batch_qty": 70,
+                                            "expiry_date": "2025-02-12 10:42:38",
+                                            "alert_date": "2025-01-31 10:42:38"
+                                        },
+                                        {
+                                            "batch_id": 214,
+                                            "batch_number": "0000029",
+                                            "batch_qty": 70,
+                                            "expiry_date": "2025-02-12 14:28:25",
+                                            "alert_date": "2025-01-31 14:28:25"
+                                        },
+                                        {
+                                            "batch_id": 224,
+                                            "batch_number": "0000039",
+                                            "batch_qty": 70,
+                                            "expiry_date": "2025-02-13 05:52:23",
+                                            "alert_date": "2025-02-01 05:52:23"
+                                        },
+                                        {
+                                            "batch_id": 230,
+                                            "batch_number": "0000045",
+                                            "batch_qty": 70,
+                                            "expiry_date": "2025-02-14 05:33:05",
+                                            "alert_date": "2025-02-02 05:33:05"
+                                        },
+                                        {
+                                            "batch_id": 237,
+                                            "batch_number": "0000052",
+                                            "batch_qty": 70,
+                                            "expiry_date": "2025-02-14 10:57:31",
+                                            "alert_date": "2025-02-02 10:57:31"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2863,
+                            "tracking": "lot",
+                            "product_name": "Greek Yoghurt 3 % Ltr\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 205,
+                                            "batch_number": "0000023",
+                                            "batch_qty": 902.33,
+                                            "expiry_date": "2025-02-12 13:33:47",
+                                            "alert_date": "2025-01-31 13:33:47"
+                                        },
+                                        {
+                                            "batch_id": 231,
+                                            "batch_number": "0000046",
+                                            "batch_qty": 0.47,
+                                            "expiry_date": "2025-02-14 10:24:08",
+                                            "alert_date": "2025-02-02 10:24:08"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2898,
+                            "tracking": "lot",
+                            "product_name": "Strawberry Preparation 10% ",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 207,
+                                            "batch_number": "SWP5001",
+                                            "batch_qty": 961.12,
+                                            "expiry_date": "2027-03-08 20:00:00",
+                                            "alert_date": "2027-03-08 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2897,
+                            "tracking": "lot",
+                            "product_name": "Blueberry Preparation 10% ",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 208,
+                                            "batch_number": "BLP50002",
+                                            "batch_qty": 982.828,
+                                            "expiry_date": "2027-03-03 20:00:00",
+                                            "alert_date": "2027-03-03 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2899,
+                            "tracking": "lot",
+                            "product_name": "Vanilla Preparation",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 209,
+                                            "batch_number": "VLP50002",
+                                            "batch_qty": 961.12,
+                                            "expiry_date": "2029-01-31 20:00:00",
+                                            "alert_date": "2029-01-31 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2499,
+                            "tracking": "lot",
+                            "product_name": "ATRIN SAFFRON 3GM",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 238,
+                                            "batch_number": "ATS0001",
+                                            "batch_qty": 1200,
+                                            "expiry_date": "2026-02-08 20:00:00",
+                                            "alert_date": "2025-11-10 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2760,
+                            "tracking": "lot",
+                            "product_name": "CHILLI POWDER ",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 239,
+                                            "batch_number": "CP0001",
+                                            "batch_qty": 130,
+                                            "expiry_date": "2026-08-08 20:00:00",
+                                            "alert_date": "2026-05-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 240,
+                                            "batch_number": "CP0002",
+                                            "batch_qty": 125,
+                                            "expiry_date": "2027-02-02 20:00:00",
+                                            "alert_date": "2026-11-04 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 243,
+                                            "batch_number": "CP0003",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2028-04-05 20:00:00",
+                                            "alert_date": "2028-01-06 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 240,
+                                            "batch_number": "CP0002",
+                                            "batch_qty": 3,
+                                            "expiry_date": "2027-02-02 20:00:00",
+                                            "alert_date": "2026-11-04 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Route-4",
+                                    "location_id": 35
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2694,
+                            "tracking": "lot",
+                            "product_name": "CHOCO MAZE CHOCOLATE - SINGLE TWIST",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 241,
+                                            "batch_number": "CM001",
+                                            "batch_qty": 1500,
+                                            "expiry_date": "2027-03-02 20:00:00",
+                                            "alert_date": "2026-12-02 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 242,
+                                            "batch_number": "CM002",
+                                            "batch_qty": 300,
+                                            "expiry_date": "2028-02-03 20:00:00",
+                                            "alert_date": "2027-11-05 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 242,
+                                            "batch_number": "CM002",
+                                            "batch_qty": 187,
+                                            "expiry_date": "2028-02-03 20:00:00",
+                                            "alert_date": "2027-11-05 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Route-4",
+                                    "location_id": 35
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2514,
+                            "tracking": "lot",
+                            "product_name": "BROWN RAISINS [MALAYER]",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 244,
+                                            "batch_number": "BR001",
+                                            "batch_qty": 1000,
+                                            "expiry_date": "2027-02-02 20:00:00",
+                                            "alert_date": "2026-11-04 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2440,
+                            "tracking": "lot",
+                            "product_name": "BRAZIL NUTS",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 245,
+                                            "batch_number": "BN001",
+                                            "batch_qty": 2000,
+                                            "expiry_date": "2028-03-03 20:00:00",
+                                            "alert_date": "2027-12-04 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2903,
+                            "tracking": "lot",
+                            "product_name": "Nivea Body Lotion",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 246,
+                                            "batch_number": "NBL0001",
+                                            "batch_qty": 50,
+                                            "expiry_date": "2026-02-04 04:30:00",
+                                            "alert_date": "2026-02-04 04:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 246,
+                                            "batch_number": "NBL0001",
+                                            "batch_qty": 18,
+                                            "expiry_date": "2026-02-04 04:30:00",
+                                            "alert_date": "2026-02-04 04:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Route-4",
+                                    "location_id": 35
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2904,
+                            "tracking": "lot",
+                            "product_name": "Nivea Face Cream",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 247,
+                                            "batch_number": "NFC0001",
+                                            "batch_qty": 50,
+                                            "expiry_date": "2026-03-03 18:30:00",
+                                            "alert_date": "2026-03-03 18:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                },
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 247,
+                                            "batch_number": "NFC0001",
+                                            "batch_qty": 43,
+                                            "expiry_date": "2026-03-03 18:30:00",
+                                            "alert_date": "2026-03-03 18:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Route-4",
+                                    "location_id": 35
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2511,
+                            "tracking": "lot",
+                            "product_name": "BLACK RAISINS AFGHANISTAN",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 248,
+                                            "batch_number": "BR0001",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2026-02-03 18:30:00",
+                                            "alert_date": "2025-11-05 18:30:00"
+                                        },
+                                        {
+                                            "batch_id": 249,
+                                            "batch_number": "BR0002",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2026-02-04 18:30:00",
+                                            "alert_date": "2025-11-06 18:30:00"
+                                        },
+                                        {
+                                            "batch_id": 252,
+                                            "batch_number": "BR0001",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2026-02-06 18:30:00",
+                                            "alert_date": "2025-11-08 18:30:00"
+                                        },
+                                        {
+                                            "batch_id": 253,
+                                            "batch_number": "BR0002",
+                                            "batch_qty": 500,
+                                            "expiry_date": "2026-03-07 18:30:00",
+                                            "alert_date": "2025-12-07 18:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2680,
+                            "tracking": "lot",
+                            "product_name": "BOONDI ",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 250,
+                                            "batch_number": "BND001",
+                                            "batch_qty": 250,
+                                            "expiry_date": "2027-02-03 18:30:00",
+                                            "alert_date": "2026-11-05 18:30:00"
+                                        },
+                                        {
+                                            "batch_id": 251,
+                                            "batch_number": "BND002",
+                                            "batch_qty": 250,
+                                            "expiry_date": "2026-02-06 18:30:00",
+                                            "alert_date": "2025-11-08 18:30:00"
+                                        },
+                                        {
+                                            "batch_id": 254,
+                                            "batch_number": "BND001",
+                                            "batch_qty": 250,
+                                            "expiry_date": "2026-02-18 04:30:00",
+                                            "alert_date": "2025-11-20 04:30:00"
+                                        },
+                                        {
+                                            "batch_id": 255,
+                                            "batch_number": "BND002",
+                                            "batch_qty": 250,
+                                            "expiry_date": "2027-07-22 18:30:00",
+                                            "alert_date": "2027-04-23 18:30:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "product_id": 2614,
+                            "tracking": "lot",
+                            "product_name": "CASHEWNUT GRILLED WW210 - JAR 454GM",
+                            "selling_price": 1,
+                            "locations": [
+                                {
+                                    "batches": [
+                                        {
+                                            "batch_id": 256,
+                                            "batch_number": "CGW001",
+                                            "batch_qty": 227,
+                                            "expiry_date": "2028-09-08 20:00:00",
+                                            "alert_date": "2028-06-10 20:00:00"
+                                        },
+                                        {
+                                            "batch_id": 257,
+                                            "batch_number": "CGW002",
+                                            "batch_qty": 227,
+                                            "expiry_date": "2026-04-05 20:00:00",
+                                            "alert_date": "2026-01-05 20:00:00"
+                                        }
+                                    ],
+                                    "non_resale_loc": false,
+                                    "resale_loc": false,
+                                    "main_location": false,
+                                    "location_name": "MS/Stock",
+                                    "location_id": 8
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

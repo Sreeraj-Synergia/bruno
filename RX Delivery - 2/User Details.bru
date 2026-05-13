@@ -1,0 +1,148 @@
+meta {
+  name: User Details
+  type: http
+  seq: 3
+}
+
+post {
+  url: localhost:8078/web/user_details
+  body: json
+  auth: inherit
+}
+
+headers {
+  session_id: srzqfyDnLGNwY2owvFLeJd7x0ly3XINhwu2zNYVgWLi0KmOEV7BM_ZAes2TWA1BtgChaGjWnVY7tcPkdDog
+}
+
+body:json {
+  {
+      "params": {}
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: User Details
+  
+  request: {
+    url: http://localhost:8070/web/user_details
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 22 Jan 2025 08:53:57 GMT
+      Content-Length: 1867
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_details": {
+                        "user_name": "Sales User 1",
+                        "user_id": 8,
+                        "login_id": "sales1",
+                        "logo_url": "http://localhost:8070/web/url_image/res.users/8/image_1920",
+                        "user_signature": "http://localhost:8070/web/url_image/res.users/8/user_signature",
+                        "emlpoyee_id": 5,
+                        "emlpoyee_name": "Sales User 1",
+                        "manager": null,
+                        "department": null,
+                        "job_pos": null,
+                        "work_phone": "+971508922937",
+                        "work_mobile": null,
+                        "work_email": null,
+                        "logo": "http://localhost:8070/web/url_image/res.company/1/logo",
+                        "contact_us_link": false,
+                        "about_us_link": false,
+                        "faq_link": false,
+                        "allow_geofencing": false,
+                        "geofencing_perimeter": null,
+                        "google_api_key": null,
+                        "support_email": null,
+                        "currency_ids": [
+                            {
+                                "currency_id": 128,
+                                "symbol": "AED",
+                                "position": "after",
+                                "digits": [
+                                    69,
+                                    4
+                                ]
+                            },
+                            {
+                                "currency_id": 1,
+                                "symbol": "$",
+                                "position": "before",
+                                "digits": [
+                                    69,
+                                    4
+                                ]
+                            }
+                        ],
+                        "return_reasons": [],
+                        "stock_location_id": null,
+                        "stock_location_name": null,
+                        "resellable_location_id": null,
+                        "resellable_location_name": null,
+                        "non_resellable_location_id": null,
+                        "non_resellable_location_name": null,
+                        "allow_edit_product_price": false,
+                        "invoice_print": null,
+                        "show_customers": null,
+                        "show_prod_data": null,
+                        "show_company": null,
+                        "show_offline_export": null,
+                        "show_direct_cust_inv": false,
+                        "show_direct_return": false,
+                        "show_journey": false,
+                        "show_mob_presales": false,
+                        "show_day_close_report": false,
+                        "allow_disc_in_sales": false,
+                        "allow_dir_inv_price_change": false,
+                        "show_mob_presales_int_ship": false,
+                        "show_expense": false,
+                        "show_sales_target": false,
+                        "show_del_plan": false,
+                        "show_survey": false,
+                        "show_mob_directsales": false,
+                        "is_work_location": null,
+                        "related_work_loc_id": null,
+                        "work_location_latitude": null,
+                        "work_location_longitude": null,
+                        "attendance_radius_limit": null,
+                        "check_in_status": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

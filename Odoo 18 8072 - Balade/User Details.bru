@@ -1,0 +1,423 @@
+meta {
+  name: User Details
+  type: http
+  seq: 4
+}
+
+post {
+  url: 192.168.1.119:8070/web/user_details
+  body: json
+  auth: inherit
+}
+
+headers {
+  session_id: srzqfyDnLGNwY2owvFLeJd7x0ly3XINhwu2zNYVgWLi0KmOEV7BM_ZAes2TWA1BtgChaGjWnVY7tcPkdDog
+}
+
+body:json {
+  {
+      "params": {}
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: User Details
+  
+  request: {
+    url: 192.168.1.119:8072/web/user_details
+    method: POST
+    mode: json
+    headers: {
+      session_id: srzqfyDnLGNwY2owvFLeJd7x0ly3XINhwu2zNYVgWLi0KmOEV7BM_ZAes2TWA1BtgChaGjWnVY7tcPkdDog
+    }
+  
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 16 Jun 2025 05:56:08 GMT
+      Content-Length: 4079
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=r2uuSnqzEfDKij8J1ZQZsWBPyVMaxvofzW0Kj5R46yIrkCjC7d5XDd8hCSa2YZIPo-jeDpmdVbiOzAjHSw1Z; Expires=Tue, 16 Jun 2026 05:56:08 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_details": {
+                        "name": "Mohammad Sadiq",
+                        "username": "Mohammad Sadiq",
+                        "user_name": "Mohammad Sadiq",
+                        "user_id": 29,
+                        "uid": 29,
+                        "login_id": "msadiq",
+                        "logo_url": "http://localhost:8072/web/url_image?model=hr.employee&id=366&field=image_1920",
+                        "user_signature": "http://localhost:8072/web/url_image?model=res.users&id=29&field=user_signature",
+                        "employee_id": 366,
+                        "employee_name": "Mohammad Sadiq",
+                        "manager": "Ramadan Aly Shalaby",
+                        "coach": "Ramadan Aly Shalaby",
+                        "department": "Sales",
+                        "job_pos": "Drivers",
+                        "work_phone": "543227481",
+                        "work_mobile": null,
+                        "work_email": "msadiq",
+                        "logo": "http://localhost:8072/web/url_image?model=res.company&id=1&field=logo",
+                        "contact_us_link": false,
+                        "about_us_link": false,
+                        "faq_link": false,
+                        "company_id": 1,
+                        "company_name": "Balade Farms Food Industries LLC",
+                        "disable_offline_sales": false,
+                        "auto_pay_cash_invoice": true,
+                        "user_journey_available": false,
+                        "running_actual_journey_id": null,
+                        "running_actual_journey_name": null,
+                        "allow_geofencing": false,
+                        "geofencing_perimeter": null,
+                        "google_api_key": null,
+                        "support_email": null,
+                        "currency_ids": [
+                            {
+                                "currency_id": 128,
+                                "symbol": "AED",
+                                "position": "after",
+                                "digits": [
+                                    69,
+                                    2
+                                ]
+                            },
+                            {
+                                "currency_id": 150,
+                                "symbol": "SR",
+                                "position": "after",
+                                "digits": [
+                                    69,
+                                    2
+                                ]
+                            },
+                            {
+                                "currency_id": 1,
+                                "symbol": "$",
+                                "position": "before",
+                                "digits": [
+                                    69,
+                                    3
+                                ]
+                            }
+                        ],
+                        "return_reasons": [],
+                        "show_company": true,
+                        "show_offline_export": false,
+                        "allow_user_location_tracking": false,
+                        "show_direct_cust_inv": true,
+                        "show_direct_return": false,
+                        "show_journey": false,
+                        "show_mob_presales": true,
+                        "show_day_close_report": false,
+                        "allow_disc_in_sales": false,
+                        "allow_dir_inv_price_change": false,
+                        "show_mob_presales_int_ship": false,
+                        "show_expense": false,
+                        "show_sales_target": false,
+                        "show_del_plan": false,
+                        "show_survey": false,
+                        "show_mob_directsales": false,
+                        "is_work_location": null,
+                        "related_work_loc_id": null,
+                        "work_location_latitude": null,
+                        "work_location_longitude": null,
+                        "attendance_radius_limit": null,
+                        "check_in_status": "checkin",
+                        "check_in_out": 101,
+                        "check_in_out_ref": "CHK/IN/OUT/00025",
+                        "check_in_time": "2025-06-03 04:12:00",
+                        "check_out_time": false,
+                        "check_in_part_latitude": 25.2354033,
+                        "check_in_part_longitude": 55.3085815,
+                        "checkout_part_latitude": 0,
+                        "checkout_part_longitude": 0,
+                        "check_in_out_employee_id": 366,
+                        "check_in_out_employee_name": "Mohammad Sadiq",
+                        "check_in_out_helper_employee_id": null,
+                        "check_in_out_helper_employee_name": "Skipped",
+                        "check_in_out_ip_address": "92.98.46.207",
+                        "check_in_out_checkin_day": "1",
+                        "check_in_out_fleet_id": null,
+                        "check_in_out_fleet_name": "Skipped",
+                        "check_in_out_odo_meter_start": null,
+                        "check_in_out_odo_meter_end": null,
+                        "customers_based_area_code": true,
+                        "show_global_discount": false,
+                        "show_line_discount": false,
+                        "user_fleet_id": 53,
+                        "user_fleet_name": "Mitsubishi/Canter/AA 39976",
+                        "debug_mode": true,
+                        "show_pricelist_mobile": true,
+                        "show_price_check": false,
+                        "allow_fixed_pricelist_in_sale": true,
+                        "allow_edit_pricelist_in_sale": false,
+                        "only_product_with_pricelist": true,
+                        "enable_min_max": false,
+                        "price_list_line_discount": false,
+                        "show_customers": true,
+                        "show_edit_mob_cust": true,
+                        "allow_sale_customer_location": false,
+                        "allow_sale_customer_sign": false,
+                        "allow_invoice_checkin": false,
+                        "allow_invoice_customer_sign": false,
+                        "show_mob_journey_plan": false,
+                        "customers_based_on_routeplan": false,
+                        "show_prod_data": true,
+                        "show_foc_offers": false,
+                        "warehouse_id": 1,
+                        "warehouse_name": "Main Stock Dubai",
+                        "stock_location_id": 189,
+                        "stock_location_name": "Dubai 4 Stock",
+                        "resellable_location_id": 198,
+                        "resellable_location_name": "Dubai 4 - Good Return",
+                        "non_resellable_location_id": 190,
+                        "non_resellable_location_name": "Dubai 4 - Bad Return",
+                        "show_liquidation": false,
+                        "show_req_special_price": false,
+                        "allow_sales_history": false,
+                        "show_mob_presales_return": false,
+                        "disable_sale_print_mobile": false,
+                        "allow_sales_overdue": false,
+                        "stop_sale_for_blocked_cust": true,
+                        "confirm_customer_sale": true,
+                        "show_mob_unload_req": true
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: User Details
+  
+  request: {
+    url: 192.168.1.119:8072/web/user_details
+    method: POST
+    mode: json
+    headers: {
+      session_id: srzqfyDnLGNwY2owvFLeJd7x0ly3XINhwu2zNYVgWLi0KmOEV7BM_ZAes2TWA1BtgChaGjWnVY7tcPkdDog
+    }
+  
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 16 Jun 2025 05:56:08 GMT
+      Content-Length: 4079
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=r2uuSnqzEfDKij8J1ZQZsWBPyVMaxvofzW0Kj5R46yIrkCjC7d5XDd8hCSa2YZIPo-jeDpmdVbiOzAjHSw1Z; Expires=Tue, 16 Jun 2026 05:56:08 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_details": {
+                        "name": "Mohammad Sadiq",
+                        "username": "Mohammad Sadiq",
+                        "user_name": "Mohammad Sadiq",
+                        "user_id": 29,
+                        "uid": 29,
+                        "login_id": "msadiq",
+                        "logo_url": "http://localhost:8072/web/url_image?model=hr.employee&id=366&field=image_1920",
+                        "user_signature": "http://localhost:8072/web/url_image?model=res.users&id=29&field=user_signature",
+                        "employee_id": 366,
+                        "employee_name": "Mohammad Sadiq",
+                        "manager": "Ramadan Aly Shalaby",
+                        "coach": "Ramadan Aly Shalaby",
+                        "department": "Sales",
+                        "job_pos": "Drivers",
+                        "work_phone": "543227481",
+                        "work_mobile": null,
+                        "work_email": "msadiq",
+                        "logo": "http://localhost:8072/web/url_image?model=res.company&id=1&field=logo",
+                        "contact_us_link": false,
+                        "about_us_link": false,
+                        "faq_link": false,
+                        "company_id": 1,
+                        "company_name": "Balade Farms Food Industries LLC",
+                        "disable_offline_sales": false,
+                        "auto_pay_cash_invoice": true,
+                        "user_journey_available": false,
+                        "running_actual_journey_id": null,
+                        "running_actual_journey_name": null,
+                        "allow_geofencing": false,
+                        "geofencing_perimeter": null,
+                        "google_api_key": null,
+                        "support_email": null,
+                        "currency_ids": [
+                            {
+                                "currency_id": 128,
+                                "symbol": "AED",
+                                "position": "after",
+                                "digits": [
+                                    69,
+                                    2
+                                ]
+                            },
+                            {
+                                "currency_id": 150,
+                                "symbol": "SR",
+                                "position": "after",
+                                "digits": [
+                                    69,
+                                    2
+                                ]
+                            },
+                            {
+                                "currency_id": 1,
+                                "symbol": "$",
+                                "position": "before",
+                                "digits": [
+                                    69,
+                                    3
+                                ]
+                            }
+                        ],
+                        "return_reasons": [],
+                        "show_company": true,
+                        "show_offline_export": false,
+                        "allow_user_location_tracking": false,
+                        "show_direct_cust_inv": true,
+                        "show_direct_return": false,
+                        "show_journey": false,
+                        "show_mob_presales": true,
+                        "show_day_close_report": false,
+                        "allow_disc_in_sales": false,
+                        "allow_dir_inv_price_change": false,
+                        "show_mob_presales_int_ship": false,
+                        "show_expense": false,
+                        "show_sales_target": false,
+                        "show_del_plan": false,
+                        "show_survey": false,
+                        "show_mob_directsales": false,
+                        "is_work_location": null,
+                        "related_work_loc_id": null,
+                        "work_location_latitude": null,
+                        "work_location_longitude": null,
+                        "attendance_radius_limit": null,
+                        "check_in_status": "checkin",
+                        "check_in_out": 101,
+                        "check_in_out_ref": "CHK/IN/OUT/00025",
+                        "check_in_time": "2025-06-03 04:12:00",
+                        "check_out_time": false,
+                        "check_in_part_latitude": 25.2354033,
+                        "check_in_part_longitude": 55.3085815,
+                        "checkout_part_latitude": 0,
+                        "checkout_part_longitude": 0,
+                        "check_in_out_employee_id": 366,
+                        "check_in_out_employee_name": "Mohammad Sadiq",
+                        "check_in_out_helper_employee_id": null,
+                        "check_in_out_helper_employee_name": "Skipped",
+                        "check_in_out_ip_address": "92.98.46.207",
+                        "check_in_out_checkin_day": "1",
+                        "check_in_out_fleet_id": null,
+                        "check_in_out_fleet_name": "Skipped",
+                        "check_in_out_odo_meter_start": null,
+                        "check_in_out_odo_meter_end": null,
+                        "customers_based_area_code": true,
+                        "show_global_discount": false,
+                        "show_line_discount": false,
+                        "user_fleet_id": 53,
+                        "user_fleet_name": "Mitsubishi/Canter/AA 39976",
+                        "debug_mode": true,
+                        "show_pricelist_mobile": true,
+                        "show_price_check": false,
+                        "allow_fixed_pricelist_in_sale": true,
+                        "allow_edit_pricelist_in_sale": false,
+                        "only_product_with_pricelist": true,
+                        "enable_min_max": false,
+                        "price_list_line_discount": false,
+                        "show_customers": true,
+                        "show_edit_mob_cust": true,
+                        "allow_sale_customer_location": false,
+                        "allow_sale_customer_sign": false,
+                        "allow_invoice_checkin": false,
+                        "allow_invoice_customer_sign": false,
+                        "show_mob_journey_plan": false,
+                        "customers_based_on_routeplan": false,
+                        "show_prod_data": true,
+                        "show_foc_offers": false,
+                        "warehouse_id": 1,
+                        "warehouse_name": "Main Stock Dubai",
+                        "stock_location_id": 189,
+                        "stock_location_name": "Dubai 4 Stock",
+                        "resellable_location_id": 198,
+                        "resellable_location_name": "Dubai 4 - Good Return",
+                        "non_resellable_location_id": 190,
+                        "non_resellable_location_name": "Dubai 4 - Bad Return",
+                        "show_liquidation": false,
+                        "show_req_special_price": false,
+                        "allow_sales_history": false,
+                        "show_mob_presales_return": false,
+                        "disable_sale_print_mobile": false,
+                        "allow_sales_overdue": false,
+                        "stop_sale_for_blocked_cust": true,
+                        "confirm_customer_sale": true,
+                        "show_mob_unload_req": true
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

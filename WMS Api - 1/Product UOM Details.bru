@@ -1,0 +1,443 @@
+meta {
+  name: Product UOM Details
+  type: http
+  seq: 13
+}
+
+post {
+  url: https://wms.syntrack.app/web/get_product_uom_master_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Product UOM Details
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_product_uom_master_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:30:19 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:30:19 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "uom_details": [
+                        {
+                            "id": 5,
+                            "name": "Days",
+                            "uom_type": "reference",
+                            "category_id": 3,
+                            "category_name": "Working Time"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Dozens",
+                            "uom_type": "bigger",
+                            "category_id": 1,
+                            "category_name": "Unit"
+                        },
+                        {
+                            "id": 6,
+                            "name": "Hours",
+                            "uom_type": "smaller",
+                            "category_id": 3,
+                            "category_name": "Working Time"
+                        },
+                        {
+                            "id": 3,
+                            "name": "KG",
+                            "uom_type": "reference",
+                            "category_id": 2,
+                            "category_name": "Weight"
+                        },
+                        {
+                            "id": 11,
+                            "name": "L",
+                            "uom_type": "reference",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 8,
+                            "name": "METER",
+                            "uom_type": "reference",
+                            "category_id": 4,
+                            "category_name": "Length / Distance"
+                        },
+                        {
+                            "id": 23,
+                            "name": "PIECE",
+                            "uom_type": "reference",
+                            "category_id": 6,
+                            "category_name": "Piece"
+                        },
+                        {
+                            "id": 1,
+                            "name": "Units",
+                            "uom_type": "reference",
+                            "category_id": 1,
+                            "category_name": "Unit"
+                        },
+                        {
+                            "id": 10,
+                            "name": "cm",
+                            "uom_type": "smaller",
+                            "category_id": 4,
+                            "category_name": "Length / Distance"
+                        },
+                        {
+                            "id": 18,
+                            "name": "fl oz (US)",
+                            "uom_type": "smaller",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 16,
+                            "name": "ft",
+                            "uom_type": "smaller",
+                            "category_id": 4,
+                            "category_name": "Length / Distance"
+                        },
+                        {
+                            "id": 22,
+                            "name": "ft³",
+                            "uom_type": "bigger",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 4,
+                            "name": "g",
+                            "uom_type": "smaller",
+                            "category_id": 2,
+                            "category_name": "Weight"
+                        },
+                        {
+                            "id": 20,
+                            "name": "gal (US)",
+                            "uom_type": "bigger",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 15,
+                            "name": "in",
+                            "uom_type": "smaller",
+                            "category_id": 4,
+                            "category_name": "Length / Distance"
+                        },
+                        {
+                            "id": 21,
+                            "name": "in³",
+                            "uom_type": "smaller",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 9,
+                            "name": "km",
+                            "uom_type": "bigger",
+                            "category_id": 4,
+                            "category_name": "Length / Distance"
+                        },
+                        {
+                            "id": 13,
+                            "name": "lb",
+                            "uom_type": "smaller",
+                            "category_id": 2,
+                            "category_name": "Weight"
+                        },
+                        {
+                            "id": 17,
+                            "name": "mi",
+                            "uom_type": "bigger",
+                            "category_id": 4,
+                            "category_name": "Length / Distance"
+                        },
+                        {
+                            "id": 12,
+                            "name": "m³",
+                            "uom_type": "bigger",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 14,
+                            "name": "oz",
+                            "uom_type": "smaller",
+                            "category_id": 2,
+                            "category_name": "Weight"
+                        },
+                        {
+                            "id": 19,
+                            "name": "qt (US)",
+                            "uom_type": "smaller",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 7,
+                            "name": "t",
+                            "uom_type": "bigger",
+                            "category_id": 2,
+                            "category_name": "Weight"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Product UOM Details
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_product_uom_master_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:30:19 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:30:19 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "uom_details": [
+                        {
+                            "id": 5,
+                            "name": "Days",
+                            "uom_type": "reference",
+                            "category_id": 3,
+                            "category_name": "Working Time"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Dozens",
+                            "uom_type": "bigger",
+                            "category_id": 1,
+                            "category_name": "Unit"
+                        },
+                        {
+                            "id": 6,
+                            "name": "Hours",
+                            "uom_type": "smaller",
+                            "category_id": 3,
+                            "category_name": "Working Time"
+                        },
+                        {
+                            "id": 3,
+                            "name": "KG",
+                            "uom_type": "reference",
+                            "category_id": 2,
+                            "category_name": "Weight"
+                        },
+                        {
+                            "id": 11,
+                            "name": "L",
+                            "uom_type": "reference",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 8,
+                            "name": "METER",
+                            "uom_type": "reference",
+                            "category_id": 4,
+                            "category_name": "Length / Distance"
+                        },
+                        {
+                            "id": 23,
+                            "name": "PIECE",
+                            "uom_type": "reference",
+                            "category_id": 6,
+                            "category_name": "Piece"
+                        },
+                        {
+                            "id": 1,
+                            "name": "Units",
+                            "uom_type": "reference",
+                            "category_id": 1,
+                            "category_name": "Unit"
+                        },
+                        {
+                            "id": 10,
+                            "name": "cm",
+                            "uom_type": "smaller",
+                            "category_id": 4,
+                            "category_name": "Length / Distance"
+                        },
+                        {
+                            "id": 18,
+                            "name": "fl oz (US)",
+                            "uom_type": "smaller",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 16,
+                            "name": "ft",
+                            "uom_type": "smaller",
+                            "category_id": 4,
+                            "category_name": "Length / Distance"
+                        },
+                        {
+                            "id": 22,
+                            "name": "ft³",
+                            "uom_type": "bigger",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 4,
+                            "name": "g",
+                            "uom_type": "smaller",
+                            "category_id": 2,
+                            "category_name": "Weight"
+                        },
+                        {
+                            "id": 20,
+                            "name": "gal (US)",
+                            "uom_type": "bigger",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 15,
+                            "name": "in",
+                            "uom_type": "smaller",
+                            "category_id": 4,
+                            "category_name": "Length / Distance"
+                        },
+                        {
+                            "id": 21,
+                            "name": "in³",
+                            "uom_type": "smaller",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 9,
+                            "name": "km",
+                            "uom_type": "bigger",
+                            "category_id": 4,
+                            "category_name": "Length / Distance"
+                        },
+                        {
+                            "id": 13,
+                            "name": "lb",
+                            "uom_type": "smaller",
+                            "category_id": 2,
+                            "category_name": "Weight"
+                        },
+                        {
+                            "id": 17,
+                            "name": "mi",
+                            "uom_type": "bigger",
+                            "category_id": 4,
+                            "category_name": "Length / Distance"
+                        },
+                        {
+                            "id": 12,
+                            "name": "m³",
+                            "uom_type": "bigger",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 14,
+                            "name": "oz",
+                            "uom_type": "smaller",
+                            "category_id": 2,
+                            "category_name": "Weight"
+                        },
+                        {
+                            "id": 19,
+                            "name": "qt (US)",
+                            "uom_type": "smaller",
+                            "category_id": 5,
+                            "category_name": "Volume"
+                        },
+                        {
+                            "id": 7,
+                            "name": "t",
+                            "uom_type": "bigger",
+                            "category_id": 2,
+                            "category_name": "Weight"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

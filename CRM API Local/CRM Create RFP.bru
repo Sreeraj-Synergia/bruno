@@ -1,0 +1,26 @@
+meta {
+  name: CRM Create RFP
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://localhost:8069/web/crm_lead_create_rfp
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "lead_id": 313
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

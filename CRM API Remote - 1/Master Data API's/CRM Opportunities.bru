@@ -1,0 +1,76 @@
+meta {
+  name: CRM Opportunities
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8069/web/get_opportunities_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: CRM Opportunity Details
+  
+  request: {
+    url: http://172.105.55.55:8073/web/get_opportunities_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 211
+      Set-Cookie: session_id=5c3ca46c86c87dc929486e914d344aceef2da3e9; Expires=Sun, 22-Sep-2024 09:05:39 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 24 Jun 2024 09:05:39 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "crm_opportunity_details": [
+                        {
+                            "id": 14,
+                            "name": "Courier"
+                        },
+                        {
+                            "id": 15,
+                            "name": "Freight Forwarding"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

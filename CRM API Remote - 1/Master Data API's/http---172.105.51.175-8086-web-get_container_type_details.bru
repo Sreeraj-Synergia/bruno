@@ -1,0 +1,19 @@
+meta {
+  name: http://172.105.51.175:8086/web/get_container_type_details
+  type: http
+  seq: 19
+}
+
+post {
+  url: http://172.105.51.175:8086/web/get_container_type_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}

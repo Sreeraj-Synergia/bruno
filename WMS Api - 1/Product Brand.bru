@@ -1,0 +1,461 @@
+meta {
+  name: Product Brand
+  type: http
+  seq: 12
+}
+
+post {
+  url: https://wms.syntrack.app/web/get_product_brand_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Product Brand
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_product_brand_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:30:02 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:30:02 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "brand_details": [
+                        {
+                            "id": 9,
+                            "name": "AJAY",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 10,
+                            "name": "AL FADIL",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 11,
+                            "name": "AL RAWABI",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 12,
+                            "name": "AL SAFA",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 13,
+                            "name": "AL SHAFAA",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 14,
+                            "name": "ARMAF",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 15,
+                            "name": "BIOLUXE",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 16,
+                            "name": "COMFY",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 17,
+                            "name": "COSMO",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 18,
+                            "name": "EASY CLEAN",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 19,
+                            "name": "EMIRATES MACARONI",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 20,
+                            "name": "FEMELLE",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 21,
+                            "name": "FID FAD",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 22,
+                            "name": "HAVEX",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 23,
+                            "name": "IKEA",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 24,
+                            "name": "KABANI",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 25,
+                            "name": "KODAK",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 26,
+                            "name": "LAYS",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 27,
+                            "name": "MAGGY",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 28,
+                            "name": "MAOG",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 29,
+                            "name": "NELLARA",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 30,
+                            "name": "OASIS",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 31,
+                            "name": "PHILLIPS",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 32,
+                            "name": "RUCHI",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 33,
+                            "name": "SADAF",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 34,
+                            "name": "SANA",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 35,
+                            "name": "SAVOUR",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 36,
+                            "name": "SHINEX",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 37,
+                            "name": "SONIC",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 38,
+                            "name": "SUNTECH",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 39,
+                            "name": "TOYOTA",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 40,
+                            "name": "U-DO",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 41,
+                            "name": "VITAL",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 42,
+                            "name": "VOMOH",
+                            "brand_code": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Product Brand
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_product_brand_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:30:02 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:30:02 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "brand_details": [
+                        {
+                            "id": 9,
+                            "name": "AJAY",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 10,
+                            "name": "AL FADIL",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 11,
+                            "name": "AL RAWABI",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 12,
+                            "name": "AL SAFA",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 13,
+                            "name": "AL SHAFAA",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 14,
+                            "name": "ARMAF",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 15,
+                            "name": "BIOLUXE",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 16,
+                            "name": "COMFY",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 17,
+                            "name": "COSMO",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 18,
+                            "name": "EASY CLEAN",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 19,
+                            "name": "EMIRATES MACARONI",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 20,
+                            "name": "FEMELLE",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 21,
+                            "name": "FID FAD",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 22,
+                            "name": "HAVEX",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 23,
+                            "name": "IKEA",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 24,
+                            "name": "KABANI",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 25,
+                            "name": "KODAK",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 26,
+                            "name": "LAYS",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 27,
+                            "name": "MAGGY",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 28,
+                            "name": "MAOG",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 29,
+                            "name": "NELLARA",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 30,
+                            "name": "OASIS",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 31,
+                            "name": "PHILLIPS",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 32,
+                            "name": "RUCHI",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 33,
+                            "name": "SADAF",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 34,
+                            "name": "SANA",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 35,
+                            "name": "SAVOUR",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 36,
+                            "name": "SHINEX",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 37,
+                            "name": "SONIC",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 38,
+                            "name": "SUNTECH",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 39,
+                            "name": "TOYOTA",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 40,
+                            "name": "U-DO",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 41,
+                            "name": "VITAL",
+                            "brand_code": null
+                        },
+                        {
+                            "id": 42,
+                            "name": "VOMOH",
+                            "brand_code": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

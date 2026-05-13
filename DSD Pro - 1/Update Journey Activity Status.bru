@@ -1,0 +1,341 @@
+meta {
+  name: Update Journey Activity Status
+  type: http
+  seq: 45
+}
+
+post {
+  url: http://192.168.1.119:8070/web/journey_activity_status_change
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params":{
+          "data":{
+              "journey_activity_id": 4779,
+              "action_model": "load.request",
+              "action_id": 466,
+              "answer_single_choice": false,
+              "answer_multiple_choice": false,
+              "answer_date_choice": false,
+              "answer_datetime_choice": false,
+              "answer_text_choice": false,
+              "answer_char_choice": false,
+              "answer_number_choice": false,
+              "attachment": "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"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: JOurney Activity Status Update
+  
+  request: {
+    url: http://192.168.1.119:8070/web/journey_activity_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params":{
+              "data":{
+                  "journey_activity_id": 4778,
+                  "action_model": "load.request",
+                  "action_id": 466
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 12 May 2025 13:08:36 GMT
+      Content-Length: 2676
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "journey_activity_data": {
+                        "journey_activity_id": 4778,
+                        "act_plan_id": 55,
+                        "act_plan_name": "PSDJ2025030006-1-1-28",
+                        "act_visit_id": null,
+                        "act_visit_name": null,
+                        "partner_id": null,
+                        "partner_name": null,
+                        "stage_id": 1,
+                        "stage_name": "Pre Journey",
+                        "routing_stage": "pre_journey",
+                        "main_activity_id": 2,
+                        "main_activity_name": "Stock Check",
+                        "sub_activity_id": 27,
+                        "sub_activity_name": "Do you have enough stock in the vehicle ",
+                        "summary": null,
+                        "sequence": 1,
+                        "create_uid": 2,
+                        "create_name": "Administrator",
+                        "delay_unit": "days",
+                        "res_model": "merchandising.merchandising",
+                        "triggered_next_type_id": null,
+                        "triggered_next_type_name": null,
+                        "category": "merchandising",
+                        "default_user_id": null,
+                        "default_user_name": null,
+                        "default_note": null,
+                        "selection_id": null,
+                        "date_field_id": null,
+                        "merchandising_type_id": 2,
+                        "merchandising_type_name": "Stock Check",
+                        "merchandising_id": 1,
+                        "merchandising_name": "Pre Journey",
+                        "merchandising_question_category": "simple_choice",
+                        "suggested_answer_ids": [
+                            {
+                                "merchandising_type_id": null,
+                                "merchandising_type_name": null,
+                                "question_id": 27,
+                                "question_name": "Do you have enough stock in the vehicle ",
+                                "matrix_question_id": null,
+                                "matrix_question_name": null,
+                                "question_type": "simple_choice",
+                                "sequence": 1,
+                                "value": null,
+                                "value_id": 1,
+                                "value_name": "Yes",
+                                "value_image": null,
+                                "value_image_filename": null,
+                                "is_correct": true,
+                                "answer_score": null,
+                                "action_activity_id": null,
+                                "action_activity_name": null,
+                                "merchandising_model_id": null,
+                                "merchandising_model_name": null,
+                                "merchandising_model_model": null
+                            },
+                            {
+                                "merchandising_type_id": null,
+                                "merchandising_type_name": null,
+                                "question_id": 27,
+                                "question_name": "Do you have enough stock in the vehicle ",
+                                "matrix_question_id": null,
+                                "matrix_question_name": null,
+                                "question_type": "simple_choice",
+                                "sequence": 2,
+                                "value": null,
+                                "value_id": 2,
+                                "value_name": "No",
+                                "value_image": null,
+                                "value_image_filename": null,
+                                "is_correct": null,
+                                "answer_score": null,
+                                "action_activity_id": null,
+                                "action_activity_name": null,
+                                "merchandising_model_id": 919,
+                                "merchandising_model_name": "Load Request",
+                                "merchandising_model_model": "load.request"
+                            }
+                        ],
+                        "state": "completed",
+                        "merchandising_model": null,
+                        "activity_model": 919,
+                        "activity_model_name": "load.request",
+                        "res_id": 466,
+                        "res_name": 466,
+                        "ans_type": "simple_choice",
+                        "answer_single_choice": null,
+                        "answer_multiple_choice": null,
+                        "answer_multiple_choice_name": null,
+                        "answer_date_choice": null,
+                        "answer_datetime_choice": null,
+                        "answer_text_choice": null,
+                        "answer_char_choice": null,
+                        "answer_number_choice": null,
+                        "attach_ids": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: JOurney Activity Status Update
+  
+  request: {
+    url: http://192.168.1.119:8070/web/journey_activity_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params":{
+              "data":{
+                  "journey_activity_id": 4778,
+                  "action_model": "load.request",
+                  "action_id": 466
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 12 May 2025 13:08:36 GMT
+      Content-Length: 2676
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "journey_activity_data": {
+                        "journey_activity_id": 4778,
+                        "act_plan_id": 55,
+                        "act_plan_name": "PSDJ2025030006-1-1-28",
+                        "act_visit_id": null,
+                        "act_visit_name": null,
+                        "partner_id": null,
+                        "partner_name": null,
+                        "stage_id": 1,
+                        "stage_name": "Pre Journey",
+                        "routing_stage": "pre_journey",
+                        "main_activity_id": 2,
+                        "main_activity_name": "Stock Check",
+                        "sub_activity_id": 27,
+                        "sub_activity_name": "Do you have enough stock in the vehicle ",
+                        "summary": null,
+                        "sequence": 1,
+                        "create_uid": 2,
+                        "create_name": "Administrator",
+                        "delay_unit": "days",
+                        "res_model": "merchandising.merchandising",
+                        "triggered_next_type_id": null,
+                        "triggered_next_type_name": null,
+                        "category": "merchandising",
+                        "default_user_id": null,
+                        "default_user_name": null,
+                        "default_note": null,
+                        "selection_id": null,
+                        "date_field_id": null,
+                        "merchandising_type_id": 2,
+                        "merchandising_type_name": "Stock Check",
+                        "merchandising_id": 1,
+                        "merchandising_name": "Pre Journey",
+                        "merchandising_question_category": "simple_choice",
+                        "suggested_answer_ids": [
+                            {
+                                "merchandising_type_id": null,
+                                "merchandising_type_name": null,
+                                "question_id": 27,
+                                "question_name": "Do you have enough stock in the vehicle ",
+                                "matrix_question_id": null,
+                                "matrix_question_name": null,
+                                "question_type": "simple_choice",
+                                "sequence": 1,
+                                "value": null,
+                                "value_id": 1,
+                                "value_name": "Yes",
+                                "value_image": null,
+                                "value_image_filename": null,
+                                "is_correct": true,
+                                "answer_score": null,
+                                "action_activity_id": null,
+                                "action_activity_name": null,
+                                "merchandising_model_id": null,
+                                "merchandising_model_name": null,
+                                "merchandising_model_model": null
+                            },
+                            {
+                                "merchandising_type_id": null,
+                                "merchandising_type_name": null,
+                                "question_id": 27,
+                                "question_name": "Do you have enough stock in the vehicle ",
+                                "matrix_question_id": null,
+                                "matrix_question_name": null,
+                                "question_type": "simple_choice",
+                                "sequence": 2,
+                                "value": null,
+                                "value_id": 2,
+                                "value_name": "No",
+                                "value_image": null,
+                                "value_image_filename": null,
+                                "is_correct": null,
+                                "answer_score": null,
+                                "action_activity_id": null,
+                                "action_activity_name": null,
+                                "merchandising_model_id": 919,
+                                "merchandising_model_name": "Load Request",
+                                "merchandising_model_model": "load.request"
+                            }
+                        ],
+                        "state": "completed",
+                        "merchandising_model": null,
+                        "activity_model": 919,
+                        "activity_model_name": "load.request",
+                        "res_id": 466,
+                        "res_name": 466,
+                        "ans_type": "simple_choice",
+                        "answer_single_choice": null,
+                        "answer_multiple_choice": null,
+                        "answer_multiple_choice_name": null,
+                        "answer_date_choice": null,
+                        "answer_datetime_choice": null,
+                        "answer_text_choice": null,
+                        "answer_char_choice": null,
+                        "answer_number_choice": null,
+                        "attach_ids": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,188 @@
+meta {
+  name: Tax Details
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8070/web/get_tax_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Tax Details
+  
+  request: {
+    url: http://localhost:8070/web/get_tax_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 1548
+      Set-Cookie: session_id=169f1cf4e54904ea4c363de7ed063f55fe526f23; Expires=Thu, 26-Dec-2024 10:01:46 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 27 Sep 2024 10:01:46 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "tax_details": [
+                        {
+                            "id": 1,
+                            "name": "VAT 5%",
+                            "amount": 5
+                        },
+                        {
+                            "id": 2,
+                            "name": "VAT 5% (Abu Dhabi)",
+                            "amount": 5
+                        },
+                        {
+                            "id": 3,
+                            "name": "VAT 5% (Sharjah)",
+                            "amount": 5
+                        },
+                        {
+                            "id": 4,
+                            "name": "VAT 5% (Ajman)",
+                            "amount": 5
+                        },
+                        {
+                            "id": 5,
+                            "name": "VAT 5% (Umm Al Quwain)",
+                            "amount": 5
+                        },
+                        {
+                            "id": 6,
+                            "name": "VAT 5% (Ras Al-Khaima)",
+                            "amount": 5
+                        },
+                        {
+                            "id": 7,
+                            "name": "VAT 5% (Fujairah)",
+                            "amount": 5
+                        },
+                        {
+                            "id": 8,
+                            "name": "Exempted Tax",
+                            "amount": 0
+                        },
+                        {
+                            "id": 9,
+                            "name": "VAT 0%",
+                            "amount": 0
+                        },
+                        {
+                            "id": 10,
+                            "name": "Export Tax 0%",
+                            "amount": 0
+                        },
+                        {
+                            "id": 11,
+                            "name": "Reverse Charge Provision (Dubai)",
+                            "amount": 5
+                        },
+                        {
+                            "id": 12,
+                            "name": "Reverse Charge Provision (Abu Dhabi)",
+                            "amount": 5
+                        },
+                        {
+                            "id": 13,
+                            "name": "Reverse Charge Provision (Sharjah)",
+                            "amount": 5
+                        },
+                        {
+                            "id": 14,
+                            "name": "Reverse Charge Provision (Ajman)",
+                            "amount": 5
+                        },
+                        {
+                            "id": 15,
+                            "name": "Reverse Charge Provision (Umm Al Quwain)",
+                            "amount": 5
+                        },
+                        {
+                            "id": 16,
+                            "name": "Reverse Charge Provision (Ras Al-Khaima)",
+                            "amount": 5
+                        },
+                        {
+                            "id": 17,
+                            "name": "Reverse Charge Provision (Fujairah)",
+                            "amount": 5
+                        },
+                        {
+                            "id": 18,
+                            "name": "Tourist Refund scheme 5%",
+                            "amount": 5
+                        },
+                        {
+                            "id": 19,
+                            "name": "VAT 5%",
+                            "amount": 5
+                        },
+                        {
+                            "id": 20,
+                            "name": "Exempted Tax",
+                            "amount": 0
+                        },
+                        {
+                            "id": 21,
+                            "name": "VAT 0%",
+                            "amount": 0
+                        },
+                        {
+                            "id": 22,
+                            "name": "Import Tax 5%",
+                            "amount": 5
+                        },
+                        {
+                            "id": 23,
+                            "name": "Reverse Charge Provision",
+                            "amount": 5
+                        },
+                        {
+                            "id": 24,
+                            "name": "VAT 5% Included",
+                            "amount": 5
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

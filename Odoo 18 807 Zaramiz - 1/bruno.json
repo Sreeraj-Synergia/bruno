@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Odoo 18 807 Zaramiz - 1",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

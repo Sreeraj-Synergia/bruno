@@ -1,0 +1,25 @@
+meta {
+  name: Reached
+  type: http
+  seq: 62
+}
+
+post {
+  url: https://grako.syntrack.app/web/mobilisation_reached
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "mobilisation_id": 121
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

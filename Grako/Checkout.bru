@@ -1,0 +1,35 @@
+meta {
+  name: Checkout
+  type: http
+  seq: 66
+}
+
+post {
+  url: http://localhost:8090/web/mobilisation_checkout
+  body: text
+  auth: inherit
+}
+
+body:text {
+  {
+      "params": {
+          "data": {
+              "mobilisation_id": 79,
+              "checkout_data": [
+                  {
+                      "emp_code": "59689",
+                      "check_out": "03/12/2025 18:00:00"
+                  },
+                  {
+                      "emp_code": "58870",
+                      "check_out": "03/12/2025 18:00:00"
+                  }
+              ]
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

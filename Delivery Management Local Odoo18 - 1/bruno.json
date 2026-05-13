@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Delivery Management Local Odoo18 - 1",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

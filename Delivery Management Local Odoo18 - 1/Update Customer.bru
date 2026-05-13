@@ -1,0 +1,251 @@
+meta {
+  name: Update Customer
+  type: http
+  seq: 15
+}
+
+post {
+  url: localhost:8069/web/update_delivery_customers
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "customer_id": 758,
+              "addr1": false,
+              "addr2": false,
+              "zip": 2664646,
+              "city": false,
+              "country_id": false,
+              "state_id": false,
+              "phone": false,
+              "mobile": false,
+              "area_code_id": false,
+              "area_code_name": "Oud Metha",
+              "customer_type": false,
+              "contact_list": [],
+              "latitude": 25.197197,
+              "longitude": 55.2743764
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Update Customer
+  
+  request: {
+    url: localhost:8069/web/update_delivery_customers
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "customer_id": 758,
+                  "addr1": false,
+                  "addr2": false,
+                  "zip": 2664646,
+                  "city": false,
+                  "country_id": false,
+                  "state_id": false,
+                  "phone": false,
+                  "mobile": false,
+                  "area_code_id": false,
+                  "area_code_name": "Oud Metha",
+                  "customer_type": false,
+                  "contact_list": [],
+                  "latitude": 25.197197,
+                  "longitude": 55.2743764
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 30 Jul 2025 08:17:17 GMT
+      Content-Length: 1007
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "delivery_customers": {
+                        "customer_id": 758,
+                        "name": "2342-LULU HYPERMARKET LLC BRANCH-9",
+                        "street": null,
+                        "street2": null,
+                        "city": null,
+                        "zip": "2664646",
+                        "state_id": null,
+                        "state_name": null,
+                        "country_id": null,
+                        "country_name": null,
+                        "email": null,
+                        "website": null,
+                        "phone": null,
+                        "mobile": null,
+                        "trn": "100228723100003",
+                        "latitude": 25.197197,
+                        "longitude": 55.2743764,
+                        "payment_type": null,
+                        "property_payment_term_id": null,
+                        "property_payment_term_name": null,
+                        "credit_limit": null,
+                        "over_credit": false,
+                        "customer_ref": "D12866",
+                        "logo_url": "http://localhost:8069/web/url_image/res.partner/758/image_1920",
+                        "arabic_name": null,
+                        "customer": true,
+                        "supplier": false,
+                        "contact_list": [],
+                        "area_code_id": 2,
+                        "area_code_code": "Oud Metha",
+                        "area_code_name": "Oud Metha",
+                        "sales_person_ids": [],
+                        "sales_executive_ids": [],
+                        "sales_supervisor_ids": [],
+                        "delivery_person_ids": [],
+                        "is_contact": false
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Update Customer
+  
+  request: {
+    url: localhost:8069/web/update_delivery_customers
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "customer_id": 758,
+                  "addr1": false,
+                  "addr2": false,
+                  "zip": 2664646,
+                  "city": false,
+                  "country_id": false,
+                  "state_id": false,
+                  "phone": false,
+                  "mobile": false,
+                  "area_code_id": false,
+                  "area_code_name": "Oud Metha",
+                  "customer_type": false,
+                  "contact_list": [],
+                  "latitude": 25.197197,
+                  "longitude": 55.2743764
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 30 Jul 2025 08:17:17 GMT
+      Content-Length: 1007
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "delivery_customers": {
+                        "customer_id": 758,
+                        "name": "2342-LULU HYPERMARKET LLC BRANCH-9",
+                        "street": null,
+                        "street2": null,
+                        "city": null,
+                        "zip": "2664646",
+                        "state_id": null,
+                        "state_name": null,
+                        "country_id": null,
+                        "country_name": null,
+                        "email": null,
+                        "website": null,
+                        "phone": null,
+                        "mobile": null,
+                        "trn": "100228723100003",
+                        "latitude": 25.197197,
+                        "longitude": 55.2743764,
+                        "payment_type": null,
+                        "property_payment_term_id": null,
+                        "property_payment_term_name": null,
+                        "credit_limit": null,
+                        "over_credit": false,
+                        "customer_ref": "D12866",
+                        "logo_url": "http://localhost:8069/web/url_image/res.partner/758/image_1920",
+                        "arabic_name": null,
+                        "customer": true,
+                        "supplier": false,
+                        "contact_list": [],
+                        "area_code_id": 2,
+                        "area_code_code": "Oud Metha",
+                        "area_code_name": "Oud Metha",
+                        "sales_person_ids": [],
+                        "sales_executive_ids": [],
+                        "sales_supervisor_ids": [],
+                        "delivery_person_ids": [],
+                        "is_contact": false
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

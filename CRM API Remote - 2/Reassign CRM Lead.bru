@@ -1,0 +1,26 @@
+meta {
+  name: Reassign CRM Lead
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://172.105.55.55:8074/web/crm_lead_reassign
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "lead_id": 291
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,700 @@
+meta {
+  name: Accept CRM Lead
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://172.105.55.55:8074/web/crm_lead_accept
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "lead_id": 306
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Accept CRM Lead
+  
+  request: {
+    url: http://172.105.55.55:8074/web/crm_lead_accept
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "lead_id": 306
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 6535
+      Set-Cookie: session_id=e154b3dd36f0b6ba576b023a84c640dcbdc19664; Expires=Sun, 20-Oct-2024 10:54:26 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 22 Jul 2024 10:54:26 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "accepted_crm_details": {
+                        "id": 306,
+                        "number": "00193",
+                        "lead_name_id": 15,
+                        "lead_name_name": "Freight Forwarding",
+                        "user_id": 133,
+                        "user_name": "Mariella Boongaling",
+                        "expected_revenue": 555555,
+                        "probability": 99.91,
+                        "contact_type": "exist_contact",
+                        "crm_contact_name": null,
+                        "partner_id": 1250,
+                        "partner_name": "Nesto Hypermarket",
+                        "street": null,
+                        "street2": null,
+                        "city": null,
+                        "state_id": null,
+                        "state_name": null,
+                        "zip": null,
+                        "country_id": null,
+                        "country_name": null,
+                        "email_from": "nesto@info.com",
+                        "phone": "34657",
+                        "mobile": null,
+                        "team_id": 1,
+                        "team_name": "Sales",
+                        "sales_coordinator_id": 331,
+                        "sales_coordinator_name": "Mariella Boongaling",
+                        "sales_manager_id": 318,
+                        "sales_manager_name": "Bandula Ratnayake",
+                        "pricing_emp_ids": [
+                            {
+                                "id": 312,
+                                "name": "Ahamed Mansoor"
+                            },
+                            {
+                                "id": 326,
+                                "name": "Laarnie Alviola"
+                            },
+                            {
+                                "id": 330,
+                                "name": "Lovely Merl Garcia"
+                            },
+                            {
+                                "id": 349,
+                                "name": "Synergia"
+                            }
+                        ],
+                        "description": "notes",
+                        "enquiry_date": "2024-07-22 00:00:00",
+                        "date_deadline": "2024-07-22",
+                        "segment_id": 2,
+                        "segment_name": "IMPORT",
+                        "sub_segment_id": 1,
+                        "sub_segment_name": "SEA IMPORT",
+                        "industry_type_id": 1,
+                        "industry_type_name": "Electronics",
+                        "service_type_id": null,
+                        "service_type_name": null,
+                        "priority": "2",
+                        "tag_ids": null,
+                        "source_id": null,
+                        "source_name": null,
+                        "referred_from": null,
+                        "referred_from_name": null,
+                        "account_manager_id": 328,
+                        "account_manager_name": "Lance Dsouza",
+                        "cargo_type_id": 1,
+                        "cargo_type_name": "General",
+                        "acc_mg_terr_id": 1,
+                        "acc_mg_terr_name": "Barsha",
+                        "acc_mg_deadline_date": "2024-07-23 10:04:51.523698",
+                        "manager_id": 318,
+                        "manager_name": "Bandula Ratnayake",
+                        "contact_name": "Nesto Hypermarket",
+                        "title": null,
+                        "function": null,
+                        "reassign_button": false,
+                        "stage_id": 16,
+                        "stage_name": "Contact",
+                        "syn_task_mgmt_ids": [
+                            {
+                                "id": 1487,
+                                "name": "T20240722-1140",
+                                "task": "Identify TCS ( Total customer spend)",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": "2024-07-22",
+                                "create_date": "2024-07-22 10:04:51.451362",
+                                "is_mandatory": true,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 3,
+                                "status_name": "Completed"
+                            },
+                            {
+                                "id": 1488,
+                                "name": "T20240722-1141",
+                                "task": "Get the Customer KYC info",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": "2024-07-22",
+                                "create_date": "2024-07-22 10:04:51.451362",
+                                "is_mandatory": true,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 3,
+                                "status_name": "Completed"
+                            },
+                            {
+                                "id": 1489,
+                                "name": "T20240722-1142",
+                                "task": "Account Manager have to accept the Prospect",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": "2024-07-23",
+                                "completion_date": "2024-07-22",
+                                "create_date": "2024-07-22 10:04:51.451362",
+                                "is_mandatory": true,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 3,
+                                "status_name": "Completed"
+                            },
+                            {
+                                "id": 1490,
+                                "name": "T20240722-1143",
+                                "task": "Shipment Details",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": null,
+                                "create_date": "2024-07-22 10:54:26.495989",
+                                "is_mandatory": true,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 1,
+                                "status_name": "Assigned"
+                            },
+                            {
+                                "id": 1491,
+                                "name": "T20240722-1144",
+                                "task": "Mode of Transport",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": null,
+                                "create_date": "2024-07-22 10:54:26.495989",
+                                "is_mandatory": null,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 1,
+                                "status_name": "Assigned"
+                            },
+                            {
+                                "id": 1492,
+                                "name": "T20240722-1145",
+                                "task": "Trade license of the customer",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": null,
+                                "create_date": "2024-07-22 10:54:26.495989",
+                                "is_mandatory": null,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 1,
+                                "status_name": "Assigned"
+                            },
+                            {
+                                "id": 1493,
+                                "name": "T20240722-1146",
+                                "task": "Identify the opportunity",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": null,
+                                "create_date": "2024-07-22 10:54:26.495989",
+                                "is_mandatory": true,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 1,
+                                "status_name": "Assigned"
+                            },
+                            {
+                                "id": 1494,
+                                "name": "T20240722-1147",
+                                "task": "Visit the Customers Office before any activity is starting",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": null,
+                                "create_date": "2024-07-22 10:54:26.495989",
+                                "is_mandatory": true,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 1,
+                                "status_name": "Assigned"
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Accept CRM Lead
+  
+  request: {
+    url: http://172.105.55.55:8074/web/crm_lead_accept
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "lead_id": 306
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 6535
+      Set-Cookie: session_id=e154b3dd36f0b6ba576b023a84c640dcbdc19664; Expires=Sun, 20-Oct-2024 10:54:26 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 22 Jul 2024 10:54:26 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "accepted_crm_details": {
+                        "id": 306,
+                        "number": "00193",
+                        "lead_name_id": 15,
+                        "lead_name_name": "Freight Forwarding",
+                        "user_id": 133,
+                        "user_name": "Mariella Boongaling",
+                        "expected_revenue": 555555,
+                        "probability": 99.91,
+                        "contact_type": "exist_contact",
+                        "crm_contact_name": null,
+                        "partner_id": 1250,
+                        "partner_name": "Nesto Hypermarket",
+                        "street": null,
+                        "street2": null,
+                        "city": null,
+                        "state_id": null,
+                        "state_name": null,
+                        "zip": null,
+                        "country_id": null,
+                        "country_name": null,
+                        "email_from": "nesto@info.com",
+                        "phone": "34657",
+                        "mobile": null,
+                        "team_id": 1,
+                        "team_name": "Sales",
+                        "sales_coordinator_id": 331,
+                        "sales_coordinator_name": "Mariella Boongaling",
+                        "sales_manager_id": 318,
+                        "sales_manager_name": "Bandula Ratnayake",
+                        "pricing_emp_ids": [
+                            {
+                                "id": 312,
+                                "name": "Ahamed Mansoor"
+                            },
+                            {
+                                "id": 326,
+                                "name": "Laarnie Alviola"
+                            },
+                            {
+                                "id": 330,
+                                "name": "Lovely Merl Garcia"
+                            },
+                            {
+                                "id": 349,
+                                "name": "Synergia"
+                            }
+                        ],
+                        "description": "notes",
+                        "enquiry_date": "2024-07-22 00:00:00",
+                        "date_deadline": "2024-07-22",
+                        "segment_id": 2,
+                        "segment_name": "IMPORT",
+                        "sub_segment_id": 1,
+                        "sub_segment_name": "SEA IMPORT",
+                        "industry_type_id": 1,
+                        "industry_type_name": "Electronics",
+                        "service_type_id": null,
+                        "service_type_name": null,
+                        "priority": "2",
+                        "tag_ids": null,
+                        "source_id": null,
+                        "source_name": null,
+                        "referred_from": null,
+                        "referred_from_name": null,
+                        "account_manager_id": 328,
+                        "account_manager_name": "Lance Dsouza",
+                        "cargo_type_id": 1,
+                        "cargo_type_name": "General",
+                        "acc_mg_terr_id": 1,
+                        "acc_mg_terr_name": "Barsha",
+                        "acc_mg_deadline_date": "2024-07-23 10:04:51.523698",
+                        "manager_id": 318,
+                        "manager_name": "Bandula Ratnayake",
+                        "contact_name": "Nesto Hypermarket",
+                        "title": null,
+                        "function": null,
+                        "reassign_button": false,
+                        "stage_id": 16,
+                        "stage_name": "Contact",
+                        "syn_task_mgmt_ids": [
+                            {
+                                "id": 1487,
+                                "name": "T20240722-1140",
+                                "task": "Identify TCS ( Total customer spend)",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": "2024-07-22",
+                                "create_date": "2024-07-22 10:04:51.451362",
+                                "is_mandatory": true,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 3,
+                                "status_name": "Completed"
+                            },
+                            {
+                                "id": 1488,
+                                "name": "T20240722-1141",
+                                "task": "Get the Customer KYC info",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": "2024-07-22",
+                                "create_date": "2024-07-22 10:04:51.451362",
+                                "is_mandatory": true,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 3,
+                                "status_name": "Completed"
+                            },
+                            {
+                                "id": 1489,
+                                "name": "T20240722-1142",
+                                "task": "Account Manager have to accept the Prospect",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": "2024-07-23",
+                                "completion_date": "2024-07-22",
+                                "create_date": "2024-07-22 10:04:51.451362",
+                                "is_mandatory": true,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 3,
+                                "status_name": "Completed"
+                            },
+                            {
+                                "id": 1490,
+                                "name": "T20240722-1143",
+                                "task": "Shipment Details",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": null,
+                                "create_date": "2024-07-22 10:54:26.495989",
+                                "is_mandatory": true,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 1,
+                                "status_name": "Assigned"
+                            },
+                            {
+                                "id": 1491,
+                                "name": "T20240722-1144",
+                                "task": "Mode of Transport",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": null,
+                                "create_date": "2024-07-22 10:54:26.495989",
+                                "is_mandatory": null,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 1,
+                                "status_name": "Assigned"
+                            },
+                            {
+                                "id": 1492,
+                                "name": "T20240722-1145",
+                                "task": "Trade license of the customer",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": null,
+                                "create_date": "2024-07-22 10:54:26.495989",
+                                "is_mandatory": null,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 1,
+                                "status_name": "Assigned"
+                            },
+                            {
+                                "id": 1493,
+                                "name": "T20240722-1146",
+                                "task": "Identify the opportunity",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": null,
+                                "create_date": "2024-07-22 10:54:26.495989",
+                                "is_mandatory": true,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 1,
+                                "status_name": "Assigned"
+                            },
+                            {
+                                "id": 1494,
+                                "name": "T20240722-1147",
+                                "task": "Visit the Customers Office before any activity is starting",
+                                "type": "task",
+                                "partner_id": 1250,
+                                "partner_name": "Nesto Hypermarket",
+                                "assigned_id": 328,
+                                "assigned_name": "Lance Dsouza",
+                                "assigned_by": 331,
+                                "assigned_by_name": "Mariella Boongaling",
+                                "date_assigned": "2024-07-22",
+                                "deadline": null,
+                                "completion_date": null,
+                                "create_date": "2024-07-22 10:54:26.495989",
+                                "is_mandatory": true,
+                                "priority": "3",
+                                "created_crm_lead_id": 306,
+                                "parent_id": null,
+                                "parent_name": null,
+                                "reason": null,
+                                "description": null,
+                                "status_id": 1,
+                                "status_name": "Assigned"
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

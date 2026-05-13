@@ -1,0 +1,206 @@
+meta {
+  name: Start Dispatch
+  type: http
+  seq: 10
+}
+
+post {
+  url: localhost:8070/web/get_dispatch_start
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "dispatch_id": 48,
+              "journey_start_datetime": "2024-07-19 10:10:10",
+              "journey_start_latitude": 44.5454,
+              "journey_start_longitude": 25.54545
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Start Dispatch
+  
+  request: {
+    url: localhost:8070/web/get_dispatch_start
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "dispatch_id": 48,
+                  "journey_start_datetime": "2024-07-19 10:10:10",
+                  "journey_start_latitude": 44.5454,
+                  "journey_start_longitude": 25.54545
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 889
+      Set-Cookie: session_id=b9a3f88200c0512bffbe3e6788f75b7b9338c6b4; Expires=Wed, 08-Jan-2025 14:23:43 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Thu, 10 Oct 2024 14:23:43 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "accept_dispatch_start": {
+                        "id": 48,
+                        "name": "DM2024100010",
+                        "date": "2024-10-10 08:40:11",
+                        "work_location": 934,
+                        "work_location_name": "Work Location/ Branch 1",
+                        "driver_id": 838,
+                        "driver_id_name": "Arslan Ali Irsahd Ahmad",
+                        "del_number": null,
+                        "area_code_id": null,
+                        "area_code_id_name": null,
+                        "vehicle_route_id_id": 1,
+                        "vehicle_route_id_name": "Vehicle 1",
+                        "employee_id": 261,
+                        "employee_id_name": "Synergia",
+                        "company_id": 1,
+                        "company_id_name": "Zneem Group of companies",
+                        "state": "accepted",
+                        "latitude": 0,
+                        "longitude": 0,
+                        "journey_start_latitude": 44.5454,
+                        "journey_start_longitude": 25.545450000000002,
+                        "journey_start_datetime": "2024-07-19 10:10:10",
+                        "delivery_type_line_ids": [
+                            {
+                                "id": 106,
+                                "type_id": 2,
+                                "type_name": "Invoice Delivery",
+                                "count": 1,
+                                "total": 26500
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Start Dispatch
+  
+  request: {
+    url: localhost:8070/web/get_dispatch_start
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "dispatch_id": 48,
+                  "journey_start_datetime": "2024-07-19 10:10:10",
+                  "journey_start_latitude": 44.5454,
+                  "journey_start_longitude": 25.54545
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 889
+      Set-Cookie: session_id=b9a3f88200c0512bffbe3e6788f75b7b9338c6b4; Expires=Wed, 08-Jan-2025 14:23:43 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Thu, 10 Oct 2024 14:23:43 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "accept_dispatch_start": {
+                        "id": 48,
+                        "name": "DM2024100010",
+                        "date": "2024-10-10 08:40:11",
+                        "work_location": 934,
+                        "work_location_name": "Work Location/ Branch 1",
+                        "driver_id": 838,
+                        "driver_id_name": "Arslan Ali Irsahd Ahmad",
+                        "del_number": null,
+                        "area_code_id": null,
+                        "area_code_id_name": null,
+                        "vehicle_route_id_id": 1,
+                        "vehicle_route_id_name": "Vehicle 1",
+                        "employee_id": 261,
+                        "employee_id_name": "Synergia",
+                        "company_id": 1,
+                        "company_id_name": "Zneem Group of companies",
+                        "state": "accepted",
+                        "latitude": 0,
+                        "longitude": 0,
+                        "journey_start_latitude": 44.5454,
+                        "journey_start_longitude": 25.545450000000002,
+                        "journey_start_datetime": "2024-07-19 10:10:10",
+                        "delivery_type_line_ids": [
+                            {
+                                "id": 106,
+                                "type_id": 2,
+                                "type_name": "Invoice Delivery",
+                                "count": 1,
+                                "total": 26500
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

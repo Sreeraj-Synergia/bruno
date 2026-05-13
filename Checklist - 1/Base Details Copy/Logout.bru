@@ -1,0 +1,19 @@
+meta {
+  name: Logout
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://wms.syntrack.app/web/session/mobile_logout
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{}}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,151 @@
+meta {
+  name: Advance Request Creation
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:8070/web/request_advance_salary
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "employee_id": 45,
+              "advance_payment_type": "fixed",
+              "advance_amount": 5500,
+              "duration": 3,
+              "start_installment_date": "2026-03-01",
+              "reason": "Sample Advance Payment"// Not Mandatory
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Advance Request Creation
+  
+  request: {
+    url: http://localhost:8070/web/request_advance_salary
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "employee_id": 45,
+                  "advance_payment_type": "fixed",
+                  "advance_amount": 5500,
+                  "duration": 3,
+                  "start_installment_date": "2026-03-01",
+                  "reason": "Sample Advance Payment"// Not Mandatory
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 05 Feb 2026 11:46:09 GMT
+      Content-Length: 1817
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "advance_request_details": {
+                        "id": 10,
+                        "name": "SAR 0009",
+                        "adv_request_type": "salary_adv",
+                        "advance_payment_type": "fixed",
+                        "employee_id": 45,
+                        "employee_name": "Saravanan",
+                        "date": "2026-02-05",
+                        "reason": "Sample Advance Payment",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "advance": 5500,
+                        "department_id": 7,
+                        "department_name": "Administration",
+                        "barcode": null,
+                        "job_id": 20,
+                        "job_name": "Operation Manager",
+                        "work_address_id": 1,
+                        "work_address_name": "Synergia Softwares IT infrastructure LLC",
+                        "work_location_id": 1,
+                        "work_location_name": "Dubai",
+                        "debit_id": 202,
+                        "debit_name": "Salary Advance",
+                        "credit_id": null,
+                        "credit_name": null,
+                        "employee_contract_id": null,
+                        "employee_contract_name": null,
+                        "wage": null,
+                        "adv_pay_duration": 3,
+                        "installment_amount": 1833.3333333333333,
+                        "start_installment_date": "2026-03-01",
+                        "last_installment_date": null,
+                        "remaining_amount": 5500,
+                        "paid_amount": null,
+                        "adv_request_payment_ids": null,
+                        "total_comp_currency_amount": 5500,
+                        "payment_voucher_count": null,
+                        "receipt_voucher_count": null,
+                        "payment_voucher_ids": null,
+                        "employee_violation_id": null,
+                        "employee_violation_name": null,
+                        "violation_amount": null,
+                        "signature_approve": null,
+                        "approved_by": null,
+                        "approved_name": null,
+                        "approved_on": null,
+                        "department_signature_approve": null,
+                        "department_approved_on": null,
+                        "company_currency_id": 128,
+                        "company_currency_name": "AED",
+                        "pre_payment_ids": null,
+                        "additional_curr": null,
+                        "deduction_type": "deduct",
+                        "deduction_config_id": null,
+                        "deduction_config_name": null,
+                        "max_allowed_adv": 5500,
+                        "is_emp_adv_self_service": null,
+                        "state": "submit"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

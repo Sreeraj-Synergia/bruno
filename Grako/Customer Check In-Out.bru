@@ -1,0 +1,332 @@
+meta {
+  name: Customer Check In/Out
+  type: http
+  seq: 6
+}
+
+post {
+  url: 192.168.1.119:8071/web/update_customer_checkins
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "timestamp": "2025-06-26 17:22:20",
+              "lat": 25.2417888,
+              "lng": 55.3095653,
+              "customer_id": 17491,
+              "type": "checkout",
+              "emp_checkin_id": 321
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Customer Check In Out
+  
+  request: {
+    url: 192.168.1.119:8071/web/update_customer_checkins
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "timestamp": "2025-06-24 16:22:20",
+                  "lat": 25.2417888,
+                  "lng": 55.3095653,
+                  "customer_id": 23994,
+                  "type": "checkout",
+                  "emp_checkin_id": 25
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 24 Jun 2025 12:54:27 GMT
+      Content-Length: 156
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "message": "Customer Checkin status updated!"
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Customer Check In/Out
+  
+  request: {
+    url: 192.168.1.119:8071/web/update_customer_checkins
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "timestamp": "2025-06-26 17:22:20",
+                  "lat": 25.2417888,
+                  "lng": 55.3095653,
+                  "customer_id": 17491,
+                  "type": "checkout",
+                  "emp_checkin_id": 321
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 26 Jun 2025 10:43:31 GMT
+      Content-Length: 1023
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "message": "Customer Checkin status updated!",
+                    "customer_details_line": {
+                        "id": 544,
+                        "emp_checkin_id": 321,
+                        "sequence": 112,
+                        "from_partner_id": 1,
+                        "partner_id": 17491,
+                        "customer_check_in_id": 30,
+                        "checkin_datetime": "2025-06-26 17:22:20",
+                        "checkin_latitude": 25.2417888,
+                        "checkin_longitude": 55.3095653,
+                        "checkout_datetime": "2025-06-26 17:22:20",
+                        "checkout_latitude": 25.2417888,
+                        "checkout_longitude": 55.3095653,
+                        "check_in_status": "checkin",
+                        "cancel_reason_id": 2,
+                        "cancel_reason_name": "Shop is closed",
+                        "planned_visit_id": 2676,
+                        "line_number": 1,
+                        "is_start_point": true,
+                        "is_end_point": null,
+                        "trip_number": "Start Trip",
+                        "to_partner_id": 17491,
+                        "to_partner_name": "Al Nawaes",
+                        "from_partner_name": "Synergia Softwares IT infrastructure LLC",
+                        "distance": "9.94 Km",
+                        "start_time": "08:00:46",
+                        "time_to_reach": "9 Minutes 56 Seconds",
+                        "eta": "08:10:42",
+                        "visit_duration": "20 Minutes",
+                        "visit_day": "Thursday"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Customer Check In Out
+  
+  request: {
+    url: 192.168.1.119:8071/web/update_customer_checkins
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "timestamp": "2025-06-24 16:22:20",
+                  "lat": 25.2417888,
+                  "lng": 55.3095653,
+                  "customer_id": 23994,
+                  "type": "checkout",
+                  "emp_checkin_id": 25
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 24 Jun 2025 12:54:27 GMT
+      Content-Length: 156
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "message": "Customer Checkin status updated!"
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Customer Check In/Out
+  
+  request: {
+    url: 192.168.1.119:8071/web/update_customer_checkins
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "timestamp": "2025-06-26 17:22:20",
+                  "lat": 25.2417888,
+                  "lng": 55.3095653,
+                  "customer_id": 17491,
+                  "type": "checkout",
+                  "emp_checkin_id": 321
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 26 Jun 2025 10:43:31 GMT
+      Content-Length: 1023
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "message": "Customer Checkin status updated!",
+                    "customer_details_line": {
+                        "id": 544,
+                        "emp_checkin_id": 321,
+                        "sequence": 112,
+                        "from_partner_id": 1,
+                        "partner_id": 17491,
+                        "customer_check_in_id": 30,
+                        "checkin_datetime": "2025-06-26 17:22:20",
+                        "checkin_latitude": 25.2417888,
+                        "checkin_longitude": 55.3095653,
+                        "checkout_datetime": "2025-06-26 17:22:20",
+                        "checkout_latitude": 25.2417888,
+                        "checkout_longitude": 55.3095653,
+                        "check_in_status": "checkin",
+                        "cancel_reason_id": 2,
+                        "cancel_reason_name": "Shop is closed",
+                        "planned_visit_id": 2676,
+                        "line_number": 1,
+                        "is_start_point": true,
+                        "is_end_point": null,
+                        "trip_number": "Start Trip",
+                        "to_partner_id": 17491,
+                        "to_partner_name": "Al Nawaes",
+                        "from_partner_name": "Synergia Softwares IT infrastructure LLC",
+                        "distance": "9.94 Km",
+                        "start_time": "08:00:46",
+                        "time_to_reach": "9 Minutes 56 Seconds",
+                        "eta": "08:10:42",
+                        "visit_duration": "20 Minutes",
+                        "visit_day": "Thursday"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

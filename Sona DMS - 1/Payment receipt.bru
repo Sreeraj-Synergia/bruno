@@ -1,0 +1,86 @@
+meta {
+  name: Payment receipt
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://sonasgroup.dyndns.org:3015/SynTrack/saveACMPR
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: GravitySoftnet_YV5jbMLoBzPbqSDJ4AhB1xnN2xmeB74f
+}
+
+body:json {
+  {
+      "v_VocBr": "01",
+      "v_Typ": "CASH",
+      "v_ChqNo": "566776",
+      "v_ChqDate": "2025-08-04",
+      "v_NarrH": "Payment received for invoice INV1001",
+      "v_UserId": "001",
+      "v_AcCd": "D/0214",
+      "v_RefNo": "90009",
+      "v_Amt": 2000.00,
+      "v_NarrD": "Settlement against invoice INV1001",
+      "v_CashAc": "",
+      "HRTransNo": "5",
+      "AllowcationData": [
+          {
+              "VocNo": "GIV0000913",
+              "ValueDt": "2024-12-09T00:00:00",
+              "Br": "01",
+              "BrName": "RAHA\r\n",
+              "TrnTyp": "AC\/SA",
+              "RefNo": "INV-AST-2024-4734",
+              "RefDt": "2024-12-09T00:00:00",
+              "DueDt": "2025-01-08T00:00:00",
+              "AcCd": "D\/0214",
+              "AcName": "",
+              "DrCr": "Dr",
+              "XAmtFc": 21420.0000,
+              "XOsAmtFc": 20639.6500,
+              "ExRate": 1.0000,
+              "AmtLc": 21420.0000,
+              "OsAmtLc": 20639.6500,
+              "Allocate": "",
+              "Narr": "",
+              "RowId": 10701287,
+              "VocTyp": "CI027",
+              "AlloAmtFc": 1000.0000,
+              "AlloAmtLc": 1000.0000
+          },
+          {
+              "VocNo": "GIV0000913",
+              "ValueDt": "2024-12-09T00:00:00",
+              "Br": "01",
+              "BrName": "RAHA\r\n",
+              "TrnTyp": "AC\/SA",
+              "RefNo": "INV-AST-2024-4734",
+              "RefDt": "2024-12-09T00:00:00",
+              "DueDt": "2025-01-08T00:00:00",
+              "AcCd": "D\/0214",
+              "AcName": "",
+              "DrCr": "Dr",
+              "XAmtFc": 21420.0000,
+              "XOsAmtFc": 20639.6500,
+              "ExRate": 1.0000,
+              "AmtLc": 21420.0000,
+              "OsAmtLc": 20639.6500,
+              "Allocate": "",
+              "Narr": "",
+              "RowId": 10701287,
+              "VocTyp": "CI027",
+              "AlloAmtFc": 10000.0000,
+              "AlloAmtLc": 10000.0000
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

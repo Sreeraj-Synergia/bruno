@@ -1,0 +1,28 @@
+meta {
+  name: Dashboard Details Merchandising
+  type: http
+  seq: 54
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_merchandising_dashboard_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "day_plan_id": 78,
+              "direction_parameter": {
+                  "params": {}
+              }
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Customer Location Update
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8069/web/update_partner_location
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "partner_id": 16392,
+              "latitude": 5.5454,
+              "longitude": 78.4845454
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,125 @@
+meta {
+  name: Get CRM Details
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8070/web/get_lead_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Get CRM Details
+  
+  request: {
+    url: http://localhost:8070/web/get_lead_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 31 Dec 2025 07:54:01 GMT
+      Content-Length: 2689
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "total_lead_count": 1,
+                    "loaded_lead_count": 1,
+                    "lead_details": [
+                        {
+                            "id": 1,
+                            "number": "LD0001",
+                            "name": "Burj Khalifa",
+                            "expected_revenue": 1000000,
+                            "probability": 70,
+                            "customer_type": "new",
+                            "contact_type": "new",
+                            "contact_id": 12,
+                            "contact_name": "Mohamed Ali Alabbar",
+                            "partner_id": 11,
+                            "partner_name": "Emmar Group",
+                            "title_id": 3,
+                            "title_name": "Mister",
+                            "function": "Founder",
+                            "phone": "800 36 227",
+                            "mobile": "800 36 227",
+                            "street": "Dubai Hills Estate",
+                            "street2": "Business Park Building 1",
+                            "city": "Dubai Hills",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "zip": "515455",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "website": "https://www.emaar.com/",
+                            "tag_ids": null,
+                            "referred_by": null,
+                            "referred_by_name": null,
+                            "assigning_employee_id": 1,
+                            "assigning_employee_name": "Administrator",
+                            "assigning_date": "2025-12-31 06:57:16",
+                            "assigned_employee_id": 2,
+                            "assigned_employee_name": "Sunu Sahan",
+                            "status": "notified",
+                            "date_deadline": null,
+                            "priority": "0",
+                            "reason": null,
+                            "description": "<p data-last-history-steps=\",3527468645971941,943540046207006,404826542015052,2466566962710391,3013889731755498,336272029581057,931252402363711,4336282649025065,4637347200695,2622816373435472,262621702120001,2478735682263549,3221854050066738,3386986749981530,3212624795999089,669615562569187,1894654045419494,3943978714174222,3535874150572609,1766458182651132,3444116889228926,2651385956196784,2465348382723407,1185924226156978,197189963272429,3614676140663024\">**ERP System for Room Service at Burj Khalifa Hotel**</p><p>The Burj Khalifa Hotel's Room Service ERP System is a cutting-edge solution designed to enhance guest experience and streamline operations. This integrated platform facilitates real-time order management, allowing staff to efficiently process requests from guests in the iconic hotel. With features such as menu customization, inventory tracking, and automated billing, the system ensures timely delivery of high-quality service. Additionally, it provides valuable insights through data analytics, enabling the hotel to optimize menu offerings and improve customer satisfaction. By leveraging this ERP system, the Burj Khalifa Hotel aims to set a new standard in luxury hospitality, ensuring that every guest's needs are met with precision and care.</p>",
+                            "user_id": 2,
+                            "user_name": "Administrator",
+                            "campaign_id": null,
+                            "campaign_name": null,
+                            "medium_id": null,
+                            "medium_name": null,
+                            "source_id": null,
+                            "source_name": null,
+                            "team_id": 1,
+                            "team_name": "Sales",
+                            "day_open": null,
+                            "day_close": null,
+                            "stage_id": 2,
+                            "stage_name": "Qualified"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

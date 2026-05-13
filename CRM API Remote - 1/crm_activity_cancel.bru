@@ -1,0 +1,26 @@
+meta {
+  name: crm_activity_cancel
+  type: http
+  seq: 17
+}
+
+post {
+  url: http://172.105.55.55:8074/web/crm_activity_cancel
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "activity_id": 140,
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

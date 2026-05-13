@@ -1,0 +1,96 @@
+meta {
+  name: Check In/Out Employee
+  type: http
+  seq: 4
+}
+
+post {
+  url: localhost:8070/web/update_employee_checkins
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "employee_id": 850,
+              "timestamp": "2024-10-22 16:56:58",
+              "type": "checkout"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  | **Params** | **Datatype** |
+  | --- | --- |
+  | login | String |
+  | password | String |
+  | device_name | String |
+  | imei_no | String |
+  
+  Login to Mobile Application
+}
+
+example {
+  name: Check In/Out Copy
+  
+  request: {
+    url: localhost:8070/web/update_employee_checkins
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "employee_id": 850,
+                  "timestamp": "2024-10-22 17:03:40",
+                  "type": "checkout"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 182
+      Set-Cookie: session_id=2dde9744c62ac1aa63cb1d583d122e432af84a56; Expires=Mon, 20-Jan-2025 10:40:19 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Tue, 22 Oct 2024 10:40:19 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "checkin_out_update": {
+                        "message": "Employee Checkin/Checkout updated!"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

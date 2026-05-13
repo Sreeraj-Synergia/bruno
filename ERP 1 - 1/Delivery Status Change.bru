@@ -1,0 +1,563 @@
+meta {
+  name: Delivery Status Change
+  type: http
+  seq: 30
+}
+
+post {
+  url: 192.168.1.119:8070/web/delivery_change_status
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "act_del_time": "2023-06-21 09:56:17",
+              "delivery_id": 312,
+              "receiver_name": "Sunu",
+              "receiver_no": "2154612126",
+              "recv_id_type": "",
+              "recv_sign": "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\ntWTJkjh8+HCsWLEiisXioGb6+/tjzZo10dTU5\nI/okhttp.OkHttpClient: OVhQFXcwwFExNBeHvapT30qVq1a5eVhwCcSHMCH\nzJ07NzZu3FhVeIwfPz7Wrl0bCxcuTNwMGMkEB/D/VCqVmDt3bmzdurWquYkTJ8ZDDz0U3/3ud5M2\nA0YqwQF8rEqlEjNnzoxXX321qrnW1tZYv3698ACOcdMo8LFKpVL84Q9/iO7u7pg+ffqg5w4cOBDX\nXHNNtLS0xJNPPpm4ITBSCA7gE02ePDl27twZnZ2dMXXq1EHPVSqVuPbaa+OUU04RHjDGuaQCVK1c\nLsfs2bPjzTffrGqutbU1HnzwwbjmmmuSNgPqleAAhqy7uzsuu+yyqr+50traGqtWrfJUC4whLqkA\nQ9be3h7d3d3R2dkZ7e3tg547cOBAXH/99dHS0hJr167NWxCoG044gGFTLpfjO9/5TvzlL3+pam78\n+PFx3333xU033ZS0GVBrTjiAYdPR0RFvvPFGdHZ2xvnnnz/ouffffz9uvvnmmDBhQtx3332JGwK1\n4oQDSFMul+N73/tedHV1VTXX1NQU8+fPj4ceeihpM+BEc8IBpOno6IhyuRydnZ3x5S9/OQqFwqDm\nent74+GHH47Gxsa46aabolKpJG8KZHPCAZww5XI5brjhhti5c2dV32ppaGiIr33ta7Fx48YolUqJ\nGwJZnHAAJ0xHR0e88sorsWfPnvjmN7856Ln+/v7Ytm1btLS0xPTp06NcLiduCWRwwgHUTKVSifnz\n58fmzZurOvGIiDj77LPj/vvvrypcgNpxwgHUTKlUimeffTYOHDgQixcvjmKxOOjZPXv2xKxZs6Kt\nrS2eeOKJxC2B4eCEA6grd9xxR/zsZz+Lnp6equZKpVJs2LAhvv3tbydtBhwPwQHUpXvvvTdWr14d\n77333qBnSqVS7N27142lUIdcUgHq0p133hkHDx6MRx55JD7/+c8PaqZSqcSuXbuSNwOGQnAAdW3h\nwoWxb9++ePHFF2PatGm1XgcYIpdUgBGlu7s7Fi1aFNu3b4/+/v4P/bOJEyd6SRjUKSccwIjS3t4e\nv/3tb+Ott96KefPmxZQpU+Izn/lMfOtb34qXXnqp1usBH8MJBwCQzgkHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJDu3/pyMJVRt7STAAAAAElFTkSuQmCC\n",
+              "signature": "iVBORw0KGgoAAAANSUhEUgAAAhwAAAEsCAYAAACIbGpMAAAAAXNSR0IArs4c6QAAAARzQklUCAgI\nCHwIZIgAAA+aSURBVHic7d1/qNX1/cDx17nn3q5LN8+95VpdmrcsKdquG5TQLOgPN7ZJbeVshdtM\ntIUzKXBFUSRlKc7NiZVQQUZbWGQ0h3NiUf0xC9kK77ltjlZ63UaQgTvmSu/u9d79se9k8S2653pf\nnnPvfTz+iuJ1eCFFT96fX4WBgYGBAABI1FDrBQCA0U9wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5w\nAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADp\nBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5w\nAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADp\nBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5w\nAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADp\nBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpGmu9ACNHpVI59tcHDx6MyZMn13AbAEYS\nwVHnurq64vvf/368/vrrcfTo0WN/v6GhIU466aQoFotx0kknxac //elobGyMxsbGaGpqikKhEMVi\nMfr6+o7N9fT0RH9/f/T09MTRo0fjgw8+iN7e3ujv74+BgYHo7++PiIiBgYEh7VooFKJQKERzc3NM\nmDAhZs2aFZdddlnMmzfv+P8gABjRCgND/b8L6W688cZ48MEHa73GsGhoaIjTTjstLr/88li1alWU\nSqVarwTACSQ46tRoio2PUiwWY+rUqXHLLbfE/Pnza70OAMkERx3q6uqKjo6OWq9xwhQKhTjzzDPj\nxz/+cSxZsqTW6wCQQHDUoY6Ojujq6qr1GjXR0NAQF154YTz11FPR3t5e63UAGCaCow41NjZ+6AbR\nsaq5uTlmzJgRzzzzjHs+AEY47+GoQ2LjP3p6euKFF16IlpaWmDJlSmzZsqXWKwEwRIKDEWHPnj1x\n+eWXR6lUiuXLl9d6HQCq5JJKHXJJ5ZONGzcu7rzzzli8eLHLLQAjgOCoQ2P5ptGhmDJlSixatCgW\nLFggPgDqlOCoQ2PtsdjhNHXq1Jg1a1asWbOm1qsA8D8ER50a7S/+OhHa2tpi0aJFMXfuXI/YAtSY\n4Khj9R4d//2ey8knnxynn356nHfeeXHOOedEW1tbTJo0Kdra2iIiYuLEiRHxnw++vf3229Hd3R0H\nDhyIXbt2xTvvvBOHDh2K/fv3x+HDh1PuXSkUCtHW1hZLly6N6667zmUXgBoQHHWuq6sr5s6dG3/8\n4x+PfVwtW0NDQxSLxWhubo5TTz01vvCFL8SFF14Y8+bNO2EnBU8++WT87ne/ix07dsRf//rXOHTo\nUPT29g7Lb7e1tcXVV1/tsgvACSQ4Rqju7u6IiPjb3/4WBw8ejP3798d7770X//znP6NSqcQHH3wQ\nR44ciUKhEOPGjYuGhoZobm6Ok08+OcaPHx+TJk2Kc889N84888wRdbnhpZdeis2bN8fWrVvjjTfe\nOK7f+u8H5ZYvXx4LFiwYpg0B+CiCgxHt4YcfjlWrVsXevXvjeP5VLhQK8aUvfSl+9KMfxcKFC4dx\nQwAiBAejRKVSicceeyzWr18fb7311nFdfmpsbIxLLrkk7rnnnrj00kuHcUuAsUtwMCrde++9sXHj\nI/okhttp.OkHttpClient: \nxvjTn/50XL/T1NQUs2fPjttvv92jygDHQXAw6v30pz+NtWvXxttvv31cl10+97nPxVVXXVXXTw4B\n1CvBwZhRqVTigQceiHXr1sW777475N8pFApx1llnxWOPPeaSC8AgCQ7GpEqlErfeemts2rQp/vGP\nfwz5d4rFYsyZMydWrlw5op72ATjRBAdjXrlcjhUrVsQzzzwTfX19Q/6d008/PW6 //fZYsmTJMG4H\n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\n",
+              "status": "validate"
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Delivery Status Mark As To Do
+  
+  request: {
+    url: 192.168.1.119:8070/web/delivery_change_status
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "act_del_time": "2023-06-21 09:56:17",
+                  "delivery_id": 307,
+                  "receiver_name": "",
+                  "receiver_no": "",
+                  "recv_id_type": "",
+                  "recv_sign": "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\ntWTJkjh8+HCsWLEiisXioGb6+/tjzZo10dTU5\nI/okhttp.OkHttpClient: OVhQFXcwwFExNBeHvapT30qVq1a5eVhwCcSHMCH\nzJ07NzZu3FhVeIwfPz7Wrl0bCxcuTNwMGMkEB/D/VCqVmDt3bmzdurWquYkTJ8ZDDz0U3/3ud5M2\nA0YqwQF8rEqlEjNnzoxXX321qrnW1tZYv3698ACOcdMo8LFKpVL84Q9/iO7u7pg+ffqg5w4cOBDX\nXHNNtLS0xJNPPpm4ITBSCA7gE02ePDl27twZnZ2dMXXq1EHPVSqVuPbaa+OUU04RHjDGuaQCVK1c\nLsfs2bPjzTffrGqutbU1HnzwwbjmmmuSNgPqleAAhqy7uzsuu+yyqr+50traGqtWrfJUC4whLqkA\nQ9be3h7d3d3R2dkZ7e3tg547cOBAXH/99dHS0hJr167NWxCoG044gGFTLpfjO9/5TvzlL3+pam78\n+PFx3333xU033ZS0GVBrTjiAYdPR0RFvvPFGdHZ2xvnnnz/ouffffz9uvvnmmDBhQtx3332JGwK1\n4oQDSFMul+N73/tedHV1VTXX1NQU8+fPj4ceeihpM+BEc8IBpOno6IhyuRydnZ3x5S9/OQqFwqDm\nent74+GHH47Gxsa46aabolKpJG8KZHPCAZww5XI5brjhhti5c2dV32ppaGiIr33ta7Fx48YolUqJ\nGwJZnHAAJ0xHR0e88sorsWfPnvjmN7856Ln+/v7Ytm1btLS0xPTp06NcLiduCWRwwgHUTKVSifnz\n58fmzZurOvGIiDj77LPj/vvvrypcgNpxwgHUTKlUimeffTYOHDgQixcvjmKxOOjZPXv2xKxZs6Kt\nrS2eeOKJxC2B4eCEA6grd9xxR/zsZz+Lnp6equZKpVJs2LAhvv3tbydtBhwPwQHUpXvvvTdWr14d\n77333qBnSqVS7N27142lUIdcUgHq0p133hkHDx6MRx55JD7/+c8PaqZSqcSuXbuSNwOGQnAAdW3h\nwoWxb9++ePHFF2PatGm1XgcYIpdUgBGlu7s7Fi1aFNu3b4/+/v4P/bOJEyd6SRjUKSccwIjS3t4e\nv/3tb+Ott96KefPmxZQpU+Izn/lMfOtb34qXXnqp1usBH8MJBwCQzgkHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJDu3/pyMJVRt7STAAAAAElFTkSuQmCC\n",
+                  "signature": "iVBORw0KGgoAAAANSUhEUgAAAhwAAAEsCAYAAACIbGpMAAAAAXNSR0IArs4c6QAAAARzQklUCAgI\nCHwIZIgAAA+aSURBVHic7d1/qNX1/cDx17nn3q5LN8+95VpdmrcsKdquG5TQLOgPN7ZJbeVshdtM\ntIUzKXBFUSRlKc7NiZVQQUZbWGQ0h3NiUf0xC9kK77ltjlZ63UaQgTvmSu/u9d79se9k8S2653pf\nnnPvfTz+iuJ1eCFFT96fX4WBgYGBAABI1FDrBQCA0U9wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5w\nAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADp\nBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5w\nAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADp\nBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5w\nAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADp\nBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpGmu9ACNHpVI59tcHDx6MyZMn13AbAEYS\nwVHnurq64vvf/368/vrrcfTo0WN/v6GhIU466aQoFotx0kknxac //elobGyMxsbGaGpqikKhEMVi\nMfr6+o7N9fT0RH9/f/T09MTRo0fjgw8+iN7e3ujv74+BgYHo7++PiIiBgYEh7VooFKJQKERzc3NM\nmDAhZs2aFZdddlnMmzfv+P8gABjRCgND/b8L6W688cZ48MEHa73GsGhoaIjTTjstLr/88li1alWU\nSqVarwTACSQ46tRoio2PUiwWY+rUqXHLLbfE/Pnza70OAMkERx3q6uqKjo6OWq9xwhQKhTjzzDPj\nxz/+cSxZsqTW6wCQQHDUoY6Ojujq6qr1GjXR0NAQF154YTz11FPR3t5e63UAGCaCow41NjZ+6AbR\nsaq5uTlmzJgRzzzzjHs+AEY47+GoQ2LjP3p6euKFF16IlpaWmDJlSmzZsqXWKwEwRIKDEWHPnj1x\n+eWXR6lUiuXLl9d6HQCq5JJKHXJJ5ZONGzcu7rzzzli8eLHLLQAjgOCoQ2P5ptGhmDJlSixatCgW\nLFggPgDqlOCoQ2PtsdjhNHXq1Jg1a1asWbOm1qsA8D8ER50a7S/+OhHa2tpi0aJFMXfuXI/YAtSY\n4Khj9R4d//2ey8knnxynn356nHfeeXHOOedEW1tbTJo0Kdra2iIiYuLEiRHxnw++vf3229Hd3R0H\nDhyIXbt2xTvvvBOHDh2K/fv3x+HDh1PuXSkUCtHW1hZLly6N6667zmUXgBoQHHWuq6sr5s6dG3/8\n4x+PfVwtW0NDQxSLxWhubo5TTz01vvCFL8SFF14Y8+bNO2EnBU8++WT87ne/ix07dsRf//rXOHTo\nUPT29g7Lb7e1tcXVV1/tsgvACSQ4Rqju7u6IiPjb3/4WBw8ejP3798d7770X//znP6NSqcQHH3wQ\nR44ciUKhEOPGjYuGhoZobm6Ok08+OcaPHx+TJk2Kc889N84888wRdbnhpZdeis2bN8fWrVvjjTfe\nOK7f+u8H5ZYvXx4LFiwYpg0B+CiCgxHt4YcfjlWrVsXevXvjeP5VLhQK8aUvfSl+9KMfxcKFC4dx\nQwAiBAejRKVSicceeyzWr18fb7311nFdfmpsbIxLLrkk7rnnnrj00kuHcUuAsUtwMCrde++9sXHj\nI/okhttp.OkHttpClient: \nxvjTn/50XL/T1NQUs2fPjttvv92jygDHQXAw6v30pz+NtWvXxttvv31cl10+97nPxVVXXVXXTw4B\n1CvBwZhRqVTigQceiHXr1sW777475N8pFApx1llnxWOPPeaSC8AgCQ7GpEqlErfeemts2rQp/vGP\nfwz5d4rFYsyZMydWrlw5op72ATjRBAdjXrlcjhUrVsQzzzwTfX19Q/6d008/PW6 //fZYsmTJMG4H\n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\n",
+                  "status": "confirm"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 03 Mar 2025 08:43:43 GMT
+      Content-Length: 1983
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "delivery_change_status_details": {
+                        "id": 307,
+                        "name": "MS/OUT/00145",
+                        "partner_id": 20,
+                        "partner_name": "Ardh Alfan General Trading Co",
+                        "picking_type_code": "outgoing",
+                        "picking_type_id": 2,
+                        "picking_type_name": "Delivery Orders",
+                        "location_id": 8,
+                        "location_name": "Stock",
+                        "scheduled_date": "2023-06-21 09:44:02",
+                        "date_done": "2023-06-21 00:00:00",
+                        "origin": null,
+                        "state": "assigned",
+                        "stock_move_details": [
+                            {
+                                "id": 993,
+                                "product_id": 1,
+                                "product_name": "Standard delivery",
+                                "product_packaging_id": 1,
+                                "product_packaging_name": "Carton",
+                                "location_final_id": null,
+                                "location_final_name": null,
+                                "packaging_qty": 10,
+                                "product_uom_qty": 600,
+                                "received_package_qty": null,
+                                "quantity": 0,
+                                "product_uom": 1,
+                                "product_uom_name": "Units",
+                                "lot_ids": [],
+                                "state": "assigned",
+                                "stock_move_line_details": [
+                                    {
+                                        "id": 2863,
+                                        "product_id": 1,
+                                        "lot_id": null,
+                                        "package_id": null,
+                                        "result_package_id": null,
+                                        "location_id": 8,
+                                        "location_dest_id": 5,
+                                        "picking_partner_id": 20,
+                                        "company_id": 1,
+                                        "quantity": 0,
+                                        "product_uom_id": 1,
+                                        "state": "assigned",
+                                        "manufacture_date": null,
+                                        "product_packaging_id": 1,
+                                        "product_packaging_name": "Carton",
+                                        "qty_in_pack": 60,
+                                        "packaging_qty": null,
+                                        "owner_id": 1,
+                                        "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                        "transaction_type": "delivered",
+                                        "available_qty": null,
+                                        "available_package_qty": null,
+                                        "check_for_packaging": null,
+                                        "use_manufacture_date": null,
+                                        "hs_code": null,
+                                        "country_of_origin": null,
+                                        "country_of_origin_name": null,
+                                        "weight": null,
+                                        "total_weight": null
+                                    }
+                                ],
+                                "qty_in_pack": 60,
+                                "received_pack_qty": null,
+                                "remaining_pack_qty": 10,
+                                "received_qty": null,
+                                "remaining_qty": 600,
+                                "internal_ref": "Delivery_007",
+                                "barcode": null,
+                                "available_qty": null,
+                                "transaction_type": "delivered",
+                                "check_for_packaging": null,
+                                "use_manufacture_date": null,
+                                "hs_code": null,
+                                "country_of_origin": null,
+                                "country_of_origin_name": null
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Delivery Status Assign
+  
+  request: {
+    url: 192.168.1.119:8070/web/delivery_change_status
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "act_del_time": "2023-06-21 09:56:17",
+                  "delivery_id": 307,
+                  "receiver_name": "",
+                  "receiver_no": "",
+                  "recv_id_type": "",
+                  "recv_sign": "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\ntWTJkjh8+HCsWLEiisXioGb6+/tjzZo10dTU5\nI/okhttp.OkHttpClient: OVhQFXcwwFExNBeHvapT30qVq1a5eVhwCcSHMCH\nzJ07NzZu3FhVeIwfPz7Wrl0bCxcuTNwMGMkEB/D/VCqVmDt3bmzdurWquYkTJ8ZDDz0U3/3ud5M2\nA0YqwQF8rEqlEjNnzoxXX321qrnW1tZYv3698ACOcdMo8LFKpVL84Q9/iO7u7pg+ffqg5w4cOBDX\nXHNNtLS0xJNPPpm4ITBSCA7gE02ePDl27twZnZ2dMXXq1EHPVSqVuPbaa+OUU04RHjDGuaQCVK1c\nLsfs2bPjzTffrGqutbU1HnzwwbjmmmuSNgPqleAAhqy7uzsuu+yyqr+50traGqtWrfJUC4whLqkA\nQ9be3h7d3d3R2dkZ7e3tg547cOBAXH/99dHS0hJr167NWxCoG044gGFTLpfjO9/5TvzlL3+pam78\n+PFx3333xU033ZS0GVBrTjiAYdPR0RFvvPFGdHZ2xvnnnz/ouffffz9uvvnmmDBhQtx3332JGwK1\n4oQDSFMul+N73/tedHV1VTXX1NQU8+fPj4ceeihpM+BEc8IBpOno6IhyuRydnZ3x5S9/OQqFwqDm\nent74+GHH47Gxsa46aabolKpJG8KZHPCAZww5XI5brjhhti5c2dV32ppaGiIr33ta7Fx48YolUqJ\nGwJZnHAAJ0xHR0e88sorsWfPnvjmN7856Ln+/v7Ytm1btLS0xPTp06NcLiduCWRwwgHUTKVSifnz\n58fmzZurOvGIiDj77LPj/vvvrypcgNpxwgHUTKlUimeffTYOHDgQixcvjmKxOOjZPXv2xKxZs6Kt\nrS2eeOKJxC2B4eCEA6grd9xxR/zsZz+Lnp6equZKpVJs2LAhvv3tbydtBhwPwQHUpXvvvTdWr14d\n77333qBnSqVS7N27142lUIdcUgHq0p133hkHDx6MRx55JD7/+c8PaqZSqcSuXbuSNwOGQnAAdW3h\nwoWxb9++ePHFF2PatGm1XgcYIpdUgBGlu7s7Fi1aFNu3b4/+/v4P/bOJEyd6SRjUKSccwIjS3t4e\nv/3tb+Ott96KefPmxZQpU+Izn/lMfOtb34qXXnqp1usBH8MJBwCQzgkHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJDu3/pyMJVRt7STAAAAAElFTkSuQmCC\n",
+                  "signature": "iVBORw0KGgoAAAANSUhEUgAAAhwAAAEsCAYAAACIbGpMAAAAAXNSR0IArs4c6QAAAARzQklUCAgI\nCHwIZIgAAA+aSURBVHic7d1/qNX1/cDx17nn3q5LN8+95VpdmrcsKdquG5TQLOgPN7ZJbeVshdtM\ntIUzKXBFUSRlKc7NiZVQQUZbWGQ0h3NiUf0xC9kK77ltjlZ63UaQgTvmSu/u9d79se9k8S2653pf\nnnPvfTz+iuJ1eCFFT96fX4WBgYGBAABI1FDrBQCA0U9wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5w\nAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADp\nBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5w\nAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADp\nBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5w\nAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADp\nBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpGmu9ACNHpVI59tcHDx6MyZMn13AbAEYS\nwVHnurq64vvf/368/vrrcfTo0WN/v6GhIU466aQoFotx0kknxac //elobGyMxsbGaGpqikKhEMVi\nMfr6+o7N9fT0RH9/f/T09MTRo0fjgw8+iN7e3ujv74+BgYHo7++PiIiBgYEh7VooFKJQKERzc3NM\nmDAhZs2aFZdddlnMmzfv+P8gABjRCgND/b8L6W688cZ48MEHa73GsGhoaIjTTjstLr/88li1alWU\nSqVarwTACSQ46tRoio2PUiwWY+rUqXHLLbfE/Pnza70OAMkERx3q6uqKjo6OWq9xwhQKhTjzzDPj\nxz/+cSxZsqTW6wCQQHDUoY6Ojujq6qr1GjXR0NAQF154YTz11FPR3t5e63UAGCaCow41NjZ+6AbR\nsaq5uTlmzJgRzzzzjHs+AEY47+GoQ2LjP3p6euKFF16IlpaWmDJlSmzZsqXWKwEwRIKDEWHPnj1x\n+eWXR6lUiuXLl9d6HQCq5JJKHXJJ5ZONGzcu7rzzzli8eLHLLQAjgOCoQ2P5ptGhmDJlSixatCgW\nLFggPgDqlOCoQ2PtsdjhNHXq1Jg1a1asWbOm1qsA8D8ER50a7S/+OhHa2tpi0aJFMXfuXI/YAtSY\n4Khj9R4d//2ey8knnxynn356nHfeeXHOOedEW1tbTJo0Kdra2iIiYuLEiRHxnw++vf3229Hd3R0H\nDhyIXbt2xTvvvBOHDh2K/fv3x+HDh1PuXSkUCtHW1hZLly6N6667zmUXgBoQHHWuq6sr5s6dG3/8\n4x+PfVwtW0NDQxSLxWhubo5TTz01vvCFL8SFF14Y8+bNO2EnBU8++WT87ne/ix07dsRf//rXOHTo\nUPT29g7Lb7e1tcXVV1/tsgvACSQ4Rqju7u6IiPjb3/4WBw8ejP3798d7770X//znP6NSqcQHH3wQ\nR44ciUKhEOPGjYuGhoZobm6Ok08+OcaPHx+TJk2Kc889N84888wRdbnhpZdeis2bN8fWrVvjjTfe\nOK7f+u8H5ZYvXx4LFiwYpg0B+CiCgxHt4YcfjlWrVsXevXvjeP5VLhQK8aUvfSl+9KMfxcKFC4dx\nQwAiBAejRKVSicceeyzWr18fb7311nFdfmpsbIxLLrkk7rnnnrj00kuHcUuAsUtwMCrde++9sXHj\nI/okhttp.OkHttpClient: \nxvjTn/50XL/T1NQUs2fPjttvv92jygDHQXAw6v30pz+NtWvXxttvv31cl10+97nPxVVXXVXXTw4B\n1CvBwZhRqVTigQceiHXr1sW777475N8pFApx1llnxWOPPeaSC8AgCQ7GpEqlErfeemts2rQp/vGP\nfwz5d4rFYsyZMydWrlw5op72ATjRBAdjXrlcjhUrVsQzzzwTfX19Q/6d008/PW6 //fZYsmTJMG4H\n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\n",
+                  "status": "assign"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 03 Mar 2025 09:52:29 GMT
+      Content-Length: 1983
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=fe3zCbAc-3nyVRygtPAUMdrxxbqWgiR_riCv6pKEDFEPZC2OTTv54YHj_gRmgMeVai0RAdNV1E2DboYhAb94; Expires=Tue, 03 Mar 2026 09:52:29 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "delivery_change_status_details": {
+                        "id": 307,
+                        "name": "MS/OUT/00145",
+                        "partner_id": 20,
+                        "partner_name": "Ardh Alfan General Trading Co",
+                        "picking_type_code": "outgoing",
+                        "picking_type_id": 2,
+                        "picking_type_name": "Delivery Orders",
+                        "location_id": 8,
+                        "location_name": "Stock",
+                        "scheduled_date": "2023-06-21 09:44:02",
+                        "date_done": "2023-06-21 00:00:00",
+                        "origin": null,
+                        "state": "assigned",
+                        "stock_move_details": [
+                            {
+                                "id": 993,
+                                "product_id": 1,
+                                "product_name": "Standard delivery",
+                                "product_packaging_id": 1,
+                                "product_packaging_name": "Carton",
+                                "location_final_id": null,
+                                "location_final_name": null,
+                                "packaging_qty": 10,
+                                "product_uom_qty": 600,
+                                "received_package_qty": null,
+                                "quantity": 0,
+                                "product_uom": 1,
+                                "product_uom_name": "Units",
+                                "lot_ids": [],
+                                "state": "assigned",
+                                "stock_move_line_details": [
+                                    {
+                                        "id": 2863,
+                                        "product_id": 1,
+                                        "lot_id": null,
+                                        "package_id": null,
+                                        "result_package_id": null,
+                                        "location_id": 8,
+                                        "location_dest_id": 5,
+                                        "picking_partner_id": 20,
+                                        "company_id": 1,
+                                        "quantity": 0,
+                                        "product_uom_id": 1,
+                                        "state": "assigned",
+                                        "manufacture_date": null,
+                                        "product_packaging_id": 1,
+                                        "product_packaging_name": "Carton",
+                                        "qty_in_pack": 60,
+                                        "packaging_qty": null,
+                                        "owner_id": 1,
+                                        "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                        "transaction_type": "delivered",
+                                        "available_qty": null,
+                                        "available_package_qty": null,
+                                        "check_for_packaging": null,
+                                        "use_manufacture_date": null,
+                                        "hs_code": null,
+                                        "country_of_origin": null,
+                                        "country_of_origin_name": null,
+                                        "weight": null,
+                                        "total_weight": null
+                                    }
+                                ],
+                                "qty_in_pack": 60,
+                                "received_pack_qty": null,
+                                "remaining_pack_qty": 10,
+                                "received_qty": null,
+                                "remaining_qty": 600,
+                                "internal_ref": "Delivery_007",
+                                "barcode": null,
+                                "available_qty": null,
+                                "transaction_type": "delivered",
+                                "check_for_packaging": null,
+                                "use_manufacture_date": null,
+                                "hs_code": null,
+                                "country_of_origin": null,
+                                "country_of_origin_name": null
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Delivery Status Change- Validate
+  
+  request: {
+    url: 192.168.1.119:8070/web/delivery_change_status
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "act_del_time": "2023-06-21 09:56:17",
+                  "delivery_id": 1061,
+                  "receiver_name": "Sunu",
+                  "receiver_no": "2154612126",
+                  "recv_id_type": "",
+                  "recv_sign": "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\ntWTJkjh8+HCsWLEiisXioGb6+/tjzZo10dTU5\nI/okhttp.OkHttpClient: OVhQFXcwwFExNBeHvapT30qVq1a5eVhwCcSHMCH\nzJ07NzZu3FhVeIwfPz7Wrl0bCxcuTNwMGMkEB/D/VCqVmDt3bmzdurWquYkTJ8ZDDz0U3/3ud5M2\nA0YqwQF8rEqlEjNnzoxXX321qrnW1tZYv3698ACOcdMo8LFKpVL84Q9/iO7u7pg+ffqg5w4cOBDX\nXHNNtLS0xJNPPpm4ITBSCA7gE02ePDl27twZnZ2dMXXq1EHPVSqVuPbaa+OUU04RHjDGuaQCVK1c\nLsfs2bPjzTffrGqutbU1HnzwwbjmmmuSNgPqleAAhqy7uzsuu+yyqr+50traGqtWrfJUC4whLqkA\nQ9be3h7d3d3R2dkZ7e3tg547cOBAXH/99dHS0hJr167NWxCoG044gGFTLpfjO9/5TvzlL3+pam78\n+PFx3333xU033ZS0GVBrTjiAYdPR0RFvvPFGdHZ2xvnnnz/ouffffz9uvvnmmDBhQtx3332JGwK1\n4oQDSFMul+N73/tedHV1VTXX1NQU8+fPj4ceeihpM+BEc8IBpOno6IhyuRydnZ3x5S9/OQqFwqDm\nent74+GHH47Gxsa46aabolKpJG8KZHPCAZww5XI5brjhhti5c2dV32ppaGiIr33ta7Fx48YolUqJ\nGwJZnHAAJ0xHR0e88sorsWfPnvjmN7856Ln+/v7Ytm1btLS0xPTp06NcLiduCWRwwgHUTKVSifnz\n58fmzZurOvGIiDj77LPj/vvvrypcgNpxwgHUTKlUimeffTYOHDgQixcvjmKxOOjZPXv2xKxZs6Kt\nrS2eeOKJxC2B4eCEA6grd9xxR/zsZz+Lnp6equZKpVJs2LAhvv3tbydtBhwPwQHUpXvvvTdWr14d\n77333qBnSqVS7N27142lUIdcUgHq0p133hkHDx6MRx55JD7/+c8PaqZSqcSuXbuSNwOGQnAAdW3h\nwoWxb9++ePHFF2PatGm1XgcYIpdUgBGlu7s7Fi1aFNu3b4/+/v4P/bOJEyd6SRjUKSccwIjS3t4e\nv/3tb+Ott96KefPmxZQpU+Izn/lMfOtb34qXXnqp1usBH8MJBwCQzgkHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJDu3/pyMJVRt7STAAAAAElFTkSuQmCC\n",
+                  "signature": "iVBORw0KGgoAAAANSUhEUgAAAhwAAAEsCAYAAACIbGpMAAAAAXNSR0IArs4c6QAAAARzQklUCAgI\nCHwIZIgAAA+aSURBVHic7d1/qNX1/cDx17nn3q5LN8+95VpdmrcsKdquG5TQLOgPN7ZJbeVshdtM\ntIUzKXBFUSRlKc7NiZVQQUZbWGQ0h3NiUf0xC9kK77ltjlZ63UaQgTvmSu/u9d79se9k8S2653pf\nnnPvfTz+iuJ1eCFFT96fX4WBgYGBAABI1FDrBQCA0U9wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5w\nAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADp\nBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5w\nAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADp\nBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5w\nAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADp\nBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcA\nkE5wAADpBAcAkE5wAADpBAcAkE5wAADpBAcAkE5wAADpGmu9ACNHpVI59tcHDx6MyZMn13AbAEYS\nwVHnurq64vvf/368/vrrcfTo0WN/v6GhIU466aQoFotx0kknxac //elobGyMxsbGaGpqikKhEMVi\nMfr6+o7N9fT0RH9/f/T09MTRo0fjgw8+iN7e3ujv74+BgYHo7++PiIiBgYEh7VooFKJQKERzc3NM\nmDAhZs2aFZdddlnMmzfv+P8gABjRCgND/b8L6W688cZ48MEHa73GsGhoaIjTTjstLr/88li1alWU\nSqVarwTACSQ46tRoio2PUiwWY+rUqXHLLbfE/Pnza70OAMkERx3q6uqKjo6OWq9xwhQKhTjzzDPj\nxz/+cSxZsqTW6wCQQHDUoY6Ojujq6qr1GjXR0NAQF154YTz11FPR3t5e63UAGCaCow41NjZ+6AbR\nsaq5uTlmzJgRzzzzjHs+AEY47+GoQ2LjP3p6euKFF16IlpaWmDJlSmzZsqXWKwEwRIKDEWHPnj1x\n+eWXR6lUiuXLl9d6HQCq5JJKHXJJ5ZONGzcu7rzzzli8eLHLLQAjgOCoQ2P5ptGhmDJlSixatCgW\nLFggPgDqlOCoQ2PtsdjhNHXq1Jg1a1asWbOm1qsA8D8ER50a7S/+OhHa2tpi0aJFMXfuXI/YAtSY\n4Khj9R4d//2ey8knnxynn356nHfeeXHOOedEW1tbTJo0Kdra2iIiYuLEiRHxnw++vf3229Hd3R0H\nDhyIXbt2xTvvvBOHDh2K/fv3x+HDh1PuXSkUCtHW1hZLly6N6667zmUXgBoQHHWuq6sr5s6dG3/8\n4x+PfVwtW0NDQxSLxWhubo5TTz01vvCFL8SFF14Y8+bNO2EnBU8++WT87ne/ix07dsRf//rXOHTo\nUPT29g7Lb7e1tcXVV1/tsgvACSQ4Rqju7u6IiPjb3/4WBw8ejP3798d7770X//znP6NSqcQHH3wQ\nR44ciUKhEOPGjYuGhoZobm6Ok08+OcaPHx+TJk2Kc889N84888wRdbnhpZdeis2bN8fWrVvjjTfe\nOK7f+u8H5ZYvXx4LFiwYpg0B+CiCgxHt4YcfjlWrVsXevXvjeP5VLhQK8aUvfSl+9KMfxcKFC4dx\nQwAiBAejRKVSicceeyzWr18fb7311nFdfmpsbIxLLrkk7rnnnrj00kuHcUuAsUtwMCrde++9sXHj\nI/okhttp.OkHttpClient: \nxvjTn/50XL/T1NQUs2fPjttvv92jygDHQXAw6v30pz+NtWvXxttvv31cl10+97nPxVVXXVXXTw4B\n1CvBwZhRqVTigQceiHXr1sW777475N8pFApx1llnxWOPPeaSC8AgCQ7GpEqlErfeemts2rQp/vGP\nfwz5d4rFYsyZMydWrlw5op72ATjRBAdjXrlcjhUrVsQzzzwTfX19Q/6d008/PW6 //fZYsmTJMG4H\nMDoIDvgfO3bsiJtvvjlee+21IT/p0tjYGNOnT4/f/OY33moK8H8aar0A1JMZM2bE73//+zh69Gj8\n/Oc/P/Z69mr09fXFyy+/HC0tLTFp0qTYunVrwqYAI4sTDvgElUolbrvtttiwYUP861//GtJvFIvF\n+MEPfhBr1qxx6gGMSYIDqlAul+Paa6+N3bt3D/kR22nTpsXjjz/uvR7AmOKSClSho6Pj2If07rjj\njiGdVnR2dsa0adOitbU1NmzYkLAlQP1xwgHHqVwux9KlS+P5558f0nxTU1P88Ic/jAceeGCYNwOo\nH4IDhtHKlStj+fLlcfjw4apnC4VCfPWrX42nnnrKfR7AqCM4IEG5XI4rr7wy9uzZM6T5L37xi/HL\nX/7SfR7AqCE4INmcOXPi2WefjaNHj1Y9e9ZZZ8WvfvUr4QGMeG4ahWRPP/109PX1xbp162LChAlV\nze7duzemTZsWZ5xxRmzbti1pQ4B8TjjgBNu2bVtcf/318fe//73q2VNPPTV+8YtfxNe//vWEzQDy\nCA6okX379sWVV14Zu3btqvqdHq2trfHEE08ID2DEEBxQB6644orYsmVL1eFRKpViy5YtMWPGjKTN\nAIaHezigDvz617+O/v7+WLx4cRSLxUHPVSqVuOSSS6KlpSV27NiRuCHA8XHCAXXolltuifvvvz96\nenqqmjvttNNi586dMXny5KTNAIbGCQfUodWrV8eRI0firrvuinHjxg167p133on29va44IILYt++\nfYkbAlTHCQeMAMuWLYuf/OQnceTIkarmLrrooti+fbs3lwI1JzhgBFm2bFmsXLkyent7q5q74oor\nYvPmzUlbAXwywQEj0LJly2LFihXR19c36JlCoRCzZ8+Op59+OnEzgI/mHg4Yge6+++7o7e2Nu+66\nKxoaBvef8cDAQGzatCkaGxtj5cqVyRsCfJgTDhgFbrzxxli/fn1V7/Fobm6O1atXx5IlSxI3A/gP\nwQGjyJw5c2LTpk1VzXh5GHAiCA4Yhb7yla/EK6+8UtXMZz/72Xjuued8mRZIIThglKpUKnHxxRfH\nn//856rmzj///Hj55Zc9SgsMKzeNwihVKpVi9+7d0d3dHeedd96g53bv3h0tLS1x8cUXe3kYMGyc\ncMAYUS6XY+bMmfHuu+8OeqZQKMTMmTNj+/btiZsBY4ETDhgjOjo6Yv/+/bF169aYMGHCoGYGBgbi\nueeei2KxGAsWLEjeEBjNBAeMMd/4xjfi0KFDsW7dukF/p6W/vz8effTRKBaLsXTp0uQNgdFIcMAY\ntWTJkjh8+HCsWLEiisXioGb6+/tjzZo10dTU5OVhQFXcwwFExNBeHvapT30qVq1a5eVhwCcSHMCH\nzJ07NzZu3FhVeIwfPz7Wrl0bCxcuTNwMGMkEB/D/VCqVmDt3bmzdurWquYkTJ8ZDDz0U3/3ud5M2\nA0YqwQF8rEqlEjNnzoxXX321qrnW1tZYv3698ACOcdMo8LFKpVL84Q9/iO7u7pg+ffqg5w4cOBDX\nXHNNtLS0xJNPPpm4ITBSCA7gE02ePDl27twZnZ2dMXXq1EHPVSqVuPbaa+OUU04RHjDGuaQCVK1c\nLsfs2bPjzTffrGqutbU1HnzwwbjmmmuSNgPqleAAhqy7uzsuu+yyqr+50traGqtWrfJUC4whLqkA\nQ9be3h7d3d3R2dkZ7e3tg547cOBAXH/99dHS0hJr167NWxCoG044gGFTLpfjO9/5TvzlL3+pam78\n+PFx3333xU033ZS0GVBrTjiAYdPR0RFvvPFGdHZ2xvnnnz/ouffffz9uvvnmmDBhQtx3332JGwK1\n4oQDSFMul+N73/tedHV1VTXX1NQU8+fPj4ceeihpM+BEc8IBpOno6IhyuRydnZ3x5S9/OQqFwqDm\nent74+GHH47Gxsa46aabolKpJG8KZHPCAZww5XI5brjhhti5c2dV32ppaGiIr33ta7Fx48YolUqJ\nGwJZnHAAJ0xHR0e88sorsWfPnvjmN7856Ln+/v7Ytm1btLS0xPTp06NcLiduCWRwwgHUTKVSifnz\n58fmzZurOvGIiDj77LPj/vvvrypcgNpxwgHUTKlUimeffTYOHDgQixcvjmKxOOjZPXv2xKxZs6Kt\nrS2eeOKJxC2B4eCEA6grd9xxR/zsZz+Lnp6equZKpVJs2LAhvv3tbydtBhwPwQHUpXvvvTdWr14d\n77333qBnSqVS7N27142lUIdcUgHq0p133hkHDx6MRx55JD7/+c8PaqZSqcSuXbuSNwOGQnAAdW3h\nwoWxb9++ePHFF2PatGm1XgcYIpdUgBGlu7s7Fi1aFNu3b4/+/v4P/bOJEyd6SRjUKSccwIjS3t4e\nv/3tb+Ott96KefPmxZQpU+Izn/lMfOtb34qXXnqp1usBH8MJBwCQzgkHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJDu3/pyMJVRt7STAAAAAElFTkSuQmCC\n",
+                  "status": "validate",
+                  "delivery_product_allocation_details":[
+                      {
+                          "line_id":  8486,
+                          "qty": 2
+                      },
+                      {
+                          "line_id":  8487,
+                          "qty": 2
+                      }
+                  ]
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 30 Apr 2025 11:00:53 GMT
+      Content-Length: 4375
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "delivery_change_status_details": {
+                        "id": 1061,
+                        "name": "MS/OUT/00603",
+                        "partner_id": 16669,
+                        "partner_name": "Al Bader Mini Mart",
+                        "picking_type_code": "outgoing",
+                        "picking_type_id": 2,
+                        "picking_type_name": "Delivery Orders",
+                        "location_id": 8,
+                        "location_name": "Stock",
+                        "scheduled_date": "2025-04-30 10:32:50",
+                        "date_done": "2025-04-30 11:00:50",
+                        "origin": null,
+                        "system_origin": "OR00017",
+                        "state": "done",
+                        "receiver_name": "Sunu",
+                        "receiver_no": "2154612126",
+                        "recv_id_img": "http://localhost:8070/web/url_image?model=stock.picking&id=1061&field=receiver_identity",
+                        "act_del_time": "2023-06-21 09:56:17",
+                        "recv_sign": "http://localhost:8070/web/url_image?model=stock.picking&id=1061&field=receiver_signature",
+                        "stock_move_details": [
+                            {
+                                "id": 2602,
+                                "product_id": 2811,
+                                "product_name": "ABUSALIM SUNFLOWER SEED ROASTED 25GM",
+                                "product_packaging_id": 1873,
+                                "product_packaging_name": "Bag",
+                                "location_final_id": null,
+                                "location_final_name": null,
+                                "packaging_qty": 2,
+                                "product_uom_qty": 50,
+                                "received_package_qty": 2,
+                                "quantity": 50,
+                                "product_uom": 27,
+                                "product_uom_name": "PCs",
+                                "lot_ids": [
+                                    880
+                                ],
+                                "state": "done",
+                                "stock_move_line_details": [
+                                    {
+                                        "id": 8486,
+                                        "product_id": 2811,
+                                        "expiration_date": "2027-04-04 20:00:00",
+                                        "lot_id": 880,
+                                        "lot_name": "ASSR029",
+                                        "package_id": null,
+                                        "package_name": null,
+                                        "result_package_id": null,
+                                        "result_package_name": null,
+                                        "location_id": 8,
+                                        "location_name": "Stock",
+                                        "location_dest_id": 5,
+                                        "location_dest_name": "Customers",
+                                        "picking_partner_id": 16669,
+                                        "picking_partner_name": "Al Bader Mini Mart",
+                                        "company_id": 1,
+                                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                                        "quantity": 50,
+                                        "product_uom_id": 27,
+                                        "product_uom_name": "PCs",
+                                        "state": "done",
+                                        "manufacture_date": null,
+                                        "product_packaging_id": 1873,
+                                        "product_packaging_name": "Bag",
+                                        "qty_in_pack": 25,
+                                        "packaging_qty": 2,
+                                        "owner_id": 1,
+                                        "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                        "transaction_type": "delivered",
+                                        "available_qty": 1690,
+                                        "available_package_qty": 67.6,
+                                        "check_for_packaging": true,
+                                        "use_manufacture_date": null,
+                                        "hs_code": null,
+                                        "country_of_origin": null,
+                                        "country_of_origin_name": null,
+                                        "weight": null,
+                                        "total_weight": null
+                                    }
+                                ],
+                                "qty_in_pack": 25,
+                                "received_pack_qty": 2,
+                                "remaining_pack_qty": null,
+                                "received_qty": 50,
+                                "remaining_qty": null,
+                                "internal_ref": "SN100444",
+                                "barcode": null,
+                                "available_qty": 9240,
+                                "transaction_type": "delivered",
+                                "check_for_packaging": true,
+                                "use_manufacture_date": null,
+                                "hs_code": null,
+                                "country_of_origin": null,
+                                "country_of_origin_name": null
+                            },
+                            {
+                                "id": 2603,
+                                "product_id": 2938,
+                                "product_name": "Black Cherry Yoghurt, 140g",
+                                "product_packaging_id": null,
+                                "product_packaging_name": null,
+                                "location_final_id": null,
+                                "location_final_name": null,
+                                "packaging_qty": null,
+                                "product_uom_qty": 2,
+                                "received_package_qty": null,
+                                "quantity": 2,
+                                "product_uom": 1,
+                                "product_uom_name": "Units",
+                                "lot_ids": [],
+                                "state": "done",
+                                "stock_move_line_details": [
+                                    {
+                                        "id": 8487,
+                                        "product_id": 2938,
+                                        "expiration_date": null,
+                                        "lot_id": null,
+                                        "lot_name": null,
+                                        "package_id": null,
+                                        "package_name": null,
+                                        "result_package_id": null,
+                                        "result_package_name": null,
+                                        "location_id": 8,
+                                        "location_name": "Stock",
+                                        "location_dest_id": 5,
+                                        "location_dest_name": "Customers",
+                                        "picking_partner_id": 16669,
+                                        "picking_partner_name": "Al Bader Mini Mart",
+                                        "company_id": 1,
+                                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                                        "quantity": 2,
+                                        "product_uom_id": 1,
+                                        "product_uom_name": "Units",
+                                        "state": "done",
+                                        "manufacture_date": null,
+                                        "product_packaging_id": null,
+                                        "product_packaging_name": null,
+                                        "qty_in_pack": null,
+                                        "packaging_qty": null,
+                                        "owner_id": 1,
+                                        "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                        "transaction_type": "delivered",
+                                        "available_qty": 5,
+                                        "available_package_qty": null,
+                                        "check_for_packaging": null,
+                                        "use_manufacture_date": null,
+                                        "hs_code": null,
+                                        "country_of_origin": null,
+                                        "country_of_origin_name": null,
+                                        "weight": null,
+                                        "total_weight": null
+                                    }
+                                ],
+                                "qty_in_pack": null,
+                                "received_pack_qty": null,
+                                "remaining_pack_qty": null,
+                                "received_qty": 2,
+                                "remaining_qty": null,
+                                "internal_ref": null,
+                                "barcode": null,
+                                "available_qty": 7,
+                                "transaction_type": "delivered",
+                                "check_for_packaging": null,
+                                "use_manufacture_date": null,
+                                "hs_code": null,
+                                "country_of_origin": null,
+                                "country_of_origin_name": null
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

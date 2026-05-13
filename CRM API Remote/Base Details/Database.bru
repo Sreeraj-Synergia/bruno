@@ -1,0 +1,73 @@
+meta {
+  name: Database
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://172.105.51.175:8086/web/database_list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get Database Instance
+}
+
+example {
+  name: Database
+  
+  request: {
+    url: https://freight.syntrack.app/web/database_list
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 143
+      Set-Cookie: session_id=5c3ca46c86c87dc929486e914d344aceef2da3e9; Expires=Sun, 22-Sep-2024 07:07:25 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 24 Jun 2024 07:07:25 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "database_list": [
+                        "Logistics_2"
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

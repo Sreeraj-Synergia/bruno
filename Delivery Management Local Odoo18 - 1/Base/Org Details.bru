@@ -1,0 +1,229 @@
+meta {
+  name: Org Details
+  type: http
+  seq: 5
+}
+
+post {
+  url: localhost:8070/web/get_org_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Org Details
+  
+  request: {
+    url: localhost:8069/web/get_org_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 16 Jul 2025 05:39:17 GMT
+      Content-Length: 1749
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "org_details": [
+                        {
+                            "id": 1,
+                            "name": "My Company",
+                            "street": null,
+                            "street2": null,
+                            "city": null,
+                            "zip": null,
+                            "state_id": null,
+                            "state_name": null,
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "currency_id": 128,
+                            "currency_name": "AED",
+                            "currency_active": true,
+                            "currency_unit_label": "Dirham",
+                            "currency_subunit_label": "Fils",
+                            "currency_rounding": 0.01,
+                            "currency_decimal_places": 2,
+                            "currency_symbol": "AED",
+                            "currency_position": "after",
+                            "email": null,
+                            "website": null,
+                            "phone": "1234567890",
+                            "mobile": null,
+                            "trn": null,
+                            "company_registry": null,
+                            "company_id": 1,
+                            "mobile_login_url": false,
+                            "logo_url": "http://localhost:8069/web/url_image?model=res.company&id=1&field=logo",
+                            "latitude": 0,
+                            "longitude": 0,
+                            "logo": "http://localhost:8069/web/url_image?model=res.company&id=1&field=logo",
+                            "contact_us_link": false,
+                            "about_us_link": false,
+                            "faq_link": false,
+                            "enable_checkins": true,
+                            "allow_sale_customer_location": false,
+                            "auto_pay_cash_invoice": false,
+                            "auto_checkout": false,
+                            "allow_pricelist_based_invoice": null,
+                            "allow_edit_price_in_direct_return": null,
+                            "days_of_sales_history": null,
+                            "disable_offline_sales": null,
+                            "show_no_of_pieces": false,
+                            "gravity_access_token": "GravitySoftnet_YV5jbMLoBzPbqSDJ4AhB1xnN2xmeB74f",
+                            "gravity_public_url": "http://sonasgroup.dyndns.org:3015",
+                            "enable_customer_checkins": false,
+                            "allow_sale_customer_sign": false,
+                            "allow_invoice_customer_sign": false,
+                            "allow_invoice_customer_location": false,
+                            "allow_invoice_checkin": false,
+                            "partner_credit_based_on_parent_or_customer": "customer",
+                            "block_inactive_customer": false,
+                            "credit_restriction_based_on_parent_or_customer": "customer"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Org Details
+  
+  request: {
+    url: localhost:8069/web/get_org_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 16 Jul 2025 05:39:17 GMT
+      Content-Length: 1749
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "org_details": [
+                        {
+                            "id": 1,
+                            "name": "My Company",
+                            "street": null,
+                            "street2": null,
+                            "city": null,
+                            "zip": null,
+                            "state_id": null,
+                            "state_name": null,
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "currency_id": 128,
+                            "currency_name": "AED",
+                            "currency_active": true,
+                            "currency_unit_label": "Dirham",
+                            "currency_subunit_label": "Fils",
+                            "currency_rounding": 0.01,
+                            "currency_decimal_places": 2,
+                            "currency_symbol": "AED",
+                            "currency_position": "after",
+                            "email": null,
+                            "website": null,
+                            "phone": "1234567890",
+                            "mobile": null,
+                            "trn": null,
+                            "company_registry": null,
+                            "company_id": 1,
+                            "mobile_login_url": false,
+                            "logo_url": "http://localhost:8069/web/url_image?model=res.company&id=1&field=logo",
+                            "latitude": 0,
+                            "longitude": 0,
+                            "logo": "http://localhost:8069/web/url_image?model=res.company&id=1&field=logo",
+                            "contact_us_link": false,
+                            "about_us_link": false,
+                            "faq_link": false,
+                            "enable_checkins": true,
+                            "allow_sale_customer_location": false,
+                            "auto_pay_cash_invoice": false,
+                            "auto_checkout": false,
+                            "allow_pricelist_based_invoice": null,
+                            "allow_edit_price_in_direct_return": null,
+                            "days_of_sales_history": null,
+                            "disable_offline_sales": null,
+                            "show_no_of_pieces": false,
+                            "gravity_access_token": "GravitySoftnet_YV5jbMLoBzPbqSDJ4AhB1xnN2xmeB74f",
+                            "gravity_public_url": "http://sonasgroup.dyndns.org:3015",
+                            "enable_customer_checkins": false,
+                            "allow_sale_customer_sign": false,
+                            "allow_invoice_customer_sign": false,
+                            "allow_invoice_customer_location": false,
+                            "allow_invoice_checkin": false,
+                            "partner_credit_based_on_parent_or_customer": "customer",
+                            "block_inactive_customer": false,
+                            "credit_restriction_based_on_parent_or_customer": "customer"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

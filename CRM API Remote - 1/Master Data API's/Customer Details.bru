@@ -1,0 +1,19 @@
+meta {
+  name: Customer Details
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://172.105.51.175:8086/web/get_crm_cust_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,215 @@
+meta {
+  name: Product Variant Attributes
+  type: http
+  seq: 15
+}
+
+post {
+  url: https://wms.syntrack.app/web/get_variant_attributes
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {}
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Product Variant Attributes
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_variant_attributes
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:31:08 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:31:08 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "product_attribute_details": [
+                        {
+                            "id": 1,
+                            "name": "Color",
+                            "attr_values": [
+                                {
+                                    "id": 1,
+                                    "name": "Blue"
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "Red"
+                                },
+                                {
+                                    "id": 3,
+                                    "name": "Purple"
+                                },
+                                {
+                                    "id": 7,
+                                    "name": "Black"
+                                },
+                                {
+                                    "id": 8,
+                                    "name": "Grey"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Size",
+                            "attr_values": [
+                                {
+                                    "id": 4,
+                                    "name": "128GB"
+                                },
+                                {
+                                    "id": 5,
+                                    "name": "256GB"
+                                },
+                                {
+                                    "id": 6,
+                                    "name": "512GB"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Product Variant Attributes
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_variant_attributes
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:31:08 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:31:08 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "product_attribute_details": [
+                        {
+                            "id": 1,
+                            "name": "Color",
+                            "attr_values": [
+                                {
+                                    "id": 1,
+                                    "name": "Blue"
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "Red"
+                                },
+                                {
+                                    "id": 3,
+                                    "name": "Purple"
+                                },
+                                {
+                                    "id": 7,
+                                    "name": "Black"
+                                },
+                                {
+                                    "id": 8,
+                                    "name": "Grey"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Size",
+                            "attr_values": [
+                                {
+                                    "id": 4,
+                                    "name": "128GB"
+                                },
+                                {
+                                    "id": 5,
+                                    "name": "256GB"
+                                },
+                                {
+                                    "id": 6,
+                                    "name": "512GB"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,125 @@
+meta {
+  name: Database List
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://zaramiz.syntrack.app/web/database_list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Database List
+  
+  request: {
+    url: https://zaramiz.syntrack.app/web/database_list
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.24.0 (Ubuntu)
+      Date: Thu, 26 Jun 2025 06:28:29 GMT
+      Content-Type: application/json; charset=utf-8
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=3ZdSGDQZPUjODMr97YG4e3kmjXKSWXssT5VsJ58wDgHvVVHMcLkWx7Thi1eWcRlzttgO_TwpJYAbZ9MHmCEj; Expires=Fri, 26 Jun 2026 06:28:29 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "database_list": [
+                        "ZARAMIZ"
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Database List
+  
+  request: {
+    url: https://zaramiz.syntrack.app/web/database_list
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.24.0 (Ubuntu)
+      Date: Thu, 26 Jun 2025 06:28:29 GMT
+      Content-Type: application/json; charset=utf-8
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=3ZdSGDQZPUjODMr97YG4e3kmjXKSWXssT5VsJ58wDgHvVVHMcLkWx7Thi1eWcRlzttgO_TwpJYAbZ9MHmCEj; Expires=Fri, 26 Jun 2026 06:28:29 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "database_list": [
+                        "ZARAMIZ"
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

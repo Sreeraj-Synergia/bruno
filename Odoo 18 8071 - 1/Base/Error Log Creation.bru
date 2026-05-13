@@ -1,0 +1,175 @@
+meta {
+  name: Error Log Creation
+  type: http
+  seq: 7
+}
+
+post {
+  url: 192.168.1.119:8070/web/create_error_log
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "database": "Migration",
+              "date_time": "2025-04-15 10:14:55",
+              "dev_name": "Zebra Technologies TC15",
+              "employee_id": 16,
+              "error_msg": "Invoice Not Created !! Reshma Thalla....",
+              "requested_api": "/web/create_direct_invoice",
+              "status": "Failed"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  If the mobile user stumbles upon any error while trying to do a process from mobile application then this api is used to log those error in to the backend system for understanding.
+}
+
+example {
+  name: Error Log Creation
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_error_log
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "date_time": "2025-04-11 15:49:09",
+                  "dev_name": "Dell PC",
+                  "employee_id": 17,
+                  "database": "Migration",
+                  "error_msg": "data.get('error_msg')",
+                  "requested_api": "/web/create_error_log",
+                  "status": "Failed"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 11 Apr 2025 08:42:22 GMT
+      Content-Length: 358
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "create_error_log_details": {
+                        "id": 4,
+                        "date_time": "2025-04-11 15:49:09",
+                        "dev_name": "Dell PC",
+                        "employee_id": 17,
+                        "database": "Migration",
+                        "error_msg": "<p>data.get('error_msg')</p>",
+                        "requested_api": "/web/create_error_log",
+                        "status": "Failed"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Error Log Creation
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_error_log
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "date_time": "2025-04-11 15:49:09",
+                  "dev_name": "Dell PC",
+                  "employee_id": 17,
+                  "database": "Migration",
+                  "error_msg": "data.get('error_msg')",
+                  "requested_api": "/web/create_error_log",
+                  "status": "Failed"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 11 Apr 2025 08:42:22 GMT
+      Content-Length: 358
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "create_error_log_details": {
+                        "id": 4,
+                        "date_time": "2025-04-11 15:49:09",
+                        "dev_name": "Dell PC",
+                        "employee_id": 17,
+                        "database": "Migration",
+                        "error_msg": "<p>data.get('error_msg')</p>",
+                        "requested_api": "/web/create_error_log",
+                        "status": "Failed"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

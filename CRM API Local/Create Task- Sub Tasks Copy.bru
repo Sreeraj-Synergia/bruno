@@ -1,0 +1,38 @@
+meta {
+  name: Create Task/ Sub Tasks Copy
+  type: http
+  seq: 17
+}
+
+post {
+  url: http://localhost:8069/web/create_task
+  body: json
+  auth: inherit
+}
+
+body:json {
+   {
+          "params": {
+              "data": {
+                  "task": "Sample Api SUb Task",
+                  "date_assigned": "2024-07-19",
+                  "parent_id": 1328,
+                  "type": "task",
+                  "partner_id": 1746,
+                  "assigned_id": 328,
+                  "assigned_by": 353,
+                  "deadline": "2024-07-20",
+                  "is_mandatory": false,
+                  "priority": "2",
+                  "created_crm_lead_id": 225,
+                  "reason": "Sample Reason",
+                  "description": "Sample description"
+              },
+              "user_lang": "en_us"
+          }
+      }
+}
+
+settings {
+  encodeUrl: true
+}

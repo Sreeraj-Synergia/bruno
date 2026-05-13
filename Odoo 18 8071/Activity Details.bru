@@ -1,0 +1,209 @@
+meta {
+  name: Activity Details
+  type: http
+  seq: 37
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_activities
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "activity_id": false
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Activity Details
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_activities
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 18 Apr 2025 11:37:36 GMT
+      Content-Length: 823
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_activity_details": [
+                        {
+                            "id": 273,
+                            "name": "ACT00274",
+                            "res_name": "S00231",
+                            "activity_type_id": 33,
+                            "activity_type_name": "Configuration of Server",
+                            "date_deadline": "2025-04-17",
+                            "user_id": 19,
+                            "user_name": "Sales 5",
+                            "summary": null,
+                            "note": null
+                        },
+                        {
+                            "id": 274,
+                            "name": "ACT00275",
+                            "res_name": "S00232",
+                            "activity_type_id": 33,
+                            "activity_type_name": "Configuration of Server",
+                            "date_deadline": "2025-04-18",
+                            "user_id": 19,
+                            "user_name": "Sales 5",
+                            "summary": null,
+                            "note": null
+                        },
+                        {
+                            "id": 275,
+                            "name": "ACT00276",
+                            "res_name": "S00233",
+                            "activity_type_id": 33,
+                            "activity_type_name": "Configuration of Server",
+                            "date_deadline": "2025-04-18",
+                            "user_id": 19,
+                            "user_name": "Sales 5",
+                            "summary": null,
+                            "note": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Details
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_activities
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 18 Apr 2025 11:37:36 GMT
+      Content-Length: 823
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_activity_details": [
+                        {
+                            "id": 273,
+                            "name": "ACT00274",
+                            "res_name": "S00231",
+                            "activity_type_id": 33,
+                            "activity_type_name": "Configuration of Server",
+                            "date_deadline": "2025-04-17",
+                            "user_id": 19,
+                            "user_name": "Sales 5",
+                            "summary": null,
+                            "note": null
+                        },
+                        {
+                            "id": 274,
+                            "name": "ACT00275",
+                            "res_name": "S00232",
+                            "activity_type_id": 33,
+                            "activity_type_name": "Configuration of Server",
+                            "date_deadline": "2025-04-18",
+                            "user_id": 19,
+                            "user_name": "Sales 5",
+                            "summary": null,
+                            "note": null
+                        },
+                        {
+                            "id": 275,
+                            "name": "ACT00276",
+                            "res_name": "S00233",
+                            "activity_type_id": 33,
+                            "activity_type_name": "Configuration of Server",
+                            "date_deadline": "2025-04-18",
+                            "user_id": 19,
+                            "user_name": "Sales 5",
+                            "summary": null,
+                            "note": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

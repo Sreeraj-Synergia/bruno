@@ -1,0 +1,768 @@
+meta {
+  name: Update Day Plan Direction Parameters
+  type: http
+  seq: 53
+}
+
+post {
+  url: 192.168.1.119:8070/web/update_actual_day_direction
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "day_plan_id": 78,
+              "direction_parameter": {
+                  "params": {}
+              }
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: New Request
+  
+  request: {
+    url: 192.168.1.119:8070/web/update_actual_day_direction
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "day_plan_id": 78,
+                  "direction_parameter": {
+                      "params": {}
+                  }
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 20 Oct 2025 07:12:43 GMT
+      Content-Length: 15970
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "journey_day_data": {
+                        "day_plan_id": 78,
+                        "day_plan_number": "PSDJ2025050008-1-1",
+                        "user_journey_no": "PSDJ2025050008-1",
+                        "user_journey_id": 15,
+                        "route_plan_id": 10,
+                        "route_plan_number": "PSDJ2025050008",
+                        "plan_day": "Monday",
+                        "state": "confirm",
+                        "total_visits": 37,
+                        "start_time": "08:00:00",
+                        "end_time": "20:00:00",
+                        "allow_flexible_journey": false,
+                        "direction_parameter": "{'params': {}}",
+                        "journeys": [
+                            {
+                                "planned_visit_id": 2565,
+                                "sequence": 1,
+                                "line_number": 1,
+                                "is_start_point": true,
+                                "is_end_point": null,
+                                "trip_number": "Start Trip",
+                                "to_partner_id": 23351,
+                                "to_partner_name": "Viva",
+                                "from_partner_id": 1,
+                                "from_partner_name": "Synergia Softwares IT infrastructure LLC",
+                                "distance": "5.06 Km",
+                                "start_time": "08:00:45",
+                                "time_to_reach": "5 Minutes 3 Seconds",
+                                "eta": "08:05:49",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2566,
+                                "sequence": 2,
+                                "line_number": 2,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-1",
+                                "to_partner_id": 19242,
+                                "to_partner_name": "Deans Fujiya Supermarket",
+                                "from_partner_id": 23351,
+                                "from_partner_name": "Viva",
+                                "distance": "32.99 m",
+                                "start_time": "08:25:45",
+                                "time_to_reach": "1 Second",
+                                "eta": "08:25:47",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2567,
+                                "sequence": 3,
+                                "line_number": 3,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-2",
+                                "to_partner_id": 19359,
+                                "to_partner_name": "Eagle Restaurant LLC",
+                                "from_partner_id": 19242,
+                                "from_partner_name": "Deans Fujiya Supermarket",
+                                "distance": "92.34 m",
+                                "start_time": "08:45:45",
+                                "time_to_reach": "5 Seconds",
+                                "eta": "08:45:51",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2568,
+                                "sequence": 4,
+                                "line_number": 4,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-3",
+                                "to_partner_id": 20454,
+                                "to_partner_name": "Juma Safar",
+                                "from_partner_id": 19359,
+                                "from_partner_name": "Eagle Restaurant LLC",
+                                "distance": "38.63 m",
+                                "start_time": "09:05:45",
+                                "time_to_reach": "2 Seconds",
+                                "eta": "09:05:48",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2569,
+                                "sequence": 5,
+                                "line_number": 5,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-4",
+                                "to_partner_id": 16392,
+                                "to_partner_name": "Abu Marwan",
+                                "from_partner_id": 20454,
+                                "from_partner_name": "Juma Safar",
+                                "distance": "61.42 m",
+                                "start_time": "09:25:45",
+                                "time_to_reach": "3 Seconds",
+                                "eta": "09:25:49",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2570,
+                                "sequence": 6,
+                                "line_number": 6,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-5",
+                                "to_partner_id": 17748,
+                                "to_partner_name": "Al Sammak",
+                                "from_partner_id": 16392,
+                                "from_partner_name": "Abu Marwan",
+                                "distance": "34.22 m",
+                                "start_time": "09:45:45",
+                                "time_to_reach": "2 Seconds",
+                                "eta": "09:45:47",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2571,
+                                "sequence": 7,
+                                "line_number": 7,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-6",
+                                "to_partner_id": 19077,
+                                "to_partner_name": "City Zone Supermarket",
+                                "from_partner_id": 17748,
+                                "from_partner_name": "Al Sammak",
+                                "distance": "59.75 m",
+                                "start_time": "10:05:45",
+                                "time_to_reach": "3 Seconds",
+                                "eta": "10:05:49",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2572,
+                                "sequence": 8,
+                                "line_number": 8,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-7",
+                                "to_partner_id": 17546,
+                                "to_partner_name": "Al Qithara Foodstuff Trading",
+                                "from_partner_id": 19077,
+                                "from_partner_name": "City Zone Supermarket",
+                                "distance": "258.62 m",
+                                "start_time": "10:25:45",
+                                "time_to_reach": "15 Seconds",
+                                "eta": "10:26:01",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2573,
+                                "sequence": 9,
+                                "line_number": 9,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-8",
+                                "to_partner_id": 23016,
+                                "to_partner_name": "Sunrise City",
+                                "from_partner_id": 17546,
+                                "from_partner_name": "Al Qithara Foodstuff Trading",
+                                "distance": "45.63 m",
+                                "start_time": "10:46:45",
+                                "time_to_reach": "2 Seconds",
+                                "eta": "10:46:48",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2574,
+                                "sequence": 10,
+                                "line_number": 10,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-9",
+                                "to_partner_id": 22999,
+                                "to_partner_name": "Sultan Grocery",
+                                "from_partner_id": 23016,
+                                "from_partner_name": "Sunrise City",
+                                "distance": "125.83 m",
+                                "start_time": "11:06:45",
+                                "time_to_reach": "7 Seconds",
+                                "eta": "11:06:53",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2575,
+                                "sequence": 11,
+                                "line_number": 11,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-10",
+                                "to_partner_id": 19614,
+                                "to_partner_name": "Families Supermarket",
+                                "from_partner_id": 22999,
+                                "from_partner_name": "Sultan Grocery",
+                                "distance": "204.83 m",
+                                "start_time": "11:26:45",
+                                "time_to_reach": "12 Seconds",
+                                "eta": "11:26:58",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2576,
+                                "sequence": 12,
+                                "line_number": 12,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-11",
+                                "to_partner_id": 18741,
+                                "to_partner_name": "Big Value Supermarket",
+                                "from_partner_id": 19614,
+                                "from_partner_name": "Families Supermarket",
+                                "distance": "73.43 m",
+                                "start_time": "11:46:45",
+                                "time_to_reach": "4 Seconds",
+                                "eta": "11:46:50",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2577,
+                                "sequence": 13,
+                                "line_number": 13,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-12",
+                                "to_partner_id": 17837,
+                                "to_partner_name": "Al Sherah Grocery",
+                                "from_partner_id": 18741,
+                                "from_partner_name": "Big Value Supermarket",
+                                "distance": "83.16 m",
+                                "start_time": "12:06:45",
+                                "time_to_reach": "4 Seconds",
+                                "eta": "12:06:50",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2578,
+                                "sequence": 14,
+                                "line_number": 14,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-13",
+                                "to_partner_id": 16527,
+                                "to_partner_name": "Al Adil",
+                                "from_partner_id": 17837,
+                                "from_partner_name": "Al Sherah Grocery",
+                                "distance": "106.82 m",
+                                "start_time": "12:26:45",
+                                "time_to_reach": "6 Seconds",
+                                "eta": "12:26:52",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2579,
+                                "sequence": 15,
+                                "line_number": 15,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-14",
+                                "to_partner_id": 23214,
+                                "to_partner_name": "Teapot Cafe LLC",
+                                "from_partner_id": 16527,
+                                "from_partner_name": "Al Adil",
+                                "distance": "314.75 m",
+                                "start_time": "12:46:45",
+                                "time_to_reach": "18 Seconds",
+                                "eta": "12:47:04",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2580,
+                                "sequence": 16,
+                                "line_number": 16,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-15",
+                                "to_partner_id": 20880,
+                                "to_partner_name": "Madina Supermarket",
+                                "from_partner_id": 23214,
+                                "from_partner_name": "Teapot Cafe LLC",
+                                "distance": "5.65 m",
+                                "start_time": "13:07:45",
+                                "time_to_reach": null,
+                                "eta": "13:07:46",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2581,
+                                "sequence": 17,
+                                "line_number": 17,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-16",
+                                "to_partner_id": 20708,
+                                "to_partner_name": "Lulu International ",
+                                "from_partner_id": 20880,
+                                "from_partner_name": "Madina Supermarket",
+                                "distance": "1.5 m",
+                                "start_time": "13:27:45",
+                                "time_to_reach": null,
+                                "eta": "13:27:46",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2582,
+                                "sequence": 18,
+                                "line_number": 18,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-17",
+                                "to_partner_id": 19720,
+                                "to_partner_name": "Fresh Express Mini Mart",
+                                "from_partner_id": 20708,
+                                "from_partner_name": "Lulu International ",
+                                "distance": "476.88 m",
+                                "start_time": "13:47:45",
+                                "time_to_reach": "28 Seconds",
+                                "eta": "13:48:14",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2583,
+                                "sequence": 19,
+                                "line_number": 19,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-18",
+                                "to_partner_id": 22155,
+                                "to_partner_name": "Red Apple",
+                                "from_partner_id": 19720,
+                                "from_partner_name": "Fresh Express Mini Mart",
+                                "distance": "92.24 m",
+                                "start_time": "14:08:45",
+                                "time_to_reach": "5 Seconds",
+                                "eta": "14:08:51",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2584,
+                                "sequence": 20,
+                                "line_number": 20,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-19",
+                                "to_partner_id": 21011,
+                                "to_partner_name": "Marwan Hassan",
+                                "from_partner_id": 22155,
+                                "from_partner_name": "Red Apple",
+                                "distance": "65.13 m",
+                                "start_time": "14:28:45",
+                                "time_to_reach": "3 Seconds",
+                                "eta": "14:28:49",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2585,
+                                "sequence": 21,
+                                "line_number": 21,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-20",
+                                "to_partner_id": 23257,
+                                "to_partner_name": "Top Star",
+                                "from_partner_id": 21011,
+                                "from_partner_name": "Marwan Hassan",
+                                "distance": "94.16 m",
+                                "start_time": "14:48:45",
+                                "time_to_reach": "5 Seconds",
+                                "eta": "14:48:51",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2586,
+                                "sequence": 22,
+                                "line_number": 22,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-21",
+                                "to_partner_id": 22881,
+                                "to_partner_name": "Simply Fresh Supermarket",
+                                "from_partner_id": 23257,
+                                "from_partner_name": "Top Star",
+                                "distance": "214.66 m",
+                                "start_time": "15:08:45",
+                                "time_to_reach": "12 Seconds",
+                                "eta": "15:08:58",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2587,
+                                "sequence": 23,
+                                "line_number": 23,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-22",
+                                "to_partner_id": 21018,
+                                "to_partner_name": "Masafi Grocery",
+                                "from_partner_id": 22881,
+                                "from_partner_name": "Simply Fresh Supermarket",
+                                "distance": "196.33 m",
+                                "start_time": "15:28:45",
+                                "time_to_reach": "11 Seconds",
+                                "eta": "15:28:57",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2588,
+                                "sequence": 24,
+                                "line_number": 24,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-23",
+                                "to_partner_id": 23690,
+                                "to_partner_name": "Zoom",
+                                "from_partner_id": 21018,
+                                "from_partner_name": "Masafi Grocery",
+                                "distance": "889.5 m",
+                                "start_time": "15:48:45",
+                                "time_to_reach": "53 Seconds",
+                                "eta": "15:49:39",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2589,
+                                "sequence": 25,
+                                "line_number": 25,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-24",
+                                "to_partner_id": 20351,
+                                "to_partner_name": "Jabal Al Safa General Trading",
+                                "from_partner_id": 23690,
+                                "from_partner_name": "Zoom",
+                                "distance": "143.26 m",
+                                "start_time": "16:09:45",
+                                "time_to_reach": "8 Seconds",
+                                "eta": "16:09:54",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2590,
+                                "sequence": 26,
+                                "line_number": 26,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-25",
+                                "to_partner_id": 20128,
+                                "to_partner_name": "Harmoodi",
+                                "from_partner_id": 20351,
+                                "from_partner_name": "Jabal Al Safa General Trading",
+                                "distance": "91.06 m",
+                                "start_time": "16:29:45",
+                                "time_to_reach": "5 Seconds",
+                                "eta": "16:29:51",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2591,
+                                "sequence": 27,
+                                "line_number": 27,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-26",
+                                "to_partner_id": 16669,
+                                "to_partner_name": "Al Bader Mini Mart",
+                                "from_partner_id": 20128,
+                                "from_partner_name": "Harmoodi",
+                                "distance": "122.05 m",
+                                "start_time": "16:49:45",
+                                "time_to_reach": "7 Seconds",
+                                "eta": "16:49:53",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2592,
+                                "sequence": 28,
+                                "line_number": 28,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-27",
+                                "to_partner_id": 18794,
+                                "to_partner_name": "Bright Day Supermarket",
+                                "from_partner_id": 16669,
+                                "from_partner_name": "Al Bader Mini Mart",
+                                "distance": "99.26 m",
+                                "start_time": "17:09:45",
+                                "time_to_reach": "5 Seconds",
+                                "eta": "17:09:51",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2593,
+                                "sequence": 29,
+                                "line_number": 29,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-28",
+                                "to_partner_id": 23706,
+                                "to_partner_name": "Zoom",
+                                "from_partner_id": 18794,
+                                "from_partner_name": "Bright Day Supermarket",
+                                "distance": "161.56 m",
+                                "start_time": "17:29:45",
+                                "time_to_reach": "9 Seconds",
+                                "eta": "17:29:55",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2594,
+                                "sequence": 30,
+                                "line_number": 30,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-29",
+                                "to_partner_id": 19218,
+                                "to_partner_name": "Daraj Al Yasmin",
+                                "from_partner_id": 23706,
+                                "from_partner_name": "Zoom",
+                                "distance": "311.1 m",
+                                "start_time": "17:49:45",
+                                "time_to_reach": "18 Seconds",
+                                "eta": "17:50:04",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2595,
+                                "sequence": 31,
+                                "line_number": 31,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-30",
+                                "to_partner_id": 23716,
+                                "to_partner_name": "Zoom",
+                                "from_partner_id": 19218,
+                                "from_partner_name": "Daraj Al Yasmin",
+                                "distance": "198.84 m",
+                                "start_time": "18:10:45",
+                                "time_to_reach": "11 Seconds",
+                                "eta": "18:10:57",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2596,
+                                "sequence": 32,
+                                "line_number": 32,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-31",
+                                "to_partner_id": 21582,
+                                "to_partner_name": "New West Zone Supermarket",
+                                "from_partner_id": 23716,
+                                "from_partner_name": "Zoom",
+                                "distance": "57.45 m",
+                                "start_time": "18:30:45",
+                                "time_to_reach": "3 Seconds",
+                                "eta": "18:30:49",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2597,
+                                "sequence": 33,
+                                "line_number": 33,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-32",
+                                "to_partner_id": 18172,
+                                "to_partner_name": "Alphabet Restaurant LLC",
+                                "from_partner_id": 21582,
+                                "from_partner_name": "New West Zone Supermarket",
+                                "distance": "1.66 Km",
+                                "start_time": "18:50:45",
+                                "time_to_reach": "1 Minute 39 Seconds",
+                                "eta": "18:52:25",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2598,
+                                "sequence": 34,
+                                "line_number": 34,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-33",
+                                "to_partner_id": 22945,
+                                "to_partner_name": "Spinneys",
+                                "from_partner_id": 18172,
+                                "from_partner_name": "Alphabet Restaurant LLC",
+                                "distance": "562.13 m",
+                                "start_time": "19:12:45",
+                                "time_to_reach": "33 Seconds",
+                                "eta": "19:13:19",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2599,
+                                "sequence": 35,
+                                "line_number": 35,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-34",
+                                "to_partner_id": 18142,
+                                "to_partner_name": "All Day",
+                                "from_partner_id": 22945,
+                                "from_partner_name": "Spinneys",
+                                "distance": "250.66 m",
+                                "start_time": "19:33:45",
+                                "time_to_reach": "15 Seconds",
+                                "eta": "19:34:01",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2600,
+                                "sequence": 36,
+                                "line_number": 36,
+                                "is_start_point": null,
+                                "is_end_point": null,
+                                "trip_number": "Trip-35",
+                                "to_partner_id": 19616,
+                                "to_partner_name": "Families Supermarket",
+                                "from_partner_id": 18142,
+                                "from_partner_name": "All Day",
+                                "distance": "282.36 m",
+                                "start_time": "19:54:45",
+                                "time_to_reach": "16 Seconds",
+                                "eta": "19:55:02",
+                                "visit_duration": "20 Minutes",
+                                "visit_day": "Monday"
+                            },
+                            {
+                                "planned_visit_id": 2601,
+                                "sequence": 37,
+                                "line_number": 37,
+                                "is_start_point": null,
+                                "is_end_point": true,
+                                "trip_number": "Trip End",
+                                "to_partner_id": 1,
+                                "to_partner_name": "Synergia Softwares IT infrastructure LLC",
+                                "from_partner_id": 19616,
+                                "from_partner_name": "Families Supermarket",
+                                "distance": "5.98 Km",
+                                "start_time": "08:50:45",
+                                "time_to_reach": "5 Minutes 58 Seconds",
+                                "eta": "08:56:44",
+                                "visit_duration": null,
+                                "visit_day": "Monday"
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,112 @@
+meta {
+  name: Create Employee Task
+  type: http
+  seq: 61
+}
+
+post {
+  url: 192.168.1.120:8070/web/create_employee_task
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "task": "Sample Employee Task Created From Mobile",
+              "description": "Sample Employee Task Description Created From Mobile",
+              "employee_id": 126,
+              "assigned_by": 126,
+              "date_deadline": "2026-04-15"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Create Employee Task
+  
+  request: {
+    url: 192.168.1.120:8070/web/create_employee_task
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "task": "Sample Employee Task Created From Mobile",
+                  "description": "Sample Employee Task Description Created From Mobile",
+                  "employee_id": 126,
+                  "assigned_by": 126,
+                  "date_deadline": "2026-04-15"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 07 Apr 2026 12:24:27 GMT
+      Content-Length: 733
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "task_details": {
+                        "id": 22,
+                        "name": "TM008",
+                        "task": "Sample Employee Task Created From Mobile",
+                        "description": "<p>Sample Employee Task Description Created From Mobile</p>",
+                        "res_model": null,
+                        "res_doc_id": null,
+                        "res_create_date": null,
+                        "res_name": null,
+                        "date_deadline": "2026-04-15",
+                        "date_done": null,
+                        "employee_id": 126,
+                        "employee_name": "Administrator",
+                        "assigned_by": 126,
+                        "assigned_by_name": "Administrator",
+                        "submitted_by": null,
+                        "submitted_by_name": null,
+                        "approved_by": null,
+                        "approved_by_name": null,
+                        "completed_by": null,
+                        "completed_by_name": null,
+                        "submitted_on": null,
+                        "approved_on": null,
+                        "state": "draft"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

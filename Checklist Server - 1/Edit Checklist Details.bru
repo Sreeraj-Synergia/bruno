@@ -1,0 +1,46 @@
+meta {
+  name: Edit Checklist Details
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8069/web/edit_check_list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "checklist_id": 38,
+              "date": "2024-07-30",
+              "invoice_ref": "INV#2456",
+              "checklist_category_ids": [
+                  1,
+                  5
+              ],
+              "line_ids": [
+                  {
+                      "checklist_category_id": 1,
+                      "checklist_sub_category_id": 1,
+                      "quantity": 5,
+                      "remarks": "Mobile api remark"
+                  },
+                  {
+                      "checklist_category_id": 5,
+                      "checklist_sub_category_id": 8,
+                      "quantity": 5,
+                      "remarks": "Mobile api remark"
+                  }
+              ]
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

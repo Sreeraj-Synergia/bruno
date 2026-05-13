@@ -1,0 +1,23 @@
+meta {
+  name: Pending Loading Data
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{Gravity URL}}/SynTrack/pendingLoadingPull
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: GravitySoftnet_YV5jbMLoBzPbqSDJ4AhB1xnN2xmeB74f
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,192 @@
+meta {
+  name: Update Live Location
+  type: http
+  seq: 9
+}
+
+post {
+  url: localhost:8070/web/update_live_location
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "latitude": 44.5454,
+              "longitude": 25.54545
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Update Live Location
+  
+  request: {
+    url: localhost:8070/web/update_live_location
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "dispatch_id": 6,
+                  "latitude": 44.5454,
+                  "longitude": 25.54545
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 687
+      Set-Cookie: session_id=cc178663b1de1f9868f34e4cc155129a56ee7379; Expires=Fri, 03-Jan-2025 23:17:20 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Sat, 05 Oct 2024 23:17:20 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "location_update": {
+                        "id": 6,
+                        "name": null,
+                        "date": "2024-10-05 21:46:12",
+                        "work_location": 937,
+                        "work_location_name": "Noor Al Shefaa Pharmacy LLC",
+                        "driver_id": 224,
+                        "driver_id_name": "Md Mazba Uddin",
+                        "del_number": null,
+                        "area_code_id": 2,
+                        "area_code_id_name": "Karama",
+                        "employee_id": 261,
+                        "employee_id_name": "Synergia",
+                        "company_id": 1,
+                        "company_id_name": "Zneem Group of companies",
+                        "state": "draft",
+                        "latitude": 44.5454,
+                        "longitude": 25.545450000000002,
+                        "delivery_type_line_ids": [
+                            {
+                                "id": 60,
+                                "type_id": 2,
+                                "type_name": "Invoice Delivery",
+                                "count": 1,
+                                "total": 1500
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Update Live Location
+  
+  request: {
+    url: localhost:8070/web/update_live_location
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "dispatch_id": 6,
+                  "latitude": 44.5454,
+                  "longitude": 25.54545
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 687
+      Set-Cookie: session_id=cc178663b1de1f9868f34e4cc155129a56ee7379; Expires=Fri, 03-Jan-2025 23:17:20 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Sat, 05 Oct 2024 23:17:20 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "location_update": {
+                        "id": 6,
+                        "name": null,
+                        "date": "2024-10-05 21:46:12",
+                        "work_location": 937,
+                        "work_location_name": "Noor Al Shefaa Pharmacy LLC",
+                        "driver_id": 224,
+                        "driver_id_name": "Md Mazba Uddin",
+                        "del_number": null,
+                        "area_code_id": 2,
+                        "area_code_id_name": "Karama",
+                        "employee_id": 261,
+                        "employee_id_name": "Synergia",
+                        "company_id": 1,
+                        "company_id_name": "Zneem Group of companies",
+                        "state": "draft",
+                        "latitude": 44.5454,
+                        "longitude": 25.545450000000002,
+                        "delivery_type_line_ids": [
+                            {
+                                "id": 60,
+                                "type_id": 2,
+                                "type_name": "Invoice Delivery",
+                                "count": 1,
+                                "total": 1500
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

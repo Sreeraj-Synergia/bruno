@@ -1,0 +1,36 @@
+meta {
+  name: edit_crm_activity
+  type: http
+  seq: 13
+}
+
+post {
+  url: http://172.105.55.55:8074/web/edit_crm_activity
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "activity_id": 135,
+              "activity_type_id": 1,
+              "date_deadline": "2024-07-19",
+              "summary": "Call The Customer Edited Activity",
+              "res_id": 304,
+              "additional_assigned_ids": [100],
+              "user_id": false,
+              "note": "Call At 9 o Clock",
+              "assigned_task_id": 1327,
+              "employee_task": false,
+              "employee_id": false
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

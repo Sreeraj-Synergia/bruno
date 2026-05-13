@@ -1,0 +1,258 @@
+meta {
+  name: Uom Details
+  type: http
+  seq: 5
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_uom_uom_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Uom Details
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_uom_uom_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Sat, 01 Feb 2025 12:31:01 GMT
+      Content-Length: 2314
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "uom_details": [
+                        {
+                            "id": 6,
+                            "name": "mm",
+                            "type": "smaller",
+                            "ratio": 1000,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 13,
+                            "name": "g",
+                            "type": "smaller",
+                            "ratio": 1000,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 8,
+                            "name": "cm",
+                            "type": "smaller",
+                            "ratio": 100,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 25,
+                            "name": "in³",
+                            "type": "smaller",
+                            "ratio": 61.0237,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 17,
+                            "name": "in",
+                            "type": "smaller",
+                            "ratio": 39.3701,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 16,
+                            "name": "oz",
+                            "type": "smaller",
+                            "ratio": 35.274,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 22,
+                            "name": "fl oz (US)",
+                            "type": "smaller",
+                            "ratio": 33.814,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 21,
+                            "name": "ft²",
+                            "type": "smaller",
+                            "ratio": 10.76391,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 4,
+                            "name": "Hours",
+                            "type": "smaller",
+                            "ratio": 8,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 18,
+                            "name": "ft",
+                            "type": "smaller",
+                            "ratio": 3.28084,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 15,
+                            "name": "lb",
+                            "type": "smaller",
+                            "ratio": 2.20462,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 19,
+                            "name": "yd",
+                            "type": "smaller",
+                            "ratio": 1.09361,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 23,
+                            "name": "qt (US)",
+                            "type": "smaller",
+                            "ratio": 1.05669,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 1,
+                            "name": "Units",
+                            "type": "reference",
+                            "ratio": 1,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 3,
+                            "name": "Days",
+                            "type": "reference",
+                            "ratio": 1,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 5,
+                            "name": "m",
+                            "type": "reference",
+                            "ratio": 1,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 9,
+                            "name": "m²",
+                            "type": "reference",
+                            "ratio": 1,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 10,
+                            "name": "L",
+                            "type": "reference",
+                            "ratio": 1,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 12,
+                            "name": "KG",
+                            "type": "reference",
+                            "ratio": 1,
+                            "rounding": 0.00001
+                        },
+                        {
+                            "id": 27,
+                            "name": "PCs",
+                            "type": "smaller",
+                            "ratio": 1,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 24,
+                            "name": "gal (US)",
+                            "type": "bigger",
+                            "ratio": 3.78541,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 2,
+                            "name": "Dozens",
+                            "type": "bigger",
+                            "ratio": 12,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 26,
+                            "name": "ft³",
+                            "type": "bigger",
+                            "ratio": 28.316799999999997,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 7,
+                            "name": "km",
+                            "type": "bigger",
+                            "ratio": 1000,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 11,
+                            "name": "m³",
+                            "type": "bigger",
+                            "ratio": 1000,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 14,
+                            "name": "t",
+                            "type": "bigger",
+                            "ratio": 1000,
+                            "rounding": 0.01
+                        },
+                        {
+                            "id": 20,
+                            "name": "mi",
+                            "type": "bigger",
+                            "ratio": 1609.34,
+                            "rounding": 0.01
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

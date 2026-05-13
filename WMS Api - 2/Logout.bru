@@ -1,0 +1,115 @@
+meta {
+  name: Logout
+  type: http
+  seq: 50
+}
+
+post {
+  url: https://wms.syntrack.app/web/session/mobile_logout
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{}}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Logout
+  
+  request: {
+    url: https://wms.syntrack.app/web/session/mobile_logout
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{"data":{}}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 147
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 05:29:50 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 05:29:50 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "message": "Logged out Successfully"
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Logout
+  
+  request: {
+    url: https://wms.syntrack.app/web/session/mobile_logout
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{"data":{}}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 147
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 05:29:50 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 05:29:50 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "message": "Logged out Successfully"
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

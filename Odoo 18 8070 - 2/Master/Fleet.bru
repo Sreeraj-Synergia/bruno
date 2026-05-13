@@ -1,0 +1,19 @@
+meta {
+  name: Fleet
+  type: http
+  seq: 13
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_fleet_master_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}

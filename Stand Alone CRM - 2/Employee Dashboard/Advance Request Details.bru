@@ -1,0 +1,662 @@
+meta {
+  name: Advance Request Details
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:8070/web/get_salary_advance_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "employee_id": false
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Advance Request Details
+  
+  request: {
+    url: http://localhost:8070/web/get_salary_advance_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "employee_id": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 05 Feb 2026 13:57:37 GMT
+      Content-Length: 14767
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "advance_request_details": {
+                        "my_requests": [
+                            {
+                                "id": 11,
+                                "name": "SAR 0010",
+                                "adv_request_type": "salary_adv",
+                                "advance_payment_type": "fixed",
+                                "employee_id": 45,
+                                "employee_name": "Saravanan",
+                                "date": "2026-02-05",
+                                "reason": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "rate_with_comp_currency": 1,
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "advance": 1400,
+                                "department_id": 7,
+                                "department_name": "Administration",
+                                "barcode": null,
+                                "job_id": 20,
+                                "job_name": "Operation Manager",
+                                "work_address_id": 1,
+                                "work_address_name": "Synergia Softwares IT infrastructure LLC",
+                                "work_location_id": 1,
+                                "work_location_name": "Dubai",
+                                "debit_id": 202,
+                                "debit_name": "Salary Advance",
+                                "credit_id": null,
+                                "credit_name": null,
+                                "employee_contract_id": null,
+                                "employee_contract_name": null,
+                                "wage": null,
+                                "adv_pay_duration": 6,
+                                "installment_amount": 233.33333333333334,
+                                "start_installment_date": "2026-02-05",
+                                "last_installment_date": "2026-07-31",
+                                "remaining_amount": 1400,
+                                "paid_amount": null,
+                                "adv_request_payment_ids": null,
+                                "total_comp_currency_amount": 1400,
+                                "payment_voucher_count": null,
+                                "receipt_voucher_count": null,
+                                "payment_voucher_ids": null,
+                                "employee_violation_id": null,
+                                "employee_violation_name": null,
+                                "violation_amount": null,
+                                "signature_approve": null,
+                                "approved_by": null,
+                                "approved_name": null,
+                                "approved_on": null,
+                                "department_signature_approve": null,
+                                "department_approved_on": null,
+                                "company_currency_id": 128,
+                                "company_currency_name": "AED",
+                                "pre_payment_ids": null,
+                                "additional_curr": null,
+                                "deduction_type": "deduct",
+                                "deduction_config_id": null,
+                                "deduction_config_name": null,
+                                "max_allowed_adv": 1400,
+                                "is_emp_adv_self_service": null,
+                                "state": "submit"
+                            },
+                            {
+                                "id": 10,
+                                "name": "SAR 0009",
+                                "adv_request_type": "salary_adv",
+                                "advance_payment_type": "fixed",
+                                "employee_id": 45,
+                                "employee_name": "Saravanan",
+                                "date": "2026-02-05",
+                                "reason": "Sample Advance Payment",
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "rate_with_comp_currency": 1,
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "advance": 5500,
+                                "department_id": 7,
+                                "department_name": "Administration",
+                                "barcode": null,
+                                "job_id": 20,
+                                "job_name": "Operation Manager",
+                                "work_address_id": 1,
+                                "work_address_name": "Synergia Softwares IT infrastructure LLC",
+                                "work_location_id": 1,
+                                "work_location_name": "Dubai",
+                                "debit_id": 202,
+                                "debit_name": "Salary Advance",
+                                "credit_id": null,
+                                "credit_name": null,
+                                "employee_contract_id": null,
+                                "employee_contract_name": null,
+                                "wage": null,
+                                "adv_pay_duration": 3,
+                                "installment_amount": 1833.3333333333333,
+                                "start_installment_date": "2026-03-01",
+                                "last_installment_date": null,
+                                "remaining_amount": 5500,
+                                "paid_amount": null,
+                                "adv_request_payment_ids": [
+                                    {
+                                        "id": 34,
+                                        "date": "2026-03-01",
+                                        "installment_amount": 1833.3333333333333,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 1833.3333333333333,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 35,
+                                        "date": "2026-04-01",
+                                        "installment_amount": 1833.3333333333333,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 1833.3333333333333,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 36,
+                                        "date": "2026-05-01",
+                                        "installment_amount": 1833.3333333333333,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 1833.3333333333333,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 37,
+                                        "date": "2026-03-01",
+                                        "installment_amount": 1833.3333333333333,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 1833.3333333333333,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 38,
+                                        "date": "2026-04-01",
+                                        "installment_amount": 1833.3333333333333,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 1833.3333333333333,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 39,
+                                        "date": "2026-05-01",
+                                        "installment_amount": 1833.3333333333333,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 1833.3333333333333,
+                                        "state": "draft"
+                                    }
+                                ],
+                                "total_comp_currency_amount": 5500,
+                                "payment_voucher_count": null,
+                                "receipt_voucher_count": null,
+                                "payment_voucher_ids": null,
+                                "employee_violation_id": null,
+                                "employee_violation_name": null,
+                                "violation_amount": null,
+                                "signature_approve": "http://localhost:8070/web/url_image?model=advance.request&id=10&field=signature_approve",
+                                "approved_by": null,
+                                "approved_name": null,
+                                "approved_on": "2026-02-05 12:12:28",
+                                "department_signature_approve": null,
+                                "department_approved_on": "2026-02-05 12:12:55",
+                                "company_currency_id": 128,
+                                "company_currency_name": "AED",
+                                "pre_payment_ids": null,
+                                "additional_curr": null,
+                                "deduction_type": "deduct",
+                                "deduction_config_id": null,
+                                "deduction_config_name": null,
+                                "max_allowed_adv": 5500,
+                                "is_emp_adv_self_service": null,
+                                "state": "cancel"
+                            },
+                            {
+                                "id": 7,
+                                "name": "SAR 0006",
+                                "adv_request_type": "salary_adv",
+                                "advance_payment_type": "fixed",
+                                "employee_id": 45,
+                                "employee_name": "Saravanan",
+                                "date": "2026-02-04",
+                                "reason": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "rate_with_comp_currency": 1,
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "advance": 1000,
+                                "department_id": 7,
+                                "department_name": "Administration",
+                                "barcode": null,
+                                "job_id": 20,
+                                "job_name": "Operation Manager",
+                                "work_address_id": 1,
+                                "work_address_name": "Synergia Softwares IT infrastructure LLC",
+                                "work_location_id": 1,
+                                "work_location_name": "Dubai",
+                                "debit_id": 202,
+                                "debit_name": "Salary Advance",
+                                "credit_id": null,
+                                "credit_name": null,
+                                "employee_contract_id": null,
+                                "employee_contract_name": null,
+                                "wage": null,
+                                "adv_pay_duration": 6,
+                                "installment_amount": 166.66666666666666,
+                                "start_installment_date": "2026-03-01",
+                                "last_installment_date": "2026-08-31",
+                                "remaining_amount": 1000,
+                                "paid_amount": null,
+                                "adv_request_payment_ids": [
+                                    {
+                                        "id": 28,
+                                        "date": "2026-03-01",
+                                        "installment_amount": 166.66666666666666,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 166.66666666666666,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 29,
+                                        "date": "2026-04-01",
+                                        "installment_amount": 166.66666666666666,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 166.66666666666666,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 30,
+                                        "date": "2026-05-01",
+                                        "installment_amount": 166.66666666666666,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 166.66666666666666,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 31,
+                                        "date": "2026-06-01",
+                                        "installment_amount": 166.66666666666666,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 166.66666666666666,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 32,
+                                        "date": "2026-07-01",
+                                        "installment_amount": 166.66666666666666,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 166.66666666666666,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 33,
+                                        "date": "2026-08-01",
+                                        "installment_amount": 166.66666666666666,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 166.66666666666666,
+                                        "state": "draft"
+                                    }
+                                ],
+                                "total_comp_currency_amount": 1000,
+                                "payment_voucher_count": null,
+                                "receipt_voucher_count": null,
+                                "payment_voucher_ids": null,
+                                "employee_violation_id": null,
+                                "employee_violation_name": null,
+                                "violation_amount": null,
+                                "signature_approve": "http://localhost:8070/web/url_image?model=advance.request&id=7&field=signature_approve",
+                                "approved_by": 43,
+                                "approved_name": "Administrator",
+                                "approved_on": "2026-02-04 13:20:14",
+                                "department_signature_approve": "http://localhost:8070/web/url_image?model=advance.request&id=7&field=department_signature_approve",
+                                "department_approved_on": "2026-02-04 13:20:38",
+                                "company_currency_id": 128,
+                                "company_currency_name": "AED",
+                                "pre_payment_ids": null,
+                                "additional_curr": null,
+                                "deduction_type": "deduct",
+                                "deduction_config_id": null,
+                                "deduction_config_name": null,
+                                "max_allowed_adv": 1000,
+                                "is_emp_adv_self_service": null,
+                                "state": "approve"
+                            },
+                            {
+                                "id": 6,
+                                "name": "SAR 0005",
+                                "adv_request_type": "salary_adv",
+                                "advance_payment_type": "fixed",
+                                "employee_id": 45,
+                                "employee_name": "Saravanan",
+                                "date": "2026-02-03",
+                                "reason": "personal use",
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "rate_with_comp_currency": 1,
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "advance": 1000,
+                                "department_id": 7,
+                                "department_name": "Administration",
+                                "barcode": null,
+                                "job_id": 20,
+                                "job_name": "Operation Manager",
+                                "work_address_id": 1,
+                                "work_address_name": "Synergia Softwares IT infrastructure LLC",
+                                "work_location_id": 1,
+                                "work_location_name": "Dubai",
+                                "debit_id": 202,
+                                "debit_name": "Salary Advance",
+                                "credit_id": null,
+                                "credit_name": null,
+                                "employee_contract_id": null,
+                                "employee_contract_name": null,
+                                "wage": null,
+                                "adv_pay_duration": 6,
+                                "installment_amount": 166.66666666666666,
+                                "start_installment_date": "2026-03-01",
+                                "last_installment_date": "2026-08-31",
+                                "remaining_amount": 1000,
+                                "paid_amount": null,
+                                "adv_request_payment_ids": [
+                                    {
+                                        "id": 22,
+                                        "date": "2026-03-01",
+                                        "installment_amount": 166.66666666666666,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 166.66666666666666,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 23,
+                                        "date": "2026-04-01",
+                                        "installment_amount": 166.66666666666666,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 166.66666666666666,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 24,
+                                        "date": "2026-05-01",
+                                        "installment_amount": 166.66666666666666,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 166.66666666666666,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 25,
+                                        "date": "2026-06-01",
+                                        "installment_amount": 166.66666666666666,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 166.66666666666666,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 26,
+                                        "date": "2026-07-01",
+                                        "installment_amount": 166.66666666666666,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 166.66666666666666,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 27,
+                                        "date": "2026-08-01",
+                                        "installment_amount": 166.66666666666666,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 166.66666666666666,
+                                        "state": "draft"
+                                    }
+                                ],
+                                "total_comp_currency_amount": 1000,
+                                "payment_voucher_count": 1,
+                                "receipt_voucher_count": null,
+                                "payment_voucher_ids": "account.voucher(1279,)",
+                                "employee_violation_id": null,
+                                "employee_violation_name": null,
+                                "violation_amount": null,
+                                "signature_approve": "http://localhost:8070/web/url_image?model=advance.request&id=6&field=signature_approve",
+                                "approved_by": 43,
+                                "approved_name": "Administrator",
+                                "approved_on": "2026-02-03 13:28:17",
+                                "department_signature_approve": "http://localhost:8070/web/url_image?model=advance.request&id=6&field=department_signature_approve",
+                                "department_approved_on": "2026-02-03 13:28:44",
+                                "company_currency_id": 128,
+                                "company_currency_name": "AED",
+                                "pre_payment_ids": null,
+                                "additional_curr": null,
+                                "deduction_type": "deduct",
+                                "deduction_config_id": null,
+                                "deduction_config_name": null,
+                                "max_allowed_adv": 1000,
+                                "is_emp_adv_self_service": null,
+                                "state": "paid"
+                            }
+                        ],
+                        "others_requests": [
+                            {
+                                "id": 5,
+                                "name": "SAR 0004",
+                                "adv_request_type": "salary_adv",
+                                "advance_payment_type": "fixed",
+                                "employee_id": 29,
+                                "employee_name": "Anisha Joseph",
+                                "date": "2025-10-23",
+                                "reason": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "rate_with_comp_currency": 1,
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "advance": 450.6,
+                                "department_id": 6,
+                                "department_name": "IT Department",
+                                "barcode": "SY0014",
+                                "job_id": 14,
+                                "job_name": "Mobile App Developer",
+                                "work_address_id": 1,
+                                "work_address_name": "Synergia Softwares IT infrastructure LLC",
+                                "work_location_id": 1,
+                                "work_location_name": "Dubai",
+                                "debit_id": 202,
+                                "debit_name": "Salary Advance",
+                                "credit_id": null,
+                                "credit_name": null,
+                                "employee_contract_id": null,
+                                "employee_contract_name": null,
+                                "wage": 8000,
+                                "adv_pay_duration": 1,
+                                "installment_amount": 450.6,
+                                "start_installment_date": "2025-10-01",
+                                "last_installment_date": "2025-10-31",
+                                "remaining_amount": null,
+                                "paid_amount": 450.6,
+                                "adv_request_payment_ids": [
+                                    {
+                                        "id": 19,
+                                        "date": "2025-10-01",
+                                        "installment_amount": 450.6,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 450.6,
+                                        "state": "deducted"
+                                    }
+                                ],
+                                "total_comp_currency_amount": 450.6,
+                                "payment_voucher_count": 1,
+                                "receipt_voucher_count": null,
+                                "payment_voucher_ids": "account.voucher(1097,)",
+                                "employee_violation_id": null,
+                                "employee_violation_name": null,
+                                "violation_amount": null,
+                                "signature_approve": null,
+                                "approved_by": null,
+                                "approved_name": null,
+                                "approved_on": "2025-10-23 07:32:55",
+                                "department_signature_approve": null,
+                                "department_approved_on": "2025-10-23 07:33:03",
+                                "company_currency_id": 128,
+                                "company_currency_name": "AED",
+                                "pre_payment_ids": null,
+                                "additional_curr": null,
+                                "deduction_type": "deduct",
+                                "deduction_config_id": null,
+                                "deduction_config_name": null,
+                                "max_allowed_adv": 450.6,
+                                "is_emp_adv_self_service": null,
+                                "state": "closed"
+                            },
+                            {
+                                "id": 4,
+                                "name": "SAR 0003",
+                                "adv_request_type": "salary_adv",
+                                "advance_payment_type": "fixed",
+                                "employee_id": 9,
+                                "employee_name": "Joseph Mathew",
+                                "date": "2025-10-23",
+                                "reason": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "rate_with_comp_currency": 1,
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "advance": 250.5,
+                                "department_id": 7,
+                                "department_name": "Administration",
+                                "barcode": "SY0006",
+                                "job_id": 18,
+                                "job_name": "CTO",
+                                "work_address_id": 1,
+                                "work_address_name": "Synergia Softwares IT infrastructure LLC",
+                                "work_location_id": 1,
+                                "work_location_name": "Dubai",
+                                "debit_id": 202,
+                                "debit_name": "Salary Advance",
+                                "credit_id": null,
+                                "credit_name": null,
+                                "employee_contract_id": null,
+                                "employee_contract_name": null,
+                                "wage": 50000,
+                                "adv_pay_duration": 6,
+                                "installment_amount": 41.75,
+                                "start_installment_date": "2025-10-01",
+                                "last_installment_date": "2026-03-31",
+                                "remaining_amount": 208.75,
+                                "paid_amount": 41.75,
+                                "adv_request_payment_ids": [
+                                    {
+                                        "id": 13,
+                                        "date": "2025-10-01",
+                                        "installment_amount": 41.75,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 41.75,
+                                        "state": "deducted"
+                                    },
+                                    {
+                                        "id": 14,
+                                        "date": "2025-11-01",
+                                        "installment_amount": 41.75,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 41.75,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 15,
+                                        "date": "2025-12-01",
+                                        "installment_amount": 41.75,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 41.75,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 16,
+                                        "date": "2026-01-01",
+                                        "installment_amount": 41.75,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 41.75,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 17,
+                                        "date": "2026-02-01",
+                                        "installment_amount": 41.75,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 41.75,
+                                        "state": "draft"
+                                    },
+                                    {
+                                        "id": 18,
+                                        "date": "2026-03-01",
+                                        "installment_amount": 41.75,
+                                        "partial_paid_amount": null,
+                                        "deductable_amount": 41.75,
+                                        "state": "draft"
+                                    }
+                                ],
+                                "total_comp_currency_amount": 250.5,
+                                "payment_voucher_count": 1,
+                                "receipt_voucher_count": null,
+                                "payment_voucher_ids": "account.voucher(1096,)",
+                                "employee_violation_id": null,
+                                "employee_violation_name": null,
+                                "violation_amount": null,
+                                "signature_approve": null,
+                                "approved_by": null,
+                                "approved_name": null,
+                                "approved_on": "2025-10-23 07:24:05",
+                                "department_signature_approve": null,
+                                "department_approved_on": "2025-10-23 07:24:15",
+                                "company_currency_id": 128,
+                                "company_currency_name": "AED",
+                                "pre_payment_ids": null,
+                                "additional_curr": null,
+                                "deduction_type": "deduct",
+                                "deduction_config_id": null,
+                                "deduction_config_name": null,
+                                "max_allowed_adv": 250.5,
+                                "is_emp_adv_self_service": null,
+                                "state": "paid"
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

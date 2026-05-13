@@ -1,0 +1,140 @@
+meta {
+  name: CRM Stages
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://172.105.55.55:8074/web/get_crm_stages
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: CRM Stages
+  
+  request: {
+    url: http://172.105.55.55:8073/web/get_crm_stages
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 1433
+      Set-Cookie: session_id=5c3ca46c86c87dc929486e914d344aceef2da3e9; Expires=Sun, 22-Sep-2024 09:05:23 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 24 Jun 2024 09:05:23 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "crm_stage_details": [
+                        {
+                            "id": 18,
+                            "name": "Suspect",
+                            "industry_type_id": false,
+                            "industry_type_name": false,
+                            "service_type_id": false,
+                            "service_type_name": false
+                        },
+                        {
+                            "id": 17,
+                            "name": "Prospect",
+                            "industry_type_id": false,
+                            "industry_type_name": false,
+                            "service_type_id": false,
+                            "service_type_name": false
+                        },
+                        {
+                            "id": 16,
+                            "name": "Contact",
+                            "industry_type_id": false,
+                            "industry_type_name": false,
+                            "service_type_id": false,
+                            "service_type_name": false
+                        },
+                        {
+                            "id": 15,
+                            "name": "Proposal",
+                            "industry_type_id": false,
+                            "industry_type_name": false,
+                            "service_type_id": false,
+                            "service_type_name": false
+                        },
+                        {
+                            "id": 14,
+                            "name": "Agreed Shipping",
+                            "industry_type_id": false,
+                            "industry_type_name": false,
+                            "service_type_id": false,
+                            "service_type_name": false
+                        },
+                        {
+                            "id": 13,
+                            "name": "Implementation",
+                            "industry_type_id": false,
+                            "industry_type_name": false,
+                            "service_type_id": false,
+                            "service_type_name": false
+                        },
+                        {
+                            "id": 12,
+                            "name": "Trading",
+                            "industry_type_id": false,
+                            "industry_type_name": false,
+                            "service_type_id": false,
+                            "service_type_name": false
+                        },
+                        {
+                            "id": 11,
+                            "name": "Ship to Profile",
+                            "industry_type_id": false,
+                            "industry_type_name": false,
+                            "service_type_id": false,
+                            "service_type_name": false
+                        },
+                        {
+                            "id": 10,
+                            "name": "Unable to Gain",
+                            "industry_type_id": false,
+                            "industry_type_name": false,
+                            "service_type_id": false,
+                            "service_type_name": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

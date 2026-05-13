@@ -1,0 +1,351 @@
+meta {
+  name: Invoice return details
+  type: http
+  seq: 51
+}
+
+post {
+  url: 192.168.1.119:8071/web/get_user_invoice_return_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "page": 0,
+          "data": {
+              "picking_id": false,
+              "invoice_id": 2859
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Invoice Return Details
+  
+  request: {
+    url: 192.168.1.119:8071/web/get_user_invoice_return_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "page": 0,
+              "data": {
+                  "picking_id": false,
+                  "invoice_id": 2859
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 23 May 2025 12:41:46 GMT
+      Content-Length: 2776
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "invoice_return_details": [
+                        {
+                            "id": 1009,
+                            "name": "MS/SR/00008",
+                            "partner_id": 23347,
+                            "partner_name": "Viva",
+                            "picking_type_code": "incoming",
+                            "picking_type_id": 14,
+                            "picking_type_name": "Sales Return",
+                            "location_id": 5,
+                            "location_name": "Customers",
+                            "scheduled_date": "2025-05-23 08:15:51",
+                            "date_done": "2025-05-23 08:15:51",
+                            "origin": "Return of MS/OUT/00020",
+                            "system_origin": "OR00039",
+                            "state": "done",
+                            "receiver_name": null,
+                            "receiver_no": null,
+                            "recv_id_img": "http://localhost:8071/web/url_image?model=stock.picking&id=1009&field=receiver_identity",
+                            "act_del_time": null,
+                            "recv_sign": "http://localhost:8071/web/url_image?model=stock.picking&id=1009&field=receiver_signature",
+                            "stock_move_details": [
+                                {
+                                    "id": 2429,
+                                    "product_id": 2916,
+                                    "product_name": "Arun Ice Cream Vanila 12s Pack",
+                                    "product_packaging_id": null,
+                                    "product_packaging_name": null,
+                                    "location_final_id": null,
+                                    "location_final_name": null,
+                                    "packaging_qty": null,
+                                    "product_uom_qty": 2,
+                                    "received_package_qty": null,
+                                    "quantity": 2,
+                                    "product_uom": 1,
+                                    "product_uom_name": "Units",
+                                    "lot_ids": [
+                                        2523
+                                    ],
+                                    "state": "done",
+                                    "stock_move_line_details": [
+                                        {
+                                            "id": 10835,
+                                            "product_id": 2916,
+                                            "expiration_date": "2026-01-01 20:00:00",
+                                            "lot_id": 2523,
+                                            "lot_name": "AIC00200",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 5,
+                                            "location_name": "Customers",
+                                            "location_dest_id": 42,
+                                            "location_dest_name": "Non-Sellable Return location",
+                                            "picking_partner_id": 23347,
+                                            "picking_partner_name": "Viva",
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 2,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "done",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "qty_in_pack": null,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "cust_return",
+                                            "available_qty": null,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": null,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null,
+                                            "return_reason_id": null,
+                                            "return_reason_name": null,
+                                            "qty_returned": null
+                                        }
+                                    ],
+                                    "qty_in_pack": null,
+                                    "received_pack_qty": null,
+                                    "remaining_pack_qty": null,
+                                    "received_qty": 2,
+                                    "remaining_qty": null,
+                                    "internal_ref": "A200203",
+                                    "barcode": "0200034",
+                                    "available_qty": null,
+                                    "transaction_type": "cust_return",
+                                    "check_for_packaging": null,
+                                    "use_manufacture_date": null,
+                                    "hs_code": null,
+                                    "country_of_origin": null,
+                                    "country_of_origin_name": null,
+                                    "invoice_line_id": 6922,
+                                    "return_reason_id": 1,
+                                    "return_reason_name": "Damaged"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Invoice Return Details
+  
+  request: {
+    url: 192.168.1.119:8071/web/get_user_invoice_return_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "page": 0,
+              "data": {
+                  "picking_id": false,
+                  "invoice_id": 2859
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 23 May 2025 12:41:46 GMT
+      Content-Length: 2776
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "invoice_return_details": [
+                        {
+                            "id": 1009,
+                            "name": "MS/SR/00008",
+                            "partner_id": 23347,
+                            "partner_name": "Viva",
+                            "picking_type_code": "incoming",
+                            "picking_type_id": 14,
+                            "picking_type_name": "Sales Return",
+                            "location_id": 5,
+                            "location_name": "Customers",
+                            "scheduled_date": "2025-05-23 08:15:51",
+                            "date_done": "2025-05-23 08:15:51",
+                            "origin": "Return of MS/OUT/00020",
+                            "system_origin": "OR00039",
+                            "state": "done",
+                            "receiver_name": null,
+                            "receiver_no": null,
+                            "recv_id_img": "http://localhost:8071/web/url_image?model=stock.picking&id=1009&field=receiver_identity",
+                            "act_del_time": null,
+                            "recv_sign": "http://localhost:8071/web/url_image?model=stock.picking&id=1009&field=receiver_signature",
+                            "stock_move_details": [
+                                {
+                                    "id": 2429,
+                                    "product_id": 2916,
+                                    "product_name": "Arun Ice Cream Vanila 12s Pack",
+                                    "product_packaging_id": null,
+                                    "product_packaging_name": null,
+                                    "location_final_id": null,
+                                    "location_final_name": null,
+                                    "packaging_qty": null,
+                                    "product_uom_qty": 2,
+                                    "received_package_qty": null,
+                                    "quantity": 2,
+                                    "product_uom": 1,
+                                    "product_uom_name": "Units",
+                                    "lot_ids": [
+                                        2523
+                                    ],
+                                    "state": "done",
+                                    "stock_move_line_details": [
+                                        {
+                                            "id": 10835,
+                                            "product_id": 2916,
+                                            "expiration_date": "2026-01-01 20:00:00",
+                                            "lot_id": 2523,
+                                            "lot_name": "AIC00200",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 5,
+                                            "location_name": "Customers",
+                                            "location_dest_id": 42,
+                                            "location_dest_name": "Non-Sellable Return location",
+                                            "picking_partner_id": 23347,
+                                            "picking_partner_name": "Viva",
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 2,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "done",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "qty_in_pack": null,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "cust_return",
+                                            "available_qty": null,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": null,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null,
+                                            "return_reason_id": null,
+                                            "return_reason_name": null,
+                                            "qty_returned": null
+                                        }
+                                    ],
+                                    "qty_in_pack": null,
+                                    "received_pack_qty": null,
+                                    "remaining_pack_qty": null,
+                                    "received_qty": 2,
+                                    "remaining_qty": null,
+                                    "internal_ref": "A200203",
+                                    "barcode": "0200034",
+                                    "available_qty": null,
+                                    "transaction_type": "cust_return",
+                                    "check_for_packaging": null,
+                                    "use_manufacture_date": null,
+                                    "hs_code": null,
+                                    "country_of_origin": null,
+                                    "country_of_origin_name": null,
+                                    "invoice_line_id": 6922,
+                                    "return_reason_id": 1,
+                                    "return_reason_name": "Damaged"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

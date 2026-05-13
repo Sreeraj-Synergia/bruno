@@ -1,0 +1,46 @@
+meta {
+  name: Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: localhost:8069/web/session/mobile_login?db=NewDelivery
+  body: json
+  auth: inherit
+}
+
+params:query {
+  db: NewDelivery
+}
+
+body:json {
+  {
+      "params": {
+          "db": "NewDelivery",
+          "login": "van1",
+          "password": "123",
+          "device_name": "TC15",
+          "imei_no": "13-27-27.00-TG-U00-STD-GRT-04",
+          "latitude": "25.26555",
+          "ip_address": "192.168.1.119",
+          "longitude": "50.695655",
+          "fcm_id": "dUA1GA9TTm2fmM4GKnZpTJ:APA91bHb7lxngQqrKFGYI-vJqHGFoEw902qHeYInZmBGQXmhC5Y4znjuG0W1WZq-c35s5ZCbE2Lb9MtyeAlwthucvgOkWSSyNhOH3Afxm-_mM_D9IRM6RlE"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  | **Params** | **Datatype** |
+  | --- | --- |
+  | login | String |
+  | password | String |
+  | device_name | String |
+  | imei_no | String |
+  
+  Login to Mobile Application
+}

@@ -1,0 +1,699 @@
+meta {
+  name: Actual Visit Status Update
+  type: http
+  seq: 44
+}
+
+post {
+  url: 192.168.1.119:8070/web/act_visit_update_status
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params":{
+          "data":{
+              "actual_visit_id": 1122,
+              "status": "cancel",
+              "cancel_reason": 1
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Status-Arrive
+  
+  request: {
+    url: 192.168.1.119:8070/web/act_visit_update_status
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params":{
+              "data":{
+                  "day_plan_id":32,
+                  "actual_visit_id": 1121,
+                  "status": "arrived"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 05 May 2025 13:16:50 GMT
+      Content-Length: 815
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "visit_data": {
+                        "actual_visit_id": 1121,
+                        "sequence": 2,
+                        "visit_sequence": 2,
+                        "line_number": 2,
+                        "is_start_point": null,
+                        "is_end_point": null,
+                        "trip_number": "Trip-1",
+                        "to_partner_id": 23300,
+                        "to_partner_name": "Union Co-operative Society",
+                        "from_partner_id": 18201,
+                        "from_partner_name": "Amwaj Al Madeena",
+                        "plan_from_partner_id": 18201,
+                        "plan_from_partner_name": "Amwaj Al Madeena",
+                        "distance": "43.78 m",
+                        "start_time": null,
+                        "time_to_reach": "2 Seconds",
+                        "eta": "08:21:47",
+                        "visit_duration": "20 Minutes",
+                        "visit_day": "Monday",
+                        "is_visited": true,
+                        "ata": "13:16:46",
+                        "ata_text": "2 Seconds",
+                        "cancel_reason_id": 0,
+                        "other_cancel_reason": null,
+                        "visit_state": "reached",
+                        "visit_state_label": "Arrived"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Status - Check In
+  
+  request: {
+    url: 192.168.1.119:8070/web/act_visit_update_status
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params":{
+              "data":{
+                  "day_plan_id":32,
+                  "actual_visit_id": 1121,
+                  "status": "checkin"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 05 May 2025 13:20:03 GMT
+      Content-Length: 814
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "visit_data": {
+                        "actual_visit_id": 1121,
+                        "sequence": 2,
+                        "visit_sequence": 2,
+                        "line_number": 2,
+                        "is_start_point": null,
+                        "is_end_point": null,
+                        "trip_number": "Trip-1",
+                        "to_partner_id": 23300,
+                        "to_partner_name": "Union Co-operative Society",
+                        "from_partner_id": 18201,
+                        "from_partner_name": "Amwaj Al Madeena",
+                        "plan_from_partner_id": 18201,
+                        "plan_from_partner_name": "Amwaj Al Madeena",
+                        "distance": "43.78 m",
+                        "start_time": null,
+                        "time_to_reach": "2 Seconds",
+                        "eta": "08:21:47",
+                        "visit_duration": "20 Minutes",
+                        "visit_day": "Monday",
+                        "is_visited": true,
+                        "ata": "13:16:46",
+                        "ata_text": "2 Seconds",
+                        "cancel_reason_id": 0,
+                        "other_cancel_reason": null,
+                        "visit_state": "checkin",
+                        "visit_state_label": "Check-IN"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Status - Checkout
+  
+  request: {
+    url: 192.168.1.119:8070/web/act_visit_update_status
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params":{
+              "data":{
+                  "day_plan_id":32,
+                  "actual_visit_id": 1121,
+                  "status": "checkout"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 05 May 2025 13:21:12 GMT
+      Content-Length: 816
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "visit_data": {
+                        "actual_visit_id": 1121,
+                        "sequence": 2,
+                        "visit_sequence": 3,
+                        "line_number": 2,
+                        "is_start_point": null,
+                        "is_end_point": null,
+                        "trip_number": "Trip-1",
+                        "to_partner_id": 23300,
+                        "to_partner_name": "Union Co-operative Society",
+                        "from_partner_id": 23300,
+                        "from_partner_name": "Union Co-operative Society",
+                        "plan_from_partner_id": 18201,
+                        "plan_from_partner_name": "Amwaj Al Madeena",
+                        "distance": "0.0 m",
+                        "start_time": null,
+                        "time_to_reach": "2 Seconds",
+                        "eta": "08:21:47",
+                        "visit_duration": "20 Minutes",
+                        "visit_day": "Monday",
+                        "is_visited": true,
+                        "ata": "13:20:53",
+                        "ata_text": null,
+                        "cancel_reason_id": 0,
+                        "other_cancel_reason": null,
+                        "visit_state": "checkout",
+                        "visit_state_label": "Checkout"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Status - Cancelled
+  
+  request: {
+    url: 192.168.1.119:8070/web/act_visit_update_status
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params":{
+              "data":{
+                  "actual_visit_id": 1122,
+                  "status": "cancel",
+                  "cancel_reason": 1
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 05 May 2025 13:26:13 GMT
+      Content-Length: 815
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "visit_data": {
+                        "actual_visit_id": 1122,
+                        "sequence": 3,
+                        "visit_sequence": 4,
+                        "line_number": 3,
+                        "is_start_point": null,
+                        "is_end_point": null,
+                        "trip_number": "Trip-2",
+                        "to_partner_id": 23772,
+                        "to_partner_name": "Zoom",
+                        "from_partner_id": 23300,
+                        "from_partner_name": "Union Co-operative Society",
+                        "plan_from_partner_id": 23300,
+                        "plan_from_partner_name": "Union Co-operative Society",
+                        "distance": "504.87 m",
+                        "start_time": null,
+                        "time_to_reach": "30 Seconds",
+                        "eta": "08:42:15",
+                        "visit_duration": "20 Minutes",
+                        "visit_day": "Monday",
+                        "is_visited": true,
+                        "ata": "13:22:33",
+                        "ata_text": "30 Seconds",
+                        "cancel_reason_id": 0,
+                        "other_cancel_reason": null,
+                        "visit_state": "cancel",
+                        "visit_state_label": "Cancelled"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Status - Cancelled
+  
+  request: {
+    url: 192.168.1.119:8070/web/act_visit_update_status
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params":{
+              "data":{
+                  "actual_visit_id": 1122,
+                  "status": "cancel",
+                  "cancel_reason": 1
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 05 May 2025 13:26:13 GMT
+      Content-Length: 815
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "visit_data": {
+                        "actual_visit_id": 1122,
+                        "sequence": 3,
+                        "visit_sequence": 4,
+                        "line_number": 3,
+                        "is_start_point": null,
+                        "is_end_point": null,
+                        "trip_number": "Trip-2",
+                        "to_partner_id": 23772,
+                        "to_partner_name": "Zoom",
+                        "from_partner_id": 23300,
+                        "from_partner_name": "Union Co-operative Society",
+                        "plan_from_partner_id": 23300,
+                        "plan_from_partner_name": "Union Co-operative Society",
+                        "distance": "504.87 m",
+                        "start_time": null,
+                        "time_to_reach": "30 Seconds",
+                        "eta": "08:42:15",
+                        "visit_duration": "20 Minutes",
+                        "visit_day": "Monday",
+                        "is_visited": true,
+                        "ata": "13:22:33",
+                        "ata_text": "30 Seconds",
+                        "cancel_reason_id": 0,
+                        "other_cancel_reason": null,
+                        "visit_state": "cancel",
+                        "visit_state_label": "Cancelled"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Status - Checkout
+  
+  request: {
+    url: 192.168.1.119:8070/web/act_visit_update_status
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params":{
+              "data":{
+                  "day_plan_id":32,
+                  "actual_visit_id": 1121,
+                  "status": "checkout"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 05 May 2025 13:21:12 GMT
+      Content-Length: 816
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "visit_data": {
+                        "actual_visit_id": 1121,
+                        "sequence": 2,
+                        "visit_sequence": 3,
+                        "line_number": 2,
+                        "is_start_point": null,
+                        "is_end_point": null,
+                        "trip_number": "Trip-1",
+                        "to_partner_id": 23300,
+                        "to_partner_name": "Union Co-operative Society",
+                        "from_partner_id": 23300,
+                        "from_partner_name": "Union Co-operative Society",
+                        "plan_from_partner_id": 18201,
+                        "plan_from_partner_name": "Amwaj Al Madeena",
+                        "distance": "0.0 m",
+                        "start_time": null,
+                        "time_to_reach": "2 Seconds",
+                        "eta": "08:21:47",
+                        "visit_duration": "20 Minutes",
+                        "visit_day": "Monday",
+                        "is_visited": true,
+                        "ata": "13:20:53",
+                        "ata_text": null,
+                        "cancel_reason_id": 0,
+                        "other_cancel_reason": null,
+                        "visit_state": "checkout",
+                        "visit_state_label": "Checkout"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Status - Check In
+  
+  request: {
+    url: 192.168.1.119:8070/web/act_visit_update_status
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params":{
+              "data":{
+                  "day_plan_id":32,
+                  "actual_visit_id": 1121,
+                  "status": "checkin"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 05 May 2025 13:20:03 GMT
+      Content-Length: 814
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "visit_data": {
+                        "actual_visit_id": 1121,
+                        "sequence": 2,
+                        "visit_sequence": 2,
+                        "line_number": 2,
+                        "is_start_point": null,
+                        "is_end_point": null,
+                        "trip_number": "Trip-1",
+                        "to_partner_id": 23300,
+                        "to_partner_name": "Union Co-operative Society",
+                        "from_partner_id": 18201,
+                        "from_partner_name": "Amwaj Al Madeena",
+                        "plan_from_partner_id": 18201,
+                        "plan_from_partner_name": "Amwaj Al Madeena",
+                        "distance": "43.78 m",
+                        "start_time": null,
+                        "time_to_reach": "2 Seconds",
+                        "eta": "08:21:47",
+                        "visit_duration": "20 Minutes",
+                        "visit_day": "Monday",
+                        "is_visited": true,
+                        "ata": "13:16:46",
+                        "ata_text": "2 Seconds",
+                        "cancel_reason_id": 0,
+                        "other_cancel_reason": null,
+                        "visit_state": "checkin",
+                        "visit_state_label": "Check-IN"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Status-Arrive
+  
+  request: {
+    url: 192.168.1.119:8070/web/act_visit_update_status
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params":{
+              "data":{
+                  "day_plan_id":32,
+                  "actual_visit_id": 1121,
+                  "status": "arrived"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 05 May 2025 13:16:50 GMT
+      Content-Length: 815
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "visit_data": {
+                        "actual_visit_id": 1121,
+                        "sequence": 2,
+                        "visit_sequence": 2,
+                        "line_number": 2,
+                        "is_start_point": null,
+                        "is_end_point": null,
+                        "trip_number": "Trip-1",
+                        "to_partner_id": 23300,
+                        "to_partner_name": "Union Co-operative Society",
+                        "from_partner_id": 18201,
+                        "from_partner_name": "Amwaj Al Madeena",
+                        "plan_from_partner_id": 18201,
+                        "plan_from_partner_name": "Amwaj Al Madeena",
+                        "distance": "43.78 m",
+                        "start_time": null,
+                        "time_to_reach": "2 Seconds",
+                        "eta": "08:21:47",
+                        "visit_duration": "20 Minutes",
+                        "visit_day": "Monday",
+                        "is_visited": true,
+                        "ata": "13:16:46",
+                        "ata_text": "2 Seconds",
+                        "cancel_reason_id": 0,
+                        "other_cancel_reason": null,
+                        "visit_state": "reached",
+                        "visit_state_label": "Arrived"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

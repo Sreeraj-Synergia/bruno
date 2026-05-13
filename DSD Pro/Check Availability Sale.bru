@@ -1,0 +1,247 @@
+meta {
+  name: Check Availability Sale
+  type: http
+  seq: 36
+}
+
+post {
+  url: https://erp.syntrack.app/web/get_check_availability
+  body: json
+  auth: inherit
+}
+
+body:json {
+   {"params":{"data":{"product_id":2373}}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Check Availability Available
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_check_availability
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "product_id": 2925
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 11 Apr 2025 10:14:30 GMT
+      Content-Length: 225
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "stock_details": {
+                        "product_id": 2925,
+                        "product_name": "Toblerone",
+                        "uom": 1,
+                        "uom_uom": "Units",
+                        "total_qty": 432
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Check Availability UnAvailable
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_check_availability
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "product_id": 2375
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 11 Apr 2025 10:14:55 GMT
+      Content-Length: 134
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": false,
+                "payload": {},
+                "error": {
+                    "code": 200,
+                    "message": "Stock Not Available!"
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Check Availability Available
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_check_availability
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "product_id": 2925
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 11 Apr 2025 10:14:30 GMT
+      Content-Length: 225
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "stock_details": {
+                        "product_id": 2925,
+                        "product_name": "Toblerone",
+                        "uom": 1,
+                        "uom_uom": "Units",
+                        "total_qty": 432
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Check Availability UnAvailable
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_check_availability
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "product_id": 2375
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 11 Apr 2025 10:14:55 GMT
+      Content-Length: 134
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": false,
+                "payload": {},
+                "error": {
+                    "code": 200,
+                    "message": "Stock Not Available!"
+                }
+            }
+        }
+      '''
+    }
+  }
+}

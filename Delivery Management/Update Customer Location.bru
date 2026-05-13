@@ -1,0 +1,28 @@
+meta {
+  name: Update Customer Location
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://194.195.116.73:8071/web/update_partner_location
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "partner_id": 1356,
+              "latitude": 25.184758209721394,
+              "longitude": 55.40807705372572
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

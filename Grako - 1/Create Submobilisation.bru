@@ -1,0 +1,26 @@
+meta {
+  name: Create Submobilisation
+  type: http
+  seq: 60
+}
+
+post {
+  url: https://grako.syntrack.app/web/create_proj_submobilisation
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "mobilisation_id": 64,
+              "mob_date": "03/12/2025"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

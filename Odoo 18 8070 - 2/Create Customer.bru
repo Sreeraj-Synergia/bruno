@@ -1,0 +1,180 @@
+meta {
+  name: Create Customer
+  type: http
+  seq: 8
+}
+
+post {
+  url: 192.168.1.119:8070/web/create_customer
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "addr1": "Address 1",
+              "addr2": "Address 2",
+              "city": "Dubai",
+              "contact_list": [
+                  {
+                      "contact_id": 0,
+                      "contact_name": "Kavya",
+                      "contact_phone": "28866",
+                      "designation": "Developer"
+                  }
+              ],
+              "cust_origin": "1721119897CUST202411",
+              "customer_type": "Company",
+              "customer_ref":"FNUBS00220201",
+              "email": "test@gmail.com",
+              "isVendor": false,
+              "latitude": 0.0,
+              "longitude": 0.0,
+              "mobile": "055366666",
+              "name": "Test4",
+              "payment_type": "credit",
+              "credit_limit": 5652.00,
+              "phone": "0554566",
+              "trade_reg": "4689999",
+              "trn": "468900",
+              "website": "www.test.com"
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Create Customer
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_customer
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "addr1": "Address 1",
+                  "addr2": "Address 2",
+                  "city": "Dubai",
+                  "contact_list": [
+                      {
+                          "contact_id": 0,
+                          "contact_name": "Kavya",
+                          "contact_phone": "28866",
+                          "designation": "Developer"
+                      }
+                  ],
+                  "credit_limit": 0,
+                  "cust_origin": "1721119897CUST202407",
+                  "customer_type": "Company",
+                  "email": "test@gmail.com",
+                  "isVendor": false,
+                  "latitude": 0.0,
+                  "longitude": 0.0,
+                  "mobile": "055366666",
+                  "name": "Test",
+                  "payment_type": "cash",
+                  "phone": "0554566",
+                  "trade_reg": "4689999",
+                  "trn": "468900",
+                  "website": "www.test.com"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 24 Feb 2025 12:20:04 GMT
+      Content-Length: 1306
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "partner_details": {
+                        "customer_id": 23911,
+                        "name": "Test",
+                        "street": "Address 1",
+                        "street2": "Address 2",
+                        "city": "Dubai",
+                        "zip": null,
+                        "state_id": null,
+                        "state_name": null,
+                        "country_id": 2,
+                        "country_name": "United Arab Emirates",
+                        "currency_id": 128,
+                        "currency": "AED",
+                        "email": "test@gmail.com",
+                        "website": "http://www.test.com",
+                        "phone": "0554566",
+                        "mobile": "055366666",
+                        "trn": "468900",
+                        "trade_reg": "4689999",
+                        "trade_reg_expiry": null,
+                        "latitude": null,
+                        "longitude": null,
+                        "pricelist_id": null,
+                        "pricelist_name": null,
+                        "customer_ref": null,
+                        "payment_type": "cash",
+                        "credit_limit": null,
+                        "due_amount": null,
+                        "allow_overcredit_limit": null,
+                        "over_limit_amount": null,
+                        "confirmed_customer": null,
+                        "payment_terms_id": null,
+                        "payment_terms_name": null,
+                        "logo_url": "http://localhost:8070/web/image?model=res.partner&id=23911&field=image_1920",
+                        "contact_name": null,
+                        "contact_phone": null,
+                        "customer": true,
+                        "supplier": false,
+                        "debit_limit": null,
+                        "current_credit_amount": 0,
+                        "contact_list": [],
+                        "area_code_id": null,
+                        "area_code_name": null,
+                        "barcode": null,
+                        "disable_loc_update": null,
+                        "employee_id": null,
+                        "employee_name": null,
+                        "company_registry": "1721119897CUST202407",
+                        "is_contact": false
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

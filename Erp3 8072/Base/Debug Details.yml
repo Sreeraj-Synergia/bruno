@@ -8,7 +8,7 @@ http:
   url: "{{Erp3-Local-8072}}/web/user_debug_details"
   body:
     type: json
-    data: ""
+    data: "{}"
   auth: inherit
 
 settings:
@@ -16,3 +16,388 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Debug Details
+    request:
+      url: "{{Erp3-Local-8072}}/web/user_debug_details"
+      method: POST
+      body:
+        type: json
+        data: "{}"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: Werkzeug/3.0.1 Python/3.12.3
+        - name: date
+          value: Thu, 07 May 2026 05:58:05 GMT
+        - name: content-length
+          value: "9266"
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: x-content-type-options
+          value: nosniff
+        - name: connection
+          value: close
+      body:
+        type: json
+        data: |-
+          {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+              "success": true,
+              "payload": {
+                "user_debug_details": [
+                  {
+                    "name": "Company Information",
+                    "help": "If this set to 'Show' then the device user will have access to company information on the device.",
+                    "value": "Show",
+                    "access": true
+                  },
+                  {
+                    "name": "Live Location Tracking",
+                    "help": "If this set to 'Enable' then the device location will be tracked(only if the device is online).",
+                    "value": "Enable",
+                    "access": true
+                  },
+                  {
+                    "name": "Backup Offline Data",
+                    "help": "If this set to 'Enable' then the device will save the data internally rather than updating data to system and once device get back online the user can sync the data to the system.",
+                    "value": "Enable",
+                    "access": true
+                  },
+                  {
+                    "name": "Areacode Based Customers",
+                    "help": "Enable This to Show Customers Based On Areacode On Mobile Application.",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Invoices",
+                    "help": "If this set to 'Show' then the device user will have access invoices information on device.",
+                    "value": "Show",
+                    "access": true
+                  },
+                  {
+                    "name": "Invoice Creation",
+                    "help": "Enable This to Show create invoice Option on Mobile",
+                    "value": "Enable",
+                    "access": true
+                  },
+                  {
+                    "name": "Invoice Global Discount",
+                    "help": "If enabled then in invoice the mobile user can apply global discount to the invoice",
+                    "value": "Enable",
+                    "access": true
+                  },
+                  {
+                    "name": "Invoice Line Discount",
+                    "help": "If enabled then in invoice the mobile user can apply discount on each line of the invoice",
+                    "value": "Enable",
+                    "access": true
+                  },
+                  {
+                    "name": "Discount Applicable On",
+                    "help": "If enabled then in invoice the mobile user can apply global discount to the invoice based on the customer type",
+                    "value": "Both Credit & Cash Customer",
+                    "access": false
+                  },
+                  {
+                    "name": "Activity Management",
+                    "help": "If this set to 'Enable' then the device user will have access activities on device.",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Customers",
+                    "help": "If this set to 'Show' then the device user will have access customer information on device.",
+                    "value": "Show",
+                    "access": true
+                  },
+                  {
+                    "name": "Edit Customer",
+                    "help": "Enable This to Show Edit Customers Option on Mobile",
+                    "value": false,
+                    "access": false
+                  },
+                  {
+                    "name": "Cash Payment Only",
+                    "help": "If enabled then the mobile user can accept cash from a customer from mobile application.",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Show Payment Receipt",
+                    "help": "If enabled then the mobile user can  see payment receipt on mobile application.",
+                    "value": "Show",
+                    "access": true
+                  },
+                  {
+                    "name": "Expense Creation",
+                    "help": "Enable This to Show Create Expense Option on Mobile",
+                    "value": "Enable",
+                    "access": true
+                  },
+                  {
+                    "name": "Pricelists",
+                    "help": "If this set to 'Show' then the device user will have access pricelist information on device.",
+                    "value": "Show",
+                    "access": true
+                  },
+                  {
+                    "name": "Fixed Pricelist",
+                    "help": "Enable This to Block Price list Change in Direct Invoice Creation on Mobile.",
+                    "value": "Hide",
+                    "access": false
+                  },
+                  {
+                    "name": "Price Check",
+                    "help": "Enable This to access Price Check menu on Mobile",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Edit Pricelist",
+                    "help": "Enable This to edit Price list in Direct Invoice Creation on Mobile.",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Show All products",
+                    "help": "If enabled the device user use products with pricelist on Mobile.",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Min & Max Price",
+                    "help": "Enable This to access minimum and maximum price of the items in price list on Mobile",
+                    "value": "Enable",
+                    "access": true
+                  },
+                  {
+                    "name": "Price list Line Discount",
+                    "help": "Enable This to access discount of each item item in price list on Mobile",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Route Plan",
+                    "help": "Enable This to Show Route Plan menu on Mobile.",
+                    "value": "Show",
+                    "access": true
+                  },
+                  {
+                    "name": "Sale Order & Invoice Creation Through Route Plan Only",
+                    "help": "If Enabled Sale order and invoices can be created only through the routing.",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Show Customers based on Visit Day",
+                    "help": "Enable This to Show Customers Based On Visit Day On Mobile Application.",
+                    "value": false,
+                    "access": false
+                  },
+                  {
+                    "name": "Route Plan Customers",
+                    "help": "Enable This to Show Customers Based On Route Plan On Mobile Application.",
+                    "value": "Enable",
+                    "access": true
+                  },
+                  {
+                    "name": "Assign Helper Based On",
+                    "help": "If Set To Check In/Out The Helper Data Will Be Selected While Checking In. Or Can Be Assigned While Starting A Journey",
+                    "value": "Not Required",
+                    "access": false
+                  },
+                  {
+                    "name": "Assign Vehicle Based On",
+                    "help": "If Set To Check In/Out The Vehicle Data Will Be Selected While Checking In. Or Can Be Assigned While Starting A Journey",
+                    "value": "Check In/out",
+                    "access": false
+                  },
+                  {
+                    "name": "Planned Journey",
+                    "help": "Enable This to Show Planned Journey on Mobile.",
+                    "value": "Show",
+                    "access": true
+                  },
+                  {
+                    "name": "Actual Journey",
+                    "help": "Enable This to Show Actual Journey on Mobile.",
+                    "value": "Hide",
+                    "access": false
+                  },
+                  {
+                    "name": "Products",
+                    "help": "If this set to 'Show' then the device user will have access product information on device.",
+                    "value": "Show",
+                    "access": true
+                  },
+                  {
+                    "name": "GRN",
+                    "help": "If this set to 'Show' then the device user will have access GRN information on device.",
+                    "value": "Hide",
+                    "access": false
+                  },
+                  {
+                    "name": "Delivery",
+                    "help": "If this set to 'Show' then the device user will have access Delivery Order information on device.",
+                    "value": "Show",
+                    "access": true
+                  },
+                  {
+                    "name": "Stock Availability Check",
+                    "help": "If enabled then the mobile user can check the stock availability from mobile application.",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Service Products",
+                    "help": "If this set to 'Show' then the device user will have access service product information on device.",
+                    "value": false,
+                    "access": false
+                  },
+                  {
+                    "name": "Load Request Type Based On",
+                    "help": "If Set To Stock then in mobile application stock is the only selectable value for load request type , if Product then in mobile application Product is the only selectable value for load request type if set to both then the user can choose as per their wish",
+                    "value": "Stock",
+                    "access": false
+                  },
+                  {
+                    "name": "Load Request Type Based On",
+                    "help": "If Set To warehouse then in mobile application warehouse is the only selectable value for load request Requested From , if van then in mobile application van is the only selectable value for load request requested from, if set to both then the user can choose as per their wish",
+                    "value": "Warehouse",
+                    "access": false
+                  },
+                  {
+                    "name": "Load Request",
+                    "help": "If enabled then the mobile user can create and submit load request from mobile application.",
+                    "value": "enable",
+                    "access": true
+                  },
+                  {
+                    "name": "Presales",
+                    "help": "Enable This to Show Presales menu on Mobile.",
+                    "value": "Show",
+                    "access": true
+                  },
+                  {
+                    "name": "Liquidation",
+                    "help": "Enable This to Show liquidation menu on Mobile.",
+                    "value": "Hide",
+                    "access": false
+                  },
+                  {
+                    "name": "Day Close Report",
+                    "help": "Enable This to Show Sales Day Close Report menu on Mobile",
+                    "value": "Show",
+                    "access": true
+                  },
+                  {
+                    "name": "Special Price",
+                    "help": "Enable This to Show Request Special Price menu on Mobile",
+                    "value": "Enable",
+                    "access": true
+                  },
+                  {
+                    "name": "Sales Discount",
+                    "help": "Enable This to Show Discount option in Direct Invoice Creation on Mobile",
+                    "value": "Deny",
+                    "access": false
+                  },
+                  {
+                    "name": "Sales History",
+                    "help": "Enable This Show Sales History in Mobile.",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Sales Return",
+                    "help": "Enable This to Show Sales Return in Mobile.",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Sales Print",
+                    "help": "Disable Sales Order Print Option from Mobile.",
+                    "value": "Enable",
+                    "access": true
+                  },
+                  {
+                    "name": "Allow Sales If there is Overdue",
+                    "help": "Enable this to allow sales if there is overdue invoices.",
+                    "value": "Deny",
+                    "access": false
+                  },
+                  {
+                    "name": "Discount Applicable On",
+                    "help": "If enabled then in sales the mobile user can apply based on customer type",
+                    "value": false,
+                    "access": false
+                  },
+                  {
+                    "name": "Unload Request",
+                    "help": "If enabled then the mobile user can create and submit unload request from mobile application.",
+                    "value": "enable",
+                    "access": true
+                  },
+                  {
+                    "name": "FOC",
+                    "help": "Enable This to Show FOC menu on Mobile.",
+                    "value": "Show",
+                    "access": true
+                  },
+                  {
+                    "name": "Direct FOC",
+                    "help": "Enable This to Show FOC menu on Mobile And To Do Foc Without Sale Order.",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Vendors",
+                    "help": "If this set to 'Show' then the device user will have access vendor information on device.",
+                    "value": "Hide",
+                    "access": false
+                  },
+                  {
+                    "name": "Create GRN",
+                    "help": "If this set to 'Enable' then the device user Create GRN through device.",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Bundle",
+                    "help": "Enable This to Show Bundle menu on Mobile.",
+                    "value": "Show",
+                    "access": true
+                  },
+                  {
+                    "name": "Direct Bundle",
+                    "help": "Enable This to Show Bundle menu on Mobile And To Do Bundle Without Sale Order.",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Return Requests",
+                    "help": "If this set to 'Enable' then the device user will have access return request on device.",
+                    "value": "Disable",
+                    "access": false
+                  },
+                  {
+                    "name": "Dispatch Order(Load Request)",
+                    "help": "If this set to 'Enable' then the device user will have access Dispatch Order on device.",
+                    "value": "Disable",
+                    "access": false
+                  }
+                ]
+              },
+              "error": {
+                "code": 0,
+                "message": ""
+              }
+            }
+          }

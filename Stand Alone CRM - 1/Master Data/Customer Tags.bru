@@ -1,0 +1,74 @@
+meta {
+  name: Customer Tags
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8070/web/get_tag_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{}}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Customer Tags
+  
+  request: {
+    url: http://localhost:8070/web/get_tag_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{"data":{}}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 23 Jan 2026 10:28:37 GMT
+      Content-Length: 179
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "tag_details": [
+                        {
+                            "id": 1,
+                            "name": "High Chance Client",
+                            "color": 3
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

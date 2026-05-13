@@ -1,0 +1,231 @@
+meta {
+  name: Task Details
+  type: http
+  seq: 60
+}
+
+post {
+  url: 192.168.1.120:8070/web/get_task_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "task_id": false
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Task Details
+  
+  request: {
+    url: 192.168.1.120:8070/web/get_task_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "task_id": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 07 Apr 2026 11:57:52 GMT
+      Content-Length: 3731
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "task_details": [
+                        {
+                            "id": 13,
+                            "name": null,
+                            "task": "Sample Employee Task",
+                            "description": "<p>Employee Task Sample</p>",
+                            "res_model": "hr.employee",
+                            "res_doc_id": null,
+                            "res_create_date": null,
+                            "res_name": "ABDUL HACKEEM THAZHE PUTHAN PURAYIL",
+                            "date_deadline": "2026-04-06",
+                            "date_done": null,
+                            "employee_id": 126,
+                            "employee_name": "Administrator",
+                            "assigned_by": 126,
+                            "assigned_by_name": "Administrator",
+                            "submitted_by": 126,
+                            "submitted_by_name": "Administrator",
+                            "approved_by": 126,
+                            "approved_by_name": "Administrator",
+                            "completed_by": null,
+                            "completed_by_name": null,
+                            "submitted_on": "2026-04-07",
+                            "approved_on": "2026-04-07",
+                            "state": "overdue"
+                        },
+                        {
+                            "id": 14,
+                            "name": null,
+                            "task": "Rauf status not provided",
+                            "description": "<p>Raoof task created</p>",
+                            "res_model": "hr.employee",
+                            "res_doc_id": null,
+                            "res_create_date": null,
+                            "res_name": "ABDUL RAOOF VELLOR VALAPPIL",
+                            "date_deadline": "2026-04-06",
+                            "date_done": null,
+                            "employee_id": 126,
+                            "employee_name": "Administrator",
+                            "assigned_by": 126,
+                            "assigned_by_name": "Administrator",
+                            "submitted_by": null,
+                            "submitted_by_name": null,
+                            "approved_by": null,
+                            "approved_by_name": null,
+                            "completed_by": null,
+                            "completed_by_name": null,
+                            "submitted_on": null,
+                            "approved_on": null,
+                            "state": "draft"
+                        },
+                        {
+                            "id": 18,
+                            "name": "TM004",
+                            "task": "Smaple",
+                            "description": "<p>IJJDOJSIJD</p>",
+                            "res_model": "task.management",
+                            "res_doc_id": 15,
+                            "res_create_date": null,
+                            "res_name": "TM001",
+                            "date_deadline": "2026-04-07",
+                            "date_done": null,
+                            "employee_id": 126,
+                            "employee_name": "Administrator",
+                            "assigned_by": 126,
+                            "assigned_by_name": "Administrator",
+                            "submitted_by": 126,
+                            "submitted_by_name": "Administrator",
+                            "approved_by": 126,
+                            "approved_by_name": "Administrator",
+                            "completed_by": 126,
+                            "completed_by_name": "Administrator",
+                            "submitted_on": null,
+                            "approved_on": null,
+                            "state": "today"
+                        },
+                        {
+                            "id": 19,
+                            "name": "TM005",
+                            "task": "Riyads tasks",
+                            "description": "<p>Sample</p>",
+                            "res_model": "sale.order",
+                            "res_doc_id": 2322,
+                            "res_create_date": null,
+                            "res_name": "SO-00674",
+                            "date_deadline": "2026-04-07",
+                            "date_done": null,
+                            "employee_id": 126,
+                            "employee_name": "Administrator",
+                            "assigned_by": 126,
+                            "assigned_by_name": "Administrator",
+                            "submitted_by": 126,
+                            "submitted_by_name": "Administrator",
+                            "approved_by": 126,
+                            "approved_by_name": "Administrator",
+                            "completed_by": 126,
+                            "completed_by_name": "Administrator",
+                            "submitted_on": null,
+                            "approved_on": null,
+                            "state": "today"
+                        },
+                        {
+                            "id": 20,
+                            "name": "TM006",
+                            "task": "Sample",
+                            "description": "<p>dsfsdfsdfdsfdsf</p>",
+                            "res_model": "account.move",
+                            "res_doc_id": 43106,
+                            "res_create_date": "2026-03-26 13:20:21",
+                            "res_name": "INV/2026/01118",
+                            "date_deadline": "2026-04-07",
+                            "date_done": null,
+                            "employee_id": 126,
+                            "employee_name": "Administrator",
+                            "assigned_by": 126,
+                            "assigned_by_name": "Administrator",
+                            "submitted_by": 126,
+                            "submitted_by_name": "Administrator",
+                            "approved_by": 126,
+                            "approved_by_name": "Administrator",
+                            "completed_by": 126,
+                            "completed_by_name": "Administrator",
+                            "submitted_on": null,
+                            "approved_on": null,
+                            "state": "today"
+                        },
+                        {
+                            "id": 15,
+                            "name": "TM001",
+                            "task": "dsfdsfsd",
+                            "description": "<p>fsdfsdfdsf</p>",
+                            "res_model": "hr.employee",
+                            "res_doc_id": null,
+                            "res_create_date": null,
+                            "res_name": "ABDUL RAOOF VELLOR VALAPPIL",
+                            "date_deadline": "2026-04-09",
+                            "date_done": "2026-04-06",
+                            "employee_id": 126,
+                            "employee_name": "Administrator",
+                            "assigned_by": 126,
+                            "assigned_by_name": "Administrator",
+                            "submitted_by": 126,
+                            "submitted_by_name": "Administrator",
+                            "approved_by": 126,
+                            "approved_by_name": "Administrator",
+                            "completed_by": 126,
+                            "completed_by_name": "Administrator",
+                            "submitted_on": "2026-04-06",
+                            "approved_on": "2026-04-06",
+                            "state": "done"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

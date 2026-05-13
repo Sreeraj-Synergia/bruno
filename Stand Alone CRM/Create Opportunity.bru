@@ -1,0 +1,187 @@
+meta {
+  name: Create Opportunity
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8070/web/crm_lead_create
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "name": "Sample Lead Created By A Normal User User",
+              "expected_revenue": 1250.00,
+              "probability": 10,
+              "customer_type": "new",
+              "partner_email": "mudhish@example.com",
+              "contact_email": "jibin@example.com",
+              "contact_type": "new",
+              "contact_id": false,
+              "contact_name": "Jibin",
+              "partner_id": false,
+              "partner_name": "Al Mudhish",
+              "title_id": false,
+              "function": "Depot Incharge",
+              "phone": "050235689",
+              "mobile": "050235689",
+              "street": "Warehouse 12",
+              "street2": "Industrial Area 2",
+              "city": "Umm Al Quinn",
+              "state_id": false,
+              "zip": false,
+              "country_id": false,
+              "website": false,
+              "tag_ids": [1],
+              "referred_by": 1,
+              "date_deadline": "2025-02-12",
+              "priority": "3",
+              "description": "Smaple Description added for the lead created for the Normal user"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Create Opportunity
+  
+  request: {
+    url: http://localhost:8070/web/crm_lead_create
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "name": "Sample Lead Created By A Normal User User",
+                  "expected_revenue": 1250.00,
+                  "probability": 10,
+                  "customer_type": "new",
+                  "partner_email": "mudhish@example.com",
+                  "contact_email": "jibin@example.com",
+                  "contact_type": "new",
+                  "contact_id": false,
+                  "contact_name": "Jibin",
+                  "partner_id": false,
+                  "partner_name": "Al Mudhish",
+                  "title_id": false,
+                  "function": "Depot Incharge",
+                  "phone": "050235689",
+                  "mobile": "050235689",
+                  "street": "Warehouse 12",
+                  "street2": "Industrial Area 2",
+                  "city": "Umm Al Quinn",
+                  "state_id": false,
+                  "zip": false,
+                  "country_id": false,
+                  "website": false,
+                  "tag_ids": false,
+                  "referred_by": 1,
+                  "date_deadline": "2025-02-12",
+                  "priority": "3",
+                  "description": "Smaple Description added for the lead created for the Normal user"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 12 Jan 2026 10:19:58 GMT
+      Content-Length: 1431
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "lead_details": {
+                        "id": 6,
+                        "number": null,
+                        "name": "Sample Lead Created By A Normal User User",
+                        "expected_revenue": 1250,
+                        "probability": 10,
+                        "customer_type": "new",
+                        "contact_type": "new",
+                        "contact_id": null,
+                        "contact_name": null,
+                        "partner_email": "mudhish@example.com",
+                        "partner_id": null,
+                        "partner_name": null,
+                        "contact_email": "jibin@example.com",
+                        "title_id": null,
+                        "title_name": null,
+                        "function": "Depot Incharge",
+                        "phone": "050235689",
+                        "mobile": "050235689",
+                        "street": "Warehouse 12",
+                        "street2": "Industrial Area 2",
+                        "city": "Umm Al Quinn",
+                        "state_id": null,
+                        "state_name": null,
+                        "zip": null,
+                        "country_id": null,
+                        "country_name": null,
+                        "website": null,
+                        "tag_ids": null,
+                        "referred_by": 1,
+                        "referred_by_name": "Mubeer",
+                        "assigning_employee_id": null,
+                        "assigning_employee_name": null,
+                        "assigning_date": null,
+                        "assigned_employee_id": null,
+                        "assigned_employee_name": null,
+                        "status": null,
+                        "date_deadline": "2025-02-12",
+                        "priority": "3",
+                        "reason": null,
+                        "description": "<p>Smaple Description added for the lead created for the Normal user</p>",
+                        "user_id": 28,
+                        "user_name": "Omar Abdalla",
+                        "campaign_id": null,
+                        "campaign_name": null,
+                        "medium_id": null,
+                        "medium_name": null,
+                        "source_id": null,
+                        "source_name": null,
+                        "team_id": null,
+                        "team_name": null,
+                        "day_open": null,
+                        "day_close": null,
+                        "stage_id": 1,
+                        "stage_name": "New"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

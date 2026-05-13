@@ -1,0 +1,229 @@
+meta {
+  name: Vendor Details
+  type: http
+  seq: 8
+}
+
+post {
+  url: https://wms.syntrack.app/web/get_vend_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Vendor Details
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_vend_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:28:21 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:28:21 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "vendor_details": [
+                        {
+                            "customer_id": 137,
+                            "name": "Al Adil General Trading Company",
+                            "street": "Ras Al Khor",
+                            "street2": "Industrial Area 2",
+                            "city": "dubai",
+                            "zip": "021515151",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_name": "United Arab Emirates",
+                            "country_id": 2,
+                            "email": null,
+                            "website": null,
+                            "phone": "042524112",
+                            "trn": "002221255654",
+                            "latitude": null,
+                            "longitude": null,
+                            "customer_type": "Company",
+                            "logo_url": "http://wms.syntrack.app/web/url_image/res.partner/137/image_1920",
+                            "contact_name": null,
+                            "contact_phone": null,
+                            "mobile": null,
+                            "customer": false,
+                            "supplier": true,
+                            "contact_list": [],
+                            "is_contact": false
+                        },
+                        {
+                            "customer_id": 131,
+                            "name": "We to General Trading LLC",
+                            "street": "Near American Hospital",
+                            "street2": "Oud Metha Street",
+                            "city": "Oud Metha",
+                            "zip": "321528",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_name": "United Arab Emirates",
+                            "country_id": 2,
+                            "email": "info@weto.com",
+                            "website": "http://www.weto.com",
+                            "phone": "097152325326",
+                            "trn": "277382882833i",
+                            "latitude": null,
+                            "longitude": null,
+                            "customer_type": "Company",
+                            "logo_url": "http://wms.syntrack.app/web/url_image/res.partner/131/image_1920",
+                            "contact_name": null,
+                            "contact_phone": null,
+                            "mobile": "045484548488",
+                            "customer": false,
+                            "supplier": true,
+                            "contact_list": [],
+                            "is_contact": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Vendor Details
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_vend_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:28:21 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:28:21 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "vendor_details": [
+                        {
+                            "customer_id": 137,
+                            "name": "Al Adil General Trading Company",
+                            "street": "Ras Al Khor",
+                            "street2": "Industrial Area 2",
+                            "city": "dubai",
+                            "zip": "021515151",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_name": "United Arab Emirates",
+                            "country_id": 2,
+                            "email": null,
+                            "website": null,
+                            "phone": "042524112",
+                            "trn": "002221255654",
+                            "latitude": null,
+                            "longitude": null,
+                            "customer_type": "Company",
+                            "logo_url": "http://wms.syntrack.app/web/url_image/res.partner/137/image_1920",
+                            "contact_name": null,
+                            "contact_phone": null,
+                            "mobile": null,
+                            "customer": false,
+                            "supplier": true,
+                            "contact_list": [],
+                            "is_contact": false
+                        },
+                        {
+                            "customer_id": 131,
+                            "name": "We to General Trading LLC",
+                            "street": "Near American Hospital",
+                            "street2": "Oud Metha Street",
+                            "city": "Oud Metha",
+                            "zip": "321528",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_name": "United Arab Emirates",
+                            "country_id": 2,
+                            "email": "info@weto.com",
+                            "website": "http://www.weto.com",
+                            "phone": "097152325326",
+                            "trn": "277382882833i",
+                            "latitude": null,
+                            "longitude": null,
+                            "customer_type": "Company",
+                            "logo_url": "http://wms.syntrack.app/web/url_image/res.partner/131/image_1920",
+                            "contact_name": null,
+                            "contact_phone": null,
+                            "mobile": "045484548488",
+                            "customer": false,
+                            "supplier": true,
+                            "contact_list": [],
+                            "is_contact": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

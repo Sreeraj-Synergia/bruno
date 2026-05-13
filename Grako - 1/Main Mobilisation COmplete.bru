@@ -1,0 +1,28 @@
+meta {
+  name: Main Mobilisation COmplete
+  type: http
+  seq: 72
+}
+
+post {
+  url: http://localhost:8090/web/mobilisation_complete
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "jsonrpc": "2.0",
+    "id": null,
+    "params": {
+      "data": {
+        "mobilisation_id": 77,
+        "mob_complete": 1
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,397 @@
+meta {
+  name: Employee Document Types
+  type: http
+  seq: 17
+}
+
+post {
+  url: http://localhost:8069/web/get_emp_doc_type_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Employee Document Types
+  
+  request: {
+    url: http://localhost:8069/web/get_emp_doc_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 1487
+      Set-Cookie: session_id=8b81c9d4212b10fef167a337b7f2576b55062368; Expires=Mon, 04-Nov-2024 11:38:41 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Tue, 06 Aug 2024 11:38:41 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "employee_document_types": [
+                        {
+                            "id": 1,
+                            "code": "Passport"
+                        },
+                        {
+                            "id": 2,
+                            "code": "Emirates ID"
+                        },
+                        {
+                            "id": 3,
+                            "code": "Driving Licence"
+                        },
+                        {
+                            "id": 4,
+                            "code": "Labour Card"
+                        },
+                        {
+                            "id": 5,
+                            "code": "Pharmacy MOH / DHA License"
+                        },
+                        {
+                            "id": 6,
+                            "code": "Trade License"
+                        },
+                        {
+                            "id": 7,
+                            "code": "TRN Registration"
+                        },
+                        {
+                            "id": 8,
+                            "code": "Visa"
+                        },
+                        {
+                            "id": 9,
+                            "code": "Tenancy Contract"
+                        },
+                        {
+                            "id": 10,
+                            "code": "Chamber of Commerce"
+                        },
+                        {
+                            "id": 11,
+                            "code": "Civil Defence License"
+                        },
+                        {
+                            "id": 12,
+                            "code": "CC TV Camera Certificate"
+                        },
+                        {
+                            "id": 13,
+                            "code": "Sign Board Approval"
+                        },
+                        {
+                            "id": 14,
+                            "code": "RTA Parking Permit"
+                        },
+                        {
+                            "id": 15,
+                            "code": "Pest Control Certificate"
+                        },
+                        {
+                            "id": 17,
+                            "code": "24 Hrs MOH / DHA License"
+                        },
+                        {
+                            "id": 18,
+                            "code": "Home Delivery Approval"
+                        },
+                        {
+                            "id": 19,
+                            "code": "Moh/Dha/Haad License"
+                        },
+                        {
+                            "id": 20,
+                            "code": "Establishment card"
+                        },
+                        {
+                            "id": 21,
+                            "code": "Emigration card"
+                        },
+                        {
+                            "id": 22,
+                            "code": "Tatmeen"
+                        },
+                        {
+                            "id": 23,
+                            "code": "Letter Evaluation"
+                        },
+                        {
+                            "id": 24,
+                            "code": "Door Delivery"
+                        },
+                        {
+                            "id": 25,
+                            "code": "Labour File"
+                        },
+                        {
+                            "id": 26,
+                            "code": "Transfer Letter"
+                        },
+                        {
+                            "id": 27,
+                            "code": "MOA"
+                        },
+                        {
+                            "id": 28,
+                            "code": "Makani Number"
+                        },
+                        {
+                            "id": 29,
+                            "code": "Location Details"
+                        },
+                        {
+                            "id": 30,
+                            "code": "Location Plan"
+                        },
+                        {
+                            "id": 31,
+                            "code": "Mulki"
+                        },
+                        {
+                            "id": 32,
+                            "code": "Visit Visa"
+                        },
+                        {
+                            "id": 33,
+                            "code": "Invoice"
+                        },
+                        {
+                            "id": 34,
+                            "code": "Bill of Lading"
+                        },
+                        {
+                            "id": 35,
+                            "code": "Air way Bill"
+                        },
+                        {
+                            "id": 36,
+                            "code": "Commerical Invoice"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Employee Document Types
+  
+  request: {
+    url: http://localhost:8069/web/get_emp_doc_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 1487
+      Set-Cookie: session_id=8b81c9d4212b10fef167a337b7f2576b55062368; Expires=Mon, 04-Nov-2024 11:38:41 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Tue, 06 Aug 2024 11:38:41 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "employee_document_types": [
+                        {
+                            "id": 1,
+                            "code": "Passport"
+                        },
+                        {
+                            "id": 2,
+                            "code": "Emirates ID"
+                        },
+                        {
+                            "id": 3,
+                            "code": "Driving Licence"
+                        },
+                        {
+                            "id": 4,
+                            "code": "Labour Card"
+                        },
+                        {
+                            "id": 5,
+                            "code": "Pharmacy MOH / DHA License"
+                        },
+                        {
+                            "id": 6,
+                            "code": "Trade License"
+                        },
+                        {
+                            "id": 7,
+                            "code": "TRN Registration"
+                        },
+                        {
+                            "id": 8,
+                            "code": "Visa"
+                        },
+                        {
+                            "id": 9,
+                            "code": "Tenancy Contract"
+                        },
+                        {
+                            "id": 10,
+                            "code": "Chamber of Commerce"
+                        },
+                        {
+                            "id": 11,
+                            "code": "Civil Defence License"
+                        },
+                        {
+                            "id": 12,
+                            "code": "CC TV Camera Certificate"
+                        },
+                        {
+                            "id": 13,
+                            "code": "Sign Board Approval"
+                        },
+                        {
+                            "id": 14,
+                            "code": "RTA Parking Permit"
+                        },
+                        {
+                            "id": 15,
+                            "code": "Pest Control Certificate"
+                        },
+                        {
+                            "id": 17,
+                            "code": "24 Hrs MOH / DHA License"
+                        },
+                        {
+                            "id": 18,
+                            "code": "Home Delivery Approval"
+                        },
+                        {
+                            "id": 19,
+                            "code": "Moh/Dha/Haad License"
+                        },
+                        {
+                            "id": 20,
+                            "code": "Establishment card"
+                        },
+                        {
+                            "id": 21,
+                            "code": "Emigration card"
+                        },
+                        {
+                            "id": 22,
+                            "code": "Tatmeen"
+                        },
+                        {
+                            "id": 23,
+                            "code": "Letter Evaluation"
+                        },
+                        {
+                            "id": 24,
+                            "code": "Door Delivery"
+                        },
+                        {
+                            "id": 25,
+                            "code": "Labour File"
+                        },
+                        {
+                            "id": 26,
+                            "code": "Transfer Letter"
+                        },
+                        {
+                            "id": 27,
+                            "code": "MOA"
+                        },
+                        {
+                            "id": 28,
+                            "code": "Makani Number"
+                        },
+                        {
+                            "id": 29,
+                            "code": "Location Details"
+                        },
+                        {
+                            "id": 30,
+                            "code": "Location Plan"
+                        },
+                        {
+                            "id": 31,
+                            "code": "Mulki"
+                        },
+                        {
+                            "id": 32,
+                            "code": "Visit Visa"
+                        },
+                        {
+                            "id": 33,
+                            "code": "Invoice"
+                        },
+                        {
+                            "id": 34,
+                            "code": "Bill of Lading"
+                        },
+                        {
+                            "id": 35,
+                            "code": "Air way Bill"
+                        },
+                        {
+                            "id": 36,
+                            "code": "Commerical Invoice"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

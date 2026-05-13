@@ -1,0 +1,26 @@
+meta {
+  name: ALLOWCATION GETROW
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://sonasgroup.dyndns.org:3015/SynTrack//getSubKontenOSDueBanking
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: GravitySoftnet_YV5jbMLoBzPbqSDJ4AhB1xnN2xmeB74f
+}
+
+body:json {
+  {
+      "v_AcCd": "D6179",
+      "v_Br": "27"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

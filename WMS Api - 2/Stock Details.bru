@@ -1,0 +1,2725 @@
+meta {
+  name: Stock Details
+  type: http
+  seq: 17
+}
+
+post {
+  url: https://wms.syntrack.app/web/get_stock_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Stock Details
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_stock_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:31:46 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:31:46 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "get_stock_details": {
+                        "product_count_all": 1229,
+                        "product_count_per_page": 300,
+                        "product_stock_data": [
+                            {
+                                "product_id": 3249,
+                                "product_name": "[003186] IPhone 14 Pro Max (Blue, 128GB)",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 4,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 4,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1812,
+                                                "lot_name": "8904109489402",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003186",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1813,
+                                                "lot_name": "8904109489556",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003186",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1814,
+                                                "lot_name": "8904109489563",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003186",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1815,
+                                                "lot_name": "8904304510970",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003186",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 3251,
+                                "product_name": "[003188] IPhone 14 Pro Max (Blue, 512GB)",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 83,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 82,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1844,
+                                                "lot_name": "2000078937",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1845,
+                                                "lot_name": "2000078938",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1865,
+                                                "lot_name": "2000002013",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1866,
+                                                "lot_name": "2000002014",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1867,
+                                                "lot_name": "2000002015",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1868,
+                                                "lot_name": "2000002016",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1869,
+                                                "lot_name": "2000002017",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1870,
+                                                "lot_name": "2000002018",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1871,
+                                                "lot_name": "2000002019",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1872,
+                                                "lot_name": "2000002020",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1873,
+                                                "lot_name": "2000002021",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1874,
+                                                "lot_name": "2000002022",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1875,
+                                                "lot_name": "2000002023",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1876,
+                                                "lot_name": "2000002024",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1877,
+                                                "lot_name": "2000002025",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1878,
+                                                "lot_name": "2000002026",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1879,
+                                                "lot_name": "2000002027",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1880,
+                                                "lot_name": "2000002028",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1881,
+                                                "lot_name": "2000002029",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1882,
+                                                "lot_name": "2000002030",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1883,
+                                                "lot_name": "2000002031",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1884,
+                                                "lot_name": "2000002032",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1885,
+                                                "lot_name": "2000002033",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1886,
+                                                "lot_name": "2000002034",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1887,
+                                                "lot_name": "2000002035",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1888,
+                                                "lot_name": "2000002036",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1889,
+                                                "lot_name": "2000002037",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1890,
+                                                "lot_name": "2000002038",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1891,
+                                                "lot_name": "2000002039",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1892,
+                                                "lot_name": "2000002040",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1893,
+                                                "lot_name": "2000002041",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1894,
+                                                "lot_name": "2000002042",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1895,
+                                                "lot_name": "2000002043",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1896,
+                                                "lot_name": "2000002044",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1897,
+                                                "lot_name": "2000002045",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1898,
+                                                "lot_name": "2000002046",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1899,
+                                                "lot_name": "2000002047",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1900,
+                                                "lot_name": "2000002048",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1901,
+                                                "lot_name": "2000002049",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1902,
+                                                "lot_name": "2000002050",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1903,
+                                                "lot_name": "2000002051",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1904,
+                                                "lot_name": "2000002052",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1905,
+                                                "lot_name": "2000002053",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1906,
+                                                "lot_name": "2000002054",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1907,
+                                                "lot_name": "2000002055",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1908,
+                                                "lot_name": "2000002056",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1909,
+                                                "lot_name": "2000002057",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1910,
+                                                "lot_name": "2000002058",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1911,
+                                                "lot_name": "2000002059",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1912,
+                                                "lot_name": "2000002060",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1913,
+                                                "lot_name": "2000002061",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1914,
+                                                "lot_name": "2000002062",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1915,
+                                                "lot_name": "2000002063",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1916,
+                                                "lot_name": "2000002064",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1917,
+                                                "lot_name": "2000002065",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1918,
+                                                "lot_name": "2000002066",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1919,
+                                                "lot_name": "2000002067",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1920,
+                                                "lot_name": "2000002068",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1921,
+                                                "lot_name": "2000002069",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1922,
+                                                "lot_name": "2000002070",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1923,
+                                                "lot_name": "2000002071",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1924,
+                                                "lot_name": "2000002072",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1925,
+                                                "lot_name": "2000002073",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1926,
+                                                "lot_name": "2000002074",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1927,
+                                                "lot_name": "2000002075",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1928,
+                                                "lot_name": "2000002076",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1929,
+                                                "lot_name": "2000002077",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1930,
+                                                "lot_name": "2000002078",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1931,
+                                                "lot_name": "2000002079",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1932,
+                                                "lot_name": "2000002080",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1933,
+                                                "lot_name": "2000002081",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1934,
+                                                "lot_name": "2000002082",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1935,
+                                                "lot_name": "2000002083",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1936,
+                                                "lot_name": "2000002084",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1937,
+                                                "lot_name": "2000002085",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1938,
+                                                "lot_name": "2000002086",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1939,
+                                                "lot_name": "2000002087",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1940,
+                                                "lot_name": "2000002088",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1941,
+                                                "lot_name": "2000002089",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1942,
+                                                "lot_name": "2000002090",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1943,
+                                                "lot_name": "2000002091",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1944,
+                                                "lot_name": "2000002092",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1945,
+                                                "lot_name": "2000002093",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1946,
+                                                "lot_name": "2000002094",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1947,
+                                                "lot_name": "2000002095",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1948,
+                                                "lot_name": "2000002096",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1949,
+                                                "lot_name": "2000002097",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1950,
+                                                "lot_name": "2000002098",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1951,
+                                                "lot_name": "2000002099",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1952,
+                                                "lot_name": "2000002100",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "location_id": 24,
+                                        "location_name": "Sunu Location",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 1,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1843,
+                                                "lot_name": "2000078936",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 3164,
+                                "product_name": "[14] Lipton Tea Bag",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 560,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 560,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1826,
+                                                "lot_name": "15202155562212001",
+                                                "lot_qty": 560,
+                                                "lot_expiry": 560,
+                                                "ref": "14",
+                                                "expiration_date": "2026-07-08 06:21:00",
+                                                "use_date": "2026-07-08 06:21:00",
+                                                "removal_date": "2026-04-09 06:21:00",
+                                                "alert_date": "2026-03-10 06:21:00"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 3216,
+                                "product_name": "[174] Doritos Nachos Cheese Ball 800 Grams",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 6330,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 6230,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1806,
+                                                "lot_name": "P0004",
+                                                "lot_qty": 5730,
+                                                "lot_expiry": 5730,
+                                                "ref": "174",
+                                                "expiration_date": "2027-07-31 10:00:00",
+                                                "use_date": "2027-07-01 10:00:00",
+                                                "removal_date": "2027-07-16 10:00:00",
+                                                "alert_date": "2027-06-16 10:00:00"
+                                            },
+                                            {
+                                                "lot_id": 1807,
+                                                "lot_name": "P0003",
+                                                "lot_qty": 150,
+                                                "lot_expiry": 150,
+                                                "ref": "174",
+                                                "expiration_date": "2024-06-30 10:00:00",
+                                                "use_date": "2024-05-31 10:00:00",
+                                                "removal_date": "2024-06-15 10:00:00",
+                                                "alert_date": "2024-05-16 10:00:00"
+                                            },
+                                            {
+                                                "lot_id": 1808,
+                                                "lot_name": "P0001",
+                                                "lot_qty": 300,
+                                                "lot_expiry": 300,
+                                                "ref": "174",
+                                                "expiration_date": "2026-12-31 10:00:00",
+                                                "use_date": "2026-12-01 10:00:00",
+                                                "removal_date": "2026-12-16 10:00:00",
+                                                "alert_date": "2026-11-16 10:00:00"
+                                            },
+                                            {
+                                                "lot_id": 1809,
+                                                "lot_name": "P0002",
+                                                "lot_qty": 150,
+                                                "lot_expiry": 150,
+                                                "ref": "174",
+                                                "expiration_date": "2024-05-31 10:00:00",
+                                                "use_date": "2024-05-01 10:00:00",
+                                                "removal_date": "2024-05-16 10:00:00",
+                                                "alert_date": "2024-04-16 10:00:00"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "location_id": 21,
+                                        "location_name": "WH/Musaffah",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 100,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1806,
+                                                "lot_name": "P0004",
+                                                "lot_qty": 5730,
+                                                "lot_expiry": 5730,
+                                                "ref": "174",
+                                                "expiration_date": "2027-07-31 10:00:00",
+                                                "use_date": "2027-07-01 10:00:00",
+                                                "removal_date": "2027-07-16 10:00:00",
+                                                "alert_date": "2027-06-16 10:00:00"
+                                            },
+                                            {
+                                                "lot_id": 1806,
+                                                "lot_name": "P0004",
+                                                "lot_qty": 5730,
+                                                "lot_expiry": 5730,
+                                                "ref": "174",
+                                                "expiration_date": "2027-07-31 10:00:00",
+                                                "use_date": "2027-07-01 10:00:00",
+                                                "removal_date": "2027-07-16 10:00:00",
+                                                "alert_date": "2027-06-16 10:00:00"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 3167,
+                                "product_name": "[21] Fanta 300 Ml",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 600,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 600,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1827,
+                                                "lot_name": "545151518185001",
+                                                "lot_qty": 600,
+                                                "lot_expiry": 600,
+                                                "ref": "21",
+                                                "expiration_date": "2026-07-08 06:21:28",
+                                                "use_date": "2026-07-08 06:21:28",
+                                                "removal_date": "2026-05-09 06:21:28",
+                                                "alert_date": "2026-04-09 06:21:28"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 3140,
+                                "product_name": "[AJY-001] Ajay Quest Tooth Brush Soft",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 10000,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 10000,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1954,
+                                                "lot_name": "X20001",
+                                                "lot_qty": 10000,
+                                                "lot_expiry": 10000,
+                                                "ref": "AJY-001",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": "2023-10-08 07:54:24",
+                                                "alert_date": "2024-01-06 07:54:24"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 771,
+                                "product_name": "[BJF0001] PREMIUM BASMATI RICE",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 800,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 800,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1810,
+                                                "lot_name": "12288",
+                                                "lot_qty": 800,
+                                                "lot_expiry": 800,
+                                                "ref": "BJF0001",
+                                                "expiration_date": "2027-07-31 10:00:00",
+                                                "use_date": "2027-07-31 10:00:00",
+                                                "removal_date": "2027-07-31 10:00:00",
+                                                "alert_date": "2027-07-31 10:00:00"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 2939,
+                                "product_name": "[BLX-010] Bioluxe Lemon Facial Cleansing Tonner 225 Ml",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 1000,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 1000,
+                                        "lot_details": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Stock Details
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_stock_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:31:46 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:31:46 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "get_stock_details": {
+                        "product_count_all": 1229,
+                        "product_count_per_page": 300,
+                        "product_stock_data": [
+                            {
+                                "product_id": 3249,
+                                "product_name": "[003186] IPhone 14 Pro Max (Blue, 128GB)",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 4,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 4,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1812,
+                                                "lot_name": "8904109489402",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003186",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1813,
+                                                "lot_name": "8904109489556",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003186",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1814,
+                                                "lot_name": "8904109489563",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003186",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1815,
+                                                "lot_name": "8904304510970",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003186",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 3251,
+                                "product_name": "[003188] IPhone 14 Pro Max (Blue, 512GB)",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 83,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 82,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1844,
+                                                "lot_name": "2000078937",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1845,
+                                                "lot_name": "2000078938",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1865,
+                                                "lot_name": "2000002013",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1866,
+                                                "lot_name": "2000002014",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1867,
+                                                "lot_name": "2000002015",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1868,
+                                                "lot_name": "2000002016",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1869,
+                                                "lot_name": "2000002017",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1870,
+                                                "lot_name": "2000002018",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1871,
+                                                "lot_name": "2000002019",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1872,
+                                                "lot_name": "2000002020",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1873,
+                                                "lot_name": "2000002021",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1874,
+                                                "lot_name": "2000002022",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1875,
+                                                "lot_name": "2000002023",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1876,
+                                                "lot_name": "2000002024",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1877,
+                                                "lot_name": "2000002025",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1878,
+                                                "lot_name": "2000002026",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1879,
+                                                "lot_name": "2000002027",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1880,
+                                                "lot_name": "2000002028",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1881,
+                                                "lot_name": "2000002029",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1882,
+                                                "lot_name": "2000002030",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1883,
+                                                "lot_name": "2000002031",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1884,
+                                                "lot_name": "2000002032",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1885,
+                                                "lot_name": "2000002033",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1886,
+                                                "lot_name": "2000002034",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1887,
+                                                "lot_name": "2000002035",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1888,
+                                                "lot_name": "2000002036",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1889,
+                                                "lot_name": "2000002037",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1890,
+                                                "lot_name": "2000002038",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1891,
+                                                "lot_name": "2000002039",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1892,
+                                                "lot_name": "2000002040",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1893,
+                                                "lot_name": "2000002041",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1894,
+                                                "lot_name": "2000002042",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1895,
+                                                "lot_name": "2000002043",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1896,
+                                                "lot_name": "2000002044",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1897,
+                                                "lot_name": "2000002045",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1898,
+                                                "lot_name": "2000002046",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1899,
+                                                "lot_name": "2000002047",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1900,
+                                                "lot_name": "2000002048",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1901,
+                                                "lot_name": "2000002049",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1902,
+                                                "lot_name": "2000002050",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1903,
+                                                "lot_name": "2000002051",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1904,
+                                                "lot_name": "2000002052",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1905,
+                                                "lot_name": "2000002053",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1906,
+                                                "lot_name": "2000002054",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1907,
+                                                "lot_name": "2000002055",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1908,
+                                                "lot_name": "2000002056",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1909,
+                                                "lot_name": "2000002057",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1910,
+                                                "lot_name": "2000002058",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1911,
+                                                "lot_name": "2000002059",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1912,
+                                                "lot_name": "2000002060",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1913,
+                                                "lot_name": "2000002061",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1914,
+                                                "lot_name": "2000002062",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1915,
+                                                "lot_name": "2000002063",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1916,
+                                                "lot_name": "2000002064",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1917,
+                                                "lot_name": "2000002065",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1918,
+                                                "lot_name": "2000002066",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1919,
+                                                "lot_name": "2000002067",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1920,
+                                                "lot_name": "2000002068",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1921,
+                                                "lot_name": "2000002069",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1922,
+                                                "lot_name": "2000002070",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1923,
+                                                "lot_name": "2000002071",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1924,
+                                                "lot_name": "2000002072",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1925,
+                                                "lot_name": "2000002073",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1926,
+                                                "lot_name": "2000002074",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1927,
+                                                "lot_name": "2000002075",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1928,
+                                                "lot_name": "2000002076",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1929,
+                                                "lot_name": "2000002077",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1930,
+                                                "lot_name": "2000002078",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1931,
+                                                "lot_name": "2000002079",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1932,
+                                                "lot_name": "2000002080",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1933,
+                                                "lot_name": "2000002081",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1934,
+                                                "lot_name": "2000002082",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1935,
+                                                "lot_name": "2000002083",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1936,
+                                                "lot_name": "2000002084",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1937,
+                                                "lot_name": "2000002085",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1938,
+                                                "lot_name": "2000002086",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1939,
+                                                "lot_name": "2000002087",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1940,
+                                                "lot_name": "2000002088",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1941,
+                                                "lot_name": "2000002089",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1942,
+                                                "lot_name": "2000002090",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1943,
+                                                "lot_name": "2000002091",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1944,
+                                                "lot_name": "2000002092",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1945,
+                                                "lot_name": "2000002093",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1946,
+                                                "lot_name": "2000002094",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1947,
+                                                "lot_name": "2000002095",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1948,
+                                                "lot_name": "2000002096",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1949,
+                                                "lot_name": "2000002097",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1950,
+                                                "lot_name": "2000002098",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1951,
+                                                "lot_name": "2000002099",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            },
+                                            {
+                                                "lot_id": 1952,
+                                                "lot_name": "2000002100",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "location_id": 24,
+                                        "location_name": "Sunu Location",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 1,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1843,
+                                                "lot_name": "2000078936",
+                                                "lot_qty": 1,
+                                                "lot_expiry": 1,
+                                                "ref": "003188",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": null,
+                                                "alert_date": null
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 3164,
+                                "product_name": "[14] Lipton Tea Bag",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 560,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 560,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1826,
+                                                "lot_name": "15202155562212001",
+                                                "lot_qty": 560,
+                                                "lot_expiry": 560,
+                                                "ref": "14",
+                                                "expiration_date": "2026-07-08 06:21:00",
+                                                "use_date": "2026-07-08 06:21:00",
+                                                "removal_date": "2026-04-09 06:21:00",
+                                                "alert_date": "2026-03-10 06:21:00"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 3216,
+                                "product_name": "[174] Doritos Nachos Cheese Ball 800 Grams",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 6330,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 6230,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1806,
+                                                "lot_name": "P0004",
+                                                "lot_qty": 5730,
+                                                "lot_expiry": 5730,
+                                                "ref": "174",
+                                                "expiration_date": "2027-07-31 10:00:00",
+                                                "use_date": "2027-07-01 10:00:00",
+                                                "removal_date": "2027-07-16 10:00:00",
+                                                "alert_date": "2027-06-16 10:00:00"
+                                            },
+                                            {
+                                                "lot_id": 1807,
+                                                "lot_name": "P0003",
+                                                "lot_qty": 150,
+                                                "lot_expiry": 150,
+                                                "ref": "174",
+                                                "expiration_date": "2024-06-30 10:00:00",
+                                                "use_date": "2024-05-31 10:00:00",
+                                                "removal_date": "2024-06-15 10:00:00",
+                                                "alert_date": "2024-05-16 10:00:00"
+                                            },
+                                            {
+                                                "lot_id": 1808,
+                                                "lot_name": "P0001",
+                                                "lot_qty": 300,
+                                                "lot_expiry": 300,
+                                                "ref": "174",
+                                                "expiration_date": "2026-12-31 10:00:00",
+                                                "use_date": "2026-12-01 10:00:00",
+                                                "removal_date": "2026-12-16 10:00:00",
+                                                "alert_date": "2026-11-16 10:00:00"
+                                            },
+                                            {
+                                                "lot_id": 1809,
+                                                "lot_name": "P0002",
+                                                "lot_qty": 150,
+                                                "lot_expiry": 150,
+                                                "ref": "174",
+                                                "expiration_date": "2024-05-31 10:00:00",
+                                                "use_date": "2024-05-01 10:00:00",
+                                                "removal_date": "2024-05-16 10:00:00",
+                                                "alert_date": "2024-04-16 10:00:00"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "location_id": 21,
+                                        "location_name": "WH/Musaffah",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 100,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1806,
+                                                "lot_name": "P0004",
+                                                "lot_qty": 5730,
+                                                "lot_expiry": 5730,
+                                                "ref": "174",
+                                                "expiration_date": "2027-07-31 10:00:00",
+                                                "use_date": "2027-07-01 10:00:00",
+                                                "removal_date": "2027-07-16 10:00:00",
+                                                "alert_date": "2027-06-16 10:00:00"
+                                            },
+                                            {
+                                                "lot_id": 1806,
+                                                "lot_name": "P0004",
+                                                "lot_qty": 5730,
+                                                "lot_expiry": 5730,
+                                                "ref": "174",
+                                                "expiration_date": "2027-07-31 10:00:00",
+                                                "use_date": "2027-07-01 10:00:00",
+                                                "removal_date": "2027-07-16 10:00:00",
+                                                "alert_date": "2027-06-16 10:00:00"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 3167,
+                                "product_name": "[21] Fanta 300 Ml",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 600,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 600,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1827,
+                                                "lot_name": "545151518185001",
+                                                "lot_qty": 600,
+                                                "lot_expiry": 600,
+                                                "ref": "21",
+                                                "expiration_date": "2026-07-08 06:21:28",
+                                                "use_date": "2026-07-08 06:21:28",
+                                                "removal_date": "2026-05-09 06:21:28",
+                                                "alert_date": "2026-04-09 06:21:28"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 3140,
+                                "product_name": "[AJY-001] Ajay Quest Tooth Brush Soft",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 10000,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 10000,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1954,
+                                                "lot_name": "X20001",
+                                                "lot_qty": 10000,
+                                                "lot_expiry": 10000,
+                                                "ref": "AJY-001",
+                                                "expiration_date": null,
+                                                "use_date": null,
+                                                "removal_date": "2023-10-08 07:54:24",
+                                                "alert_date": "2024-01-06 07:54:24"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 771,
+                                "product_name": "[BJF0001] PREMIUM BASMATI RICE",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 800,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 800,
+                                        "lot_details": [
+                                            {
+                                                "lot_id": 1810,
+                                                "lot_name": "12288",
+                                                "lot_qty": 800,
+                                                "lot_expiry": 800,
+                                                "ref": "BJF0001",
+                                                "expiration_date": "2027-07-31 10:00:00",
+                                                "use_date": "2027-07-31 10:00:00",
+                                                "removal_date": "2027-07-31 10:00:00",
+                                                "alert_date": "2027-07-31 10:00:00"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "product_id": 2939,
+                                "product_name": "[BLX-010] Bioluxe Lemon Facial Cleansing Tonner 225 Ml",
+                                "total_on_hand_qty": 0,
+                                "total_available_qty": 1000,
+                                "location_based": [
+                                    {
+                                        "location_id": 8,
+                                        "location_name": "WH/Stock",
+                                        "inventory_quantity": 0,
+                                        "available_quantity": 1000,
+                                        "lot_details": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

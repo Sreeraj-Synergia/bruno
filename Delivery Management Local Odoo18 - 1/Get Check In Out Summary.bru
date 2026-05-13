@@ -1,0 +1,141 @@
+meta {
+  name: Get Check In Out Summary
+  type: http
+  seq: 18
+}
+
+post {
+  url: localhost:8069/web/get_check_in_summary
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{
+      "data":{
+          "check_in_out": 51
+      }
+  }}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Get Check In Out Summary
+  
+  request: {
+    url: localhost:8069/web/get_check_in_summary
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{
+          "data":{
+              "check_in_out": 51
+          }
+      }}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 26 Aug 2025 08:14:58 GMT
+      Content-Length: 276
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "total_deliveries": 50,
+                    "total_delivered": 1,
+                    "total_no_cancelled": 0,
+                    "total_failed": 1,
+                    "total_expense": 20000,
+                    "total_expense_own": 5250,
+                    "total_collected": 249.8
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Get Check In Out Summary
+  
+  request: {
+    url: localhost:8069/web/get_check_in_summary
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{
+          "data":{
+              "check_in_out": 51
+          }
+      }}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 26 Aug 2025 08:14:58 GMT
+      Content-Length: 276
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "total_deliveries": 50,
+                    "total_delivered": 1,
+                    "total_no_cancelled": 0,
+                    "total_failed": 1,
+                    "total_expense": 20000,
+                    "total_expense_own": 5250,
+                    "total_collected": 249.8
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

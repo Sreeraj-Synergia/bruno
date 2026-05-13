@@ -1,0 +1,320 @@
+meta {
+  name: Assign CRM Lead
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:8069/web/crm_lead_assign
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "lead_id": 305
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Assign CRM Lead
+  
+  request: {
+    url: http://localhost:8069/web/crm_lead_assign
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "lead_id": 188
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2043
+      Set-Cookie: session_id=d74d640aabe1005de8402e2d5314f0d5d43b6b30; Expires=Tue, 01-Oct-2024 06:51:10 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Wed, 03 Jul 2024 06:51:10 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "assigned_crm_details": {
+                        "id": 188,
+                        "number": "00083",
+                        "lead_name_id": 15,
+                        "lead_name_name": "Freight Forwarding",
+                        "expected_revenue": 200000,
+                        "probability": 99.98,
+                        "contact_type": "new_contact",
+                        "crm_contact_name": "Qadar Express",
+                        "partner_id": 1720,
+                        "partner_name": "Qadar Express",
+                        "street": "Oud Metha",
+                        "street2": null,
+                        "city": null,
+                        "state_id": null,
+                        "state_name": null,
+                        "zip": null,
+                        "country_id": 2,
+                        "country_name": "United Arab Emirates",
+                        "email_from": "qadarali@example.com",
+                        "phone": "5151616666564",
+                        "mobile": null,
+                        "team_id": 1,
+                        "team_name": "Sales",
+                        "sales_coordinator_id": 331,
+                        "sales_coordinator_name": "Mariella Boongaling",
+                        "sales_manager_id": 318,
+                        "sales_manager_name": "Bandula Ratnayake",
+                        "pricing_emp_ids": [
+                            {
+                                "id": 312,
+                                "name": "Ahamed Mansoor"
+                            },
+                            {
+                                "id": 326,
+                                "name": "Laarnie Alviola"
+                            },
+                            {
+                                "id": 330,
+                                "name": "Lovely Merl Garcia"
+                            },
+                            {
+                                "id": 349,
+                                "name": "Synergia"
+                            }
+                        ],
+                        "description": null,
+                        "enquiry_date": "2024-06-28 00:00:00",
+                        "date_deadline": null,
+                        "segment_id": 5,
+                        "segment_name": "TRANSHIPMENT",
+                        "sub_segment_id": 63,
+                        "sub_segment_name": "AIR - SEA",
+                        "industry_type_id": 2,
+                        "industry_type_name": "Food & Bevarages",
+                        "service_type_id": null,
+                        "service_type_name": null,
+                        "priority": "0",
+                        "tag_ids": null,
+                        "source_id": null,
+                        "source_name": null,
+                        "referred_from": null,
+                        "referred_from_name": null,
+                        "account_manager_id": 328,
+                        "account_manager_name": "Lance Dsouza",
+                        "acc_mg_terr_id": 1,
+                        "acc_mg_terr_name": "Barsha",
+                        "acc_mg_deadline_date": "2024-07-04 06:51:10.401109",
+                        "manager_id": 318,
+                        "manager_name": "Bandula Ratnayake",
+                        "contact_name": "Qadar Express",
+                        "title": null,
+                        "function": null,
+                        "stage_id": 17,
+                        "stage_name": "Prospect",
+                        "syn_task_mgmt_ids": [
+                            {
+                                "id": 1235,
+                                "name": "T20240703-888",
+                                "task": "Identify TCS ( Total customer spend)"
+                            },
+                            {
+                                "id": 1236,
+                                "name": "T20240703-889",
+                                "task": "Get the Customer KYC info"
+                            },
+                            {
+                                "id": 1237,
+                                "name": "T20240703-890",
+                                "task": "Account Manager have to accept the Prospect"
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Assign CRM Lead
+  
+  request: {
+    url: http://localhost:8069/web/crm_lead_assign
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "lead_id": 188
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2043
+      Set-Cookie: session_id=d74d640aabe1005de8402e2d5314f0d5d43b6b30; Expires=Tue, 01-Oct-2024 06:51:10 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Wed, 03 Jul 2024 06:51:10 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "assigned_crm_details": {
+                        "id": 188,
+                        "number": "00083",
+                        "lead_name_id": 15,
+                        "lead_name_name": "Freight Forwarding",
+                        "expected_revenue": 200000,
+                        "probability": 99.98,
+                        "contact_type": "new_contact",
+                        "crm_contact_name": "Qadar Express",
+                        "partner_id": 1720,
+                        "partner_name": "Qadar Express",
+                        "street": "Oud Metha",
+                        "street2": null,
+                        "city": null,
+                        "state_id": null,
+                        "state_name": null,
+                        "zip": null,
+                        "country_id": 2,
+                        "country_name": "United Arab Emirates",
+                        "email_from": "qadarali@example.com",
+                        "phone": "5151616666564",
+                        "mobile": null,
+                        "team_id": 1,
+                        "team_name": "Sales",
+                        "sales_coordinator_id": 331,
+                        "sales_coordinator_name": "Mariella Boongaling",
+                        "sales_manager_id": 318,
+                        "sales_manager_name": "Bandula Ratnayake",
+                        "pricing_emp_ids": [
+                            {
+                                "id": 312,
+                                "name": "Ahamed Mansoor"
+                            },
+                            {
+                                "id": 326,
+                                "name": "Laarnie Alviola"
+                            },
+                            {
+                                "id": 330,
+                                "name": "Lovely Merl Garcia"
+                            },
+                            {
+                                "id": 349,
+                                "name": "Synergia"
+                            }
+                        ],
+                        "description": null,
+                        "enquiry_date": "2024-06-28 00:00:00",
+                        "date_deadline": null,
+                        "segment_id": 5,
+                        "segment_name": "TRANSHIPMENT",
+                        "sub_segment_id": 63,
+                        "sub_segment_name": "AIR - SEA",
+                        "industry_type_id": 2,
+                        "industry_type_name": "Food & Bevarages",
+                        "service_type_id": null,
+                        "service_type_name": null,
+                        "priority": "0",
+                        "tag_ids": null,
+                        "source_id": null,
+                        "source_name": null,
+                        "referred_from": null,
+                        "referred_from_name": null,
+                        "account_manager_id": 328,
+                        "account_manager_name": "Lance Dsouza",
+                        "acc_mg_terr_id": 1,
+                        "acc_mg_terr_name": "Barsha",
+                        "acc_mg_deadline_date": "2024-07-04 06:51:10.401109",
+                        "manager_id": 318,
+                        "manager_name": "Bandula Ratnayake",
+                        "contact_name": "Qadar Express",
+                        "title": null,
+                        "function": null,
+                        "stage_id": 17,
+                        "stage_name": "Prospect",
+                        "syn_task_mgmt_ids": [
+                            {
+                                "id": 1235,
+                                "name": "T20240703-888",
+                                "task": "Identify TCS ( Total customer spend)"
+                            },
+                            {
+                                "id": 1236,
+                                "name": "T20240703-889",
+                                "task": "Get the Customer KYC info"
+                            },
+                            {
+                                "id": 1237,
+                                "name": "T20240703-890",
+                                "task": "Account Manager have to accept the Prospect"
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

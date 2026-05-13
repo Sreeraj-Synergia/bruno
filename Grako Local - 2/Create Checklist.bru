@@ -1,0 +1,27 @@
+meta {
+  name: Create Checklist
+  type: http
+  seq: 64
+}
+
+post {
+  url: http://localhost:8090/web/mobilisation_checklist_doc
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "mobilisation_id": 79,
+              "checklist_categ_id": 4,
+              "checklist_id": 9
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

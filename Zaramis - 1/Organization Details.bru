@@ -1,0 +1,185 @@
+meta {
+  name: Organization Details
+  type: http
+  seq: 3
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_org_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Organization Details
+  
+  request: {
+    url: http://localhost:8070/web/get_org_details
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 22 Jan 2025 08:58:20 GMT
+      Content-Length: 1059
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "org_details": [
+                        {
+                            "id": 1,
+                            "name": "Synergia Softwares IT infrastructure LLLC",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "zip": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "currency_id": 128,
+                            "currency_name": "AED",
+                            "currency_active": true,
+                            "currency_unit_label": "Dirham",
+                            "currency_subunit_label": "Fils",
+                            "currency_rounding": 0.0001,
+                            "currency_decimal_places": 4,
+                            "currency_symbol": "AED",
+                            "currency_position": "after",
+                            "email": "info@synergiasoft.com",
+                            "website": "https://synergiasoft.com",
+                            "phone": "+971508922937",
+                            "trn": "1001029001920019",
+                            "company_id": 1,
+                            "logo_url": "http://localhost:8070/web/image?model=res.company&id=1&field=logo",
+                            "latitude": 0,
+                            "longitude": 0,
+                            "logo": "http://localhost:8070/web/image?model=res.company&id=1&field=logo",
+                            "contact_us_link": false,
+                            "about_us_link": false,
+                            "faq_link": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Organization Details
+  
+  request: {
+    url: http://localhost:8070/web/get_org_details
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 22 Jan 2025 08:58:20 GMT
+      Content-Length: 1059
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "org_details": [
+                        {
+                            "id": 1,
+                            "name": "Synergia Softwares IT infrastructure LLLC",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "zip": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "currency_id": 128,
+                            "currency_name": "AED",
+                            "currency_active": true,
+                            "currency_unit_label": "Dirham",
+                            "currency_subunit_label": "Fils",
+                            "currency_rounding": 0.0001,
+                            "currency_decimal_places": 4,
+                            "currency_symbol": "AED",
+                            "currency_position": "after",
+                            "email": "info@synergiasoft.com",
+                            "website": "https://synergiasoft.com",
+                            "phone": "+971508922937",
+                            "trn": "1001029001920019",
+                            "company_id": 1,
+                            "logo_url": "http://localhost:8070/web/image?model=res.company&id=1&field=logo",
+                            "latitude": 0,
+                            "longitude": 0,
+                            "logo": "http://localhost:8070/web/image?model=res.company&id=1&field=logo",
+                            "contact_us_link": false,
+                            "about_us_link": false,
+                            "faq_link": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

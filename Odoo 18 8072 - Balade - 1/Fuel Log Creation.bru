@@ -1,0 +1,163 @@
+meta {
+  name: Fuel Log Creation
+  type: http
+  seq: 48
+}
+
+post {
+  url: 192.168.1.119:8070/web/create_vehicle_fuel_log
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data":{
+              "fleet_id": 5,
+              "previous_value": 50,
+              "current_value": 10
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Fuel Log Creation
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_vehicle_fuel_log
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data":{
+                  "fleet_id": 5,
+                  "previous_value": 50,
+                  "current_value": 10
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 12 May 2025 14:18:18 GMT
+      Content-Length: 383
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "fuel_log_data": {
+                        "fuel_log_id": 9,
+                        "fleet_id": 5,
+                        "fleet_name": "Toyota/Hiace/34567",
+                        "driver_id": 23893,
+                        "driver_name": "Sales User 4",
+                        "driver_employee_id": 15,
+                        "driver_employee_name": "Sales User 4",
+                        "previous_value": 50,
+                        "current_value": 10,
+                        "date": "2025-05-12"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Fuel Log Creation
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_vehicle_fuel_log
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data":{
+                  "fleet_id": 5,
+                  "previous_value": 50,
+                  "current_value": 10
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 12 May 2025 14:18:18 GMT
+      Content-Length: 383
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "fuel_log_data": {
+                        "fuel_log_id": 9,
+                        "fleet_id": 5,
+                        "fleet_name": "Toyota/Hiace/34567",
+                        "driver_id": 23893,
+                        "driver_name": "Sales User 4",
+                        "driver_employee_id": 15,
+                        "driver_employee_name": "Sales User 4",
+                        "previous_value": 50,
+                        "current_value": 10,
+                        "date": "2025-05-12"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

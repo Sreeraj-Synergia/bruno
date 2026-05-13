@@ -1,0 +1,170 @@
+meta {
+  name: Product Details
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://saudimotors.syntrack.app/web/get_external_product_stock_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Check List Categories
+  
+  request: {
+    url: http://localhost:8069/web/get_checklist_category_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 1711
+      Set-Cookie: session_id=fe87295f2909c53c88289ef68293dab684e266df; Expires=Sun, 27-Oct-2024 08:44:42 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 29 Jul 2024 08:44:42 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "checklist_categoriesdetails": [
+                        {
+                            "id": 1,
+                            "name": "Mobile Boxes",
+                            "code": null,
+                            "sub_category_ids": [
+                                {
+                                    "id": 1,
+                                    "name": "Open Seal Master",
+                                    "code": null,
+                                    "checklist_category_id": 1,
+                                    "checklist_category_name": "Mobile Boxes"
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "Seal Master Box",
+                                    "code": null,
+                                    "checklist_category_id": 1,
+                                    "checklist_category_name": "Mobile Boxes"
+                                },
+                                {
+                                    "id": 3,
+                                    "name": "Loose Mobile",
+                                    "code": null,
+                                    "checklist_category_id": 1,
+                                    "checklist_category_name": "Mobile Boxes"
+                                },
+                                {
+                                    "id": 4,
+                                    "name": "IMEI Not Matching In Master BOx",
+                                    "code": null,
+                                    "checklist_category_id": 1,
+                                    "checklist_category_name": "Mobile Boxes"
+                                },
+                                {
+                                    "id": 5,
+                                    "name": "IMEI Matching In Master Box",
+                                    "code": null,
+                                    "checklist_category_id": 1,
+                                    "checklist_category_name": "Mobile Boxes"
+                                },
+                                {
+                                    "id": 6,
+                                    "name": "3PIN",
+                                    "code": null,
+                                    "checklist_category_id": 1,
+                                    "checklist_category_name": "Mobile Boxes"
+                                },
+                                {
+                                    "id": 7,
+                                    "name": "2PIN",
+                                    "code": null,
+                                    "checklist_category_id": 1,
+                                    "checklist_category_name": "Mobile Boxes"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Box Phone",
+                            "code": null,
+                            "sub_category_ids": []
+                        },
+                        {
+                            "id": 3,
+                            "name": "Boxes",
+                            "code": null,
+                            "sub_category_ids": []
+                        },
+                        {
+                            "id": 4,
+                            "name": "General",
+                            "code": null,
+                            "sub_category_ids": []
+                        },
+                        {
+                            "id": 5,
+                            "name": "Country of Origin",
+                            "code": "CO",
+                            "sub_category_ids": [
+                                {
+                                    "id": 8,
+                                    "name": "China",
+                                    "code": "CN",
+                                    "checklist_category_id": 5,
+                                    "checklist_category_name": "Country of Origin"
+                                },
+                                {
+                                    "id": 9,
+                                    "name": "India",
+                                    "code": "IN",
+                                    "checklist_category_id": 5,
+                                    "checklist_category_name": "Country of Origin"
+                                },
+                                {
+                                    "id": 10,
+                                    "name": "USA",
+                                    "code": "US",
+                                    "checklist_category_id": 5,
+                                    "checklist_category_name": "Country of Origin"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

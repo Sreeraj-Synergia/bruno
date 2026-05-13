@@ -1,0 +1,35 @@
+meta {
+  name: create_crm_activity
+  type: http
+  seq: 16
+}
+
+post {
+  url: http://172.105.55.55:8074/web/create_crm_activity
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "activity_type_id": 2,
+              "date_deadline": "2024-07-19",
+              "summary": "Call The Customer",
+              "res_id": 311,
+              "additional_assigned_ids": [100],
+              "user_id": false,
+              "note": "Call At 9 o Clock",
+              "assigned_task_id": 1538,
+              "employee_task": false,
+              "employee_id": false
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

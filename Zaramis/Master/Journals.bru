@@ -1,0 +1,401 @@
+meta {
+  name: Journals
+  type: http
+  seq: 1
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_payment_journals
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Journals
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_payment_journals
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 31 Jan 2025 09:47:23 GMT
+      Content-Length: 2584
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_details": [
+                        {
+                            "journal_name": "RAK Bank  - 0182734647",
+                            "journal_id": 6,
+                            "journal_type": "bank",
+                            "code": "RAK",
+                            "use_in_device_payment": true,
+                            "employee_id": false,
+                            "employee_name": false,
+                            "default_account_id": {
+                                "id": 161,
+                                "code": "101001",
+                                "name": "RAK Bank"
+                            },
+                            "suspense_account_id": {
+                                "id": 163,
+                                "code": "101002",
+                                "name": "Bank Suspense Account"
+                            },
+                            "profit_account_id": {
+                                "id": 164,
+                                "code": "999001",
+                                "name": "Cash Difference Gain"
+                            },
+                            "loss_account_id": {
+                                "id": 165,
+                                "code": "999002",
+                                "name": "Cash Difference Loss"
+                            },
+                            "refund_sequence": false,
+                            "payment_sequence": true,
+                            "currency_id": {
+                                "id": false,
+                                "name": false
+                            },
+                            "payment_method": [
+                                {
+                                    "payment_method_id": 1,
+                                    "payment_method_name": "Cash",
+                                    "payment_method_code": "manual"
+                                },
+                                {
+                                    "payment_method_id": 12,
+                                    "payment_method_name": "Electronic",
+                                    "payment_method_code": "electronics"
+                                }
+                            ]
+                        },
+                        {
+                            "journal_name": "Cash in Hand Sales 1",
+                            "journal_id": 7,
+                            "journal_type": "cash",
+                            "code": "CH",
+                            "use_in_device_payment": true,
+                            "employee_id": false,
+                            "employee_name": false,
+                            "default_account_id": {
+                                "id": 162,
+                                "code": "105001",
+                                "name": "Cash in Hand"
+                            },
+                            "suspense_account_id": {
+                                "id": 163,
+                                "code": "101002",
+                                "name": "Bank Suspense Account"
+                            },
+                            "profit_account_id": {
+                                "id": 164,
+                                "code": "999001",
+                                "name": "Cash Difference Gain"
+                            },
+                            "loss_account_id": {
+                                "id": 165,
+                                "code": "999002",
+                                "name": "Cash Difference Loss"
+                            },
+                            "refund_sequence": false,
+                            "payment_sequence": true,
+                            "currency_id": {
+                                "id": false,
+                                "name": false
+                            },
+                            "payment_method": [
+                                {
+                                    "payment_method_id": 4,
+                                    "payment_method_name": "Office Cash",
+                                    "payment_method_code": "manual"
+                                },
+                                {
+                                    "payment_method_id": 14,
+                                    "payment_method_name": "Electronic",
+                                    "payment_method_code": "electronics"
+                                }
+                            ]
+                        },
+                        {
+                            "journal_name": "Cash In Hand Sales 2",
+                            "journal_id": 15,
+                            "journal_type": "cash",
+                            "code": "CSH1",
+                            "use_in_device_payment": true,
+                            "employee_id": 7,
+                            "employee_name": "Sales User 2",
+                            "default_account_id": {
+                                "id": 181,
+                                "code": "105002",
+                                "name": "Cash In Hand"
+                            },
+                            "suspense_account_id": {
+                                "id": 163,
+                                "code": "101002",
+                                "name": "Bank Suspense Account"
+                            },
+                            "profit_account_id": {
+                                "id": 164,
+                                "code": "999001",
+                                "name": "Cash Difference Gain"
+                            },
+                            "loss_account_id": {
+                                "id": 165,
+                                "code": "999002",
+                                "name": "Cash Difference Loss"
+                            },
+                            "refund_sequence": false,
+                            "payment_sequence": true,
+                            "currency_id": {
+                                "id": false,
+                                "name": false
+                            },
+                            "payment_method": [
+                                {
+                                    "payment_method_id": 10,
+                                    "payment_method_name": "Cash",
+                                    "payment_method_code": "manual"
+                                },
+                                {
+                                    "payment_method_id": 15,
+                                    "payment_method_name": "Electronic",
+                                    "payment_method_code": "electronics"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Journals
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_payment_journals
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 31 Jan 2025 09:47:23 GMT
+      Content-Length: 2584
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_details": [
+                        {
+                            "journal_name": "RAK Bank  - 0182734647",
+                            "journal_id": 6,
+                            "journal_type": "bank",
+                            "code": "RAK",
+                            "use_in_device_payment": true,
+                            "employee_id": false,
+                            "employee_name": false,
+                            "default_account_id": {
+                                "id": 161,
+                                "code": "101001",
+                                "name": "RAK Bank"
+                            },
+                            "suspense_account_id": {
+                                "id": 163,
+                                "code": "101002",
+                                "name": "Bank Suspense Account"
+                            },
+                            "profit_account_id": {
+                                "id": 164,
+                                "code": "999001",
+                                "name": "Cash Difference Gain"
+                            },
+                            "loss_account_id": {
+                                "id": 165,
+                                "code": "999002",
+                                "name": "Cash Difference Loss"
+                            },
+                            "refund_sequence": false,
+                            "payment_sequence": true,
+                            "currency_id": {
+                                "id": false,
+                                "name": false
+                            },
+                            "payment_method": [
+                                {
+                                    "payment_method_id": 1,
+                                    "payment_method_name": "Cash",
+                                    "payment_method_code": "manual"
+                                },
+                                {
+                                    "payment_method_id": 12,
+                                    "payment_method_name": "Electronic",
+                                    "payment_method_code": "electronics"
+                                }
+                            ]
+                        },
+                        {
+                            "journal_name": "Cash in Hand Sales 1",
+                            "journal_id": 7,
+                            "journal_type": "cash",
+                            "code": "CH",
+                            "use_in_device_payment": true,
+                            "employee_id": false,
+                            "employee_name": false,
+                            "default_account_id": {
+                                "id": 162,
+                                "code": "105001",
+                                "name": "Cash in Hand"
+                            },
+                            "suspense_account_id": {
+                                "id": 163,
+                                "code": "101002",
+                                "name": "Bank Suspense Account"
+                            },
+                            "profit_account_id": {
+                                "id": 164,
+                                "code": "999001",
+                                "name": "Cash Difference Gain"
+                            },
+                            "loss_account_id": {
+                                "id": 165,
+                                "code": "999002",
+                                "name": "Cash Difference Loss"
+                            },
+                            "refund_sequence": false,
+                            "payment_sequence": true,
+                            "currency_id": {
+                                "id": false,
+                                "name": false
+                            },
+                            "payment_method": [
+                                {
+                                    "payment_method_id": 4,
+                                    "payment_method_name": "Office Cash",
+                                    "payment_method_code": "manual"
+                                },
+                                {
+                                    "payment_method_id": 14,
+                                    "payment_method_name": "Electronic",
+                                    "payment_method_code": "electronics"
+                                }
+                            ]
+                        },
+                        {
+                            "journal_name": "Cash In Hand Sales 2",
+                            "journal_id": 15,
+                            "journal_type": "cash",
+                            "code": "CSH1",
+                            "use_in_device_payment": true,
+                            "employee_id": 7,
+                            "employee_name": "Sales User 2",
+                            "default_account_id": {
+                                "id": 181,
+                                "code": "105002",
+                                "name": "Cash In Hand"
+                            },
+                            "suspense_account_id": {
+                                "id": 163,
+                                "code": "101002",
+                                "name": "Bank Suspense Account"
+                            },
+                            "profit_account_id": {
+                                "id": 164,
+                                "code": "999001",
+                                "name": "Cash Difference Gain"
+                            },
+                            "loss_account_id": {
+                                "id": 165,
+                                "code": "999002",
+                                "name": "Cash Difference Loss"
+                            },
+                            "refund_sequence": false,
+                            "payment_sequence": true,
+                            "currency_id": {
+                                "id": false,
+                                "name": false
+                            },
+                            "payment_method": [
+                                {
+                                    "payment_method_id": 10,
+                                    "payment_method_name": "Cash",
+                                    "payment_method_code": "manual"
+                                },
+                                {
+                                    "payment_method_id": 15,
+                                    "payment_method_name": "Electronic",
+                                    "payment_method_code": "electronics"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,435 @@
+meta {
+  name: Expense Creation
+  type: http
+  seq: 57
+}
+
+post {
+  url: 192.168.1.120:8070/web/create_expense
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "employee_id": 78,
+              "expense_type": "fleet",
+              "fleet_id": 20,
+              "paid_from": 37,
+              "currency_id": 128,
+              "origin_number": "ORGN01002",
+              "emp_checkin_id": 1034,
+              "fleet_lines": [
+                  {
+                      "fleet_id": 20,
+                      "currency_id": 128,
+                      "bill_no": "BILL588562001",
+                      "expense_type": 2971,
+                      "description": "Fuel charges for the vehicle",
+                      "uom_id": 1,
+                      "qty": 100,
+                      "unit_price": 2.98,
+                      "tax_per": [19],
+                      "attachment": false,
+                      "attachment_filename": false,
+                      "remarks": "Sample Remark"
+                  },
+                  {
+                      "fleet_id": 20,
+                      "currency_id": 128,
+                      "bill_no": "BILL5885584794",
+                      "expense_type": 19457,
+                      "description": "Food Expenses",
+                      "uom_id": 1,
+                      "qty": 2,
+                      "unit_price": 12,
+                      "tax_per": [19],
+                      "attachment": false,
+                      "attachment_filename": false,
+                      "remarks": "Food Remark"
+                  }
+              ]
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Expense Creation - Employee Expense
+  
+  request: {
+    url: 192.168.1.120:8070/web/create_expense
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "expense_type": "employee",
+                  "employee_id": 78,
+                  "paid_from": 37,
+                  "currency_id": 128,
+                  "origin_number": "ORGN01001",
+                  "emp_checkin_id": 1034,
+                  "employee_lines": [
+                      {
+                          "employee_id": 78,
+                          "currency_id": 128,
+                          "bill_no": "BILL588562001",
+                          "expense_type": 2971,
+                          "description": "Fuel charges for the vehicle",
+                          "uom_id": 1,
+                          "qty": 100,
+                          "unit_price": 2.98,
+                          "tax_per": [19],
+                          "attachment": false,
+                          "attachment_filename": false,
+                          "remarks": "Sample Remark"
+                      },
+                      {
+                          "employee_id": 78,
+                          "currency_id": 128,
+                          "bill_no": "BILL5885584794",
+                          "expense_type": 19457,
+                          "description": "Food Expenses",
+                          "uom_id": 1,
+                          "qty": 2,
+                          "unit_price": 12,
+                          "tax_per": [19],
+                          "attachment": false,
+                          "attachment_filename": false,
+                          "remarks": "Food Remark"
+                      }
+                  ]
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 10 Mar 2026 07:02:43 GMT
+      Content-Length: 2262
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "expense_details": {
+                        "id": 13,
+                        "name": "EXP2026030013",
+                        "expense_type": "employee",
+                        "date": "2026-03-10",
+                        "paid_from_id": 37,
+                        "paid_from_name": "Cash in Hand- Van 01",
+                        "employee_id": 78,
+                        "employee_name": "AKMAL CHERUKAPPALLI",
+                        "fleet_id": null,
+                        "fleet_name": null,
+                        "created_by": 103,
+                        "created_name": "MUHAMMED AKMAL CHERUKAPPALLI MOIDEEN",
+                        "emp_created_by": 78,
+                        "emp_created_name": "AKMAL CHERUKAPPALLI",
+                        "origin_number": "ORGN01001",
+                        "employee_lines": [
+                            {
+                                "id": 20,
+                                "employee_id": 78,
+                                "employee_name": "AKMAL CHERUKAPPALLI",
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "sequence": 10,
+                                "bill_no": "BILL588562001",
+                                "expense_type": 2971,
+                                "expense_type_name": "Fuel Charges",
+                                "description": "Fuel charges for the vehicle",
+                                "expense_account": 1761,
+                                "expense_account_name": "FUEL EXPENSE-COMMON",
+                                "qty": 100,
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "unit_price": 2.98,
+                                "subtotal": 298,
+                                "tax_per": [
+                                    {
+                                        "id": 19,
+                                        "name": "5% Purchase Excl"
+                                    }
+                                ],
+                                "tax_amount": 14.9,
+                                "total_amount": 312.9,
+                                "attachment": null,
+                                "attachment_filename": null,
+                                "remarks": "Sample Remark"
+                            },
+                            {
+                                "id": 21,
+                                "employee_id": 78,
+                                "employee_name": "AKMAL CHERUKAPPALLI",
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "sequence": 10,
+                                "bill_no": "BILL5885584794",
+                                "expense_type": 19457,
+                                "expense_type_name": "Food Expenses",
+                                "description": "Food Expenses",
+                                "expense_account": 1715,
+                                "expense_account_name": "OFFICE EXPENSES",
+                                "qty": 2,
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "unit_price": 12,
+                                "subtotal": 24,
+                                "tax_per": [
+                                    {
+                                        "id": 19,
+                                        "name": "5% Purchase Excl"
+                                    }
+                                ],
+                                "tax_amount": 1.2000000000000002,
+                                "total_amount": 25.2,
+                                "attachment": null,
+                                "attachment_filename": null,
+                                "remarks": "Food Remark"
+                            }
+                        ],
+                        "fleet_lines": null,
+                        "state": "draft",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "emp_checkin_id": 1034,
+                        "emp_checkin_name": "CHK/IN/OUT/00423",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "total_amount": 338.09999999999997,
+                        "total_tax": 16.1,
+                        "total_subtotal": 322,
+                        "amount_total_words": "Three Hundred And Thirty-Eight Dirham and Ten Fils",
+                        "total_tax_excluded": 16.1,
+                        "total_tax_included": null,
+                        "approved_by": null,
+                        "approved_name": null,
+                        "approved_date": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Expense Creation - Vehicle Expense
+  
+  request: {
+    url: 192.168.1.120:8070/web/create_expense
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "expense_type": "fleet",
+                  "fleet_id": 20,
+                  "paid_from": 37,
+                  "currency_id": 128,
+                  "origin_number": "ORGN01002",
+                  "emp_checkin_id": 1034,
+                  "fleet_lines": [
+                      {
+                          "fleet_id": 20,
+                          "currency_id": 128,
+                          "bill_no": "BILL588562001",
+                          "expense_type": 2971,
+                          "description": "Fuel charges for the vehicle",
+                          "uom_id": 1,
+                          "qty": 100,
+                          "unit_price": 2.98,
+                          "tax_per": [19],
+                          "attachment": false,
+                          "attachment_filename": false,
+                          "remarks": "Sample Remark"
+                      },
+                      {
+                          "fleet_id": 20,
+                          "currency_id": 128,
+                          "bill_no": "BILL5885584794",
+                          "expense_type": 19457,
+                          "description": "Food Expenses",
+                          "uom_id": 1,
+                          "qty": 2,
+                          "unit_price": 12,
+                          "tax_per": [19],
+                          "attachment": false,
+                          "attachment_filename": false,
+                          "remarks": "Food Remark"
+                      }
+                  ]
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 10 Mar 2026 08:07:06 GMT
+      Content-Length: 2348
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "expense_details": {
+                        "id": 14,
+                        "name": "EXP2026030014",
+                        "expense_type": "fleet",
+                        "date": "2026-03-10",
+                        "paid_from_id": 37,
+                        "paid_from_name": "Cash in Hand- Van 01",
+                        "employee_id": null,
+                        "employee_name": null,
+                        "fleet_id": 20,
+                        "fleet_name": "Mitsubishi/HIACE/4 85305",
+                        "created_by": 103,
+                        "created_name": "MUHAMMED AKMAL CHERUKAPPALLI MOIDEEN",
+                        "emp_created_by": 78,
+                        "emp_created_name": "AKMAL CHERUKAPPALLI",
+                        "origin_number": "ORGN01002",
+                        "employee_lines": null,
+                        "fleet_lines": [
+                            {
+                                "id": 1,
+                                "fleet_id": 20,
+                                "fleet_name": "Mitsubishi/HIACE/4 85305",
+                                "employee_id": null,
+                                "employee_name": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "sequence": 10,
+                                "bill_no": "BILL588562001",
+                                "expense_type": 2971,
+                                "expense_type_name": "Fuel Charges",
+                                "description": "Fuel charges for the vehicle",
+                                "expense_account": 1761,
+                                "expense_account_name": "FUEL EXPENSE-COMMON",
+                                "qty": 100,
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "unit_price": 2.98,
+                                "subtotal": 298,
+                                "tax_per": [
+                                    {
+                                        "id": 19,
+                                        "name": "5% Purchase Excl"
+                                    }
+                                ],
+                                "tax_amount": 14.9,
+                                "total_amount": 312.9,
+                                "attachment": null,
+                                "attachment_filename": null,
+                                "remarks": "Sample Remark"
+                            },
+                            {
+                                "id": 2,
+                                "fleet_id": 20,
+                                "fleet_name": "Mitsubishi/HIACE/4 85305",
+                                "employee_id": null,
+                                "employee_name": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "sequence": 10,
+                                "bill_no": "BILL5885584794",
+                                "expense_type": 19457,
+                                "expense_type_name": "Food Expenses",
+                                "description": "Food Expenses",
+                                "expense_account": 1715,
+                                "expense_account_name": "OFFICE EXPENSES",
+                                "qty": 2,
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "unit_price": 12,
+                                "subtotal": 24,
+                                "tax_per": [
+                                    {
+                                        "id": 19,
+                                        "name": "5% Purchase Excl"
+                                    }
+                                ],
+                                "tax_amount": 1.2000000000000002,
+                                "total_amount": 25.2,
+                                "attachment": null,
+                                "attachment_filename": null,
+                                "remarks": "Food Remark"
+                            }
+                        ],
+                        "state": "draft",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "emp_checkin_id": 1034,
+                        "emp_checkin_name": "CHK/IN/OUT/00423",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "total_amount": 338.09999999999997,
+                        "total_tax": 16.1,
+                        "total_subtotal": 322,
+                        "amount_total_words": "Three Hundred And Thirty-Eight Dirham and Ten Fils",
+                        "total_tax_excluded": 16.1,
+                        "total_tax_included": null,
+                        "approved_by": null,
+                        "approved_name": null,
+                        "approved_date": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

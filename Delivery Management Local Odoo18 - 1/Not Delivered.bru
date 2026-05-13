@@ -1,0 +1,27 @@
+meta {
+  name: Not Delivered
+  type: http
+  seq: 13
+}
+
+post {
+  url: localhost:8070/web/not_delivered
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "failed_delivery_reason_id": 1,
+              "dispatch_line_id": 170,
+              "dispatch_id": 
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

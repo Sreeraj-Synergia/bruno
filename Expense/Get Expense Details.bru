@@ -1,0 +1,110 @@
+meta {
+  name: Get Expense Details
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8069/web/get_expense_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Get Expense Details
+  
+  request: {
+    url: http://localhost:8069/web/get_expense_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 904
+      Set-Cookie: session_id=297107ed8a6540a6984aecb7be33c42cbddc2eda; Expires=Wed, 25-Dec-2024 09:47:30 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Thu, 26 Sep 2024 09:47:30 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "expense_details": [
+                        {
+                            "id": 4,
+                            "seq_name": "EXP2024090001",
+                            "employee_id": 311,
+                            "employee_name": "Achala Kumaranayake",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_id": "hr.job(108,)",
+                            "job_name": "hr.job(108,)",
+                            "manager_id": 318,
+                            "manager_name": "Bandula Ratnayake",
+                            "date": "2024-09-26",
+                            "transfer_mode": "own_account",
+                            "journal_id": 36,
+                            "journal_name": "DAFZA PETTY CASH.",
+                            "account_id": 399,
+                            "account_name": "Salary Accounts",
+                            "expense_sheet_lines": [
+                                {
+                                    "id": 1,
+                                    "sheet_id": 4,
+                                    "sequence": 1,
+                                    "date": null,
+                                    "product_id": "product.product(31346,)",
+                                    "fleet": "DUbai E 15151",
+                                    "unit_price": 2.85,
+                                    "qty": 25,
+                                    "tax_ids": [
+                                        {
+                                            "id": 1,
+                                            "name": "VAT 5%"
+                                        }
+                                    ],
+                                    "total": 71.25,
+                                    "price_tax": 3.56,
+                                    "total_incl": 74.81
+                                }
+                            ],
+                            "total_tax_amount": 74.81,
+                            "tax_amount": 3.56,
+                            "state": "draft"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

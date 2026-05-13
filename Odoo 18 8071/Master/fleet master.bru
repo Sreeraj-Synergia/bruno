@@ -1,0 +1,267 @@
+meta {
+  name: fleet master
+  type: http
+  seq: 13
+}
+
+post {
+  url: 192.168.1.119:8071/web/get_fleet_master_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  In order the user have to see or change the vehicle assigned to the user from mobile application the fleet details are needed, this api used to fetch alll the available vehicle details available in the backend details
+}
+
+example {
+  name: Fleet Details
+  
+  request: {
+    url: 192.168.1.119:8071/web/get_fleet_master_details
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 23 Jun 2025 08:56:20 GMT
+      Content-Length: 1587
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "fleet_data": [
+                        {
+                            "id": 6,
+                            "display_name": "Nissan/Nissan Hi lux/90829023",
+                            "fleet_model_id": 4,
+                            "fleet_model_name": "Nissan Hi lux",
+                            "license_plate": "90829023",
+                            "driver_id": 15716,
+                            "driver_name": "24 HOURS BAQALA",
+                            "odometer": 271002,
+                            "state_id": 1,
+                            "state_name": "New Request"
+                        },
+                        {
+                            "id": 10,
+                            "display_name": "Nissan/Nissan Patrol V 6/D 90814",
+                            "fleet_model_id": 1,
+                            "fleet_model_name": "Nissan Patrol V 6",
+                            "license_plate": "D 90814",
+                            "driver_id": null,
+                            "driver_name": null,
+                            "odometer": 0,
+                            "state_id": 1,
+                            "state_name": "New Request"
+                        },
+                        {
+                            "id": 11,
+                            "display_name": "Mitsubishi/ASX/DD 95193",
+                            "fleet_model_id": 5,
+                            "fleet_model_name": "ASX",
+                            "license_plate": "DD 95193",
+                            "driver_id": null,
+                            "driver_name": null,
+                            "odometer": 715,
+                            "state_id": 1,
+                            "state_name": "New Request"
+                        },
+                        {
+                            "id": 7,
+                            "display_name": "Toyota/Hiace/X101",
+                            "fleet_model_id": 2,
+                            "fleet_model_name": "Hiace",
+                            "license_plate": "X101",
+                            "driver_id": 23898,
+                            "driver_name": "Sales 5",
+                            "odometer": 4005,
+                            "state_id": 1,
+                            "state_name": "New Request"
+                        },
+                        {
+                            "id": 8,
+                            "display_name": "Toyota/Hiace/X102",
+                            "fleet_model_id": 2,
+                            "fleet_model_name": "Hiace",
+                            "license_plate": "X102",
+                            "driver_id": 24173,
+                            "driver_name": "Omar Abdalla",
+                            "odometer": 12000,
+                            "state_id": 1,
+                            "state_name": "New Request"
+                        },
+                        {
+                            "id": 9,
+                            "display_name": "Toyota/Hiace/X103",
+                            "fleet_model_id": 2,
+                            "fleet_model_name": "Hiace",
+                            "license_plate": "X103",
+                            "driver_id": 23904,
+                            "driver_name": "Sales 7",
+                            "odometer": 3100,
+                            "state_id": 1,
+                            "state_name": "New Request"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Fleet Details
+  
+  request: {
+    url: 192.168.1.119:8071/web/get_fleet_master_details
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 23 Jun 2025 08:56:20 GMT
+      Content-Length: 1587
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "fleet_data": [
+                        {
+                            "id": 6,
+                            "display_name": "Nissan/Nissan Hi lux/90829023",
+                            "fleet_model_id": 4,
+                            "fleet_model_name": "Nissan Hi lux",
+                            "license_plate": "90829023",
+                            "driver_id": 15716,
+                            "driver_name": "24 HOURS BAQALA",
+                            "odometer": 271002,
+                            "state_id": 1,
+                            "state_name": "New Request"
+                        },
+                        {
+                            "id": 10,
+                            "display_name": "Nissan/Nissan Patrol V 6/D 90814",
+                            "fleet_model_id": 1,
+                            "fleet_model_name": "Nissan Patrol V 6",
+                            "license_plate": "D 90814",
+                            "driver_id": null,
+                            "driver_name": null,
+                            "odometer": 0,
+                            "state_id": 1,
+                            "state_name": "New Request"
+                        },
+                        {
+                            "id": 11,
+                            "display_name": "Mitsubishi/ASX/DD 95193",
+                            "fleet_model_id": 5,
+                            "fleet_model_name": "ASX",
+                            "license_plate": "DD 95193",
+                            "driver_id": null,
+                            "driver_name": null,
+                            "odometer": 715,
+                            "state_id": 1,
+                            "state_name": "New Request"
+                        },
+                        {
+                            "id": 7,
+                            "display_name": "Toyota/Hiace/X101",
+                            "fleet_model_id": 2,
+                            "fleet_model_name": "Hiace",
+                            "license_plate": "X101",
+                            "driver_id": 23898,
+                            "driver_name": "Sales 5",
+                            "odometer": 4005,
+                            "state_id": 1,
+                            "state_name": "New Request"
+                        },
+                        {
+                            "id": 8,
+                            "display_name": "Toyota/Hiace/X102",
+                            "fleet_model_id": 2,
+                            "fleet_model_name": "Hiace",
+                            "license_plate": "X102",
+                            "driver_id": 24173,
+                            "driver_name": "Omar Abdalla",
+                            "odometer": 12000,
+                            "state_id": 1,
+                            "state_name": "New Request"
+                        },
+                        {
+                            "id": 9,
+                            "display_name": "Toyota/Hiace/X103",
+                            "fleet_model_id": 2,
+                            "fleet_model_name": "Hiace",
+                            "license_plate": "X103",
+                            "driver_id": 23904,
+                            "driver_name": "Sales 7",
+                            "odometer": 3100,
+                            "state_id": 1,
+                            "state_name": "New Request"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

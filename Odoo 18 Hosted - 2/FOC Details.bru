@@ -1,0 +1,623 @@
+meta {
+  name: FOC Details
+  type: http
+  seq: 14
+}
+
+post {
+  url: https://erp.syntrack.app/web/get_user_foc_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Foc Details
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_user_foc_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 06 Feb 2025 08:33:18 GMT
+      Content-Length: 5082
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "foc_e_request_details": [
+                        {
+                            "foc_id": 12,
+                            "state": "confirm",
+                            "from_date": "2025-02-01",
+                            "expiry_date": "2025-02-28",
+                            "foc_offer_on": "period_based",
+                            "foc_day": null,
+                            "customer_ids": [],
+                            "user_id": 2,
+                            "foc_number": "FOC2025020011",
+                            "foc_based_on": "product",
+                            "pricelist_ids": [],
+                            "categ_names": [],
+                            "brand_names": [],
+                            "product_names": [
+                                "CHILLI POWDER "
+                            ],
+                            "foc_lines": [
+                                {
+                                    "product_id": 2760,
+                                    "product_name": "CHILLI POWDER ",
+                                    "uom_id": null,
+                                    "package_id": 1822,
+                                    "foc_line_id": 17,
+                                    "order_qty": 10,
+                                    "foc_product_id": 2760,
+                                    "foc_product_name": "CHILLI POWDER ",
+                                    "foc_product_packaging": 1822,
+                                    "foc_product_packaging_name": "Bag",
+                                    "foc_qty": 1,
+                                    "max_foc_qty": 0
+                                }
+                            ]
+                        },
+                        {
+                            "foc_id": 11,
+                            "state": "confirm",
+                            "from_date": "2025-02-01",
+                            "expiry_date": "2025-02-28",
+                            "foc_offer_on": "period_based",
+                            "foc_day": null,
+                            "customer_ids": [],
+                            "user_id": 2,
+                            "foc_number": "FOC2025020010",
+                            "foc_based_on": "product",
+                            "pricelist_ids": [],
+                            "categ_names": [],
+                            "brand_names": [],
+                            "product_names": [
+                                "Nivea Body Lotion",
+                                "Nivea Face Cream"
+                            ],
+                            "foc_lines": [
+                                {
+                                    "product_id": 2903,
+                                    "product_name": "Nivea Body Lotion",
+                                    "uom_id": null,
+                                    "package_id": null,
+                                    "foc_line_id": 15,
+                                    "order_qty": 10,
+                                    "foc_product_id": 2903,
+                                    "foc_product_name": "Nivea Body Lotion",
+                                    "foc_product_packaging": false,
+                                    "foc_product_packaging_name": false,
+                                    "foc_qty": 1,
+                                    "max_foc_qty": 0
+                                },
+                                {
+                                    "product_id": 2904,
+                                    "product_name": "Nivea Face Cream",
+                                    "uom_id": null,
+                                    "package_id": null,
+                                    "foc_line_id": 16,
+                                    "order_qty": 5,
+                                    "foc_product_id": 2904,
+                                    "foc_product_name": "Nivea Face Cream",
+                                    "foc_product_packaging": false,
+                                    "foc_product_packaging_name": false,
+                                    "foc_qty": 1,
+                                    "max_foc_qty": 0
+                                }
+                            ]
+                        },
+                        {
+                            "foc_id": 10,
+                            "state": "confirm",
+                            "from_date": "2025-02-01",
+                            "expiry_date": "2025-02-28",
+                            "foc_offer_on": "period_based",
+                            "foc_day": null,
+                            "customer_ids": [],
+                            "user_id": 2,
+                            "foc_number": "FOC2025020009",
+                            "foc_based_on": "product",
+                            "pricelist_ids": [],
+                            "categ_names": [],
+                            "brand_names": [],
+                            "product_names": [
+                                "CHILLI POWDER ",
+                                "CHOCO MAZE CHOCOLATE - SINGLE TWIST"
+                            ],
+                            "foc_lines": [
+                                {
+                                    "product_id": 2694,
+                                    "product_name": "CHOCO MAZE CHOCOLATE - SINGLE TWIST",
+                                    "uom_id": null,
+                                    "package_id": 816,
+                                    "foc_line_id": 12,
+                                    "order_qty": 10,
+                                    "foc_product_id": 2694,
+                                    "foc_product_name": "CHOCO MAZE CHOCOLATE - SINGLE TWIST",
+                                    "foc_product_packaging": 816,
+                                    "foc_product_packaging_name": "Kg",
+                                    "foc_qty": 2,
+                                    "max_foc_qty": 1
+                                },
+                                {
+                                    "product_id": 2760,
+                                    "product_name": "CHILLI POWDER ",
+                                    "uom_id": null,
+                                    "package_id": 882,
+                                    "foc_line_id": 13,
+                                    "order_qty": 5,
+                                    "foc_product_id": 2760,
+                                    "foc_product_name": "CHILLI POWDER ",
+                                    "foc_product_packaging": 882,
+                                    "foc_product_packaging_name": "Kg",
+                                    "foc_qty": 2,
+                                    "max_foc_qty": 1
+                                },
+                                {
+                                    "product_id": 2694,
+                                    "product_name": "CHOCO MAZE CHOCOLATE - SINGLE TWIST",
+                                    "uom_id": null,
+                                    "package_id": 816,
+                                    "foc_line_id": 14,
+                                    "order_qty": 20,
+                                    "foc_product_id": 2760,
+                                    "foc_product_name": "CHILLI POWDER ",
+                                    "foc_product_packaging": 882,
+                                    "foc_product_packaging_name": "Kg",
+                                    "foc_qty": 2,
+                                    "max_foc_qty": 1
+                                }
+                            ]
+                        },
+                        {
+                            "foc_id": 6,
+                            "state": "confirm",
+                            "from_date": null,
+                            "expiry_date": null,
+                            "foc_offer_on": "day_based",
+                            "foc_day": "Monday",
+                            "customer_ids": [
+                                11
+                            ],
+                            "user_id": 2,
+                            "foc_number": "FOC2025010005",
+                            "foc_based_on": "product",
+                            "pricelist_ids": [],
+                            "categ_names": [],
+                            "brand_names": [],
+                            "product_names": [
+                                "ABUSALIM SUNFLOWER SEED ROASTED 25GM"
+                            ],
+                            "foc_lines": [
+                                {
+                                    "product_id": 2811,
+                                    "product_name": "ABUSALIM SUNFLOWER SEED ROASTED 25GM",
+                                    "uom_id": null,
+                                    "package_id": 1873,
+                                    "foc_line_id": 6,
+                                    "order_qty": 10,
+                                    "foc_product_id": 2518,
+                                    "foc_product_name": "APRICOT SOFT JUMBO",
+                                    "foc_product_packaging": 1580,
+                                    "foc_product_packaging_name": "Carton",
+                                    "foc_qty": 1,
+                                    "max_foc_qty": 2
+                                }
+                            ]
+                        },
+                        {
+                            "foc_id": 3,
+                            "state": "confirm",
+                            "from_date": "2025-01-01",
+                            "expiry_date": "2025-01-31",
+                            "foc_offer_on": "day_based",
+                            "foc_day": null,
+                            "customer_ids": [
+                                11
+                            ],
+                            "user_id": 2,
+                            "foc_number": "FOC2025010003",
+                            "foc_based_on": "product",
+                            "pricelist_ids": [],
+                            "categ_names": [],
+                            "brand_names": [],
+                            "product_names": [
+                                "AIWA ROSE WATER 450ML"
+                            ],
+                            "foc_lines": [
+                                {
+                                    "product_id": 2833,
+                                    "product_name": "AIWA ROSE WATER 450ML",
+                                    "uom_id": null,
+                                    "package_id": 1895,
+                                    "foc_line_id": 3,
+                                    "order_qty": 10,
+                                    "foc_product_id": 2,
+                                    "foc_product_name": "Coco Cola 300 Ml",
+                                    "foc_product_packaging": 1,
+                                    "foc_product_packaging_name": "Carton",
+                                    "foc_qty": 1,
+                                    "max_foc_qty": 1
+                                }
+                            ]
+                        },
+                        {
+                            "foc_id": 2,
+                            "state": "confirm",
+                            "from_date": "2025-01-01",
+                            "expiry_date": "2025-01-31",
+                            "foc_offer_on": "day_based",
+                            "foc_day": null,
+                            "customer_ids": [],
+                            "user_id": 2,
+                            "foc_number": "FOC2025010002",
+                            "foc_based_on": "product",
+                            "pricelist_ids": [],
+                            "categ_names": [],
+                            "brand_names": [],
+                            "product_names": [
+                                "ARONA CHOCOLATE - SINGLE TWIST"
+                            ],
+                            "foc_lines": [
+                                {
+                                    "product_id": 2731,
+                                    "product_name": "ARONA CHOCOLATE - SINGLE TWIST",
+                                    "uom_id": null,
+                                    "package_id": 1793,
+                                    "foc_line_id": 2,
+                                    "order_qty": 10,
+                                    "foc_product_id": 2371,
+                                    "foc_product_name": "ALMOND BLANCHED SLICED 11.34KG",
+                                    "foc_product_packaging": 1433,
+                                    "foc_product_packaging_name": "Carton",
+                                    "foc_qty": 5,
+                                    "max_foc_qty": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Foc Details
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_user_foc_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 06 Feb 2025 08:33:18 GMT
+      Content-Length: 5082
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "foc_e_request_details": [
+                        {
+                            "foc_id": 12,
+                            "state": "confirm",
+                            "from_date": "2025-02-01",
+                            "expiry_date": "2025-02-28",
+                            "foc_offer_on": "period_based",
+                            "foc_day": null,
+                            "customer_ids": [],
+                            "user_id": 2,
+                            "foc_number": "FOC2025020011",
+                            "foc_based_on": "product",
+                            "pricelist_ids": [],
+                            "categ_names": [],
+                            "brand_names": [],
+                            "product_names": [
+                                "CHILLI POWDER "
+                            ],
+                            "foc_lines": [
+                                {
+                                    "product_id": 2760,
+                                    "product_name": "CHILLI POWDER ",
+                                    "uom_id": null,
+                                    "package_id": 1822,
+                                    "foc_line_id": 17,
+                                    "order_qty": 10,
+                                    "foc_product_id": 2760,
+                                    "foc_product_name": "CHILLI POWDER ",
+                                    "foc_product_packaging": 1822,
+                                    "foc_product_packaging_name": "Bag",
+                                    "foc_qty": 1,
+                                    "max_foc_qty": 0
+                                }
+                            ]
+                        },
+                        {
+                            "foc_id": 11,
+                            "state": "confirm",
+                            "from_date": "2025-02-01",
+                            "expiry_date": "2025-02-28",
+                            "foc_offer_on": "period_based",
+                            "foc_day": null,
+                            "customer_ids": [],
+                            "user_id": 2,
+                            "foc_number": "FOC2025020010",
+                            "foc_based_on": "product",
+                            "pricelist_ids": [],
+                            "categ_names": [],
+                            "brand_names": [],
+                            "product_names": [
+                                "Nivea Body Lotion",
+                                "Nivea Face Cream"
+                            ],
+                            "foc_lines": [
+                                {
+                                    "product_id": 2903,
+                                    "product_name": "Nivea Body Lotion",
+                                    "uom_id": null,
+                                    "package_id": null,
+                                    "foc_line_id": 15,
+                                    "order_qty": 10,
+                                    "foc_product_id": 2903,
+                                    "foc_product_name": "Nivea Body Lotion",
+                                    "foc_product_packaging": false,
+                                    "foc_product_packaging_name": false,
+                                    "foc_qty": 1,
+                                    "max_foc_qty": 0
+                                },
+                                {
+                                    "product_id": 2904,
+                                    "product_name": "Nivea Face Cream",
+                                    "uom_id": null,
+                                    "package_id": null,
+                                    "foc_line_id": 16,
+                                    "order_qty": 5,
+                                    "foc_product_id": 2904,
+                                    "foc_product_name": "Nivea Face Cream",
+                                    "foc_product_packaging": false,
+                                    "foc_product_packaging_name": false,
+                                    "foc_qty": 1,
+                                    "max_foc_qty": 0
+                                }
+                            ]
+                        },
+                        {
+                            "foc_id": 10,
+                            "state": "confirm",
+                            "from_date": "2025-02-01",
+                            "expiry_date": "2025-02-28",
+                            "foc_offer_on": "period_based",
+                            "foc_day": null,
+                            "customer_ids": [],
+                            "user_id": 2,
+                            "foc_number": "FOC2025020009",
+                            "foc_based_on": "product",
+                            "pricelist_ids": [],
+                            "categ_names": [],
+                            "brand_names": [],
+                            "product_names": [
+                                "CHILLI POWDER ",
+                                "CHOCO MAZE CHOCOLATE - SINGLE TWIST"
+                            ],
+                            "foc_lines": [
+                                {
+                                    "product_id": 2694,
+                                    "product_name": "CHOCO MAZE CHOCOLATE - SINGLE TWIST",
+                                    "uom_id": null,
+                                    "package_id": 816,
+                                    "foc_line_id": 12,
+                                    "order_qty": 10,
+                                    "foc_product_id": 2694,
+                                    "foc_product_name": "CHOCO MAZE CHOCOLATE - SINGLE TWIST",
+                                    "foc_product_packaging": 816,
+                                    "foc_product_packaging_name": "Kg",
+                                    "foc_qty": 2,
+                                    "max_foc_qty": 1
+                                },
+                                {
+                                    "product_id": 2760,
+                                    "product_name": "CHILLI POWDER ",
+                                    "uom_id": null,
+                                    "package_id": 882,
+                                    "foc_line_id": 13,
+                                    "order_qty": 5,
+                                    "foc_product_id": 2760,
+                                    "foc_product_name": "CHILLI POWDER ",
+                                    "foc_product_packaging": 882,
+                                    "foc_product_packaging_name": "Kg",
+                                    "foc_qty": 2,
+                                    "max_foc_qty": 1
+                                },
+                                {
+                                    "product_id": 2694,
+                                    "product_name": "CHOCO MAZE CHOCOLATE - SINGLE TWIST",
+                                    "uom_id": null,
+                                    "package_id": 816,
+                                    "foc_line_id": 14,
+                                    "order_qty": 20,
+                                    "foc_product_id": 2760,
+                                    "foc_product_name": "CHILLI POWDER ",
+                                    "foc_product_packaging": 882,
+                                    "foc_product_packaging_name": "Kg",
+                                    "foc_qty": 2,
+                                    "max_foc_qty": 1
+                                }
+                            ]
+                        },
+                        {
+                            "foc_id": 6,
+                            "state": "confirm",
+                            "from_date": null,
+                            "expiry_date": null,
+                            "foc_offer_on": "day_based",
+                            "foc_day": "Monday",
+                            "customer_ids": [
+                                11
+                            ],
+                            "user_id": 2,
+                            "foc_number": "FOC2025010005",
+                            "foc_based_on": "product",
+                            "pricelist_ids": [],
+                            "categ_names": [],
+                            "brand_names": [],
+                            "product_names": [
+                                "ABUSALIM SUNFLOWER SEED ROASTED 25GM"
+                            ],
+                            "foc_lines": [
+                                {
+                                    "product_id": 2811,
+                                    "product_name": "ABUSALIM SUNFLOWER SEED ROASTED 25GM",
+                                    "uom_id": null,
+                                    "package_id": 1873,
+                                    "foc_line_id": 6,
+                                    "order_qty": 10,
+                                    "foc_product_id": 2518,
+                                    "foc_product_name": "APRICOT SOFT JUMBO",
+                                    "foc_product_packaging": 1580,
+                                    "foc_product_packaging_name": "Carton",
+                                    "foc_qty": 1,
+                                    "max_foc_qty": 2
+                                }
+                            ]
+                        },
+                        {
+                            "foc_id": 3,
+                            "state": "confirm",
+                            "from_date": "2025-01-01",
+                            "expiry_date": "2025-01-31",
+                            "foc_offer_on": "day_based",
+                            "foc_day": null,
+                            "customer_ids": [
+                                11
+                            ],
+                            "user_id": 2,
+                            "foc_number": "FOC2025010003",
+                            "foc_based_on": "product",
+                            "pricelist_ids": [],
+                            "categ_names": [],
+                            "brand_names": [],
+                            "product_names": [
+                                "AIWA ROSE WATER 450ML"
+                            ],
+                            "foc_lines": [
+                                {
+                                    "product_id": 2833,
+                                    "product_name": "AIWA ROSE WATER 450ML",
+                                    "uom_id": null,
+                                    "package_id": 1895,
+                                    "foc_line_id": 3,
+                                    "order_qty": 10,
+                                    "foc_product_id": 2,
+                                    "foc_product_name": "Coco Cola 300 Ml",
+                                    "foc_product_packaging": 1,
+                                    "foc_product_packaging_name": "Carton",
+                                    "foc_qty": 1,
+                                    "max_foc_qty": 1
+                                }
+                            ]
+                        },
+                        {
+                            "foc_id": 2,
+                            "state": "confirm",
+                            "from_date": "2025-01-01",
+                            "expiry_date": "2025-01-31",
+                            "foc_offer_on": "day_based",
+                            "foc_day": null,
+                            "customer_ids": [],
+                            "user_id": 2,
+                            "foc_number": "FOC2025010002",
+                            "foc_based_on": "product",
+                            "pricelist_ids": [],
+                            "categ_names": [],
+                            "brand_names": [],
+                            "product_names": [
+                                "ARONA CHOCOLATE - SINGLE TWIST"
+                            ],
+                            "foc_lines": [
+                                {
+                                    "product_id": 2731,
+                                    "product_name": "ARONA CHOCOLATE - SINGLE TWIST",
+                                    "uom_id": null,
+                                    "package_id": 1793,
+                                    "foc_line_id": 2,
+                                    "order_qty": 10,
+                                    "foc_product_id": 2371,
+                                    "foc_product_name": "ALMOND BLANCHED SLICED 11.34KG",
+                                    "foc_product_packaging": 1433,
+                                    "foc_product_packaging_name": "Carton",
+                                    "foc_qty": 5,
+                                    "max_foc_qty": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

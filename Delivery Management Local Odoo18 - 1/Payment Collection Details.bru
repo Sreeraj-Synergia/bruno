@@ -1,0 +1,390 @@
+meta {
+  name: Payment Collection Details
+  type: http
+  seq: 8
+}
+
+post {
+  url: localhost:8069/web/get_payment_collection_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "voucher_id": "SISD402241",
+              "voucher_no": 26348515,
+              "voucher_type": "WS001",
+              "datetime": "2025-06-18 00:00:00",
+              "branch_code": 27,
+              "trn_type": "AC/SA",
+              "ref": "REF484001",
+              "ref_datetime": "2025-06-18 00:00:00",
+              "due_datetime": "2025-06-25 00:00:00",
+              "customer_code": "D4517",
+              "type": "Dr",
+              "description": "",
+              "allocate": "",
+              "AmtLc": 292.43,
+              "OsAmtLc": 292.43,
+              "collection_type": "cheque",
+              "cheque_number": "CHQ15845101",
+              "cheque_date": "2025-07-17",
+              "cheque_amount": 292.43,
+              "transaction_number": false,
+              "transaction_date": false,
+              "transaction_amount": false,
+              "collection_date": false,
+              "collected_amount": false
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Payment Collection Details
+  
+  request: {
+    url: localhost:8069/web/get_payment_collection_details
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 21 Jul 2025 10:00:05 GMT
+      Content-Length: 3082
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=mVU3rDgFzRcZB5P_uHm0ELeytTJd4ztBJgslf63jMM0OXtNCR_Sa-NQt9ba8iIt1hLZP1f7x0TWp1GpcUWaG; Expires=Tue, 21 Jul 2026 10:00:05 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_collection_details": [
+                        {
+                            "voucher_id": "25626228",
+                            "voucher_no": "SISD373645",
+                            "voucher_type": "WS001",
+                            "datetime": "2025-07-19 16:26:36",
+                            "branch_code": "27",
+                            "trn_type": "AC/SA",
+                            "ref": "SISD373645",
+                            "ref_datetime": "2025-07-19 16:26:36",
+                            "due_datetime": "2025-04-30 00:00:00",
+                            "customer_code": "D6218",
+                            "customer_name": "AL ARUZZ AL TAZEJ RESTUARANT LLC",
+                            "partner_id": 3417,
+                            "type": "Dr",
+                            "description": null,
+                            "allocate": null,
+                            "AmtLc": 1834.25,
+                            "OsAmtLc": 1834.25,
+                            "collection_type": "cash",
+                            "cheque_number": null,
+                            "cheque_date": null,
+                            "cheque_amount": null,
+                            "transaction_number": null,
+                            "transaction_date": null,
+                            "transaction_amount": null,
+                            "collection_date": "2025-07-19",
+                            "collected_amount": 1834,
+                            "collected_by": null,
+                            "collected_by_name": null
+                        },
+                        {
+                            "voucher_id": "25626228",
+                            "voucher_no": "SISD373645",
+                            "voucher_type": "WS001",
+                            "datetime": "2025-07-19 16:48:57",
+                            "branch_code": "27",
+                            "trn_type": "AC/SA",
+                            "ref": "SISD373645",
+                            "ref_datetime": "2025-07-19 16:48:57",
+                            "due_datetime": "2025-04-30 00:00:00",
+                            "customer_code": "D6218",
+                            "customer_name": "AL ARUZZ AL TAZEJ RESTUARANT LLC",
+                            "partner_id": 3417,
+                            "type": "Dr",
+                            "description": null,
+                            "allocate": null,
+                            "AmtLc": 1834.25,
+                            "OsAmtLc": 1834.25,
+                            "collection_type": "cash",
+                            "cheque_number": null,
+                            "cheque_date": null,
+                            "cheque_amount": null,
+                            "transaction_number": null,
+                            "transaction_date": null,
+                            "transaction_amount": null,
+                            "collection_date": "2025-07-19",
+                            "collected_amount": 1834,
+                            "collected_by": null,
+                            "collected_by_name": null
+                        },
+                        {
+                            "voucher_id": "25544756",
+                            "voucher_no": "SISD336787",
+                            "voucher_type": "WS001",
+                            "datetime": "2025-07-19 16:58:31",
+                            "branch_code": "27",
+                            "trn_type": "AC/SA",
+                            "ref": "SISD336787",
+                            "ref_datetime": "2025-07-19 16:58:31",
+                            "due_datetime": "2025-04-25 00:00:00",
+                            "customer_code": "D6218",
+                            "customer_name": "AL ARUZZ AL TAZEJ RESTUARANT LLC",
+                            "partner_id": 3417,
+                            "type": "Dr",
+                            "description": null,
+                            "allocate": null,
+                            "AmtLc": 1376.55,
+                            "OsAmtLc": 1376.55,
+                            "collection_type": "cash",
+                            "cheque_number": null,
+                            "cheque_date": null,
+                            "cheque_amount": null,
+                            "transaction_number": null,
+                            "transaction_date": null,
+                            "transaction_amount": null,
+                            "collection_date": "2025-07-19",
+                            "collected_amount": 1376,
+                            "collected_by": null,
+                            "collected_by_name": null
+                        },
+                        {
+                            "voucher_id": "26345339",
+                            "voucher_no": "SISD402136",
+                            "voucher_type": "WS001",
+                            "datetime": "2025-07-19 17:00:18",
+                            "branch_code": "27",
+                            "trn_type": "AC/SA",
+                            "ref": "SISD402136",
+                            "ref_datetime": "2025-07-19 17:00:18",
+                            "due_datetime": "2025-06-25 00:00:00",
+                            "customer_code": "D6439",
+                            "customer_name": "LYBA FLOUR MILL&GROCERY",
+                            "partner_id": 3439,
+                            "type": "Dr",
+                            "description": null,
+                            "allocate": null,
+                            "AmtLc": 171.25,
+                            "OsAmtLc": 171.25,
+                            "collection_type": "cheque",
+                            "cheque_number": "87642468999",
+                            "cheque_date": "2025-07-19",
+                            "cheque_amount": 171.25,
+                            "transaction_number": null,
+                            "transaction_date": null,
+                            "transaction_amount": null,
+                            "collection_date": "2025-07-19",
+                            "collected_amount": 171,
+                            "collected_by": null,
+                            "collected_by_name": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Payment Collection Details
+  
+  request: {
+    url: localhost:8069/web/get_payment_collection_details
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 21 Jul 2025 10:00:05 GMT
+      Content-Length: 3082
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=mVU3rDgFzRcZB5P_uHm0ELeytTJd4ztBJgslf63jMM0OXtNCR_Sa-NQt9ba8iIt1hLZP1f7x0TWp1GpcUWaG; Expires=Tue, 21 Jul 2026 10:00:05 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_collection_details": [
+                        {
+                            "voucher_id": "25626228",
+                            "voucher_no": "SISD373645",
+                            "voucher_type": "WS001",
+                            "datetime": "2025-07-19 16:26:36",
+                            "branch_code": "27",
+                            "trn_type": "AC/SA",
+                            "ref": "SISD373645",
+                            "ref_datetime": "2025-07-19 16:26:36",
+                            "due_datetime": "2025-04-30 00:00:00",
+                            "customer_code": "D6218",
+                            "customer_name": "AL ARUZZ AL TAZEJ RESTUARANT LLC",
+                            "partner_id": 3417,
+                            "type": "Dr",
+                            "description": null,
+                            "allocate": null,
+                            "AmtLc": 1834.25,
+                            "OsAmtLc": 1834.25,
+                            "collection_type": "cash",
+                            "cheque_number": null,
+                            "cheque_date": null,
+                            "cheque_amount": null,
+                            "transaction_number": null,
+                            "transaction_date": null,
+                            "transaction_amount": null,
+                            "collection_date": "2025-07-19",
+                            "collected_amount": 1834,
+                            "collected_by": null,
+                            "collected_by_name": null
+                        },
+                        {
+                            "voucher_id": "25626228",
+                            "voucher_no": "SISD373645",
+                            "voucher_type": "WS001",
+                            "datetime": "2025-07-19 16:48:57",
+                            "branch_code": "27",
+                            "trn_type": "AC/SA",
+                            "ref": "SISD373645",
+                            "ref_datetime": "2025-07-19 16:48:57",
+                            "due_datetime": "2025-04-30 00:00:00",
+                            "customer_code": "D6218",
+                            "customer_name": "AL ARUZZ AL TAZEJ RESTUARANT LLC",
+                            "partner_id": 3417,
+                            "type": "Dr",
+                            "description": null,
+                            "allocate": null,
+                            "AmtLc": 1834.25,
+                            "OsAmtLc": 1834.25,
+                            "collection_type": "cash",
+                            "cheque_number": null,
+                            "cheque_date": null,
+                            "cheque_amount": null,
+                            "transaction_number": null,
+                            "transaction_date": null,
+                            "transaction_amount": null,
+                            "collection_date": "2025-07-19",
+                            "collected_amount": 1834,
+                            "collected_by": null,
+                            "collected_by_name": null
+                        },
+                        {
+                            "voucher_id": "25544756",
+                            "voucher_no": "SISD336787",
+                            "voucher_type": "WS001",
+                            "datetime": "2025-07-19 16:58:31",
+                            "branch_code": "27",
+                            "trn_type": "AC/SA",
+                            "ref": "SISD336787",
+                            "ref_datetime": "2025-07-19 16:58:31",
+                            "due_datetime": "2025-04-25 00:00:00",
+                            "customer_code": "D6218",
+                            "customer_name": "AL ARUZZ AL TAZEJ RESTUARANT LLC",
+                            "partner_id": 3417,
+                            "type": "Dr",
+                            "description": null,
+                            "allocate": null,
+                            "AmtLc": 1376.55,
+                            "OsAmtLc": 1376.55,
+                            "collection_type": "cash",
+                            "cheque_number": null,
+                            "cheque_date": null,
+                            "cheque_amount": null,
+                            "transaction_number": null,
+                            "transaction_date": null,
+                            "transaction_amount": null,
+                            "collection_date": "2025-07-19",
+                            "collected_amount": 1376,
+                            "collected_by": null,
+                            "collected_by_name": null
+                        },
+                        {
+                            "voucher_id": "26345339",
+                            "voucher_no": "SISD402136",
+                            "voucher_type": "WS001",
+                            "datetime": "2025-07-19 17:00:18",
+                            "branch_code": "27",
+                            "trn_type": "AC/SA",
+                            "ref": "SISD402136",
+                            "ref_datetime": "2025-07-19 17:00:18",
+                            "due_datetime": "2025-06-25 00:00:00",
+                            "customer_code": "D6439",
+                            "customer_name": "LYBA FLOUR MILL&GROCERY",
+                            "partner_id": 3439,
+                            "type": "Dr",
+                            "description": null,
+                            "allocate": null,
+                            "AmtLc": 171.25,
+                            "OsAmtLc": 171.25,
+                            "collection_type": "cheque",
+                            "cheque_number": "87642468999",
+                            "cheque_date": "2025-07-19",
+                            "cheque_amount": 171.25,
+                            "transaction_number": null,
+                            "transaction_date": null,
+                            "transaction_amount": null,
+                            "collection_date": "2025-07-19",
+                            "collected_amount": 171,
+                            "collected_by": null,
+                            "collected_by_name": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,426 @@
+meta {
+  name: get_wh_exec_unload_dispatch_order_details
+  type: http
+  seq: 58
+}
+
+post {
+  url: http://83.111.180.137:8069/web/get_wh_exec_unload_dispatch_order_details
+  body: json
+  auth: inherit
+}
+
+headers {
+  session_id: srzqfyDnLGNwY2owvFLeJd7x0ly3XINhwu2zNYVgWLi0KmOEV7BM_ZAes2TWA1BtgChaGjWnVY7tcPkdDog
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+          
+          }
+         
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: User Details
+  
+  request: {
+    url: 192.168.1.119:8071/web/user_details
+    method: POST
+    mode: json
+    headers: {
+      session_id: srzqfyDnLGNwY2owvFLeJd7x0ly3XINhwu2zNYVgWLi0KmOEV7BM_ZAes2TWA1BtgChaGjWnVY7tcPkdDog
+    }
+  
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 16 Jun 2025 05:59:17 GMT
+      Content-Length: 4093
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_details": {
+                        "name": "Sales 7",
+                        "username": "Sales 7",
+                        "user_name": "Sales 7",
+                        "user_id": 23,
+                        "uid": 23,
+                        "login_id": "sales7",
+                        "logo_url": "http://192.168.1.119:8071/web/url_image?model=hr.employee&id=21&field=image_1920",
+                        "user_signature": "http://192.168.1.119:8071/web/url_image?model=res.users&id=23&field=user_signature",
+                        "employee_id": 21,
+                        "employee_name": "Sales 7",
+                        "manager": "Wikum Thilakasiri",
+                        "coach": "Wikum Thilakasiri",
+                        "department": "Sales Department",
+                        "job_pos": null,
+                        "work_phone": "+971-90290201910",
+                        "work_mobile": "200239400234",
+                        "work_email": "sales7",
+                        "logo": "http://192.168.1.119:8071/web/url_image?model=res.company&id=1&field=logo",
+                        "contact_us_link": false,
+                        "about_us_link": false,
+                        "faq_link": false,
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "disable_offline_sales": false,
+                        "auto_pay_cash_invoice": true,
+                        "user_journey_available": true,
+                        "running_actual_journey_id": 137,
+                        "running_actual_journey_name": "PSDJ2025050008-1-5-23",
+                        "allow_geofencing": false,
+                        "geofencing_perimeter": null,
+                        "google_api_key": null,
+                        "support_email": null,
+                        "currency_ids": [
+                            {
+                                "currency_id": 128,
+                                "symbol": "AED",
+                                "position": "after",
+                                "digits": [
+                                    69,
+                                    4
+                                ]
+                            },
+                            {
+                                "currency_id": 20,
+                                "symbol": "₹",
+                                "position": "before",
+                                "digits": [
+                                    69,
+                                    4
+                                ]
+                            },
+                            {
+                                "currency_id": 1,
+                                "symbol": "$",
+                                "position": "before",
+                                "digits": [
+                                    69,
+                                    4
+                                ]
+                            }
+                        ],
+                        "return_reasons": [],
+                        "show_company": true,
+                        "show_offline_export": false,
+                        "allow_user_location_tracking": false,
+                        "show_direct_cust_inv": true,
+                        "show_direct_return": false,
+                        "show_journey": false,
+                        "show_mob_presales": true,
+                        "show_day_close_report": false,
+                        "allow_disc_in_sales": false,
+                        "allow_dir_inv_price_change": false,
+                        "show_mob_presales_int_ship": false,
+                        "show_expense": false,
+                        "show_sales_target": false,
+                        "show_del_plan": false,
+                        "show_survey": false,
+                        "show_mob_directsales": false,
+                        "is_work_location": null,
+                        "related_work_loc_id": null,
+                        "work_location_latitude": null,
+                        "work_location_longitude": null,
+                        "attendance_radius_limit": null,
+                        "check_in_status": "checkin",
+                        "check_in_out": 202,
+                        "check_in_out_ref": "CHK/IN/OUT/00135",
+                        "check_in_time": "2025-06-13 13:52:45",
+                        "check_out_time": false,
+                        "check_in_part_latitude": 25.2417537,
+                        "check_in_part_longitude": 55.309635,
+                        "checkout_part_latitude": 0,
+                        "checkout_part_longitude": 0,
+                        "check_in_out_employee_id": 21,
+                        "check_in_out_employee_name": "Sales 7",
+                        "check_in_out_helper_employee_id": null,
+                        "check_in_out_helper_employee_name": "Skipped",
+                        "check_in_out_ip_address": "192.168.1.179",
+                        "check_in_out_checkin_day": "4",
+                        "check_in_out_fleet_id": null,
+                        "check_in_out_fleet_name": "Skipped",
+                        "check_in_out_odo_meter_start": null,
+                        "check_in_out_odo_meter_end": null,
+                        "customers_based_area_code": true,
+                        "show_global_discount": false,
+                        "show_line_discount": false,
+                        "user_fleet_id": 9,
+                        "user_fleet_name": "Toyota/Hiace/X103",
+                        "debug_mode": true,
+                        "show_pricelist_mobile": true,
+                        "show_price_check": false,
+                        "allow_fixed_pricelist_in_sale": false,
+                        "allow_edit_pricelist_in_sale": true,
+                        "only_product_with_pricelist": false,
+                        "enable_min_max": false,
+                        "price_list_line_discount": false,
+                        "show_customers": true,
+                        "show_edit_mob_cust": true,
+                        "allow_sale_customer_location": false,
+                        "allow_sale_customer_sign": false,
+                        "allow_invoice_checkin": false,
+                        "allow_invoice_customer_sign": true,
+                        "show_mob_journey_plan": false,
+                        "customers_based_on_routeplan": true,
+                        "show_prod_data": true,
+                        "show_foc_offers": false,
+                        "warehouse_id": 1,
+                        "warehouse_name": "Main Stock Dubai",
+                        "stock_location_id": 44,
+                        "stock_location_name": "Route 7",
+                        "resellable_location_id": 45,
+                        "resellable_location_name": "Sellable Location- Route 7",
+                        "non_resellable_location_id": 46,
+                        "non_resellable_location_name": "Non Sellable Location- Route 7",
+                        "show_liquidation": false,
+                        "show_req_special_price": false,
+                        "allow_sales_history": false,
+                        "show_mob_presales_return": false,
+                        "disable_sale_print_mobile": false,
+                        "allow_sales_overdue": false,
+                        "stop_sale_for_blocked_cust": true,
+                        "confirm_customer_sale": true,
+                        "show_mob_unload_req": true
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: User Details
+  
+  request: {
+    url: 192.168.1.119:8071/web/user_details
+    method: POST
+    mode: json
+    headers: {
+      session_id: srzqfyDnLGNwY2owvFLeJd7x0ly3XINhwu2zNYVgWLi0KmOEV7BM_ZAes2TWA1BtgChaGjWnVY7tcPkdDog
+    }
+  
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 16 Jun 2025 05:59:17 GMT
+      Content-Length: 4093
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_details": {
+                        "name": "Sales 7",
+                        "username": "Sales 7",
+                        "user_name": "Sales 7",
+                        "user_id": 23,
+                        "uid": 23,
+                        "login_id": "sales7",
+                        "logo_url": "http://192.168.1.119:8071/web/url_image?model=hr.employee&id=21&field=image_1920",
+                        "user_signature": "http://192.168.1.119:8071/web/url_image?model=res.users&id=23&field=user_signature",
+                        "employee_id": 21,
+                        "employee_name": "Sales 7",
+                        "manager": "Wikum Thilakasiri",
+                        "coach": "Wikum Thilakasiri",
+                        "department": "Sales Department",
+                        "job_pos": null,
+                        "work_phone": "+971-90290201910",
+                        "work_mobile": "200239400234",
+                        "work_email": "sales7",
+                        "logo": "http://192.168.1.119:8071/web/url_image?model=res.company&id=1&field=logo",
+                        "contact_us_link": false,
+                        "about_us_link": false,
+                        "faq_link": false,
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "disable_offline_sales": false,
+                        "auto_pay_cash_invoice": true,
+                        "user_journey_available": true,
+                        "running_actual_journey_id": 137,
+                        "running_actual_journey_name": "PSDJ2025050008-1-5-23",
+                        "allow_geofencing": false,
+                        "geofencing_perimeter": null,
+                        "google_api_key": null,
+                        "support_email": null,
+                        "currency_ids": [
+                            {
+                                "currency_id": 128,
+                                "symbol": "AED",
+                                "position": "after",
+                                "digits": [
+                                    69,
+                                    4
+                                ]
+                            },
+                            {
+                                "currency_id": 20,
+                                "symbol": "₹",
+                                "position": "before",
+                                "digits": [
+                                    69,
+                                    4
+                                ]
+                            },
+                            {
+                                "currency_id": 1,
+                                "symbol": "$",
+                                "position": "before",
+                                "digits": [
+                                    69,
+                                    4
+                                ]
+                            }
+                        ],
+                        "return_reasons": [],
+                        "show_company": true,
+                        "show_offline_export": false,
+                        "allow_user_location_tracking": false,
+                        "show_direct_cust_inv": true,
+                        "show_direct_return": false,
+                        "show_journey": false,
+                        "show_mob_presales": true,
+                        "show_day_close_report": false,
+                        "allow_disc_in_sales": false,
+                        "allow_dir_inv_price_change": false,
+                        "show_mob_presales_int_ship": false,
+                        "show_expense": false,
+                        "show_sales_target": false,
+                        "show_del_plan": false,
+                        "show_survey": false,
+                        "show_mob_directsales": false,
+                        "is_work_location": null,
+                        "related_work_loc_id": null,
+                        "work_location_latitude": null,
+                        "work_location_longitude": null,
+                        "attendance_radius_limit": null,
+                        "check_in_status": "checkin",
+                        "check_in_out": 202,
+                        "check_in_out_ref": "CHK/IN/OUT/00135",
+                        "check_in_time": "2025-06-13 13:52:45",
+                        "check_out_time": false,
+                        "check_in_part_latitude": 25.2417537,
+                        "check_in_part_longitude": 55.309635,
+                        "checkout_part_latitude": 0,
+                        "checkout_part_longitude": 0,
+                        "check_in_out_employee_id": 21,
+                        "check_in_out_employee_name": "Sales 7",
+                        "check_in_out_helper_employee_id": null,
+                        "check_in_out_helper_employee_name": "Skipped",
+                        "check_in_out_ip_address": "192.168.1.179",
+                        "check_in_out_checkin_day": "4",
+                        "check_in_out_fleet_id": null,
+                        "check_in_out_fleet_name": "Skipped",
+                        "check_in_out_odo_meter_start": null,
+                        "check_in_out_odo_meter_end": null,
+                        "customers_based_area_code": true,
+                        "show_global_discount": false,
+                        "show_line_discount": false,
+                        "user_fleet_id": 9,
+                        "user_fleet_name": "Toyota/Hiace/X103",
+                        "debug_mode": true,
+                        "show_pricelist_mobile": true,
+                        "show_price_check": false,
+                        "allow_fixed_pricelist_in_sale": false,
+                        "allow_edit_pricelist_in_sale": true,
+                        "only_product_with_pricelist": false,
+                        "enable_min_max": false,
+                        "price_list_line_discount": false,
+                        "show_customers": true,
+                        "show_edit_mob_cust": true,
+                        "allow_sale_customer_location": false,
+                        "allow_sale_customer_sign": false,
+                        "allow_invoice_checkin": false,
+                        "allow_invoice_customer_sign": true,
+                        "show_mob_journey_plan": false,
+                        "customers_based_on_routeplan": true,
+                        "show_prod_data": true,
+                        "show_foc_offers": false,
+                        "warehouse_id": 1,
+                        "warehouse_name": "Main Stock Dubai",
+                        "stock_location_id": 44,
+                        "stock_location_name": "Route 7",
+                        "resellable_location_id": 45,
+                        "resellable_location_name": "Sellable Location- Route 7",
+                        "non_resellable_location_id": 46,
+                        "non_resellable_location_name": "Non Sellable Location- Route 7",
+                        "show_liquidation": false,
+                        "show_req_special_price": false,
+                        "allow_sales_history": false,
+                        "show_mob_presales_return": false,
+                        "disable_sale_print_mobile": false,
+                        "allow_sales_overdue": false,
+                        "stop_sale_for_blocked_cust": true,
+                        "confirm_customer_sale": true,
+                        "show_mob_unload_req": true
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

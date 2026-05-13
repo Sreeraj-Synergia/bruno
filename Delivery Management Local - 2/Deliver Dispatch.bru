@@ -1,0 +1,277 @@
+meta {
+  name: Deliver Dispatch
+  type: http
+  seq: 6
+}
+
+post {
+  url: localhost:8070/web/get_dispatch_line_deliver
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "dispatch_line_id": 91,
+              "receipt_type": "cash",
+              "check_date": false,
+              "check_no": false,
+              "transfer_ref": false,
+              "amount_collected": 26500.00,
+              "signature": false,
+              "journey_stop_datetime": "2024-07-19 15:10:10",
+              "journey_stop_latitude": 43.5454,
+              "journey_stop_longitude": 25.54642
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Deliver Dispatch
+  
+  request: {
+    url: localhost:8070/web/get_dispatch_line_deliver
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "dispatch_line_id": 28,
+                  "receipt_type": "cash",
+                  "check_date": false,
+                  "check_no": false,
+                  "transfer_ref": false,
+                  "amount_collected": 500.0
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 1522
+      Set-Cookie: session_id=fdd016adc2e5b6fddf130a6a4d642af7aa092c8e; Expires=Thu, 12-Dec-2024 13:38:02 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 13 Sep 2024 13:38:02 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dispatch_line_delivered": {
+                        "id": 28,
+                        "dispatch_id": 5,
+                        "dispatch_name": "DM2024090004",
+                        "name": "DM2024090004/1",
+                        "date": "2024-09-12 22:04:25",
+                        "work_location": 929,
+                        "work_locatiname": "Al Abrar Pharmacy LLC",
+                        "driver_id": 838,
+                        "driver_name": "Arslan Ali Irsahd Ahmad",
+                        "area_code_id": 1,
+                        "area_code_name": "Oud Metha",
+                        "employee_id": 261,
+                        "employee_name": "Synergia",
+                        "company_id": 1,
+                        "company_name": "Zneem Group of companies",
+                        "invoice_type": "system",
+                        "invoice_id": 48750,
+                        "invoice_name": "INV/2024/09/0002",
+                        "integrated_invoice_id": null,
+                        "integrated_invoice_name": null,
+                        "invoice_ref": "INV/2024/09/0002",
+                        "invoice_date": "2024-09-10",
+                        "delivery_type_id": 1,
+                        "delivery_type_name": "Delivery",
+                        "partner_id": 1357,
+                        "partner_name": "Jakies",
+                        "pack_details": null,
+                        "picking_id": null,
+                        "delivery_id": null,
+                        "delivery_name": null,
+                        "delivery_date": "2024-09-10 00:00:00",
+                        "delivered_on_date": "2024-09-13 00:00:00",
+                        "cancel_reason_id": null,
+                        "cancel_reason_name": null,
+                        "sale_order_id": null,
+                        "sale_order_name": null,
+                        "sale_order_ref": null,
+                        "sale_order_date": null,
+                        "payment_type": "cash",
+                        "receipt_type": "cash",
+                        "check_date": null,
+                        "check_no": null,
+                        "transfer_ref": null,
+                        "amount_to_pay": 500,
+                        "amount_collected": 500,
+                        "sequence": null,
+                        "line_number": 1,
+                        "has_same_invoice": null,
+                        "signature": "http://localhost:8070/web/image?model=dispatch.management.line&id=28&field=signature",
+                        "state": "delivered"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Deliver Dispatch New Details
+  
+  request: {
+    url: localhost:8070/web/get_dispatch_line_deliver
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "dispatch_line_id": 91,
+                  "receipt_type": "cash",
+                  "check_date": false,
+                  "check_no": false,
+                  "transfer_ref": false,
+                  "amount_collected": 500.0,
+                  "signature": false,
+                  "journey_stop_datetime": "2024-07-19 15:10:10",
+                  "journey_stop_latitude": 43.5454,
+                  "journey_stop_longitude": 25.54642
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2065
+      Set-Cookie: session_id=b9a3f88200c0512bffbe3e6788f75b7b9338c6b4; Expires=Wed, 08-Jan-2025 14:26:42 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Thu, 10 Oct 2024 14:26:42 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dispatch_line_delivered": {
+                        "id": 91,
+                        "dispatch_id": 48,
+                        "dispatch_name": "DM2024100010",
+                        "name": "DM2024100010/1",
+                        "date": "2024-10-10 08:40:11",
+                        "work_location": 934,
+                        "work_locatiname": "Work Location/ Branch 1",
+                        "vehicle_route_id": 1,
+                        "vehicle_route_name": "Vehicle 1",
+                        "driver_id": 838,
+                        "driver_name": "Arslan Ali Irsahd Ahmad",
+                        "area_code_id": null,
+                        "area_code_name": null,
+                        "employee_id": 261,
+                        "employee_name": "Synergia",
+                        "company_id": 1,
+                        "company_name": "Zneem Group of companies",
+                        "invoice_type": "api",
+                        "invoice_id": null,
+                        "invoice_name": null,
+                        "integrated_invoice_id": 41,
+                        "integrated_invoice_name": "IDM2024100031",
+                        "show_invoice_details": true,
+                        "required_payment_term": false,
+                        "invoice_ref": "INV001",
+                        "invoice_date": "2024-10-09",
+                        "payment_term_id": null,
+                        "payment_term_name": null,
+                        "invoice_due_date": null,
+                        "delivery_type_id": 2,
+                        "delivery_type_name": "Invoice Delivery",
+                        "partner_id": 2136,
+                        "latitude": 26.26754,
+                        "longitude": 56.294760000000004,
+                        "partner_name": "AHAMED MUSTHAFA SUPERMARKET",
+                        "partner_phone": "25552740",
+                        "partner_mobile": null,
+                        "partner_latitude": 26.26754,
+                        "partner_longitude": 56.29476,
+                        "pack_details": null,
+                        "picking_id": null,
+                        "delivery_id": "DO001",
+                        "delivery_date": "2024-10-09",
+                        "delivered_on_date": null,
+                        "cancel_reason_id": null,
+                        "cancel_reason_name": null,
+                        "sale_order_id": null,
+                        "sale_order_name": null,
+                        "sale_order_ref": "SO001",
+                        "sale_order_date": "2024-10-09",
+                        "payment_type_id": 1,
+                        "payment_type": "Cash On Delivery",
+                        "receipt_type": "cash",
+                        "check_date": null,
+                        "check_no": null,
+                        "transfer_ref": null,
+                        "amount_to_pay": 26500,
+                        "amount_collected": 500,
+                        "sequence": null,
+                        "line_number": 1,
+                        "has_same_invoice": null,
+                        "signature": null,
+                        "state": "accepted",
+                        "journey_start_latitude": 44.5454,
+                        "journey_start_longitude": 25.545450000000002,
+                        "journey_stop_latitude": 43.5454,
+                        "journey_stop_longitude": 25.54642,
+                        "journey_start_datetime": "2024-07-19 10:10:10",
+                        "journey_stop_datetime": "2024-07-19 15:10:10"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

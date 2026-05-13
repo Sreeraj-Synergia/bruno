@@ -1,0 +1,99 @@
+meta {
+  name: Payment History
+  type: http
+  seq: 3
+}
+
+post {
+  url: localhost:8070/web/get_delivery_payment_history
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "partner_id": false
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Payment History
+  
+  request: {
+    url: localhost:8070/web/get_delivery_payment_history
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "partner_id": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 618
+      Set-Cookie: session_id=cc178663b1de1f9868f34e4cc155129a56ee7379; Expires=Sat, 04-Jan-2025 00:22:00 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Sun, 06 Oct 2024 00:22:00 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_history": [
+                        {
+                            "id": 1,
+                            "partner_id": 1354,
+                            "partner_id_name": "Noon",
+                            "work_location": 937,
+                            "work_location_name": "Noor Al Shefaa Pharmacy LLC",
+                            "integrated_invoice_id": 2,
+                            "integrated_invoice_id_name": "IDM2024100002",
+                            "dispatch_id": 6,
+                            "dispatch_id_name": "DM2024100005",
+                            "dispatch_line_id": 32,
+                            "dispatch_line_id_name": "DM2024100005/1",
+                            "invoice_amount": 1500,
+                            "receipt_type": "cheque",
+                            "collection_date": "2024-10-06",
+                            "check_date": "2024-10-06",
+                            "check_no": "dfsdfdsf",
+                            "transfer_ref": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

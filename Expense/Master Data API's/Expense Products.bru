@@ -1,0 +1,92 @@
+meta {
+  name: Expense Products
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8070/web/get_product_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Expense Products
+  
+  request: {
+    url: http://localhost:8070/web/get_product_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 625
+      Set-Cookie: session_id=169f1cf4e54904ea4c363de7ed063f55fe526f23; Expires=Thu, 26-Dec-2024 10:22:16 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 27 Sep 2024 10:22:16 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "product_details": [
+                        {
+                            "id": 126,
+                            "name": "[EXP] Expenses",
+                            "sku": "EXP",
+                            "barcode": null,
+                            "uom": "Units",
+                            "uom_id": 1,
+                            "category": "All / Expenses",
+                            "category_id": 3,
+                            "image_url": "http://localhost:8070/web/url_image/product.product/126/image_1920",
+                            "product_info": null
+                        },
+                        {
+                            "id": 152,
+                            "name": "Telephone Charges",
+                            "sku": null,
+                            "barcode": null,
+                            "uom": "Units",
+                            "uom_id": 1,
+                            "category": "All",
+                            "category_id": 1,
+                            "image_url": "http://localhost:8070/web/url_image/product.product/152/image_1920",
+                            "product_info": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

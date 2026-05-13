@@ -1,0 +1,39 @@
+meta {
+  name: Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: localhost:8078/web/session/mobile_login?db=RX
+  body: json
+  auth: inherit
+}
+
+params:query {
+  db: RX
+}
+
+headers {
+  Accept: application/json
+}
+
+body:json {
+  {
+      "params": {
+          "db": "RX",
+          "login": "Fayasinfo@rx-plus.ae",
+          "password": "12345",
+          "device_name": "TC15",
+          "imei_no": "13-27-27.00-TG-U00-STD-GRT-04",
+          "latitude": "25.26555",
+          "ip_address": "192.168.1.119",
+          "longitude": "50.695655",
+          "fcm_id": "efEtgap0RvuuYy86A-aV5B:APA91bGvALMNMfj9JDM0yCxEls3rKOkqMekYEYsICAmoz7kTWxE-DiCq3NiJcVsCOlOvpPDQqCIQMXXqMqyVjK31DnoLsiflIM1e76eVwdhr1EmHxizn2cQ"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

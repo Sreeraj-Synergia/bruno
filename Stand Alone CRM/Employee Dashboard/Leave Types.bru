@@ -1,0 +1,560 @@
+meta {
+  name: Leave Types
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8070/web/get_leave_types
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{}}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Leave types
+  
+  request: {
+    url: http://localhost:8070/web/get_leave_types
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{"data":{}}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 26 Jan 2026 06:13:34 GMT
+      Content-Length: 12755
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "employee_leave_types": [
+                        {
+                            "id": 15,
+                            "name": "Paid Time Off - UAE",
+                            "code": "PL",
+                            "time_off_type": "partial",
+                            "leave_validation_type": "hr",
+                            "requires_allocation": "yes",
+                            "allocation_type": "regular",
+                            "employee_requests": "no",
+                            "allocation_validation_type": "hr",
+                            "is_leave_limit": true,
+                            "leave_limit_type": "yearly",
+                            "leave_limit_days": 5,
+                            "is_ann_leave": false,
+                            "annual_days_allocation_based_on": null,
+                            "per_mth_annual_days": null,
+                            "consider_ann_leave": true,
+                            "is_recurring_leave": true,
+                            "recurring_leave_type": "yearly",
+                            "allow_carryforward": false,
+                            "validity_based_on": "custom_date",
+                            "custom_date": "2025-05-01",
+                            "responsible_ids": "res.users(2,)",
+                            "request_unit": "day",
+                            "leave_salary_based_on": "gross",
+                            "allows_negative": false,
+                            "max_allowed_negative": null,
+                            "overtime_deductible": false,
+                            "include_public_holidays_in_duration": false,
+                            "show_on_dashboard": true,
+                            "l10n_in_is_sandwich_leave": false,
+                            "allow_negative_balance": false,
+                            "support_document": false,
+                            "time_type": "leave",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "address_id": 1,
+                            "address_name": "Synergia Softwares IT infrastructure LLC",
+                            "work_locations": [
+                                {
+                                    "id": 1,
+                                    "name": "Dubai"
+                                }
+                            ],
+                            "branch_id": null
+                        },
+                        {
+                            "id": 18,
+                            "name": "Unpaid -  UAE",
+                            "code": "UNP",
+                            "time_off_type": "unpaid",
+                            "leave_validation_type": "both",
+                            "requires_allocation": "yes",
+                            "allocation_type": "regular",
+                            "employee_requests": "no",
+                            "allocation_validation_type": "hr",
+                            "is_leave_limit": true,
+                            "leave_limit_type": "yearly",
+                            "leave_limit_days": 5,
+                            "is_ann_leave": true,
+                            "annual_days_allocation_based_on": "fixed",
+                            "per_mth_annual_days": null,
+                            "consider_ann_leave": true,
+                            "is_recurring_leave": true,
+                            "recurring_leave_type": "yearly",
+                            "allow_carryforward": true,
+                            "validity_based_on": "custom_date",
+                            "custom_date": "2025-05-01",
+                            "responsible_ids": "res.users(2,)",
+                            "request_unit": "half_day",
+                            "leave_salary_based_on": "gross",
+                            "allows_negative": true,
+                            "max_allowed_negative": null,
+                            "overtime_deductible": true,
+                            "include_public_holidays_in_duration": true,
+                            "show_on_dashboard": true,
+                            "l10n_in_is_sandwich_leave": true,
+                            "allow_negative_balance": true,
+                            "support_document": true,
+                            "time_type": "leave",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "address_id": 1,
+                            "address_name": "Synergia Softwares IT infrastructure LLC",
+                            "work_locations": [
+                                {
+                                    "id": 1,
+                                    "name": "Dubai"
+                                }
+                            ],
+                            "branch_id": null
+                        },
+                        {
+                            "id": 17,
+                            "name": "Compensatory Days",
+                            "code": null,
+                            "time_off_type": null,
+                            "leave_validation_type": "manager",
+                            "requires_allocation": "yes",
+                            "allocation_type": null,
+                            "employee_requests": "yes",
+                            "allocation_validation_type": "hr",
+                            "is_leave_limit": false,
+                            "leave_limit_type": null,
+                            "leave_limit_days": null,
+                            "is_ann_leave": false,
+                            "annual_days_allocation_based_on": null,
+                            "per_mth_annual_days": null,
+                            "consider_ann_leave": null,
+                            "is_recurring_leave": false,
+                            "recurring_leave_type": null,
+                            "allow_carryforward": false,
+                            "validity_based_on": null,
+                            "custom_date": null,
+                            "responsible_ids": "res.users(2,)",
+                            "request_unit": "day",
+                            "leave_salary_based_on": "gross",
+                            "allows_negative": false,
+                            "max_allowed_negative": null,
+                            "overtime_deductible": false,
+                            "include_public_holidays_in_duration": false,
+                            "show_on_dashboard": true,
+                            "l10n_in_is_sandwich_leave": false,
+                            "allow_negative_balance": false,
+                            "support_document": false,
+                            "time_type": "leave",
+                            "company_id": null,
+                            "company_name": null,
+                            "address_id": null,
+                            "address_name": null,
+                            "work_locations": null,
+                            "branch_id": null
+                        },
+                        {
+                            "id": 19,
+                            "name": "Extra Hours",
+                            "code": null,
+                            "time_off_type": null,
+                            "leave_validation_type": "manager",
+                            "requires_allocation": "no",
+                            "allocation_type": null,
+                            "employee_requests": "no",
+                            "allocation_validation_type": "hr",
+                            "is_leave_limit": false,
+                            "leave_limit_type": null,
+                            "leave_limit_days": null,
+                            "is_ann_leave": false,
+                            "annual_days_allocation_based_on": null,
+                            "per_mth_annual_days": null,
+                            "consider_ann_leave": null,
+                            "is_recurring_leave": false,
+                            "recurring_leave_type": null,
+                            "allow_carryforward": false,
+                            "validity_based_on": null,
+                            "custom_date": null,
+                            "responsible_ids": null,
+                            "request_unit": "hour",
+                            "leave_salary_based_on": "gross",
+                            "allows_negative": false,
+                            "max_allowed_negative": null,
+                            "overtime_deductible": true,
+                            "include_public_holidays_in_duration": false,
+                            "show_on_dashboard": true,
+                            "l10n_in_is_sandwich_leave": false,
+                            "allow_negative_balance": false,
+                            "support_document": false,
+                            "time_type": "leave",
+                            "company_id": null,
+                            "company_name": null,
+                            "address_id": null,
+                            "address_name": null,
+                            "work_locations": null,
+                            "branch_id": null
+                        },
+                        {
+                            "id": 12,
+                            "name": "Medical Leave (1- 15 days)",
+                            "code": "ML",
+                            "time_off_type": "paid",
+                            "leave_validation_type": "hr",
+                            "requires_allocation": "yes",
+                            "allocation_type": "regular",
+                            "employee_requests": "no",
+                            "allocation_validation_type": "hr",
+                            "is_leave_limit": true,
+                            "leave_limit_type": "yearly",
+                            "leave_limit_days": 15,
+                            "is_ann_leave": false,
+                            "annual_days_allocation_based_on": null,
+                            "per_mth_annual_days": null,
+                            "consider_ann_leave": true,
+                            "is_recurring_leave": true,
+                            "recurring_leave_type": "yearly",
+                            "allow_carryforward": false,
+                            "validity_based_on": "custom_date",
+                            "custom_date": "2025-05-01",
+                            "responsible_ids": null,
+                            "request_unit": "day",
+                            "leave_salary_based_on": "gross",
+                            "allows_negative": false,
+                            "max_allowed_negative": null,
+                            "overtime_deductible": false,
+                            "include_public_holidays_in_duration": false,
+                            "show_on_dashboard": true,
+                            "l10n_in_is_sandwich_leave": false,
+                            "allow_negative_balance": false,
+                            "support_document": false,
+                            "time_type": "leave",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "address_id": 1,
+                            "address_name": "Synergia Softwares IT infrastructure LLC",
+                            "work_locations": [
+                                {
+                                    "id": 1,
+                                    "name": "Dubai"
+                                }
+                            ],
+                            "branch_id": null
+                        },
+                        {
+                            "id": 21,
+                            "name": "Medical Leave - Half",
+                            "code": "MLHALF",
+                            "time_off_type": "partial",
+                            "leave_validation_type": "hr",
+                            "requires_allocation": "yes",
+                            "allocation_type": "regular",
+                            "employee_requests": "no",
+                            "allocation_validation_type": "hr",
+                            "is_leave_limit": true,
+                            "leave_limit_type": "yearly",
+                            "leave_limit_days": 30,
+                            "is_ann_leave": false,
+                            "annual_days_allocation_based_on": null,
+                            "per_mth_annual_days": null,
+                            "consider_ann_leave": true,
+                            "is_recurring_leave": true,
+                            "recurring_leave_type": "yearly",
+                            "allow_carryforward": false,
+                            "validity_based_on": "custom_date",
+                            "custom_date": "2025-05-01",
+                            "responsible_ids": null,
+                            "request_unit": "day",
+                            "leave_salary_based_on": "gross",
+                            "allows_negative": false,
+                            "max_allowed_negative": null,
+                            "overtime_deductible": false,
+                            "include_public_holidays_in_duration": false,
+                            "show_on_dashboard": true,
+                            "l10n_in_is_sandwich_leave": false,
+                            "allow_negative_balance": false,
+                            "support_document": false,
+                            "time_type": "leave",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "address_id": 1,
+                            "address_name": "Synergia Softwares IT infrastructure LLC",
+                            "work_locations": [
+                                {
+                                    "id": 1,
+                                    "name": "Dubai"
+                                }
+                            ],
+                            "branch_id": null
+                        },
+                        {
+                            "id": 22,
+                            "name": "Medical Leave - Unpaid",
+                            "code": "MLUNPAID",
+                            "time_off_type": "unpaid",
+                            "leave_validation_type": "hr",
+                            "requires_allocation": "yes",
+                            "allocation_type": "regular",
+                            "employee_requests": "no",
+                            "allocation_validation_type": "hr",
+                            "is_leave_limit": true,
+                            "leave_limit_type": "yearly",
+                            "leave_limit_days": 45,
+                            "is_ann_leave": false,
+                            "annual_days_allocation_based_on": null,
+                            "per_mth_annual_days": null,
+                            "consider_ann_leave": true,
+                            "is_recurring_leave": true,
+                            "recurring_leave_type": "yearly",
+                            "allow_carryforward": false,
+                            "validity_based_on": "custom_date",
+                            "custom_date": "2025-05-01",
+                            "responsible_ids": null,
+                            "request_unit": "day",
+                            "leave_salary_based_on": "gross",
+                            "allows_negative": false,
+                            "max_allowed_negative": null,
+                            "overtime_deductible": false,
+                            "include_public_holidays_in_duration": false,
+                            "show_on_dashboard": true,
+                            "l10n_in_is_sandwich_leave": false,
+                            "allow_negative_balance": false,
+                            "support_document": false,
+                            "time_type": "leave",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "address_id": 1,
+                            "address_name": "Synergia Softwares IT infrastructure LLC",
+                            "work_locations": [
+                                {
+                                    "id": 1,
+                                    "name": "Dubai"
+                                }
+                            ],
+                            "branch_id": null
+                        },
+                        {
+                            "id": 11,
+                            "name": "Annual Leave",
+                            "code": "ANL",
+                            "time_off_type": "paid",
+                            "leave_validation_type": "hr",
+                            "requires_allocation": "yes",
+                            "allocation_type": "accrual",
+                            "employee_requests": "no",
+                            "allocation_validation_type": "hr",
+                            "is_leave_limit": false,
+                            "leave_limit_type": null,
+                            "leave_limit_days": null,
+                            "is_ann_leave": true,
+                            "annual_days_allocation_based_on": "fixed",
+                            "per_mth_annual_days": 2.5,
+                            "consider_ann_leave": null,
+                            "is_recurring_leave": true,
+                            "recurring_leave_type": "yearly",
+                            "allow_carryforward": true,
+                            "validity_based_on": "custom_date",
+                            "custom_date": "2025-05-01",
+                            "responsible_ids": null,
+                            "request_unit": "day",
+                            "leave_salary_based_on": "gross",
+                            "allows_negative": false,
+                            "max_allowed_negative": null,
+                            "overtime_deductible": false,
+                            "include_public_holidays_in_duration": false,
+                            "show_on_dashboard": true,
+                            "l10n_in_is_sandwich_leave": false,
+                            "allow_negative_balance": false,
+                            "support_document": false,
+                            "time_type": "leave",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "address_id": 1,
+                            "address_name": "Synergia Softwares IT infrastructure LLC",
+                            "work_locations": [
+                                {
+                                    "id": 1,
+                                    "name": "Dubai"
+                                }
+                            ],
+                            "branch_id": null
+                        },
+                        {
+                            "id": 13,
+                            "name": "Absent",
+                            "code": null,
+                            "time_off_type": "unpaid",
+                            "leave_validation_type": "hr",
+                            "requires_allocation": "yes",
+                            "allocation_type": "regular",
+                            "employee_requests": "no",
+                            "allocation_validation_type": "hr",
+                            "is_leave_limit": false,
+                            "leave_limit_type": null,
+                            "leave_limit_days": null,
+                            "is_ann_leave": false,
+                            "annual_days_allocation_based_on": null,
+                            "per_mth_annual_days": null,
+                            "consider_ann_leave": null,
+                            "is_recurring_leave": false,
+                            "recurring_leave_type": null,
+                            "allow_carryforward": false,
+                            "validity_based_on": "custom_date",
+                            "custom_date": null,
+                            "responsible_ids": null,
+                            "request_unit": "day",
+                            "leave_salary_based_on": "gross",
+                            "allows_negative": false,
+                            "max_allowed_negative": null,
+                            "overtime_deductible": false,
+                            "include_public_holidays_in_duration": false,
+                            "show_on_dashboard": true,
+                            "l10n_in_is_sandwich_leave": false,
+                            "allow_negative_balance": false,
+                            "support_document": false,
+                            "time_type": "leave",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "address_id": null,
+                            "address_name": null,
+                            "work_locations": null,
+                            "branch_id": null
+                        },
+                        {
+                            "id": 9,
+                            "name": "Paid Leaves - India",
+                            "code": "PL",
+                            "time_off_type": "paid",
+                            "leave_validation_type": "hr",
+                            "requires_allocation": "yes",
+                            "allocation_type": "regular",
+                            "employee_requests": "no",
+                            "allocation_validation_type": "hr",
+                            "is_leave_limit": true,
+                            "leave_limit_type": "monthly",
+                            "leave_limit_days": 2,
+                            "is_ann_leave": false,
+                            "annual_days_allocation_based_on": null,
+                            "per_mth_annual_days": null,
+                            "consider_ann_leave": null,
+                            "is_recurring_leave": true,
+                            "recurring_leave_type": "yearly",
+                            "allow_carryforward": false,
+                            "validity_based_on": "custom_date",
+                            "custom_date": "2025-05-01",
+                            "responsible_ids": null,
+                            "request_unit": "day",
+                            "leave_salary_based_on": "gross",
+                            "allows_negative": false,
+                            "max_allowed_negative": null,
+                            "overtime_deductible": false,
+                            "include_public_holidays_in_duration": false,
+                            "show_on_dashboard": true,
+                            "l10n_in_is_sandwich_leave": true,
+                            "allow_negative_balance": false,
+                            "support_document": false,
+                            "time_type": "leave",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "address_id": 1,
+                            "address_name": "Synergia Softwares IT infrastructure LLC",
+                            "work_locations": [
+                                {
+                                    "id": 2,
+                                    "name": "India"
+                                }
+                            ],
+                            "branch_id": null
+                        },
+                        {
+                            "id": 20,
+                            "name": "Unpaid Leave - India",
+                            "code": "UNP",
+                            "time_off_type": "unpaid",
+                            "leave_validation_type": "hr",
+                            "requires_allocation": "yes",
+                            "allocation_type": "regular",
+                            "employee_requests": "no",
+                            "allocation_validation_type": "hr",
+                            "is_leave_limit": true,
+                            "leave_limit_type": "yearly",
+                            "leave_limit_days": 5,
+                            "is_ann_leave": false,
+                            "annual_days_allocation_based_on": null,
+                            "per_mth_annual_days": null,
+                            "consider_ann_leave": null,
+                            "is_recurring_leave": true,
+                            "recurring_leave_type": "yearly",
+                            "allow_carryforward": false,
+                            "validity_based_on": "custom_date",
+                            "custom_date": "2025-05-01",
+                            "responsible_ids": null,
+                            "request_unit": "day",
+                            "leave_salary_based_on": "gross",
+                            "allows_negative": false,
+                            "max_allowed_negative": null,
+                            "overtime_deductible": false,
+                            "include_public_holidays_in_duration": true,
+                            "show_on_dashboard": true,
+                            "l10n_in_is_sandwich_leave": true,
+                            "allow_negative_balance": false,
+                            "support_document": false,
+                            "time_type": "leave",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "address_id": 1,
+                            "address_name": "Synergia Softwares IT infrastructure LLC",
+                            "work_locations": [
+                                {
+                                    "id": 2,
+                                    "name": "India"
+                                }
+                            ],
+                            "branch_id": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

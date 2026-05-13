@@ -1,0 +1,357 @@
+meta {
+  name: Status Update Employee Task
+  type: http
+  seq: 62
+}
+
+post {
+  url: 192.168.1.120:8070/web/employee_task_status_update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "task_id": 22,
+              "status": "cancel",
+              "cancel_reason": "Cancellation Test From Device",
+              "date_deadline": false
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Status Update - Submit
+  
+  request: {
+    url: 192.168.1.120:8070/web/employee_task_status_update
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "task_id": 22,
+                  "status": "submit",
+                  "date_deadline": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 07 Apr 2026 12:58:55 GMT
+      Content-Length: 776
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "task_details": {
+                        "id": 22,
+                        "name": "TM008",
+                        "task": "Sample Employee Task Created From Mobile",
+                        "description": "<p>Sample Employee Task Description Created From Mobile</p>",
+                        "res_model": null,
+                        "res_doc_id": null,
+                        "res_create_date": null,
+                        "res_name": null,
+                        "date_deadline": "2026-04-15",
+                        "date_done": null,
+                        "employee_id": 126,
+                        "employee_name": "Administrator",
+                        "assigned_by": 126,
+                        "assigned_by_name": "Administrator",
+                        "submitted_by": 53,
+                        "submitted_by_name": "ABDUL HACKEEM THAZHE PUTHAN PURAYIL",
+                        "approved_by": null,
+                        "approved_by_name": null,
+                        "completed_by": null,
+                        "completed_by_name": null,
+                        "submitted_on": "2026-04-07",
+                        "approved_on": null,
+                        "state": "submitted"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Status Update - Reschedule
+  
+  request: {
+    url: 192.168.1.120:8070/web/employee_task_status_update
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "task_id": 22,
+                  "status": "reschedule",
+                  "date_deadline": "2026-04-12"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 07 Apr 2026 13:04:25 GMT
+      Content-Length: 776
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "task_details": {
+                        "id": 22,
+                        "name": "TM008",
+                        "task": "Sample Employee Task Created From Mobile",
+                        "description": "<p>Sample Employee Task Description Created From Mobile</p>",
+                        "res_model": null,
+                        "res_doc_id": null,
+                        "res_create_date": null,
+                        "res_name": null,
+                        "date_deadline": "2026-04-12",
+                        "date_done": null,
+                        "employee_id": 126,
+                        "employee_name": "Administrator",
+                        "assigned_by": 126,
+                        "assigned_by_name": "Administrator",
+                        "submitted_by": 53,
+                        "submitted_by_name": "ABDUL HACKEEM THAZHE PUTHAN PURAYIL",
+                        "approved_by": null,
+                        "approved_by_name": null,
+                        "completed_by": null,
+                        "completed_by_name": null,
+                        "submitted_on": "2026-04-07",
+                        "approved_on": null,
+                        "state": "submitted"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Status Update - Approve
+  
+  request: {
+    url: 192.168.1.120:8070/web/employee_task_status_update
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "task_id": 22,
+                  "status": "approve",
+                  "date_deadline": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 07 Apr 2026 13:07:22 GMT
+      Content-Length: 813
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "task_details": {
+                        "id": 22,
+                        "name": "TM008",
+                        "task": "Sample Employee Task Created From Mobile",
+                        "description": "<p>Sample Employee Task Description Created From Mobile</p>",
+                        "res_model": null,
+                        "res_doc_id": null,
+                        "res_create_date": null,
+                        "res_name": null,
+                        "date_deadline": "2026-04-12",
+                        "date_done": null,
+                        "employee_id": 126,
+                        "employee_name": "Administrator",
+                        "assigned_by": 126,
+                        "assigned_by_name": "Administrator",
+                        "submitted_by": 53,
+                        "submitted_by_name": "ABDUL HACKEEM THAZHE PUTHAN PURAYIL",
+                        "approved_by": 53,
+                        "approved_by_name": "ABDUL HACKEEM THAZHE PUTHAN PURAYIL",
+                        "completed_by": null,
+                        "completed_by_name": null,
+                        "submitted_on": "2026-04-07",
+                        "approved_on": "2026-04-07",
+                        "state": "planned"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Status Update- Cancel
+  
+  request: {
+    url: 192.168.1.120:8070/web/employee_task_status_update
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "task_id": 22,
+                  "status": "cancel",
+                  "cancel_reason": "Cancellation Test From Device",
+                  "date_deadline": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 07 Apr 2026 14:03:22 GMT
+      Content-Length: 956
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "task_details": {
+                        "id": 22,
+                        "name": "TM008",
+                        "task": "Sample Employee Task Created From Mobile",
+                        "description": "<p>Sample Employee Task Description Created From Mobile</p>",
+                        "res_model": null,
+                        "res_doc_id": null,
+                        "res_create_date": null,
+                        "res_name": null,
+                        "date_deadline": "2026-04-13",
+                        "date_done": "2026-04-07",
+                        "employee_id": 126,
+                        "employee_name": "Administrator",
+                        "assigned_by": 126,
+                        "assigned_by_name": "Administrator",
+                        "submitted_by": 126,
+                        "submitted_by_name": "Administrator",
+                        "approved_by": 126,
+                        "approved_by_name": "Administrator",
+                        "completed_by": null,
+                        "completed_by_name": null,
+                        "submitted_on": "2026-04-07",
+                        "approved_on": "2026-04-07",
+                        "cancelled_employee_id": 53,
+                        "cancelled_employee_name": "ABDUL HACKEEM THAZHE PUTHAN PURAYIL",
+                        "cancelled_on": "2026-04-07",
+                        "cancel_reason": "Cancellation Test From Device",
+                        "state": "cancelled"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

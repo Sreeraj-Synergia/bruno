@@ -1,0 +1,28 @@
+meta {
+  name: Mob Cancel
+  type: http
+  seq: 63
+}
+
+post {
+  url: https://grako.syntrack.app/web/mobilisation_cancel
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "mobilisation_id": 121,
+              "cancel_reason_id": 5,
+              "cancel_date": "17/12/2025",
+              "cancel_user_id": 2
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

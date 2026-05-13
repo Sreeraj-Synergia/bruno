@@ -1,0 +1,317 @@
+meta {
+  name: Expense Details
+  type: http
+  seq: 56
+}
+
+post {
+  url: 192.168.1.120:8070/web/get_expense_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: New Request
+  
+  request: {
+    url: 192.168.1.120:8070/web/get_expense_details
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 09 Mar 2026 08:29:37 GMT
+      Content-Length: 5242
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "expense_details": [
+                        {
+                            "id": 1,
+                            "name": "EXP2026020001",
+                            "expense_type": "employee",
+                            "date": "2026-02-27",
+                            "paid_from_id": 37,
+                            "paid_from_name": "Cash in Hand- Van 01",
+                            "employee_id": 78,
+                            "employee_name": "AKMAL CHERUKAPPALLI",
+                            "fleet_id": null,
+                            "fleet_name": null,
+                            "created_by": 2,
+                            "created_name": "Administrator",
+                            "emp_created_by": 126,
+                            "emp_created_name": "Administrator",
+                            "origin_number": null,
+                            "employee_lines": [
+                                {
+                                    "id": 1,
+                                    "employee_id": 78,
+                                    "employee_name": "AKMAL CHERUKAPPALLI",
+                                    "currency_id": 128,
+                                    "currency_name": "AED",
+                                    "sequence": 10,
+                                    "bill_no": null,
+                                    "expense_type": "product.product(2971,)",
+                                    "description": "Fuel charges for the vehicle",
+                                    "expense_account": null,
+                                    "qty": 100,
+                                    "uom_id": 1,
+                                    "uom_name": "Units",
+                                    "unit_price": 2.98,
+                                    "subtotal": 298,
+                                    "tax_per": [
+                                        {
+                                            "id": 1,
+                                            "name": "5% DB"
+                                        }
+                                    ],
+                                    "tax_amount": 14.19047619047619,
+                                    "total_amount": 298,
+                                    "attachment": null,
+                                    "attachment_filename": null,
+                                    "remarks": null
+                                }
+                            ],
+                            "fleet_lines": null,
+                            "state": "paid",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "emp_checkin_id": null,
+                            "emp_checkin_name": null,
+                            "currency_id": 128,
+                            "currency_name": "AED",
+                            "total_amount": 298,
+                            "total_tax": 14.19047619047619,
+                            "total_subtotal": 298,
+                            "amount_total_words": "Two Hundred And Ninety-Eight Dirham",
+                            "total_tax_excluded": 14.9,
+                            "total_tax_included": null,
+                            "approved_by": null,
+                            "approved_name": null,
+                            "approved_date": null
+                        },
+                        {
+                            "id": 2,
+                            "name": "EXP2026020002",
+                            "expense_type": "employee",
+                            "date": "2026-02-27",
+                            "paid_from_id": 37,
+                            "paid_from_name": "Cash in Hand- Van 01",
+                            "employee_id": 78,
+                            "employee_name": "AKMAL CHERUKAPPALLI",
+                            "fleet_id": null,
+                            "fleet_name": null,
+                            "created_by": 2,
+                            "created_name": "Administrator",
+                            "emp_created_by": 126,
+                            "emp_created_name": "Administrator",
+                            "origin_number": null,
+                            "employee_lines": [
+                                {
+                                    "id": 2,
+                                    "employee_id": 78,
+                                    "employee_name": "AKMAL CHERUKAPPALLI",
+                                    "currency_id": 128,
+                                    "currency_name": "AED",
+                                    "sequence": 10,
+                                    "bill_no": null,
+                                    "expense_type": "product.product(2971,)",
+                                    "description": null,
+                                    "expense_account": null,
+                                    "qty": 100,
+                                    "uom_id": 1,
+                                    "uom_name": "Units",
+                                    "unit_price": 2,
+                                    "subtotal": 200,
+                                    "tax_per": [
+                                        {
+                                            "id": 19,
+                                            "name": "5% Purchase Excl"
+                                        }
+                                    ],
+                                    "tax_amount": 9.523809523809524,
+                                    "total_amount": 200,
+                                    "attachment": null,
+                                    "attachment_filename": null,
+                                    "remarks": null
+                                },
+                                {
+                                    "id": 3,
+                                    "employee_id": 78,
+                                    "employee_name": "AKMAL CHERUKAPPALLI",
+                                    "currency_id": 128,
+                                    "currency_name": "AED",
+                                    "sequence": 11,
+                                    "bill_no": null,
+                                    "expense_type": "product.product(13361,)",
+                                    "description": null,
+                                    "expense_account": null,
+                                    "qty": 100,
+                                    "uom_id": 1,
+                                    "uom_name": "Units",
+                                    "unit_price": 2,
+                                    "subtotal": 200,
+                                    "tax_per": [
+                                        {
+                                            "id": 24,
+                                            "name": "Vat 5% Included"
+                                        }
+                                    ],
+                                    "tax_amount": 9.523809523809524,
+                                    "total_amount": 200,
+                                    "attachment": null,
+                                    "attachment_filename": null,
+                                    "remarks": null
+                                }
+                            ],
+                            "fleet_lines": null,
+                            "state": "paid",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "emp_checkin_id": null,
+                            "emp_checkin_name": null,
+                            "currency_id": 128,
+                            "currency_name": "AED",
+                            "total_amount": 400,
+                            "total_tax": 19.047619047619047,
+                            "total_subtotal": 400,
+                            "amount_total_words": "Four Hundred Dirham",
+                            "total_tax_excluded": 10,
+                            "total_tax_included": 9.523809523809524,
+                            "approved_by": null,
+                            "approved_name": null,
+                            "approved_date": null
+                        },
+                        {
+                            "id": 5,
+                            "name": "EXP2026030005",
+                            "expense_type": "employee",
+                            "date": "2026-03-03",
+                            "paid_from_id": 7,
+                            "paid_from_name": "Cash in hand",
+                            "employee_id": 78,
+                            "employee_name": "AKMAL CHERUKAPPALLI",
+                            "fleet_id": null,
+                            "fleet_name": null,
+                            "created_by": 2,
+                            "created_name": "Administrator",
+                            "emp_created_by": 126,
+                            "emp_created_name": "Administrator",
+                            "origin_number": null,
+                            "employee_lines": [
+                                {
+                                    "id": 6,
+                                    "employee_id": 78,
+                                    "employee_name": "AKMAL CHERUKAPPALLI",
+                                    "currency_id": 128,
+                                    "currency_name": "AED",
+                                    "sequence": 10,
+                                    "bill_no": null,
+                                    "expense_type": "product.product(19457,)",
+                                    "description": null,
+                                    "expense_account": null,
+                                    "qty": 1,
+                                    "uom_id": 1,
+                                    "uom_name": "Units",
+                                    "unit_price": 100,
+                                    "subtotal": 100,
+                                    "tax_per": [
+                                        {
+                                            "id": 19,
+                                            "name": "5% Purchase Excl"
+                                        }
+                                    ],
+                                    "tax_amount": 5,
+                                    "total_amount": 105,
+                                    "attachment": null,
+                                    "attachment_filename": null,
+                                    "remarks": null
+                                },
+                                {
+                                    "id": 7,
+                                    "employee_id": 78,
+                                    "employee_name": "AKMAL CHERUKAPPALLI",
+                                    "currency_id": 128,
+                                    "currency_name": "AED",
+                                    "sequence": 11,
+                                    "bill_no": null,
+                                    "expense_type": "product.product(2971,)",
+                                    "description": null,
+                                    "expense_account": null,
+                                    "qty": 1,
+                                    "uom_id": 1,
+                                    "uom_name": "Units",
+                                    "unit_price": 100,
+                                    "subtotal": 100,
+                                    "tax_per": [
+                                        {
+                                            "id": 24,
+                                            "name": "Vat 5% Included"
+                                        }
+                                    ],
+                                    "tax_amount": 4.761904761904762,
+                                    "total_amount": 100,
+                                    "attachment": null,
+                                    "attachment_filename": null,
+                                    "remarks": null
+                                }
+                            ],
+                            "fleet_lines": null,
+                            "state": "paid",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "emp_checkin_id": null,
+                            "emp_checkin_name": null,
+                            "currency_id": 128,
+                            "currency_name": "AED",
+                            "total_amount": 205,
+                            "total_tax": 9.761904761904763,
+                            "total_subtotal": 200,
+                            "amount_total_words": "Two Hundred And Five Dirham",
+                            "total_tax_excluded": 5,
+                            "total_tax_included": 4.761904761904762,
+                            "approved_by": 2,
+                            "approved_name": "Administrator",
+                            "approved_date": "2026-03-03 05:11:26"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

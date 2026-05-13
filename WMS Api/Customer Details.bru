@@ -1,0 +1,281 @@
+meta {
+  name: Customer Details
+  type: http
+  seq: 6
+}
+
+post {
+  url: https://wms.syntrack.app/web/get_cust_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Customer Details
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_cust_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:26:41 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:26:41 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "customer_details": [
+                        {
+                            "customer_id": 133,
+                            "name": "Carrefour Hyper Market- Deira City Center",
+                            "street": "M-Floor, Deira City Center",
+                            "street2": null,
+                            "city": null,
+                            "zip": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "currency_id": 131,
+                            "currency": "AED",
+                            "email": "info@carrefour.com",
+                            "website": "http://www.carrefour.com",
+                            "phone": "+971-50-987-6449",
+                            "mobile": "+971-46-2939-29392",
+                            "trn": "10002010201001",
+                            "trade_reg": null,
+                            "trade_reg_expiry": null,
+                            "latitude": null,
+                            "longitude": null,
+                            "customer_ref": null,
+                            "credit_limit": null,
+                            "due_amount": 0,
+                            "payment_terms_id": null,
+                            "payment_terms_name": null,
+                            "logo_url": "http://wms.syntrack.app/web/url_image/res.partner/133/image_1920",
+                            "arabic_name": null,
+                            "contact_name": null,
+                            "contact_phone": null,
+                            "customer": true,
+                            "supplier": false,
+                            "debit_limit": 0,
+                            "cust_origin": null,
+                            "contact_list": [],
+                            "area_code_id": null,
+                            "area_code_name": null,
+                            "is_contact": false
+                        },
+                        {
+                            "customer_id": 132,
+                            "name": "Ozon General Trading LLC",
+                            "street": "M-10,Musaffah 10",
+                            "street2": "Shabia",
+                            "city": "Musaffah",
+                            "zip": "046704460",
+                            "state_id": 546,
+                            "state_name": "Abu Dhabi",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "currency_id": 131,
+                            "currency": "AED",
+                            "email": "info@ozine.com",
+                            "website": "http://www.ozine.com",
+                            "phone": "04510484616",
+                            "mobile": "05404548460",
+                            "trn": "19933939339",
+                            "trade_reg": null,
+                            "trade_reg_expiry": null,
+                            "latitude": null,
+                            "longitude": null,
+                            "customer_ref": null,
+                            "credit_limit": null,
+                            "due_amount": 0,
+                            "payment_terms_id": null,
+                            "payment_terms_name": null,
+                            "logo_url": "http://wms.syntrack.app/web/url_image/res.partner/132/image_1920",
+                            "arabic_name": null,
+                            "contact_name": null,
+                            "contact_phone": null,
+                            "customer": true,
+                            "supplier": false,
+                            "debit_limit": 0,
+                            "cust_origin": null,
+                            "contact_list": [],
+                            "area_code_id": null,
+                            "area_code_name": null,
+                            "is_contact": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Customer Details
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_cust_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:26:41 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:26:41 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "customer_details": [
+                        {
+                            "customer_id": 133,
+                            "name": "Carrefour Hyper Market- Deira City Center",
+                            "street": "M-Floor, Deira City Center",
+                            "street2": null,
+                            "city": null,
+                            "zip": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "currency_id": 131,
+                            "currency": "AED",
+                            "email": "info@carrefour.com",
+                            "website": "http://www.carrefour.com",
+                            "phone": "+971-50-987-6449",
+                            "mobile": "+971-46-2939-29392",
+                            "trn": "10002010201001",
+                            "trade_reg": null,
+                            "trade_reg_expiry": null,
+                            "latitude": null,
+                            "longitude": null,
+                            "customer_ref": null,
+                            "credit_limit": null,
+                            "due_amount": 0,
+                            "payment_terms_id": null,
+                            "payment_terms_name": null,
+                            "logo_url": "http://wms.syntrack.app/web/url_image/res.partner/133/image_1920",
+                            "arabic_name": null,
+                            "contact_name": null,
+                            "contact_phone": null,
+                            "customer": true,
+                            "supplier": false,
+                            "debit_limit": 0,
+                            "cust_origin": null,
+                            "contact_list": [],
+                            "area_code_id": null,
+                            "area_code_name": null,
+                            "is_contact": false
+                        },
+                        {
+                            "customer_id": 132,
+                            "name": "Ozon General Trading LLC",
+                            "street": "M-10,Musaffah 10",
+                            "street2": "Shabia",
+                            "city": "Musaffah",
+                            "zip": "046704460",
+                            "state_id": 546,
+                            "state_name": "Abu Dhabi",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "currency_id": 131,
+                            "currency": "AED",
+                            "email": "info@ozine.com",
+                            "website": "http://www.ozine.com",
+                            "phone": "04510484616",
+                            "mobile": "05404548460",
+                            "trn": "19933939339",
+                            "trade_reg": null,
+                            "trade_reg_expiry": null,
+                            "latitude": null,
+                            "longitude": null,
+                            "customer_ref": null,
+                            "credit_limit": null,
+                            "due_amount": 0,
+                            "payment_terms_id": null,
+                            "payment_terms_name": null,
+                            "logo_url": "http://wms.syntrack.app/web/url_image/res.partner/132/image_1920",
+                            "arabic_name": null,
+                            "contact_name": null,
+                            "contact_phone": null,
+                            "customer": true,
+                            "supplier": false,
+                            "debit_limit": 0,
+                            "cust_origin": null,
+                            "contact_list": [],
+                            "area_code_id": null,
+                            "area_code_name": null,
+                            "is_contact": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,431 @@
+meta {
+  name: Start Day
+  type: http
+  seq: 54
+}
+
+post {
+  url: 192.168.1.119:8071/web/start_customer_visit
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "start_date": "2025-06-25 08:00:00",
+              "check_in_out": 321
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Day Start
+  
+  request: {
+    url: 192.168.1.119:8071/web/start_customer_visit
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "start_date": "2025-06-25 08:00:00",
+                  "check_in_out": 294,
+                  "visits_of_the_day": [
+                      {   
+                          "from_customer_id": false,
+                          "customer_id": 15730
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 15831
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 17050
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 17628
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 18143
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 18722
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 18793
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 18804
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 18914
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 18945
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 19025
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 19015
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 19251
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 19334
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 19468
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 19694
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 20001
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 20907
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 21558
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 21563
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 21570
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 22178
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 22458
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23030
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 1
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23371
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23375
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23524
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23848
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23740
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23698
+                      }
+                  ]
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 25 Jun 2025 08:16:24 GMT
+      Content-Length: 781
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "start_day_details": {
+                        "check_in_out": 294,
+                        "check_in_out_ref": "CHK/IN/OUT/00227",
+                        "check_in_part_latitude": 25.2417815,
+                        "check_in_part_longitude": 55.3096339,
+                        "checkout_part_latitude": 0,
+                        "checkout_part_longitude": 0,
+                        "check_in_time": "2025-06-25 05:46:54",
+                        "check_out_time": false,
+                        "check_in_out_employee_id": 24,
+                        "check_in_out_employee_name": "Omar Abdalla",
+                        "check_in_out_helper_employee_id": null,
+                        "check_in_out_helper_employee_name": false,
+                        "check_in_out_ip_address": "192.168.1.179",
+                        "check_in_out_checkin_day": "2",
+                        "check_in_out_fleet_id": null,
+                        "check_in_out_fleet_name": "Skipped",
+                        "check_in_out_odo_meter_start": null,
+                        "check_in_out_odo_meter_end": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Day Start
+  
+  request: {
+    url: 192.168.1.119:8071/web/start_customer_visit
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "start_date": "2025-06-25 08:00:00",
+                  "check_in_out": 294,
+                  "visits_of_the_day": [
+                      {   
+                          "from_customer_id": false,
+                          "customer_id": 15730
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 15831
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 17050
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 17628
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 18143
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 18722
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 18793
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 18804
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 18914
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 18945
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 19025
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 19015
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 19251
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 19334
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 19468
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 19694
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 20001
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 20907
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 21558
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 21563
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 21570
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 22178
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 22458
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23030
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 1
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23371
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23375
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23524
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23848
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23740
+                      },
+                      {
+                          "from_customer_id": false,
+                          "customer_id": 23698
+                      }
+                  ]
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 25 Jun 2025 08:16:24 GMT
+      Content-Length: 781
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "start_day_details": {
+                        "check_in_out": 294,
+                        "check_in_out_ref": "CHK/IN/OUT/00227",
+                        "check_in_part_latitude": 25.2417815,
+                        "check_in_part_longitude": 55.3096339,
+                        "checkout_part_latitude": 0,
+                        "checkout_part_longitude": 0,
+                        "check_in_time": "2025-06-25 05:46:54",
+                        "check_out_time": false,
+                        "check_in_out_employee_id": 24,
+                        "check_in_out_employee_name": "Omar Abdalla",
+                        "check_in_out_helper_employee_id": null,
+                        "check_in_out_helper_employee_name": false,
+                        "check_in_out_ip_address": "192.168.1.179",
+                        "check_in_out_checkin_day": "2",
+                        "check_in_out_fleet_id": null,
+                        "check_in_out_fleet_name": "Skipped",
+                        "check_in_out_odo_meter_start": null,
+                        "check_in_out_odo_meter_end": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

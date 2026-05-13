@@ -1,0 +1,167 @@
+meta {
+  name: Dispatches
+  type: http
+  seq: 3
+}
+
+post {
+  url: localhost:8070/web/get_dispatch_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Dispatches
+  
+  request: {
+    url: localhost:8070/web/get_dispatch_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 1903
+      Set-Cookie: session_id=fdd016adc2e5b6fddf130a6a4d642af7aa092c8e; Expires=Wed, 11-Dec-2024 11:46:30 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Thu, 12 Sep 2024 11:46:30 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dispatch_details": [
+                        {
+                            "id": 4,
+                            "name": "DM2024090003",
+                            "date": "2024-09-12 06:53:30",
+                            "work_location": 934,
+                            "work_location_name": "Al Neem Grand Pharmacy LLC",
+                            "driver_id": 835,
+                            "driver_id_name": "Amjad Khan",
+                            "del_number": null,
+                            "area_code_id": 1,
+                            "area_code_id_name": "Oud Metha",
+                            "employee_id": 261,
+                            "employee_id_name": "Synergia",
+                            "company_id": 1,
+                            "company_id_name": "Zneem Group of companies",
+                            "state": "accepted",
+                            "delivery_type_line_ids": [
+                                {
+                                    "id": 41,
+                                    "type_id": 1,
+                                    "type_name": "Delivery",
+                                    "count": 1,
+                                    "total": 500
+                                },
+                                {
+                                    "id": 42,
+                                    "type_id": 3,
+                                    "type_name": "Sample Delivery",
+                                    "count": 1,
+                                    "total": 250
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "DM2024090001",
+                            "date": "2024-09-11 20:39:15",
+                            "work_location": 934,
+                            "work_location_name": "Al Neem Grand Pharmacy LLC",
+                            "driver_id": null,
+                            "driver_id_name": null,
+                            "del_number": null,
+                            "area_code_id": 1,
+                            "area_code_id_name": "Oud Metha",
+                            "employee_id": 261,
+                            "employee_id_name": "Synergia",
+                            "company_id": 1,
+                            "company_id_name": "Zneem Group of companies",
+                            "state": "draft",
+                            "delivery_type_line_ids": [
+                                {
+                                    "id": 7,
+                                    "type_id": 1,
+                                    "type_name": "Delivery",
+                                    "count": 1,
+                                    "total": 500
+                                },
+                                {
+                                    "id": 8,
+                                    "type_id": 3,
+                                    "type_name": "Sample Delivery",
+                                    "count": 1,
+                                    "total": 250
+                                }
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "DM2024090002",
+                            "date": "2024-09-11 05:06:18",
+                            "work_location": 929,
+                            "work_location_name": "Al Abrar Pharmacy LLC",
+                            "driver_id": 838,
+                            "driver_id_name": "Arslan Ali Irsahd Ahmad",
+                            "del_number": null,
+                            "area_code_id": 1,
+                            "area_code_id_name": "Oud Metha",
+                            "employee_id": 261,
+                            "employee_id_name": "Synergia",
+                            "company_id": 1,
+                            "company_id_name": "Zneem Group of companies",
+                            "state": "draft",
+                            "delivery_type_line_ids": [
+                                {
+                                    "id": 37,
+                                    "type_id": 1,
+                                    "type_name": "Delivery",
+                                    "count": 1,
+                                    "total": 500
+                                },
+                                {
+                                    "id": 38,
+                                    "type_id": 3,
+                                    "type_name": "Sample Delivery",
+                                    "count": 1,
+                                    "total": 250
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

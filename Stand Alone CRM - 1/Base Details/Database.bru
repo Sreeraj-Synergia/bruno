@@ -1,0 +1,75 @@
+meta {
+  name: Database
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8070/web/crm_database_list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get Database Instance
+}
+
+example {
+  name: Database
+  
+  request: {
+    url: http://localhost:8070/web/crm_database_list
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 30 Dec 2025 12:02:55 GMT
+      Content-Length: 135
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=gZ_SLJt7Ce85Pn5t9eGFAXX2Bhfk4ktwcPeM1jmR_YNHSegfwwWG_NjlXK95GQ7bLHnYdCaSQYvD2gvGFl9e; Expires=Wed, 30 Dec 2026 12:02:55 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "database_list": [
+                        "ERP"
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,39 @@
+meta {
+  name: TaskExpenseBooking_Update
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{Gravity URL}}/SynTrack/TaskExpenseBooking_Update
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: GravitySoftnet_YV5jbMLoBzPbqSDJ4AhB1xnN2xmeB74f
+}
+
+body:multipart-form {
+  TransId: 0
+  TransLoc: 99
+  ExpenseType: 01
+  EmployeeCode: EMP0000005
+  Vendor: C0001
+  Narration: Updated travel claim
+  UserCd: 001
+  RejectNarration: 
+  isstatus: true
+  RefDate: 08/05/2025
+  RefNo: 52136
+  TaxableAmount: 1002.00
+  TaxAmount: 25.000
+  NetAmount: 12.00
+  TaxPerc: 5
+  TaxDept: 012
+  pdf: @file(/C:/Users/malmi/Downloads/1660909993.jpg)
+}
+
+settings {
+  encodeUrl: true
+}

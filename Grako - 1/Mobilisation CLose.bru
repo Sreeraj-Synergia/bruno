@@ -1,0 +1,27 @@
+meta {
+  name: Mobilisation CLose
+  type: http
+  seq: 70
+}
+
+post {
+  url: http://localhost:8090/web/mob_work_close
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "jsonrpc": "2.0",
+    "id": null,
+    "params": {
+      "data": {
+        "mobilisation_id": 81
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

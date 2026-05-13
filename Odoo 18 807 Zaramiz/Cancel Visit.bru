@@ -1,0 +1,192 @@
+meta {
+  name: Cancel Visit
+  type: http
+  seq: 56
+}
+
+post {
+  url: 192.168.1.119:8071/web/cancel_visit
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "visit_id": 544,
+              "cancel_reason_id": 2
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Cancel Visit
+  
+  request: {
+    url: 192.168.1.119:8071/web/cancel_visit
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "visit_id": 544,
+                  "cancel_reason_id": 2
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 26 Jun 2025 08:47:42 GMT
+      Content-Length: 852
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "id": 544,
+                    "emp_checkin_id": 321,
+                    "sequence": 112,
+                    "from_partner_id": 1,
+                    "partner_id": 17491,
+                    "customer_check_in_id": null,
+                    "checkin_datetime": null,
+                    "checkin_latitude": null,
+                    "checkin_longitude": null,
+                    "checkout_datetime": null,
+                    "checkout_latitude": null,
+                    "checkout_longitude": null,
+                    "check_in_status": "cancel",
+                    "cancel_reason_id": 2,
+                    "planned_visit_id": 2676,
+                    "line_number": 1,
+                    "is_start_point": true,
+                    "is_end_point": null,
+                    "trip_number": "Start Trip",
+                    "to_partner_id": 17491,
+                    "to_partner_name": "Al Nawaes",
+                    "from_partner_name": "Synergia Softwares IT infrastructure LLC",
+                    "distance": "9.94 Km",
+                    "start_time": "08:00:46",
+                    "time_to_reach": "9 Minutes 56 Seconds",
+                    "eta": "08:10:42",
+                    "visit_duration": "20 Minutes",
+                    "visit_day": "Thursday"
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Cancel Visit
+  
+  request: {
+    url: 192.168.1.119:8071/web/cancel_visit
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "visit_id": 544,
+                  "cancel_reason_id": 2
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 26 Jun 2025 08:47:42 GMT
+      Content-Length: 852
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "id": 544,
+                    "emp_checkin_id": 321,
+                    "sequence": 112,
+                    "from_partner_id": 1,
+                    "partner_id": 17491,
+                    "customer_check_in_id": null,
+                    "checkin_datetime": null,
+                    "checkin_latitude": null,
+                    "checkin_longitude": null,
+                    "checkout_datetime": null,
+                    "checkout_latitude": null,
+                    "checkout_longitude": null,
+                    "check_in_status": "cancel",
+                    "cancel_reason_id": 2,
+                    "planned_visit_id": 2676,
+                    "line_number": 1,
+                    "is_start_point": true,
+                    "is_end_point": null,
+                    "trip_number": "Start Trip",
+                    "to_partner_id": 17491,
+                    "to_partner_name": "Al Nawaes",
+                    "from_partner_name": "Synergia Softwares IT infrastructure LLC",
+                    "distance": "9.94 Km",
+                    "start_time": "08:00:46",
+                    "time_to_reach": "9 Minutes 56 Seconds",
+                    "eta": "08:10:42",
+                    "visit_duration": "20 Minutes",
+                    "visit_day": "Thursday"
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

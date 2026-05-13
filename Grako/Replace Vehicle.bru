@@ -1,0 +1,29 @@
+meta {
+  name: Replace Vehicle
+  type: http
+  seq: 69
+}
+
+post {
+  url: http://localhost:8090/web/replace_vehicle
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "mobilisation_id": 81,
+              "replacement_reason_id": 3,
+              "fleet_id": 1,
+              "driver_id": 10958,
+              "schedule_time": 10
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

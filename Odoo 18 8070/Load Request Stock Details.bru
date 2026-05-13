@@ -1,0 +1,26 @@
+meta {
+  name: Load Request Stock Details
+  type: http
+  seq: 23
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_stock_for_indent
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "from_location": 8,
+              "stock_from": "warehouse"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

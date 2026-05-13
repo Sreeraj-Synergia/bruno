@@ -1,0 +1,27 @@
+meta {
+  name: Reject CRM Lead
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://172.105.55.55:8074/web/crm_lead_reject
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "lead_id": 288,
+              "reject_reason":"Need More Information"
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

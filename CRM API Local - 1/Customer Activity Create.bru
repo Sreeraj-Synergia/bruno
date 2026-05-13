@@ -1,0 +1,207 @@
+meta {
+  name: Customer Activity Create
+  type: http
+  seq: 21
+}
+
+post {
+  url: http://localhost:8069/web/schedule_customer_activity
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "activity_type_id": 3,
+              "date_deadline": "2024-08-29",
+              "summary": "meeting with primeligistics",
+              "res_id": null,
+              "additional_assigned_ids": [],
+              "user_id": null,
+              "note": "notes text",
+              "assigned_task_id": null,
+              "employee_task": true,
+              "employee_id": 331,
+              "activity_id": null,
+              "partner_id": 16860
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Customer Activity Create
+  
+  request: {
+    url: http://localhost:8069/web/schedule_customer_activity
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_type_id": 3,
+                  "date_deadline": "2024-08-29",
+                  "summary": "meeting with primeligistics",
+                  "res_id": null,
+                  "additional_assigned_ids": [],
+                  "user_id": null,
+                  "note": "notes text",
+                  "assigned_task_id": null,
+                  "employee_task": true,
+                  "activity_id": null,
+                  "partner_id": 23635
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 653
+      Set-Cookie: session_id=083226df1e3222959aec08000a0a3b0bdfe42708; Expires=Thu, 13-Feb-2025 06:55:35 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 15 Nov 2024 06:55:35 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "create_customer_activity_details": {
+                        "id": 20,
+                        "type": "customer",
+                        "summary": "meeting with primeligistics",
+                        "activity_type_id": 3,
+                        "activity_type_name": "Meeting",
+                        "additional_assigned_ids": [],
+                        "date_deadline": "2024-08-29",
+                        "user_id": 2,
+                        "user_name": "Synergia",
+                        "note": "<p>notes text</p>",
+                        "check_in_longitude": null,
+                        "check_in_latitude": null,
+                        "checkin_datetime": null,
+                        "check_out_longitude": null,
+                        "check_out_latitude": null,
+                        "checkout_datetime": null,
+                        "activity_state": "pending",
+                        "res_id": "mail.activity(605,)",
+                        "in_out_type": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Customer Activity Create
+  
+  request: {
+    url: http://localhost:8069/web/schedule_customer_activity
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_type_id": 3,
+                  "date_deadline": "2024-08-29",
+                  "summary": "meeting with primeligistics",
+                  "res_id": null,
+                  "additional_assigned_ids": [],
+                  "user_id": null,
+                  "note": "notes text",
+                  "assigned_task_id": null,
+                  "employee_task": true,
+                  "activity_id": null,
+                  "partner_id": 23635
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 653
+      Set-Cookie: session_id=083226df1e3222959aec08000a0a3b0bdfe42708; Expires=Thu, 13-Feb-2025 06:55:35 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 15 Nov 2024 06:55:35 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "create_customer_activity_details": {
+                        "id": 20,
+                        "type": "customer",
+                        "summary": "meeting with primeligistics",
+                        "activity_type_id": 3,
+                        "activity_type_name": "Meeting",
+                        "additional_assigned_ids": [],
+                        "date_deadline": "2024-08-29",
+                        "user_id": 2,
+                        "user_name": "Synergia",
+                        "note": "<p>notes text</p>",
+                        "check_in_longitude": null,
+                        "check_in_latitude": null,
+                        "checkin_datetime": null,
+                        "check_out_longitude": null,
+                        "check_out_latitude": null,
+                        "checkout_datetime": null,
+                        "activity_state": "pending",
+                        "res_id": "mail.activity(605,)",
+                        "in_out_type": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

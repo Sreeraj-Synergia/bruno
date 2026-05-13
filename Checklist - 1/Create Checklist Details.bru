@@ -1,0 +1,450 @@
+meta {
+  name: Create Checklist Details
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8069/web/create_check_list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "checklist_category_ids": [
+                  1
+              ],
+              "date": "2024-07-31 13:55:30",
+              "invoice_ref": "ASN2024070171",
+              "line_ids": [
+                  {
+                      "checklist_category_id": 1,
+                      "checklist_category_name": "Mobile Boxes",
+                      "checklist_sub_category_id": 4,
+                      "checklist_sub_category_name": "IMEI Not Matching In Master BOx",
+                      "quantity": 1,
+                      "remarks": ""
+                  },
+                  {
+                      "checklist_category_id": 1,
+                      "checklist_category_name": "Mobile Boxes",
+                      "checklist_sub_category_id": 5,
+                      "checklist_sub_category_name": "IMEI Matching In Master Box",
+                      "quantity": 1,
+                      "remarks": ""
+                  }
+              ],
+              "models": "",
+              "package_id": false,
+              "picking_id": 248,
+              "remarks": ""
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Create Checklist Details
+  
+  request: {
+    url: http://localhost:8069/web/create_check_list
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "picking_id": 248,
+                  "date": false,
+                  "invoice_ref": "sample using api",
+                  "checklist_category_ids": [
+                      1,
+                      5
+                  ],
+                  "package_id": false,
+                  "remarks": "Sample Remark",
+                  "models": "Sample Model",
+                  "line_ids": [
+                      {
+                          "checklist_category_id": 1,
+                          "checklist_sub_category_id": 1,
+                          "quantity": 5,
+                          "remarks": "Mobile api remark"
+                      },
+                      {
+                          "checklist_category_id": 5,
+                          "checklist_sub_category_id": 8,
+                          "quantity": 5,
+                          "remarks": "Mobile api remark"
+                      }
+                  ]
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 8136
+      Set-Cookie: session_id=4d953abf1dadab35bd32528a62b9b695444ede6a; Expires=Sun, 27-Oct-2024 10:44:32 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 29 Jul 2024 10:44:32 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "create_checklist_details": {
+                        "id": 34,
+                        "name": "CKL00001",
+                        "picking_id": 248,
+                        "picking_name": "PRL/IN/00127",
+                        "picking_type_code": "incoming",
+                        "partner_id": 1742,
+                        "partner_name": "Exir Rugs Gallery",
+                        "date": "2024-07-29 00:00:00",
+                        "qty": 10,
+                        "warehouse_id": 1,
+                        "warehouse_name": "Prime Logistics FZCO",
+                        "invoice_ref": "sample using api",
+                        "checklist_category_ids": [
+                            {
+                                "id": 1,
+                                "name": "Mobile Boxes",
+                                "code": false
+                            },
+                            {
+                                "id": 5,
+                                "name": "Country of Origin",
+                                "code": "CO"
+                            }
+                        ],
+                        "package_id": null,
+                        "package_name": null,
+                        "remarks": "Sample Remark",
+                        "models": "Sample Model",
+                        "line_ids": [
+                            {
+                                "id": 265,
+                                "name": "Mobile Boxes",
+                                "display_type": "line_section",
+                                "inspection_id": 34,
+                                "inspection_name": "CKL00001",
+                                "quantity": 0,
+                                "remarks": null,
+                                "picking_id": 248,
+                                "picking_name": "PRL/IN/00127",
+                                "picking_type_code": "incoming",
+                                "checklist_category_id": 1,
+                                "checklist_category_name": "Mobile Boxes",
+                                "checklist_sub_category_id": null,
+                                "checklist_sub_category_name": null,
+                                "date": "2024-07-29 00:00:00",
+                                "warehouse_id": 1,
+                                "warehouse_name": "Prime Logistics FZCO",
+                                "invoice_ref": "sample using api",
+                                "package_id": null,
+                                "package_name": null,
+                                "parent_remarks": "Sample Remark",
+                                "parent_models": "Sample Model"
+                            },
+                            {
+                                "id": 266,
+                                "name": "Open Seal Master",
+                                "display_type": null,
+                                "inspection_id": 34,
+                                "inspection_name": "CKL00001",
+                                "quantity": 5,
+                                "remarks": "Mobile api remark",
+                                "picking_id": 248,
+                                "picking_name": "PRL/IN/00127",
+                                "picking_type_code": "incoming",
+                                "checklist_category_id": 1,
+                                "checklist_category_name": "Mobile Boxes",
+                                "checklist_sub_category_id": 1,
+                                "checklist_sub_category_name": "Open Seal Master",
+                                "date": "2024-07-29 00:00:00",
+                                "warehouse_id": 1,
+                                "warehouse_name": "Prime Logistics FZCO",
+                                "invoice_ref": "sample using api",
+                                "package_id": null,
+                                "package_name": null,
+                                "parent_remarks": "Sample Remark",
+                                "parent_models": "Sample Model"
+                            },
+                            {
+                                "id": 267,
+                                "name": "Seal Master Box",
+                                "display_type": null,
+                                "inspection_id": 34,
+                                "inspection_name": "CKL00001",
+                                "quantity": 0,
+                                "remarks": "0",
+                                "picking_id": 248,
+                                "picking_name": "PRL/IN/00127",
+                                "picking_type_code": "incoming",
+                                "checklist_category_id": 1,
+                                "checklist_category_name": "Mobile Boxes",
+                                "checklist_sub_category_id": 2,
+                                "checklist_sub_category_name": "Seal Master Box",
+                                "date": "2024-07-29 00:00:00",
+                                "warehouse_id": 1,
+                                "warehouse_name": "Prime Logistics FZCO",
+                                "invoice_ref": "sample using api",
+                                "package_id": null,
+                                "package_name": null,
+                                "parent_remarks": "Sample Remark",
+                                "parent_models": "Sample Model"
+                            },
+                            {
+                                "id": 268,
+                                "name": "Loose Mobile",
+                                "display_type": null,
+                                "inspection_id": 34,
+                                "inspection_name": "CKL00001",
+                                "quantity": 0,
+                                "remarks": "0",
+                                "picking_id": 248,
+                                "picking_name": "PRL/IN/00127",
+                                "picking_type_code": "incoming",
+                                "checklist_category_id": 1,
+                                "checklist_category_name": "Mobile Boxes",
+                                "checklist_sub_category_id": 3,
+                                "checklist_sub_category_name": "Loose Mobile",
+                                "date": "2024-07-29 00:00:00",
+                                "warehouse_id": 1,
+                                "warehouse_name": "Prime Logistics FZCO",
+                                "invoice_ref": "sample using api",
+                                "package_id": null,
+                                "package_name": null,
+                                "parent_remarks": "Sample Remark",
+                                "parent_models": "Sample Model"
+                            },
+                            {
+                                "id": 269,
+                                "name": "IMEI Not Matching In Master BOx",
+                                "display_type": null,
+                                "inspection_id": 34,
+                                "inspection_name": "CKL00001",
+                                "quantity": 0,
+                                "remarks": "0",
+                                "picking_id": 248,
+                                "picking_name": "PRL/IN/00127",
+                                "picking_type_code": "incoming",
+                                "checklist_category_id": 1,
+                                "checklist_category_name": "Mobile Boxes",
+                                "checklist_sub_category_id": 4,
+                                "checklist_sub_category_name": "IMEI Not Matching In Master BOx",
+                                "date": "2024-07-29 00:00:00",
+                                "warehouse_id": 1,
+                                "warehouse_name": "Prime Logistics FZCO",
+                                "invoice_ref": "sample using api",
+                                "package_id": null,
+                                "package_name": null,
+                                "parent_remarks": "Sample Remark",
+                                "parent_models": "Sample Model"
+                            },
+                            {
+                                "id": 270,
+                                "name": "IMEI Matching In Master Box",
+                                "display_type": null,
+                                "inspection_id": 34,
+                                "inspection_name": "CKL00001",
+                                "quantity": 0,
+                                "remarks": "0",
+                                "picking_id": 248,
+                                "picking_name": "PRL/IN/00127",
+                                "picking_type_code": "incoming",
+                                "checklist_category_id": 1,
+                                "checklist_category_name": "Mobile Boxes",
+                                "checklist_sub_category_id": 5,
+                                "checklist_sub_category_name": "IMEI Matching In Master Box",
+                                "date": "2024-07-29 00:00:00",
+                                "warehouse_id": 1,
+                                "warehouse_name": "Prime Logistics FZCO",
+                                "invoice_ref": "sample using api",
+                                "package_id": null,
+                                "package_name": null,
+                                "parent_remarks": "Sample Remark",
+                                "parent_models": "Sample Model"
+                            },
+                            {
+                                "id": 271,
+                                "name": "3PIN",
+                                "display_type": null,
+                                "inspection_id": 34,
+                                "inspection_name": "CKL00001",
+                                "quantity": 0,
+                                "remarks": "0",
+                                "picking_id": 248,
+                                "picking_name": "PRL/IN/00127",
+                                "picking_type_code": "incoming",
+                                "checklist_category_id": 1,
+                                "checklist_category_name": "Mobile Boxes",
+                                "checklist_sub_category_id": 6,
+                                "checklist_sub_category_name": "3PIN",
+                                "date": "2024-07-29 00:00:00",
+                                "warehouse_id": 1,
+                                "warehouse_name": "Prime Logistics FZCO",
+                                "invoice_ref": "sample using api",
+                                "package_id": null,
+                                "package_name": null,
+                                "parent_remarks": "Sample Remark",
+                                "parent_models": "Sample Model"
+                            },
+                            {
+                                "id": 272,
+                                "name": "2PIN",
+                                "display_type": null,
+                                "inspection_id": 34,
+                                "inspection_name": "CKL00001",
+                                "quantity": 0,
+                                "remarks": "0",
+                                "picking_id": 248,
+                                "picking_name": "PRL/IN/00127",
+                                "picking_type_code": "incoming",
+                                "checklist_category_id": 1,
+                                "checklist_category_name": "Mobile Boxes",
+                                "checklist_sub_category_id": 7,
+                                "checklist_sub_category_name": "2PIN",
+                                "date": "2024-07-29 00:00:00",
+                                "warehouse_id": 1,
+                                "warehouse_name": "Prime Logistics FZCO",
+                                "invoice_ref": "sample using api",
+                                "package_id": null,
+                                "package_name": null,
+                                "parent_remarks": "Sample Remark",
+                                "parent_models": "Sample Model"
+                            },
+                            {
+                                "id": 273,
+                                "name": "Country of Origin",
+                                "display_type": "line_section",
+                                "inspection_id": 34,
+                                "inspection_name": "CKL00001",
+                                "quantity": 0,
+                                "remarks": null,
+                                "picking_id": 248,
+                                "picking_name": "PRL/IN/00127",
+                                "picking_type_code": "incoming",
+                                "checklist_category_id": 5,
+                                "checklist_category_name": "Country of Origin",
+                                "checklist_sub_category_id": null,
+                                "checklist_sub_category_name": null,
+                                "date": "2024-07-29 00:00:00",
+                                "warehouse_id": 1,
+                                "warehouse_name": "Prime Logistics FZCO",
+                                "invoice_ref": "sample using api",
+                                "package_id": null,
+                                "package_name": null,
+                                "parent_remarks": "Sample Remark",
+                                "parent_models": "Sample Model"
+                            },
+                            {
+                                "id": 274,
+                                "name": "China",
+                                "display_type": null,
+                                "inspection_id": 34,
+                                "inspection_name": "CKL00001",
+                                "quantity": 5,
+                                "remarks": "Mobile api remark",
+                                "picking_id": 248,
+                                "picking_name": "PRL/IN/00127",
+                                "picking_type_code": "incoming",
+                                "checklist_category_id": 5,
+                                "checklist_category_name": "Country of Origin",
+                                "checklist_sub_category_id": 8,
+                                "checklist_sub_category_name": "China",
+                                "date": "2024-07-29 00:00:00",
+                                "warehouse_id": 1,
+                                "warehouse_name": "Prime Logistics FZCO",
+                                "invoice_ref": "sample using api",
+                                "package_id": null,
+                                "package_name": null,
+                                "parent_remarks": "Sample Remark",
+                                "parent_models": "Sample Model"
+                            },
+                            {
+                                "id": 275,
+                                "name": "India",
+                                "display_type": null,
+                                "inspection_id": 34,
+                                "inspection_name": "CKL00001",
+                                "quantity": 0,
+                                "remarks": "0",
+                                "picking_id": 248,
+                                "picking_name": "PRL/IN/00127",
+                                "picking_type_code": "incoming",
+                                "checklist_category_id": 5,
+                                "checklist_category_name": "Country of Origin",
+                                "checklist_sub_category_id": 9,
+                                "checklist_sub_category_name": "India",
+                                "date": "2024-07-29 00:00:00",
+                                "warehouse_id": 1,
+                                "warehouse_name": "Prime Logistics FZCO",
+                                "invoice_ref": "sample using api",
+                                "package_id": null,
+                                "package_name": null,
+                                "parent_remarks": "Sample Remark",
+                                "parent_models": "Sample Model"
+                            },
+                            {
+                                "id": 276,
+                                "name": "USA",
+                                "display_type": null,
+                                "inspection_id": 34,
+                                "inspection_name": "CKL00001",
+                                "quantity": 0,
+                                "remarks": "0",
+                                "picking_id": 248,
+                                "picking_name": "PRL/IN/00127",
+                                "picking_type_code": "incoming",
+                                "checklist_category_id": 5,
+                                "checklist_category_name": "Country of Origin",
+                                "checklist_sub_category_id": 10,
+                                "checklist_sub_category_name": "USA",
+                                "date": "2024-07-29 00:00:00",
+                                "warehouse_id": 1,
+                                "warehouse_name": "Prime Logistics FZCO",
+                                "invoice_ref": "sample using api",
+                                "package_id": null,
+                                "package_name": null,
+                                "parent_remarks": "Sample Remark",
+                                "parent_models": "Sample Model"
+                            }
+                        ],
+                        "state": "draft"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

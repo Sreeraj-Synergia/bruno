@@ -1,0 +1,383 @@
+meta {
+  name: Debug Mode
+  type: http
+  seq: 5
+}
+
+post {
+  url: 192.168.1.119:8070/web/user_debug_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {}
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Debug Mode
+  
+  request: {
+    url: 192.168.1.119:8070/web/user_debug_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 30 Jan 2025 11:54:21 GMT
+      Content-Length: 3272
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_debug_details": [
+                        {
+                            "name": "Company Information",
+                            "help": "If this set to 'Show' then the device user will have access to company information on the device.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "Live Location Tracking",
+                            "help": "If this set to 'Enable' then the device location will be tracked(only if the device is online).",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Backup Offline Data",
+                            "help": "If this set to 'Enable' then the device will save the data internally rather than updating data to system and once device get back online the user can sync the data to the system.",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Invoices",
+                            "help": "If this set to 'Show' then the device user will have access invoices information on device.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "Invoice Creation",
+                            "help": "Enable This to Show create invoice Option on Mobile",
+                            "value": "Enable",
+                            "access": true
+                        },
+                        {
+                            "field": "show_pricelist_mobile",
+                            "name": "Pricelists",
+                            "help": "If this set to 'Show' then the device user will have access pricelist information on device.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "field": "allow_fixed_pricelist_in_sale",
+                            "name": "Fixed Pricelist",
+                            "help": "Enable This to Block Price list Change in Direct Invoice Creation on Mobile.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "field": "show_price_check",
+                            "name": "Price Check",
+                            "help": "Enable This to access Price Check menu on Mobile",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Customers",
+                            "help": "If this set to 'Show' then the device user will have access customer information on device.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "Edit Customer",
+                            "help": "Enable This to Show Edit Customers Option on Mobile",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Presales",
+                            "help": "Enable This to Show Presales menu on Mobile.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "Presales",
+                            "help": "Enable This to Show liquidation menu on Mobile.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "Day Close Report",
+                            "help": "Enable This to Show Sales Day Close Report menu on Mobile",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "Special Price",
+                            "help": "Enable This to Show Request Special Price menu on Mobile",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Sales Discount",
+                            "help": "Enable This to Show Discount option in Direct Invoice Creation on Mobile",
+                            "value": "Prohibit",
+                            "access": false
+                        },
+                        {
+                            "name": "Sales History",
+                            "help": "Enable This Show Sales History in Mobile.",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Sales Return",
+                            "help": "Enable This to Show Sales Return in Mobile.",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Sales Return",
+                            "help": "Disable Sales Order Print Option from Mobile.",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Allow Sales If there is Overdue",
+                            "help": "Enable this to allow sales if there is overdue invoices.",
+                            "value": "Prohibit",
+                            "access": false
+                        },
+                        {
+                            "name": "Products",
+                            "help": "If this set to 'Show' then the device user will have access product information on device.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "FOC",
+                            "help": "Enable This to Show FOC menu on Mobile.",
+                            "value": "Hide",
+                            "access": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Debug Mode
+  
+  request: {
+    url: 192.168.1.119:8070/web/user_debug_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 30 Jan 2025 11:54:21 GMT
+      Content-Length: 3272
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_debug_details": [
+                        {
+                            "name": "Company Information",
+                            "help": "If this set to 'Show' then the device user will have access to company information on the device.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "Live Location Tracking",
+                            "help": "If this set to 'Enable' then the device location will be tracked(only if the device is online).",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Backup Offline Data",
+                            "help": "If this set to 'Enable' then the device will save the data internally rather than updating data to system and once device get back online the user can sync the data to the system.",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Invoices",
+                            "help": "If this set to 'Show' then the device user will have access invoices information on device.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "Invoice Creation",
+                            "help": "Enable This to Show create invoice Option on Mobile",
+                            "value": "Enable",
+                            "access": true
+                        },
+                        {
+                            "field": "show_pricelist_mobile",
+                            "name": "Pricelists",
+                            "help": "If this set to 'Show' then the device user will have access pricelist information on device.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "field": "allow_fixed_pricelist_in_sale",
+                            "name": "Fixed Pricelist",
+                            "help": "Enable This to Block Price list Change in Direct Invoice Creation on Mobile.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "field": "show_price_check",
+                            "name": "Price Check",
+                            "help": "Enable This to access Price Check menu on Mobile",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Customers",
+                            "help": "If this set to 'Show' then the device user will have access customer information on device.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "Edit Customer",
+                            "help": "Enable This to Show Edit Customers Option on Mobile",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Presales",
+                            "help": "Enable This to Show Presales menu on Mobile.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "Presales",
+                            "help": "Enable This to Show liquidation menu on Mobile.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "Day Close Report",
+                            "help": "Enable This to Show Sales Day Close Report menu on Mobile",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "Special Price",
+                            "help": "Enable This to Show Request Special Price menu on Mobile",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Sales Discount",
+                            "help": "Enable This to Show Discount option in Direct Invoice Creation on Mobile",
+                            "value": "Prohibit",
+                            "access": false
+                        },
+                        {
+                            "name": "Sales History",
+                            "help": "Enable This Show Sales History in Mobile.",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Sales Return",
+                            "help": "Enable This to Show Sales Return in Mobile.",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Sales Return",
+                            "help": "Disable Sales Order Print Option from Mobile.",
+                            "value": "Disable",
+                            "access": false
+                        },
+                        {
+                            "name": "Allow Sales If there is Overdue",
+                            "help": "Enable this to allow sales if there is overdue invoices.",
+                            "value": "Prohibit",
+                            "access": false
+                        },
+                        {
+                            "name": "Products",
+                            "help": "If this set to 'Show' then the device user will have access product information on device.",
+                            "value": "Hide",
+                            "access": false
+                        },
+                        {
+                            "name": "FOC",
+                            "help": "Enable This to Show FOC menu on Mobile.",
+                            "value": "Hide",
+                            "access": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

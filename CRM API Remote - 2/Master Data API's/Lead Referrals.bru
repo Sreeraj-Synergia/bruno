@@ -1,0 +1,19 @@
+meta {
+  name: Lead Referrals
+  type: http
+  seq: 12
+}
+
+post {
+  url: http://172.105.55.55:8074/web/get_lead_referral_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}

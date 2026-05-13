@@ -1,0 +1,27 @@
+meta {
+  name: crm_activity_completed
+  type: http
+  seq: 14
+}
+
+post {
+  url: http://172.105.55.55:8074/web/crm_activity_completed
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "activity_id": 65,
+              "feedback": "Feed Back From apui"
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

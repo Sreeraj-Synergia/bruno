@@ -1,0 +1,25 @@
+meta {
+  name: Get Checklist Details
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8069/web/get_checklist_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "picking_id": 248
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

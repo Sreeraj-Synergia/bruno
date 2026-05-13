@@ -1,0 +1,19 @@
+meta {
+  name: get_rfp_details
+  type: http
+  seq: 19
+}
+
+post {
+  url: http://172.105.51.175:8086/web/get_rfp_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{"lead_id":296}}}
+}
+
+settings {
+  encodeUrl: true
+}

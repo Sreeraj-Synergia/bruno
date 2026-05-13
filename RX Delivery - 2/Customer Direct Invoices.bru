@@ -1,0 +1,566 @@
+meta {
+  name: Customer Direct Invoices
+  type: http
+  seq: 5
+}
+
+post {
+  url: localhost:8078/web/get_delivery_invoice_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "outstanding": false,
+          "page": 0,
+          "data": {
+              "invoice_id": false
+          }
+      }
+  }
+}
+
+script:post-response {
+  var template = `
+  <style type="text/css">
+      .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}
+      .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}
+      .tftable tr {background-color:#ffffff;}
+      .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}
+      .tftable tr:hover {background-color:#e0ffff;}
+  </style>
+  
+  <table class="tftable" border="1">
+      <tr>
+          <th>Invoice ID</th>
+          <th>Invoice Number</th>
+          <th>Customer Name</th>
+          <th>Invoice Date</th>
+          <th>Due Date</th>
+          <th>Amount Total</th>
+          <th>Amount Untaxed</th>
+          <th>State</th>
+          <th>Invoice State</th>
+      </tr>
+      
+      {{#each response.result.payload.invoice_details}}
+          <tr>
+              <td>{{invoice_id}}</td>
+              <td>{{invoice_number}}</td>
+              <td>{{customer_name}}</td>
+              <td>{{invoice_date}}</td>
+              <td>{{due_date}}</td>
+              <td>{{amount_total}}</td>
+              <td>{{amount_untaxed}}</td>
+              <td>{{state}}</td>
+              <td>{{invoice_state}}</td>
+          </tr>
+      {{/each}}
+  </table>
+  `;
+  
+  function constructVisualizerPayload() {
+      var res = res.getBody();
+  
+      return {response: res};
+  }
+  
+  bru.visualize("html", {
+      template: template,
+      data: constructVisualizerPayload()
+  });
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Customer Direct Invoices Copy
+  
+  request: {
+    url: localhost:8078/web/get_delivery_invoice_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "outstanding": false,
+              "page": 0,
+              "data": {
+                  "invoice_id": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 14 Aug 2025 06:52:18 GMT
+      Content-Length: 10774
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "invoice_details": [
+                        {
+                            "invoice_id": 2959,
+                            "invoice_number": "INV/2025/00002",
+                            "customer_id": 24169,
+                            "customer_name": "Lulu",
+                            "invoice_date": "2025-08-13",
+                            "inv_date_time": "2025-08-14 05:09:58",
+                            "payment_term_id": 2,
+                            "payment_term_name": "15 Days",
+                            "due_date": "2025-08-28",
+                            "due_status": null,
+                            "journal_id": 1,
+                            "journal_name": "Customer Invoices",
+                            "currency_id": 128,
+                            "rate_with_comp_currency": 1,
+                            "move_narration": null,
+                            "currency_name": "AED",
+                            "invoice_origin": null,
+                            "origin": "INV2025082552",
+                            "amount_untaxed": 1,
+                            "amount_total": 1.05,
+                            "tax_amount": 0.05,
+                            "move_type": "out_invoice",
+                            "amount_residual": 1.05,
+                            "amount_untaxed_signed": null,
+                            "amount_untaxed_in_currency_signed": null,
+                            "amount_tax_signed": null,
+                            "amount_total_signed": null,
+                            "amount_residual_signed": null,
+                            "amount_total_in_currency_signed": null,
+                            "user_id": 2,
+                            "user_name": "Administrator",
+                            "state": "not_paid",
+                            "invoice_state": "posted",
+                            "created_by_id": 1,
+                            "created_by_name": "Administrator",
+                            "created_on": "2025-08-14 05:09:58",
+                            "geo_latitude": null,
+                            "geo_longitude": null,
+                            "receiver_id": null,
+                            "receiver_name": null,
+                            "receiver_no": null,
+                            "recv_id_img": "http://192.168.1.119:8078/web/url_image?model=account.move&id=2959&field=receiver_identity",
+                            "act_del_time": null,
+                            "recv_sign": "http://192.168.1.119:8078/web/url_image?model=account.move&id=2959&field=receiver_signature",
+                            "device_name": null,
+                            "ime_no": null,
+                            "device_serial": null,
+                            "ip_address": null,
+                            "return_invoice_id": null,
+                            "return_invoice_name": null,
+                            "invoice_lines": [
+                                {
+                                    "invoice_line_id": 7179,
+                                    "product_id": 5729,
+                                    "product_name": "Arginine Solution 200 mg/mL INJ",
+                                    "barcode": null,
+                                    "account_id": 146,
+                                    "account_name": "Sales Account",
+                                    "unit_price": 1,
+                                    "quantity": 1,
+                                    "uom_id": 28,
+                                    "discount": 0,
+                                    "tax_ids": [
+                                        2
+                                    ],
+                                    "price_subtotal": 1,
+                                    "price_total": 1.05,
+                                    "price_tax": 0.05,
+                                    "invoice_id": 2959,
+                                    "invoice_number": "INV/2025/00002",
+                                    "invoice_date": "2025-08-13",
+                                    "pack_price_after_disc": null,
+                                    "unit_price_after_disc": null,
+                                    "discount_rate": 0,
+                                    "disc_type": null,
+                                    "description": null,
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "package_quantity": 0,
+                                    "product_code": null,
+                                    "edited_price_line": null,
+                                    "item_arabic_name": null,
+                                    "batch_number": null,
+                                    "expiry_date": null,
+                                    "lot_id": null,
+                                    "return_to": null,
+                                    "return_reason": null,
+                                    "return_reason_id": null,
+                                    "order_qty": null,
+                                    "order_pack_qty": null,
+                                    "order_price": null,
+                                    "order_uom": null,
+                                    "return_van_qty": null,
+                                    "return_wh_qty": null,
+                                    "special_price_line": null,
+                                    "returned_pack_qty": null,
+                                    "returned_line_qty": null,
+                                    "foc_id": null,
+                                    "return_in_unit": null,
+                                    "lower_pack_id": null,
+                                    "lower_pack_name": null,
+                                    "lower_unit_price": null,
+                                    "line_number": 1,
+                                    "qty_in_pack": 0,
+                                    "available_qty": 120,
+                                    "available_qty_pack": 0,
+                                    "maximum_sale_qty_pack": 0,
+                                    "location_id": 8,
+                                    "location_name": "Stock",
+                                    "batch_numb_list": [
+                                        2689
+                                    ],
+                                    "batch_numb_id": null,
+                                    "ordered_pack_qty": 0,
+                                    "ordered_qty": 0,
+                                    "package_price": 0,
+                                    "total_pack_qty": 0,
+                                    "check_for_packaging": false,
+                                    "discount_value": 0,
+                                    "subtotal_before_disc": 1,
+                                    "subtotal_before_disc_cc": 1,
+                                    "proportional_weight": 1,
+                                    "inv_fixed_disc": 0,
+                                    "inv_fixed_allocated_disc": 0,
+                                    "min_price": 0,
+                                    "max_price": 0,
+                                    "internal_ref": "100007",
+                                    "product_packaging_id": null,
+                                    "product_packaging_qty": 0,
+                                    "per_pack_qty_disc_value": 0,
+                                    "product_tracking": "lot",
+                                    "received_pack_qty": 0,
+                                    "remaining_pack_qty": 0,
+                                    "received_qty": 0,
+                                    "remaining_qty": 2,
+                                    "pricelist_id": 1,
+                                    "sale_order_option_ids": null,
+                                    "linked_line_id": null,
+                                    "from_disc_move_line_id": null,
+                                    "stock_status": "avail",
+                                    "batches_info_ids": [
+                                        {
+                                            "so_batch_info_id": null,
+                                            "so_batch_info_name": null,
+                                            "sale_order_id": null,
+                                            "sale_order_name": null,
+                                            "sale_order_line_id": null,
+                                            "batch_numb_id": 2689,
+                                            "batch_numb_name": "0000002",
+                                            "product_id": 5729,
+                                            "product_name": "Arginine Solution 200 mg/mL INJ",
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "expiration_date": "2025-08-14 05:34:54",
+                                            "manufacture_date": "2025-08-14 05:34:54",
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "qty_in_pack": null,
+                                            "available_qty": 119,
+                                            "available_package_qty": null,
+                                            "packaging_qty": null,
+                                            "quantity": null,
+                                            "product_uom": "uom.uom(28,)",
+                                            "batch_cost": null,
+                                            "quant_id": 6396,
+                                            "quant_package_id": null,
+                                            "quant_package_name": null,
+                                            "maximum_sale_qty_pack": null,
+                                            "batch_utilised": null,
+                                            "invoice_id": null,
+                                            "invoice_name": null,
+                                            "invoice_line_id": 7179,
+                                            "use_full_package": null,
+                                            "from_scan_pac_bar": null
+                                        }
+                                    ],
+                                    "qty_delivered": 1,
+                                    "pack_qty_delivered": 0,
+                                    "stock_move_line_details": [
+                                        {
+                                            "id": 11021,
+                                            "product_id": 5729,
+                                            "expiration_date": "2025-08-14 05:34:54",
+                                            "lot_id": 2689,
+                                            "lot_name": "0000002",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 5,
+                                            "location_dest_name": "Customers",
+                                            "picking_partner_id": 24169,
+                                            "picking_partner_name": "Lulu",
+                                            "company_id": 1,
+                                            "company_name": "Magenta Rx Compounding Pharmacy",
+                                            "quantity": 1,
+                                            "product_uom_id": 28,
+                                            "product_uom_name": "Mls",
+                                            "state": "done",
+                                            "qty_submitted": false,
+                                            "manufacture_date": "2025-08-14 05:34:54",
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "qty_in_pack": null,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Magenta Rx Compounding Pharmacy",
+                                            "transaction_type": "delivered",
+                                            "available_qty": 119,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": null,
+                                            "use_manufacture_date": true,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null,
+                                            "return_reason_id": null,
+                                            "return_reason_name": null,
+                                            "qty_returned": null
+                                        }
+                                    ],
+                                    "foc_id_name": null,
+                                    "foc_line_id": null,
+                                    "foc_details": [],
+                                    "unit_return_qty": 0
+                                }
+                            ],
+                            "credit_note_list": [],
+                            "invoice_stock_transactions": [
+                                {
+                                    "id": 1043,
+                                    "name": "MS/OUT/00004",
+                                    "partner_id": 24169,
+                                    "partner_name": "Lulu",
+                                    "picking_type_code": "outgoing",
+                                    "picking_type_id": 2,
+                                    "picking_type_name": "Delivery Orders",
+                                    "location_id": 8,
+                                    "location_name": "Stock",
+                                    "scheduled_date": "2025-08-14 05:35:23",
+                                    "date_done": "2025-08-14 05:35:23",
+                                    "origin": "INV/2025/00002",
+                                    "system_origin": "OR00073",
+                                    "state": "done",
+                                    "receiver_name": null,
+                                    "receiver_no": null,
+                                    "all_qty_submitted": null,
+                                    "recv_id_img": "http://192.168.1.119:8078/web/url_image?model=stock.picking&id=1043&field=receiver_identity",
+                                    "act_del_time": null,
+                                    "recv_sign": "http://192.168.1.119:8078/web/url_image?model=stock.picking&id=1043&field=receiver_signature",
+                                    "stock_move_details": [
+                                        {
+                                            "id": 2513,
+                                            "product_id": 5729,
+                                            "product_name": "Arginine Solution 200 mg/mL INJ",
+                                            "tracking": "lot",
+                                            "use_expiration_date": true,
+                                            "use_manufacturing_date": true,
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "location_final_id": null,
+                                            "location_final_name": null,
+                                            "packaging_qty": null,
+                                            "product_uom_qty": 1,
+                                            "received_package_qty": null,
+                                            "quantity": 1,
+                                            "product_uom": 28,
+                                            "product_uom_name": "Mls",
+                                            "lot_ids": [
+                                                2689
+                                            ],
+                                            "state": "done",
+                                            "stock_move_line_details": [
+                                                {
+                                                    "id": 11021,
+                                                    "product_id": 5729,
+                                                    "expiration_date": "2025-08-14 05:34:54",
+                                                    "lot_id": 2689,
+                                                    "lot_name": "0000002",
+                                                    "package_id": null,
+                                                    "package_name": null,
+                                                    "result_package_id": null,
+                                                    "result_package_name": null,
+                                                    "location_id": 8,
+                                                    "location_name": "Stock",
+                                                    "location_dest_id": 5,
+                                                    "location_dest_name": "Customers",
+                                                    "picking_partner_id": 24169,
+                                                    "picking_partner_name": "Lulu",
+                                                    "company_id": 1,
+                                                    "company_name": "Magenta Rx Compounding Pharmacy",
+                                                    "quantity": 1,
+                                                    "product_uom_id": 28,
+                                                    "product_uom_name": "Mls",
+                                                    "state": "done",
+                                                    "qty_submitted": false,
+                                                    "manufacture_date": "2025-08-14 05:34:54",
+                                                    "product_packaging_id": null,
+                                                    "product_packaging_name": null,
+                                                    "qty_in_pack": null,
+                                                    "packaging_qty": null,
+                                                    "owner_id": 1,
+                                                    "owner_name": "Magenta Rx Compounding Pharmacy",
+                                                    "transaction_type": "delivered",
+                                                    "available_qty": 119,
+                                                    "available_package_qty": null,
+                                                    "check_for_packaging": null,
+                                                    "use_manufacture_date": true,
+                                                    "hs_code": null,
+                                                    "country_of_origin": null,
+                                                    "country_of_origin_name": null,
+                                                    "weight": null,
+                                                    "total_weight": null,
+                                                    "return_reason_id": null,
+                                                    "return_reason_name": null,
+                                                    "qty_returned": null
+                                                }
+                                            ],
+                                            "qty_in_pack": null,
+                                            "received_pack_qty": null,
+                                            "remaining_pack_qty": null,
+                                            "received_qty": 1,
+                                            "remaining_qty": null,
+                                            "internal_ref": "100007",
+                                            "barcode": null,
+                                            "available_qty": 120,
+                                            "transaction_type": "delivered",
+                                            "check_for_packaging": null,
+                                            "use_manufacture_date": true,
+                                            "hs_code": null,
+                                            "country_of_origin": 2,
+                                            "country_of_origin_name": "United Arab Emirates",
+                                            "invoice_line_id": 7179,
+                                            "return_reason_id": null,
+                                            "return_reason_name": null
+                                        }
+                                    ],
+                                    "delivery_executive_id": 31,
+                                    "delivery_executive_name": "Sreeraj"
+                                }
+                            ],
+                            "reconcile_details": [],
+                            "partner_details": {
+                                "customer_id": 24169,
+                                "name": "Lulu",
+                                "street": null,
+                                "street2": null,
+                                "city": null,
+                                "zip": null,
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null,
+                                "currency_id": 128,
+                                "currency": "AED",
+                                "email": null,
+                                "website": null,
+                                "phone": null,
+                                "mobile": null,
+                                "trn": null,
+                                "trade_reg": null,
+                                "trade_reg_expiry": null,
+                                "latitude": null,
+                                "longitude": null,
+                                "pricelist_id": 1,
+                                "pricelist_name": "Default",
+                                "customer_ref": null,
+                                "payment_type": null,
+                                "property_credit_limit": null,
+                                "property_over_credit_limit": null,
+                                "property_allow_over_credit_limit": false,
+                                "confirmed_customer": false,
+                                "customer_blocked": false,
+                                "payment_terms_id": null,
+                                "payment_terms_name": null,
+                                "logo_url": "http://192.168.1.119:8078/web/url_image?model=res.partner&id=24169&field=image_1920",
+                                "contact_name": null,
+                                "contact_phone": null,
+                                "customer": true,
+                                "supplier": false,
+                                "debit_limit": null,
+                                "customer_due_amount": 1.05,
+                                "customer_overdue_amount": 0,
+                                "days_sales_outstanding": 1,
+                                "skip_overdue_check_for_sales": false,
+                                "contact_list": [],
+                                "area_code_id": null,
+                                "area_code_name": null,
+                                "barcode": null,
+                                "disable_loc_update": null,
+                                "employee_id": null,
+                                "employee_name": null,
+                                "company_registry": null,
+                                "parent_id": null,
+                                "parent_company_name": null,
+                                "parent_company_code": null,
+                                "is_parent_company": false,
+                                "parent_due_amount": 1.05,
+                                "parent_over_due_amount": 0,
+                                "parent_remain_credit_amount": -1.05,
+                                "child_companies": [],
+                                "child_cont_count": null,
+                                "is_contact": false,
+                                "bounced_payment_count": null,
+                                "asset_details": null,
+                                "visit_day": null,
+                                "visit_day_key": null,
+                                "check_pending_invoices": false,
+                                "allowed_pending_invoices": 0,
+                                "planogram": "http://192.168.1.119:8078/web/url_image?model=res.partner&id=24169&field=planogram_image"
+                            },
+                            "payment_history": null,
+                            "payment_type": null,
+                            "credit_limit": 0,
+                            "from_quotation_id": null,
+                            "presale_id": null,
+                            "presale_name": null,
+                            "pricelist_id": 1,
+                            "pricelist_name": "Default",
+                            "location_id": 8,
+                            "location_name": "Stock",
+                            "total_before_disc": 1,
+                            "total_discount": 0,
+                            "direct_stock_transfer": true,
+                            "foc_total": 0
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

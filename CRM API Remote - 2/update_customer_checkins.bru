@@ -1,0 +1,36 @@
+meta {
+  name: update_customer_checkins
+  type: http
+  seq: 26
+}
+
+post {
+  url: http://172.105.51.175:8086/web/update_customer_checkins
+  body: json
+  auth: inherit
+}
+
+body:json {
+  
+          {
+        "params": {
+      "data": {
+      "checkin_time": "2024-06-05 16:02:57",
+      "checkout_part_latitude": 0.0,
+      "checkout_part_longitude": 0.0,
+      "cust_origin": "1683881282CUST202305",
+      "customer_id": 136605,
+      "date": "05-06-2024",
+      "lat": 25.2418181,
+      "lng": 55.3095392,
+      "type": "checkin",
+      "user_id": 33
+    },
+      "user_lang": "en_us"
+    }
+    }
+}
+
+settings {
+  encodeUrl: true
+}

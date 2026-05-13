@@ -1,0 +1,648 @@
+meta {
+  name: Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://erp.syntrack.app/web/session/mobile_login?db=SynergiaERP_MRP
+  body: json
+  auth: inherit
+}
+
+params:query {
+  db: SynergiaERP_MRP
+}
+
+body:json {
+  {
+      "params": {
+          "db": "SynergiaERP",
+          "login": "sales4",
+          "password": "321",
+          "device_name": "Dell PC",
+          "imei_no": "123456",
+          "login_latitude": "25.26555",
+          "login_longitude": "50.695655",
+          "fcm_id": "fzHmsKeKTO-txMqybjw0Qo:APA91bHSulf9TaEEnPR55iRH91BcGY6NbOv_b39l3DTotU8NcL72U3l8ulQQjVDmbOPxAc-22rIck94FGBI1ZURal8GNtPKmQ9QN18phB1b5T3b9zcjK3hY"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Login
+  
+  request: {
+    url: https://erp.syntrack.app/web/session/mobile_login?db=SynergiaERP
+    method: POST
+    mode: json
+    params:query: {
+      db: SynergiaERP
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "login": "puser",
+              "password": "123",
+              "device_name": "Dell PC",
+              "imei_no": "12312323232",
+              "login_latitude": "25.26555",
+              "login_longitude": "50.695655",
+              "fcm_id": "123456456789AAAAAAAAAADFFFFFFFFFFFFRRRRRRRRRRRRRRRRR"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Tue, 21 Jan 2025 11:47:32 GMT
+      Content-Type: application/json; charset=utf-8
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=p29MX8Fb-t6pgLqUiiHAe8M-mcJ0FaAYIcKjAOkAC4B1vlc6HaqZL_Vhdm97i6uf2IjQS7uxJ1W8BVALeK4R; Expires=Wed, 21 Jan 2026 11:47:32 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "uid": 7,
+                    "is_system": false,
+                    "is_admin": false,
+                    "is_public": false,
+                    "is_internal_user": true,
+                    "user_context": {
+                        "lang": "en_US",
+                        "tz": "Asia/Dubai",
+                        "uid": 7
+                    },
+                    "db": "SynergiaERP",
+                    "user_settings": {
+                        "id": 4,
+                        "user_id": {
+                            "id": 7
+                        },
+                        "is_discuss_sidebar_category_channel_open": true,
+                        "is_discuss_sidebar_category_chat_open": true,
+                        "push_to_talk_key": false,
+                        "use_push_to_talk": false,
+                        "voice_active_duration": 200,
+                        "channel_notifications": false,
+                        "mute_until_dt": false,
+                        "volumes": [
+                            [
+                                "ADD",
+                                []
+                            ]
+                        ]
+                    },
+                    "server_version": "18.0",
+                    "server_version_info": [
+                        18,
+                        0,
+                        0,
+                        "final",
+                        0,
+                        ""
+                    ],
+                    "support_url": "https://www.odoo.com/buy",
+                    "name": "Purchase User",
+                    "username": "puser",
+                    "partner_write_date": "2025-01-10 07:58:51",
+                    "partner_display_name": "Purchase User",
+                    "partner_id": 13,
+                    "web.base.url": "http://erp.syntrack.app",
+                    "active_ids_limit": 20000,
+                    "profile_session": null,
+                    "profile_collectors": null,
+                    "profile_params": null,
+                    "max_file_upload_size": 134217728,
+                    "home_action_id": false,
+                    "cache_hashes": {
+                        "translations": "b6e09337307ad3b9e8fee883d36d08170237f36f",
+                        "load_menus": "9e76b9ba89b44766f25577344ac938a0cf9ce483d27eb59567c48e1c6cbce3c8"
+                    },
+                    "currencies": {
+                        "1": {
+                            "symbol": "$",
+                            "position": "before",
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        },
+                        "128": {
+                            "symbol": "AED",
+                            "position": "after",
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        }
+                    },
+                    "bundle_params": {
+                        "lang": "en_US"
+                    },
+                    "test_mode": false,
+                    "view_info": {
+                        "list": {
+                            "display_name": "List",
+                            "icon": "oi oi-view-list",
+                            "multi_record": true
+                        },
+                        "form": {
+                            "display_name": "Form",
+                            "icon": "fa fa-address-card",
+                            "multi_record": false
+                        },
+                        "graph": {
+                            "display_name": "Graph",
+                            "icon": "fa fa-area-chart",
+                            "multi_record": true
+                        },
+                        "pivot": {
+                            "display_name": "Pivot",
+                            "icon": "oi oi-view-pivot",
+                            "multi_record": true
+                        },
+                        "calendar": {
+                            "display_name": "Calendar",
+                            "icon": "fa fa-calendar",
+                            "multi_record": true
+                        },
+                        "kanban": {
+                            "display_name": "Kanban",
+                            "icon": "oi oi-view-kanban",
+                            "multi_record": true
+                        },
+                        "search": {
+                            "display_name": "Search",
+                            "icon": "oi oi-search",
+                            "multi_record": true
+                        },
+                        "hierarchy": {
+                            "display_name": "Hierarchy",
+                            "icon": "fa fa-share-alt o_hierarchy_icon",
+                            "multi_record": true
+                        },
+                        "activity": {
+                            "display_name": "Activity",
+                            "icon": "fa fa-clock-o",
+                            "multi_record": true
+                        }
+                    },
+                    "user_companies": false,
+                    "show_effect": "True",
+                    "display_switch_company_menu": false,
+                    "max_time_between_keys_in_ms": 150,
+                    "websocket_worker_version": "18.0-2",
+                    "tour_enabled": false,
+                    "current_tour": null,
+                    "storeData": {
+                        "Store": {
+                            "action_discuss_id": 119,
+                            "channel_types_with_seen_infos": [
+                                "chat",
+                                "group"
+                            ],
+                            "hasGifPickerFeature": false,
+                            "hasLinkPreviewFeature": true,
+                            "hasMessageTranslationFeature": false,
+                            "internalUserGroupId": 1,
+                            "mt_comment_id": 1,
+                            "odoobot": {
+                                "id": 2,
+                                "type": "partner"
+                            },
+                            "self": {
+                                "id": 13,
+                                "type": "partner"
+                            },
+                            "settings": {
+                                "id": 4,
+                                "user_id": {
+                                    "id": 7
+                                },
+                                "is_discuss_sidebar_category_channel_open": true,
+                                "is_discuss_sidebar_category_chat_open": true,
+                                "push_to_talk_key": false,
+                                "use_push_to_talk": false,
+                                "voice_active_duration": 200,
+                                "channel_notifications": false,
+                                "mute_until_dt": false,
+                                "volumes": [
+                                    [
+                                        "ADD",
+                                        []
+                                    ]
+                                ]
+                            }
+                        },
+                        "res.partner": [
+                            {
+                                "active": false,
+                                "email": "odoobot@example.com",
+                                "id": 2,
+                                "im_status": "bot",
+                                "isInternalUser": true,
+                                "is_company": false,
+                                "name": "SynergiaBot",
+                                "userId": 1,
+                                "write_date": "2025-01-10 07:58:51"
+                            },
+                            {
+                                "active": true,
+                                "id": 13,
+                                "isAdmin": false,
+                                "isInternalUser": true,
+                                "name": "Purchase User",
+                                "notification_preference": "email",
+                                "userId": 7,
+                                "write_date": "2025-01-10 07:58:51"
+                            }
+                        ]
+                    },
+                    "ks_breadcrumb_style": "ks_breadcrumb_style_1",
+                    "ks_splitted_vertical_width": 0,
+                    "ks_splitted_horizontal_height": 0,
+                    "ks_split_view": "no_split",
+                    "ks_form_view_width": false,
+                    "ks_lang_direction": "ltr",
+                    "ks_current_loader": "ks_loader_default",
+                    "can_insert_in_spreadsheet": false,
+                    "user_name": "Purchase User",
+                    "user_id": 7,
+                    "login_id": "puser",
+                    "logo_url": "http://erp.syntrack.app/web/url_image/res.users/7/image_1920",
+                    "user_signature": "http://erp.syntrack.app/web/url_image/res.users/7/user_signature",
+                    "emlpoyee_id": 4,
+                    "emlpoyee_name": "Purchase User",
+                    "manager": null,
+                    "department": "Purchase",
+                    "job_pos": "Purchaser",
+                    "work_phone": "+971508922937",
+                    "work_mobile": null,
+                    "work_email": null,
+                    "logo": "http://erp.syntrack.app/web/url_image/res.company/1/logo",
+                    "contact_us_link": false,
+                    "about_us_link": false,
+                    "faq_link": false,
+                    "support_email": null,
+                    "currency_ids": [
+                        {
+                            "currency_id": 128,
+                            "symbol": "AED",
+                            "position": "after",
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        },
+                        {
+                            "currency_id": 1,
+                            "symbol": "$",
+                            "position": "before",
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        }
+                    ],
+                    "session_id": "UJLvErUrldnNfQ_euOCMNMZXLoBpEwNAqGLZwaAsvsddDhZVRKVcnvCJuE1tTBaeqo27kssn6F3WKp3StVmi"
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Login
+  
+  request: {
+    url: https://erp.syntrack.app/web/session/mobile_login?db=SynergiaERP
+    method: POST
+    mode: json
+    params:query: {
+      db: SynergiaERP
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "login": "puser",
+              "password": "123",
+              "device_name": "Dell PC",
+              "imei_no": "12312323232",
+              "login_latitude": "25.26555",
+              "login_longitude": "50.695655",
+              "fcm_id": "123456456789AAAAAAAAAADFFFFFFFFFFFFRRRRRRRRRRRRRRRRR"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Tue, 21 Jan 2025 11:47:32 GMT
+      Content-Type: application/json; charset=utf-8
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=p29MX8Fb-t6pgLqUiiHAe8M-mcJ0FaAYIcKjAOkAC4B1vlc6HaqZL_Vhdm97i6uf2IjQS7uxJ1W8BVALeK4R; Expires=Wed, 21 Jan 2026 11:47:32 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "uid": 7,
+                    "is_system": false,
+                    "is_admin": false,
+                    "is_public": false,
+                    "is_internal_user": true,
+                    "user_context": {
+                        "lang": "en_US",
+                        "tz": "Asia/Dubai",
+                        "uid": 7
+                    },
+                    "db": "SynergiaERP",
+                    "user_settings": {
+                        "id": 4,
+                        "user_id": {
+                            "id": 7
+                        },
+                        "is_discuss_sidebar_category_channel_open": true,
+                        "is_discuss_sidebar_category_chat_open": true,
+                        "push_to_talk_key": false,
+                        "use_push_to_talk": false,
+                        "voice_active_duration": 200,
+                        "channel_notifications": false,
+                        "mute_until_dt": false,
+                        "volumes": [
+                            [
+                                "ADD",
+                                []
+                            ]
+                        ]
+                    },
+                    "server_version": "18.0",
+                    "server_version_info": [
+                        18,
+                        0,
+                        0,
+                        "final",
+                        0,
+                        ""
+                    ],
+                    "support_url": "https://www.odoo.com/buy",
+                    "name": "Purchase User",
+                    "username": "puser",
+                    "partner_write_date": "2025-01-10 07:58:51",
+                    "partner_display_name": "Purchase User",
+                    "partner_id": 13,
+                    "web.base.url": "http://erp.syntrack.app",
+                    "active_ids_limit": 20000,
+                    "profile_session": null,
+                    "profile_collectors": null,
+                    "profile_params": null,
+                    "max_file_upload_size": 134217728,
+                    "home_action_id": false,
+                    "cache_hashes": {
+                        "translations": "b6e09337307ad3b9e8fee883d36d08170237f36f",
+                        "load_menus": "9e76b9ba89b44766f25577344ac938a0cf9ce483d27eb59567c48e1c6cbce3c8"
+                    },
+                    "currencies": {
+                        "1": {
+                            "symbol": "$",
+                            "position": "before",
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        },
+                        "128": {
+                            "symbol": "AED",
+                            "position": "after",
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        }
+                    },
+                    "bundle_params": {
+                        "lang": "en_US"
+                    },
+                    "test_mode": false,
+                    "view_info": {
+                        "list": {
+                            "display_name": "List",
+                            "icon": "oi oi-view-list",
+                            "multi_record": true
+                        },
+                        "form": {
+                            "display_name": "Form",
+                            "icon": "fa fa-address-card",
+                            "multi_record": false
+                        },
+                        "graph": {
+                            "display_name": "Graph",
+                            "icon": "fa fa-area-chart",
+                            "multi_record": true
+                        },
+                        "pivot": {
+                            "display_name": "Pivot",
+                            "icon": "oi oi-view-pivot",
+                            "multi_record": true
+                        },
+                        "calendar": {
+                            "display_name": "Calendar",
+                            "icon": "fa fa-calendar",
+                            "multi_record": true
+                        },
+                        "kanban": {
+                            "display_name": "Kanban",
+                            "icon": "oi oi-view-kanban",
+                            "multi_record": true
+                        },
+                        "search": {
+                            "display_name": "Search",
+                            "icon": "oi oi-search",
+                            "multi_record": true
+                        },
+                        "hierarchy": {
+                            "display_name": "Hierarchy",
+                            "icon": "fa fa-share-alt o_hierarchy_icon",
+                            "multi_record": true
+                        },
+                        "activity": {
+                            "display_name": "Activity",
+                            "icon": "fa fa-clock-o",
+                            "multi_record": true
+                        }
+                    },
+                    "user_companies": false,
+                    "show_effect": "True",
+                    "display_switch_company_menu": false,
+                    "max_time_between_keys_in_ms": 150,
+                    "websocket_worker_version": "18.0-2",
+                    "tour_enabled": false,
+                    "current_tour": null,
+                    "storeData": {
+                        "Store": {
+                            "action_discuss_id": 119,
+                            "channel_types_with_seen_infos": [
+                                "chat",
+                                "group"
+                            ],
+                            "hasGifPickerFeature": false,
+                            "hasLinkPreviewFeature": true,
+                            "hasMessageTranslationFeature": false,
+                            "internalUserGroupId": 1,
+                            "mt_comment_id": 1,
+                            "odoobot": {
+                                "id": 2,
+                                "type": "partner"
+                            },
+                            "self": {
+                                "id": 13,
+                                "type": "partner"
+                            },
+                            "settings": {
+                                "id": 4,
+                                "user_id": {
+                                    "id": 7
+                                },
+                                "is_discuss_sidebar_category_channel_open": true,
+                                "is_discuss_sidebar_category_chat_open": true,
+                                "push_to_talk_key": false,
+                                "use_push_to_talk": false,
+                                "voice_active_duration": 200,
+                                "channel_notifications": false,
+                                "mute_until_dt": false,
+                                "volumes": [
+                                    [
+                                        "ADD",
+                                        []
+                                    ]
+                                ]
+                            }
+                        },
+                        "res.partner": [
+                            {
+                                "active": false,
+                                "email": "odoobot@example.com",
+                                "id": 2,
+                                "im_status": "bot",
+                                "isInternalUser": true,
+                                "is_company": false,
+                                "name": "SynergiaBot",
+                                "userId": 1,
+                                "write_date": "2025-01-10 07:58:51"
+                            },
+                            {
+                                "active": true,
+                                "id": 13,
+                                "isAdmin": false,
+                                "isInternalUser": true,
+                                "name": "Purchase User",
+                                "notification_preference": "email",
+                                "userId": 7,
+                                "write_date": "2025-01-10 07:58:51"
+                            }
+                        ]
+                    },
+                    "ks_breadcrumb_style": "ks_breadcrumb_style_1",
+                    "ks_splitted_vertical_width": 0,
+                    "ks_splitted_horizontal_height": 0,
+                    "ks_split_view": "no_split",
+                    "ks_form_view_width": false,
+                    "ks_lang_direction": "ltr",
+                    "ks_current_loader": "ks_loader_default",
+                    "can_insert_in_spreadsheet": false,
+                    "user_name": "Purchase User",
+                    "user_id": 7,
+                    "login_id": "puser",
+                    "logo_url": "http://erp.syntrack.app/web/url_image/res.users/7/image_1920",
+                    "user_signature": "http://erp.syntrack.app/web/url_image/res.users/7/user_signature",
+                    "emlpoyee_id": 4,
+                    "emlpoyee_name": "Purchase User",
+                    "manager": null,
+                    "department": "Purchase",
+                    "job_pos": "Purchaser",
+                    "work_phone": "+971508922937",
+                    "work_mobile": null,
+                    "work_email": null,
+                    "logo": "http://erp.syntrack.app/web/url_image/res.company/1/logo",
+                    "contact_us_link": false,
+                    "about_us_link": false,
+                    "faq_link": false,
+                    "support_email": null,
+                    "currency_ids": [
+                        {
+                            "currency_id": 128,
+                            "symbol": "AED",
+                            "position": "after",
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        },
+                        {
+                            "currency_id": 1,
+                            "symbol": "$",
+                            "position": "before",
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        }
+                    ],
+                    "session_id": "UJLvErUrldnNfQ_euOCMNMZXLoBpEwNAqGLZwaAsvsddDhZVRKVcnvCJuE1tTBaeqo27kssn6F3WKp3StVmi"
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

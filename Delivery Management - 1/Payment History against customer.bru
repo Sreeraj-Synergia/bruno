@@ -1,0 +1,25 @@
+meta {
+  name: Payment History against customer
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://194.195.116.73:8071/web/get_delivery_payment_history
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "partner_id": 2133
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

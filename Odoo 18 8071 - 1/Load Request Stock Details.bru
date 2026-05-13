@@ -1,0 +1,30 @@
+meta {
+  name: Load Request Stock Details
+  type: http
+  seq: 22
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_stock_for_indent
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "from_location": 8,
+              "stock_from": "warehouse"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  This api used to get the live stock from backend to mobile application while creating the Load request from mobile application
+}

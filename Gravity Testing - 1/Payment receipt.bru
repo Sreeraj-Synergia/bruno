@@ -1,0 +1,125 @@
+meta {
+  name: Payment receipt
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{Gravity URL}}/SynTrack/saveACMPR
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: GravitySoftnet_YV5jbMLoBzPbqSDJ4AhB1xnN2xmeB74f
+}
+
+body:json {
+  {
+      "v_VocBr": "27",
+      "v_Typ": "CASH",
+      "v_ChqNo": "",
+      "v_ChqDate": "",
+      "v_NarrH": "Cash payment for SIWS199881",
+      "v_UserId": "001",
+      "v_AcCd": "D13421",
+      "v_RefNo": false,
+      "v_Amt": 7.09,
+      "v_NarrD": "Cash payment for SIWS199881",
+      "v_CashAc": "1008001040",
+      "HRTransNo": 28,
+      "AllowcationData": [
+          {
+              "VocNo": "SIWS199881",
+              "ValueDt": "2024-12-09T00:00:00",
+              "Br": "27",
+              "BrName": "SDC",
+              "TrnTyp": "AC/SA",
+              "RefNo": "SIWS199881",
+              "RefDt": "2024-12-09T00:00:00",
+              "DueDt": "2024-12-09T00:00:00",
+              "AcCd": "D13421",
+              "AcName": "",
+              "DrCr": "Dr",
+              "XAmtFc": 7.09,
+              "XOsAmtFc": 7.09,
+              "ExRate": 1.0,
+              "AmtLc": 7.09,
+              "OsAmtLc": 7.09,
+              "Allocate": "",
+              "Narr": "",
+              "RowId": "",
+              "VocTyp": "SI037",
+              "AlloAmtFc": 7.09,
+              "AlloAmtLc": 7.09
+          }
+      ],
+      "VocDt": "10/12/2025"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Payment receipt
+  
+  request: {
+    url: {{Gravity URL}}/SynTrack/saveACMPR
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "branch_code": false,
+          "collection_type": false,
+          "cheque_number": false,
+          "cheque_date": false,
+          "cheque_amount": false,
+          "collection_date": false,
+          "collected_amount": false,
+          "check_in_out": false,
+          "outstanding_payments": [
+              {
+                  "voucher_id": "26299047",
+                  "voucher_no": "SISD400191",
+                  "voucher_type": "WS001",
+                  "datetime": "2025-08-20 12:03:48",
+                  "branch_code": 27,
+                  "trn_type": "AC/SA",
+                  "ref": "SISD400191",
+                  "ref_datetime": "2025-08-20 12:03:48",
+                  "due_datetime": "2025-06-22T00:00:00.000Z",
+                  "customer_code": "D6179",
+                  "type": "Dr",
+                  "description": "",
+                  "allocate": "",
+                  "AmtLc": 50.0,
+                  "OsAmtLc": 50.0,
+                  "collection_type": "cheque",
+                  "cheque_number": "23456",
+                  "cheque_date": "2025-08-20",
+                  "cheque_amount": 50.0,
+                  "transaction_number": false,
+                  "transaction_date": false,
+                  "transaction_amount": false,
+                  "collection_date": "2025-08-20",
+                  "collected_amount": 50.0,
+                  "AmtFc": null,
+                  "OsAmtFc": null,
+                  "ExRate": null,
+                  "ValueDt": null
+              }
+          ]
+    }
+  }
+  
+  response: {
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

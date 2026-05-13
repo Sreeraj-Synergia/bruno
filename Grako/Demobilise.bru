@@ -1,0 +1,56 @@
+meta {
+  name: Demobilise
+  type: http
+  seq: 73
+}
+
+post {
+  url: http://localhost:8090/web/mob_demobilise
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "mobilisation_id": 77,
+              "demobilise_remarks": "Test demobilise",
+              "assigned_equipment_ids": [
+                  {
+                      "id": 34,
+                      "is_utilised_equip": 0
+                  }
+                  {
+                      "id": 34,
+                      "is_utilised_equip": 1
+                  }
+              ],
+              "po_equi_line_ids": [
+                  {
+                      "id": 82,
+                      "pro_utilised_qty": 5
+                  },
+                  {
+                      "id": 83,
+                      "pro_utilised_qty": 5
+                  }
+              ],
+              "po_man_line_ids": [
+                  {
+                      "id": 82,
+                      "pro_utilised_qty": 5
+                  },
+                  {
+                      "id": 83,
+                      "pro_utilised_qty": 5
+                  }
+              ]
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

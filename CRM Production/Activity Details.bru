@@ -1,0 +1,377 @@
+meta {
+  name: Activity Details
+  type: http
+  seq: 17
+}
+
+post {
+  url: http://localhost:8069/web/get_activity_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Activity Details
+  
+  request: {
+    url: http://localhost:8069/web/get_activity_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 3347
+      Set-Cookie: session_id=3b53407d60c63c49acdb7092d5ed2e68f18e8e3b; Expires=Thu, 17-Oct-2024 08:09:42 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 19 Jul 2024 08:09:42 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_details": [
+                        {
+                            "id": 474,
+                            "summary": "Get the Customer KYC info",
+                            "assigned_task_id": null,
+                            "assigned_task_name": null,
+                            "activity_type_id": 1,
+                            "activity_type_name": "Email",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-05-28",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p>Email to info@synergiasoft.com ASAP</p>"
+                        },
+                        {
+                            "id": 476,
+                            "summary": "Followup With the Client",
+                            "assigned_task_id": null,
+                            "assigned_task_name": null,
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-05-28",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p>Get the update from the client on 28th </p>"
+                        },
+                        {
+                            "id": 491,
+                            "summary": "Get the Customer KYC info",
+                            "assigned_task_id": 511,
+                            "assigned_task_name": "T20240531-164",
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-03",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p>Call the customer</p>"
+                        },
+                        {
+                            "id": 495,
+                            "summary": "Account Manager have to accept the Prospect",
+                            "assigned_task_id": 596,
+                            "assigned_task_name": "T20240603-249",
+                            "activity_type_id": 3,
+                            "activity_type_name": "Meeting",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-04",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p><br></p>"
+                        },
+                        {
+                            "id": 493,
+                            "summary": "Visit the Customers Office before any activity is starting",
+                            "assigned_task_id": 532,
+                            "assigned_task_name": "T20240531-185",
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-04",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p>Get address of office</p><p><br></p>"
+                        },
+                        {
+                            "id": 497,
+                            "summary": "Trade license of the customer",
+                            "assigned_task_id": 694,
+                            "assigned_task_name": "T20240605-347",
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-06",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p><br></p>"
+                        },
+                        {
+                            "id": 481,
+                            "summary": "Get the Customer KYC info",
+                            "assigned_task_id": 382,
+                            "assigned_task_name": "T20240531-035",
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-11",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p>Call the customer</p>"
+                        },
+                        {
+                            "id": 496,
+                            "summary": "Get the Customer KYC info",
+                            "assigned_task_id": 654,
+                            "assigned_task_name": "T20240604-307",
+                            "activity_type_id": 2,
+                            "activity_type_name": "Call",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-26",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p><br></p>"
+                        },
+                        {
+                            "id": 508,
+                            "summary": "Identify the opportunity",
+                            "assigned_task_id": 917,
+                            "assigned_task_name": "T20240626-570",
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-28",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p>Identify the customer's core details</p>"
+                        },
+                        {
+                            "id": 527,
+                            "summary": "Trade license of the customer",
+                            "assigned_task_id": 1297,
+                            "assigned_task_name": "T20240705-950",
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-08-01",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p><br></p>"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Details
+  
+  request: {
+    url: http://localhost:8069/web/get_activity_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 3347
+      Set-Cookie: session_id=3b53407d60c63c49acdb7092d5ed2e68f18e8e3b; Expires=Thu, 17-Oct-2024 08:09:42 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 19 Jul 2024 08:09:42 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_details": [
+                        {
+                            "id": 474,
+                            "summary": "Get the Customer KYC info",
+                            "assigned_task_id": null,
+                            "assigned_task_name": null,
+                            "activity_type_id": 1,
+                            "activity_type_name": "Email",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-05-28",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p>Email to info@synergiasoft.com ASAP</p>"
+                        },
+                        {
+                            "id": 476,
+                            "summary": "Followup With the Client",
+                            "assigned_task_id": null,
+                            "assigned_task_name": null,
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-05-28",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p>Get the update from the client on 28th </p>"
+                        },
+                        {
+                            "id": 491,
+                            "summary": "Get the Customer KYC info",
+                            "assigned_task_id": 511,
+                            "assigned_task_name": "T20240531-164",
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-03",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p>Call the customer</p>"
+                        },
+                        {
+                            "id": 495,
+                            "summary": "Account Manager have to accept the Prospect",
+                            "assigned_task_id": 596,
+                            "assigned_task_name": "T20240603-249",
+                            "activity_type_id": 3,
+                            "activity_type_name": "Meeting",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-04",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p><br></p>"
+                        },
+                        {
+                            "id": 493,
+                            "summary": "Visit the Customers Office before any activity is starting",
+                            "assigned_task_id": 532,
+                            "assigned_task_name": "T20240531-185",
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-04",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p>Get address of office</p><p><br></p>"
+                        },
+                        {
+                            "id": 497,
+                            "summary": "Trade license of the customer",
+                            "assigned_task_id": 694,
+                            "assigned_task_name": "T20240605-347",
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-06",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p><br></p>"
+                        },
+                        {
+                            "id": 481,
+                            "summary": "Get the Customer KYC info",
+                            "assigned_task_id": 382,
+                            "assigned_task_name": "T20240531-035",
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-11",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p>Call the customer</p>"
+                        },
+                        {
+                            "id": 496,
+                            "summary": "Get the Customer KYC info",
+                            "assigned_task_id": 654,
+                            "assigned_task_name": "T20240604-307",
+                            "activity_type_id": 2,
+                            "activity_type_name": "Call",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-26",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p><br></p>"
+                        },
+                        {
+                            "id": 508,
+                            "summary": "Identify the opportunity",
+                            "assigned_task_id": 917,
+                            "assigned_task_name": "T20240626-570",
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-06-28",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p>Identify the customer's core details</p>"
+                        },
+                        {
+                            "id": 527,
+                            "summary": "Trade license of the customer",
+                            "assigned_task_id": 1297,
+                            "assigned_task_name": "T20240705-950",
+                            "activity_type_id": 4,
+                            "activity_type_name": "To Do",
+                            "additional_assigned_ids": null,
+                            "date_deadline": "2024-08-01",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "note": "<p><br></p>"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

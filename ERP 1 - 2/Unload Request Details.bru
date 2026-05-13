@@ -1,0 +1,163 @@
+meta {
+  name: Unload Request Details
+  type: http
+  seq: 33
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_unload_request_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params":{
+          "page": 0
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Unload Request Details
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_unload_request_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params":{
+              "page": 0
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 12 Mar 2025 07:27:48 GMT
+      Content-Length: 2156
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "load_request_details": [
+                        {
+                            "request_id": 1,
+                            "name": "New",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "approved_by": null,
+                            "created_by": 2,
+                            "created_by_name": "Administrator",
+                            "employee_id": 7,
+                            "employee_name": "Sales User 2",
+                            "origin": null,
+                            "location_id": 31,
+                            "location_name": "90814",
+                            "resellable_location_id": 33,
+                            "resellable_location_name": "Re-Sellable Location",
+                            "non_resellable_location_id": 32,
+                            "non_resellable_location_name": "Non Sellable Location",
+                            "location_dest_id": 8,
+                            "location_dest_name": "Stock",
+                            "create_date": "2025-03-12 07:27:36",
+                            "approved_date": null,
+                            "delivered_by": null,
+                            "delivered_name": null,
+                            "received_date": null,
+                            "validated_by": null,
+                            "validated_name": null,
+                            "validate_sign": null,
+                            "accepted_by": null,
+                            "accepted_name": null,
+                            "accept_sign": null,
+                            "state": "draft",
+                            "unload_lines": [
+                                {
+                                    "request_line_id": 1,
+                                    "unload_request_id": 1,
+                                    "unload_request_name": "New",
+                                    "location_id": 31,
+                                    "location_name": "90814",
+                                    "location_dest_id": 8,
+                                    "location_dest_name": "Stock",
+                                    "product_id": 2373,
+                                    "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                    "internal_ref": "SN100006",
+                                    "product_uom_category_id": 2,
+                                    "product_uom_category_name": "Weight",
+                                    "uom_id": 12,
+                                    "uom_name": "KG",
+                                    "lot_id": 97,
+                                    "lot_name": "X0001",
+                                    "package_id": 495,
+                                    "package_name": "Kg",
+                                    "qty_in_package": 1,
+                                    "pack_qty_available": 204.12,
+                                    "pack_demand_available": 204.12,
+                                    "qty_available": 204.12,
+                                    "demand_available": 204.12,
+                                    "value": 2749.266
+                                },
+                                {
+                                    "request_line_id": 2,
+                                    "unload_request_id": 1,
+                                    "unload_request_name": "New",
+                                    "location_id": 31,
+                                    "location_name": "90814",
+                                    "location_dest_id": 8,
+                                    "location_dest_name": "Stock",
+                                    "product_id": 2915,
+                                    "product_name": "Samsung Flip -",
+                                    "internal_ref": "F02030234",
+                                    "product_uom_category_id": 1,
+                                    "product_uom_category_name": "Unit",
+                                    "uom_id": 1,
+                                    "uom_name": "Units",
+                                    "lot_id": 477,
+                                    "lot_name": "FL00025",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "qty_in_package": 0,
+                                    "pack_qty_available": 1,
+                                    "pack_demand_available": 1,
+                                    "qty_available": 1,
+                                    "demand_available": 1,
+                                    "value": 2700
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

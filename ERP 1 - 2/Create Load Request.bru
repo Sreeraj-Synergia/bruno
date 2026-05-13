@@ -1,0 +1,218 @@
+meta {
+  name: Create Load Request
+  type: http
+  seq: 23
+}
+
+post {
+  url: 192.168.1.119:8070/web/create_load_request
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "indent_date": "2025-03-07 15:49:09",
+              "origin": "INDT1741348150",
+              "indent_lines": [
+                  {
+                      "pack_qty": 2,
+                      "uom_id": 1,
+                      "product_id": 2,
+                      "package_id": 1,
+                      "indent_line_id": 0
+                  },
+                  {
+                      "pack_qty": 2,
+                      "uom_id": 1,
+                      "product_id": 9,
+                      "package_id": false,
+                      "indent_line_id": 0
+                  },
+                  {
+                      "pack_qty": 2,
+                      "uom_id": 1,
+                      "product_id": 10,
+                      "package_id": false,
+                      "indent_line_id": 0
+                  },
+                  {
+                      "pack_qty": 1,
+                      "uom_id": 1,
+                      "product_id": 15,
+                      "package_id": 4,
+                      "indent_line_id": 0
+                  }
+              ],
+              "from_fleet": 0,
+              "stock_from": "warehouse",
+              "dest_location_id": 41,
+              "location_id": 0
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Create Load Request
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_load_request
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "indent_date": "2024-06-05 16:48:56",
+                  "indent_lines": [
+                      {
+                          "indent_line_id": 0,
+                          "pack_qty": 2,
+                          "req_qty": 0.0,
+                          "package_id": 1873,
+                          "product_id": 2811,
+                          "uom_id": 27
+                      }
+                  ],
+                  "location_id": 8,
+                  "origin": "INDT1717591736",
+                  "stock_from": "warehouse",
+                  "dest_location_id": 31
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 20 Feb 2025 08:19:03 GMT
+      Content-Length: 2231
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "load_request_create_details": {
+                        "indent_id": 32,
+                        "name": "New",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "approved_by": null,
+                        "user_id": 10,
+                        "user_name": "Sales User 2",
+                        "department_id": 3,
+                        "department_name": "Sales Department",
+                        "employee_id": 7,
+                        "employee_name": "Sales User 2",
+                        "origin": null,
+                        "location_id": 8,
+                        "location_name": "Stock",
+                        "dest_location_id": 31,
+                        "dest_location_name": "90814",
+                        "date_indent": "2024-06-05 16:48:56",
+                        "delivery_count": null,
+                        "picking_type_id": 7,
+                        "picking_type_name": "Internal Transfers",
+                        "note": null,
+                        "approved_date": null,
+                        "indent_from": "driver",
+                        "store_type": "warehouse",
+                        "delivered_by": null,
+                        "delivered_name": null,
+                        "received_date": null,
+                        "validated_by": null,
+                        "validated_name": null,
+                        "validate_sign": null,
+                        "accepted_by": null,
+                        "accepted_name": null,
+                        "accept_sign": null,
+                        "is_done": null,
+                        "state": "draft",
+                        "indent_lines": [
+                            {
+                                "indent_line_id": 46,
+                                "name": "ABUSALIM SUNFLOWER SEED ROASTED 25GM",
+                                "load_request_id": 32,
+                                "load_request_name": "New",
+                                "location_id": null,
+                                "location_name": null,
+                                "product_id": 2811,
+                                "product_name": "ABUSALIM SUNFLOWER SEED ROASTED 25GM",
+                                "product_code": "SN100444",
+                                "product_barcode": null,
+                                "uom_id": 27,
+                                "uom_name": "PCs",
+                                "req_qty": 50,
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "qty_delivered": 0,
+                                "pack_qty_delivered": 0,
+                                "qty_received": 0,
+                                "pack_qty_received": 0,
+                                "qty_approved": 0,
+                                "pack_qty_approved": 0,
+                                "package_id": 1873,
+                                "package_name": "Bag",
+                                "qty_in_package": 0,
+                                "pack_qty": 2,
+                                "state": "draft",
+                                "wh_pack_onhand_qty": 300,
+                                "wh_onhand_unit_qty": 7500,
+                                "res_pack_qty": 0,
+                                "res_unit_qty": 0,
+                                "onhand_qty": 0,
+                                "onhand_unit_qty": 0,
+                                "van_pack_onhand_qty": 0,
+                                "van_unit_onhand_qty": 0,
+                                "all_received": null,
+                                "move_ids": null,
+                                "requested_by": 10,
+                                "requested_by_name": "Sales User 2",
+                                "requested_date": "2024-06-05 16:48:56",
+                                "approved_date": null,
+                                "approved_by": null,
+                                "approved_by_name": null,
+                                "delivered_by": null,
+                                "delivered_by_name": null,
+                                "value": 0,
+                                "employee_id": 7,
+                                "employee_name": "Sales User 2",
+                                "check_for_packaging": true
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

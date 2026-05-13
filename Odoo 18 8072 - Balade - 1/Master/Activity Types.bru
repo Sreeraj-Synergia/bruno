@@ -1,0 +1,175 @@
+meta {
+  name: Activity Types
+  type: http
+  seq: 8
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_activity_types
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params":{
+          "data":{
+              "activity_type_id": false
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Activity Types
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_activity_types
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params":{
+              "data":{
+                  "activity_type_id": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Sat, 19 Apr 2025 07:34:37 GMT
+      Content-Length: 537
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=8PLoFRKsh7_tMsYo1ynU-QItV2PkfDdMjgOpQBZ2ZZUp7Hdx3_YLm_pVyp8KIAYIYLhIlPv4C-9RabBOTxe4; Expires=Sun, 19 Apr 2026 07:34:37 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_activity_details": [
+                        {
+                            "name": "Send Reminder Email ",
+                            "summary": null,
+                            "sequence": 1,
+                            "create_uid": 1,
+                            "create_name": "SynergiaBot",
+                            "delay_unit": "days",
+                            "icon": "fa-envelope",
+                            "res_model": "purchase.order",
+                            "triggered_next_type_id": null,
+                            "triggered_next_type_name": null,
+                            "category": "upload_file",
+                            "default_user_id": null,
+                            "default_user_name": null,
+                            "default_note": null,
+                            "selection_id": null,
+                            "date_field_id": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Types
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_activity_types
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params":{
+              "data":{
+                  "activity_type_id": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Sat, 19 Apr 2025 07:34:37 GMT
+      Content-Length: 537
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=8PLoFRKsh7_tMsYo1ynU-QItV2PkfDdMjgOpQBZ2ZZUp7Hdx3_YLm_pVyp8KIAYIYLhIlPv4C-9RabBOTxe4; Expires=Sun, 19 Apr 2026 07:34:37 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_activity_details": [
+                        {
+                            "name": "Send Reminder Email ",
+                            "summary": null,
+                            "sequence": 1,
+                            "create_uid": 1,
+                            "create_name": "SynergiaBot",
+                            "delay_unit": "days",
+                            "icon": "fa-envelope",
+                            "res_model": "purchase.order",
+                            "triggered_next_type_id": null,
+                            "triggered_next_type_name": null,
+                            "category": "upload_file",
+                            "default_user_id": null,
+                            "default_user_name": null,
+                            "default_note": null,
+                            "selection_id": null,
+                            "date_field_id": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

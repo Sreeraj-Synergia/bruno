@@ -1,0 +1,157 @@
+meta {
+  name: CRM Tags
+  type: http
+  seq: 25
+}
+
+post {
+  url: http://localhost:8069/web/get_crm_tag_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Tags
+  
+  request: {
+    url: http://localhost:8069/web/get_crm_tag_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 321
+      Set-Cookie: session_id=18d29fbf4281d24d355fe67672a5bc1e9371ba26; Expires=Fri, 11-Oct-2024 09:33:37 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Sat, 13 Jul 2024 09:33:37 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "crm_tag_details": [
+                        {
+                            "id": 17,
+                            "name": "Mobile Industry"
+                        },
+                        {
+                            "id": 18,
+                            "name": "Distribution Company"
+                        },
+                        {
+                            "id": 19,
+                            "name": "Courier"
+                        },
+                        {
+                            "id": 20,
+                            "name": "Electronics Industry"
+                        },
+                        {
+                            "id": 21,
+                            "name": "Brokerage"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Tags
+  
+  request: {
+    url: http://localhost:8069/web/get_crm_tag_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 321
+      Set-Cookie: session_id=18d29fbf4281d24d355fe67672a5bc1e9371ba26; Expires=Fri, 11-Oct-2024 09:33:37 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Sat, 13 Jul 2024 09:33:37 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "crm_tag_details": [
+                        {
+                            "id": 17,
+                            "name": "Mobile Industry"
+                        },
+                        {
+                            "id": 18,
+                            "name": "Distribution Company"
+                        },
+                        {
+                            "id": 19,
+                            "name": "Courier"
+                        },
+                        {
+                            "id": 20,
+                            "name": "Electronics Industry"
+                        },
+                        {
+                            "id": 21,
+                            "name": "Brokerage"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

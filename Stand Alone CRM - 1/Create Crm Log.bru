@@ -1,0 +1,174 @@
+meta {
+  name: Create Crm Log
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://localhost:8070/web/create_lead_log
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{
+      "data":{
+          "lead_id": 6,
+          "message": "Sample Log Created From Mobile Application"
+      }
+  }}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Lead Log
+  
+  request: {
+    url: http://localhost:8070/web/create_lead_log
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{
+          "data":{
+              "lead_id": 6,
+              "message": "Sample Log Created From Mobile Application"
+          }
+      }}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 12 Jan 2026 13:40:04 GMT
+      Content-Length: 2258
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "lead_details": {
+                        "id": 6,
+                        "number": "LD0001",
+                        "name": "Sample Lead Created By A Normal User User",
+                        "expected_revenue": 1250,
+                        "probability": 10,
+                        "customer_type": "new",
+                        "contact_type": "new",
+                        "contact_id": null,
+                        "contact_name": null,
+                        "partner_email": "mudhish@example.com",
+                        "partner_id": 24372,
+                        "partner_name": "Al Mudhish",
+                        "partner_mobile": "050235689",
+                        "partner_phone": "050235689",
+                        "contact_email": "jibin@example.com",
+                        "title_id": null,
+                        "title_name": null,
+                        "function": "Depot Incharge",
+                        "phone": "050235689",
+                        "mobile": "050235689",
+                        "street": "Warehouse 12",
+                        "street2": "Industrial Area 2",
+                        "city": "Umm Al Quinn",
+                        "state_id": null,
+                        "state_name": null,
+                        "zip": null,
+                        "country_id": null,
+                        "country_name": null,
+                        "website": null,
+                        "tag_ids": null,
+                        "referred_by": 1,
+                        "referred_by_name": "Mubeer",
+                        "industry_id": null,
+                        "industry_name": null,
+                        "assigning_employee_id": null,
+                        "assigning_employee_name": null,
+                        "assigning_date": null,
+                        "assigned_employee_id": null,
+                        "assigned_employee_name": null,
+                        "status": null,
+                        "date_deadline": "2025-02-12",
+                        "priority": "3",
+                        "reason": null,
+                        "description": "<p>Smaple Description added for the lead created for the Normal user</p>",
+                        "user_id": 28,
+                        "user_name": "Omar Abdalla",
+                        "campaign_id": null,
+                        "campaign_name": null,
+                        "medium_id": null,
+                        "medium_name": null,
+                        "source_id": null,
+                        "source_name": null,
+                        "team_id": null,
+                        "team_name": null,
+                        "day_open": null,
+                        "day_close": null,
+                        "stage_id": 2,
+                        "stage_name": "Qualified",
+                        "logs": [
+                            {
+                                "id": 5,
+                                "employee_id": false,
+                                "employee_name": false,
+                                "message": "Sample",
+                                "date_time": "2026-01-12 13:04:51"
+                            },
+                            {
+                                "id": 6,
+                                "employee_id": false,
+                                "employee_name": false,
+                                "message": "sample log created to check the functionality ",
+                                "date_time": "2026-01-12 13:07:58"
+                            },
+                            {
+                                "id": 7,
+                                "employee_id": false,
+                                "employee_name": false,
+                                "message": "Riyad Called sunu",
+                                "date_time": "2026-01-12 13:07:58"
+                            },
+                            {
+                                "id": 8,
+                                "employee_id": 43,
+                                "employee_name": "Administrator",
+                                "message": "Created Log Based On Employee",
+                                "date_time": "2026-01-12 13:30:11"
+                            },
+                            {
+                                "id": 9,
+                                "employee_id": 24,
+                                "employee_name": "Omar Abdalla",
+                                "message": "Sample Log Created From Mobile Application",
+                                "date_time": "2026-01-12 13:40:04"
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

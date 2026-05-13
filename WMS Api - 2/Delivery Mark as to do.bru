@@ -1,0 +1,191 @@
+meta {
+  name: Delivery Mark as to do
+  type: http
+  seq: 32
+}
+
+post {
+  url: https://wms.syntrack.app/web/delivery_change_status?db=WMS_BASE_NEW
+  body: json
+  auth: inherit
+}
+
+params:query {
+  db: WMS_BASE_NEW
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "delivery_id": 209,
+              "status": "confirm"
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Delivery Mark as to do
+  
+  request: {
+    url: https://wms.syntrack.app/web/delivery_change_status?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "delivery_id": 209,
+                  "status": "confirm"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 05:46:16 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 05:46:16 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "delivery_change_status_details": {
+                        "id": 209,
+                        "name": "WH/OUT/00054",
+                        "partner_id": 20,
+                        "partner_name": "Green House Hypermarket ",
+                        "picking_type_id": 2,
+                        "picking_type_name": "Synergia: Delivery Orders",
+                        "source_location_id": 8,
+                        "source_location_name": "WH/Stock",
+                        "scheduled_date": "2023-06-21 09:44:02",
+                        "date_done": "2023-06-21 00:00:00",
+                        "origin": null,
+                        "origin_date": "2023-06-21 09:44:02",
+                        "note": null,
+                        "state": "confirmed",
+                        "asset_order": false,
+                        "sample_order": false,
+                        "delivery_line_ids": [],
+                        "delivery_detailed_line_ids": null,
+                        "delivery_package_ids": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Delivery Mark as to do
+  
+  request: {
+    url: https://wms.syntrack.app/web/delivery_change_status?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "delivery_id": 209,
+                  "status": "confirm"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 05:46:16 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 05:46:16 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "delivery_change_status_details": {
+                        "id": 209,
+                        "name": "WH/OUT/00054",
+                        "partner_id": 20,
+                        "partner_name": "Green House Hypermarket ",
+                        "picking_type_id": 2,
+                        "picking_type_name": "Synergia: Delivery Orders",
+                        "source_location_id": 8,
+                        "source_location_name": "WH/Stock",
+                        "scheduled_date": "2023-06-21 09:44:02",
+                        "date_done": "2023-06-21 00:00:00",
+                        "origin": null,
+                        "origin_date": "2023-06-21 09:44:02",
+                        "note": null,
+                        "state": "confirmed",
+                        "asset_order": false,
+                        "sample_order": false,
+                        "delivery_line_ids": [],
+                        "delivery_detailed_line_ids": null,
+                        "delivery_package_ids": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,443 @@
+meta {
+  name: Tax Master
+  type: http
+  seq: 16
+}
+
+post {
+  url: https://wms.syntrack.app/web/get_tax_master_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Tax Master
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_tax_master_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:31:26 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:31:26 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "tax_details": [
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Dubai)",
+                            "tax_id": 1,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Abu Dhabi)",
+                            "tax_id": 2,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Sharjah)",
+                            "tax_id": 3,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Ajman)",
+                            "tax_id": 4,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Umm Al Quwain)",
+                            "tax_id": 5,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Ras Al-Khaima)",
+                            "tax_id": 6,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Fujairah)",
+                            "tax_id": 7,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Exempted Tax",
+                            "tax_id": 8,
+                            "type_tax_use": "sale",
+                            "tax_value": 0
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 0%",
+                            "tax_id": 9,
+                            "type_tax_use": "sale",
+                            "tax_value": 0
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Export Tax 0%",
+                            "tax_id": 10,
+                            "type_tax_use": "sale",
+                            "tax_value": 0
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Dubai)",
+                            "tax_id": 11,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Abu Dhabi)",
+                            "tax_id": 12,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Sharjah)",
+                            "tax_id": 13,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Ajman)",
+                            "tax_id": 14,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Umm Al Quwain)",
+                            "tax_id": 15,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Ras Al-Khaima)",
+                            "tax_id": 16,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Fujairah)",
+                            "tax_id": 17,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Tourist Refund scheme 5%",
+                            "tax_id": 18,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5%",
+                            "tax_id": 19,
+                            "type_tax_use": "purchase",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Exempted Tax",
+                            "tax_id": 20,
+                            "type_tax_use": "purchase",
+                            "tax_value": 0
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 0%",
+                            "tax_id": 21,
+                            "type_tax_use": "purchase",
+                            "tax_value": 0
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Import Tax 5%",
+                            "tax_id": 22,
+                            "type_tax_use": "purchase",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision",
+                            "tax_id": 23,
+                            "type_tax_use": "purchase",
+                            "tax_value": 0.05
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Tax Master
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_tax_master_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:31:26 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:31:26 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "tax_details": [
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Dubai)",
+                            "tax_id": 1,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Abu Dhabi)",
+                            "tax_id": 2,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Sharjah)",
+                            "tax_id": 3,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Ajman)",
+                            "tax_id": 4,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Umm Al Quwain)",
+                            "tax_id": 5,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Ras Al-Khaima)",
+                            "tax_id": 6,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5% (Fujairah)",
+                            "tax_id": 7,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Exempted Tax",
+                            "tax_id": 8,
+                            "type_tax_use": "sale",
+                            "tax_value": 0
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 0%",
+                            "tax_id": 9,
+                            "type_tax_use": "sale",
+                            "tax_value": 0
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Export Tax 0%",
+                            "tax_id": 10,
+                            "type_tax_use": "sale",
+                            "tax_value": 0
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Dubai)",
+                            "tax_id": 11,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Abu Dhabi)",
+                            "tax_id": 12,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Sharjah)",
+                            "tax_id": 13,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Ajman)",
+                            "tax_id": 14,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Umm Al Quwain)",
+                            "tax_id": 15,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Ras Al-Khaima)",
+                            "tax_id": 16,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision (Fujairah)",
+                            "tax_id": 17,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Tourist Refund scheme 5%",
+                            "tax_id": 18,
+                            "type_tax_use": "sale",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 5%",
+                            "tax_id": 19,
+                            "type_tax_use": "purchase",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Exempted Tax",
+                            "tax_id": 20,
+                            "type_tax_use": "purchase",
+                            "tax_value": 0
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "VAT 0%",
+                            "tax_id": 21,
+                            "type_tax_use": "purchase",
+                            "tax_value": 0
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Import Tax 5%",
+                            "tax_id": 22,
+                            "type_tax_use": "purchase",
+                            "tax_value": 0.05
+                        },
+                        {
+                            "tax_type": "percent",
+                            "tax_name": "Reverse Charge Provision",
+                            "tax_id": 23,
+                            "type_tax_use": "purchase",
+                            "tax_value": 0.05
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

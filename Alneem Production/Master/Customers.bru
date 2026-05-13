@@ -1,0 +1,387 @@
+meta {
+  name: Customers
+  type: http
+  seq: 1
+}
+
+post {
+  url: localhost:8070/web/get_delivery_customers
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Customers
+  
+  request: {
+    url: localhost:8070/web/get_delivery_customers
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2114
+      Set-Cookie: session_id=fdd016adc2e5b6fddf130a6a4d642af7aa092c8e; Expires=Wed, 04-Dec-2024 10:38:12 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Thu, 05 Sep 2024 10:38:12 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "delivery_customers": [
+                        {
+                            "customer_id": 1354,
+                            "name": "Noon",
+                            "street": "Boulevard Plaza",
+                            "street2": "Downtown",
+                            "city": "Dubai",
+                            "zip": "21215",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "email": "Noon@example.com",
+                            "website": "http://www.noon.com",
+                            "phone": "055 197 2585",
+                            "mobile": "055 197 2585",
+                            "trn": "TRN0551972585",
+                            "trade_reg": null,
+                            "latitude": null,
+                            "longitude": null,
+                            "customer_ref": null,
+                            "logo_url": "http://localhost:8070/web/url_image/res.partner/1354/image_1920",
+                            "arabic_name": "ظهرا",
+                            "customer": true,
+                            "supplier": false,
+                            "contact_list": [
+                                {
+                                    "type": "contact",
+                                    "contact_id": 1355,
+                                    "contact_name": "Jovita",
+                                    "contact_phone": "54654565"
+                                }
+                            ],
+                            "area_code_id": null,
+                            "area_code_code": null,
+                            "area_code_name": null,
+                            "sales_person_ids": [
+                                {
+                                    "id": 188,
+                                    "name": "Abdul Nasar C.M"
+                                }
+                            ],
+                            "sales_executive_ids": [
+                                {
+                                    "id": 248,
+                                    "name": "Abdul Muneer Kolamkadavath"
+                                }
+                            ],
+                            "sales_supervisor_ids": [
+                                {
+                                    "id": 108,
+                                    "name": "Abdul Azeez Cherichi"
+                                }
+                            ],
+                            "delivery_person_ids": [
+                                {
+                                    "id": 248,
+                                    "name": "Abdul Muneer Kolamkadavath"
+                                },
+                                {
+                                    "id": 122,
+                                    "name": "Abdulla faisal C"
+                                },
+                                {
+                                    "id": 145,
+                                    "name": "Abdurahman Nambiyath"
+                                },
+                                {
+                                    "id": 171,
+                                    "name": "Ahamed Usama Z"
+                                }
+                            ],
+                            "is_contact": false
+                        },
+                        {
+                            "customer_id": 1355,
+                            "name": "Jovita",
+                            "street": "Boulevard Plaza",
+                            "street2": "Downtown",
+                            "city": "Dubai",
+                            "zip": "21215",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "email": "jovita@example.com",
+                            "website": null,
+                            "phone": "54654565",
+                            "mobile": "54654565",
+                            "trn": "TRN0551972585",
+                            "trade_reg": null,
+                            "latitude": null,
+                            "longitude": null,
+                            "customer_ref": null,
+                            "logo_url": "http://localhost:8070/web/url_image/res.partner/1355/image_1920",
+                            "arabic_name": null,
+                            "customer": true,
+                            "supplier": false,
+                            "contact_list": [],
+                            "area_code_id": null,
+                            "area_code_code": null,
+                            "area_code_name": null,
+                            "sales_person_ids": [],
+                            "sales_executive_ids": [],
+                            "sales_supervisor_ids": [],
+                            "delivery_person_ids": [],
+                            "is_contact": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Customers New
+  
+  request: {
+    url: localhost:8070/web/get_delivery_customers
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 3810
+      Set-Cookie: session_id=cc178663b1de1f9868f34e4cc155129a56ee7379; Expires=Fri, 03-Jan-2025 23:46:42 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Sat, 05 Oct 2024 23:46:42 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "delivery_customers": [
+                        {
+                            "customer_id": 1357,
+                            "name": "Jakies",
+                            "street": null,
+                            "street2": null,
+                            "city": null,
+                            "zip": null,
+                            "state_id": null,
+                            "state_name": null,
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "email": null,
+                            "website": null,
+                            "phone": null,
+                            "mobile": null,
+                            "trn": null,
+                            "trade_reg": null,
+                            "latitude": null,
+                            "longitude": null,
+                            "payment_type": "cash",
+                            "property_payment_term_id": null,
+                            "property_payment_term_name": null,
+                            "credit_limit": null,
+                            "over_credit": false,
+                            "customer_ref": null,
+                            "logo_url": "http://localhost:8070/web/url_image/res.partner/1357/image_1920",
+                            "arabic_name": null,
+                            "customer": true,
+                            "supplier": false,
+                            "contact_list": [],
+                            "area_code_id": 1,
+                            "area_code_code": false,
+                            "area_code_name": "Oud Metha",
+                            "sales_person_ids": [],
+                            "sales_executive_ids": [],
+                            "sales_supervisor_ids": [],
+                            "delivery_person_ids": [],
+                            "is_contact": false
+                        },
+                        {
+                            "customer_id": 1354,
+                            "name": "Noon",
+                            "street": "Boulevard Plaza",
+                            "street2": "Downtown",
+                            "city": "Dubai",
+                            "zip": "21215",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "email": "Noon@example.com",
+                            "website": "http://www.noon.com",
+                            "phone": "055 197 2585",
+                            "mobile": "055 197 2585",
+                            "trn": "TRN0551972585",
+                            "trade_reg": null,
+                            "latitude": null,
+                            "longitude": null,
+                            "payment_type": "credit",
+                            "property_payment_term_id": 2,
+                            "property_payment_term_name": "15 Days",
+                            "credit_limit": 5000,
+                            "over_credit": false,
+                            "customer_ref": null,
+                            "logo_url": "http://localhost:8070/web/url_image/res.partner/1354/image_1920",
+                            "arabic_name": "ظهرا",
+                            "customer": true,
+                            "supplier": false,
+                            "contact_list": [
+                                {
+                                    "type": "contact",
+                                    "contact_id": 1355,
+                                    "contact_name": "Jovita",
+                                    "contact_phone": "54654565"
+                                }
+                            ],
+                            "area_code_id": 2,
+                            "area_code_code": false,
+                            "area_code_name": "Karama",
+                            "sales_person_ids": [],
+                            "sales_executive_ids": [],
+                            "sales_supervisor_ids": [],
+                            "delivery_person_ids": [],
+                            "is_contact": false
+                        },
+                        {
+                            "customer_id": 1355,
+                            "name": "Jovita",
+                            "street": "Boulevard Plaza",
+                            "street2": "Downtown",
+                            "city": "Dubai",
+                            "zip": "21215",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "email": "jovita@example.com",
+                            "website": null,
+                            "phone": "54654565",
+                            "mobile": "54654565",
+                            "trn": "TRN0551972585",
+                            "trade_reg": null,
+                            "latitude": null,
+                            "longitude": null,
+                            "payment_type": "cash",
+                            "property_payment_term_id": 2,
+                            "property_payment_term_name": "15 Days",
+                            "credit_limit": 5000,
+                            "over_credit": false,
+                            "customer_ref": null,
+                            "logo_url": "http://localhost:8070/web/url_image/res.partner/1355/image_1920",
+                            "arabic_name": null,
+                            "customer": true,
+                            "supplier": false,
+                            "contact_list": [],
+                            "area_code_id": 2,
+                            "area_code_code": false,
+                            "area_code_name": "Karama",
+                            "sales_person_ids": [],
+                            "sales_executive_ids": [],
+                            "sales_supervisor_ids": [],
+                            "delivery_person_ids": [],
+                            "is_contact": false
+                        },
+                        {
+                            "customer_id": 1356,
+                            "name": "Primelogistics",
+                            "street": null,
+                            "street2": null,
+                            "city": null,
+                            "zip": null,
+                            "state_id": null,
+                            "state_name": null,
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "email": null,
+                            "website": null,
+                            "phone": null,
+                            "mobile": null,
+                            "trn": null,
+                            "trade_reg": null,
+                            "latitude": 25.18476,
+                            "longitude": 55.40808,
+                            "payment_type": "cash",
+                            "property_payment_term_id": null,
+                            "property_payment_term_name": null,
+                            "credit_limit": null,
+                            "over_credit": false,
+                            "customer_ref": null,
+                            "logo_url": "http://localhost:8070/web/url_image/res.partner/1356/image_1920",
+                            "arabic_name": null,
+                            "customer": true,
+                            "supplier": false,
+                            "contact_list": [],
+                            "area_code_id": 1,
+                            "area_code_code": false,
+                            "area_code_name": "Oud Metha",
+                            "sales_person_ids": [],
+                            "sales_executive_ids": [],
+                            "sales_supervisor_ids": [],
+                            "delivery_person_ids": [],
+                            "is_contact": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

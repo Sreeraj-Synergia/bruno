@@ -1,0 +1,19 @@
+meta {
+  name: Log Out
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://194.195.116.73:8071/web/session/mobile_logout
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{}}}
+}
+
+settings {
+  encodeUrl: true
+}

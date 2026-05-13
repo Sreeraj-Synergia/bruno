@@ -1,0 +1,431 @@
+meta {
+  name: Unload Request Create
+  type: http
+  seq: 33
+}
+
+post {
+  url: 192.168.1.119:8070/web/create_unload_request
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "location_id": 31,
+              "resellable_location_id": 33,
+              "non_resellable_location_id": 32,
+              "dest_location_id": 8,
+              "origin": "ORINGIN00001",
+              "unload_lines": [
+                  {
+                      "location_id": 31,
+                      "product_id": 2916,
+                      "uom_id": 1,
+                      "lot_id": 451,
+                      "package_id": false,
+                      "pack_qty": false,
+                      "req_qty": 10
+                  },
+                  {
+                      "location_id": 31,
+                      "product_id": 2916,
+                      "uom_id": 1,
+                      "lot_id": 452,
+                      "package_id": false,
+                      "pack_qty": false,
+                      "req_qty": 10
+              },
+              {
+                      "location_id": 31,
+                      "product_id": 2916,
+                      "uom_id": 1,
+                      "lot_id": 559,
+                      "package_id": false,
+                      "pack_qty": false,
+                      "req_qty": 20
+              },
+              {
+                      "location_id": 31,
+                      "product_id": 2916,
+                      "uom_id": 1,
+                      "lot_id": 558,
+                      "package_id": false,
+                      "pack_qty": false,
+                      "req_qty": 10
+              }
+              ]
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Unload Request Create
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_unload_request
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "location_id": 31,
+                  "resellable_location_id": 33,
+                  "non_resellable_location_id": 32,
+                  "dest_location_id": 8,
+                  "origin": "ORINGIN00001",
+                  "unload_lines": [
+                      {
+                          "location_id": 31,
+                          "product_id": 2916,
+                          "uom_id": 1,
+                          "lot_id": 451,
+                          "package_id": false,
+                          "pack_qty": false,
+                          "req_qty": 10
+                      },
+                      {
+                          "location_id": 31,
+                          "product_id": 2916,
+                          "uom_id": 1,
+                          "lot_id": 452,
+                          "package_id": false,
+                          "pack_qty": false,
+                          "req_qty": 10
+                  },
+                  {
+                          "location_id": 31,
+                          "product_id": 2916,
+                          "uom_id": 1,
+                          "lot_id": 559,
+                          "package_id": false,
+                          "pack_qty": false,
+                          "req_qty": 20
+                  },
+                  {
+                          "location_id": 31,
+                          "product_id": 2916,
+                          "uom_id": 1,
+                          "lot_id": 558,
+                          "package_id": false,
+                          "pack_qty": false,
+                          "req_qty": 10
+                  }
+                  ]
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 13 Mar 2025 10:40:33 GMT
+      Content-Length: 2178
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "load_request_create_details": {
+                        "request_id": 6,
+                        "name": "New",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "approved_by": null,
+                        "created_by": 10,
+                        "created_by_name": "Sales User 2",
+                        "employee_id": 7,
+                        "employee_name": "Sales User 2",
+                        "origin": "ORINGIN00001",
+                        "location_id": 31,
+                        "location_name": "90814",
+                        "resellable_location_id": 33,
+                        "resellable_location_name": "Re-Sellable Location",
+                        "non_resellable_location_id": 32,
+                        "non_resellable_location_name": "Non Sellable Location",
+                        "location_dest_id": 8,
+                        "location_dest_name": "Stock",
+                        "create_date": "2025-03-13 10:40:33",
+                        "approved_date": null,
+                        "delivered_by": null,
+                        "delivered_name": null,
+                        "received_date": null,
+                        "validated_by": null,
+                        "validated_name": null,
+                        "validate_sign": null,
+                        "accepted_by": null,
+                        "accepted_name": null,
+                        "accept_sign": null,
+                        "state": "draft",
+                        "unload_lines": [
+                            {
+                                "request_line_id": 67,
+                                "unload_request_id": 6,
+                                "unload_request_name": "New",
+                                "location_id": 31,
+                                "location_name": "90814",
+                                "location_dest_id": 8,
+                                "location_dest_name": "Stock",
+                                "product_id": 2916,
+                                "product_name": "Arun Ice Cream Vanila 12s Pack",
+                                "internal_ref": "A200203",
+                                "product_uom_category_id": 1,
+                                "product_uom_category_name": "Unit",
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "lot_id": 451,
+                                "lot_name": "AIC0001",
+                                "package_id": null,
+                                "package_name": null,
+                                "qty_in_package": 0,
+                                "pack_qty_available": 28,
+                                "pack_demand_available": 0,
+                                "qty_available": 28,
+                                "demand_available": 10,
+                                "value": 336
+                            },
+                            {
+                                "request_line_id": 68,
+                                "unload_request_id": 6,
+                                "unload_request_name": "New",
+                                "location_id": 31,
+                                "location_name": "90814",
+                                "location_dest_id": 8,
+                                "location_dest_name": "Stock",
+                                "product_id": 2916,
+                                "product_name": "Arun Ice Cream Vanila 12s Pack",
+                                "internal_ref": "A200203",
+                                "product_uom_category_id": 1,
+                                "product_uom_category_name": "Unit",
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "lot_id": 452,
+                                "lot_name": "AIC0003",
+                                "package_id": null,
+                                "package_name": null,
+                                "qty_in_package": 0,
+                                "pack_qty_available": 50,
+                                "pack_demand_available": 0,
+                                "qty_available": 50,
+                                "demand_available": 10,
+                                "value": 600
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Unload Request Create
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_unload_request
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "location_id": 31,
+                  "resellable_location_id": 33,
+                  "non_resellable_location_id": 32,
+                  "dest_location_id": 8,
+                  "origin": "ORINGIN00001",
+                  "unload_lines": [
+                      {
+                          "location_id": 31,
+                          "product_id": 2916,
+                          "uom_id": 1,
+                          "lot_id": 451,
+                          "package_id": false,
+                          "pack_qty": false,
+                          "req_qty": 10
+                      },
+                      {
+                          "location_id": 31,
+                          "product_id": 2916,
+                          "uom_id": 1,
+                          "lot_id": 452,
+                          "package_id": false,
+                          "pack_qty": false,
+                          "req_qty": 10
+                  },
+                  {
+                          "location_id": 31,
+                          "product_id": 2916,
+                          "uom_id": 1,
+                          "lot_id": 559,
+                          "package_id": false,
+                          "pack_qty": false,
+                          "req_qty": 20
+                  },
+                  {
+                          "location_id": 31,
+                          "product_id": 2916,
+                          "uom_id": 1,
+                          "lot_id": 558,
+                          "package_id": false,
+                          "pack_qty": false,
+                          "req_qty": 10
+                  }
+                  ]
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 13 Mar 2025 10:40:33 GMT
+      Content-Length: 2178
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "load_request_create_details": {
+                        "request_id": 6,
+                        "name": "New",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "approved_by": null,
+                        "created_by": 10,
+                        "created_by_name": "Sales User 2",
+                        "employee_id": 7,
+                        "employee_name": "Sales User 2",
+                        "origin": "ORINGIN00001",
+                        "location_id": 31,
+                        "location_name": "90814",
+                        "resellable_location_id": 33,
+                        "resellable_location_name": "Re-Sellable Location",
+                        "non_resellable_location_id": 32,
+                        "non_resellable_location_name": "Non Sellable Location",
+                        "location_dest_id": 8,
+                        "location_dest_name": "Stock",
+                        "create_date": "2025-03-13 10:40:33",
+                        "approved_date": null,
+                        "delivered_by": null,
+                        "delivered_name": null,
+                        "received_date": null,
+                        "validated_by": null,
+                        "validated_name": null,
+                        "validate_sign": null,
+                        "accepted_by": null,
+                        "accepted_name": null,
+                        "accept_sign": null,
+                        "state": "draft",
+                        "unload_lines": [
+                            {
+                                "request_line_id": 67,
+                                "unload_request_id": 6,
+                                "unload_request_name": "New",
+                                "location_id": 31,
+                                "location_name": "90814",
+                                "location_dest_id": 8,
+                                "location_dest_name": "Stock",
+                                "product_id": 2916,
+                                "product_name": "Arun Ice Cream Vanila 12s Pack",
+                                "internal_ref": "A200203",
+                                "product_uom_category_id": 1,
+                                "product_uom_category_name": "Unit",
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "lot_id": 451,
+                                "lot_name": "AIC0001",
+                                "package_id": null,
+                                "package_name": null,
+                                "qty_in_package": 0,
+                                "pack_qty_available": 28,
+                                "pack_demand_available": 0,
+                                "qty_available": 28,
+                                "demand_available": 10,
+                                "value": 336
+                            },
+                            {
+                                "request_line_id": 68,
+                                "unload_request_id": 6,
+                                "unload_request_name": "New",
+                                "location_id": 31,
+                                "location_name": "90814",
+                                "location_dest_id": 8,
+                                "location_dest_name": "Stock",
+                                "product_id": 2916,
+                                "product_name": "Arun Ice Cream Vanila 12s Pack",
+                                "internal_ref": "A200203",
+                                "product_uom_category_id": 1,
+                                "product_uom_category_name": "Unit",
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "lot_id": 452,
+                                "lot_name": "AIC0003",
+                                "package_id": null,
+                                "package_name": null,
+                                "qty_in_package": 0,
+                                "pack_qty_available": 50,
+                                "pack_demand_available": 0,
+                                "qty_available": 50,
+                                "demand_available": 10,
+                                "value": 600
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

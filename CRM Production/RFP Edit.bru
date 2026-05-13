@@ -1,0 +1,641 @@
+meta {
+  name: RFP Edit
+  type: http
+  seq: 13
+}
+
+post {
+  url: http://localhost:8069/web/mobile_edit_rfp
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "rfp_id": 212,
+              "segment_id": 5,
+              "sub_segment_id": 63,
+              "dimensions_line_ids": [
+                  {
+                          "id": false,
+                          "quantity": 5,
+                          "packaging_type_id": 1,
+                          "packaging_type_name": "Carton",
+                          "nature": "Electronics",
+                          "length": 120.0,
+                          "width": 100.0,
+                          "height": 150.0,
+                          "type": "scm",
+                          "value": 6000.0,
+                          "gross": 5000.0,
+                          "chargeable_weight": 8000.0,
+                          "volume": 1.8
+                      },
+                  {   
+                      "id": 612,
+                      "quantity": 3,
+                      "packaging_type_id": 1,
+                      "nature": "Electronics",
+                      "length": 30.0,
+                      "width": 100.0,
+                      "height": 125.0,
+                      "type": "scm",
+                      "value": 6000.0,
+                      "gross": 5000.0,
+                      "chargeable_weight":6500,
+                      "volume": 1.8
+                  }
+              ]
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: RFP Edit
+  
+  request: {
+    url: http://localhost:8069/web/mobile_edit_rfp
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "rfp_id": 212,
+                  "segment_id": 5,
+                  "sub_segment_id": 63,
+                  "dimensions_line_ids": [
+                      {   
+                          "id": 612,
+                          "quantity": 3,
+                          "packaging_type_id": 1,
+                          "nature": "Electronics",
+                          "length": 30.0,
+                          "width": 100.0,
+                          "height": 125.0,
+                          "type": "scm",
+                          "value": 6000.0,
+                          "gross": 5000.0,
+                          "chargeable_weight":6500,
+                          "volume": 1.8
+                      }
+                  ]
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 4884
+      Set-Cookie: session_id=8b81c9d4212b10fef167a337b7f2576b55062368; Expires=Mon, 04-Nov-2024 12:37:46 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Tue, 06 Aug 2024 12:37:46 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "edit_rfp_details": {
+                        "id": 212,
+                        "name": "RFP000212",
+                        "contact_type": "new_contact",
+                        "customer_contact_type": "new",
+                        "user_id": 96,
+                        "user_name": "Lance Dsouza",
+                        "employee_id": 328,
+                        "employee_name": "Lance Dsouza",
+                        "account_manager_id": 328,
+                        "account_manager_name": "Lance Dsouza",
+                        "service_type": null,
+                        "service_type_name": null,
+                        "sub_segment_id": 63,
+                        "sub_segment_name": "AIR - SEA",
+                        "segment_id": 5,
+                        "segment_name": "TRANSHIPMENT",
+                        "segment_code": "AS",
+                        "main_segment_type": "IMPORT",
+                        "segment_type_status": "air",
+                        "import_seg_type_status": "air",
+                        "export_seg_type_status": "sea",
+                        "created_from_crm": true,
+                        "sub_segment_type_required": true,
+                        "sub_segment_type": null,
+                        "sub_segment_type_name": null,
+                        "freight_mode_id": null,
+                        "freight_mode_name": null,
+                        "list_of_documents": [],
+                        "collection_date": null,
+                        "special_remarks": null,
+                        "chargeable_weight": 19500,
+                        "gross_weight": 14000,
+                        "no_of_packages": 13,
+                        "total_volume": 5.4,
+                        "cont_charg_weight": null,
+                        "cont_gross_weight": null,
+                        "cont_no_package": null,
+                        "cont_volume": null,
+                        "dimensions_line_ids": [
+                            {
+                                "id": 611,
+                                "quantity": 5,
+                                "packaging_type_id": 1,
+                                "packaging_type_name": "Carton",
+                                "nature": "Electronics",
+                                "length": 120,
+                                "width": 100,
+                                "height": 150,
+                                "type": "scm",
+                                "value": 6000,
+                                "gross": 5000,
+                                "chargeable_weight": 8000,
+                                "volume": 1.8
+                            },
+                            {
+                                "id": 612,
+                                "quantity": 3,
+                                "packaging_type_id": 1,
+                                "packaging_type_name": "Carton",
+                                "nature": "Electronics",
+                                "length": 30,
+                                "width": 100,
+                                "height": 125,
+                                "type": "scm",
+                                "value": 6000,
+                                "gross": 5000,
+                                "chargeable_weight": 6500,
+                                "volume": 1.8
+                            },
+                            {
+                                "id": 613,
+                                "quantity": 5,
+                                "packaging_type_id": 1,
+                                "packaging_type_name": "Carton",
+                                "nature": "Electronics",
+                                "length": 120,
+                                "width": 100,
+                                "height": 150,
+                                "type": "scm",
+                                "value": 3200,
+                                "gross": 4000,
+                                "chargeable_weight": 5000,
+                                "volume": 1.8
+                            }
+                        ],
+                        "container_line_ids": [],
+                        "commodity": null,
+                        "package_type_id": 2,
+                        "package_type_name": "Volume Based",
+                        "show_dimension": true,
+                        "partner_id": 1836,
+                        "partner_name": "GlobeX Logistics ",
+                        "syn_quotation_id": null,
+                        "syn_quotation_name": null,
+                        "quotation_status": null,
+                        "crm_id": 244,
+                        "crm_name": "00135",
+                        "crm_reference_date": "2024-08-01 10:40:55.221707",
+                        "customer_name": "GlobeX Logistics ",
+                        "customer_contact": null,
+                        "customer_contact_id": null,
+                        "customer_contact_name": null,
+                        "customer_email": "globex@gmail.com",
+                        "customer_phone": "589079071",
+                        "customer_contact_email": null,
+                        "customer_contact_phone": null,
+                        "vat": null,
+                        "customer_street": null,
+                        "customer_street2": null,
+                        "customer_zip": null,
+                        "customer_city": null,
+                        "customer_state_id": null,
+                        "customer_state_name": null,
+                        "customer_country_id": null,
+                        "customer_country_name": null,
+                        "sales_coordinator_id": null,
+                        "sales_coordinator_name": null,
+                        "sales_manager_id": null,
+                        "sales_manager_name": null,
+                        "pricing_emp_ids": [
+                            {
+                                "id": 312,
+                                "name": "Ahamed Mansoor"
+                            },
+                            {
+                                "id": 326,
+                                "name": "Laarnie Alviola"
+                            },
+                            {
+                                "id": 330,
+                                "name": "Lovely Merl Garcia"
+                            },
+                            {
+                                "id": 349,
+                                "name": "Synergia"
+                            }
+                        ],
+                        "quot_send_time": null,
+                        "is_acc_mail_send": null,
+                        "company_id": 1,
+                        "company_name": "Prime Logistics FZCO",
+                        "transient_country_id": null,
+                        "transient_country_name": null,
+                        "por_pol_country_id": null,
+                        "por_pol_country_name": null,
+                        "air_por": null,
+                        "air_por_name": null,
+                        "air_pol": null,
+                        "air_pol_name": null,
+                        "air_pod": null,
+                        "air_pod_name": null,
+                        "air_fdc": null,
+                        "air_fdc_name": null,
+                        "tranition_loc": null,
+                        "tranition_loc_name": null,
+                        "pod_fdc_country_id": null,
+                        "pod_fdc_country_name": null,
+                        "sea_por": null,
+                        "sea_por_name": null,
+                        "sea_pol": null,
+                        "sea_pol_name": null,
+                        "sea_pod": null,
+                        "sea_pod_name": null,
+                        "sea_fdc": null,
+                        "sea_fdc_name": null,
+                        "dimension_type": "scm",
+                        "road_por": null,
+                        "road_por_name": null,
+                        "road_podis": null,
+                        "road_podis_name": null,
+                        "road_pol": null,
+                        "road_pol_name": null,
+                        "road_pod": null,
+                        "road_pod_name": null,
+                        "quotation_submitted_on": null,
+                        "quotation_sent_on": null,
+                        "kpi_status": "waiting",
+                        "consignee_email": "globex@gmail.com",
+                        "consignee_phone": "589079071",
+                        "consignee_street": null,
+                        "consignee_street2": null,
+                        "consignee_zip": null,
+                        "consignee_city": null,
+                        "consignee_state_id": null,
+                        "consignee_state_name": null,
+                        "consignee_country_id": null,
+                        "consignee_country_name": null,
+                        "shipper_email": "globex@gmail.com",
+                        "shipper_phone": "589079071",
+                        "shipper_street": null,
+                        "shipper_street2": null,
+                        "shipper_zip": null,
+                        "shipper_city": null,
+                        "shipper_state_id": null,
+                        "shipper_state_name": null,
+                        "shipper_country_id": null,
+                        "shipper_country_name": null,
+                        "is_pricing_team": null,
+                        "sub_seg_type_ids": [
+                            {
+                                "id": 1,
+                                "name": "LCL"
+                            },
+                            {
+                                "id": 2,
+                                "name": "FCL"
+                            }
+                        ],
+                        "create_date_status": "2024-08-01",
+                        "shipment_type": null,
+                        "shipper_type": "same_cus",
+                        "consignee_type": "same_cus",
+                        "shipper_id": 1836,
+                        "shipper_name": "GlobeX Logistics ",
+                        "consignee_id": 1836,
+                        "consignee_name": "GlobeX Logistics ",
+                        "state": "draft"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: RFP Edit
+  
+  request: {
+    url: http://localhost:8069/web/mobile_edit_rfp
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "rfp_id": 212,
+                  "segment_id": 5,
+                  "sub_segment_id": 63,
+                  "dimensions_line_ids": [
+                      {   
+                          "id": 612,
+                          "quantity": 3,
+                          "packaging_type_id": 1,
+                          "nature": "Electronics",
+                          "length": 30.0,
+                          "width": 100.0,
+                          "height": 125.0,
+                          "type": "scm",
+                          "value": 6000.0,
+                          "gross": 5000.0,
+                          "chargeable_weight":6500,
+                          "volume": 1.8
+                      }
+                  ]
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 4884
+      Set-Cookie: session_id=8b81c9d4212b10fef167a337b7f2576b55062368; Expires=Mon, 04-Nov-2024 12:37:46 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Tue, 06 Aug 2024 12:37:46 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "edit_rfp_details": {
+                        "id": 212,
+                        "name": "RFP000212",
+                        "contact_type": "new_contact",
+                        "customer_contact_type": "new",
+                        "user_id": 96,
+                        "user_name": "Lance Dsouza",
+                        "employee_id": 328,
+                        "employee_name": "Lance Dsouza",
+                        "account_manager_id": 328,
+                        "account_manager_name": "Lance Dsouza",
+                        "service_type": null,
+                        "service_type_name": null,
+                        "sub_segment_id": 63,
+                        "sub_segment_name": "AIR - SEA",
+                        "segment_id": 5,
+                        "segment_name": "TRANSHIPMENT",
+                        "segment_code": "AS",
+                        "main_segment_type": "IMPORT",
+                        "segment_type_status": "air",
+                        "import_seg_type_status": "air",
+                        "export_seg_type_status": "sea",
+                        "created_from_crm": true,
+                        "sub_segment_type_required": true,
+                        "sub_segment_type": null,
+                        "sub_segment_type_name": null,
+                        "freight_mode_id": null,
+                        "freight_mode_name": null,
+                        "list_of_documents": [],
+                        "collection_date": null,
+                        "special_remarks": null,
+                        "chargeable_weight": 19500,
+                        "gross_weight": 14000,
+                        "no_of_packages": 13,
+                        "total_volume": 5.4,
+                        "cont_charg_weight": null,
+                        "cont_gross_weight": null,
+                        "cont_no_package": null,
+                        "cont_volume": null,
+                        "dimensions_line_ids": [
+                            {
+                                "id": 611,
+                                "quantity": 5,
+                                "packaging_type_id": 1,
+                                "packaging_type_name": "Carton",
+                                "nature": "Electronics",
+                                "length": 120,
+                                "width": 100,
+                                "height": 150,
+                                "type": "scm",
+                                "value": 6000,
+                                "gross": 5000,
+                                "chargeable_weight": 8000,
+                                "volume": 1.8
+                            },
+                            {
+                                "id": 612,
+                                "quantity": 3,
+                                "packaging_type_id": 1,
+                                "packaging_type_name": "Carton",
+                                "nature": "Electronics",
+                                "length": 30,
+                                "width": 100,
+                                "height": 125,
+                                "type": "scm",
+                                "value": 6000,
+                                "gross": 5000,
+                                "chargeable_weight": 6500,
+                                "volume": 1.8
+                            },
+                            {
+                                "id": 613,
+                                "quantity": 5,
+                                "packaging_type_id": 1,
+                                "packaging_type_name": "Carton",
+                                "nature": "Electronics",
+                                "length": 120,
+                                "width": 100,
+                                "height": 150,
+                                "type": "scm",
+                                "value": 3200,
+                                "gross": 4000,
+                                "chargeable_weight": 5000,
+                                "volume": 1.8
+                            }
+                        ],
+                        "container_line_ids": [],
+                        "commodity": null,
+                        "package_type_id": 2,
+                        "package_type_name": "Volume Based",
+                        "show_dimension": true,
+                        "partner_id": 1836,
+                        "partner_name": "GlobeX Logistics ",
+                        "syn_quotation_id": null,
+                        "syn_quotation_name": null,
+                        "quotation_status": null,
+                        "crm_id": 244,
+                        "crm_name": "00135",
+                        "crm_reference_date": "2024-08-01 10:40:55.221707",
+                        "customer_name": "GlobeX Logistics ",
+                        "customer_contact": null,
+                        "customer_contact_id": null,
+                        "customer_contact_name": null,
+                        "customer_email": "globex@gmail.com",
+                        "customer_phone": "589079071",
+                        "customer_contact_email": null,
+                        "customer_contact_phone": null,
+                        "vat": null,
+                        "customer_street": null,
+                        "customer_street2": null,
+                        "customer_zip": null,
+                        "customer_city": null,
+                        "customer_state_id": null,
+                        "customer_state_name": null,
+                        "customer_country_id": null,
+                        "customer_country_name": null,
+                        "sales_coordinator_id": null,
+                        "sales_coordinator_name": null,
+                        "sales_manager_id": null,
+                        "sales_manager_name": null,
+                        "pricing_emp_ids": [
+                            {
+                                "id": 312,
+                                "name": "Ahamed Mansoor"
+                            },
+                            {
+                                "id": 326,
+                                "name": "Laarnie Alviola"
+                            },
+                            {
+                                "id": 330,
+                                "name": "Lovely Merl Garcia"
+                            },
+                            {
+                                "id": 349,
+                                "name": "Synergia"
+                            }
+                        ],
+                        "quot_send_time": null,
+                        "is_acc_mail_send": null,
+                        "company_id": 1,
+                        "company_name": "Prime Logistics FZCO",
+                        "transient_country_id": null,
+                        "transient_country_name": null,
+                        "por_pol_country_id": null,
+                        "por_pol_country_name": null,
+                        "air_por": null,
+                        "air_por_name": null,
+                        "air_pol": null,
+                        "air_pol_name": null,
+                        "air_pod": null,
+                        "air_pod_name": null,
+                        "air_fdc": null,
+                        "air_fdc_name": null,
+                        "tranition_loc": null,
+                        "tranition_loc_name": null,
+                        "pod_fdc_country_id": null,
+                        "pod_fdc_country_name": null,
+                        "sea_por": null,
+                        "sea_por_name": null,
+                        "sea_pol": null,
+                        "sea_pol_name": null,
+                        "sea_pod": null,
+                        "sea_pod_name": null,
+                        "sea_fdc": null,
+                        "sea_fdc_name": null,
+                        "dimension_type": "scm",
+                        "road_por": null,
+                        "road_por_name": null,
+                        "road_podis": null,
+                        "road_podis_name": null,
+                        "road_pol": null,
+                        "road_pol_name": null,
+                        "road_pod": null,
+                        "road_pod_name": null,
+                        "quotation_submitted_on": null,
+                        "quotation_sent_on": null,
+                        "kpi_status": "waiting",
+                        "consignee_email": "globex@gmail.com",
+                        "consignee_phone": "589079071",
+                        "consignee_street": null,
+                        "consignee_street2": null,
+                        "consignee_zip": null,
+                        "consignee_city": null,
+                        "consignee_state_id": null,
+                        "consignee_state_name": null,
+                        "consignee_country_id": null,
+                        "consignee_country_name": null,
+                        "shipper_email": "globex@gmail.com",
+                        "shipper_phone": "589079071",
+                        "shipper_street": null,
+                        "shipper_street2": null,
+                        "shipper_zip": null,
+                        "shipper_city": null,
+                        "shipper_state_id": null,
+                        "shipper_state_name": null,
+                        "shipper_country_id": null,
+                        "shipper_country_name": null,
+                        "is_pricing_team": null,
+                        "sub_seg_type_ids": [
+                            {
+                                "id": 1,
+                                "name": "LCL"
+                            },
+                            {
+                                "id": 2,
+                                "name": "FCL"
+                            }
+                        ],
+                        "create_date_status": "2024-08-01",
+                        "shipment_type": null,
+                        "shipper_type": "same_cus",
+                        "consignee_type": "same_cus",
+                        "shipper_id": 1836,
+                        "shipper_name": "GlobeX Logistics ",
+                        "consignee_id": 1836,
+                        "consignee_name": "GlobeX Logistics ",
+                        "state": "draft"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

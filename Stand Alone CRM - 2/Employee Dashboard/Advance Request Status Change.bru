@@ -1,0 +1,641 @@
+meta {
+  name: Advance Request Status Change
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://localhost:8070/web/request_advance_salary_status_change
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "advance_request_id": 10,
+              "status": "reject",
+              "reason": "Lmit Reached"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Advance Request Status Change - First Approve
+  
+  request: {
+    url: http://localhost:8070/web/request_advance_salary_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "advance_request_id": 10,
+                  "status": "approve",
+                  "approver_signature": "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\ntWTJkjh8+HCsWLEiisXioGb6+/tjzZo10dTU5\nI/okhttp.OkHttpClient: OVhQFXcwwFExNBeHvapT30qVq1a5eVhwCcSHMCH\nzJ07NzZu3FhVeIwfPz7Wrl0bCxcuTNwMGMkEB/D/VCqVmDt3bmzdurWquYkTJ8ZDDz0U3/3ud5M2\nA0YqwQF8rEqlEjNnzoxXX321qrnW1tZYv3698ACOcdMo8LFKpVL84Q9/iO7u7pg+ffqg5w4cOBDX\nXHNNtLS0xJNPPpm4ITBSCA7gE02ePDl27twZnZ2dMXXq1EHPVSqVuPbaa+OUU04RHjDGuaQCVK1c\nLsfs2bPjzTffrGqutbU1HnzwwbjmmmuSNgPqleAAhqy7uzsuu+yyqr+50traGqtWrfJUC4whLqkA\nQ9be3h7d3d3R2dkZ7e3tg547cOBAXH/99dHS0hJr167NWxCoG044gGFTLpfjO9/5TvzlL3+pam78\n+PFx3333xU033ZS0GVBrTjiAYdPR0RFvvPFGdHZ2xvnnnz/ouffffz9uvvnmmDBhQtx3332JGwK1\n4oQDSFMul+N73/tedHV1VTXX1NQU8+fPj4ceeihpM+BEc8IBpOno6IhyuRydnZ3x5S9/OQqFwqDm\nent74+GHH47Gxsa46aabolKpJG8KZHPCAZww5XI5brjhhti5c2dV32ppaGiIr33ta7Fx48YolUqJ\nGwJZnHAAJ0xHR0e88sorsWfPnvjmN7856Ln+/v7Ytm1btLS0xPTp06NcLiduCWRwwgHUTKVSifnz\n58fmzZurOvGIiDj77LPj/vvvrypcgNpxwgHUTKlUimeffTYOHDgQixcvjmKxOOjZPXv2xKxZs6Kt\nrS2eeOKJxC2B4eCEA6grd9xxR/zsZz+Lnp6equZKpVJs2LAhvv3tbydtBhwPwQHUpXvvvTdWr14d\n77333qBnSqVS7N27142lUIdcUgHq0p133hkHDx6MRx55JD7/+c8PaqZSqcSuXbuSNwOGQnAAdW3h\nwoWxb9++ePHFF2PatGm1XgcYIpdUgBGlu7s7Fi1aFNu3b4/+/v4P/bOJEyd6SRjUKSccwIjS3t4e\nv/3tb+Ott96KefPmxZQpU+Izn/lMfOtb34qXXnqp1usBH8MJBwCQzgkHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJDu3/pyMJVRt7STAAAAAElFTkSuQmCC\n"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 05 Feb 2026 11:59:55 GMT
+      Content-Length: 1929
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "advance_request_details": {
+                        "id": 10,
+                        "name": "SAR 0009",
+                        "adv_request_type": "salary_adv",
+                        "advance_payment_type": "fixed",
+                        "employee_id": 45,
+                        "employee_name": "Saravanan",
+                        "date": "2026-02-05",
+                        "reason": "Sample Advance Payment",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "advance": 5500,
+                        "department_id": 7,
+                        "department_name": "Administration",
+                        "barcode": null,
+                        "job_id": 20,
+                        "job_name": "Operation Manager",
+                        "work_address_id": 1,
+                        "work_address_name": "Synergia Softwares IT infrastructure LLC",
+                        "work_location_id": 1,
+                        "work_location_name": "Dubai",
+                        "debit_id": 202,
+                        "debit_name": "Salary Advance",
+                        "credit_id": null,
+                        "credit_name": null,
+                        "employee_contract_id": null,
+                        "employee_contract_name": null,
+                        "wage": null,
+                        "adv_pay_duration": 3,
+                        "installment_amount": 1833.3333333333333,
+                        "start_installment_date": "2026-03-01",
+                        "last_installment_date": null,
+                        "remaining_amount": 5500,
+                        "paid_amount": null,
+                        "adv_request_payment_ids": null,
+                        "total_comp_currency_amount": 5500,
+                        "payment_voucher_count": null,
+                        "receipt_voucher_count": null,
+                        "payment_voucher_ids": null,
+                        "employee_violation_id": null,
+                        "employee_violation_name": null,
+                        "violation_amount": null,
+                        "signature_approve": "http://localhost:8070/web/url_image?model=advance.request&id=10&field=signature_approve",
+                        "approved_by": null,
+                        "approved_name": null,
+                        "approved_on": "2026-02-05 11:59:55",
+                        "department_signature_approve": null,
+                        "department_approved_on": null,
+                        "company_currency_id": 128,
+                        "company_currency_name": "AED",
+                        "pre_payment_ids": null,
+                        "additional_curr": null,
+                        "deduction_type": "deduct",
+                        "deduction_config_id": null,
+                        "deduction_config_name": null,
+                        "max_allowed_adv": 5500,
+                        "is_emp_adv_self_service": null,
+                        "state": "waiting_approval"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Advance Request Status Change - Cancel
+  
+  request: {
+    url: http://localhost:8070/web/request_advance_salary_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "advance_request_id": 10,
+                  "status": "cancel"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 05 Feb 2026 12:06:18 GMT
+      Content-Length: 1919
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "advance_request_details": {
+                        "id": 10,
+                        "name": "SAR 0009",
+                        "adv_request_type": "salary_adv",
+                        "advance_payment_type": "fixed",
+                        "employee_id": 45,
+                        "employee_name": "Saravanan",
+                        "date": "2026-02-05",
+                        "reason": "Sample Advance Payment",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "advance": 5500,
+                        "department_id": 7,
+                        "department_name": "Administration",
+                        "barcode": null,
+                        "job_id": 20,
+                        "job_name": "Operation Manager",
+                        "work_address_id": 1,
+                        "work_address_name": "Synergia Softwares IT infrastructure LLC",
+                        "work_location_id": 1,
+                        "work_location_name": "Dubai",
+                        "debit_id": 202,
+                        "debit_name": "Salary Advance",
+                        "credit_id": null,
+                        "credit_name": null,
+                        "employee_contract_id": null,
+                        "employee_contract_name": null,
+                        "wage": null,
+                        "adv_pay_duration": 3,
+                        "installment_amount": 1833.3333333333333,
+                        "start_installment_date": "2026-03-01",
+                        "last_installment_date": null,
+                        "remaining_amount": 5500,
+                        "paid_amount": null,
+                        "adv_request_payment_ids": null,
+                        "total_comp_currency_amount": 5500,
+                        "payment_voucher_count": null,
+                        "receipt_voucher_count": null,
+                        "payment_voucher_ids": null,
+                        "employee_violation_id": null,
+                        "employee_violation_name": null,
+                        "violation_amount": null,
+                        "signature_approve": "http://localhost:8070/web/url_image?model=advance.request&id=10&field=signature_approve",
+                        "approved_by": null,
+                        "approved_name": null,
+                        "approved_on": "2026-02-05 12:02:35",
+                        "department_signature_approve": null,
+                        "department_approved_on": null,
+                        "company_currency_id": 128,
+                        "company_currency_name": "AED",
+                        "pre_payment_ids": null,
+                        "additional_curr": null,
+                        "deduction_type": "deduct",
+                        "deduction_config_id": null,
+                        "deduction_config_name": null,
+                        "max_allowed_adv": 5500,
+                        "is_emp_adv_self_service": null,
+                        "state": "cancel"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Advance Request Status Change - Final Approval
+  
+  request: {
+    url: http://localhost:8070/web/request_advance_salary_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "advance_request_id": 10,
+                  "status": "second_approve",
+                  "approver_signature": "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\ntWTJkjh8+HCsWLEiisXioGb6+/tjzZo10dTU5\nI/okhttp.OkHttpClient: OVhQFXcwwFExNBeHvapT30qVq1a5eVhwCcSHMCH\nzJ07NzZu3FhVeIwfPz7Wrl0bCxcuTNwMGMkEB/D/VCqVmDt3bmzdurWquYkTJ8ZDDz0U3/3ud5M2\nA0YqwQF8rEqlEjNnzoxXX321qrnW1tZYv3698ACOcdMo8LFKpVL84Q9/iO7u7pg+ffqg5w4cOBDX\nXHNNtLS0xJNPPpm4ITBSCA7gE02ePDl27twZnZ2dMXXq1EHPVSqVuPbaa+OUU04RHjDGuaQCVK1c\nLsfs2bPjzTffrGqutbU1HnzwwbjmmmuSNgPqleAAhqy7uzsuu+yyqr+50traGqtWrfJUC4whLqkA\nQ9be3h7d3d3R2dkZ7e3tg547cOBAXH/99dHS0hJr167NWxCoG044gGFTLpfjO9/5TvzlL3+pam78\n+PFx3333xU033ZS0GVBrTjiAYdPR0RFvvPFGdHZ2xvnnnz/ouffffz9uvvnmmDBhQtx3332JGwK1\n4oQDSFMul+N73/tedHV1VTXX1NQU8+fPj4ceeihpM+BEc8IBpOno6IhyuRydnZ3x5S9/OQqFwqDm\nent74+GHH47Gxsa46aabolKpJG8KZHPCAZww5XI5brjhhti5c2dV32ppaGiIr33ta7Fx48YolUqJ\nGwJZnHAAJ0xHR0e88sorsWfPnvjmN7856Ln+/v7Ytm1btLS0xPTp06NcLiduCWRwwgHUTKVSifnz\n58fmzZurOvGIiDj77LPj/vvvrypcgNpxwgHUTKlUimeffTYOHDgQixcvjmKxOOjZPXv2xKxZs6Kt\nrS2eeOKJxC2B4eCEA6grd9xxR/zsZz+Lnp6equZKpVJs2LAhvv3tbydtBhwPwQHUpXvvvTdWr14d\n77333qBnSqVS7N27142lUIdcUgHq0p133hkHDx6MRx55JD7/+c8PaqZSqcSuXbuSNwOGQnAAdW3h\nwoWxb9++ePHFF2PatGm1XgcYIpdUgBGlu7s7Fi1aFNu3b4/+/v4P/bOJEyd6SRjUKSccwIjS3t4e\nv/3tb+Ott96KefPmxZQpU+Izn/lMfOtb34qXXnqp1usBH8MJBwCQzgkHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBO\ncAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA\n6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQHAJBOcAAA6QQH\nAJBOcAAA6QQHAJDu3/pyMJVRt7STAAAAAElFTkSuQmCC\n"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 05 Feb 2026 12:06:54 GMT
+      Content-Length: 2425
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "advance_request_details": {
+                        "id": 10,
+                        "name": "SAR 0009",
+                        "adv_request_type": "salary_adv",
+                        "advance_payment_type": "fixed",
+                        "employee_id": 45,
+                        "employee_name": "Saravanan",
+                        "date": "2026-02-05",
+                        "reason": "Sample Advance Payment",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "advance": 5500,
+                        "department_id": 7,
+                        "department_name": "Administration",
+                        "barcode": null,
+                        "job_id": 20,
+                        "job_name": "Operation Manager",
+                        "work_address_id": 1,
+                        "work_address_name": "Synergia Softwares IT infrastructure LLC",
+                        "work_location_id": 1,
+                        "work_location_name": "Dubai",
+                        "debit_id": 202,
+                        "debit_name": "Salary Advance",
+                        "credit_id": null,
+                        "credit_name": null,
+                        "employee_contract_id": null,
+                        "employee_contract_name": null,
+                        "wage": null,
+                        "adv_pay_duration": 3,
+                        "installment_amount": 1833.3333333333333,
+                        "start_installment_date": "2026-03-01",
+                        "last_installment_date": null,
+                        "remaining_amount": 5500,
+                        "paid_amount": null,
+                        "adv_request_payment_ids": [
+                            {
+                                "id": 34,
+                                "date": "2026-03-01",
+                                "installment_amount": 1833.3333333333333,
+                                "partial_paid_amount": null,
+                                "deductable_amount": 1833.3333333333333,
+                                "state": "draft"
+                            },
+                            {
+                                "id": 35,
+                                "date": "2026-04-01",
+                                "installment_amount": 1833.3333333333333,
+                                "partial_paid_amount": null,
+                                "deductable_amount": 1833.3333333333333,
+                                "state": "draft"
+                            },
+                            {
+                                "id": 36,
+                                "date": "2026-05-01",
+                                "installment_amount": 1833.3333333333333,
+                                "partial_paid_amount": null,
+                                "deductable_amount": 1833.3333333333333,
+                                "state": "draft"
+                            }
+                        ],
+                        "total_comp_currency_amount": 5500,
+                        "payment_voucher_count": null,
+                        "receipt_voucher_count": null,
+                        "payment_voucher_ids": null,
+                        "employee_violation_id": null,
+                        "employee_violation_name": null,
+                        "violation_amount": null,
+                        "signature_approve": "http://localhost:8070/web/url_image?model=advance.request&id=10&field=signature_approve",
+                        "approved_by": null,
+                        "approved_name": null,
+                        "approved_on": "2026-02-05 12:06:46",
+                        "department_signature_approve": null,
+                        "department_approved_on": "2026-02-05 12:06:54",
+                        "company_currency_id": 128,
+                        "company_currency_name": "AED",
+                        "pre_payment_ids": null,
+                        "additional_curr": null,
+                        "deduction_type": "deduct",
+                        "deduction_config_id": null,
+                        "deduction_config_name": null,
+                        "max_allowed_adv": 5500,
+                        "is_emp_adv_self_service": null,
+                        "state": "approve"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Advance Request Status Change - Reject
+  
+  request: {
+    url: http://localhost:8070/web/request_advance_salary_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "advance_request_id": 10,
+                  "status": "reject",
+                  "reason": "Lmit Reached"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 05 Feb 2026 13:17:43 GMT
+      Content-Length: 2916
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "advance_request_details": {
+                        "id": 10,
+                        "name": "SAR 0009",
+                        "adv_request_type": "salary_adv",
+                        "advance_payment_type": "fixed",
+                        "employee_id": 45,
+                        "employee_name": "Saravanan",
+                        "date": "2026-02-05",
+                        "reason": "Sample Advance Payment",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "advance": 5500,
+                        "department_id": 7,
+                        "department_name": "Administration",
+                        "barcode": null,
+                        "job_id": 20,
+                        "job_name": "Operation Manager",
+                        "work_address_id": 1,
+                        "work_address_name": "Synergia Softwares IT infrastructure LLC",
+                        "work_location_id": 1,
+                        "work_location_name": "Dubai",
+                        "debit_id": 202,
+                        "debit_name": "Salary Advance",
+                        "credit_id": null,
+                        "credit_name": null,
+                        "employee_contract_id": null,
+                        "employee_contract_name": null,
+                        "wage": null,
+                        "adv_pay_duration": 3,
+                        "installment_amount": 1833.3333333333333,
+                        "start_installment_date": "2026-03-01",
+                        "last_installment_date": null,
+                        "remaining_amount": 5500,
+                        "paid_amount": null,
+                        "adv_request_payment_ids": null,
+                        "total_comp_currency_amount": 5500,
+                        "payment_voucher_count": null,
+                        "receipt_voucher_count": null,
+                        "payment_voucher_ids": null,
+                        "employee_violation_id": null,
+                        "employee_violation_name": null,
+                        "violation_amount": null,
+                        "signature_approve": "http://localhost:8070/web/url_image?model=advance.request&id=10&field=signature_approve",
+                        "approved_by": null,
+                        "approved_name": null,
+                        "approved_on": "2026-02-05 12:12:28",
+                        "department_signature_approve": null,
+                        "department_approved_on": "2026-02-05 12:12:55",
+                        "company_currency_id": 128,
+                        "company_currency_name": "AED",
+                        "pre_payment_ids": null,
+                        "additional_curr": null,
+                        "deduction_type": "deduct",
+                        "deduction_config_id": null,
+                        "deduction_config_name": null,
+                        "max_allowed_adv": 5500,
+                        "is_emp_adv_self_service": null,
+                        "state": "reject"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Advance Request Status Change - Cancel
+  
+  request: {
+    url: http://localhost:8070/web/request_advance_salary_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "advance_request_id": 10,
+                  "status": "cancel",
+                  "reason": "Not Working"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 05 Feb 2026 13:18:12 GMT
+      Content-Length: 2916
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "advance_request_details": {
+                        "id": 10,
+                        "name": "SAR 0009",
+                        "adv_request_type": "salary_adv",
+                        "advance_payment_type": "fixed",
+                        "employee_id": 45,
+                        "employee_name": "Saravanan",
+                        "date": "2026-02-05",
+                        "reason": "Sample Advance Payment",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "advance": 5500,
+                        "department_id": 7,
+                        "department_name": "Administration",
+                        "barcode": null,
+                        "job_id": 20,
+                        "job_name": "Operation Manager",
+                        "work_address_id": 1,
+                        "work_address_name": "Synergia Softwares IT infrastructure LLC",
+                        "work_location_id": 1,
+                        "work_location_name": "Dubai",
+                        "debit_id": 202,
+                        "debit_name": "Salary Advance",
+                        "credit_id": null,
+                        "credit_name": null,
+                        "employee_contract_id": null,
+                        "employee_contract_name": null,
+                        "wage": null,
+                        "adv_pay_duration": 3,
+                        "installment_amount": 1833.3333333333333,
+                        "start_installment_date": "2026-03-01",
+                        "last_installment_date": null,
+                        "remaining_amount": 5500,
+                        "paid_amount": null,
+                        "adv_request_payment_ids": null,
+                        "total_comp_currency_amount": 5500,
+                        "payment_voucher_count": null,
+                        "receipt_voucher_count": null,
+                        "payment_voucher_ids": null,
+                        "employee_violation_id": null,
+                        "employee_violation_name": null,
+                        "violation_amount": null,
+                        "signature_approve": "http://localhost:8070/web/url_image?model=advance.request&id=10&field=signature_approve",
+                        "approved_by": null,
+                        "approved_name": null,
+                        "approved_on": "2026-02-05 12:12:28",
+                        "department_signature_approve": null,
+                        "department_approved_on": "2026-02-05 12:12:55",
+                        "company_currency_id": 128,
+                        "company_currency_name": "AED",
+                        "pre_payment_ids": null,
+                        "additional_curr": null,
+                        "deduction_type": "deduct",
+                        "deduction_config_id": null,
+                        "deduction_config_name": null,
+                        "max_allowed_adv": 5500,
+                        "is_emp_adv_self_service": null,
+                        "state": "cancel"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

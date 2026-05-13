@@ -1,0 +1,367 @@
+meta {
+  name: GRN Put in pack
+  type: http
+  seq: 27
+}
+
+post {
+  url: https://wms.syntrack.app/web/grn_put_in_pack?db=WMS_BASE_NEW
+  body: json
+  auth: inherit
+}
+
+params:query {
+  db: WMS_BASE_NEW
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "grn_id": 217,
+              "inbound_detailed_line_ids": [
+                  {
+                      "expiration_date": "2024-06-21 10:00:00",
+                      "id": 900,
+                      "lot_id": 0,
+                      "lot_name": "SRDTTDF",
+                      "package_id": 0,
+                      "product_id": 49,
+                      "quantity_done": 5
+                  }
+              ]
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: GRN Put in pack
+  
+  request: {
+    url: https://wms.syntrack.app/web/grn_put_in_pack?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "grn_id": 217,
+                  "inbound_detailed_line_ids": [
+                      {
+                          "expiration_date": "2024-06-21 10:00:00",
+                          "id": 900,
+                          "lot_id": 0,
+                          "lot_name": "SRDTTDF",
+                          "package_id": 0,
+                          "product_id": 49,
+                          "quantity_done": 5
+                      }
+                  ]
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 05:38:53 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 05:38:53 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "grn_put_in_pack_details": {
+                        "id": 217,
+                        "name": "WH/IN/00129",
+                        "partner_id": null,
+                        "partner_name": null,
+                        "picking_type_id": 1,
+                        "picking_type_name": "Synergia: Receipts",
+                        "source_location_id": 4,
+                        "source_location_name": "Partner Locations/Vendors",
+                        "location_dest_id": 8,
+                        "location_dest_name": "WH/Stock",
+                        "scheduled_date": "2023-06-21 06:21:22",
+                        "date_done": null,
+                        "origin": null,
+                        "origin_date": null,
+                        "note": null,
+                        "state": "assigned",
+                        "inbound_line_ids": [
+                            {
+                                "id": 302,
+                                "product_id": 49,
+                                "product_name": "Fanta 300 Ml",
+                                "product_packaging_id": 83,
+                                "product_packaging_name": "Unit",
+                                "description": "Fanta 300 Ml",
+                                "date": "2023-06-21 06:21:22",
+                                "date_deadline": null,
+                                "product_uom_qty": 10,
+                                "quantity_done": 5,
+                                "pack_qty": 10,
+                                "recv_pack_qty": 5,
+                                "product_uom_id": 1,
+                                "product_uom": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/49/image_1920"
+                            }
+                        ],
+                        "inbound_detailed_line_ids": [
+                            {
+                                "id": 900,
+                                "product_id": 49,
+                                "product_name": "Fanta 300 Ml",
+                                "barcode": null,
+                                "location_dest_id": 8,
+                                "location_dest_name": "WH/Stock",
+                                "package_id": null,
+                                "package_name": null,
+                                "dest_package_id": null,
+                                "dest_package_name": null,
+                                "product_packaging_id": 83,
+                                "product_packaging_name": "Unit",
+                                "lot_name": null,
+                                "expiration_date": null,
+                                "quantity_done": null,
+                                "product_uom_qty": 5,
+                                "pack_qty": 5,
+                                "recv_pack_qty": null,
+                                "product_uom_id": 1,
+                                "product_uom_name": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/49/image_1920",
+                                "stock_move_id": 302
+                            },
+                            {
+                                "id": 901,
+                                "product_id": 49,
+                                "product_name": "Fanta 300 Ml",
+                                "barcode": null,
+                                "location_dest_id": 8,
+                                "location_dest_name": "WH/Stock",
+                                "package_id": null,
+                                "package_name": null,
+                                "dest_package_id": 176,
+                                "dest_package_name": "PACK0000176",
+                                "product_packaging_id": 83,
+                                "product_packaging_name": "Unit",
+                                "lot_name": "SRDTTDF",
+                                "expiration_date": "2024-06-21 10:00:00",
+                                "quantity_done": 5,
+                                "product_uom_qty": 5,
+                                "pack_qty": 5,
+                                "recv_pack_qty": 5,
+                                "product_uom_id": 1,
+                                "product_uom_name": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/49/image_1920",
+                                "stock_move_id": 302
+                            }
+                        ],
+                        "inbound_package_ids": [
+                            {
+                                "name": "PACK0000176",
+                                "packaging_id": null,
+                                "package_line_ids": null
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: GRN Put in pack
+  
+  request: {
+    url: https://wms.syntrack.app/web/grn_put_in_pack?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "grn_id": 217,
+                  "inbound_detailed_line_ids": [
+                      {
+                          "expiration_date": "2024-06-21 10:00:00",
+                          "id": 900,
+                          "lot_id": 0,
+                          "lot_name": "SRDTTDF",
+                          "package_id": 0,
+                          "product_id": 49,
+                          "quantity_done": 5
+                      }
+                  ]
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 05:38:53 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 05:38:53 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "grn_put_in_pack_details": {
+                        "id": 217,
+                        "name": "WH/IN/00129",
+                        "partner_id": null,
+                        "partner_name": null,
+                        "picking_type_id": 1,
+                        "picking_type_name": "Synergia: Receipts",
+                        "source_location_id": 4,
+                        "source_location_name": "Partner Locations/Vendors",
+                        "location_dest_id": 8,
+                        "location_dest_name": "WH/Stock",
+                        "scheduled_date": "2023-06-21 06:21:22",
+                        "date_done": null,
+                        "origin": null,
+                        "origin_date": null,
+                        "note": null,
+                        "state": "assigned",
+                        "inbound_line_ids": [
+                            {
+                                "id": 302,
+                                "product_id": 49,
+                                "product_name": "Fanta 300 Ml",
+                                "product_packaging_id": 83,
+                                "product_packaging_name": "Unit",
+                                "description": "Fanta 300 Ml",
+                                "date": "2023-06-21 06:21:22",
+                                "date_deadline": null,
+                                "product_uom_qty": 10,
+                                "quantity_done": 5,
+                                "pack_qty": 10,
+                                "recv_pack_qty": 5,
+                                "product_uom_id": 1,
+                                "product_uom": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/49/image_1920"
+                            }
+                        ],
+                        "inbound_detailed_line_ids": [
+                            {
+                                "id": 900,
+                                "product_id": 49,
+                                "product_name": "Fanta 300 Ml",
+                                "barcode": null,
+                                "location_dest_id": 8,
+                                "location_dest_name": "WH/Stock",
+                                "package_id": null,
+                                "package_name": null,
+                                "dest_package_id": null,
+                                "dest_package_name": null,
+                                "product_packaging_id": 83,
+                                "product_packaging_name": "Unit",
+                                "lot_name": null,
+                                "expiration_date": null,
+                                "quantity_done": null,
+                                "product_uom_qty": 5,
+                                "pack_qty": 5,
+                                "recv_pack_qty": null,
+                                "product_uom_id": 1,
+                                "product_uom_name": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/49/image_1920",
+                                "stock_move_id": 302
+                            },
+                            {
+                                "id": 901,
+                                "product_id": 49,
+                                "product_name": "Fanta 300 Ml",
+                                "barcode": null,
+                                "location_dest_id": 8,
+                                "location_dest_name": "WH/Stock",
+                                "package_id": null,
+                                "package_name": null,
+                                "dest_package_id": 176,
+                                "dest_package_name": "PACK0000176",
+                                "product_packaging_id": 83,
+                                "product_packaging_name": "Unit",
+                                "lot_name": "SRDTTDF",
+                                "expiration_date": "2024-06-21 10:00:00",
+                                "quantity_done": 5,
+                                "product_uom_qty": 5,
+                                "pack_qty": 5,
+                                "recv_pack_qty": 5,
+                                "product_uom_id": 1,
+                                "product_uom_name": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/49/image_1920",
+                                "stock_move_id": 302
+                            }
+                        ],
+                        "inbound_package_ids": [
+                            {
+                                "name": "PACK0000176",
+                                "packaging_id": null,
+                                "package_line_ids": null
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

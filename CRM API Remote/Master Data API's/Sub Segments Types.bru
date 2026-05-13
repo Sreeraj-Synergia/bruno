@@ -1,0 +1,146 @@
+meta {
+  name: Sub Segments Types
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8069/web/get_sub_segment_type_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Sub Segments Types
+  
+  request: {
+    url: http://172.105.55.55:8073/web/get_sub_segment_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 1252
+      Set-Cookie: session_id=5c3ca46c86c87dc929486e914d344aceef2da3e9; Expires=Sun, 22-Sep-2024 08:57:15 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 24 Jun 2024 08:57:15 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "sub_segment_types": [
+                        {
+                            "id": 1,
+                            "name": "LCL",
+                            "package_type_id": null,
+                            "package_type_name": null
+                        },
+                        {
+                            "id": 2,
+                            "name": "FCL",
+                            "package_type_id": null,
+                            "package_type_name": null
+                        },
+                        {
+                            "id": 3,
+                            "name": "LTL",
+                            "package_type_id": null,
+                            "package_type_name": null
+                        },
+                        {
+                            "id": 4,
+                            "name": "FTL",
+                            "package_type_id": null,
+                            "package_type_name": null
+                        },
+                        {
+                            "id": 5,
+                            "name": "Clearance",
+                            "package_type_id": null,
+                            "package_type_name": null
+                        },
+                        {
+                            "id": 6,
+                            "name": "Cash Handling",
+                            "package_type_id": null,
+                            "package_type_name": null
+                        },
+                        {
+                            "id": 7,
+                            "name": "WAREHOUSE INBOUND",
+                            "package_type_id": null,
+                            "package_type_name": null
+                        },
+                        {
+                            "id": 8,
+                            "name": "WAREHOUSE OUTBOUND",
+                            "package_type_id": null,
+                            "package_type_name": null
+                        },
+                        {
+                            "id": 9,
+                            "name": "Inbound",
+                            "package_type_id": null,
+                            "package_type_name": null
+                        },
+                        {
+                            "id": 10,
+                            "name": "Out Bound",
+                            "package_type_id": null,
+                            "package_type_name": null
+                        },
+                        {
+                            "id": 11,
+                            "name": "Storage charges",
+                            "package_type_id": null,
+                            "package_type_name": null
+                        },
+                        {
+                            "id": 12,
+                            "name": "Documentation charges",
+                            "package_type_id": null,
+                            "package_type_name": null
+                        },
+                        {
+                            "id": 13,
+                            "name": "Value added services",
+                            "package_type_id": null,
+                            "package_type_name": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

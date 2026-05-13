@@ -1,0 +1,139 @@
+meta {
+  name: Return Reasons
+  type: http
+  seq: 10
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_return_reasons
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  If the user wants to create a return against a invoice from mobile application all the return needs an return reason which can be fetched using this api to the mobile application
+}
+
+example {
+  name: Return Reasons
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_return_reasons
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 06 May 2025 07:06:40 GMT
+      Content-Length: 189
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "return_reasons": [
+                        {
+                            "id": 1,
+                            "name": "Damaged"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Expired"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Return Reasons
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_return_reasons
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 06 May 2025 07:06:40 GMT
+      Content-Length: 189
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "return_reasons": [
+                        {
+                            "id": 1,
+                            "name": "Damaged"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Expired"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

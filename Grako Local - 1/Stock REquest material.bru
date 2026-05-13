@@ -1,0 +1,25 @@
+meta {
+  name: Stock REquest material
+  type: http
+  seq: 65
+}
+
+get {
+  url: http://localhost:8090/web/get_pro_req_material_info
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "project_id": 57
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

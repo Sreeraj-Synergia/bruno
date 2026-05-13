@@ -1,0 +1,1235 @@
+meta {
+  name: Employee Details
+  type: http
+  seq: 23
+}
+
+post {
+  url: http://localhost:8069/web/get_employee_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Employee Details
+  
+  request: {
+    url: http://localhost:8069/web/get_employee_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 7026
+      Set-Cookie: session_id=5c3ca46c86c87dc929486e914d344aceef2da3e9; Expires=Tue, 24-Sep-2024 13:48:37 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Wed, 26 Jun 2024 13:48:37 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "employee_details": [
+                        {
+                            "id": 311,
+                            "name": "Achala Kumaranayake",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Account Manager",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 54 793 9796",
+                            "work_email": "achala.k@primelogistics.ae",
+                            "user_id": 100,
+                            "user_name": "Achala Kumaranayake",
+                            "territory_id": 1,
+                            "territory_name": "Barsha",
+                            "is_account_manager": true,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": false,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 312,
+                            "name": "Ahamed Mansoor",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 67,
+                            "department_name": "IT Department",
+                            "job_position_title": "IT Executive",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 402 3643",
+                            "work_email": "it@primelogistics.ae",
+                            "user_id": 111,
+                            "user_name": "Ahamed Mansoor",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": true,
+                            "general_manager": true,
+                            "is_import_team": true,
+                            "is_export_team": true,
+                            "is_brokerage_team": true,
+                            "is_warehouse_team": true,
+                            "is_financial_team": true
+                        },
+                        {
+                            "id": 318,
+                            "name": "Bandula Ratnayake",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Consultant",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 446 0554",
+                            "work_email": "corporatesales@primelogistics.ae",
+                            "user_id": 97,
+                            "user_name": "Bandula Ratnayake",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": false,
+                            "is_sales_manager": true,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 326,
+                            "name": "Laarnie Alviola",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 63,
+                            "department_name": "Commercial Pricing",
+                            "job_position_title": "Senior Pricing Executive",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 440 7787",
+                            "work_email": "laarnie.a@primelogistics.ae",
+                            "user_id": 120,
+                            "user_name": "Laarnie Alviola",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 328,
+                            "name": "Lance Dsouza",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Accounts Manager",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 50 292 4294",
+                            "work_email": "lance.d@primelogistics.ae",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "territory_id": 1,
+                            "territory_name": "Barsha",
+                            "is_account_manager": true,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": false,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 330,
+                            "name": "Lovely Merl Garcia",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 63,
+                            "department_name": "Commercial Pricing",
+                            "job_position_title": "Pricing Executive",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 440 1511",
+                            "work_email": "lovely.m@primelogistics.ae",
+                            "user_id": 121,
+                            "user_name": "Lovely Merl Garcia",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 331,
+                            "name": "Mariella Boongaling",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Cordinator",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 50 526 3100",
+                            "work_email": "ella@primelogistics.ae",
+                            "user_id": 133,
+                            "user_name": "Mariella Boongaling",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": true,
+                            "is_pricing_team": false,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": true,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 349,
+                            "name": "Synergia",
+                            "street": null,
+                            "street2": null,
+                            "city": null,
+                            "state_id": null,
+                            "state_name": null,
+                            "country_id": null,
+                            "country_name": null,
+                            "zip": null,
+                            "department_id": null,
+                            "department_name": null,
+                            "job_position_title": null,
+                            "work_phone": null,
+                            "work_mobile": null,
+                            "work_email": "admin@example.com",
+                            "user_id": 2,
+                            "user_name": "Synergia",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": true,
+                            "general_manager": true,
+                            "is_import_team": true,
+                            "is_export_team": true,
+                            "is_brokerage_team": true,
+                            "is_warehouse_team": true,
+                            "is_financial_team": true
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Employee Details
+  
+  request: {
+    url: http://localhost:8069/web/get_employee_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 6292
+      Set-Cookie: session_id=79d8a9e8a573a39cfbacdf31038d99c3dc882019; Expires=Wed, 25-Sep-2024 08:14:33 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Thu, 27 Jun 2024 08:14:33 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "employee_details": [
+                        {
+                            "id": 311,
+                            "name": "Achala Kumaranayake",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Account Manager",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 54 793 9796",
+                            "work_email": "achala.k@primelogistics.ae",
+                            "user_id": 100,
+                            "user_name": "Achala Kumaranayake",
+                            "territory_id": 1,
+                            "territory_name": "Barsha",
+                            "is_account_manager": true,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": false,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 312,
+                            "name": "Ahamed Mansoor",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 67,
+                            "department_name": "IT Department",
+                            "job_position_title": "IT Executive",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 402 3643",
+                            "work_email": "it@primelogistics.ae",
+                            "user_id": 111,
+                            "user_name": "Ahamed Mansoor",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": true,
+                            "general_manager": false,
+                            "is_import_team": true,
+                            "is_export_team": true,
+                            "is_brokerage_team": true,
+                            "is_warehouse_team": true,
+                            "is_financial_team": true
+                        },
+                        {
+                            "id": 318,
+                            "name": "Bandula Ratnayake",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Consultant",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 446 0554",
+                            "work_email": "corporatesales@primelogistics.ae",
+                            "user_id": 97,
+                            "user_name": "Bandula Ratnayake",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": false,
+                            "is_sales_manager": true,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 326,
+                            "name": "Laarnie Alviola",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 63,
+                            "department_name": "Commercial Pricing",
+                            "job_position_title": "Senior Pricing Executive",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 440 7787",
+                            "work_email": "laarnie.a@primelogistics.ae",
+                            "user_id": 120,
+                            "user_name": "Laarnie Alviola",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 328,
+                            "name": "Lance Dsouza",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Accounts Manager",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 50 292 4294",
+                            "work_email": "lance.d@primelogistics.ae",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "territory_id": 1,
+                            "territory_name": "Barsha",
+                            "is_account_manager": true,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": false,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 330,
+                            "name": "Lovely Merl Garcia",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 63,
+                            "department_name": "Commercial Pricing",
+                            "job_position_title": "Pricing Executive",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 440 1511",
+                            "work_email": "lovely.m@primelogistics.ae",
+                            "user_id": 121,
+                            "user_name": "Lovely Merl Garcia",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 331,
+                            "name": "Mariella Boongaling",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Cordinator",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 50 526 3100",
+                            "work_email": "ella@primelogistics.ae",
+                            "user_id": 133,
+                            "user_name": "Mariella Boongaling",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": true,
+                            "is_pricing_team": false,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": true,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Employee Details
+  
+  request: {
+    url: http://localhost:8069/web/get_employee_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 7026
+      Set-Cookie: session_id=5c3ca46c86c87dc929486e914d344aceef2da3e9; Expires=Tue, 24-Sep-2024 13:48:37 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Wed, 26 Jun 2024 13:48:37 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "employee_details": [
+                        {
+                            "id": 311,
+                            "name": "Achala Kumaranayake",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Account Manager",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 54 793 9796",
+                            "work_email": "achala.k@primelogistics.ae",
+                            "user_id": 100,
+                            "user_name": "Achala Kumaranayake",
+                            "territory_id": 1,
+                            "territory_name": "Barsha",
+                            "is_account_manager": true,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": false,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 312,
+                            "name": "Ahamed Mansoor",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 67,
+                            "department_name": "IT Department",
+                            "job_position_title": "IT Executive",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 402 3643",
+                            "work_email": "it@primelogistics.ae",
+                            "user_id": 111,
+                            "user_name": "Ahamed Mansoor",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": true,
+                            "general_manager": true,
+                            "is_import_team": true,
+                            "is_export_team": true,
+                            "is_brokerage_team": true,
+                            "is_warehouse_team": true,
+                            "is_financial_team": true
+                        },
+                        {
+                            "id": 318,
+                            "name": "Bandula Ratnayake",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Consultant",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 446 0554",
+                            "work_email": "corporatesales@primelogistics.ae",
+                            "user_id": 97,
+                            "user_name": "Bandula Ratnayake",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": false,
+                            "is_sales_manager": true,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 326,
+                            "name": "Laarnie Alviola",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 63,
+                            "department_name": "Commercial Pricing",
+                            "job_position_title": "Senior Pricing Executive",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 440 7787",
+                            "work_email": "laarnie.a@primelogistics.ae",
+                            "user_id": 120,
+                            "user_name": "Laarnie Alviola",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 328,
+                            "name": "Lance Dsouza",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Accounts Manager",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 50 292 4294",
+                            "work_email": "lance.d@primelogistics.ae",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "territory_id": 1,
+                            "territory_name": "Barsha",
+                            "is_account_manager": true,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": false,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 330,
+                            "name": "Lovely Merl Garcia",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 63,
+                            "department_name": "Commercial Pricing",
+                            "job_position_title": "Pricing Executive",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 440 1511",
+                            "work_email": "lovely.m@primelogistics.ae",
+                            "user_id": 121,
+                            "user_name": "Lovely Merl Garcia",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 331,
+                            "name": "Mariella Boongaling",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Cordinator",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 50 526 3100",
+                            "work_email": "ella@primelogistics.ae",
+                            "user_id": 133,
+                            "user_name": "Mariella Boongaling",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": true,
+                            "is_pricing_team": false,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": true,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 349,
+                            "name": "Synergia",
+                            "street": null,
+                            "street2": null,
+                            "city": null,
+                            "state_id": null,
+                            "state_name": null,
+                            "country_id": null,
+                            "country_name": null,
+                            "zip": null,
+                            "department_id": null,
+                            "department_name": null,
+                            "job_position_title": null,
+                            "work_phone": null,
+                            "work_mobile": null,
+                            "work_email": "admin@example.com",
+                            "user_id": 2,
+                            "user_name": "Synergia",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": true,
+                            "general_manager": true,
+                            "is_import_team": true,
+                            "is_export_team": true,
+                            "is_brokerage_team": true,
+                            "is_warehouse_team": true,
+                            "is_financial_team": true
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Employee Details
+  
+  request: {
+    url: http://localhost:8069/web/get_employee_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 6292
+      Set-Cookie: session_id=79d8a9e8a573a39cfbacdf31038d99c3dc882019; Expires=Wed, 25-Sep-2024 08:14:33 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Thu, 27 Jun 2024 08:14:33 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "employee_details": [
+                        {
+                            "id": 311,
+                            "name": "Achala Kumaranayake",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Account Manager",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 54 793 9796",
+                            "work_email": "achala.k@primelogistics.ae",
+                            "user_id": 100,
+                            "user_name": "Achala Kumaranayake",
+                            "territory_id": 1,
+                            "territory_name": "Barsha",
+                            "is_account_manager": true,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": false,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 312,
+                            "name": "Ahamed Mansoor",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 67,
+                            "department_name": "IT Department",
+                            "job_position_title": "IT Executive",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 402 3643",
+                            "work_email": "it@primelogistics.ae",
+                            "user_id": 111,
+                            "user_name": "Ahamed Mansoor",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": true,
+                            "general_manager": false,
+                            "is_import_team": true,
+                            "is_export_team": true,
+                            "is_brokerage_team": true,
+                            "is_warehouse_team": true,
+                            "is_financial_team": true
+                        },
+                        {
+                            "id": 318,
+                            "name": "Bandula Ratnayake",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Consultant",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 446 0554",
+                            "work_email": "corporatesales@primelogistics.ae",
+                            "user_id": 97,
+                            "user_name": "Bandula Ratnayake",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": false,
+                            "is_sales_manager": true,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 326,
+                            "name": "Laarnie Alviola",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 63,
+                            "department_name": "Commercial Pricing",
+                            "job_position_title": "Senior Pricing Executive",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 440 7787",
+                            "work_email": "laarnie.a@primelogistics.ae",
+                            "user_id": 120,
+                            "user_name": "Laarnie Alviola",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 328,
+                            "name": "Lance Dsouza",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Accounts Manager",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 50 292 4294",
+                            "work_email": "lance.d@primelogistics.ae",
+                            "user_id": 96,
+                            "user_name": "Lance Dsouza",
+                            "territory_id": 1,
+                            "territory_name": "Barsha",
+                            "is_account_manager": true,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": false,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 330,
+                            "name": "Lovely Merl Garcia",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 63,
+                            "department_name": "Commercial Pricing",
+                            "job_position_title": "Pricing Executive",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 56 440 1511",
+                            "work_email": "lovely.m@primelogistics.ae",
+                            "user_id": 121,
+                            "user_name": "Lovely Merl Garcia",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": false,
+                            "is_pricing_team": true,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": false,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        },
+                        {
+                            "id": 331,
+                            "name": "Mariella Boongaling",
+                            "street": "Warehouse G09, Dubai Airport Freezone",
+                            "street2": "Dubai",
+                            "city": null,
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": "334261",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Cordinator",
+                            "work_phone": "+971 4 299 0060",
+                            "work_mobile": "+971 50 526 3100",
+                            "work_email": "ella@primelogistics.ae",
+                            "user_id": 133,
+                            "user_name": "Mariella Boongaling",
+                            "territory_id": false,
+                            "territory_name": false,
+                            "is_account_manager": false,
+                            "can_assign_prospect": true,
+                            "is_pricing_team": false,
+                            "is_sales_manager": false,
+                            "is_sales_coordinator": true,
+                            "operation_manager": false,
+                            "general_manager": false,
+                            "is_import_team": false,
+                            "is_export_team": false,
+                            "is_brokerage_team": false,
+                            "is_warehouse_team": false,
+                            "is_financial_team": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

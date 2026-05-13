@@ -1,0 +1,681 @@
+meta {
+  name: Employee Details
+  type: http
+  seq: 6
+}
+
+post {
+  url: https://erp.syntrack.app/web/get_all_employee_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Employee Details
+  
+  request: {
+    url: https://erp.syntrack.app/web/get_all_employee_details
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 29 Jan 2025 08:15:40 GMT
+      Content-Type: application/json; charset=utf-8
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      X-Content-Type-Options: nosniff
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "employee_details": [
+                        {
+                            "id": 11,
+                            "name": "Accounts Executive",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 5,
+                            "department_name": "Accounts and Finance",
+                            "job_position_title": "Accounts Assistant",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 14,
+                            "user_name": "Accounts Executive"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Admin",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 1,
+                            "department_name": "Administration",
+                            "job_position_title": null,
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 6,
+                            "user_name": "Admin"
+                        },
+                        {
+                            "id": 1,
+                            "name": "Administrator",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 1,
+                            "department_name": "Administration",
+                            "job_position_title": null,
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": "admin@example.com",
+                            "user_id": 2,
+                            "user_name": "Administrator"
+                        },
+                        {
+                            "id": 12,
+                            "name": "Finance Manager",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 5,
+                            "department_name": "Accounts and Finance",
+                            "job_position_title": "Finance Manager",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 15,
+                            "user_name": "Finance Manager"
+                        },
+                        {
+                            "id": 10,
+                            "name": "Inventory Manager",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 4,
+                            "department_name": "Inventory and Warehouse",
+                            "job_position_title": "Inventory Manager",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 13,
+                            "user_name": "Inventory Manager"
+                        },
+                        {
+                            "id": 9,
+                            "name": "Inventory User",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 4,
+                            "department_name": "Inventory and Warehouse",
+                            "job_position_title": "Inventory User",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 12,
+                            "user_name": "Inventory User"
+                        },
+                        {
+                            "id": 8,
+                            "name": "Purchase Manager",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 2,
+                            "department_name": "Purchase Department",
+                            "job_position_title": "Purchase Manager",
+                            "work_phone": "+971-90-190102-1",
+                            "work_mobile": "+971-90-190102-1",
+                            "work_email": "pmanager",
+                            "user_id": 11,
+                            "user_name": "Purchase Manager"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Purchase User",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 2,
+                            "department_name": "Purchase Department",
+                            "job_position_title": "Purchaser",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 7,
+                            "user_name": "Purchase User"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Purchaser",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 2,
+                            "department_name": "Purchase Department",
+                            "job_position_title": "Purchaser",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": null,
+                            "user_name": null
+                        },
+                        {
+                            "id": 13,
+                            "name": "Sales Manager",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Manager",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 16,
+                            "user_name": "Sales Manager"
+                        },
+                        {
+                            "id": 14,
+                            "name": "Sales Supervisor",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Supervisor",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 17,
+                            "user_name": "Sales Supervisor"
+                        },
+                        {
+                            "id": 5,
+                            "name": "Sales User 1",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Executive",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 8,
+                            "user_name": "Sales User 1"
+                        },
+                        {
+                            "id": 7,
+                            "name": "Sales User 2",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Executive",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": "sales2",
+                            "user_id": 10,
+                            "user_name": "Sales User 2"
+                        },
+                        {
+                            "id": 6,
+                            "name": "Sales User 3",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Executive",
+                            "work_phone": "+971508922937",
+                            "work_mobile": "+971508922938",
+                            "work_email": null,
+                            "user_id": 9,
+                            "user_name": "Sales User 3"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Employee Details
+  
+  request: {
+    url: https://erp.syntrack.app/web/get_all_employee_details
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 29 Jan 2025 08:15:40 GMT
+      Content-Type: application/json; charset=utf-8
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      X-Content-Type-Options: nosniff
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "employee_details": [
+                        {
+                            "id": 11,
+                            "name": "Accounts Executive",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 5,
+                            "department_name": "Accounts and Finance",
+                            "job_position_title": "Accounts Assistant",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 14,
+                            "user_name": "Accounts Executive"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Admin",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 1,
+                            "department_name": "Administration",
+                            "job_position_title": null,
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 6,
+                            "user_name": "Admin"
+                        },
+                        {
+                            "id": 1,
+                            "name": "Administrator",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 1,
+                            "department_name": "Administration",
+                            "job_position_title": null,
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": "admin@example.com",
+                            "user_id": 2,
+                            "user_name": "Administrator"
+                        },
+                        {
+                            "id": 12,
+                            "name": "Finance Manager",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 5,
+                            "department_name": "Accounts and Finance",
+                            "job_position_title": "Finance Manager",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 15,
+                            "user_name": "Finance Manager"
+                        },
+                        {
+                            "id": 10,
+                            "name": "Inventory Manager",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 4,
+                            "department_name": "Inventory and Warehouse",
+                            "job_position_title": "Inventory Manager",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 13,
+                            "user_name": "Inventory Manager"
+                        },
+                        {
+                            "id": 9,
+                            "name": "Inventory User",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 4,
+                            "department_name": "Inventory and Warehouse",
+                            "job_position_title": "Inventory User",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 12,
+                            "user_name": "Inventory User"
+                        },
+                        {
+                            "id": 8,
+                            "name": "Purchase Manager",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 2,
+                            "department_name": "Purchase Department",
+                            "job_position_title": "Purchase Manager",
+                            "work_phone": "+971-90-190102-1",
+                            "work_mobile": "+971-90-190102-1",
+                            "work_email": "pmanager",
+                            "user_id": 11,
+                            "user_name": "Purchase Manager"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Purchase User",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 2,
+                            "department_name": "Purchase Department",
+                            "job_position_title": "Purchaser",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 7,
+                            "user_name": "Purchase User"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Purchaser",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 2,
+                            "department_name": "Purchase Department",
+                            "job_position_title": "Purchaser",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": null,
+                            "user_name": null
+                        },
+                        {
+                            "id": 13,
+                            "name": "Sales Manager",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Manager",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 16,
+                            "user_name": "Sales Manager"
+                        },
+                        {
+                            "id": 14,
+                            "name": "Sales Supervisor",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Supervisor",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 17,
+                            "user_name": "Sales Supervisor"
+                        },
+                        {
+                            "id": 5,
+                            "name": "Sales User 1",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Executive",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": null,
+                            "user_id": 8,
+                            "user_name": "Sales User 1"
+                        },
+                        {
+                            "id": 7,
+                            "name": "Sales User 2",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Executive",
+                            "work_phone": "+971508922937",
+                            "work_mobile": null,
+                            "work_email": "sales2",
+                            "user_id": 10,
+                            "user_name": "Sales User 2"
+                        },
+                        {
+                            "id": 6,
+                            "name": "Sales User 3",
+                            "street": "Office No: 308",
+                            "street2": "Office No: 308, Business Venue Building",
+                            "city": "Oud Metha",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "zip": null,
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "job_position_title": "Sales Executive",
+                            "work_phone": "+971508922937",
+                            "work_mobile": "+971508922938",
+                            "work_email": null,
+                            "user_id": 9,
+                            "user_name": "Sales User 3"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

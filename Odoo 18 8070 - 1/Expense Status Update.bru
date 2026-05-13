@@ -1,0 +1,646 @@
+meta {
+  name: Expense Status Update
+  type: http
+  seq: 58
+}
+
+post {
+  url: 192.168.1.120:8070/web/expense_status_change
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "expense_id": 14,
+              "status": "reset"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Expense Status Update - Submit
+  
+  request: {
+    url: 192.168.1.120:8070/web/expense_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "expense_id": 14,
+                  "status": "submit"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 10 Mar 2026 08:17:12 GMT
+      Content-Length: 2340
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "expense_details": {
+                        "id": 14,
+                        "name": "EXP2026030014",
+                        "expense_type": "fleet",
+                        "date": "2026-03-10",
+                        "paid_from_id": 37,
+                        "paid_from_name": "Cash in Hand- Van 01",
+                        "employee_id": null,
+                        "employee_name": null,
+                        "fleet_id": 20,
+                        "fleet_name": "Mitsubishi/HIACE/4 85305",
+                        "created_by": 103,
+                        "created_name": "MUHAMMED AKMAL CHERUKAPPALLI MOIDEEN",
+                        "emp_created_by": 78,
+                        "emp_created_name": "AKMAL CHERUKAPPALLI",
+                        "origin_number": "ORGN01002",
+                        "employee_lines": null,
+                        "fleet_lines": [
+                            {
+                                "id": 1,
+                                "fleet_id": 20,
+                                "fleet_name": "Mitsubishi/HIACE/4 85305",
+                                "employee_id": null,
+                                "employee_name": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "sequence": 10,
+                                "bill_no": "BILL588562001",
+                                "expense_type": 2971,
+                                "expense_type_name": "Fuel Charges",
+                                "description": "Fuel charges for the vehicle",
+                                "expense_account": 1761,
+                                "expense_account_name": "FUEL EXPENSE-COMMON",
+                                "qty": 100,
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "unit_price": 2.98,
+                                "subtotal": 298,
+                                "tax_per": [
+                                    {
+                                        "id": 19,
+                                        "name": "5% Purchase Excl"
+                                    }
+                                ],
+                                "tax_amount": 14.9,
+                                "total_amount": 312.9,
+                                "attachment": null,
+                                "attachment_filename": null,
+                                "remarks": "Sample Remark"
+                            },
+                            {
+                                "id": 2,
+                                "fleet_id": 20,
+                                "fleet_name": "Mitsubishi/HIACE/4 85305",
+                                "employee_id": null,
+                                "employee_name": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "sequence": 10,
+                                "bill_no": "BILL5885584794",
+                                "expense_type": 19457,
+                                "expense_type_name": "Food Expenses",
+                                "description": "Food Expenses",
+                                "expense_account": 1715,
+                                "expense_account_name": "OFFICE EXPENSES",
+                                "qty": 2,
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "unit_price": 12,
+                                "subtotal": 24,
+                                "tax_per": [
+                                    {
+                                        "id": 19,
+                                        "name": "5% Purchase Excl"
+                                    }
+                                ],
+                                "tax_amount": 1.2000000000000002,
+                                "total_amount": 25.2,
+                                "attachment": null,
+                                "attachment_filename": null,
+                                "remarks": "Food Remark"
+                            }
+                        ],
+                        "state": "submit",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "emp_checkin_id": 1034,
+                        "emp_checkin_name": "CHK/IN/OUT/00423",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "total_amount": 338.09999999999997,
+                        "total_tax": 16.1,
+                        "total_subtotal": 322,
+                        "amount_total_words": "Three Hundred And Thirty-Eight Dirham and Ten Fils",
+                        "total_tax_excluded": 16.1,
+                        "total_tax_included": null,
+                        "approved_by": null,
+                        "approved_name": null,
+                        "approved_date": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Expense Status Update - Approve
+  
+  request: {
+    url: 192.168.1.120:8070/web/expense_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "expense_id": 14,
+                  "status": "approve"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 10 Mar 2026 08:19:03 GMT
+      Content-Length: 2392
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "expense_details": {
+                        "id": 14,
+                        "name": "EXP2026030014",
+                        "expense_type": "fleet",
+                        "date": "2026-03-10",
+                        "paid_from_id": 37,
+                        "paid_from_name": "Cash in Hand- Van 01",
+                        "employee_id": null,
+                        "employee_name": null,
+                        "fleet_id": 20,
+                        "fleet_name": "Mitsubishi/HIACE/4 85305",
+                        "created_by": 103,
+                        "created_name": "MUHAMMED AKMAL CHERUKAPPALLI MOIDEEN",
+                        "emp_created_by": 78,
+                        "emp_created_name": "AKMAL CHERUKAPPALLI",
+                        "origin_number": "ORGN01002",
+                        "employee_lines": null,
+                        "fleet_lines": [
+                            {
+                                "id": 1,
+                                "fleet_id": 20,
+                                "fleet_name": "Mitsubishi/HIACE/4 85305",
+                                "employee_id": null,
+                                "employee_name": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "sequence": 10,
+                                "bill_no": "BILL588562001",
+                                "expense_type": 2971,
+                                "expense_type_name": "Fuel Charges",
+                                "description": "Fuel charges for the vehicle",
+                                "expense_account": 1761,
+                                "expense_account_name": "FUEL EXPENSE-COMMON",
+                                "qty": 100,
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "unit_price": 2.98,
+                                "subtotal": 298,
+                                "tax_per": [
+                                    {
+                                        "id": 19,
+                                        "name": "5% Purchase Excl"
+                                    }
+                                ],
+                                "tax_amount": 14.9,
+                                "total_amount": 312.9,
+                                "attachment": null,
+                                "attachment_filename": null,
+                                "remarks": "Sample Remark"
+                            },
+                            {
+                                "id": 2,
+                                "fleet_id": 20,
+                                "fleet_name": "Mitsubishi/HIACE/4 85305",
+                                "employee_id": null,
+                                "employee_name": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "sequence": 10,
+                                "bill_no": "BILL5885584794",
+                                "expense_type": 19457,
+                                "expense_type_name": "Food Expenses",
+                                "description": "Food Expenses",
+                                "expense_account": 1715,
+                                "expense_account_name": "OFFICE EXPENSES",
+                                "qty": 2,
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "unit_price": 12,
+                                "subtotal": 24,
+                                "tax_per": [
+                                    {
+                                        "id": 19,
+                                        "name": "5% Purchase Excl"
+                                    }
+                                ],
+                                "tax_amount": 1.2000000000000002,
+                                "total_amount": 25.2,
+                                "attachment": null,
+                                "attachment_filename": null,
+                                "remarks": "Food Remark"
+                            }
+                        ],
+                        "state": "approved",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "emp_checkin_id": 1034,
+                        "emp_checkin_name": "CHK/IN/OUT/00423",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "total_amount": 338.09999999999997,
+                        "total_tax": 16.1,
+                        "total_subtotal": 322,
+                        "amount_total_words": "Three Hundred And Thirty-Eight Dirham and Ten Fils",
+                        "total_tax_excluded": 16.1,
+                        "total_tax_included": null,
+                        "approved_by": 103,
+                        "approved_name": "MUHAMMED AKMAL CHERUKAPPALLI MOIDEEN",
+                        "approved_date": "2026-03-10 08:19:03"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Expense Status Update - Cancel
+  
+  request: {
+    url: 192.168.1.120:8070/web/expense_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "expense_id": 14,
+                  "status": "cancel"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 10 Mar 2026 08:23:05 GMT
+      Content-Length: 2390
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "expense_details": {
+                        "id": 14,
+                        "name": "EXP2026030014",
+                        "expense_type": "fleet",
+                        "date": "2026-03-10",
+                        "paid_from_id": 37,
+                        "paid_from_name": "Cash in Hand- Van 01",
+                        "employee_id": null,
+                        "employee_name": null,
+                        "fleet_id": 20,
+                        "fleet_name": "Mitsubishi/HIACE/4 85305",
+                        "created_by": 103,
+                        "created_name": "MUHAMMED AKMAL CHERUKAPPALLI MOIDEEN",
+                        "emp_created_by": 78,
+                        "emp_created_name": "AKMAL CHERUKAPPALLI",
+                        "origin_number": "ORGN01002",
+                        "employee_lines": null,
+                        "fleet_lines": [
+                            {
+                                "id": 1,
+                                "fleet_id": 20,
+                                "fleet_name": "Mitsubishi/HIACE/4 85305",
+                                "employee_id": null,
+                                "employee_name": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "sequence": 10,
+                                "bill_no": "BILL588562001",
+                                "expense_type": 2971,
+                                "expense_type_name": "Fuel Charges",
+                                "description": "Fuel charges for the vehicle",
+                                "expense_account": 1761,
+                                "expense_account_name": "FUEL EXPENSE-COMMON",
+                                "qty": 100,
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "unit_price": 2.98,
+                                "subtotal": 298,
+                                "tax_per": [
+                                    {
+                                        "id": 19,
+                                        "name": "5% Purchase Excl"
+                                    }
+                                ],
+                                "tax_amount": 14.9,
+                                "total_amount": 312.9,
+                                "attachment": null,
+                                "attachment_filename": null,
+                                "remarks": "Sample Remark"
+                            },
+                            {
+                                "id": 2,
+                                "fleet_id": 20,
+                                "fleet_name": "Mitsubishi/HIACE/4 85305",
+                                "employee_id": null,
+                                "employee_name": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "sequence": 10,
+                                "bill_no": "BILL5885584794",
+                                "expense_type": 19457,
+                                "expense_type_name": "Food Expenses",
+                                "description": "Food Expenses",
+                                "expense_account": 1715,
+                                "expense_account_name": "OFFICE EXPENSES",
+                                "qty": 2,
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "unit_price": 12,
+                                "subtotal": 24,
+                                "tax_per": [
+                                    {
+                                        "id": 19,
+                                        "name": "5% Purchase Excl"
+                                    }
+                                ],
+                                "tax_amount": 1.2000000000000002,
+                                "total_amount": 25.2,
+                                "attachment": null,
+                                "attachment_filename": null,
+                                "remarks": "Food Remark"
+                            }
+                        ],
+                        "state": "cancel",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "emp_checkin_id": 1034,
+                        "emp_checkin_name": "CHK/IN/OUT/00423",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "total_amount": 338.09999999999997,
+                        "total_tax": 16.1,
+                        "total_subtotal": 322,
+                        "amount_total_words": "Three Hundred And Thirty-Eight Dirham and Ten Fils",
+                        "total_tax_excluded": 16.1,
+                        "total_tax_included": null,
+                        "approved_by": 103,
+                        "approved_name": "MUHAMMED AKMAL CHERUKAPPALLI MOIDEEN",
+                        "approved_date": "2026-03-10 08:19:03"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Expense Status Update - Reset To Draft
+  
+  request: {
+    url: 192.168.1.120:8070/web/expense_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "expense_id": 14,
+                  "status": "reset"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 10 Mar 2026 08:40:11 GMT
+      Content-Length: 2389
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "expense_details": {
+                        "id": 14,
+                        "name": "EXP2026030014",
+                        "expense_type": "fleet",
+                        "date": "2026-03-10",
+                        "paid_from_id": 37,
+                        "paid_from_name": "Cash in Hand- Van 01",
+                        "employee_id": null,
+                        "employee_name": null,
+                        "fleet_id": 20,
+                        "fleet_name": "Mitsubishi/HIACE/4 85305",
+                        "created_by": 103,
+                        "created_name": "MUHAMMED AKMAL CHERUKAPPALLI MOIDEEN",
+                        "emp_created_by": 78,
+                        "emp_created_name": "AKMAL CHERUKAPPALLI",
+                        "origin_number": "ORGN01002",
+                        "employee_lines": null,
+                        "fleet_lines": [
+                            {
+                                "id": 1,
+                                "fleet_id": 20,
+                                "fleet_name": "Mitsubishi/HIACE/4 85305",
+                                "employee_id": null,
+                                "employee_name": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "sequence": 10,
+                                "bill_no": "BILL588562001",
+                                "expense_type": 2971,
+                                "expense_type_name": "Fuel Charges",
+                                "description": "Fuel charges for the vehicle",
+                                "expense_account": 1761,
+                                "expense_account_name": "FUEL EXPENSE-COMMON",
+                                "qty": 100,
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "unit_price": 2.98,
+                                "subtotal": 298,
+                                "tax_per": [
+                                    {
+                                        "id": 19,
+                                        "name": "5% Purchase Excl"
+                                    }
+                                ],
+                                "tax_amount": 14.9,
+                                "total_amount": 312.9,
+                                "attachment": null,
+                                "attachment_filename": null,
+                                "remarks": "Sample Remark"
+                            },
+                            {
+                                "id": 2,
+                                "fleet_id": 20,
+                                "fleet_name": "Mitsubishi/HIACE/4 85305",
+                                "employee_id": null,
+                                "employee_name": null,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "sequence": 10,
+                                "bill_no": "BILL5885584794",
+                                "expense_type": 19457,
+                                "expense_type_name": "Food Expenses",
+                                "description": "Food Expenses",
+                                "expense_account": 1715,
+                                "expense_account_name": "OFFICE EXPENSES",
+                                "qty": 2,
+                                "uom_id": 1,
+                                "uom_name": "Units",
+                                "unit_price": 12,
+                                "subtotal": 24,
+                                "tax_per": [
+                                    {
+                                        "id": 19,
+                                        "name": "5% Purchase Excl"
+                                    }
+                                ],
+                                "tax_amount": 1.2000000000000002,
+                                "total_amount": 25.2,
+                                "attachment": null,
+                                "attachment_filename": null,
+                                "remarks": "Food Remark"
+                            }
+                        ],
+                        "state": "draft",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "emp_checkin_id": 1034,
+                        "emp_checkin_name": "CHK/IN/OUT/00423",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "total_amount": 338.09999999999997,
+                        "total_tax": 16.1,
+                        "total_subtotal": 322,
+                        "amount_total_words": "Three Hundred And Thirty-Eight Dirham and Ten Fils",
+                        "total_tax_excluded": 16.1,
+                        "total_tax_included": null,
+                        "approved_by": 103,
+                        "approved_name": "MUHAMMED AKMAL CHERUKAPPALLI MOIDEEN",
+                        "approved_date": "2026-03-10 08:19:03"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

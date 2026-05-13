@@ -1,0 +1,1235 @@
+meta {
+  name: Due Payment Collection
+  type: http
+  seq: 7
+}
+
+post {
+  url: localhost:8069/web/create_payment_record
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "branch_code": 27,
+              "collection_type": "cheque",
+              "partner_id": 3412,
+              "cheque_number": "987543",
+              "cheque_date": "2025-08-20",
+              "cheque_amount": 6.0,
+              "collection_date": "2025-08-20",
+              "collected_amount": 6.0,
+              "check_in_out": false,
+              "outstanding_payments": [
+                  {
+                      "voucher_id": "26299047",
+                      "voucher_no": "SISD400191",
+                      "voucher_type": "WS001",
+                      "datetime": "2025-08-20 14:43:43",
+                      "branch_code": 27,
+                      "trn_type": "AC/SA",
+                      "ref": "SISD400191",
+                      "ref_datetime": "2025-08-20 14:43:43",
+                      "due_datetime": "2025-06-22T00:00:00.000Z",
+                      "customer_code": "D6179",
+                      "type": "Dr",
+                      "description": "",
+                      "allocate": "",
+                      "AmtLc": 5.0,
+                      "OsAmtLc": 5.0,
+                      "collection_type": "cheque",
+                      "cheque_number": "987543",
+                      "cheque_date": "2025-08-20",
+                      "cheque_amount": 5.0,
+                      "collection_date": "2025-08-20",
+                      "collected_amount": 5.0,
+                      "AmtFc": 2578.28,
+                      "OsAmtFc": 2578.28,
+                      "ExRate": 1.0,
+                      "ValueDt": "2025-06-15T00:00:00.000Z"
+                  },
+                  {
+                      "voucher_id": "25870907",
+                      "voucher_no": "SISD383553",
+                      "voucher_type": "WS001",
+                      "datetime": "2025-08-20 14:43:43",
+                      "branch_code": 27,
+                      "trn_type": "AC/SA",
+                      "ref": "SISD383553",
+                      "ref_datetime": "2025-08-20 14:43:43",
+                      "due_datetime": "2025-05-23T00:00:00.000Z",
+                      "customer_code": "D6179",
+                      "type": "Dr",
+                      "description": "",
+                      "allocate": "",
+                      "AmtLc": 1.0,
+                      "OsAmtLc": 1.0,
+                      "collection_type": "cheque",
+                      "cheque_number": "987543",
+                      "cheque_date": "2025-08-20",
+                      "cheque_amount": 1.0,
+                      "collection_date": "2025-08-20",
+                      "collected_amount": 1.0,
+                      "AmtFc": 1437.41,
+                      "OsAmtFc": 2.91,
+                      "ExRate": 1.0,
+                      "ValueDt": "2025-05-16T00:00:00.000Z"
+                  }
+              ]
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Cash -  Payment Collection
+  
+  request: {
+    url: localhost:8069/web/create_payment_record
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "voucher_id": "SISD402241",
+                  "voucher_no": 26348515,
+                  "voucher_type": "WS001",
+                  "datetime": "2025-06-18 00:00:00",
+                  "branch_code": 27,
+                  "trn_type": "AC/SA",
+                  "ref": "REF484001",
+                  "ref_datetime": "2025-06-18 00:00:00",
+                  "due_datetime": "2025-06-25 00:00:00",
+                  "customer_code": "D4517",
+                  "type": "Dr",
+                  "description": "",
+                  "allocate": "",
+                  "AmtLc": 292.43,
+                  "OsAmtLc": 292.43,
+                  "collection_type": "cash",
+                  "cheque_number": false,
+                  "cheque_date": false,
+                  "cheque_amount": false,
+                  "transaction_number": false,
+                  "transaction_date": false,
+                  "transaction_amount": false,
+                  "collection_date": "2025-07-17",
+                  "collected_amount": 292.43
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 17 Jul 2025 09:46:00 GMT
+      Content-Length: 807
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_collection_details": {
+                        "voucher_id": "SISD402241",
+                        "voucher_no": "26348515",
+                        "voucher_type": "WS001",
+                        "datetime": "2025-06-18 00:00:00",
+                        "branch_code": "27",
+                        "trn_type": "AC/SA",
+                        "ref": "REF484001",
+                        "ref_datetime": "2025-06-18 00:00:00",
+                        "due_datetime": "2025-06-25 00:00:00",
+                        "customer_code": "D4517",
+                        "customer_name": "THAJ AL MADINA FOODSTUFF ",
+                        "partner_id": 4136,
+                        "type": "Dr",
+                        "description": null,
+                        "allocate": null,
+                        "AmtLc": 292.43,
+                        "OsAmtLc": 292,
+                        "collection_type": "cash",
+                        "cheque_number": null,
+                        "cheque_date": null,
+                        "cheque_amount": null,
+                        "transaction_number": null,
+                        "transaction_date": null,
+                        "transaction_amount": null,
+                        "collection_date": "2025-07-17",
+                        "collected_amount": 292
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Cheque - Payment Collection
+  
+  request: {
+    url: localhost:8069/web/create_payment_record
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "voucher_id": "SISD402241",
+                  "voucher_no": 26348515,
+                  "voucher_type": "WS001",
+                  "datetime": "2025-06-18 00:00:00",
+                  "branch_code": 27,
+                  "trn_type": "AC/SA",
+                  "ref": "REF484001",
+                  "ref_datetime": "2025-06-18 00:00:00",
+                  "due_datetime": "2025-06-25 00:00:00",
+                  "customer_code": "D4517",
+                  "type": "Dr",
+                  "description": "",
+                  "allocate": "",
+                  "AmtLc": 292.43,
+                  "OsAmtLc": 292.43,
+                  "collection_type": "cheque",
+                  "cheque_number": "CHQ15845101",
+                  "cheque_date": "2025-07-17",
+                  "cheque_amount": 292.43,
+                  "transaction_number": false,
+                  "transaction_date": false,
+                  "transaction_amount": false,
+                  "collection_date": false,
+                  "collected_amount": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 17 Jul 2025 09:49:23 GMT
+      Content-Length: 821
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_collection_details": {
+                        "voucher_id": "SISD402241",
+                        "voucher_no": "26348515",
+                        "voucher_type": "WS001",
+                        "datetime": "2025-06-18 00:00:00",
+                        "branch_code": "27",
+                        "trn_type": "AC/SA",
+                        "ref": "REF484001",
+                        "ref_datetime": "2025-06-18 00:00:00",
+                        "due_datetime": "2025-06-25 00:00:00",
+                        "customer_code": "D4517",
+                        "customer_name": "THAJ AL MADINA FOODSTUFF ",
+                        "partner_id": 4136,
+                        "type": "Dr",
+                        "description": null,
+                        "allocate": null,
+                        "AmtLc": 292.43,
+                        "OsAmtLc": 292,
+                        "collection_type": "cheque",
+                        "cheque_number": "CHQ15845101",
+                        "cheque_date": "2025-07-17",
+                        "cheque_amount": 292.43,
+                        "transaction_number": null,
+                        "transaction_date": null,
+                        "transaction_amount": null,
+                        "collection_date": null,
+                        "collected_amount": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Bank - Payment Collection
+  
+  request: {
+    url: localhost:8069/web/create_payment_record
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "voucher_id": "SISD402241",
+                  "voucher_no": 26348515,
+                  "voucher_type": "WS001",
+                  "datetime": "2025-06-18 00:00:00",
+                  "branch_code": 27,
+                  "trn_type": "AC/SA",
+                  "ref": "REF484001",
+                  "ref_datetime": "2025-06-18 00:00:00",
+                  "due_datetime": "2025-06-25 00:00:00",
+                  "customer_code": "D4517",
+                  "type": "Dr",
+                  "description": "",
+                  "allocate": "",
+                  "AmtLc": 292.43,
+                  "OsAmtLc": 292.43,
+                  "collection_type": "bank",
+                  "cheque_number": false,
+                  "cheque_date": false,
+                  "cheque_amount": false,
+                  "transaction_number": "TRN48478401",
+                  "transaction_date": "2025-07-17",
+                  "transaction_amount": 292.43,
+                  "collection_date": false,
+                  "collected_amount": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 17 Jul 2025 09:58:53 GMT
+      Content-Length: 822
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_collection_details": {
+                        "voucher_id": "SISD402241",
+                        "voucher_no": "26348515",
+                        "voucher_type": "WS001",
+                        "datetime": "2025-06-18 00:00:00",
+                        "branch_code": "27",
+                        "trn_type": "AC/SA",
+                        "ref": "REF484001",
+                        "ref_datetime": "2025-06-18 00:00:00",
+                        "due_datetime": "2025-06-25 00:00:00",
+                        "customer_code": "D4517",
+                        "customer_name": "THAJ AL MADINA FOODSTUFF ",
+                        "partner_id": 4136,
+                        "type": "Dr",
+                        "description": null,
+                        "allocate": null,
+                        "AmtLc": 292.43,
+                        "OsAmtLc": 292.43,
+                        "collection_type": "bank",
+                        "cheque_number": null,
+                        "cheque_date": null,
+                        "cheque_amount": null,
+                        "transaction_number": "TRN48478401",
+                        "transaction_date": "2025-07-17",
+                        "transaction_amount": 292.43,
+                        "collection_date": null,
+                        "collected_amount": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Payment receipt Copy
+  
+  request: {
+    url: {{Gravity URL}}/SynTrack/saveACMPR
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "branch_code": false,
+          "collection_type": false,
+          "cheque_number": false,
+          "cheque_date": false,
+          "cheque_amount": false,
+          "collection_date": false,
+          "collected_amount": false,
+          "check_in_out": false,
+          "outstanding_payments": [
+              {
+                  "voucher_id": "26299047",
+                  "voucher_no": "SISD400191",
+                  "voucher_type": "WS001",
+                  "datetime": "2025-08-20 12:03:48",
+                  "branch_code": 27,
+                  "trn_type": "AC/SA",
+                  "ref": "SISD400191",
+                  "ref_datetime": "2025-08-20 12:03:48",
+                  "due_datetime": "2025-06-22T00:00:00.000Z",
+                  "customer_code": "D6179",
+                  "type": "Dr",
+                  "description": "",
+                  "allocate": "",
+                  "AmtLc": 50.0,
+                  "OsAmtLc": 50.0,
+                  "collection_type": "cheque",
+                  "cheque_number": "23456",
+                  "cheque_date": "2025-08-20",
+                  "cheque_amount": 50.0,
+                  "transaction_number": false,
+                  "transaction_date": false,
+                  "transaction_amount": false,
+                  "collection_date": "2025-08-20",
+                  "collected_amount": 50.0,
+                  "AmtFc": null,
+                  "OsAmtFc": null,
+                  "ExRate": null,
+                  "ValueDt": null
+              }
+          ]
+    }
+  }
+  
+  response: {
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}
+
+example {
+  name: New Structure
+  
+  request: {
+    url: localhost:8069/web/create_payment_record
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "branch_code": 27,
+                  "collection_type": "cheque",
+                  "partner_id": 3412,
+                  "cheque_number": "987543",
+                  "cheque_date": "2025-08-20",
+                  "cheque_amount": 6.0,
+                  "collection_date": "2025-08-20",
+                  "collected_amount": 6.0,
+                  "check_in_out": false,
+                  "outstanding_payments": [
+                      {
+                          "voucher_id": "26299047",
+                          "voucher_no": "SISD400191",
+                          "voucher_type": "WS001",
+                          "datetime": "2025-08-20 14:43:43",
+                          "branch_code": 27,
+                          "trn_type": "AC/SA",
+                          "ref": "SISD400191",
+                          "ref_datetime": "2025-08-20 14:43:43",
+                          "due_datetime": "2025-06-22T00:00:00.000Z",
+                          "customer_code": "D6179",
+                          "type": "Dr",
+                          "description": "",
+                          "allocate": "",
+                          "AmtLc": 5.0,
+                          "OsAmtLc": 5.0,
+                          "collection_type": "cheque",
+                          "cheque_number": "987543",
+                          "cheque_date": "2025-08-20",
+                          "cheque_amount": 5.0,
+                          "collection_date": "2025-08-20",
+                          "collected_amount": 5.0,
+                          "AmtFc": 2578.28,
+                          "OsAmtFc": 2578.28,
+                          "ExRate": 1.0,
+                          "ValueDt": "2025-06-15T00:00:00.000Z"
+                      },
+                      {
+                          "voucher_id": "25870907",
+                          "voucher_no": "SISD383553",
+                          "voucher_type": "WS001",
+                          "datetime": "2025-08-20 14:43:43",
+                          "branch_code": 27,
+                          "trn_type": "AC/SA",
+                          "ref": "SISD383553",
+                          "ref_datetime": "2025-08-20 14:43:43",
+                          "due_datetime": "2025-05-23T00:00:00.000Z",
+                          "customer_code": "D6179",
+                          "type": "Dr",
+                          "description": "",
+                          "allocate": "",
+                          "AmtLc": 1.0,
+                          "OsAmtLc": 1.0,
+                          "collection_type": "cheque",
+                          "cheque_number": "987543",
+                          "cheque_date": "2025-08-20",
+                          "cheque_amount": 1.0,
+                          "collection_date": "2025-08-20",
+                          "collected_amount": 1.0,
+                          "AmtFc": 1437.41,
+                          "OsAmtFc": 2.91,
+                          "ExRate": 1.0,
+                          "ValueDt": "2025-05-16T00:00:00.000Z"
+                      }
+                  ]
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 20 Aug 2025 11:22:35 GMT
+      Content-Length: 1938
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_collection_details": {
+                        "partner_id": 3412,
+                        "partner_name": "AB HYPERMARKET L.L.C",
+                        "branch_code": "27",
+                        "branch_id": 123,
+                        "branch_name": "SDC",
+                        "collection_type": "cheque",
+                        "cheque_number": "987543",
+                        "cheque_date": "2025-08-20",
+                        "cheque_amount": 6,
+                        "collected_amount": 6,
+                        "collected_by": null,
+                        "status": "paid",
+                        "outstanding_payments": [
+                            {
+                                "voucher_id": "26299047",
+                                "voucher_no": "SISD400191",
+                                "voucher_type": "WS001",
+                                "datetime": "2025-08-20 14:43:43",
+                                "branch_code": "27",
+                                "trn_type": "AC/SA",
+                                "ref": "SISD400191",
+                                "ref_datetime": "2025-08-20 14:43:43",
+                                "due_datetime": "2025-06-22 00:00:00",
+                                "customer_code": "D6179",
+                                "customer_name": "AB HYPERMARKET L.L.C",
+                                "partner_id": 3412,
+                                "type": "Dr",
+                                "description": null,
+                                "allocate": null,
+                                "AmtLc": 5,
+                                "OsAmtLc": 5,
+                                "collection_type": "cheque",
+                                "cheque_number": "987543",
+                                "cheque_date": "2025-08-20",
+                                "cheque_amount": 5,
+                                "transaction_number": null,
+                                "transaction_date": null,
+                                "transaction_amount": null,
+                                "collection_date": "2025-08-20",
+                                "collected_amount": 5,
+                                "collected_by": null,
+                                "collected_by_name": null,
+                                "status": null
+                            },
+                            {
+                                "voucher_id": "25870907",
+                                "voucher_no": "SISD383553",
+                                "voucher_type": "WS001",
+                                "datetime": "2025-08-20 14:43:43",
+                                "branch_code": "27",
+                                "trn_type": "AC/SA",
+                                "ref": "SISD383553",
+                                "ref_datetime": "2025-08-20 14:43:43",
+                                "due_datetime": "2025-05-23 00:00:00",
+                                "customer_code": "D6179",
+                                "customer_name": "AB HYPERMARKET L.L.C",
+                                "partner_id": 3412,
+                                "type": "Dr",
+                                "description": null,
+                                "allocate": null,
+                                "AmtLc": 1,
+                                "OsAmtLc": 1,
+                                "collection_type": "cheque",
+                                "cheque_number": "987543",
+                                "cheque_date": "2025-08-20",
+                                "cheque_amount": 1,
+                                "transaction_number": null,
+                                "transaction_date": null,
+                                "transaction_amount": null,
+                                "collection_date": "2025-08-20",
+                                "collected_amount": 1,
+                                "collected_by": null,
+                                "collected_by_name": null,
+                                "status": null
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Bank - Payment Collection
+  
+  request: {
+    url: localhost:8069/web/create_payment_record
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "voucher_id": "SISD402241",
+                  "voucher_no": 26348515,
+                  "voucher_type": "WS001",
+                  "datetime": "2025-06-18 00:00:00",
+                  "branch_code": 27,
+                  "trn_type": "AC/SA",
+                  "ref": "REF484001",
+                  "ref_datetime": "2025-06-18 00:00:00",
+                  "due_datetime": "2025-06-25 00:00:00",
+                  "customer_code": "D4517",
+                  "type": "Dr",
+                  "description": "",
+                  "allocate": "",
+                  "AmtLc": 292.43,
+                  "OsAmtLc": 292.43,
+                  "collection_type": "bank",
+                  "cheque_number": false,
+                  "cheque_date": false,
+                  "cheque_amount": false,
+                  "transaction_number": "TRN48478401",
+                  "transaction_date": "2025-07-17",
+                  "transaction_amount": 292.43,
+                  "collection_date": false,
+                  "collected_amount": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 17 Jul 2025 09:58:53 GMT
+      Content-Length: 822
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_collection_details": {
+                        "voucher_id": "SISD402241",
+                        "voucher_no": "26348515",
+                        "voucher_type": "WS001",
+                        "datetime": "2025-06-18 00:00:00",
+                        "branch_code": "27",
+                        "trn_type": "AC/SA",
+                        "ref": "REF484001",
+                        "ref_datetime": "2025-06-18 00:00:00",
+                        "due_datetime": "2025-06-25 00:00:00",
+                        "customer_code": "D4517",
+                        "customer_name": "THAJ AL MADINA FOODSTUFF ",
+                        "partner_id": 4136,
+                        "type": "Dr",
+                        "description": null,
+                        "allocate": null,
+                        "AmtLc": 292.43,
+                        "OsAmtLc": 292.43,
+                        "collection_type": "bank",
+                        "cheque_number": null,
+                        "cheque_date": null,
+                        "cheque_amount": null,
+                        "transaction_number": "TRN48478401",
+                        "transaction_date": "2025-07-17",
+                        "transaction_amount": 292.43,
+                        "collection_date": null,
+                        "collected_amount": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: New Structure
+  
+  request: {
+    url: localhost:8069/web/create_payment_record
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "branch_code": 27,
+                  "collection_type": "cheque",
+                  "partner_id": 3412,
+                  "cheque_number": "987543",
+                  "cheque_date": "2025-08-20",
+                  "cheque_amount": 6.0,
+                  "collection_date": "2025-08-20",
+                  "collected_amount": 6.0,
+                  "check_in_out": false,
+                  "outstanding_payments": [
+                      {
+                          "voucher_id": "26299047",
+                          "voucher_no": "SISD400191",
+                          "voucher_type": "WS001",
+                          "datetime": "2025-08-20 14:43:43",
+                          "branch_code": 27,
+                          "trn_type": "AC/SA",
+                          "ref": "SISD400191",
+                          "ref_datetime": "2025-08-20 14:43:43",
+                          "due_datetime": "2025-06-22T00:00:00.000Z",
+                          "customer_code": "D6179",
+                          "type": "Dr",
+                          "description": "",
+                          "allocate": "",
+                          "AmtLc": 5.0,
+                          "OsAmtLc": 5.0,
+                          "collection_type": "cheque",
+                          "cheque_number": "987543",
+                          "cheque_date": "2025-08-20",
+                          "cheque_amount": 5.0,
+                          "collection_date": "2025-08-20",
+                          "collected_amount": 5.0,
+                          "AmtFc": 2578.28,
+                          "OsAmtFc": 2578.28,
+                          "ExRate": 1.0,
+                          "ValueDt": "2025-06-15T00:00:00.000Z"
+                      },
+                      {
+                          "voucher_id": "25870907",
+                          "voucher_no": "SISD383553",
+                          "voucher_type": "WS001",
+                          "datetime": "2025-08-20 14:43:43",
+                          "branch_code": 27,
+                          "trn_type": "AC/SA",
+                          "ref": "SISD383553",
+                          "ref_datetime": "2025-08-20 14:43:43",
+                          "due_datetime": "2025-05-23T00:00:00.000Z",
+                          "customer_code": "D6179",
+                          "type": "Dr",
+                          "description": "",
+                          "allocate": "",
+                          "AmtLc": 1.0,
+                          "OsAmtLc": 1.0,
+                          "collection_type": "cheque",
+                          "cheque_number": "987543",
+                          "cheque_date": "2025-08-20",
+                          "cheque_amount": 1.0,
+                          "collection_date": "2025-08-20",
+                          "collected_amount": 1.0,
+                          "AmtFc": 1437.41,
+                          "OsAmtFc": 2.91,
+                          "ExRate": 1.0,
+                          "ValueDt": "2025-05-16T00:00:00.000Z"
+                      }
+                  ]
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 20 Aug 2025 11:22:35 GMT
+      Content-Length: 1938
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_collection_details": {
+                        "partner_id": 3412,
+                        "partner_name": "AB HYPERMARKET L.L.C",
+                        "branch_code": "27",
+                        "branch_id": 123,
+                        "branch_name": "SDC",
+                        "collection_type": "cheque",
+                        "cheque_number": "987543",
+                        "cheque_date": "2025-08-20",
+                        "cheque_amount": 6,
+                        "collected_amount": 6,
+                        "collected_by": null,
+                        "status": "paid",
+                        "outstanding_payments": [
+                            {
+                                "voucher_id": "26299047",
+                                "voucher_no": "SISD400191",
+                                "voucher_type": "WS001",
+                                "datetime": "2025-08-20 14:43:43",
+                                "branch_code": "27",
+                                "trn_type": "AC/SA",
+                                "ref": "SISD400191",
+                                "ref_datetime": "2025-08-20 14:43:43",
+                                "due_datetime": "2025-06-22 00:00:00",
+                                "customer_code": "D6179",
+                                "customer_name": "AB HYPERMARKET L.L.C",
+                                "partner_id": 3412,
+                                "type": "Dr",
+                                "description": null,
+                                "allocate": null,
+                                "AmtLc": 5,
+                                "OsAmtLc": 5,
+                                "collection_type": "cheque",
+                                "cheque_number": "987543",
+                                "cheque_date": "2025-08-20",
+                                "cheque_amount": 5,
+                                "transaction_number": null,
+                                "transaction_date": null,
+                                "transaction_amount": null,
+                                "collection_date": "2025-08-20",
+                                "collected_amount": 5,
+                                "collected_by": null,
+                                "collected_by_name": null,
+                                "status": null
+                            },
+                            {
+                                "voucher_id": "25870907",
+                                "voucher_no": "SISD383553",
+                                "voucher_type": "WS001",
+                                "datetime": "2025-08-20 14:43:43",
+                                "branch_code": "27",
+                                "trn_type": "AC/SA",
+                                "ref": "SISD383553",
+                                "ref_datetime": "2025-08-20 14:43:43",
+                                "due_datetime": "2025-05-23 00:00:00",
+                                "customer_code": "D6179",
+                                "customer_name": "AB HYPERMARKET L.L.C",
+                                "partner_id": 3412,
+                                "type": "Dr",
+                                "description": null,
+                                "allocate": null,
+                                "AmtLc": 1,
+                                "OsAmtLc": 1,
+                                "collection_type": "cheque",
+                                "cheque_number": "987543",
+                                "cheque_date": "2025-08-20",
+                                "cheque_amount": 1,
+                                "transaction_number": null,
+                                "transaction_date": null,
+                                "transaction_amount": null,
+                                "collection_date": "2025-08-20",
+                                "collected_amount": 1,
+                                "collected_by": null,
+                                "collected_by_name": null,
+                                "status": null
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Payment receipt Copy
+  
+  request: {
+    url: {{Gravity URL}}/SynTrack/saveACMPR
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "branch_code": false,
+          "collection_type": false,
+          "cheque_number": false,
+          "cheque_date": false,
+          "cheque_amount": false,
+          "collection_date": false,
+          "collected_amount": false,
+          "check_in_out": false,
+          "outstanding_payments": [
+              {
+                  "voucher_id": "26299047",
+                  "voucher_no": "SISD400191",
+                  "voucher_type": "WS001",
+                  "datetime": "2025-08-20 12:03:48",
+                  "branch_code": 27,
+                  "trn_type": "AC/SA",
+                  "ref": "SISD400191",
+                  "ref_datetime": "2025-08-20 12:03:48",
+                  "due_datetime": "2025-06-22T00:00:00.000Z",
+                  "customer_code": "D6179",
+                  "type": "Dr",
+                  "description": "",
+                  "allocate": "",
+                  "AmtLc": 50.0,
+                  "OsAmtLc": 50.0,
+                  "collection_type": "cheque",
+                  "cheque_number": "23456",
+                  "cheque_date": "2025-08-20",
+                  "cheque_amount": 50.0,
+                  "transaction_number": false,
+                  "transaction_date": false,
+                  "transaction_amount": false,
+                  "collection_date": "2025-08-20",
+                  "collected_amount": 50.0,
+                  "AmtFc": null,
+                  "OsAmtFc": null,
+                  "ExRate": null,
+                  "ValueDt": null
+              }
+          ]
+    }
+  }
+  
+  response: {
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}
+
+example {
+  name: Cheque - Payment Collection
+  
+  request: {
+    url: localhost:8069/web/create_payment_record
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "voucher_id": "SISD402241",
+                  "voucher_no": 26348515,
+                  "voucher_type": "WS001",
+                  "datetime": "2025-06-18 00:00:00",
+                  "branch_code": 27,
+                  "trn_type": "AC/SA",
+                  "ref": "REF484001",
+                  "ref_datetime": "2025-06-18 00:00:00",
+                  "due_datetime": "2025-06-25 00:00:00",
+                  "customer_code": "D4517",
+                  "type": "Dr",
+                  "description": "",
+                  "allocate": "",
+                  "AmtLc": 292.43,
+                  "OsAmtLc": 292.43,
+                  "collection_type": "cheque",
+                  "cheque_number": "CHQ15845101",
+                  "cheque_date": "2025-07-17",
+                  "cheque_amount": 292.43,
+                  "transaction_number": false,
+                  "transaction_date": false,
+                  "transaction_amount": false,
+                  "collection_date": false,
+                  "collected_amount": false
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 17 Jul 2025 09:49:23 GMT
+      Content-Length: 821
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_collection_details": {
+                        "voucher_id": "SISD402241",
+                        "voucher_no": "26348515",
+                        "voucher_type": "WS001",
+                        "datetime": "2025-06-18 00:00:00",
+                        "branch_code": "27",
+                        "trn_type": "AC/SA",
+                        "ref": "REF484001",
+                        "ref_datetime": "2025-06-18 00:00:00",
+                        "due_datetime": "2025-06-25 00:00:00",
+                        "customer_code": "D4517",
+                        "customer_name": "THAJ AL MADINA FOODSTUFF ",
+                        "partner_id": 4136,
+                        "type": "Dr",
+                        "description": null,
+                        "allocate": null,
+                        "AmtLc": 292.43,
+                        "OsAmtLc": 292,
+                        "collection_type": "cheque",
+                        "cheque_number": "CHQ15845101",
+                        "cheque_date": "2025-07-17",
+                        "cheque_amount": 292.43,
+                        "transaction_number": null,
+                        "transaction_date": null,
+                        "transaction_amount": null,
+                        "collection_date": null,
+                        "collected_amount": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Cash -  Payment Collection
+  
+  request: {
+    url: localhost:8069/web/create_payment_record
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "voucher_id": "SISD402241",
+                  "voucher_no": 26348515,
+                  "voucher_type": "WS001",
+                  "datetime": "2025-06-18 00:00:00",
+                  "branch_code": 27,
+                  "trn_type": "AC/SA",
+                  "ref": "REF484001",
+                  "ref_datetime": "2025-06-18 00:00:00",
+                  "due_datetime": "2025-06-25 00:00:00",
+                  "customer_code": "D4517",
+                  "type": "Dr",
+                  "description": "",
+                  "allocate": "",
+                  "AmtLc": 292.43,
+                  "OsAmtLc": 292.43,
+                  "collection_type": "cash",
+                  "cheque_number": false,
+                  "cheque_date": false,
+                  "cheque_amount": false,
+                  "transaction_number": false,
+                  "transaction_date": false,
+                  "transaction_amount": false,
+                  "collection_date": "2025-07-17",
+                  "collected_amount": 292.43
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 17 Jul 2025 09:46:00 GMT
+      Content-Length: 807
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_collection_details": {
+                        "voucher_id": "SISD402241",
+                        "voucher_no": "26348515",
+                        "voucher_type": "WS001",
+                        "datetime": "2025-06-18 00:00:00",
+                        "branch_code": "27",
+                        "trn_type": "AC/SA",
+                        "ref": "REF484001",
+                        "ref_datetime": "2025-06-18 00:00:00",
+                        "due_datetime": "2025-06-25 00:00:00",
+                        "customer_code": "D4517",
+                        "customer_name": "THAJ AL MADINA FOODSTUFF ",
+                        "partner_id": 4136,
+                        "type": "Dr",
+                        "description": null,
+                        "allocate": null,
+                        "AmtLc": 292.43,
+                        "OsAmtLc": 292,
+                        "collection_type": "cash",
+                        "cheque_number": null,
+                        "cheque_date": null,
+                        "cheque_amount": null,
+                        "transaction_number": null,
+                        "transaction_date": null,
+                        "transaction_amount": null,
+                        "collection_date": "2025-07-17",
+                        "collected_amount": 292
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

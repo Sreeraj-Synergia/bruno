@@ -1,0 +1,40 @@
+meta {
+  name: Create Delivery Order
+  type: http
+  seq: 29
+}
+
+post {
+  url: 192.168.1.119:8070/web/create_delivery
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "date_done": "2023-06-21",
+              "delivery_line_ids": [
+                  {
+                      "pack_price": 1.5,
+                      "pack_qty": 10,
+                      "package_id": 1,
+                      "product_id": 1
+                  }
+              ],
+              "source_location_id": 8,
+              "picking_type_id": 2,
+              "origin": "",
+              "origin_date": "2023-06-21 09:44:02",
+              "partner_id": 20,
+              "scheduled_date": "2023-06-21 09:44:02"
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: User Details
+  type: http
+  seq: 8
+}
+
+post {
+  url: localhost:8069/web/get_delivery_user_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}

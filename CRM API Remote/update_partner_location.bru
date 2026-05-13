@@ -1,0 +1,28 @@
+meta {
+  name: update_partner_location
+  type: http
+  seq: 25
+}
+
+post {
+  url: http://172.105.51.175:8086/web/update_partner_location
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "partner_id": 16392,
+              "latitude": 5.5454,
+              "longitude": 78.4845454
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

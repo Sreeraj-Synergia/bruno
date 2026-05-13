@@ -1,0 +1,289 @@
+meta {
+  name: Operation Types
+  type: http
+  seq: 22
+}
+
+post {
+  url: https://wms.syntrack.app/web/get_operation_type_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Operation Types
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_operation_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:33:40 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:33:40 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "operation_type_details": [
+                        {
+                            "id": 1,
+                            "name": "Synergia: Receipts",
+                            "default_src_location_id": null,
+                            "default_src_location_name": null,
+                            "default_dest_location_id": 8,
+                            "default_dest_location_name": "WH/Stock",
+                            "sample_picking_type": false,
+                            "asset_picking_type": false,
+                            "return_picking_type": false,
+                            "picking_type_code": "incoming"
+                        },
+                        {
+                            "id": 5,
+                            "name": "Synergia: Internal Transfers",
+                            "default_src_location_id": 8,
+                            "default_src_location_name": "WH/Stock",
+                            "default_dest_location_id": 8,
+                            "default_dest_location_name": "WH/Stock",
+                            "sample_picking_type": false,
+                            "asset_picking_type": false,
+                            "return_picking_type": false,
+                            "picking_type_code": "internal"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Synergia: Delivery Orders",
+                            "default_src_location_id": 8,
+                            "default_src_location_name": "WH/Stock",
+                            "default_dest_location_id": null,
+                            "default_dest_location_name": null,
+                            "sample_picking_type": false,
+                            "asset_picking_type": false,
+                            "return_picking_type": false,
+                            "picking_type_code": "outgoing"
+                        },
+                        {
+                            "id": 10,
+                            "name": "Synergia: Return From Customer",
+                            "default_src_location_id": 5,
+                            "default_src_location_name": "Partner Locations/Customers",
+                            "default_dest_location_id": 8,
+                            "default_dest_location_name": "WH/Stock",
+                            "sample_picking_type": false,
+                            "asset_picking_type": false,
+                            "return_picking_type": true,
+                            "picking_type_code": "incoming"
+                        },
+                        {
+                            "id": 11,
+                            "name": "Synergia: Return To Supplier",
+                            "default_src_location_id": 8,
+                            "default_src_location_name": "WH/Stock",
+                            "default_dest_location_id": 4,
+                            "default_dest_location_name": "Partner Locations/Vendors",
+                            "sample_picking_type": false,
+                            "asset_picking_type": false,
+                            "return_picking_type": true,
+                            "picking_type_code": "incoming"
+                        },
+                        {
+                            "id": 12,
+                            "name": "Synergia: Sample",
+                            "default_src_location_id": 8,
+                            "default_src_location_name": "WH/Stock",
+                            "default_dest_location_id": 5,
+                            "default_dest_location_name": "Partner Locations/Customers",
+                            "sample_picking_type": true,
+                            "asset_picking_type": false,
+                            "return_picking_type": false,
+                            "picking_type_code": "outgoing"
+                        },
+                        {
+                            "id": 13,
+                            "name": "Synergia: Asset",
+                            "default_src_location_id": 8,
+                            "default_src_location_name": "WH/Stock",
+                            "default_dest_location_id": 5,
+                            "default_dest_location_name": "Partner Locations/Customers",
+                            "sample_picking_type": false,
+                            "asset_picking_type": true,
+                            "return_picking_type": false,
+                            "picking_type_code": "outgoing"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Operation Types
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_operation_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:33:40 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:33:40 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "operation_type_details": [
+                        {
+                            "id": 1,
+                            "name": "Synergia: Receipts",
+                            "default_src_location_id": null,
+                            "default_src_location_name": null,
+                            "default_dest_location_id": 8,
+                            "default_dest_location_name": "WH/Stock",
+                            "sample_picking_type": false,
+                            "asset_picking_type": false,
+                            "return_picking_type": false,
+                            "picking_type_code": "incoming"
+                        },
+                        {
+                            "id": 5,
+                            "name": "Synergia: Internal Transfers",
+                            "default_src_location_id": 8,
+                            "default_src_location_name": "WH/Stock",
+                            "default_dest_location_id": 8,
+                            "default_dest_location_name": "WH/Stock",
+                            "sample_picking_type": false,
+                            "asset_picking_type": false,
+                            "return_picking_type": false,
+                            "picking_type_code": "internal"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Synergia: Delivery Orders",
+                            "default_src_location_id": 8,
+                            "default_src_location_name": "WH/Stock",
+                            "default_dest_location_id": null,
+                            "default_dest_location_name": null,
+                            "sample_picking_type": false,
+                            "asset_picking_type": false,
+                            "return_picking_type": false,
+                            "picking_type_code": "outgoing"
+                        },
+                        {
+                            "id": 10,
+                            "name": "Synergia: Return From Customer",
+                            "default_src_location_id": 5,
+                            "default_src_location_name": "Partner Locations/Customers",
+                            "default_dest_location_id": 8,
+                            "default_dest_location_name": "WH/Stock",
+                            "sample_picking_type": false,
+                            "asset_picking_type": false,
+                            "return_picking_type": true,
+                            "picking_type_code": "incoming"
+                        },
+                        {
+                            "id": 11,
+                            "name": "Synergia: Return To Supplier",
+                            "default_src_location_id": 8,
+                            "default_src_location_name": "WH/Stock",
+                            "default_dest_location_id": 4,
+                            "default_dest_location_name": "Partner Locations/Vendors",
+                            "sample_picking_type": false,
+                            "asset_picking_type": false,
+                            "return_picking_type": true,
+                            "picking_type_code": "incoming"
+                        },
+                        {
+                            "id": 12,
+                            "name": "Synergia: Sample",
+                            "default_src_location_id": 8,
+                            "default_src_location_name": "WH/Stock",
+                            "default_dest_location_id": 5,
+                            "default_dest_location_name": "Partner Locations/Customers",
+                            "sample_picking_type": true,
+                            "asset_picking_type": false,
+                            "return_picking_type": false,
+                            "picking_type_code": "outgoing"
+                        },
+                        {
+                            "id": 13,
+                            "name": "Synergia: Asset",
+                            "default_src_location_id": 8,
+                            "default_src_location_name": "WH/Stock",
+                            "default_dest_location_id": 5,
+                            "default_dest_location_name": "Partner Locations/Customers",
+                            "sample_picking_type": false,
+                            "asset_picking_type": true,
+                            "return_picking_type": false,
+                            "picking_type_code": "outgoing"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

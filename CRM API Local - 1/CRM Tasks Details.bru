@@ -1,0 +1,167 @@
+meta {
+  name: CRM Tasks Details
+  type: http
+  seq: 15
+}
+
+post {
+  url: http://localhost:8069/web/get_task_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Get Task Details
+  
+  request: {
+    url: http://localhost:8069/web/get_task_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 689
+      Set-Cookie: session_id=5c3ca46c86c87dc929486e914d344aceef2da3e9; Expires=Tue, 24-Sep-2024 05:53:27 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Wed, 26 Jun 2024 05:53:27 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "task_details": [
+                        {
+                            "id": 878,
+                            "name": "T20240626-531",
+                            "task": "Sample Task",
+                            "type": "task",
+                            "partner_id": 1456,
+                            "partner_name": "Real Fly",
+                            "assigned_id": 331,
+                            "assigned_name": "Mariella Boongaling",
+                            "assigned_by": 331,
+                            "assigned_by_name": "Mariella Boongaling",
+                            "date_assigned": "2024-05-30",
+                            "deadline": "2024-06-26",
+                            "completion_date": null,
+                            "create_date": "2024-06-26 05:52:07.945296",
+                            "is_mandatory": null,
+                            "priority": "3",
+                            "created_crm_lead_id": 105,
+                            "parent_id": null,
+                            "parent_name": null,
+                            "reason": null,
+                            "description": null,
+                            "status_id": 1,
+                            "status_name": "Assigned"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Get Task Details
+  
+  request: {
+    url: http://localhost:8069/web/get_task_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 689
+      Set-Cookie: session_id=5c3ca46c86c87dc929486e914d344aceef2da3e9; Expires=Tue, 24-Sep-2024 05:53:27 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Wed, 26 Jun 2024 05:53:27 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "task_details": [
+                        {
+                            "id": 878,
+                            "name": "T20240626-531",
+                            "task": "Sample Task",
+                            "type": "task",
+                            "partner_id": 1456,
+                            "partner_name": "Real Fly",
+                            "assigned_id": 331,
+                            "assigned_name": "Mariella Boongaling",
+                            "assigned_by": 331,
+                            "assigned_by_name": "Mariella Boongaling",
+                            "date_assigned": "2024-05-30",
+                            "deadline": "2024-06-26",
+                            "completion_date": null,
+                            "create_date": "2024-06-26 05:52:07.945296",
+                            "is_mandatory": null,
+                            "priority": "3",
+                            "created_crm_lead_id": 105,
+                            "parent_id": null,
+                            "parent_name": null,
+                            "reason": null,
+                            "description": null,
+                            "status_id": 1,
+                            "status_name": "Assigned"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

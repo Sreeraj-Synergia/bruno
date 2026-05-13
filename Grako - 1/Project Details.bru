@@ -1,0 +1,25 @@
+meta {
+  name: Project Details
+  type: http
+  seq: 56
+}
+
+post {
+  url: https://grako.syntrack.app/web/get_project_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "project_id": false
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

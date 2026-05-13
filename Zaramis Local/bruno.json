@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Zaramis Local",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

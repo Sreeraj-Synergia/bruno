@@ -1,0 +1,1560 @@
+meta {
+  name: Load Request Details
+  type: http
+  seq: 21
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_load_request_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "page": 0,
+          "data":{
+              "indentId": 282
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  This API is used to create a load request in the backend from mobile application
+}
+
+example {
+  name: Load Request Details updated
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_load_request_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "page": 0,
+              "data":{
+                  "indentId": 148
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 21 Mar 2025 08:45:01 GMT
+      Content-Length: 12640
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "load_request_details": [
+                        {
+                            "indent_id": 148,
+                            "name": "LR2025030080",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "approved_by": 2,
+                            "user_id": 19,
+                            "user_name": "Sales 5",
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "employee_id": 16,
+                            "employee_name": "Sales 5",
+                            "origin": "INDT1741348150",
+                            "location_id": 8,
+                            "location_name": "Stock",
+                            "dest_location_id": 41,
+                            "dest_location_name": "Route 5",
+                            "date_indent": "2025-03-21 16:48:56",
+                            "delivery_count": 1,
+                            "picking_type_id": 7,
+                            "picking_type_name": "Internal Transfers",
+                            "note": null,
+                            "approved_date": "2025-03-21 08:11:34",
+                            "indent_from": "driver",
+                            "store_type": "warehouse",
+                            "delivered_by": 2,
+                            "delivered_name": "Administrator",
+                            "received_date": null,
+                            "validated_by": null,
+                            "validated_name": null,
+                            "validate_sign": null,
+                            "accepted_by": null,
+                            "accepted_name": null,
+                            "accept_sign": null,
+                            "is_done": null,
+                            "state": "transfer",
+                            "indent_lines": [
+                                {
+                                    "indent_line_id": 395,
+                                    "name": "Coco Cola 300 Ml",
+                                    "load_request_id": 148,
+                                    "load_request_name": "LR2025030080",
+                                    "location_id": 8,
+                                    "location_name": "Stock",
+                                    "product_id": 2,
+                                    "product_name": "Coco Cola 300 Ml",
+                                    "product_code": null,
+                                    "product_barcode": null,
+                                    "uom_id": 1,
+                                    "uom_name": "Units",
+                                    "req_qty": 5,
+                                    "company_id": 1,
+                                    "company_name": "Synergia Softwares IT infrastructure LLC",
+                                    "qty_delivered": 5,
+                                    "pack_qty_delivered": 5,
+                                    "qty_received": 0,
+                                    "pack_qty_received": 0,
+                                    "qty_approved": 5,
+                                    "pack_qty_approved": 5,
+                                    "package_id": 3,
+                                    "package_name": "Piece",
+                                    "qty_in_package": 1,
+                                    "pack_qty": 5,
+                                    "state": "transfer",
+                                    "wh_pack_onhand_qty": 690,
+                                    "wh_onhand_unit_qty": 690,
+                                    "res_pack_qty": 696,
+                                    "res_unit_qty": 696,
+                                    "onhand_qty": 240,
+                                    "onhand_unit_qty": 240,
+                                    "van_pack_onhand_qty": 0.5,
+                                    "van_unit_onhand_qty": 30,
+                                    "all_received": null,
+                                    "requested_by": 19,
+                                    "requested_by_name": "Sales 5",
+                                    "requested_date": "2025-03-21 16:48:56",
+                                    "approved_date": "2025-03-21 08:11:34",
+                                    "approved_by": 2,
+                                    "approved_by_name": "Administrator",
+                                    "delivered_by": 2,
+                                    "delivered_by_name": "Administrator",
+                                    "value": 0,
+                                    "employee_id": 16,
+                                    "employee_name": "Sales 5",
+                                    "check_for_packaging": true,
+                                    "allocated_product_details": [
+                                        {
+                                            "id": 5039,
+                                            "product_id": 2,
+                                            "expiration_date": "2026-09-08 20:00:00",
+                                            "lot_id": 1,
+                                            "lot_name": "SN0000101",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 0,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": 3,
+                                            "product_packaging_name": "Piece",
+                                            "qty_in_pack": 1,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": null,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": true,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        },
+                                        {
+                                            "id": 5040,
+                                            "product_id": 2,
+                                            "expiration_date": "2026-09-08 20:00:00",
+                                            "lot_id": 1,
+                                            "lot_name": "SN0000101",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 0,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": 3,
+                                            "product_packaging_name": "Piece",
+                                            "qty_in_pack": 1,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": null,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": true,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        },
+                                        {
+                                            "id": 5041,
+                                            "product_id": 2,
+                                            "expiration_date": "2027-08-07 20:00:00",
+                                            "lot_id": 83,
+                                            "lot_name": "SN00293001",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 5,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": 3,
+                                            "product_packaging_name": "Piece",
+                                            "qty_in_pack": 1,
+                                            "packaging_qty": 5,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": 49,
+                                            "available_package_qty": 49,
+                                            "check_for_packaging": true,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        },
+                                        {
+                                            "id": 5042,
+                                            "product_id": 2,
+                                            "expiration_date": "2027-08-07 20:00:00",
+                                            "lot_id": 83,
+                                            "lot_name": "SN00293001",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 0,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": 3,
+                                            "product_packaging_name": "Piece",
+                                            "qty_in_pack": 1,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": 49,
+                                            "available_package_qty": 49,
+                                            "check_for_packaging": true,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "indent_line_id": 396,
+                                    "name": "Samsung Flip (256 GB, Ocean Blue)",
+                                    "load_request_id": 148,
+                                    "load_request_name": "LR2025030080",
+                                    "location_id": 8,
+                                    "location_name": "Stock",
+                                    "product_id": 9,
+                                    "product_name": "Samsung Flip",
+                                    "product_code": null,
+                                    "product_barcode": null,
+                                    "uom_id": 27,
+                                    "uom_name": "PCs",
+                                    "req_qty": 3,
+                                    "company_id": 1,
+                                    "company_name": "Synergia Softwares IT infrastructure LLC",
+                                    "qty_delivered": 3,
+                                    "pack_qty_delivered": 3,
+                                    "qty_received": 0,
+                                    "pack_qty_received": 0,
+                                    "qty_approved": 3,
+                                    "pack_qty_approved": 0,
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "qty_in_package": 0,
+                                    "pack_qty": 0,
+                                    "state": "transfer",
+                                    "wh_pack_onhand_qty": 10,
+                                    "wh_onhand_unit_qty": 10,
+                                    "res_pack_qty": 5,
+                                    "res_unit_qty": 5,
+                                    "onhand_qty": 7,
+                                    "onhand_unit_qty": 7,
+                                    "van_pack_onhand_qty": 0,
+                                    "van_unit_onhand_qty": 0,
+                                    "all_received": null,
+                                    "requested_by": 19,
+                                    "requested_by_name": "Sales 5",
+                                    "requested_date": "2025-03-21 16:48:56",
+                                    "approved_date": "2025-03-21 08:11:34",
+                                    "approved_by": 2,
+                                    "approved_by_name": "Administrator",
+                                    "delivered_by": 2,
+                                    "delivered_by_name": "Administrator",
+                                    "value": 0,
+                                    "employee_id": 16,
+                                    "employee_name": "Sales 5",
+                                    "check_for_packaging": null,
+                                    "allocated_product_details": [
+                                        {
+                                            "id": 5043,
+                                            "product_id": 9,
+                                            "expiration_date": null,
+                                            "lot_id": 23,
+                                            "lot_name": "S0009011",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 1,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "qty_in_pack": null,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": -1,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": null,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        },
+                                        {
+                                            "id": 5044,
+                                            "product_id": 9,
+                                            "expiration_date": null,
+                                            "lot_id": 24,
+                                            "lot_name": "S0009012",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 1,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "qty_in_pack": null,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": -1,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": null,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        },
+                                        {
+                                            "id": 5045,
+                                            "product_id": 9,
+                                            "expiration_date": null,
+                                            "lot_id": 25,
+                                            "lot_name": "S0009013",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 1,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "qty_in_pack": null,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": -1,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": null,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "indent_line_id": 397,
+                                    "name": "Samsung Flip (256 GB, Desert Sand)",
+                                    "load_request_id": 148,
+                                    "load_request_name": "LR2025030080",
+                                    "location_id": 8,
+                                    "location_name": "Stock",
+                                    "product_id": 10,
+                                    "product_name": "Samsung Flip",
+                                    "product_code": null,
+                                    "product_barcode": null,
+                                    "uom_id": 27,
+                                    "uom_name": "PCs",
+                                    "req_qty": 1,
+                                    "company_id": 1,
+                                    "company_name": "Synergia Softwares IT infrastructure LLC",
+                                    "qty_delivered": 1,
+                                    "pack_qty_delivered": 1,
+                                    "qty_received": 0,
+                                    "pack_qty_received": 0,
+                                    "qty_approved": 1,
+                                    "pack_qty_approved": 0,
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "qty_in_package": 0,
+                                    "pack_qty": 0,
+                                    "state": "transfer",
+                                    "wh_pack_onhand_qty": 10,
+                                    "wh_onhand_unit_qty": 10,
+                                    "res_pack_qty": 0,
+                                    "res_unit_qty": 0,
+                                    "onhand_qty": 10,
+                                    "onhand_unit_qty": 10,
+                                    "van_pack_onhand_qty": 0,
+                                    "van_unit_onhand_qty": 0,
+                                    "all_received": null,
+                                    "requested_by": 19,
+                                    "requested_by_name": "Sales 5",
+                                    "requested_date": "2025-03-21 16:48:56",
+                                    "approved_date": "2025-03-21 08:11:34",
+                                    "approved_by": 2,
+                                    "approved_by_name": "Administrator",
+                                    "delivered_by": 2,
+                                    "delivered_by_name": "Administrator",
+                                    "value": 0,
+                                    "employee_id": 16,
+                                    "employee_name": "Sales 5",
+                                    "check_for_packaging": null,
+                                    "allocated_product_details": [
+                                        {
+                                            "id": 5046,
+                                            "product_id": 10,
+                                            "expiration_date": null,
+                                            "lot_id": 53,
+                                            "lot_name": "S0009041",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 1,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "qty_in_pack": null,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": null,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": null,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Load Request Details
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_load_request_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "page": 0,
+              "data":{
+                  "indentId": 282
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Sat, 12 Apr 2025 07:48:28 GMT
+      Content-Length: 3482
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "load_request_details": [
+                        {
+                            "indent_id": 282,
+                            "name": "LR2025040213",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "approved_by": null,
+                            "user_id": 20,
+                            "user_name": "Sales User 6",
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "employee_id": 17,
+                            "employee_name": "Sales User 6",
+                            "origin": "INDT1744357823",
+                            "location_id": 8,
+                            "location_name": "Stock",
+                            "dest_location_id": 38,
+                            "dest_location_name": "Route 6",
+                            "date_indent": "2025-04-11 11:50:23",
+                            "delivery_count": null,
+                            "picking_type_id": 7,
+                            "picking_type_name": "Internal Transfers",
+                            "note": null,
+                            "approved_date": null,
+                            "indent_from": "driver",
+                            "store_type": "warehouse",
+                            "delivered_by": null,
+                            "delivered_name": null,
+                            "received_date": null,
+                            "validated_by": null,
+                            "validated_name": null,
+                            "validate_sign": null,
+                            "accepted_by": null,
+                            "accepted_name": null,
+                            "accept_sign": null,
+                            "is_done": null,
+                            "state": "waiting",
+                            "indent_lines": [
+                                {
+                                    "indent_line_id": 720,
+                                    "name": "Coco Cola 300 Ml",
+                                    "load_request_id": 282,
+                                    "load_request_name": "LR2025040213",
+                                    "location_id": 8,
+                                    "location_name": "Stock",
+                                    "product_id": 2,
+                                    "product_name": "Coco Cola 300 Ml",
+                                    "product_code": null,
+                                    "product_barcode": null,
+                                    "uom_id": 1,
+                                    "uom_name": "Units",
+                                    "req_qty": 600,
+                                    "company_id": 1,
+                                    "company_name": "Synergia Softwares IT infrastructure LLC",
+                                    "qty_delivered": 0,
+                                    "pack_qty_delivered": 0,
+                                    "qty_received": 0,
+                                    "pack_qty_received": 0,
+                                    "qty_approved": 0,
+                                    "pack_qty_approved": 0,
+                                    "package_id": 1,
+                                    "package_name": "Carton",
+                                    "qty_in_package": 60,
+                                    "pack_qty": 10,
+                                    "state": "waiting",
+                                    "wh_pack_onhand_qty": 11.5,
+                                    "wh_onhand_unit_qty": 690,
+                                    "res_pack_qty": 14.6,
+                                    "res_unit_qty": 876,
+                                    "onhand_qty": 9.8,
+                                    "onhand_unit_qty": 588,
+                                    "van_pack_onhand_qty": 0,
+                                    "van_unit_onhand_qty": 0,
+                                    "all_received": null,
+                                    "requested_by": 20,
+                                    "requested_by_name": "Sales User 6",
+                                    "requested_date": "2025-04-11 11:50:23",
+                                    "approved_date": null,
+                                    "approved_by": null,
+                                    "approved_by_name": null,
+                                    "delivered_by": null,
+                                    "delivered_by_name": null,
+                                    "value": 0,
+                                    "employee_id": 17,
+                                    "employee_name": "Sales User 6",
+                                    "check_for_packaging": true,
+                                    "allocated_product_details": []
+                                },
+                                {
+                                    "indent_line_id": 721,
+                                    "name": "Arun Ice Cream Vanila 12s Pack",
+                                    "load_request_id": 282,
+                                    "load_request_name": "LR2025040213",
+                                    "location_id": null,
+                                    "location_name": null,
+                                    "product_id": 2916,
+                                    "product_name": "Arun Ice Cream Vanila 12s Pack",
+                                    "product_code": "A200203",
+                                    "product_barcode": "0200034",
+                                    "uom_id": 1,
+                                    "uom_name": "Units",
+                                    "req_qty": 10,
+                                    "company_id": 1,
+                                    "company_name": "Synergia Softwares IT infrastructure LLC",
+                                    "qty_delivered": 0,
+                                    "pack_qty_delivered": 0,
+                                    "qty_received": 0,
+                                    "pack_qty_received": 0,
+                                    "qty_approved": 0,
+                                    "pack_qty_approved": 0,
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "qty_in_package": 0,
+                                    "pack_qty": 0,
+                                    "state": "waiting",
+                                    "wh_pack_onhand_qty": 2766,
+                                    "wh_onhand_unit_qty": 2766,
+                                    "res_pack_qty": 19,
+                                    "res_unit_qty": 19,
+                                    "onhand_qty": 0,
+                                    "onhand_unit_qty": 0,
+                                    "van_pack_onhand_qty": 0,
+                                    "van_unit_onhand_qty": 0,
+                                    "all_received": null,
+                                    "requested_by": 20,
+                                    "requested_by_name": "Sales User 6",
+                                    "requested_date": "2025-04-11 11:50:23",
+                                    "approved_date": null,
+                                    "approved_by": null,
+                                    "approved_by_name": null,
+                                    "delivered_by": null,
+                                    "delivered_by_name": null,
+                                    "value": 0,
+                                    "employee_id": 17,
+                                    "employee_name": "Sales User 6",
+                                    "check_for_packaging": null,
+                                    "allocated_product_details": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Load Request Details updated
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_load_request_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "page": 0,
+              "data":{
+                  "indentId": 148
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 21 Mar 2025 08:45:01 GMT
+      Content-Length: 12640
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "load_request_details": [
+                        {
+                            "indent_id": 148,
+                            "name": "LR2025030080",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "approved_by": 2,
+                            "user_id": 19,
+                            "user_name": "Sales 5",
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "employee_id": 16,
+                            "employee_name": "Sales 5",
+                            "origin": "INDT1741348150",
+                            "location_id": 8,
+                            "location_name": "Stock",
+                            "dest_location_id": 41,
+                            "dest_location_name": "Route 5",
+                            "date_indent": "2025-03-21 16:48:56",
+                            "delivery_count": 1,
+                            "picking_type_id": 7,
+                            "picking_type_name": "Internal Transfers",
+                            "note": null,
+                            "approved_date": "2025-03-21 08:11:34",
+                            "indent_from": "driver",
+                            "store_type": "warehouse",
+                            "delivered_by": 2,
+                            "delivered_name": "Administrator",
+                            "received_date": null,
+                            "validated_by": null,
+                            "validated_name": null,
+                            "validate_sign": null,
+                            "accepted_by": null,
+                            "accepted_name": null,
+                            "accept_sign": null,
+                            "is_done": null,
+                            "state": "transfer",
+                            "indent_lines": [
+                                {
+                                    "indent_line_id": 395,
+                                    "name": "Coco Cola 300 Ml",
+                                    "load_request_id": 148,
+                                    "load_request_name": "LR2025030080",
+                                    "location_id": 8,
+                                    "location_name": "Stock",
+                                    "product_id": 2,
+                                    "product_name": "Coco Cola 300 Ml",
+                                    "product_code": null,
+                                    "product_barcode": null,
+                                    "uom_id": 1,
+                                    "uom_name": "Units",
+                                    "req_qty": 5,
+                                    "company_id": 1,
+                                    "company_name": "Synergia Softwares IT infrastructure LLC",
+                                    "qty_delivered": 5,
+                                    "pack_qty_delivered": 5,
+                                    "qty_received": 0,
+                                    "pack_qty_received": 0,
+                                    "qty_approved": 5,
+                                    "pack_qty_approved": 5,
+                                    "package_id": 3,
+                                    "package_name": "Piece",
+                                    "qty_in_package": 1,
+                                    "pack_qty": 5,
+                                    "state": "transfer",
+                                    "wh_pack_onhand_qty": 690,
+                                    "wh_onhand_unit_qty": 690,
+                                    "res_pack_qty": 696,
+                                    "res_unit_qty": 696,
+                                    "onhand_qty": 240,
+                                    "onhand_unit_qty": 240,
+                                    "van_pack_onhand_qty": 0.5,
+                                    "van_unit_onhand_qty": 30,
+                                    "all_received": null,
+                                    "requested_by": 19,
+                                    "requested_by_name": "Sales 5",
+                                    "requested_date": "2025-03-21 16:48:56",
+                                    "approved_date": "2025-03-21 08:11:34",
+                                    "approved_by": 2,
+                                    "approved_by_name": "Administrator",
+                                    "delivered_by": 2,
+                                    "delivered_by_name": "Administrator",
+                                    "value": 0,
+                                    "employee_id": 16,
+                                    "employee_name": "Sales 5",
+                                    "check_for_packaging": true,
+                                    "allocated_product_details": [
+                                        {
+                                            "id": 5039,
+                                            "product_id": 2,
+                                            "expiration_date": "2026-09-08 20:00:00",
+                                            "lot_id": 1,
+                                            "lot_name": "SN0000101",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 0,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": 3,
+                                            "product_packaging_name": "Piece",
+                                            "qty_in_pack": 1,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": null,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": true,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        },
+                                        {
+                                            "id": 5040,
+                                            "product_id": 2,
+                                            "expiration_date": "2026-09-08 20:00:00",
+                                            "lot_id": 1,
+                                            "lot_name": "SN0000101",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 0,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": 3,
+                                            "product_packaging_name": "Piece",
+                                            "qty_in_pack": 1,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": null,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": true,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        },
+                                        {
+                                            "id": 5041,
+                                            "product_id": 2,
+                                            "expiration_date": "2027-08-07 20:00:00",
+                                            "lot_id": 83,
+                                            "lot_name": "SN00293001",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 5,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": 3,
+                                            "product_packaging_name": "Piece",
+                                            "qty_in_pack": 1,
+                                            "packaging_qty": 5,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": 49,
+                                            "available_package_qty": 49,
+                                            "check_for_packaging": true,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        },
+                                        {
+                                            "id": 5042,
+                                            "product_id": 2,
+                                            "expiration_date": "2027-08-07 20:00:00",
+                                            "lot_id": 83,
+                                            "lot_name": "SN00293001",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 0,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": 3,
+                                            "product_packaging_name": "Piece",
+                                            "qty_in_pack": 1,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": 49,
+                                            "available_package_qty": 49,
+                                            "check_for_packaging": true,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "indent_line_id": 396,
+                                    "name": "Samsung Flip (256 GB, Ocean Blue)",
+                                    "load_request_id": 148,
+                                    "load_request_name": "LR2025030080",
+                                    "location_id": 8,
+                                    "location_name": "Stock",
+                                    "product_id": 9,
+                                    "product_name": "Samsung Flip",
+                                    "product_code": null,
+                                    "product_barcode": null,
+                                    "uom_id": 27,
+                                    "uom_name": "PCs",
+                                    "req_qty": 3,
+                                    "company_id": 1,
+                                    "company_name": "Synergia Softwares IT infrastructure LLC",
+                                    "qty_delivered": 3,
+                                    "pack_qty_delivered": 3,
+                                    "qty_received": 0,
+                                    "pack_qty_received": 0,
+                                    "qty_approved": 3,
+                                    "pack_qty_approved": 0,
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "qty_in_package": 0,
+                                    "pack_qty": 0,
+                                    "state": "transfer",
+                                    "wh_pack_onhand_qty": 10,
+                                    "wh_onhand_unit_qty": 10,
+                                    "res_pack_qty": 5,
+                                    "res_unit_qty": 5,
+                                    "onhand_qty": 7,
+                                    "onhand_unit_qty": 7,
+                                    "van_pack_onhand_qty": 0,
+                                    "van_unit_onhand_qty": 0,
+                                    "all_received": null,
+                                    "requested_by": 19,
+                                    "requested_by_name": "Sales 5",
+                                    "requested_date": "2025-03-21 16:48:56",
+                                    "approved_date": "2025-03-21 08:11:34",
+                                    "approved_by": 2,
+                                    "approved_by_name": "Administrator",
+                                    "delivered_by": 2,
+                                    "delivered_by_name": "Administrator",
+                                    "value": 0,
+                                    "employee_id": 16,
+                                    "employee_name": "Sales 5",
+                                    "check_for_packaging": null,
+                                    "allocated_product_details": [
+                                        {
+                                            "id": 5043,
+                                            "product_id": 9,
+                                            "expiration_date": null,
+                                            "lot_id": 23,
+                                            "lot_name": "S0009011",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 1,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "qty_in_pack": null,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": -1,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": null,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        },
+                                        {
+                                            "id": 5044,
+                                            "product_id": 9,
+                                            "expiration_date": null,
+                                            "lot_id": 24,
+                                            "lot_name": "S0009012",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 1,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "qty_in_pack": null,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": -1,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": null,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        },
+                                        {
+                                            "id": 5045,
+                                            "product_id": 9,
+                                            "expiration_date": null,
+                                            "lot_id": 25,
+                                            "lot_name": "S0009013",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 1,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "qty_in_pack": null,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": -1,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": null,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "indent_line_id": 397,
+                                    "name": "Samsung Flip (256 GB, Desert Sand)",
+                                    "load_request_id": 148,
+                                    "load_request_name": "LR2025030080",
+                                    "location_id": 8,
+                                    "location_name": "Stock",
+                                    "product_id": 10,
+                                    "product_name": "Samsung Flip",
+                                    "product_code": null,
+                                    "product_barcode": null,
+                                    "uom_id": 27,
+                                    "uom_name": "PCs",
+                                    "req_qty": 1,
+                                    "company_id": 1,
+                                    "company_name": "Synergia Softwares IT infrastructure LLC",
+                                    "qty_delivered": 1,
+                                    "pack_qty_delivered": 1,
+                                    "qty_received": 0,
+                                    "pack_qty_received": 0,
+                                    "qty_approved": 1,
+                                    "pack_qty_approved": 0,
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "qty_in_package": 0,
+                                    "pack_qty": 0,
+                                    "state": "transfer",
+                                    "wh_pack_onhand_qty": 10,
+                                    "wh_onhand_unit_qty": 10,
+                                    "res_pack_qty": 0,
+                                    "res_unit_qty": 0,
+                                    "onhand_qty": 10,
+                                    "onhand_unit_qty": 10,
+                                    "van_pack_onhand_qty": 0,
+                                    "van_unit_onhand_qty": 0,
+                                    "all_received": null,
+                                    "requested_by": 19,
+                                    "requested_by_name": "Sales 5",
+                                    "requested_date": "2025-03-21 16:48:56",
+                                    "approved_date": "2025-03-21 08:11:34",
+                                    "approved_by": 2,
+                                    "approved_by_name": "Administrator",
+                                    "delivered_by": 2,
+                                    "delivered_by_name": "Administrator",
+                                    "value": 0,
+                                    "employee_id": 16,
+                                    "employee_name": "Sales 5",
+                                    "check_for_packaging": null,
+                                    "allocated_product_details": [
+                                        {
+                                            "id": 5046,
+                                            "product_id": 10,
+                                            "expiration_date": null,
+                                            "lot_id": 53,
+                                            "lot_name": "S0009041",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 41,
+                                            "location_dest_name": "Route 5",
+                                            "picking_partner_id": null,
+                                            "picking_partner_name": null,
+                                            "company_id": 1,
+                                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                                            "quantity": 1,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "assigned",
+                                            "manufacture_date": null,
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "qty_in_pack": null,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                            "transaction_type": "internal",
+                                            "available_qty": null,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": null,
+                                            "use_manufacture_date": null,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Load Request Details
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_load_request_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "page": 0,
+              "data":{
+                  "indentId": 282
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Sat, 12 Apr 2025 07:48:28 GMT
+      Content-Length: 3482
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "load_request_details": [
+                        {
+                            "indent_id": 282,
+                            "name": "LR2025040213",
+                            "company_id": 1,
+                            "company_name": "Synergia Softwares IT infrastructure LLC",
+                            "approved_by": null,
+                            "user_id": 20,
+                            "user_name": "Sales User 6",
+                            "department_id": 3,
+                            "department_name": "Sales Department",
+                            "employee_id": 17,
+                            "employee_name": "Sales User 6",
+                            "origin": "INDT1744357823",
+                            "location_id": 8,
+                            "location_name": "Stock",
+                            "dest_location_id": 38,
+                            "dest_location_name": "Route 6",
+                            "date_indent": "2025-04-11 11:50:23",
+                            "delivery_count": null,
+                            "picking_type_id": 7,
+                            "picking_type_name": "Internal Transfers",
+                            "note": null,
+                            "approved_date": null,
+                            "indent_from": "driver",
+                            "store_type": "warehouse",
+                            "delivered_by": null,
+                            "delivered_name": null,
+                            "received_date": null,
+                            "validated_by": null,
+                            "validated_name": null,
+                            "validate_sign": null,
+                            "accepted_by": null,
+                            "accepted_name": null,
+                            "accept_sign": null,
+                            "is_done": null,
+                            "state": "waiting",
+                            "indent_lines": [
+                                {
+                                    "indent_line_id": 720,
+                                    "name": "Coco Cola 300 Ml",
+                                    "load_request_id": 282,
+                                    "load_request_name": "LR2025040213",
+                                    "location_id": 8,
+                                    "location_name": "Stock",
+                                    "product_id": 2,
+                                    "product_name": "Coco Cola 300 Ml",
+                                    "product_code": null,
+                                    "product_barcode": null,
+                                    "uom_id": 1,
+                                    "uom_name": "Units",
+                                    "req_qty": 600,
+                                    "company_id": 1,
+                                    "company_name": "Synergia Softwares IT infrastructure LLC",
+                                    "qty_delivered": 0,
+                                    "pack_qty_delivered": 0,
+                                    "qty_received": 0,
+                                    "pack_qty_received": 0,
+                                    "qty_approved": 0,
+                                    "pack_qty_approved": 0,
+                                    "package_id": 1,
+                                    "package_name": "Carton",
+                                    "qty_in_package": 60,
+                                    "pack_qty": 10,
+                                    "state": "waiting",
+                                    "wh_pack_onhand_qty": 11.5,
+                                    "wh_onhand_unit_qty": 690,
+                                    "res_pack_qty": 14.6,
+                                    "res_unit_qty": 876,
+                                    "onhand_qty": 9.8,
+                                    "onhand_unit_qty": 588,
+                                    "van_pack_onhand_qty": 0,
+                                    "van_unit_onhand_qty": 0,
+                                    "all_received": null,
+                                    "requested_by": 20,
+                                    "requested_by_name": "Sales User 6",
+                                    "requested_date": "2025-04-11 11:50:23",
+                                    "approved_date": null,
+                                    "approved_by": null,
+                                    "approved_by_name": null,
+                                    "delivered_by": null,
+                                    "delivered_by_name": null,
+                                    "value": 0,
+                                    "employee_id": 17,
+                                    "employee_name": "Sales User 6",
+                                    "check_for_packaging": true,
+                                    "allocated_product_details": []
+                                },
+                                {
+                                    "indent_line_id": 721,
+                                    "name": "Arun Ice Cream Vanila 12s Pack",
+                                    "load_request_id": 282,
+                                    "load_request_name": "LR2025040213",
+                                    "location_id": null,
+                                    "location_name": null,
+                                    "product_id": 2916,
+                                    "product_name": "Arun Ice Cream Vanila 12s Pack",
+                                    "product_code": "A200203",
+                                    "product_barcode": "0200034",
+                                    "uom_id": 1,
+                                    "uom_name": "Units",
+                                    "req_qty": 10,
+                                    "company_id": 1,
+                                    "company_name": "Synergia Softwares IT infrastructure LLC",
+                                    "qty_delivered": 0,
+                                    "pack_qty_delivered": 0,
+                                    "qty_received": 0,
+                                    "pack_qty_received": 0,
+                                    "qty_approved": 0,
+                                    "pack_qty_approved": 0,
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "qty_in_package": 0,
+                                    "pack_qty": 0,
+                                    "state": "waiting",
+                                    "wh_pack_onhand_qty": 2766,
+                                    "wh_onhand_unit_qty": 2766,
+                                    "res_pack_qty": 19,
+                                    "res_unit_qty": 19,
+                                    "onhand_qty": 0,
+                                    "onhand_unit_qty": 0,
+                                    "van_pack_onhand_qty": 0,
+                                    "van_unit_onhand_qty": 0,
+                                    "all_received": null,
+                                    "requested_by": 20,
+                                    "requested_by_name": "Sales User 6",
+                                    "requested_date": "2025-04-11 11:50:23",
+                                    "approved_date": null,
+                                    "approved_by": null,
+                                    "approved_by_name": null,
+                                    "delivered_by": null,
+                                    "delivered_by_name": null,
+                                    "value": 0,
+                                    "employee_id": 17,
+                                    "employee_name": "Sales User 6",
+                                    "check_for_packaging": null,
+                                    "allocated_product_details": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

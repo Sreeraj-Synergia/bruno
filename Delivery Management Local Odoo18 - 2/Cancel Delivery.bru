@@ -1,0 +1,241 @@
+meta {
+  name: Cancel Delivery
+  type: http
+  seq: 12
+}
+
+post {
+  url: localhost:8070/web/cancel_delivery
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "cancel_reason_id": 1,
+              "dispatch_line_id": 29,
+              "dispatch_id": 5
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Cancel Delivery
+  
+  request: {
+    url: localhost:8070/web/cancel_delivery
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "cancel_reason_id": 1,
+                  "dispatch_line_id": 29,
+                  "dispatch_id": 5
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 1542
+      Set-Cookie: session_id=fdd016adc2e5b6fddf130a6a4d642af7aa092c8e; Expires=Sun, 15-Dec-2024 08:22:52 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 16 Sep 2024 08:22:52 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dispatch_line_cancelled": {
+                        "id": 29,
+                        "dispatch_id": 5,
+                        "dispatch_name": "DM2024090004",
+                        "name": "DM2024090004/2",
+                        "date": "2024-09-12 22:04:25",
+                        "work_location": 929,
+                        "work_locatiname": "Al Abrar Pharmacy LLC",
+                        "driver_id": 838,
+                        "driver_name": "Arslan Ali Irsahd Ahmad",
+                        "area_code_id": 1,
+                        "area_code_name": "Oud Metha",
+                        "employee_id": 261,
+                        "employee_name": "Synergia",
+                        "company_id": 1,
+                        "company_name": "Zneem Group of companies",
+                        "invoice_type": "system",
+                        "invoice_id": 48749,
+                        "invoice_name": "INV/2024/09/0001",
+                        "integrated_invoice_id": null,
+                        "integrated_invoice_name": null,
+                        "invoice_ref": "INV/2024/09/0001",
+                        "invoice_date": "2024-09-10",
+                        "delivery_type_id": 3,
+                        "delivery_type_name": "Sample Delivery",
+                        "partner_id": 1356,
+                        "partner_name": "Primelogistics",
+                        "pack_details": null,
+                        "picking_id": null,
+                        "delivery_id": null,
+                        "delivery_name": null,
+                        "delivery_date": "2024-09-10 00:00:00",
+                        "delivered_on_date": "2024-09-13 00:00:00",
+                        "cancel_reason_id": 1,
+                        "cancel_reason_name": "Sample",
+                        "sale_order_id": null,
+                        "sale_order_name": null,
+                        "sale_order_ref": null,
+                        "sale_order_date": null,
+                        "payment_type": "cash",
+                        "receipt_type": "cash",
+                        "check_date": null,
+                        "check_no": null,
+                        "transfer_ref": null,
+                        "amount_to_pay": 250,
+                        "amount_collected": 250,
+                        "sequence": null,
+                        "line_number": 2,
+                        "has_same_invoice": null,
+                        "signature": "http://localhost:8070/web/image?model=dispatch.management.line&id=29&field=signature",
+                        "state": "not_delivered"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Cancel Delivery
+  
+  request: {
+    url: localhost:8070/web/cancel_delivery
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "cancel_reason_id": 1,
+                  "dispatch_line_id": 29,
+                  "dispatch_id": 5
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 1542
+      Set-Cookie: session_id=fdd016adc2e5b6fddf130a6a4d642af7aa092c8e; Expires=Sun, 15-Dec-2024 08:22:52 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 16 Sep 2024 08:22:52 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dispatch_line_cancelled": {
+                        "id": 29,
+                        "dispatch_id": 5,
+                        "dispatch_name": "DM2024090004",
+                        "name": "DM2024090004/2",
+                        "date": "2024-09-12 22:04:25",
+                        "work_location": 929,
+                        "work_locatiname": "Al Abrar Pharmacy LLC",
+                        "driver_id": 838,
+                        "driver_name": "Arslan Ali Irsahd Ahmad",
+                        "area_code_id": 1,
+                        "area_code_name": "Oud Metha",
+                        "employee_id": 261,
+                        "employee_name": "Synergia",
+                        "company_id": 1,
+                        "company_name": "Zneem Group of companies",
+                        "invoice_type": "system",
+                        "invoice_id": 48749,
+                        "invoice_name": "INV/2024/09/0001",
+                        "integrated_invoice_id": null,
+                        "integrated_invoice_name": null,
+                        "invoice_ref": "INV/2024/09/0001",
+                        "invoice_date": "2024-09-10",
+                        "delivery_type_id": 3,
+                        "delivery_type_name": "Sample Delivery",
+                        "partner_id": 1356,
+                        "partner_name": "Primelogistics",
+                        "pack_details": null,
+                        "picking_id": null,
+                        "delivery_id": null,
+                        "delivery_name": null,
+                        "delivery_date": "2024-09-10 00:00:00",
+                        "delivered_on_date": "2024-09-13 00:00:00",
+                        "cancel_reason_id": 1,
+                        "cancel_reason_name": "Sample",
+                        "sale_order_id": null,
+                        "sale_order_name": null,
+                        "sale_order_ref": null,
+                        "sale_order_date": null,
+                        "payment_type": "cash",
+                        "receipt_type": "cash",
+                        "check_date": null,
+                        "check_no": null,
+                        "transfer_ref": null,
+                        "amount_to_pay": 250,
+                        "amount_collected": 250,
+                        "sequence": null,
+                        "line_number": 2,
+                        "has_same_invoice": null,
+                        "signature": "http://localhost:8070/web/image?model=dispatch.management.line&id=29&field=signature",
+                        "state": "not_delivered"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

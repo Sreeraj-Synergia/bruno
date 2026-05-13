@@ -1,0 +1,202 @@
+meta {
+  name: Edit Activity Details
+  type: http
+  seq: 23
+}
+
+post {
+  url: http://localhost:8069/web/edit_crm_activity
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "activity_id": 135,
+              "activity_type_id": 1,
+              "date_deadline": "2024-07-19",
+              "summary": "Call The Customer Edited Activity",
+              "res_id": 304,
+              "additional_assigned_ids": [100],
+              "user_id": false,
+              "note": "Call At 9 o Clock",
+              "assigned_task_id": 1327,
+              "employee_task": false,
+              "employee_id": false
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Edit Activity Details
+  
+  request: {
+    url: http://localhost:8069/web/edit_crm_activity
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 135,
+                  "activity_type_id": 1,
+                  "date_deadline": "2024-07-19",
+                  "summary": "Call The Customer Edited Activity",
+                  "res_id": 304,
+                  "additional_assigned_ids": [100],
+                  "user_id": false,
+                  "note": "Call At 9 o Clock",
+                  "assigned_task_id": 1327,
+                  "employee_task": false,
+                  "employee_id": false
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 535
+      Set-Cookie: session_id=3b53407d60c63c49acdb7092d5ed2e68f18e8e3b; Expires=Fri, 25-Oct-2024 06:34:26 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Sat, 27 Jul 2024 06:34:26 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "edit_activity_details": {
+                        "id": 135,
+                        "summary": "Call The Customer Edited Activity",
+                        "assigned_task_id": 1327,
+                        "assigned_task_name": "T20240709-980",
+                        "activity_type_id": 1,
+                        "activity_type_name": "Email",
+                        "additional_assigned_ids": [
+                            {
+                                "id": 100,
+                                "name": "Achala Kumaranayake"
+                            }
+                        ],
+                        "date_deadline": "2024-07-19",
+                        "user_id": 133,
+                        "user_name": "Mariella Boongaling",
+                        "note": "<p>Call At 9 o Clock</p>",
+                        "activity_state": "pending"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Edit Activity Details
+  
+  request: {
+    url: http://localhost:8069/web/edit_crm_activity
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 135,
+                  "activity_type_id": 1,
+                  "date_deadline": "2024-07-19",
+                  "summary": "Call The Customer Edited Activity",
+                  "res_id": 304,
+                  "additional_assigned_ids": [100],
+                  "user_id": false,
+                  "note": "Call At 9 o Clock",
+                  "assigned_task_id": 1327,
+                  "employee_task": false,
+                  "employee_id": false
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 535
+      Set-Cookie: session_id=3b53407d60c63c49acdb7092d5ed2e68f18e8e3b; Expires=Fri, 25-Oct-2024 06:34:26 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Sat, 27 Jul 2024 06:34:26 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "edit_activity_details": {
+                        "id": 135,
+                        "summary": "Call The Customer Edited Activity",
+                        "assigned_task_id": 1327,
+                        "assigned_task_name": "T20240709-980",
+                        "activity_type_id": 1,
+                        "activity_type_name": "Email",
+                        "additional_assigned_ids": [
+                            {
+                                "id": 100,
+                                "name": "Achala Kumaranayake"
+                            }
+                        ],
+                        "date_deadline": "2024-07-19",
+                        "user_id": 133,
+                        "user_name": "Mariella Boongaling",
+                        "note": "<p>Call At 9 o Clock</p>",
+                        "activity_state": "pending"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

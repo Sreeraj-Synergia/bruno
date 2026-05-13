@@ -1,0 +1,411 @@
+meta {
+  name: Leave Requests Details
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8070/web/get_leave_requests
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {"employee_id": false}
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Leave Requests Details
+  
+  request: {
+    url: http://localhost:8070/web/get_leave_requests
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {"employee_id": false}
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 05 Feb 2026 13:57:23 GMT
+      Content-Length: 8916
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "leave_request_details": {
+                        "my_leaves": [
+                            {
+                                "id": 116,
+                                "name": "Saravanan on Paid Time Off - UAE: 1 days (05/02/2026)",
+                                "employee_id": 45,
+                                "employee_name": "Saravanan",
+                                "barcode": null,
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "department_id": 7,
+                                "department_name": "Administration",
+                                "job_id": 20,
+                                "job_name": "Operation Manager",
+                                "manager_id": 43,
+                                "manager_name": "Administrator",
+                                "leave_type_id": 15,
+                                "leave_type_name": "Paid Time Off - UAE",
+                                "request_date_from": "2026-02-05",
+                                "request_date_to": "2026-02-05",
+                                "request_unit_half": null,
+                                "request_unit_hours": null,
+                                "request_hour_from": null,
+                                "request_hour_to": null,
+                                "duration": "1 days",
+                                "total_weekend": null,
+                                "total_accrued_leave": 5,
+                                "total_utilised_leave": null,
+                                "total_remaining_leave": 5,
+                                "description": "*****",
+                                "state": "draft"
+                            },
+                            {
+                                "id": 115,
+                                "name": "Saravanan on Compensatory time off: 0:00 hours (05/02/2026)",
+                                "employee_id": 45,
+                                "employee_name": "Saravanan",
+                                "barcode": null,
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "department_id": 7,
+                                "department_name": "Administration",
+                                "job_id": 20,
+                                "job_name": "Operation Manager",
+                                "manager_id": 43,
+                                "manager_name": "Administrator",
+                                "leave_type_id": 23,
+                                "leave_type_name": "Compensatory time off",
+                                "request_date_from": "2026-02-05",
+                                "request_date_to": "2026-02-05",
+                                "request_unit_half": null,
+                                "request_unit_hours": true,
+                                "request_hour_from": null,
+                                "request_hour_to": null,
+                                "duration": "0:00 hours",
+                                "total_weekend": null,
+                                "total_accrued_leave": 5,
+                                "total_utilised_leave": null,
+                                "total_remaining_leave": 5,
+                                "description": "*****",
+                                "state": "draft"
+                            },
+                            {
+                                "id": 113,
+                                "name": "Saravanan on Compensatory time off: 0:00 hours (05/02/2026)",
+                                "employee_id": 45,
+                                "employee_name": "Saravanan",
+                                "barcode": null,
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "department_id": 7,
+                                "department_name": "Administration",
+                                "job_id": 20,
+                                "job_name": "Operation Manager",
+                                "manager_id": 43,
+                                "manager_name": "Administrator",
+                                "leave_type_id": 23,
+                                "leave_type_name": "Compensatory time off",
+                                "request_date_from": "2026-02-05",
+                                "request_date_to": "2026-02-05",
+                                "request_unit_half": null,
+                                "request_unit_hours": true,
+                                "request_hour_from": null,
+                                "request_hour_to": null,
+                                "duration": "0:00 hours",
+                                "total_weekend": null,
+                                "total_accrued_leave": 5,
+                                "total_utilised_leave": null,
+                                "total_remaining_leave": 5,
+                                "description": "*****",
+                                "state": "draft"
+                            },
+                            {
+                                "id": 114,
+                                "name": "Saravanan on Compensatory time off: 0:00 hours (05/02/2026)",
+                                "employee_id": 45,
+                                "employee_name": "Saravanan",
+                                "barcode": null,
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "department_id": 7,
+                                "department_name": "Administration",
+                                "job_id": 20,
+                                "job_name": "Operation Manager",
+                                "manager_id": 43,
+                                "manager_name": "Administrator",
+                                "leave_type_id": 23,
+                                "leave_type_name": "Compensatory time off",
+                                "request_date_from": "2026-02-05",
+                                "request_date_to": "2026-02-05",
+                                "request_unit_half": null,
+                                "request_unit_hours": true,
+                                "request_hour_from": null,
+                                "request_hour_to": null,
+                                "duration": "0:00 hours",
+                                "total_weekend": null,
+                                "total_accrued_leave": 5,
+                                "total_utilised_leave": null,
+                                "total_remaining_leave": 5,
+                                "description": "*****",
+                                "state": "draft"
+                            },
+                            {
+                                "id": 111,
+                                "name": "Saravanan on Compensatory time off: 8:00 hours (04/02/2026 to 04/02/2026)",
+                                "employee_id": 45,
+                                "employee_name": "Saravanan",
+                                "barcode": null,
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "department_id": 7,
+                                "department_name": "Administration",
+                                "job_id": 20,
+                                "job_name": "Operation Manager",
+                                "manager_id": null,
+                                "manager_name": null,
+                                "leave_type_id": 23,
+                                "leave_type_name": "Compensatory time off",
+                                "request_date_from": "2026-02-04",
+                                "request_date_to": "2026-02-04",
+                                "request_unit_half": null,
+                                "request_unit_hours": null,
+                                "request_hour_from": null,
+                                "request_hour_to": null,
+                                "duration": "8:00 hours",
+                                "total_weekend": null,
+                                "total_accrued_leave": 5,
+                                "total_utilised_leave": null,
+                                "total_remaining_leave": 5,
+                                "description": "*****",
+                                "state": "refuse"
+                            },
+                            {
+                                "id": 112,
+                                "name": "Saravanan on Paid Time Off - UAE: 1 days (03/02/2026)",
+                                "employee_id": 45,
+                                "employee_name": "Saravanan",
+                                "barcode": null,
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "department_id": 7,
+                                "department_name": "Administration",
+                                "job_id": 20,
+                                "job_name": "Operation Manager",
+                                "manager_id": 43,
+                                "manager_name": "Administrator",
+                                "leave_type_id": 15,
+                                "leave_type_name": "Paid Time Off - UAE",
+                                "request_date_from": "2026-02-03",
+                                "request_date_to": "2026-02-03",
+                                "request_unit_half": null,
+                                "request_unit_hours": null,
+                                "request_hour_from": null,
+                                "request_hour_to": null,
+                                "duration": "1 days",
+                                "total_weekend": null,
+                                "total_accrued_leave": 5,
+                                "total_utilised_leave": null,
+                                "total_remaining_leave": 5,
+                                "description": "*****",
+                                "state": "draft"
+                            }
+                        ],
+                        "others_leaves": [
+                            {
+                                "id": 136,
+                                "name": "Aneesh Mathew on Paid Time Off - UAE: 1 days (05/02/2026)",
+                                "employee_id": 20,
+                                "employee_name": "Aneesh Mathew",
+                                "barcode": "SY0001",
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "department_id": 6,
+                                "department_name": "IT Department",
+                                "job_id": 35,
+                                "job_name": "Tester & QA",
+                                "manager_id": 17,
+                                "manager_name": "Marwan Al Khabi",
+                                "leave_type_id": 15,
+                                "leave_type_name": "Paid Time Off - UAE",
+                                "request_date_from": "2026-02-05",
+                                "request_date_to": "2026-02-05",
+                                "request_unit_half": null,
+                                "request_unit_hours": null,
+                                "request_hour_from": null,
+                                "request_hour_to": null,
+                                "duration": "1 days",
+                                "total_weekend": null,
+                                "total_accrued_leave": 5,
+                                "total_utilised_leave": null,
+                                "total_remaining_leave": 5,
+                                "description": "*****",
+                                "state": "draft"
+                            },
+                            {
+                                "id": 58,
+                                "name": "Aneesh Mathew on Unpaid -  UAE: 2 days (10/12/2025 to 10/12/2025)",
+                                "employee_id": 20,
+                                "employee_name": "Aneesh Mathew",
+                                "barcode": "SY0001",
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "department_id": 6,
+                                "department_name": "IT Department",
+                                "job_id": 35,
+                                "job_name": "Tester & QA",
+                                "manager_id": 17,
+                                "manager_name": "Marwan Al Khabi",
+                                "leave_type_id": 18,
+                                "leave_type_name": "Unpaid -  UAE",
+                                "request_date_from": "2025-12-10",
+                                "request_date_to": "2025-12-10",
+                                "request_unit_half": null,
+                                "request_unit_hours": null,
+                                "request_hour_from": null,
+                                "request_hour_to": null,
+                                "duration": "2 days",
+                                "total_weekend": null,
+                                "total_accrued_leave": 5,
+                                "total_utilised_leave": null,
+                                "total_remaining_leave": 5,
+                                "description": "*****",
+                                "state": "draft"
+                            },
+                            {
+                                "id": 59,
+                                "name": "Aneesh Mathew on Unpaid -  UAE: 2 days (10/12/2025 to 10/12/2025)",
+                                "employee_id": 20,
+                                "employee_name": "Aneesh Mathew",
+                                "barcode": "SY0001",
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "department_id": 6,
+                                "department_name": "IT Department",
+                                "job_id": 35,
+                                "job_name": "Tester & QA",
+                                "manager_id": 17,
+                                "manager_name": "Marwan Al Khabi",
+                                "leave_type_id": 18,
+                                "leave_type_name": "Unpaid -  UAE",
+                                "request_date_from": "2025-12-10",
+                                "request_date_to": "2025-12-10",
+                                "request_unit_half": null,
+                                "request_unit_hours": null,
+                                "request_hour_from": null,
+                                "request_hour_to": null,
+                                "duration": "2 days",
+                                "total_weekend": null,
+                                "total_accrued_leave": 5,
+                                "total_utilised_leave": null,
+                                "total_remaining_leave": 5,
+                                "description": "*****",
+                                "state": "draft"
+                            },
+                            {
+                                "id": 60,
+                                "name": "Joseph Mathew on Medical Leave - Unpaid: 1 days (10/12/2025)",
+                                "employee_id": 9,
+                                "employee_name": "Joseph Mathew",
+                                "barcode": "SY0006",
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "department_id": 7,
+                                "department_name": "Administration",
+                                "job_id": 18,
+                                "job_name": "CTO",
+                                "manager_id": null,
+                                "manager_name": null,
+                                "leave_type_id": 22,
+                                "leave_type_name": "Medical Leave - Unpaid",
+                                "request_date_from": "2025-12-10",
+                                "request_date_to": "2025-12-10",
+                                "request_unit_half": null,
+                                "request_unit_hours": null,
+                                "request_hour_from": null,
+                                "request_hour_to": null,
+                                "duration": "1 days",
+                                "total_weekend": null,
+                                "total_accrued_leave": 45,
+                                "total_utilised_leave": null,
+                                "total_remaining_leave": 45,
+                                "description": "*****",
+                                "state": "draft"
+                            },
+                            {
+                                "id": 61,
+                                "name": "Joseph Mathew on Medical Leave - Unpaid: 1 days (10/12/2025)",
+                                "employee_id": 9,
+                                "employee_name": "Joseph Mathew",
+                                "barcode": "SY0006",
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "department_id": 7,
+                                "department_name": "Administration",
+                                "job_id": 18,
+                                "job_name": "CTO",
+                                "manager_id": null,
+                                "manager_name": null,
+                                "leave_type_id": 22,
+                                "leave_type_name": "Medical Leave - Unpaid",
+                                "request_date_from": "2025-12-10",
+                                "request_date_to": "2025-12-10",
+                                "request_unit_half": null,
+                                "request_unit_hours": null,
+                                "request_hour_from": null,
+                                "request_hour_to": null,
+                                "duration": "1 days",
+                                "total_weekend": null,
+                                "total_accrued_leave": 45,
+                                "total_utilised_leave": null,
+                                "total_remaining_leave": 45,
+                                "description": "*****",
+                                "state": "draft"
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

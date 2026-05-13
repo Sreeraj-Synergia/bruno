@@ -1,0 +1,48 @@
+meta {
+  name: Work Complete
+  type: http
+  seq: 71
+}
+
+post {
+  url: http://localhost:8090/web/mob_work_complete
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "jsonrpc": "2.0",
+    "id": null,
+    "params": {
+      "data": {
+        "mobilisation_id": 81,
+        "task_ids": [
+          {
+            "id": 46,
+            "mobilisation_state": "done",
+            "mob_level_progress":95,
+            "mob_remarks": "done"
+          },
+          {
+            "id": 45,
+            "mobilisation_state": "partial",
+            "mob_level_progress":95,
+            "mob_remarks": "pending"
+          },
+          {
+            "id": 44,
+            "mobilisation_state": "partial",
+            "mob_level_progress":50,
+            "mob_remarks": "pending"
+          }
+        ]
+      }
+    }
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

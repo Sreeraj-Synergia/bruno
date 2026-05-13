@@ -1,0 +1,162 @@
+meta {
+  name: Activity Cancelled
+  type: http
+  seq: 23
+}
+
+post {
+  url: http://localhost:8069/web/crm_activity_cancel
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "activity_id": 140
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Activity Cancel
+  
+  request: {
+    url: http://localhost:8069/web/crm_activity_cancel
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 140
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 498
+      Set-Cookie: session_id=3b53407d60c63c49acdb7092d5ed2e68f18e8e3b; Expires=Fri, 25-Oct-2024 11:32:26 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Sat, 27 Jul 2024 11:32:26 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_cancelled_details": {
+                        "id": 140,
+                        "summary": "Sample Cancellation Activity",
+                        "assigned_task_id": null,
+                        "assigned_task_name": null,
+                        "activity_type_id": 4,
+                        "activity_type_name": "To Do",
+                        "additional_assigned_ids": null,
+                        "date_deadline": "2024-07-27",
+                        "user_id": 133,
+                        "user_name": "Mariella Boongaling",
+                        "note": "<p>Sample Cancellation Activity<br></p>",
+                        "activity_state": "cancel"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Cancel
+  
+  request: {
+    url: http://localhost:8069/web/crm_activity_cancel
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 140
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 498
+      Set-Cookie: session_id=3b53407d60c63c49acdb7092d5ed2e68f18e8e3b; Expires=Fri, 25-Oct-2024 11:32:26 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Sat, 27 Jul 2024 11:32:26 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_cancelled_details": {
+                        "id": 140,
+                        "summary": "Sample Cancellation Activity",
+                        "assigned_task_id": null,
+                        "assigned_task_name": null,
+                        "activity_type_id": 4,
+                        "activity_type_name": "To Do",
+                        "additional_assigned_ids": null,
+                        "date_deadline": "2024-07-27",
+                        "user_id": 133,
+                        "user_name": "Mariella Boongaling",
+                        "note": "<p>Sample Cancellation Activity<br></p>",
+                        "activity_state": "cancel"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

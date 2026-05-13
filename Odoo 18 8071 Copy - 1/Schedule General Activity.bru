@@ -1,0 +1,168 @@
+meta {
+  name: Schedule General Activity
+  type: http
+  seq: 38
+}
+
+post {
+  url: 192.168.1.119:8070/web/create_general_activities
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "activity_type_id": 33,
+              "date_deadline": "2025-03-07 15:49:09",
+              "summary": "Sample Activityaaaaney",
+              "note": "Oru Resathinu indakkiya activitiyaaaaneeey for skipping"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Schedule General Activity
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_general_activities
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_type_id": 33,
+                  "date_deadline": "2025-03-07 15:49:09",
+                  "summary": "Sample Activityaaaaney",
+                  "note": "Oru Resathinu indakkiya activitiyaaaaneeey"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 28 Apr 2025 13:04:32 GMT
+      Content-Length: 432
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=ktvfQNenE-PBjHmk5UdEPuFSA-lUtF90tW2Tgyk2HL_jxscwFO6hdSgLyyuqHMbR7agEIU7pAKk1Q7AFE9Sa; Expires=Tue, 28 Apr 2026 13:04:32 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_create_activity_details": {
+                        "id": 8,
+                        "name": "GACT00008",
+                        "res_name": null,
+                        "activity_type_id": 33,
+                        "activity_type_name": "Configuration of Server",
+                        "date_deadline": "2025-03-07",
+                        "user_id": 19,
+                        "user_name": "Sales 5",
+                        "summary": "Sample Activityaaaaney",
+                        "note": "<p>Oru Resathinu indakkiya activitiyaaaaneeey</p>"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Schedule General Activity
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_general_activities
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_type_id": 33,
+                  "date_deadline": "2025-03-07 15:49:09",
+                  "summary": "Sample Activityaaaaney",
+                  "note": "Oru Resathinu indakkiya activitiyaaaaneeey"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 28 Apr 2025 13:04:32 GMT
+      Content-Length: 432
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=ktvfQNenE-PBjHmk5UdEPuFSA-lUtF90tW2Tgyk2HL_jxscwFO6hdSgLyyuqHMbR7agEIU7pAKk1Q7AFE9Sa; Expires=Tue, 28 Apr 2026 13:04:32 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_create_activity_details": {
+                        "id": 8,
+                        "name": "GACT00008",
+                        "res_name": null,
+                        "activity_type_id": 33,
+                        "activity_type_name": "Configuration of Server",
+                        "date_deadline": "2025-03-07",
+                        "user_id": 19,
+                        "user_name": "Sales 5",
+                        "summary": "Sample Activityaaaaney",
+                        "note": "<p>Oru Resathinu indakkiya activitiyaaaaneeey</p>"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

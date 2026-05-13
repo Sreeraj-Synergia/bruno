@@ -1,0 +1,24 @@
+meta {
+  name: Dispatch
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://194.195.116.73:8071/web/get_dispatch_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+             }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

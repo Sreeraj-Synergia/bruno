@@ -1,0 +1,277 @@
+meta {
+  name: GRN Mark as to do
+  type: http
+  seq: 24
+}
+
+post {
+  url: https://wms.syntrack.app/web/grn_change_status?db=WMS_BASE_NEW
+  body: json
+  auth: inherit
+}
+
+params:query {
+  db: WMS_BASE_NEW
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "grn_id": 208,
+              "status": "confirm"
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: GRN Mark as to do
+  
+  request: {
+    url: https://wms.syntrack.app/web/grn_change_status?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "grn_id": 208,
+                  "status": "confirm"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 05:36:01 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 05:36:01 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "grn_change_status_details": {
+                        "id": 208,
+                        "name": "WH/IN/00124",
+                        "partner_id": 18,
+                        "partner_name": "Paramount Kitchen ",
+                        "picking_type_id": 1,
+                        "picking_type_name": "Synergia: Receipts",
+                        "source_location_id": 4,
+                        "source_location_name": "Partner Locations/Vendors",
+                        "location_dest_id": 8,
+                        "location_dest_name": "WH/Stock",
+                        "scheduled_date": "2023-06-21 09:33:36",
+                        "date_done": "2023-06-21 00:00:00",
+                        "origin": null,
+                        "origin_date": "2023-06-21 09:33:36",
+                        "note": null,
+                        "state": "assigned",
+                        "inbound_line_ids": [
+                            {
+                                "id": 292,
+                                "product_id": 84,
+                                "product_name": "TAGINE PLATE RED SMALL",
+                                "product_packaging_id": 150,
+                                "product_packaging_name": "Unit",
+                                "description": "TAGINE PLATE RED SMALL",
+                                "date": "2023-06-21 09:33:36",
+                                "date_deadline": null,
+                                "product_uom_qty": 10,
+                                "quantity_done": null,
+                                "pack_qty": 10,
+                                "recv_pack_qty": null,
+                                "product_uom_id": 1,
+                                "product_uom": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/84/image_1920"
+                            }
+                        ],
+                        "inbound_detailed_line_ids": [
+                            {
+                                "id": 861,
+                                "product_id": 84,
+                                "product_name": "TAGINE PLATE RED SMALL",
+                                "barcode": null,
+                                "location_dest_id": 8,
+                                "location_dest_name": "WH/Stock",
+                                "package_id": null,
+                                "package_name": null,
+                                "dest_package_id": null,
+                                "dest_package_name": null,
+                                "product_packaging_id": 150,
+                                "product_packaging_name": "Unit",
+                                "lot_name": null,
+                                "expiration_date": null,
+                                "quantity_done": null,
+                                "product_uom_qty": 10,
+                                "pack_qty": 10,
+                                "recv_pack_qty": null,
+                                "product_uom_id": 1,
+                                "product_uom_name": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/84/image_1920",
+                                "stock_move_id": 292
+                            }
+                        ],
+                        "inbound_package_ids": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: GRN Mark as to do
+  
+  request: {
+    url: https://wms.syntrack.app/web/grn_change_status?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "grn_id": 208,
+                  "status": "confirm"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 05:36:01 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 05:36:01 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "grn_change_status_details": {
+                        "id": 208,
+                        "name": "WH/IN/00124",
+                        "partner_id": 18,
+                        "partner_name": "Paramount Kitchen ",
+                        "picking_type_id": 1,
+                        "picking_type_name": "Synergia: Receipts",
+                        "source_location_id": 4,
+                        "source_location_name": "Partner Locations/Vendors",
+                        "location_dest_id": 8,
+                        "location_dest_name": "WH/Stock",
+                        "scheduled_date": "2023-06-21 09:33:36",
+                        "date_done": "2023-06-21 00:00:00",
+                        "origin": null,
+                        "origin_date": "2023-06-21 09:33:36",
+                        "note": null,
+                        "state": "assigned",
+                        "inbound_line_ids": [
+                            {
+                                "id": 292,
+                                "product_id": 84,
+                                "product_name": "TAGINE PLATE RED SMALL",
+                                "product_packaging_id": 150,
+                                "product_packaging_name": "Unit",
+                                "description": "TAGINE PLATE RED SMALL",
+                                "date": "2023-06-21 09:33:36",
+                                "date_deadline": null,
+                                "product_uom_qty": 10,
+                                "quantity_done": null,
+                                "pack_qty": 10,
+                                "recv_pack_qty": null,
+                                "product_uom_id": 1,
+                                "product_uom": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/84/image_1920"
+                            }
+                        ],
+                        "inbound_detailed_line_ids": [
+                            {
+                                "id": 861,
+                                "product_id": 84,
+                                "product_name": "TAGINE PLATE RED SMALL",
+                                "barcode": null,
+                                "location_dest_id": 8,
+                                "location_dest_name": "WH/Stock",
+                                "package_id": null,
+                                "package_name": null,
+                                "dest_package_id": null,
+                                "dest_package_name": null,
+                                "product_packaging_id": 150,
+                                "product_packaging_name": "Unit",
+                                "lot_name": null,
+                                "expiration_date": null,
+                                "quantity_done": null,
+                                "product_uom_qty": 10,
+                                "pack_qty": 10,
+                                "recv_pack_qty": null,
+                                "product_uom_id": 1,
+                                "product_uom_name": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/84/image_1920",
+                                "stock_move_id": 292
+                            }
+                        ],
+                        "inbound_package_ids": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

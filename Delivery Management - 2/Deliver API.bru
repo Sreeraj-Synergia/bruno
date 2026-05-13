@@ -1,0 +1,31 @@
+meta {
+  name: Deliver API
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://194.195.116.73:8071/web/get_dispatch_line_deliver
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "dispatch_line_id": 28,
+              "receipt_type": "cash",
+              "check_date": false,
+              "check_no": false,
+              "transfer_ref": false,
+              "amount_collected": 500.0,
+              "signature": false
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

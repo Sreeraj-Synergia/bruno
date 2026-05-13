@@ -1,0 +1,28 @@
+meta {
+  name: Update Assigned Vehicle
+  type: http
+  seq: 53
+}
+
+post {
+  url: 192.168.1.119:8071/web/update_assigned_vehicle
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "check_in_out": 288,
+              "current_value": 0.0,
+              "fleet_id": 11,
+              "previous_value": 0.0
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

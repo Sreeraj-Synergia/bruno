@@ -1,0 +1,416 @@
+meta {
+  name: Expense Taxes
+  type: http
+  seq: 14
+}
+
+post {
+  url: 192.168.1.120:8070/web/get_product_purchase_tax_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Expense Taxes
+  
+  request: {
+    url: 192.168.1.120:8070/web/get_product_purchase_tax_details
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 10 Mar 2026 10:14:16 GMT
+      Content-Length: 6614
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=MI_CNVBSDD8kme5o8vLbbmC5LI2Kx3Fe3uE8siSAovFGgln8gCTdjzejUjIiLd2xuChJ20__W54fRGxR-6Ut; Expires=Wed, 10 Mar 2027 10:14:16 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "purchase_tax_details": [
+                        {
+                            "id": 19,
+                            "name": "5% Purchase Excl",
+                            "type_tax_use": "purchase",
+                            "amount_type": "percent",
+                            "tax_scope": null,
+                            "amount": 5,
+                            "invoice_label": "VAT 5%",
+                            "description": null,
+                            "tax_group_id": 1,
+                            "tax_group_name": "VAT 5%",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "invoice_legal_notes": null,
+                            "price_include_override": null,
+                            "include_base_amount": false,
+                            "is_base_affected": true,
+                            "invoice_repartition_line_ids": [
+                                {
+                                    "id": 87,
+                                    "factor_percent": 100,
+                                    "repartition_type": "base",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                },
+                                {
+                                    "id": 88,
+                                    "factor_percent": 100,
+                                    "repartition_type": "tax",
+                                    "account_id": 40,
+                                    "account_name": "VAT Input",
+                                    "account_code": "103054"
+                                }
+                            ],
+                            "refund_repartition_line_ids": [
+                                {
+                                    "id": 89,
+                                    "factor_percent": 100,
+                                    "repartition_type": "base",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                },
+                                {
+                                    "id": 90,
+                                    "factor_percent": 100,
+                                    "repartition_type": "tax",
+                                    "account_id": 40,
+                                    "account_name": "VAT Input",
+                                    "account_code": "103054"
+                                }
+                            ],
+                            "children_tax_ids": []
+                        },
+                        {
+                            "id": 20,
+                            "name": "0% Exempt",
+                            "type_tax_use": "purchase",
+                            "amount_type": "percent",
+                            "tax_scope": null,
+                            "amount": 0,
+                            "invoice_label": "Exempted Tax",
+                            "description": "<p>Exempted Tax</p>",
+                            "tax_group_id": 3,
+                            "tax_group_name": "VAT Exempted",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "invoice_legal_notes": null,
+                            "price_include_override": null,
+                            "include_base_amount": false,
+                            "is_base_affected": true,
+                            "invoice_repartition_line_ids": [
+                                {
+                                    "id": 91,
+                                    "factor_percent": 100,
+                                    "repartition_type": "base",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                },
+                                {
+                                    "id": 92,
+                                    "factor_percent": 100,
+                                    "repartition_type": "tax",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                }
+                            ],
+                            "refund_repartition_line_ids": [
+                                {
+                                    "id": 93,
+                                    "factor_percent": 100,
+                                    "repartition_type": "base",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                },
+                                {
+                                    "id": 94,
+                                    "factor_percent": 100,
+                                    "repartition_type": "tax",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                }
+                            ],
+                            "children_tax_ids": []
+                        },
+                        {
+                            "id": 21,
+                            "name": "0%",
+                            "type_tax_use": "purchase",
+                            "amount_type": "percent",
+                            "tax_scope": null,
+                            "amount": 0,
+                            "invoice_label": "VAT 0%",
+                            "description": null,
+                            "tax_group_id": 2,
+                            "tax_group_name": "VAT 0%",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "invoice_legal_notes": null,
+                            "price_include_override": null,
+                            "include_base_amount": false,
+                            "is_base_affected": true,
+                            "invoice_repartition_line_ids": [
+                                {
+                                    "id": 95,
+                                    "factor_percent": 100,
+                                    "repartition_type": "base",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                },
+                                {
+                                    "id": 96,
+                                    "factor_percent": 100,
+                                    "repartition_type": "tax",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                }
+                            ],
+                            "refund_repartition_line_ids": [
+                                {
+                                    "id": 97,
+                                    "factor_percent": 100,
+                                    "repartition_type": "base",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                },
+                                {
+                                    "id": 98,
+                                    "factor_percent": 100,
+                                    "repartition_type": "tax",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                }
+                            ],
+                            "children_tax_ids": []
+                        },
+                        {
+                            "id": 22,
+                            "name": "5% EX",
+                            "type_tax_use": "purchase",
+                            "amount_type": "percent",
+                            "tax_scope": null,
+                            "amount": 5,
+                            "invoice_label": "Import Tax",
+                            "description": "<p>Import Tax</p>",
+                            "tax_group_id": 1,
+                            "tax_group_name": "VAT 5%",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "invoice_legal_notes": null,
+                            "price_include_override": null,
+                            "include_base_amount": false,
+                            "is_base_affected": true,
+                            "invoice_repartition_line_ids": [
+                                {
+                                    "id": 99,
+                                    "factor_percent": 100,
+                                    "repartition_type": "base",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                },
+                                {
+                                    "id": 100,
+                                    "factor_percent": 100,
+                                    "repartition_type": "tax",
+                                    "account_id": 40,
+                                    "account_name": "VAT Input",
+                                    "account_code": "103054"
+                                }
+                            ],
+                            "refund_repartition_line_ids": [
+                                {
+                                    "id": 101,
+                                    "factor_percent": 100,
+                                    "repartition_type": "base",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                },
+                                {
+                                    "id": 102,
+                                    "factor_percent": 100,
+                                    "repartition_type": "tax",
+                                    "account_id": 40,
+                                    "account_name": "VAT Input",
+                                    "account_code": "103054"
+                                }
+                            ],
+                            "children_tax_ids": []
+                        },
+                        {
+                            "id": 23,
+                            "name": "5% R C",
+                            "type_tax_use": "purchase",
+                            "amount_type": "percent",
+                            "tax_scope": null,
+                            "amount": 5,
+                            "invoice_label": "Supplies subject to reverse charge provisions",
+                            "description": "<p>Supplies subject to reverse charge provisions</p>",
+                            "tax_group_id": 1,
+                            "tax_group_name": "VAT 5%",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "invoice_legal_notes": null,
+                            "price_include_override": null,
+                            "include_base_amount": false,
+                            "is_base_affected": true,
+                            "invoice_repartition_line_ids": [
+                                {
+                                    "id": 103,
+                                    "factor_percent": 100,
+                                    "repartition_type": "base",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                },
+                                {
+                                    "id": 104,
+                                    "factor_percent": 100,
+                                    "repartition_type": "tax",
+                                    "account_id": 40,
+                                    "account_name": "VAT Input",
+                                    "account_code": "103054"
+                                },
+                                {
+                                    "id": 105,
+                                    "factor_percent": -100,
+                                    "repartition_type": "tax",
+                                    "account_id": 68,
+                                    "account_name": "VAT Output",
+                                    "account_code": "106024"
+                                }
+                            ],
+                            "refund_repartition_line_ids": [
+                                {
+                                    "id": 106,
+                                    "factor_percent": 100,
+                                    "repartition_type": "base",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                },
+                                {
+                                    "id": 107,
+                                    "factor_percent": 100,
+                                    "repartition_type": "tax",
+                                    "account_id": 40,
+                                    "account_name": "VAT Input",
+                                    "account_code": "103054"
+                                },
+                                {
+                                    "id": 108,
+                                    "factor_percent": -100,
+                                    "repartition_type": "tax",
+                                    "account_id": 68,
+                                    "account_name": "VAT Output",
+                                    "account_code": "106024"
+                                }
+                            ],
+                            "children_tax_ids": []
+                        },
+                        {
+                            "id": 24,
+                            "name": "Vat 5% Included",
+                            "type_tax_use": "purchase",
+                            "amount_type": "percent",
+                            "tax_scope": "service",
+                            "amount": 5,
+                            "invoice_label": "5%",
+                            "description": null,
+                            "tax_group_id": 1,
+                            "tax_group_name": "VAT 5%",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "invoice_legal_notes": null,
+                            "price_include_override": "tax_included",
+                            "include_base_amount": true,
+                            "is_base_affected": true,
+                            "invoice_repartition_line_ids": [
+                                {
+                                    "id": 109,
+                                    "factor_percent": 100,
+                                    "repartition_type": "base",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                },
+                                {
+                                    "id": 110,
+                                    "factor_percent": 100,
+                                    "repartition_type": "tax",
+                                    "account_id": 40,
+                                    "account_name": "VAT Input",
+                                    "account_code": "103054"
+                                }
+                            ],
+                            "refund_repartition_line_ids": [
+                                {
+                                    "id": 111,
+                                    "factor_percent": 100,
+                                    "repartition_type": "base",
+                                    "account_id": null,
+                                    "account_name": null,
+                                    "account_code": null
+                                },
+                                {
+                                    "id": 112,
+                                    "factor_percent": 100,
+                                    "repartition_type": "tax",
+                                    "account_id": 40,
+                                    "account_name": "VAT Input",
+                                    "account_code": "103054"
+                                }
+                            ],
+                            "children_tax_ids": []
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,863 @@
+meta {
+  name: Internal Transfers
+  type: http
+  seq: 21
+}
+
+post {
+  url: https://wms.syntrack.app/web/get_internal_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Internal Transfers
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_internal_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:33:22 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:33:22 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "get_internal_details": [
+                        {
+                            "id": 246,
+                            "name": "WH/INT/00001",
+                            "partner_id": null,
+                            "partner_name": null,
+                            "picking_type_id": 5,
+                            "picking_type_name": "Synergia: Internal Transfers",
+                            "source_location_id": 8,
+                            "source_location_name": "WH/Stock",
+                            "location_dest_id": 21,
+                            "location_dest_name": "WH/Musaffah",
+                            "scheduled_date": "2023-07-06 10:08:41",
+                            "date_done": "2023-07-06 06:07:06",
+                            "origin": "INT0091",
+                            "origin_date": "2023-07-06 10:08:41",
+                            "note": null,
+                            "state": "done",
+                            "internal_line_ids": [
+                                {
+                                    "id": 342,
+                                    "product_id": 3216,
+                                    "product_name": "Doritos Nachos Cheese Ball 800 Grams",
+                                    "product_packaging_id": 5181,
+                                    "product_packaging_name": "PIECE",
+                                    "description": "Doritos Nachos Cheese Ball 800 Grams",
+                                    "date": "2023-07-06 06:07:06",
+                                    "date_deadline": null,
+                                    "product_uom_qty": 100,
+                                    "quantity_done": 100,
+                                    "pack_qty": 100,
+                                    "recv_pack_qty": 100,
+                                    "product_uom_id": 1,
+                                    "product_uom": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3216/image_1920"
+                                }
+                            ],
+                            "internal_detailed_line_ids": [
+                                {
+                                    "id": 914,
+                                    "product_id": 3216,
+                                    "product_name": "Doritos Nachos Cheese Ball 800 Grams",
+                                    "barcode": "123456852",
+                                    "location_dest_id": 21,
+                                    "location_dest_name": "WH/Musaffah",
+                                    "package_id": 187,
+                                    "package_name": "PACK0000004",
+                                    "dest_package_id": 189,
+                                    "dest_package_name": "PACK0000006",
+                                    "product_packaging_id": 5181,
+                                    "product_packaging_name": "PIECE",
+                                    "lot_name": "P0004",
+                                    "expiration_date": "2027-07-31 10:00:00",
+                                    "product_uom_qty": null,
+                                    "quantity_done": 50,
+                                    "pack_qty": 50,
+                                    "recv_pack_qty": 50,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3216/image_1920",
+                                    "stock_move_id": 342
+                                },
+                                {
+                                    "id": 915,
+                                    "product_id": 3216,
+                                    "product_name": "Doritos Nachos Cheese Ball 800 Grams",
+                                    "barcode": "123456852",
+                                    "location_dest_id": 21,
+                                    "location_dest_name": "WH/Musaffah",
+                                    "package_id": 187,
+                                    "package_name": "PACK0000004",
+                                    "dest_package_id": 188,
+                                    "dest_package_name": "PACK0000005",
+                                    "product_packaging_id": 5181,
+                                    "product_packaging_name": "PIECE",
+                                    "lot_name": "P0004",
+                                    "expiration_date": "2027-07-31 10:00:00",
+                                    "product_uom_qty": null,
+                                    "quantity_done": 50,
+                                    "pack_qty": 50,
+                                    "recv_pack_qty": 50,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3216/image_1920",
+                                    "stock_move_id": 342
+                                }
+                            ],
+                            "internal_package_ids": [
+                                {
+                                    "name": "PACK0000005",
+                                    "packaging_id": null,
+                                    "package_line_ids": [
+                                        {
+                                            "product_id": 3216,
+                                            "product_name": "Doritos Nachos Cheese Ball 800 Grams",
+                                            "lot_id": 1806,
+                                            "lot_name": "P0004",
+                                            "quantity": 50,
+                                            "expiration_date": "2027-07-31 10:00:00",
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "image_url": "http://wms.syntrack.app/web/url_image/product.product/3216/image_1920"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "PACK0000006",
+                                    "packaging_id": null,
+                                    "package_line_ids": [
+                                        {
+                                            "product_id": 3216,
+                                            "product_name": "Doritos Nachos Cheese Ball 800 Grams",
+                                            "lot_id": 1806,
+                                            "lot_name": "P0004",
+                                            "quantity": 50,
+                                            "expiration_date": "2027-07-31 10:00:00",
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "image_url": "http://wms.syntrack.app/web/url_image/product.product/3216/image_1920"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 272,
+                            "name": "WH/INT/00002",
+                            "partner_id": null,
+                            "partner_name": null,
+                            "picking_type_id": 5,
+                            "picking_type_name": "Synergia: Internal Transfers",
+                            "source_location_id": 8,
+                            "source_location_name": "WH/Stock",
+                            "location_dest_id": 24,
+                            "location_dest_name": "Sunu Location",
+                            "scheduled_date": "2023-07-08 07:38:25",
+                            "date_done": "2023-07-08 07:44:09",
+                            "origin": "IND2023070025",
+                            "origin_date": "2023-07-08 07:31:33",
+                            "note": "Delivery must be done on today itself",
+                            "state": "done",
+                            "internal_line_ids": [
+                                {
+                                    "id": 377,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "description": "IPhone 14 Pro Max",
+                                    "date": "2023-07-08 07:44:09",
+                                    "date_deadline": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": 1,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920"
+                                }
+                            ],
+                            "internal_detailed_line_ids": [
+                                {
+                                    "id": 1055,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000078936",
+                                    "expiration_date": null,
+                                    "product_uom_qty": null,
+                                    "quantity_done": 1,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 377
+                                }
+                            ],
+                            "internal_package_ids": null
+                        },
+                        {
+                            "id": 283,
+                            "name": "WH/INT/00003",
+                            "partner_id": null,
+                            "partner_name": null,
+                            "picking_type_id": 5,
+                            "picking_type_name": "Synergia: Internal Transfers",
+                            "source_location_id": 8,
+                            "source_location_name": "WH/Stock",
+                            "location_dest_id": 24,
+                            "location_dest_name": "Sunu Location",
+                            "scheduled_date": "2023-07-10 08:24:23",
+                            "date_done": null,
+                            "origin": "IND2023070026",
+                            "origin_date": "2023-07-10 08:15:32",
+                            "note": "Test remarks",
+                            "state": "assigned",
+                            "internal_line_ids": [
+                                {
+                                    "id": 392,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "description": "IPhone 14 Pro Max",
+                                    "date": "2023-07-10 08:24:23",
+                                    "date_deadline": null,
+                                    "product_uom_qty": 6,
+                                    "quantity_done": null,
+                                    "pack_qty": 6,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920"
+                                }
+                            ],
+                            "internal_detailed_line_ids": [
+                                {
+                                    "id": 1191,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000002013",
+                                    "expiration_date": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": null,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 392
+                                },
+                                {
+                                    "id": 1192,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000002014",
+                                    "expiration_date": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": null,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 392
+                                },
+                                {
+                                    "id": 1193,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000002015",
+                                    "expiration_date": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": null,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 392
+                                },
+                                {
+                                    "id": 1194,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000002016",
+                                    "expiration_date": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": null,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 392
+                                },
+                                {
+                                    "id": 1195,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000002017",
+                                    "expiration_date": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": null,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 392
+                                },
+                                {
+                                    "id": 1196,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000002018",
+                                    "expiration_date": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": null,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 392
+                                }
+                            ],
+                            "internal_package_ids": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Internal Transfers
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_internal_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:33:22 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:33:22 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "get_internal_details": [
+                        {
+                            "id": 246,
+                            "name": "WH/INT/00001",
+                            "partner_id": null,
+                            "partner_name": null,
+                            "picking_type_id": 5,
+                            "picking_type_name": "Synergia: Internal Transfers",
+                            "source_location_id": 8,
+                            "source_location_name": "WH/Stock",
+                            "location_dest_id": 21,
+                            "location_dest_name": "WH/Musaffah",
+                            "scheduled_date": "2023-07-06 10:08:41",
+                            "date_done": "2023-07-06 06:07:06",
+                            "origin": "INT0091",
+                            "origin_date": "2023-07-06 10:08:41",
+                            "note": null,
+                            "state": "done",
+                            "internal_line_ids": [
+                                {
+                                    "id": 342,
+                                    "product_id": 3216,
+                                    "product_name": "Doritos Nachos Cheese Ball 800 Grams",
+                                    "product_packaging_id": 5181,
+                                    "product_packaging_name": "PIECE",
+                                    "description": "Doritos Nachos Cheese Ball 800 Grams",
+                                    "date": "2023-07-06 06:07:06",
+                                    "date_deadline": null,
+                                    "product_uom_qty": 100,
+                                    "quantity_done": 100,
+                                    "pack_qty": 100,
+                                    "recv_pack_qty": 100,
+                                    "product_uom_id": 1,
+                                    "product_uom": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3216/image_1920"
+                                }
+                            ],
+                            "internal_detailed_line_ids": [
+                                {
+                                    "id": 914,
+                                    "product_id": 3216,
+                                    "product_name": "Doritos Nachos Cheese Ball 800 Grams",
+                                    "barcode": "123456852",
+                                    "location_dest_id": 21,
+                                    "location_dest_name": "WH/Musaffah",
+                                    "package_id": 187,
+                                    "package_name": "PACK0000004",
+                                    "dest_package_id": 189,
+                                    "dest_package_name": "PACK0000006",
+                                    "product_packaging_id": 5181,
+                                    "product_packaging_name": "PIECE",
+                                    "lot_name": "P0004",
+                                    "expiration_date": "2027-07-31 10:00:00",
+                                    "product_uom_qty": null,
+                                    "quantity_done": 50,
+                                    "pack_qty": 50,
+                                    "recv_pack_qty": 50,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3216/image_1920",
+                                    "stock_move_id": 342
+                                },
+                                {
+                                    "id": 915,
+                                    "product_id": 3216,
+                                    "product_name": "Doritos Nachos Cheese Ball 800 Grams",
+                                    "barcode": "123456852",
+                                    "location_dest_id": 21,
+                                    "location_dest_name": "WH/Musaffah",
+                                    "package_id": 187,
+                                    "package_name": "PACK0000004",
+                                    "dest_package_id": 188,
+                                    "dest_package_name": "PACK0000005",
+                                    "product_packaging_id": 5181,
+                                    "product_packaging_name": "PIECE",
+                                    "lot_name": "P0004",
+                                    "expiration_date": "2027-07-31 10:00:00",
+                                    "product_uom_qty": null,
+                                    "quantity_done": 50,
+                                    "pack_qty": 50,
+                                    "recv_pack_qty": 50,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3216/image_1920",
+                                    "stock_move_id": 342
+                                }
+                            ],
+                            "internal_package_ids": [
+                                {
+                                    "name": "PACK0000005",
+                                    "packaging_id": null,
+                                    "package_line_ids": [
+                                        {
+                                            "product_id": 3216,
+                                            "product_name": "Doritos Nachos Cheese Ball 800 Grams",
+                                            "lot_id": 1806,
+                                            "lot_name": "P0004",
+                                            "quantity": 50,
+                                            "expiration_date": "2027-07-31 10:00:00",
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "image_url": "http://wms.syntrack.app/web/url_image/product.product/3216/image_1920"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "PACK0000006",
+                                    "packaging_id": null,
+                                    "package_line_ids": [
+                                        {
+                                            "product_id": 3216,
+                                            "product_name": "Doritos Nachos Cheese Ball 800 Grams",
+                                            "lot_id": 1806,
+                                            "lot_name": "P0004",
+                                            "quantity": 50,
+                                            "expiration_date": "2027-07-31 10:00:00",
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "image_url": "http://wms.syntrack.app/web/url_image/product.product/3216/image_1920"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 272,
+                            "name": "WH/INT/00002",
+                            "partner_id": null,
+                            "partner_name": null,
+                            "picking_type_id": 5,
+                            "picking_type_name": "Synergia: Internal Transfers",
+                            "source_location_id": 8,
+                            "source_location_name": "WH/Stock",
+                            "location_dest_id": 24,
+                            "location_dest_name": "Sunu Location",
+                            "scheduled_date": "2023-07-08 07:38:25",
+                            "date_done": "2023-07-08 07:44:09",
+                            "origin": "IND2023070025",
+                            "origin_date": "2023-07-08 07:31:33",
+                            "note": "Delivery must be done on today itself",
+                            "state": "done",
+                            "internal_line_ids": [
+                                {
+                                    "id": 377,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "description": "IPhone 14 Pro Max",
+                                    "date": "2023-07-08 07:44:09",
+                                    "date_deadline": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": 1,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920"
+                                }
+                            ],
+                            "internal_detailed_line_ids": [
+                                {
+                                    "id": 1055,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000078936",
+                                    "expiration_date": null,
+                                    "product_uom_qty": null,
+                                    "quantity_done": 1,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 377
+                                }
+                            ],
+                            "internal_package_ids": null
+                        },
+                        {
+                            "id": 283,
+                            "name": "WH/INT/00003",
+                            "partner_id": null,
+                            "partner_name": null,
+                            "picking_type_id": 5,
+                            "picking_type_name": "Synergia: Internal Transfers",
+                            "source_location_id": 8,
+                            "source_location_name": "WH/Stock",
+                            "location_dest_id": 24,
+                            "location_dest_name": "Sunu Location",
+                            "scheduled_date": "2023-07-10 08:24:23",
+                            "date_done": null,
+                            "origin": "IND2023070026",
+                            "origin_date": "2023-07-10 08:15:32",
+                            "note": "Test remarks",
+                            "state": "assigned",
+                            "internal_line_ids": [
+                                {
+                                    "id": 392,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "description": "IPhone 14 Pro Max",
+                                    "date": "2023-07-10 08:24:23",
+                                    "date_deadline": null,
+                                    "product_uom_qty": 6,
+                                    "quantity_done": null,
+                                    "pack_qty": 6,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920"
+                                }
+                            ],
+                            "internal_detailed_line_ids": [
+                                {
+                                    "id": 1191,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000002013",
+                                    "expiration_date": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": null,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 392
+                                },
+                                {
+                                    "id": 1192,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000002014",
+                                    "expiration_date": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": null,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 392
+                                },
+                                {
+                                    "id": 1193,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000002015",
+                                    "expiration_date": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": null,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 392
+                                },
+                                {
+                                    "id": 1194,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000002016",
+                                    "expiration_date": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": null,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 392
+                                },
+                                {
+                                    "id": 1195,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000002017",
+                                    "expiration_date": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": null,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 392
+                                },
+                                {
+                                    "id": 1196,
+                                    "product_id": 3251,
+                                    "product_name": "IPhone 14 Pro Max",
+                                    "barcode": null,
+                                    "location_dest_id": 24,
+                                    "location_dest_name": "Sunu Location",
+                                    "package_id": null,
+                                    "package_name": null,
+                                    "dest_package_id": null,
+                                    "dest_package_name": null,
+                                    "product_packaging_id": 6142,
+                                    "product_packaging_name": "Box",
+                                    "lot_name": "2000002018",
+                                    "expiration_date": null,
+                                    "product_uom_qty": 1,
+                                    "quantity_done": null,
+                                    "pack_qty": 1,
+                                    "recv_pack_qty": null,
+                                    "product_uom_id": 1,
+                                    "product_uom_name": "Units",
+                                    "image_url": "http://wms.syntrack.app/web/url_image/product.product/3251/image_1920",
+                                    "stock_move_id": 392
+                                }
+                            ],
+                            "internal_package_ids": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

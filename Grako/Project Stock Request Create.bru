@@ -1,0 +1,423 @@
+meta {
+  name: Project Stock Request Create
+  type: http
+  seq: 57
+}
+
+post {
+  url: 192.168.1.119:8075/web/create_request_project_stock
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "project_id": 24,
+              "deadline_date": "2025-10-30",
+              "req_type": "material",
+              "request_line_ids": [
+                  {
+                      "est_type": "material",
+                      "product_id": 53,
+                      "requested_qty": 10
+                  },
+                  {
+                      "est_type": "material",
+                      "product_id": 55,
+                      "requested_qty": 10
+                  }
+              ]
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Project Stock Request Create
+  
+  request: {
+    url: 192.168.1.119:8075/web/create_request_project_stock
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "project_id": 24,
+                  "deadline_date": "2025-10-30",
+                  "req_type": "material",
+                  "request_line_ids": [
+                      {
+                          "est_type": "material",
+                          "product_id": 53,
+                          "requested_qty": 10
+                      },
+                      {
+                          "est_type": "material",
+                          "product_id": 55,
+                          "requested_qty": 10
+                      }
+                  ]
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 30 Oct 2025 07:23:52 GMT
+      Content-Length: 3259
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "project_stock_request_details": {
+                        "id": 18,
+                        "name": "PSR0018",
+                        "project_id": 24,
+                        "project_ref": "PR20250023",
+                        "company_id": 1,
+                        "company_name": "GRAKO LLC",
+                        "vendor_id": null,
+                        "vendor_name": null,
+                        "partner_id": 11930,
+                        "partner_name": "Emaar Community Management",
+                        "delivery_type": "same_cus",
+                        "partner_shipping_id": 11930,
+                        "partner_shipping_name": "Emaar Community Management",
+                        "req_from": "from_store",
+                        "req_type": "material",
+                        "warehouse_id": 1,
+                        "warehouse_name": "Grako",
+                        "stock_location_id": 44,
+                        "stock_location_name": "Stock - Dubai Creek",
+                        "site_location_id": 45,
+                        "site_location_name": "Dubai Creek",
+                        "direct_cost_ac_id": null,
+                        "direct_cost_ac_name": null,
+                        "stock_req_line_ids": [
+                            {
+                                "sequence": 1,
+                                "est_type": "material",
+                                "quotation_line_id": null,
+                                "quotation_line_name": null,
+                                "internal_ref": "00088788",
+                                "barcode": null,
+                                "product_id": 53,
+                                "product_name": "Glass Cleaner Chemex-5L",
+                                "product_template_id": 53,
+                                "product_template_name": "Glass Cleaner Chemex-5L",
+                                "name": "Glass Cleaner Chemex-5L",
+                                "product_uom_category_id": 10,
+                                "product_uom_category_name": "Chemicals",
+                                "product_uom": 30,
+                                "product_uom_name": "CAN",
+                                "avail_qty": null,
+                                "requested_qty": 10,
+                                "transfer_qty": null,
+                                "balanced_qty": 10,
+                                "purchasing_price": null,
+                                "unit_price": null,
+                                "company_id": "res.company(1,)",
+                                "line_number": 1,
+                                "req_requested_qty": null,
+                                "req_transfer_qty": null,
+                                "req_balanced_qty": null
+                            },
+                            {
+                                "sequence": 1,
+                                "est_type": "material",
+                                "quotation_line_id": null,
+                                "quotation_line_name": null,
+                                "internal_ref": "00088790",
+                                "barcode": null,
+                                "product_id": 55,
+                                "product_name": "Window Master G-525 10Ltr",
+                                "product_template_id": 55,
+                                "product_template_name": "Window Master G-525 10Ltr",
+                                "name": "Window Master G-525 10Ltr",
+                                "product_uom_category_id": 10,
+                                "product_uom_category_name": "Chemicals",
+                                "product_uom": 30,
+                                "product_uom_name": "CAN",
+                                "avail_qty": null,
+                                "requested_qty": 10,
+                                "transfer_qty": null,
+                                "balanced_qty": 10,
+                                "purchasing_price": null,
+                                "unit_price": null,
+                                "company_id": "res.company(1,)",
+                                "line_number": 2,
+                                "req_requested_qty": null,
+                                "req_transfer_qty": null,
+                                "req_balanced_qty": null
+                            }
+                        ],
+                        "project_location": "Dubai Creek",
+                        "deadline_date": "2025-10-30",
+                        "contact_name_id": 11931,
+                        "contact_name_name": "Anil V S",
+                        "requested_on": "2025-10-30",
+                        "requested_by": 10902,
+                        "requested_name": "Sean Patrick Rogers",
+                        "user_id": 7,
+                        "user_name": "Sean Patrick Rogers",
+                        "delivery_name": null,
+                        "delivery_email": null,
+                        "delivery_phone": null,
+                        "delivery_street": null,
+                        "delivery_street2": null,
+                        "delivery_zip": null,
+                        "delivery_city": null,
+                        "delivery_state_id": null,
+                        "delivery_state_name": null,
+                        "delivery_country_id": null,
+                        "delivery_country_name": null,
+                        "project_manager_id": 10902,
+                        "project_manager_name": "Sean Patrick Rogers",
+                        "customer_ref": null,
+                        "date_start": "2025-10-22",
+                        "date": "2025-11-30",
+                        "total_outstanding": null,
+                        "con_state": "draft",
+                        "blacklist_status": null,
+                        "blacklist_reason": null,
+                        "state": "draft",
+                        "transfered_on": null,
+                        "transfered_by": null,
+                        "transfered_name": null,
+                        "display_stock_req_line_ids": null,
+                        "bill_ids": null,
+                        "picking_ids": null,
+                        "bill_count": null,
+                        "pick_count": null,
+                        "po_ids": null,
+                        "po_count": null,
+                        "purchase_type": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Project Stock Request Create
+  
+  request: {
+    url: 192.168.1.119:8075/web/create_request_project_stock
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "project_id": 24,
+                  "deadline_date": "2025-10-30",
+                  "req_type": "material",
+                  "request_line_ids": [
+                      {
+                          "est_type": "material",
+                          "product_id": 53,
+                          "requested_qty": 10
+                      },
+                      {
+                          "est_type": "material",
+                          "product_id": 55,
+                          "requested_qty": 10
+                      }
+                  ]
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 30 Oct 2025 07:23:52 GMT
+      Content-Length: 3259
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "project_stock_request_details": {
+                        "id": 18,
+                        "name": "PSR0018",
+                        "project_id": 24,
+                        "project_ref": "PR20250023",
+                        "company_id": 1,
+                        "company_name": "GRAKO LLC",
+                        "vendor_id": null,
+                        "vendor_name": null,
+                        "partner_id": 11930,
+                        "partner_name": "Emaar Community Management",
+                        "delivery_type": "same_cus",
+                        "partner_shipping_id": 11930,
+                        "partner_shipping_name": "Emaar Community Management",
+                        "req_from": "from_store",
+                        "req_type": "material",
+                        "warehouse_id": 1,
+                        "warehouse_name": "Grako",
+                        "stock_location_id": 44,
+                        "stock_location_name": "Stock - Dubai Creek",
+                        "site_location_id": 45,
+                        "site_location_name": "Dubai Creek",
+                        "direct_cost_ac_id": null,
+                        "direct_cost_ac_name": null,
+                        "stock_req_line_ids": [
+                            {
+                                "sequence": 1,
+                                "est_type": "material",
+                                "quotation_line_id": null,
+                                "quotation_line_name": null,
+                                "internal_ref": "00088788",
+                                "barcode": null,
+                                "product_id": 53,
+                                "product_name": "Glass Cleaner Chemex-5L",
+                                "product_template_id": 53,
+                                "product_template_name": "Glass Cleaner Chemex-5L",
+                                "name": "Glass Cleaner Chemex-5L",
+                                "product_uom_category_id": 10,
+                                "product_uom_category_name": "Chemicals",
+                                "product_uom": 30,
+                                "product_uom_name": "CAN",
+                                "avail_qty": null,
+                                "requested_qty": 10,
+                                "transfer_qty": null,
+                                "balanced_qty": 10,
+                                "purchasing_price": null,
+                                "unit_price": null,
+                                "company_id": "res.company(1,)",
+                                "line_number": 1,
+                                "req_requested_qty": null,
+                                "req_transfer_qty": null,
+                                "req_balanced_qty": null
+                            },
+                            {
+                                "sequence": 1,
+                                "est_type": "material",
+                                "quotation_line_id": null,
+                                "quotation_line_name": null,
+                                "internal_ref": "00088790",
+                                "barcode": null,
+                                "product_id": 55,
+                                "product_name": "Window Master G-525 10Ltr",
+                                "product_template_id": 55,
+                                "product_template_name": "Window Master G-525 10Ltr",
+                                "name": "Window Master G-525 10Ltr",
+                                "product_uom_category_id": 10,
+                                "product_uom_category_name": "Chemicals",
+                                "product_uom": 30,
+                                "product_uom_name": "CAN",
+                                "avail_qty": null,
+                                "requested_qty": 10,
+                                "transfer_qty": null,
+                                "balanced_qty": 10,
+                                "purchasing_price": null,
+                                "unit_price": null,
+                                "company_id": "res.company(1,)",
+                                "line_number": 2,
+                                "req_requested_qty": null,
+                                "req_transfer_qty": null,
+                                "req_balanced_qty": null
+                            }
+                        ],
+                        "project_location": "Dubai Creek",
+                        "deadline_date": "2025-10-30",
+                        "contact_name_id": 11931,
+                        "contact_name_name": "Anil V S",
+                        "requested_on": "2025-10-30",
+                        "requested_by": 10902,
+                        "requested_name": "Sean Patrick Rogers",
+                        "user_id": 7,
+                        "user_name": "Sean Patrick Rogers",
+                        "delivery_name": null,
+                        "delivery_email": null,
+                        "delivery_phone": null,
+                        "delivery_street": null,
+                        "delivery_street2": null,
+                        "delivery_zip": null,
+                        "delivery_city": null,
+                        "delivery_state_id": null,
+                        "delivery_state_name": null,
+                        "delivery_country_id": null,
+                        "delivery_country_name": null,
+                        "project_manager_id": 10902,
+                        "project_manager_name": "Sean Patrick Rogers",
+                        "customer_ref": null,
+                        "date_start": "2025-10-22",
+                        "date": "2025-11-30",
+                        "total_outstanding": null,
+                        "con_state": "draft",
+                        "blacklist_status": null,
+                        "blacklist_reason": null,
+                        "state": "draft",
+                        "transfered_on": null,
+                        "transfered_by": null,
+                        "transfered_name": null,
+                        "display_stock_req_line_ids": null,
+                        "bill_ids": null,
+                        "picking_ids": null,
+                        "bill_count": null,
+                        "pick_count": null,
+                        "po_ids": null,
+                        "po_count": null,
+                        "purchase_type": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

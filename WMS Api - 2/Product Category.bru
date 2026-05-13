@@ -1,0 +1,1689 @@
+meta {
+  name: Product Category
+  type: http
+  seq: 11
+}
+
+post {
+  url: https://wms.syntrack.app/web/get_product_categ_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Product Category
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_product_categ_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:29:37 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:29:37 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "category_details": [
+                        {
+                            "id": 91,
+                            "name": "AIR FRESHENERS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0067"
+                        },
+                        {
+                            "id": 92,
+                            "name": "ASSORTED ITEMS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0068"
+                        },
+                        {
+                            "id": 1,
+                            "name": "All",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "New"
+                        },
+                        {
+                            "id": 3,
+                            "name": "All / Expenses",
+                            "parent_id": 1,
+                            "parent_name": "All",
+                            "categ_code": "New"
+                        },
+                        {
+                            "id": 2,
+                            "name": "All / Saleable",
+                            "parent_id": 1,
+                            "parent_name": "All",
+                            "categ_code": "New"
+                        },
+                        {
+                            "id": 93,
+                            "name": "BATH & BODY",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0069"
+                        },
+                        {
+                            "id": 94,
+                            "name": "BEVERAGES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0070"
+                        },
+                        {
+                            "id": 95,
+                            "name": "BISCUITS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0071"
+                        },
+                        {
+                            "id": 58,
+                            "name": "BODY CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0034"
+                        },
+                        {
+                            "id": 96,
+                            "name": "BREAK FAST",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0072"
+                        },
+                        {
+                            "id": 59,
+                            "name": "BULK",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0035"
+                        },
+                        {
+                            "id": 97,
+                            "name": "CARPETS AND RUGS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0073"
+                        },
+                        {
+                            "id": 98,
+                            "name": "CLEANING SUPPLIES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0074"
+                        },
+                        {
+                            "id": 99,
+                            "name": "CLOTHES CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0075"
+                        },
+                        {
+                            "id": 100,
+                            "name": "COCONUT MILK PRODUCTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0076"
+                        },
+                        {
+                            "id": 101,
+                            "name": "COCONUT OIL",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0077"
+                        },
+                        {
+                            "id": 102,
+                            "name": "CONSUMABLES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0078"
+                        },
+                        {
+                            "id": 103,
+                            "name": "DATES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0079"
+                        },
+                        {
+                            "id": 63,
+                            "name": "DELIVERIES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0039"
+                        },
+                        {
+                            "id": 60,
+                            "name": "DENTAL CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0036"
+                        },
+                        {
+                            "id": 105,
+                            "name": "DEODORANT",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0081"
+                        },
+                        {
+                            "id": 106,
+                            "name": "DIARY PRODUCTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0082"
+                        },
+                        {
+                            "id": 61,
+                            "name": "DIETARY SUPPLEMENT",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0037"
+                        },
+                        {
+                            "id": 107,
+                            "name": "DIRECT POWDERS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0083"
+                        },
+                        {
+                            "id": 108,
+                            "name": "DISHWASH",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0084"
+                        },
+                        {
+                            "id": 109,
+                            "name": "EGGS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0085"
+                        },
+                        {
+                            "id": 110,
+                            "name": "ELECTRICALS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0086"
+                        },
+                        {
+                            "id": 111,
+                            "name": "ELECTRONICS ITEMS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0087"
+                        },
+                        {
+                            "id": 112,
+                            "name": "FLOUR",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0088"
+                        },
+                        {
+                            "id": 62,
+                            "name": "FOOD",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0038"
+                        },
+                        {
+                            "id": 113,
+                            "name": "FOOD ITEMS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0089"
+                        },
+                        {
+                            "id": 114,
+                            "name": "FOOD ITEMS ALL",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0090"
+                        },
+                        {
+                            "id": 115,
+                            "name": "FOOD STORAGE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0091"
+                        },
+                        {
+                            "id": 116,
+                            "name": "FROZEN",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0092"
+                        },
+                        {
+                            "id": 162,
+                            "name": "FROZON",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0138"
+                        },
+                        {
+                            "id": 163,
+                            "name": "FURNITURE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0139"
+                        },
+                        {
+                            "id": 117,
+                            "name": "FURNITURE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0093"
+                        },
+                        {
+                            "id": 118,
+                            "name": "GINGELLY OIL",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0094"
+                        },
+                        {
+                            "id": 64,
+                            "name": "HAIR CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0040"
+                        },
+                        {
+                            "id": 119,
+                            "name": "HAND HELD DEVICES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0095"
+                        },
+                        {
+                            "id": 164,
+                            "name": "HARDWARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0140"
+                        },
+                        {
+                            "id": 120,
+                            "name": "HONEY",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0096"
+                        },
+                        {
+                            "id": 121,
+                            "name": "HONEY PRODUCTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0097"
+                        },
+                        {
+                            "id": 122,
+                            "name": "HOUSEHOLD SUPPLIES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0098"
+                        },
+                        {
+                            "id": 123,
+                            "name": "HYGIENE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0099"
+                        },
+                        {
+                            "id": 124,
+                            "name": "IPHONES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0100"
+                        },
+                        {
+                            "id": 125,
+                            "name": "JAGGERY",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0101"
+                        },
+                        {
+                            "id": 126,
+                            "name": "JAM",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0102"
+                        },
+                        {
+                            "id": 65,
+                            "name": "JUICES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0041"
+                        },
+                        {
+                            "id": 128,
+                            "name": "LANDED COSTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0104"
+                        },
+                        {
+                            "id": 129,
+                            "name": "LAUNDRY",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0105"
+                        },
+                        {
+                            "id": 131,
+                            "name": "MASALA 1 KG",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0107"
+                        },
+                        {
+                            "id": 132,
+                            "name": "MASALA 100G",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0108"
+                        },
+                        {
+                            "id": 133,
+                            "name": "MASALA 165 G",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0109"
+                        },
+                        {
+                            "id": 134,
+                            "name": "MASALA 200G",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0110"
+                        },
+                        {
+                            "id": 165,
+                            "name": "MEAT PRODUCT",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0141"
+                        },
+                        {
+                            "id": 135,
+                            "name": "MILK",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0111"
+                        },
+                        {
+                            "id": 66,
+                            "name": "NATURAL JUICES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0042"
+                        },
+                        {
+                            "id": 67,
+                            "name": "NATURAL SWEETENERS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0043"
+                        },
+                        {
+                            "id": 136,
+                            "name": "NON MEDICINE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0112"
+                        },
+                        {
+                            "id": 137,
+                            "name": "OIL & MAYO",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0113"
+                        },
+                        {
+                            "id": 138,
+                            "name": "ORAL CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0114"
+                        },
+                        {
+                            "id": 68,
+                            "name": "ORG - CHUTNEY-POWDER",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0044"
+                        },
+                        {
+                            "id": 69,
+                            "name": "ORG - EDIBLE-OILS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0045"
+                        },
+                        {
+                            "id": 70,
+                            "name": "ORG - ESSENTIAL OIL",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0046"
+                        },
+                        {
+                            "id": 71,
+                            "name": "ORG - FLOURS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0047"
+                        },
+                        {
+                            "id": 72,
+                            "name": "ORG - GHEE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0048"
+                        },
+                        {
+                            "id": 73,
+                            "name": "ORG - GROUND SPICES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0049"
+                        },
+                        {
+                            "id": 74,
+                            "name": "ORG - HOT BEVERAGES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0050"
+                        },
+                        {
+                            "id": 75,
+                            "name": "ORG - INSTANT-FOODS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0051"
+                        },
+                        {
+                            "id": 76,
+                            "name": "ORG - MASALA",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0052"
+                        },
+                        {
+                            "id": 77,
+                            "name": "ORG - MILLETS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0053"
+                        },
+                        {
+                            "id": 78,
+                            "name": "ORG - PASTA",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0054"
+                        },
+                        {
+                            "id": 79,
+                            "name": "ORG - PICKLES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0055"
+                        },
+                        {
+                            "id": 80,
+                            "name": "ORG - PULSES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0056"
+                        },
+                        {
+                            "id": 81,
+                            "name": "ORG - RICE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0057"
+                        },
+                        {
+                            "id": 82,
+                            "name": "ORG - SNACKS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0058"
+                        },
+                        {
+                            "id": 83,
+                            "name": "ORG - SOYA-CHUNKS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0059"
+                        },
+                        {
+                            "id": 84,
+                            "name": "ORG - SUPERFOODS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0060"
+                        },
+                        {
+                            "id": 85,
+                            "name": "ORG - SUPPLIMENTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0061"
+                        },
+                        {
+                            "id": 86,
+                            "name": "ORG - SWEETNER",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0062"
+                        },
+                        {
+                            "id": 87,
+                            "name": "ORG - THAI-FOODS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0063"
+                        },
+                        {
+                            "id": 88,
+                            "name": "ORG - WHOLE SPICES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0064"
+                        },
+                        {
+                            "id": 89,
+                            "name": "ORGANIC JUICES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0065"
+                        },
+                        {
+                            "id": 90,
+                            "name": "ORGANIC SALT",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0066"
+                        },
+                        {
+                            "id": 139,
+                            "name": "PAPER GOODS & TRASH",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0115"
+                        },
+                        {
+                            "id": 140,
+                            "name": "PASTA",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0116"
+                        },
+                        {
+                            "id": 141,
+                            "name": "PASTE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0117"
+                        },
+                        {
+                            "id": 142,
+                            "name": "PAYASAM & MIX",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0118"
+                        },
+                        {
+                            "id": 143,
+                            "name": "PERSONAL CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0119"
+                        },
+                        {
+                            "id": 144,
+                            "name": "PERSONAL CARE/HAIR CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0120"
+                        },
+                        {
+                            "id": 145,
+                            "name": "PICKLES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0121"
+                        },
+                        {
+                            "id": 146,
+                            "name": "PLANTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0122"
+                        },
+                        {
+                            "id": 147,
+                            "name": "POS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0123"
+                        },
+                        {
+                            "id": 148,
+                            "name": "PROTEIN POWDER",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0124"
+                        },
+                        {
+                            "id": 149,
+                            "name": "PULSES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0125"
+                        },
+                        {
+                            "id": 150,
+                            "name": "RICE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0126"
+                        },
+                        {
+                            "id": 151,
+                            "name": "SALT",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0127"
+                        },
+                        {
+                            "id": 152,
+                            "name": "SKIN CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0128"
+                        },
+                        {
+                            "id": 154,
+                            "name": "SMART PHONES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0130"
+                        },
+                        {
+                            "id": 155,
+                            "name": "SNACKS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0131"
+                        },
+                        {
+                            "id": 156,
+                            "name": "SNACKS & COOKIES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0132"
+                        },
+                        {
+                            "id": 157,
+                            "name": "SPARE PARTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0133"
+                        },
+                        {
+                            "id": 158,
+                            "name": "SPICES & SEEDS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0134"
+                        },
+                        {
+                            "id": 159,
+                            "name": "SPICES POWDER",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0135"
+                        },
+                        {
+                            "id": 166,
+                            "name": "SPREADS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0142"
+                        },
+                        {
+                            "id": 167,
+                            "name": "STATIONARY ITEMS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0143"
+                        },
+                        {
+                            "id": 168,
+                            "name": "SWEETS AND CHOCOLATES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0144"
+                        },
+                        {
+                            "id": 160,
+                            "name": "TAMARIND",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0136"
+                        },
+                        {
+                            "id": 161,
+                            "name": "TEA & COFFEE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0137"
+                        },
+                        {
+                            "id": 169,
+                            "name": "VEGETABLES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0145"
+                        },
+                        {
+                            "id": 170,
+                            "name": "WATER",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0146"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Product Category
+  
+  request: {
+    url: https://wms.syntrack.app/web/get_product_categ_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:29:37 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:29:37 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "category_details": [
+                        {
+                            "id": 91,
+                            "name": "AIR FRESHENERS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0067"
+                        },
+                        {
+                            "id": 92,
+                            "name": "ASSORTED ITEMS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0068"
+                        },
+                        {
+                            "id": 1,
+                            "name": "All",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "New"
+                        },
+                        {
+                            "id": 3,
+                            "name": "All / Expenses",
+                            "parent_id": 1,
+                            "parent_name": "All",
+                            "categ_code": "New"
+                        },
+                        {
+                            "id": 2,
+                            "name": "All / Saleable",
+                            "parent_id": 1,
+                            "parent_name": "All",
+                            "categ_code": "New"
+                        },
+                        {
+                            "id": 93,
+                            "name": "BATH & BODY",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0069"
+                        },
+                        {
+                            "id": 94,
+                            "name": "BEVERAGES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0070"
+                        },
+                        {
+                            "id": 95,
+                            "name": "BISCUITS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0071"
+                        },
+                        {
+                            "id": 58,
+                            "name": "BODY CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0034"
+                        },
+                        {
+                            "id": 96,
+                            "name": "BREAK FAST",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0072"
+                        },
+                        {
+                            "id": 59,
+                            "name": "BULK",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0035"
+                        },
+                        {
+                            "id": 97,
+                            "name": "CARPETS AND RUGS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0073"
+                        },
+                        {
+                            "id": 98,
+                            "name": "CLEANING SUPPLIES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0074"
+                        },
+                        {
+                            "id": 99,
+                            "name": "CLOTHES CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0075"
+                        },
+                        {
+                            "id": 100,
+                            "name": "COCONUT MILK PRODUCTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0076"
+                        },
+                        {
+                            "id": 101,
+                            "name": "COCONUT OIL",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0077"
+                        },
+                        {
+                            "id": 102,
+                            "name": "CONSUMABLES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0078"
+                        },
+                        {
+                            "id": 103,
+                            "name": "DATES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0079"
+                        },
+                        {
+                            "id": 63,
+                            "name": "DELIVERIES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0039"
+                        },
+                        {
+                            "id": 60,
+                            "name": "DENTAL CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0036"
+                        },
+                        {
+                            "id": 105,
+                            "name": "DEODORANT",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0081"
+                        },
+                        {
+                            "id": 106,
+                            "name": "DIARY PRODUCTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0082"
+                        },
+                        {
+                            "id": 61,
+                            "name": "DIETARY SUPPLEMENT",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0037"
+                        },
+                        {
+                            "id": 107,
+                            "name": "DIRECT POWDERS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0083"
+                        },
+                        {
+                            "id": 108,
+                            "name": "DISHWASH",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0084"
+                        },
+                        {
+                            "id": 109,
+                            "name": "EGGS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0085"
+                        },
+                        {
+                            "id": 110,
+                            "name": "ELECTRICALS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0086"
+                        },
+                        {
+                            "id": 111,
+                            "name": "ELECTRONICS ITEMS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0087"
+                        },
+                        {
+                            "id": 112,
+                            "name": "FLOUR",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0088"
+                        },
+                        {
+                            "id": 62,
+                            "name": "FOOD",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0038"
+                        },
+                        {
+                            "id": 113,
+                            "name": "FOOD ITEMS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0089"
+                        },
+                        {
+                            "id": 114,
+                            "name": "FOOD ITEMS ALL",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0090"
+                        },
+                        {
+                            "id": 115,
+                            "name": "FOOD STORAGE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0091"
+                        },
+                        {
+                            "id": 116,
+                            "name": "FROZEN",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0092"
+                        },
+                        {
+                            "id": 162,
+                            "name": "FROZON",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0138"
+                        },
+                        {
+                            "id": 163,
+                            "name": "FURNITURE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0139"
+                        },
+                        {
+                            "id": 117,
+                            "name": "FURNITURE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0093"
+                        },
+                        {
+                            "id": 118,
+                            "name": "GINGELLY OIL",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0094"
+                        },
+                        {
+                            "id": 64,
+                            "name": "HAIR CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0040"
+                        },
+                        {
+                            "id": 119,
+                            "name": "HAND HELD DEVICES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0095"
+                        },
+                        {
+                            "id": 164,
+                            "name": "HARDWARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0140"
+                        },
+                        {
+                            "id": 120,
+                            "name": "HONEY",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0096"
+                        },
+                        {
+                            "id": 121,
+                            "name": "HONEY PRODUCTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0097"
+                        },
+                        {
+                            "id": 122,
+                            "name": "HOUSEHOLD SUPPLIES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0098"
+                        },
+                        {
+                            "id": 123,
+                            "name": "HYGIENE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0099"
+                        },
+                        {
+                            "id": 124,
+                            "name": "IPHONES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0100"
+                        },
+                        {
+                            "id": 125,
+                            "name": "JAGGERY",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0101"
+                        },
+                        {
+                            "id": 126,
+                            "name": "JAM",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0102"
+                        },
+                        {
+                            "id": 65,
+                            "name": "JUICES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0041"
+                        },
+                        {
+                            "id": 128,
+                            "name": "LANDED COSTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0104"
+                        },
+                        {
+                            "id": 129,
+                            "name": "LAUNDRY",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0105"
+                        },
+                        {
+                            "id": 131,
+                            "name": "MASALA 1 KG",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0107"
+                        },
+                        {
+                            "id": 132,
+                            "name": "MASALA 100G",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0108"
+                        },
+                        {
+                            "id": 133,
+                            "name": "MASALA 165 G",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0109"
+                        },
+                        {
+                            "id": 134,
+                            "name": "MASALA 200G",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0110"
+                        },
+                        {
+                            "id": 165,
+                            "name": "MEAT PRODUCT",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0141"
+                        },
+                        {
+                            "id": 135,
+                            "name": "MILK",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0111"
+                        },
+                        {
+                            "id": 66,
+                            "name": "NATURAL JUICES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0042"
+                        },
+                        {
+                            "id": 67,
+                            "name": "NATURAL SWEETENERS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0043"
+                        },
+                        {
+                            "id": 136,
+                            "name": "NON MEDICINE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0112"
+                        },
+                        {
+                            "id": 137,
+                            "name": "OIL & MAYO",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0113"
+                        },
+                        {
+                            "id": 138,
+                            "name": "ORAL CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0114"
+                        },
+                        {
+                            "id": 68,
+                            "name": "ORG - CHUTNEY-POWDER",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0044"
+                        },
+                        {
+                            "id": 69,
+                            "name": "ORG - EDIBLE-OILS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0045"
+                        },
+                        {
+                            "id": 70,
+                            "name": "ORG - ESSENTIAL OIL",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0046"
+                        },
+                        {
+                            "id": 71,
+                            "name": "ORG - FLOURS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0047"
+                        },
+                        {
+                            "id": 72,
+                            "name": "ORG - GHEE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0048"
+                        },
+                        {
+                            "id": 73,
+                            "name": "ORG - GROUND SPICES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0049"
+                        },
+                        {
+                            "id": 74,
+                            "name": "ORG - HOT BEVERAGES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0050"
+                        },
+                        {
+                            "id": 75,
+                            "name": "ORG - INSTANT-FOODS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0051"
+                        },
+                        {
+                            "id": 76,
+                            "name": "ORG - MASALA",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0052"
+                        },
+                        {
+                            "id": 77,
+                            "name": "ORG - MILLETS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0053"
+                        },
+                        {
+                            "id": 78,
+                            "name": "ORG - PASTA",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0054"
+                        },
+                        {
+                            "id": 79,
+                            "name": "ORG - PICKLES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0055"
+                        },
+                        {
+                            "id": 80,
+                            "name": "ORG - PULSES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0056"
+                        },
+                        {
+                            "id": 81,
+                            "name": "ORG - RICE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0057"
+                        },
+                        {
+                            "id": 82,
+                            "name": "ORG - SNACKS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0058"
+                        },
+                        {
+                            "id": 83,
+                            "name": "ORG - SOYA-CHUNKS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0059"
+                        },
+                        {
+                            "id": 84,
+                            "name": "ORG - SUPERFOODS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0060"
+                        },
+                        {
+                            "id": 85,
+                            "name": "ORG - SUPPLIMENTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0061"
+                        },
+                        {
+                            "id": 86,
+                            "name": "ORG - SWEETNER",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0062"
+                        },
+                        {
+                            "id": 87,
+                            "name": "ORG - THAI-FOODS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0063"
+                        },
+                        {
+                            "id": 88,
+                            "name": "ORG - WHOLE SPICES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0064"
+                        },
+                        {
+                            "id": 89,
+                            "name": "ORGANIC JUICES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0065"
+                        },
+                        {
+                            "id": 90,
+                            "name": "ORGANIC SALT",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0066"
+                        },
+                        {
+                            "id": 139,
+                            "name": "PAPER GOODS & TRASH",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0115"
+                        },
+                        {
+                            "id": 140,
+                            "name": "PASTA",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0116"
+                        },
+                        {
+                            "id": 141,
+                            "name": "PASTE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0117"
+                        },
+                        {
+                            "id": 142,
+                            "name": "PAYASAM & MIX",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0118"
+                        },
+                        {
+                            "id": 143,
+                            "name": "PERSONAL CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0119"
+                        },
+                        {
+                            "id": 144,
+                            "name": "PERSONAL CARE/HAIR CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0120"
+                        },
+                        {
+                            "id": 145,
+                            "name": "PICKLES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0121"
+                        },
+                        {
+                            "id": 146,
+                            "name": "PLANTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0122"
+                        },
+                        {
+                            "id": 147,
+                            "name": "POS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0123"
+                        },
+                        {
+                            "id": 148,
+                            "name": "PROTEIN POWDER",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0124"
+                        },
+                        {
+                            "id": 149,
+                            "name": "PULSES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0125"
+                        },
+                        {
+                            "id": 150,
+                            "name": "RICE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0126"
+                        },
+                        {
+                            "id": 151,
+                            "name": "SALT",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0127"
+                        },
+                        {
+                            "id": 152,
+                            "name": "SKIN CARE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0128"
+                        },
+                        {
+                            "id": 154,
+                            "name": "SMART PHONES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0130"
+                        },
+                        {
+                            "id": 155,
+                            "name": "SNACKS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0131"
+                        },
+                        {
+                            "id": 156,
+                            "name": "SNACKS & COOKIES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0132"
+                        },
+                        {
+                            "id": 157,
+                            "name": "SPARE PARTS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0133"
+                        },
+                        {
+                            "id": 158,
+                            "name": "SPICES & SEEDS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0134"
+                        },
+                        {
+                            "id": 159,
+                            "name": "SPICES POWDER",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0135"
+                        },
+                        {
+                            "id": 166,
+                            "name": "SPREADS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0142"
+                        },
+                        {
+                            "id": 167,
+                            "name": "STATIONARY ITEMS",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0143"
+                        },
+                        {
+                            "id": 168,
+                            "name": "SWEETS AND CHOCOLATES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0144"
+                        },
+                        {
+                            "id": 160,
+                            "name": "TAMARIND",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0136"
+                        },
+                        {
+                            "id": 161,
+                            "name": "TEA & COFFEE",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0137"
+                        },
+                        {
+                            "id": 169,
+                            "name": "VEGETABLES",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0145"
+                        },
+                        {
+                            "id": 170,
+                            "name": "WATER",
+                            "parent_id": null,
+                            "parent_name": null,
+                            "categ_code": "0146"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

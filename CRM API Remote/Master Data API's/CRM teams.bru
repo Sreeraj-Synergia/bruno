@@ -1,0 +1,19 @@
+meta {
+  name: CRM teams
+  type: http
+  seq: 15
+}
+
+post {
+  url: http://172.105.55.55:8074/web/get_crm_team_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}

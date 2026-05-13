@@ -1,0 +1,299 @@
+meta {
+  name: User Details
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://wms.syntrack.app/web/user_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: User Details
+  
+  request: {
+    url: https://wms.syntrack.app/web/user_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:24:32 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:24:32 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_details": {
+                        "user_name": "Admin",
+                        "user_id": 116,
+                        "login_id": "admin",
+                        "logo_url": "http://wms.syntrack.app/web/url_image/res.users/116/image_1920",
+                        "user_signature": "http://wms.syntrack.app/web/url_image/res.users/116/user_signature",
+                        "manager": null,
+                        "department": null,
+                        "job_pos": null,
+                        "work_phone": null,
+                        "work_mobile": null,
+                        "work_email": null,
+                        "logo": "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",
+                        "disable_offline_sales": false,
+                        "stop_sale_for_blocked_cust": false,
+                        "confirm_customer_sale": false,
+                        "contact_us_link": false,
+                        "about_us_link": false,
+                        "faq_link": false,
+                        "show_customers": true,
+                        "show_prod_data": true,
+                        "show_company": true,
+                        "show_offline_export": true,
+                        "show_direct_cust_inv": false,
+                        "show_direct_return": false,
+                        "show_journey": false,
+                        "show_mob_presales": false,
+                        "show_day_close_report": false,
+                        "show_grn": true,
+                        "show_delivery_note": true,
+                        "show_internal_transfer": true,
+                        "show_vendors": true,
+                        "show_foc_offers": false,
+                        "show_req_special_price": false,
+                        "show_price_check": false,
+                        "show_stock_request": true,
+                        "show_available_products": true,
+                        "allow_fixed_pricelist_in_sale": false,
+                        "allow_dir_inv_price_change": false,
+                        "show_mob_presales_int_ship": false,
+                        "show_expense": false,
+                        "show_sales_target": false,
+                        "show_del_plan": false,
+                        "show_survey": false,
+                        "show_mob_directsales": false,
+                        "esign_after_order": false,
+                        "allow_geofencing": false,
+                        "geofencing_perimeter": null,
+                        "google_api_key": null,
+                        "support_email": null,
+                        "currency_ids": [
+                            {
+                                "currency_id": 131,
+                                "symbol": "AED",
+                                "position": "after",
+                                "digits": [
+                                    69,
+                                    2
+                                ]
+                            },
+                            {
+                                "currency_id": 1,
+                                "symbol": "€",
+                                "position": "after",
+                                "digits": [
+                                    69,
+                                    2
+                                ]
+                            },
+                            {
+                                "currency_id": 2,
+                                "symbol": "$",
+                                "position": "before",
+                                "digits": [
+                                    69,
+                                    2
+                                ]
+                            }
+                        ],
+                        "return_reasons": [],
+                        "stock_location_id": null,
+                        "stock_location_name": null,
+                        "resellable_location_id": null,
+                        "resellable_location_name": null,
+                        "non_resellable_location_id": null,
+                        "non_resellable_location_name": null,
+                        "allow_edit_product_price": false,
+                        "invoice_print": null,
+                        "allow_disc_in_sales": false,
+                        "check_in_status": 0
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: User Details
+  
+  request: {
+    url: https://wms.syntrack.app/web/user_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 12 Jul 2023 06:24:32 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=1da1e032b135e258c7dc685f0e606c15157e02de; Expires=Tue, 10-Oct-2023 06:24:32 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_details": {
+                        "user_name": "Admin",
+                        "user_id": 116,
+                        "login_id": "admin",
+                        "logo_url": "http://wms.syntrack.app/web/url_image/res.users/116/image_1920",
+                        "user_signature": "http://wms.syntrack.app/web/url_image/res.users/116/user_signature",
+                        "manager": null,
+                        "department": null,
+                        "job_pos": null,
+                        "work_phone": null,
+                        "work_mobile": null,
+                        "work_email": null,
+                        "logo": "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",
+                        "disable_offline_sales": false,
+                        "stop_sale_for_blocked_cust": false,
+                        "confirm_customer_sale": false,
+                        "contact_us_link": false,
+                        "about_us_link": false,
+                        "faq_link": false,
+                        "show_customers": true,
+                        "show_prod_data": true,
+                        "show_company": true,
+                        "show_offline_export": true,
+                        "show_direct_cust_inv": false,
+                        "show_direct_return": false,
+                        "show_journey": false,
+                        "show_mob_presales": false,
+                        "show_day_close_report": false,
+                        "show_grn": true,
+                        "show_delivery_note": true,
+                        "show_internal_transfer": true,
+                        "show_vendors": true,
+                        "show_foc_offers": false,
+                        "show_req_special_price": false,
+                        "show_price_check": false,
+                        "show_stock_request": true,
+                        "show_available_products": true,
+                        "allow_fixed_pricelist_in_sale": false,
+                        "allow_dir_inv_price_change": false,
+                        "show_mob_presales_int_ship": false,
+                        "show_expense": false,
+                        "show_sales_target": false,
+                        "show_del_plan": false,
+                        "show_survey": false,
+                        "show_mob_directsales": false,
+                        "esign_after_order": false,
+                        "allow_geofencing": false,
+                        "geofencing_perimeter": null,
+                        "google_api_key": null,
+                        "support_email": null,
+                        "currency_ids": [
+                            {
+                                "currency_id": 131,
+                                "symbol": "AED",
+                                "position": "after",
+                                "digits": [
+                                    69,
+                                    2
+                                ]
+                            },
+                            {
+                                "currency_id": 1,
+                                "symbol": "€",
+                                "position": "after",
+                                "digits": [
+                                    69,
+                                    2
+                                ]
+                            },
+                            {
+                                "currency_id": 2,
+                                "symbol": "$",
+                                "position": "before",
+                                "digits": [
+                                    69,
+                                    2
+                                ]
+                            }
+                        ],
+                        "return_reasons": [],
+                        "stock_location_id": null,
+                        "stock_location_name": null,
+                        "resellable_location_id": null,
+                        "resellable_location_name": null,
+                        "non_resellable_location_id": null,
+                        "non_resellable_location_name": null,
+                        "allow_edit_product_price": false,
+                        "invoice_print": null,
+                        "allow_disc_in_sales": false,
+                        "check_in_status": 0
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

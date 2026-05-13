@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Ardh Alfan",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

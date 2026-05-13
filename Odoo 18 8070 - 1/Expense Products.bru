@@ -1,0 +1,229 @@
+meta {
+  name: Expense Products
+  type: http
+  seq: 59
+}
+
+post {
+  url: 192.168.1.120:8070/web/get_expense_product_basic_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Expense Products
+  
+  request: {
+    url: 192.168.1.120:8070/web/get_expense_product_basic_details
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 10 Mar 2026 10:38:48 GMT
+      Content-Length: 3665
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "expense_product_details": {
+                        "expense_product_count_all": 3,
+                        "expense_product_count_per_page": 3000,
+                        "expense_product_data": [
+                            {
+                                "product_name": "Expenses",
+                                "name": "Expenses",
+                                "display_name": "Expenses",
+                                "arabic_name": null,
+                                "sku": "1000008",
+                                "hs_code": null,
+                                "country_of_origin": null,
+                                "country_of_origin_name": null,
+                                "barcode": null,
+                                "uom": "Units",
+                                "uom_id": 1,
+                                "uom_rounding": 0.01,
+                                "sale_price": 1,
+                                "cost_price": null,
+                                "category": "All",
+                                "category_id": 1,
+                                "brand": null,
+                                "brand_id": null,
+                                "manufacturer_id": null,
+                                "manufacturer_name": null,
+                                "product_id": 2970,
+                                "tracking": "none",
+                                "must_selling": false,
+                                "use_expiration_date": false,
+                                "use_manufacturing_date": false,
+                                "owner_id": 1,
+                                "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                "responsible_employee_id": null,
+                                "responsible_employee_name": null,
+                                "image_url": "http://localhost:8070/web/url_image/product.template/2964/image_1920",
+                                "product_info": null,
+                                "length": 0,
+                                "width": 0,
+                                "height": 0,
+                                "weight": 0,
+                                "volume": 0,
+                                "type": "service",
+                                "stock_package_id": null,
+                                "tax_details": [
+                                    {
+                                        "tax_type": "percent",
+                                        "tax_name": "5% AD",
+                                        "tax_id": 2,
+                                        "tax_value": 0.05
+                                    }
+                                ],
+                                "sale_group_id": null,
+                                "sale_group_name": null,
+                                "sales_category_id": null,
+                                "sales_category_name": null
+                            },
+                            {
+                                "product_name": "Food Expenses",
+                                "name": "Food Expenses",
+                                "display_name": "Food Expenses",
+                                "arabic_name": null,
+                                "sku": null,
+                                "hs_code": null,
+                                "country_of_origin": null,
+                                "country_of_origin_name": null,
+                                "barcode": null,
+                                "uom": "Units",
+                                "uom_id": 1,
+                                "uom_rounding": 0.01,
+                                "sale_price": 1,
+                                "cost_price": null,
+                                "category": "All",
+                                "category_id": 1,
+                                "brand": null,
+                                "brand_id": null,
+                                "manufacturer_id": null,
+                                "manufacturer_name": null,
+                                "product_id": 19457,
+                                "tracking": "none",
+                                "must_selling": false,
+                                "use_expiration_date": false,
+                                "use_manufacturing_date": false,
+                                "owner_id": 1,
+                                "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                "responsible_employee_id": null,
+                                "responsible_employee_name": null,
+                                "image_url": "http://localhost:8070/web/url_image/product.template/20380/image_1920",
+                                "product_info": null,
+                                "length": 0,
+                                "width": 0,
+                                "height": 0,
+                                "weight": 0,
+                                "volume": 0,
+                                "type": "service",
+                                "stock_package_id": null,
+                                "tax_details": [
+                                    {
+                                        "tax_type": "percent",
+                                        "tax_name": "5% AD",
+                                        "tax_id": 2,
+                                        "tax_value": 0.05
+                                    }
+                                ],
+                                "sale_group_id": null,
+                                "sale_group_name": null,
+                                "sales_category_id": null,
+                                "sales_category_name": null
+                            },
+                            {
+                                "product_name": "Fuel Expense HIACE-85305",
+                                "name": "Fuel Expense HIACE-85305",
+                                "display_name": "Fuel Expense HIACE-85305",
+                                "arabic_name": null,
+                                "sku": null,
+                                "hs_code": null,
+                                "country_of_origin": null,
+                                "country_of_origin_name": null,
+                                "barcode": null,
+                                "uom": "Units",
+                                "uom_id": 1,
+                                "uom_rounding": 0.01,
+                                "sale_price": 1,
+                                "cost_price": null,
+                                "category": "All / Expenses / Fuel Expenses",
+                                "category_id": 2521,
+                                "brand": null,
+                                "brand_id": null,
+                                "manufacturer_id": null,
+                                "manufacturer_name": null,
+                                "product_id": 13361,
+                                "tracking": "none",
+                                "must_selling": false,
+                                "use_expiration_date": false,
+                                "use_manufacturing_date": false,
+                                "owner_id": 1,
+                                "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                "responsible_employee_id": null,
+                                "responsible_employee_name": null,
+                                "image_url": "http://localhost:8070/web/url_image/product.template/14257/image_1920",
+                                "product_info": null,
+                                "length": 0,
+                                "width": 0,
+                                "height": 0,
+                                "weight": 0,
+                                "volume": 0,
+                                "type": "service",
+                                "stock_package_id": null,
+                                "tax_details": [
+                                    {
+                                        "tax_type": "percent",
+                                        "tax_name": "5% AD",
+                                        "tax_id": 2,
+                                        "tax_value": 0.05
+                                    }
+                                ],
+                                "sale_group_id": null,
+                                "sale_group_name": null,
+                                "sales_category_id": null,
+                                "sales_category_name": null
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

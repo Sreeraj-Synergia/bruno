@@ -1,0 +1,25 @@
+meta {
+  name: Outstanding invoices
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://194.195.116.73:8071/web/web/get_delivery_payment_due
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "partner_id": 1340
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

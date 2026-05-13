@@ -1,0 +1,157 @@
+meta {
+  name: Dimension Package Types
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:8069/web/get_dimension_package_type_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Dimension Package Types
+  
+  request: {
+    url: http://localhost:8069/web/get_dimension_package_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 308
+      Set-Cookie: session_id=8b81c9d4212b10fef167a337b7f2576b55062368; Expires=Mon, 04-Nov-2024 12:35:49 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Tue, 06 Aug 2024 12:35:49 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dimension_package_types": [
+                        {
+                            "id": 1,
+                            "name": "Carton",
+                            "code": "CRTN"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Pallet",
+                            "code": "PL"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Piece",
+                            "code": "PC"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Box",
+                            "code": "BX"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Dimension Package Types
+  
+  request: {
+    url: http://localhost:8069/web/get_dimension_package_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 308
+      Set-Cookie: session_id=8b81c9d4212b10fef167a337b7f2576b55062368; Expires=Mon, 04-Nov-2024 12:35:49 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Tue, 06 Aug 2024 12:35:49 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dimension_package_types": [
+                        {
+                            "id": 1,
+                            "name": "Carton",
+                            "code": "CRTN"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Pallet",
+                            "code": "PL"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Piece",
+                            "code": "PC"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Box",
+                            "code": "BX"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

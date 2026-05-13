@@ -1,0 +1,27 @@
+meta {
+  name: update_user_checkins
+  type: http
+  seq: 21
+}
+
+post {
+  url: http://172.105.51.175:8086/web/update_user_checkins
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "lat": "25.15154515",
+              "lng": "55.15154515",
+              "type": "checkin"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

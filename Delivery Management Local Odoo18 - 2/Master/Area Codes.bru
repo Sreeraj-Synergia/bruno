@@ -1,0 +1,147 @@
+meta {
+  name: Area Codes
+  type: http
+  seq: 2
+}
+
+post {
+  url: localhost:8069/web/get_areacode_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Area Codes
+  
+  request: {
+    url: localhost:8070/web/get_areacode_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 271
+      Set-Cookie: session_id=fdd016adc2e5b6fddf130a6a4d642af7aa092c8e; Expires=Thu, 05-Dec-2024 13:37:33 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 06 Sep 2024 13:37:33 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "areacode_details": [
+                        {
+                            "id": 1,
+                            "name": "Oud Metha",
+                            "code": "OUDM"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Karama",
+                            "code": "KRAM"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Burjman",
+                            "code": "MBURJ"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Area Codes
+  
+  request: {
+    url: localhost:8070/web/get_areacode_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 271
+      Set-Cookie: session_id=fdd016adc2e5b6fddf130a6a4d642af7aa092c8e; Expires=Thu, 05-Dec-2024 13:37:33 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 06 Sep 2024 13:37:33 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "areacode_details": [
+                        {
+                            "id": 1,
+                            "name": "Oud Metha",
+                            "code": "OUDM"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Karama",
+                            "code": "KRAM"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Burjman",
+                            "code": "MBURJ"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

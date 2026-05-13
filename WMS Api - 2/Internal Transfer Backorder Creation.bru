@@ -1,0 +1,277 @@
+meta {
+  name: Internal Transfer Backorder Creation
+  type: http
+  seq: 44
+}
+
+post {
+  url: https://wms.syntrack.app/web/internal_backorder_confirmation?db=WMS_BASE_NEW
+  body: json
+  auth: inherit
+}
+
+params:query {
+  db: WMS_BASE_NEW
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "create_backorder": true,
+              "internal_id": 221
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Internal Transfer Backorder Creation
+  
+  request: {
+    url: https://wms.syntrack.app/web/internal_backorder_confirmation?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "create_backorder": true,
+                  "internal_id": 221
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 06:30:00 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 06:30:00 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "back_order_confirmation_details": {
+                        "id": 221,
+                        "name": "WH/INT/00029",
+                        "partner_id": null,
+                        "partner_name": null,
+                        "picking_type_id": 5,
+                        "picking_type_name": "Synergia: Internal Transfers",
+                        "source_location_id": 8,
+                        "source_location_name": "WH/Stock",
+                        "location_dest_id": 17,
+                        "location_dest_name": "Zone1",
+                        "scheduled_date": "2023-06-21 06:27:54",
+                        "date_done": "2023-06-21 06:29:14",
+                        "origin": null,
+                        "origin_date": null,
+                        "note": null,
+                        "state": "done",
+                        "internal_line_ids": [
+                            {
+                                "id": 307,
+                                "product_id": 136,
+                                "product_name": "Material Crawler",
+                                "product_packaging_id": 225,
+                                "product_packaging_name": "Unit",
+                                "description": "Material Crawler",
+                                "date": "2023-06-21 06:29:14",
+                                "date_deadline": null,
+                                "product_uom_qty": 2,
+                                "quantity_done": 2,
+                                "pack_qty": 5,
+                                "recv_pack_qty": 2,
+                                "product_uom_id": 1,
+                                "product_uom": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/136/image_1920"
+                            }
+                        ],
+                        "internal_detailed_line_ids": [
+                            {
+                                "id": 905,
+                                "product_id": 136,
+                                "product_name": "Material Crawler",
+                                "barcode": "2020340223",
+                                "location_dest_id": 17,
+                                "location_dest_name": "Zone1",
+                                "package_id": null,
+                                "package_name": null,
+                                "dest_package_id": null,
+                                "dest_package_name": null,
+                                "product_packaging_id": 225,
+                                "product_packaging_name": "Unit",
+                                "lot_name": null,
+                                "expiration_date": null,
+                                "product_uom_qty": null,
+                                "quantity_done": 2,
+                                "pack_qty": 5,
+                                "recv_pack_qty": 2,
+                                "product_uom_id": 1,
+                                "product_uom_name": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/136/image_1920",
+                                "stock_move_id": 307
+                            }
+                        ],
+                        "internal_package_ids": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Internal Transfer Backorder Creation
+  
+  request: {
+    url: https://wms.syntrack.app/web/internal_backorder_confirmation?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "create_backorder": true,
+                  "internal_id": 221
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 06:30:00 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 06:30:00 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "back_order_confirmation_details": {
+                        "id": 221,
+                        "name": "WH/INT/00029",
+                        "partner_id": null,
+                        "partner_name": null,
+                        "picking_type_id": 5,
+                        "picking_type_name": "Synergia: Internal Transfers",
+                        "source_location_id": 8,
+                        "source_location_name": "WH/Stock",
+                        "location_dest_id": 17,
+                        "location_dest_name": "Zone1",
+                        "scheduled_date": "2023-06-21 06:27:54",
+                        "date_done": "2023-06-21 06:29:14",
+                        "origin": null,
+                        "origin_date": null,
+                        "note": null,
+                        "state": "done",
+                        "internal_line_ids": [
+                            {
+                                "id": 307,
+                                "product_id": 136,
+                                "product_name": "Material Crawler",
+                                "product_packaging_id": 225,
+                                "product_packaging_name": "Unit",
+                                "description": "Material Crawler",
+                                "date": "2023-06-21 06:29:14",
+                                "date_deadline": null,
+                                "product_uom_qty": 2,
+                                "quantity_done": 2,
+                                "pack_qty": 5,
+                                "recv_pack_qty": 2,
+                                "product_uom_id": 1,
+                                "product_uom": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/136/image_1920"
+                            }
+                        ],
+                        "internal_detailed_line_ids": [
+                            {
+                                "id": 905,
+                                "product_id": 136,
+                                "product_name": "Material Crawler",
+                                "barcode": "2020340223",
+                                "location_dest_id": 17,
+                                "location_dest_name": "Zone1",
+                                "package_id": null,
+                                "package_name": null,
+                                "dest_package_id": null,
+                                "dest_package_name": null,
+                                "product_packaging_id": 225,
+                                "product_packaging_name": "Unit",
+                                "lot_name": null,
+                                "expiration_date": null,
+                                "product_uom_qty": null,
+                                "quantity_done": 2,
+                                "pack_qty": 5,
+                                "recv_pack_qty": 2,
+                                "product_uom_id": 1,
+                                "product_uom_name": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/136/image_1920",
+                                "stock_move_id": 307
+                            }
+                        ],
+                        "internal_package_ids": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

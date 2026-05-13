@@ -1,0 +1,3546 @@
+meta {
+  name: Dispatch Order Status Change
+  type: http
+  seq: 47
+}
+
+post {
+  url: 192.168.1.119:8070/web/dispatch_order_status_change
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{
+      "data": {
+          "dispatch_id": 10,
+          "status": "transfer"
+          }
+  }}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: DIspatch Submit
+  
+  request: {
+    url: 192.168.1.119:8070/web/dispatch_order_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{
+          "data": {
+              "dispatch_id": 10,
+              "status": "submit"
+              }
+      }}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 13 May 2025 13:46:25 GMT
+      Content-Length: 8431
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dispatch_status_change_details": {
+                        "dispatch_id": 10,
+                        "name": "LOR2025050009",
+                        "emp_checkin_id": null,
+                        "emp_checkin_time": null,
+                        "batch_picking_id": 9,
+                        "batch_picking_name": "BP2025050006",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "user_id": 2,
+                        "user_name": "Administrator",
+                        "department_id": 1,
+                        "department_name": "Administration",
+                        "employee_id": 1,
+                        "employee_name": "Administrator",
+                        "area_code_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "allowed_area_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "sale_order_ids": [
+                            {
+                                "presale_id": 243,
+                                "presale_name": "S00265",
+                                "presale_date": "2025-05-13 13:08:05",
+                                "customer_id": 16109,
+                                "partner_invoice_id": 16109,
+                                "partner_shipping_id": 16109,
+                                "origin": null,
+                                "discount_amount": null,
+                                "amount_untaxed": 115.4,
+                                "amount_tax": 5.77,
+                                "amount_total": 121.17,
+                                "user_id": 2,
+                                "payment_type": "credit",
+                                "state": "Sales Order",
+                                "expiry_date": "2025-06-03",
+                                "payment_term_name": "21 Days",
+                                "presale_orderline": [
+                                    {
+                                        "product_id": 2381,
+                                        "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 2,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 2,
+                                        "price_tax": 0.10000000000000009,
+                                        "price_total": 2.1,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 2,
+                                        "package_id": 503,
+                                        "package_name": "Kg",
+                                        "package_quantity": 2,
+                                        "order_line_id": 417,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": []
+                                    },
+                                    {
+                                        "product_id": 2373,
+                                        "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 113.4,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 113.4,
+                                        "price_tax": 5.6699999999999875,
+                                        "price_total": 119.07,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 113.4,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "package_quantity": 10,
+                                        "order_line_id": 418,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": [
+                                            {
+                                                "product_id": 2373,
+                                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                                "uom_id": 12,
+                                                "package_id": 1435,
+                                                "package_name": "Carton",
+                                                "foc_line_id": 39,
+                                                "order_qty": 1,
+                                                "foc_product_id": 2470,
+                                                "foc_product_name": "COFFEE BEANS VIETNAM",
+                                                "foc_product_packaging": 592,
+                                                "foc_product_packaging_name": "Kg",
+                                                "foc_qty": 5,
+                                                "max_foc_qty": 0
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "sale_order_line_ids": [
+                            {
+                                "product_id": 2381,
+                                "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 2,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 2,
+                                "price_tax": 0.10000000000000009,
+                                "price_total": 2.1,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 2,
+                                "package_id": 503,
+                                "package_name": "Kg",
+                                "package_quantity": 2,
+                                "order_line_id": 417,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": []
+                            },
+                            {
+                                "product_id": 2373,
+                                "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 113.4,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 113.4,
+                                "price_tax": 5.6699999999999875,
+                                "price_total": 119.07,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 113.4,
+                                "package_id": 1435,
+                                "package_name": "Carton",
+                                "package_quantity": 10,
+                                "order_line_id": 418,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": [
+                                    {
+                                        "product_id": 2373,
+                                        "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "uom_id": 12,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "foc_line_id": 39,
+                                        "order_qty": 1,
+                                        "foc_product_id": 2470,
+                                        "foc_product_name": "COFFEE BEANS VIETNAM",
+                                        "foc_product_packaging": 592,
+                                        "foc_product_packaging_name": "Kg",
+                                        "foc_qty": 5,
+                                        "max_foc_qty": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "note": null,
+                        "dispatch_date": "2025-05-14 00:00:00",
+                        "validated_by": null,
+                        "validated_by_name": null,
+                        "driver_emp_id": 1,
+                        "driver_emp_name": "Administrator",
+                        "driver_user_id": 1,
+                        "driver_user_name": "SynergiaBot",
+                        "location_id": 188,
+                        "location_name": "Cold Storage",
+                        "dest_location_id": null,
+                        "dest_location_name": null,
+                        "fleet_id": 4,
+                        "fleet_name": "Nissan/Nissan Patrol V 6/No Plate",
+                        "customer_ids": [
+                            {
+                                "customer_id": 16109,
+                                "name": "AL SABAYA GROCERY",
+                                "street": "Al Ain.",
+                                "street2": "Abu Dhabi",
+                                "city": null,
+                                "zip": null,
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": 2,
+                                "country_name": "United Arab Emirates",
+                                "currency_id": 128,
+                                "currency": "AED",
+                                "email": "alsaba",
+                                "website": null,
+                                "phone": null,
+                                "mobile": "0509847180",
+                                "trn": "100316453800003",
+                                "trade_reg": null,
+                                "trade_reg_expiry": null,
+                                "latitude": 24.221009,
+                                "longitude": 55.7589194,
+                                "pricelist_id": 12,
+                                "pricelist_name": "Special Price list",
+                                "customer_ref": "488",
+                                "payment_type": "credit",
+                                "credit_limit": 25000,
+                                "due_amount": null,
+                                "allow_overcredit_limit": null,
+                                "over_limit_amount": null,
+                                "confirmed_customer": null,
+                                "payment_terms_id": 3,
+                                "payment_terms_name": "21 Days",
+                                "logo_url": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=image_1920",
+                                "contact_name": "Mathew mon",
+                                "contact_phone": "072487346794",
+                                "customer": true,
+                                "supplier": false,
+                                "debit_limit": null,
+                                "current_credit_amount": 1260,
+                                "contact_list": [
+                                    {
+                                        "type": "contact",
+                                        "contact_id": 24160,
+                                        "contact_name": "Mathew mon",
+                                        "contact_title_id": null,
+                                        "contact_title": null,
+                                        "contact_function": null,
+                                        "contact_email": null,
+                                        "contact_mobile": null,
+                                        "contact_phone": "072487346794",
+                                        "street": "Al Ain.",
+                                        "street2": "Abu Dhabi",
+                                        "zip": null,
+                                        "state_id": null,
+                                        "state_name": null,
+                                        "country_id": 2,
+                                        "country_name": "United Arab Emirates"
+                                    }
+                                ],
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "barcode": null,
+                                "disable_loc_update": null,
+                                "employee_id": null,
+                                "employee_name": null,
+                                "company_registry": null,
+                                "is_contact": false,
+                                "planogram": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=planogram_image"
+                            }
+                        ],
+                        "unload_request_ids": null,
+                        "dispatch_product_ids": [
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": "LOR2025050009",
+                                "product_id": 2381,
+                                "product_name": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1443,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 1,
+                                "qty_in_package": 22.68,
+                                "dispatch_qty": 22.68,
+                                "check_for_packaging": true,
+                                "product_code": "SN100014",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 1
+                            },
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": "LOR2025050009",
+                                "product_id": 2373,
+                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1435,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 10,
+                                "qty_in_package": 11.34,
+                                "dispatch_qty": 113.4,
+                                "check_for_packaging": true,
+                                "product_code": "SN100006",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 2
+                            }
+                        ],
+                        "dispatch_product_stock_ids": null,
+                        "dispatch_return_product_stock_ids": null,
+                        "dispatch_payment_line_ids": null,
+                        "dispatch_payment_method_ids": null,
+                        "state": "submit",
+                        "total_sales": 1,
+                        "total_customers": 1,
+                        "total_areas": 1,
+                        "date": "2025-05-14 00:00:00",
+                        "picking_ids": null,
+                        "invoice_ids": null,
+                        "invoice_count": null,
+                        "return_count": null,
+                        "voucher_ids": null,
+                        "voucher_count": null,
+                        "pick_count": null,
+                        "picking_type_id": 7,
+                        "picking_type_name": "Internal Transfers",
+                        "picking_type_code": "internal",
+                        "received_date": null,
+                        "validate_sign": null,
+                        "accepted_by": null,
+                        "accept_sign": null,
+                        "approved_by": null,
+                        "approved_by_name": null,
+                        "approved_date": null,
+                        "move_line_ids": null,
+                        "move_line_count": null,
+                        "area_code_line_ids": null,
+                        "unload_req_count": null,
+                        "partner_act_ids": null,
+                        "time_from": null,
+                        "time_to": null,
+                        "last_visit_id": null,
+                        "allow_arrival": true,
+                        "start_point_id": 1,
+                        "start_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "end_point_id": 1,
+                        "end_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "start_lat": null,
+                        "start_long": null,
+                        "end_lat": null,
+                        "end_long": null,
+                        "total_visits": null,
+                        "total_visited": null,
+                        "del_start_date": null,
+                        "del_end_date": null,
+                        "strike_rate": 100,
+                        "end_journey_reason_id": null,
+                        "helper_employee_id": null,
+                        "helper_user_id": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Dispatch Confirm
+  
+  request: {
+    url: 192.168.1.119:8070/web/dispatch_order_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{
+          "data": {
+              "dispatch_id": 10,
+              "status": "confirm"
+              }
+      }}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 13 May 2025 13:54:49 GMT
+      Content-Length: 8693
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dispatch_status_change_details": {
+                        "dispatch_id": 10,
+                        "name": "LOR2025050009",
+                        "emp_checkin_id": null,
+                        "emp_checkin_time": null,
+                        "batch_picking_id": 9,
+                        "batch_picking_name": "BP2025050006",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "user_id": 2,
+                        "user_name": "Administrator",
+                        "department_id": 1,
+                        "department_name": "Administration",
+                        "employee_id": 1,
+                        "employee_name": "Administrator",
+                        "area_code_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "allowed_area_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "sale_order_ids": [
+                            {
+                                "presale_id": 243,
+                                "presale_name": "S00265",
+                                "presale_date": "2025-05-13 13:08:05",
+                                "customer_id": 16109,
+                                "partner_invoice_id": 16109,
+                                "partner_shipping_id": 16109,
+                                "origin": null,
+                                "discount_amount": null,
+                                "amount_untaxed": 115.4,
+                                "amount_tax": 5.77,
+                                "amount_total": 121.17,
+                                "user_id": 2,
+                                "payment_type": "credit",
+                                "state": "Sales Order",
+                                "expiry_date": "2025-06-03",
+                                "payment_term_name": "21 Days",
+                                "presale_orderline": [
+                                    {
+                                        "product_id": 2381,
+                                        "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 2,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 2,
+                                        "price_tax": 0.10000000000000009,
+                                        "price_total": 2.1,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 2,
+                                        "package_id": 503,
+                                        "package_name": "Kg",
+                                        "package_quantity": 2,
+                                        "order_line_id": 417,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": []
+                                    },
+                                    {
+                                        "product_id": 2373,
+                                        "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 113.4,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 113.4,
+                                        "price_tax": 5.6699999999999875,
+                                        "price_total": 119.07,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 113.4,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "package_quantity": 10,
+                                        "order_line_id": 418,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": [
+                                            {
+                                                "product_id": 2373,
+                                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                                "uom_id": 12,
+                                                "package_id": 1435,
+                                                "package_name": "Carton",
+                                                "foc_line_id": 39,
+                                                "order_qty": 1,
+                                                "foc_product_id": 2470,
+                                                "foc_product_name": "COFFEE BEANS VIETNAM",
+                                                "foc_product_packaging": 592,
+                                                "foc_product_packaging_name": "Kg",
+                                                "foc_qty": 5,
+                                                "max_foc_qty": 0
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "sale_order_line_ids": [
+                            {
+                                "product_id": 2381,
+                                "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 2,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 2,
+                                "price_tax": 0.10000000000000009,
+                                "price_total": 2.1,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 2,
+                                "package_id": 503,
+                                "package_name": "Kg",
+                                "package_quantity": 2,
+                                "order_line_id": 417,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": []
+                            },
+                            {
+                                "product_id": 2373,
+                                "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 113.4,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 113.4,
+                                "price_tax": 5.6699999999999875,
+                                "price_total": 119.07,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 113.4,
+                                "package_id": 1435,
+                                "package_name": "Carton",
+                                "package_quantity": 10,
+                                "order_line_id": 418,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": [
+                                    {
+                                        "product_id": 2373,
+                                        "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "uom_id": 12,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "foc_line_id": 39,
+                                        "order_qty": 1,
+                                        "foc_product_id": 2470,
+                                        "foc_product_name": "COFFEE BEANS VIETNAM",
+                                        "foc_product_packaging": 592,
+                                        "foc_product_packaging_name": "Kg",
+                                        "foc_qty": 5,
+                                        "max_foc_qty": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "note": null,
+                        "dispatch_date": "2025-05-14 00:00:00",
+                        "validated_by": null,
+                        "validated_by_name": null,
+                        "driver_emp_id": 1,
+                        "driver_emp_name": "Administrator",
+                        "driver_user_id": 1,
+                        "driver_user_name": "SynergiaBot",
+                        "location_id": 188,
+                        "location_name": "Cold Storage",
+                        "dest_location_id": null,
+                        "dest_location_name": null,
+                        "fleet_id": 4,
+                        "fleet_name": "Nissan/Nissan Patrol V 6/No Plate",
+                        "customer_ids": [
+                            {
+                                "customer_id": 16109,
+                                "name": "AL SABAYA GROCERY",
+                                "street": "Al Ain.",
+                                "street2": "Abu Dhabi",
+                                "city": null,
+                                "zip": null,
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": 2,
+                                "country_name": "United Arab Emirates",
+                                "currency_id": 128,
+                                "currency": "AED",
+                                "email": "alsaba",
+                                "website": null,
+                                "phone": null,
+                                "mobile": "0509847180",
+                                "trn": "100316453800003",
+                                "trade_reg": null,
+                                "trade_reg_expiry": null,
+                                "latitude": 24.221009,
+                                "longitude": 55.7589194,
+                                "pricelist_id": 12,
+                                "pricelist_name": "Special Price list",
+                                "customer_ref": "488",
+                                "payment_type": "credit",
+                                "credit_limit": 25000,
+                                "due_amount": null,
+                                "allow_overcredit_limit": null,
+                                "over_limit_amount": null,
+                                "confirmed_customer": null,
+                                "payment_terms_id": 3,
+                                "payment_terms_name": "21 Days",
+                                "logo_url": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=image_1920",
+                                "contact_name": "Mathew mon",
+                                "contact_phone": "072487346794",
+                                "customer": true,
+                                "supplier": false,
+                                "debit_limit": null,
+                                "current_credit_amount": 1260,
+                                "contact_list": [
+                                    {
+                                        "type": "contact",
+                                        "contact_id": 24160,
+                                        "contact_name": "Mathew mon",
+                                        "contact_title_id": null,
+                                        "contact_title": null,
+                                        "contact_function": null,
+                                        "contact_email": null,
+                                        "contact_mobile": null,
+                                        "contact_phone": "072487346794",
+                                        "street": "Al Ain.",
+                                        "street2": "Abu Dhabi",
+                                        "zip": null,
+                                        "state_id": null,
+                                        "state_name": null,
+                                        "country_id": 2,
+                                        "country_name": "United Arab Emirates"
+                                    }
+                                ],
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "barcode": null,
+                                "disable_loc_update": null,
+                                "employee_id": null,
+                                "employee_name": null,
+                                "company_registry": null,
+                                "is_contact": false,
+                                "planogram": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=planogram_image"
+                            }
+                        ],
+                        "unload_request_ids": null,
+                        "dispatch_product_ids": [
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": "LOR2025050009",
+                                "product_id": 2381,
+                                "product_name": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1443,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 1,
+                                "qty_in_package": 22.68,
+                                "dispatch_qty": 22.68,
+                                "check_for_packaging": true,
+                                "product_code": "SN100014",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 1
+                            },
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": "LOR2025050009",
+                                "product_id": 2373,
+                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1435,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 10,
+                                "qty_in_package": 11.34,
+                                "dispatch_qty": 113.4,
+                                "check_for_packaging": true,
+                                "product_code": "SN100006",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 2
+                            }
+                        ],
+                        "dispatch_product_stock_ids": null,
+                        "dispatch_return_product_stock_ids": null,
+                        "dispatch_payment_line_ids": [
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": "LOR2025050009",
+                                "payment_type": "credit",
+                                "total_sales": 1,
+                                "total_sale_amount": 121.17,
+                                "total_invoiced": null,
+                                "total_invoiced_amount": null,
+                                "currency_id": null,
+                                "currency_name": null,
+                                "line_number": 1
+                            }
+                        ],
+                        "dispatch_payment_method_ids": null,
+                        "state": "confirm",
+                        "total_sales": 1,
+                        "total_customers": 1,
+                        "total_areas": 1,
+                        "date": "2025-05-14 00:00:00",
+                        "picking_ids": null,
+                        "invoice_ids": null,
+                        "invoice_count": null,
+                        "return_count": null,
+                        "voucher_ids": null,
+                        "voucher_count": null,
+                        "pick_count": null,
+                        "picking_type_id": 7,
+                        "picking_type_name": "Internal Transfers",
+                        "picking_type_code": "internal",
+                        "received_date": null,
+                        "validate_sign": null,
+                        "accepted_by": null,
+                        "accept_sign": null,
+                        "approved_by": 19,
+                        "approved_by_name": "Sales 5",
+                        "approved_date": "2025-05-13 13:54:48",
+                        "move_line_ids": null,
+                        "move_line_count": null,
+                        "area_code_line_ids": null,
+                        "unload_req_count": null,
+                        "partner_act_ids": null,
+                        "time_from": null,
+                        "time_to": null,
+                        "last_visit_id": null,
+                        "allow_arrival": true,
+                        "start_point_id": 1,
+                        "start_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "end_point_id": 1,
+                        "end_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "start_lat": null,
+                        "start_long": null,
+                        "end_lat": null,
+                        "end_long": null,
+                        "total_visits": null,
+                        "total_visited": null,
+                        "del_start_date": null,
+                        "del_end_date": null,
+                        "strike_rate": 100,
+                        "end_journey_reason_id": null,
+                        "helper_employee_id": null,
+                        "helper_user_id": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Dispatch Cancel
+  
+  request: {
+    url: 192.168.1.119:8070/web/dispatch_order_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{
+          "data": {
+              "dispatch_id": 10,
+              "status": "cancel"
+              }
+      }}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 13 May 2025 13:45:15 GMT
+      Content-Length: 8400
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dispatch_status_change_details": {
+                        "dispatch_id": 10,
+                        "name": null,
+                        "emp_checkin_id": null,
+                        "emp_checkin_time": null,
+                        "batch_picking_id": 9,
+                        "batch_picking_name": "BP2025050006",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "user_id": 2,
+                        "user_name": "Administrator",
+                        "department_id": 1,
+                        "department_name": "Administration",
+                        "employee_id": 1,
+                        "employee_name": "Administrator",
+                        "area_code_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "allowed_area_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "sale_order_ids": [
+                            {
+                                "presale_id": 243,
+                                "presale_name": "S00265",
+                                "presale_date": "2025-05-13 13:08:05",
+                                "customer_id": 16109,
+                                "partner_invoice_id": 16109,
+                                "partner_shipping_id": 16109,
+                                "origin": null,
+                                "discount_amount": null,
+                                "amount_untaxed": 115.4,
+                                "amount_tax": 5.77,
+                                "amount_total": 121.17,
+                                "user_id": 2,
+                                "payment_type": "credit",
+                                "state": "Sales Order",
+                                "expiry_date": "2025-06-03",
+                                "payment_term_name": "21 Days",
+                                "presale_orderline": [
+                                    {
+                                        "product_id": 2381,
+                                        "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 2,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 2,
+                                        "price_tax": 0.10000000000000009,
+                                        "price_total": 2.1,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 2,
+                                        "package_id": 503,
+                                        "package_name": "Kg",
+                                        "package_quantity": 2,
+                                        "order_line_id": 417,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": []
+                                    },
+                                    {
+                                        "product_id": 2373,
+                                        "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 113.4,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 113.4,
+                                        "price_tax": 5.6699999999999875,
+                                        "price_total": 119.07,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 113.4,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "package_quantity": 10,
+                                        "order_line_id": 418,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": [
+                                            {
+                                                "product_id": 2373,
+                                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                                "uom_id": 12,
+                                                "package_id": 1435,
+                                                "package_name": "Carton",
+                                                "foc_line_id": 39,
+                                                "order_qty": 1,
+                                                "foc_product_id": 2470,
+                                                "foc_product_name": "COFFEE BEANS VIETNAM",
+                                                "foc_product_packaging": 592,
+                                                "foc_product_packaging_name": "Kg",
+                                                "foc_qty": 5,
+                                                "max_foc_qty": 0
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "sale_order_line_ids": [
+                            {
+                                "product_id": 2381,
+                                "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 2,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 2,
+                                "price_tax": 0.10000000000000009,
+                                "price_total": 2.1,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 2,
+                                "package_id": 503,
+                                "package_name": "Kg",
+                                "package_quantity": 2,
+                                "order_line_id": 417,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": []
+                            },
+                            {
+                                "product_id": 2373,
+                                "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 113.4,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 113.4,
+                                "price_tax": 5.6699999999999875,
+                                "price_total": 119.07,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 113.4,
+                                "package_id": 1435,
+                                "package_name": "Carton",
+                                "package_quantity": 10,
+                                "order_line_id": 418,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": [
+                                    {
+                                        "product_id": 2373,
+                                        "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "uom_id": 12,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "foc_line_id": 39,
+                                        "order_qty": 1,
+                                        "foc_product_id": 2470,
+                                        "foc_product_name": "COFFEE BEANS VIETNAM",
+                                        "foc_product_packaging": 592,
+                                        "foc_product_packaging_name": "Kg",
+                                        "foc_qty": 5,
+                                        "max_foc_qty": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "note": null,
+                        "dispatch_date": "2025-05-14 00:00:00",
+                        "validated_by": null,
+                        "validated_by_name": null,
+                        "driver_emp_id": 1,
+                        "driver_emp_name": "Administrator",
+                        "driver_user_id": 1,
+                        "driver_user_name": "SynergiaBot",
+                        "location_id": 188,
+                        "location_name": "Cold Storage",
+                        "dest_location_id": null,
+                        "dest_location_name": null,
+                        "fleet_id": 4,
+                        "fleet_name": "Nissan/Nissan Patrol V 6/No Plate",
+                        "customer_ids": [
+                            {
+                                "customer_id": 16109,
+                                "name": "AL SABAYA GROCERY",
+                                "street": "Al Ain.",
+                                "street2": "Abu Dhabi",
+                                "city": null,
+                                "zip": null,
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": 2,
+                                "country_name": "United Arab Emirates",
+                                "currency_id": 128,
+                                "currency": "AED",
+                                "email": "alsaba",
+                                "website": null,
+                                "phone": null,
+                                "mobile": "0509847180",
+                                "trn": "100316453800003",
+                                "trade_reg": null,
+                                "trade_reg_expiry": null,
+                                "latitude": 24.221009,
+                                "longitude": 55.7589194,
+                                "pricelist_id": 12,
+                                "pricelist_name": "Special Price list",
+                                "customer_ref": "488",
+                                "payment_type": "credit",
+                                "credit_limit": 25000,
+                                "due_amount": null,
+                                "allow_overcredit_limit": null,
+                                "over_limit_amount": null,
+                                "confirmed_customer": null,
+                                "payment_terms_id": 3,
+                                "payment_terms_name": "21 Days",
+                                "logo_url": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=image_1920",
+                                "contact_name": "Mathew mon",
+                                "contact_phone": "072487346794",
+                                "customer": true,
+                                "supplier": false,
+                                "debit_limit": null,
+                                "current_credit_amount": 1260,
+                                "contact_list": [
+                                    {
+                                        "type": "contact",
+                                        "contact_id": 24160,
+                                        "contact_name": "Mathew mon",
+                                        "contact_title_id": null,
+                                        "contact_title": null,
+                                        "contact_function": null,
+                                        "contact_email": null,
+                                        "contact_mobile": null,
+                                        "contact_phone": "072487346794",
+                                        "street": "Al Ain.",
+                                        "street2": "Abu Dhabi",
+                                        "zip": null,
+                                        "state_id": null,
+                                        "state_name": null,
+                                        "country_id": 2,
+                                        "country_name": "United Arab Emirates"
+                                    }
+                                ],
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "barcode": null,
+                                "disable_loc_update": null,
+                                "employee_id": null,
+                                "employee_name": null,
+                                "company_registry": null,
+                                "is_contact": false,
+                                "planogram": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=planogram_image"
+                            }
+                        ],
+                        "unload_request_ids": null,
+                        "dispatch_product_ids": [
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": false,
+                                "product_id": 2381,
+                                "product_name": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1443,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 1,
+                                "qty_in_package": 22.68,
+                                "dispatch_qty": 22.68,
+                                "check_for_packaging": true,
+                                "product_code": "SN100014",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 1
+                            },
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": false,
+                                "product_id": 2373,
+                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1435,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 10,
+                                "qty_in_package": 11.34,
+                                "dispatch_qty": 113.4,
+                                "check_for_packaging": true,
+                                "product_code": "SN100006",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 2
+                            }
+                        ],
+                        "dispatch_product_stock_ids": null,
+                        "dispatch_return_product_stock_ids": null,
+                        "dispatch_payment_line_ids": null,
+                        "dispatch_payment_method_ids": null,
+                        "state": "cancel",
+                        "total_sales": 1,
+                        "total_customers": 1,
+                        "total_areas": 1,
+                        "date": "2025-05-14 00:00:00",
+                        "picking_ids": null,
+                        "invoice_ids": null,
+                        "invoice_count": null,
+                        "return_count": null,
+                        "voucher_ids": null,
+                        "voucher_count": null,
+                        "pick_count": null,
+                        "picking_type_id": 7,
+                        "picking_type_name": "Internal Transfers",
+                        "picking_type_code": "internal",
+                        "received_date": null,
+                        "validate_sign": null,
+                        "accepted_by": null,
+                        "accept_sign": null,
+                        "approved_by": null,
+                        "approved_by_name": null,
+                        "approved_date": null,
+                        "move_line_ids": null,
+                        "move_line_count": null,
+                        "area_code_line_ids": null,
+                        "unload_req_count": null,
+                        "partner_act_ids": null,
+                        "time_from": null,
+                        "time_to": null,
+                        "last_visit_id": null,
+                        "allow_arrival": true,
+                        "start_point_id": 1,
+                        "start_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "end_point_id": 1,
+                        "end_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "start_lat": null,
+                        "start_long": null,
+                        "end_lat": null,
+                        "end_long": null,
+                        "total_visits": null,
+                        "total_visited": null,
+                        "del_start_date": null,
+                        "del_end_date": null,
+                        "strike_rate": 100,
+                        "end_journey_reason_id": null,
+                        "helper_employee_id": null,
+                        "helper_user_id": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Dispatch Set To Draft
+  
+  request: {
+    url: 192.168.1.119:8070/web/dispatch_order_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{
+          "data": {
+              "dispatch_id": 10,
+              "status": "reset_draft"
+              }
+      }}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 13 May 2025 13:43:41 GMT
+      Content-Length: 8399
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dispatch_status_change_details": {
+                        "dispatch_id": 10,
+                        "name": null,
+                        "emp_checkin_id": null,
+                        "emp_checkin_time": null,
+                        "batch_picking_id": 9,
+                        "batch_picking_name": "BP2025050006",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "user_id": 2,
+                        "user_name": "Administrator",
+                        "department_id": 1,
+                        "department_name": "Administration",
+                        "employee_id": 1,
+                        "employee_name": "Administrator",
+                        "area_code_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "allowed_area_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "sale_order_ids": [
+                            {
+                                "presale_id": 243,
+                                "presale_name": "S00265",
+                                "presale_date": "2025-05-13 13:08:05",
+                                "customer_id": 16109,
+                                "partner_invoice_id": 16109,
+                                "partner_shipping_id": 16109,
+                                "origin": null,
+                                "discount_amount": null,
+                                "amount_untaxed": 115.4,
+                                "amount_tax": 5.77,
+                                "amount_total": 121.17,
+                                "user_id": 2,
+                                "payment_type": "credit",
+                                "state": "Sales Order",
+                                "expiry_date": "2025-06-03",
+                                "payment_term_name": "21 Days",
+                                "presale_orderline": [
+                                    {
+                                        "product_id": 2381,
+                                        "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 2,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 2,
+                                        "price_tax": 0.10000000000000009,
+                                        "price_total": 2.1,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 2,
+                                        "package_id": 503,
+                                        "package_name": "Kg",
+                                        "package_quantity": 2,
+                                        "order_line_id": 417,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": []
+                                    },
+                                    {
+                                        "product_id": 2373,
+                                        "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 113.4,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 113.4,
+                                        "price_tax": 5.6699999999999875,
+                                        "price_total": 119.07,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 113.4,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "package_quantity": 10,
+                                        "order_line_id": 418,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": [
+                                            {
+                                                "product_id": 2373,
+                                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                                "uom_id": 12,
+                                                "package_id": 1435,
+                                                "package_name": "Carton",
+                                                "foc_line_id": 39,
+                                                "order_qty": 1,
+                                                "foc_product_id": 2470,
+                                                "foc_product_name": "COFFEE BEANS VIETNAM",
+                                                "foc_product_packaging": 592,
+                                                "foc_product_packaging_name": "Kg",
+                                                "foc_qty": 5,
+                                                "max_foc_qty": 0
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "sale_order_line_ids": [
+                            {
+                                "product_id": 2381,
+                                "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 2,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 2,
+                                "price_tax": 0.10000000000000009,
+                                "price_total": 2.1,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 2,
+                                "package_id": 503,
+                                "package_name": "Kg",
+                                "package_quantity": 2,
+                                "order_line_id": 417,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": []
+                            },
+                            {
+                                "product_id": 2373,
+                                "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 113.4,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 113.4,
+                                "price_tax": 5.6699999999999875,
+                                "price_total": 119.07,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 113.4,
+                                "package_id": 1435,
+                                "package_name": "Carton",
+                                "package_quantity": 10,
+                                "order_line_id": 418,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": [
+                                    {
+                                        "product_id": 2373,
+                                        "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "uom_id": 12,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "foc_line_id": 39,
+                                        "order_qty": 1,
+                                        "foc_product_id": 2470,
+                                        "foc_product_name": "COFFEE BEANS VIETNAM",
+                                        "foc_product_packaging": 592,
+                                        "foc_product_packaging_name": "Kg",
+                                        "foc_qty": 5,
+                                        "max_foc_qty": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "note": null,
+                        "dispatch_date": "2025-05-14 00:00:00",
+                        "validated_by": null,
+                        "validated_by_name": null,
+                        "driver_emp_id": 1,
+                        "driver_emp_name": "Administrator",
+                        "driver_user_id": 1,
+                        "driver_user_name": "SynergiaBot",
+                        "location_id": 188,
+                        "location_name": "Cold Storage",
+                        "dest_location_id": null,
+                        "dest_location_name": null,
+                        "fleet_id": 4,
+                        "fleet_name": "Nissan/Nissan Patrol V 6/No Plate",
+                        "customer_ids": [
+                            {
+                                "customer_id": 16109,
+                                "name": "AL SABAYA GROCERY",
+                                "street": "Al Ain.",
+                                "street2": "Abu Dhabi",
+                                "city": null,
+                                "zip": null,
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": 2,
+                                "country_name": "United Arab Emirates",
+                                "currency_id": 128,
+                                "currency": "AED",
+                                "email": "alsaba",
+                                "website": null,
+                                "phone": null,
+                                "mobile": "0509847180",
+                                "trn": "100316453800003",
+                                "trade_reg": null,
+                                "trade_reg_expiry": null,
+                                "latitude": 24.221009,
+                                "longitude": 55.7589194,
+                                "pricelist_id": 12,
+                                "pricelist_name": "Special Price list",
+                                "customer_ref": "488",
+                                "payment_type": "credit",
+                                "credit_limit": 25000,
+                                "due_amount": null,
+                                "allow_overcredit_limit": null,
+                                "over_limit_amount": null,
+                                "confirmed_customer": null,
+                                "payment_terms_id": 3,
+                                "payment_terms_name": "21 Days",
+                                "logo_url": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=image_1920",
+                                "contact_name": "Mathew mon",
+                                "contact_phone": "072487346794",
+                                "customer": true,
+                                "supplier": false,
+                                "debit_limit": null,
+                                "current_credit_amount": 1260,
+                                "contact_list": [
+                                    {
+                                        "type": "contact",
+                                        "contact_id": 24160,
+                                        "contact_name": "Mathew mon",
+                                        "contact_title_id": null,
+                                        "contact_title": null,
+                                        "contact_function": null,
+                                        "contact_email": null,
+                                        "contact_mobile": null,
+                                        "contact_phone": "072487346794",
+                                        "street": "Al Ain.",
+                                        "street2": "Abu Dhabi",
+                                        "zip": null,
+                                        "state_id": null,
+                                        "state_name": null,
+                                        "country_id": 2,
+                                        "country_name": "United Arab Emirates"
+                                    }
+                                ],
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "barcode": null,
+                                "disable_loc_update": null,
+                                "employee_id": null,
+                                "employee_name": null,
+                                "company_registry": null,
+                                "is_contact": false,
+                                "planogram": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=planogram_image"
+                            }
+                        ],
+                        "unload_request_ids": null,
+                        "dispatch_product_ids": [
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": false,
+                                "product_id": 2381,
+                                "product_name": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1443,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 1,
+                                "qty_in_package": 22.68,
+                                "dispatch_qty": 22.68,
+                                "check_for_packaging": true,
+                                "product_code": "SN100014",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 1
+                            },
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": false,
+                                "product_id": 2373,
+                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1435,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 10,
+                                "qty_in_package": 11.34,
+                                "dispatch_qty": 113.4,
+                                "check_for_packaging": true,
+                                "product_code": "SN100006",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 2
+                            }
+                        ],
+                        "dispatch_product_stock_ids": null,
+                        "dispatch_return_product_stock_ids": null,
+                        "dispatch_payment_line_ids": null,
+                        "dispatch_payment_method_ids": null,
+                        "state": "draft",
+                        "total_sales": 1,
+                        "total_customers": 1,
+                        "total_areas": 1,
+                        "date": "2025-05-14 00:00:00",
+                        "picking_ids": null,
+                        "invoice_ids": null,
+                        "invoice_count": null,
+                        "return_count": null,
+                        "voucher_ids": null,
+                        "voucher_count": null,
+                        "pick_count": null,
+                        "picking_type_id": 7,
+                        "picking_type_name": "Internal Transfers",
+                        "picking_type_code": "internal",
+                        "received_date": null,
+                        "validate_sign": null,
+                        "accepted_by": null,
+                        "accept_sign": null,
+                        "approved_by": null,
+                        "approved_by_name": null,
+                        "approved_date": null,
+                        "move_line_ids": null,
+                        "move_line_count": null,
+                        "area_code_line_ids": null,
+                        "unload_req_count": null,
+                        "partner_act_ids": null,
+                        "time_from": null,
+                        "time_to": null,
+                        "last_visit_id": null,
+                        "allow_arrival": true,
+                        "start_point_id": 1,
+                        "start_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "end_point_id": 1,
+                        "end_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "start_lat": null,
+                        "start_long": null,
+                        "end_lat": null,
+                        "end_long": null,
+                        "total_visits": null,
+                        "total_visited": null,
+                        "del_start_date": null,
+                        "del_end_date": null,
+                        "strike_rate": 100,
+                        "end_journey_reason_id": null,
+                        "helper_employee_id": null,
+                        "helper_user_id": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Dispatch Set To Draft
+  
+  request: {
+    url: 192.168.1.119:8070/web/dispatch_order_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{
+          "data": {
+              "dispatch_id": 10,
+              "status": "reset_draft"
+              }
+      }}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 13 May 2025 13:43:41 GMT
+      Content-Length: 8399
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dispatch_status_change_details": {
+                        "dispatch_id": 10,
+                        "name": null,
+                        "emp_checkin_id": null,
+                        "emp_checkin_time": null,
+                        "batch_picking_id": 9,
+                        "batch_picking_name": "BP2025050006",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "user_id": 2,
+                        "user_name": "Administrator",
+                        "department_id": 1,
+                        "department_name": "Administration",
+                        "employee_id": 1,
+                        "employee_name": "Administrator",
+                        "area_code_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "allowed_area_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "sale_order_ids": [
+                            {
+                                "presale_id": 243,
+                                "presale_name": "S00265",
+                                "presale_date": "2025-05-13 13:08:05",
+                                "customer_id": 16109,
+                                "partner_invoice_id": 16109,
+                                "partner_shipping_id": 16109,
+                                "origin": null,
+                                "discount_amount": null,
+                                "amount_untaxed": 115.4,
+                                "amount_tax": 5.77,
+                                "amount_total": 121.17,
+                                "user_id": 2,
+                                "payment_type": "credit",
+                                "state": "Sales Order",
+                                "expiry_date": "2025-06-03",
+                                "payment_term_name": "21 Days",
+                                "presale_orderline": [
+                                    {
+                                        "product_id": 2381,
+                                        "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 2,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 2,
+                                        "price_tax": 0.10000000000000009,
+                                        "price_total": 2.1,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 2,
+                                        "package_id": 503,
+                                        "package_name": "Kg",
+                                        "package_quantity": 2,
+                                        "order_line_id": 417,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": []
+                                    },
+                                    {
+                                        "product_id": 2373,
+                                        "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 113.4,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 113.4,
+                                        "price_tax": 5.6699999999999875,
+                                        "price_total": 119.07,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 113.4,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "package_quantity": 10,
+                                        "order_line_id": 418,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": [
+                                            {
+                                                "product_id": 2373,
+                                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                                "uom_id": 12,
+                                                "package_id": 1435,
+                                                "package_name": "Carton",
+                                                "foc_line_id": 39,
+                                                "order_qty": 1,
+                                                "foc_product_id": 2470,
+                                                "foc_product_name": "COFFEE BEANS VIETNAM",
+                                                "foc_product_packaging": 592,
+                                                "foc_product_packaging_name": "Kg",
+                                                "foc_qty": 5,
+                                                "max_foc_qty": 0
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "sale_order_line_ids": [
+                            {
+                                "product_id": 2381,
+                                "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 2,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 2,
+                                "price_tax": 0.10000000000000009,
+                                "price_total": 2.1,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 2,
+                                "package_id": 503,
+                                "package_name": "Kg",
+                                "package_quantity": 2,
+                                "order_line_id": 417,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": []
+                            },
+                            {
+                                "product_id": 2373,
+                                "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 113.4,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 113.4,
+                                "price_tax": 5.6699999999999875,
+                                "price_total": 119.07,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 113.4,
+                                "package_id": 1435,
+                                "package_name": "Carton",
+                                "package_quantity": 10,
+                                "order_line_id": 418,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": [
+                                    {
+                                        "product_id": 2373,
+                                        "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "uom_id": 12,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "foc_line_id": 39,
+                                        "order_qty": 1,
+                                        "foc_product_id": 2470,
+                                        "foc_product_name": "COFFEE BEANS VIETNAM",
+                                        "foc_product_packaging": 592,
+                                        "foc_product_packaging_name": "Kg",
+                                        "foc_qty": 5,
+                                        "max_foc_qty": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "note": null,
+                        "dispatch_date": "2025-05-14 00:00:00",
+                        "validated_by": null,
+                        "validated_by_name": null,
+                        "driver_emp_id": 1,
+                        "driver_emp_name": "Administrator",
+                        "driver_user_id": 1,
+                        "driver_user_name": "SynergiaBot",
+                        "location_id": 188,
+                        "location_name": "Cold Storage",
+                        "dest_location_id": null,
+                        "dest_location_name": null,
+                        "fleet_id": 4,
+                        "fleet_name": "Nissan/Nissan Patrol V 6/No Plate",
+                        "customer_ids": [
+                            {
+                                "customer_id": 16109,
+                                "name": "AL SABAYA GROCERY",
+                                "street": "Al Ain.",
+                                "street2": "Abu Dhabi",
+                                "city": null,
+                                "zip": null,
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": 2,
+                                "country_name": "United Arab Emirates",
+                                "currency_id": 128,
+                                "currency": "AED",
+                                "email": "alsaba",
+                                "website": null,
+                                "phone": null,
+                                "mobile": "0509847180",
+                                "trn": "100316453800003",
+                                "trade_reg": null,
+                                "trade_reg_expiry": null,
+                                "latitude": 24.221009,
+                                "longitude": 55.7589194,
+                                "pricelist_id": 12,
+                                "pricelist_name": "Special Price list",
+                                "customer_ref": "488",
+                                "payment_type": "credit",
+                                "credit_limit": 25000,
+                                "due_amount": null,
+                                "allow_overcredit_limit": null,
+                                "over_limit_amount": null,
+                                "confirmed_customer": null,
+                                "payment_terms_id": 3,
+                                "payment_terms_name": "21 Days",
+                                "logo_url": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=image_1920",
+                                "contact_name": "Mathew mon",
+                                "contact_phone": "072487346794",
+                                "customer": true,
+                                "supplier": false,
+                                "debit_limit": null,
+                                "current_credit_amount": 1260,
+                                "contact_list": [
+                                    {
+                                        "type": "contact",
+                                        "contact_id": 24160,
+                                        "contact_name": "Mathew mon",
+                                        "contact_title_id": null,
+                                        "contact_title": null,
+                                        "contact_function": null,
+                                        "contact_email": null,
+                                        "contact_mobile": null,
+                                        "contact_phone": "072487346794",
+                                        "street": "Al Ain.",
+                                        "street2": "Abu Dhabi",
+                                        "zip": null,
+                                        "state_id": null,
+                                        "state_name": null,
+                                        "country_id": 2,
+                                        "country_name": "United Arab Emirates"
+                                    }
+                                ],
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "barcode": null,
+                                "disable_loc_update": null,
+                                "employee_id": null,
+                                "employee_name": null,
+                                "company_registry": null,
+                                "is_contact": false,
+                                "planogram": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=planogram_image"
+                            }
+                        ],
+                        "unload_request_ids": null,
+                        "dispatch_product_ids": [
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": false,
+                                "product_id": 2381,
+                                "product_name": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1443,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 1,
+                                "qty_in_package": 22.68,
+                                "dispatch_qty": 22.68,
+                                "check_for_packaging": true,
+                                "product_code": "SN100014",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 1
+                            },
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": false,
+                                "product_id": 2373,
+                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1435,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 10,
+                                "qty_in_package": 11.34,
+                                "dispatch_qty": 113.4,
+                                "check_for_packaging": true,
+                                "product_code": "SN100006",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 2
+                            }
+                        ],
+                        "dispatch_product_stock_ids": null,
+                        "dispatch_return_product_stock_ids": null,
+                        "dispatch_payment_line_ids": null,
+                        "dispatch_payment_method_ids": null,
+                        "state": "draft",
+                        "total_sales": 1,
+                        "total_customers": 1,
+                        "total_areas": 1,
+                        "date": "2025-05-14 00:00:00",
+                        "picking_ids": null,
+                        "invoice_ids": null,
+                        "invoice_count": null,
+                        "return_count": null,
+                        "voucher_ids": null,
+                        "voucher_count": null,
+                        "pick_count": null,
+                        "picking_type_id": 7,
+                        "picking_type_name": "Internal Transfers",
+                        "picking_type_code": "internal",
+                        "received_date": null,
+                        "validate_sign": null,
+                        "accepted_by": null,
+                        "accept_sign": null,
+                        "approved_by": null,
+                        "approved_by_name": null,
+                        "approved_date": null,
+                        "move_line_ids": null,
+                        "move_line_count": null,
+                        "area_code_line_ids": null,
+                        "unload_req_count": null,
+                        "partner_act_ids": null,
+                        "time_from": null,
+                        "time_to": null,
+                        "last_visit_id": null,
+                        "allow_arrival": true,
+                        "start_point_id": 1,
+                        "start_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "end_point_id": 1,
+                        "end_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "start_lat": null,
+                        "start_long": null,
+                        "end_lat": null,
+                        "end_long": null,
+                        "total_visits": null,
+                        "total_visited": null,
+                        "del_start_date": null,
+                        "del_end_date": null,
+                        "strike_rate": 100,
+                        "end_journey_reason_id": null,
+                        "helper_employee_id": null,
+                        "helper_user_id": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: DIspatch Submit
+  
+  request: {
+    url: 192.168.1.119:8070/web/dispatch_order_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{
+          "data": {
+              "dispatch_id": 10,
+              "status": "submit"
+              }
+      }}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 13 May 2025 13:46:25 GMT
+      Content-Length: 8431
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dispatch_status_change_details": {
+                        "dispatch_id": 10,
+                        "name": "LOR2025050009",
+                        "emp_checkin_id": null,
+                        "emp_checkin_time": null,
+                        "batch_picking_id": 9,
+                        "batch_picking_name": "BP2025050006",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "user_id": 2,
+                        "user_name": "Administrator",
+                        "department_id": 1,
+                        "department_name": "Administration",
+                        "employee_id": 1,
+                        "employee_name": "Administrator",
+                        "area_code_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "allowed_area_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "sale_order_ids": [
+                            {
+                                "presale_id": 243,
+                                "presale_name": "S00265",
+                                "presale_date": "2025-05-13 13:08:05",
+                                "customer_id": 16109,
+                                "partner_invoice_id": 16109,
+                                "partner_shipping_id": 16109,
+                                "origin": null,
+                                "discount_amount": null,
+                                "amount_untaxed": 115.4,
+                                "amount_tax": 5.77,
+                                "amount_total": 121.17,
+                                "user_id": 2,
+                                "payment_type": "credit",
+                                "state": "Sales Order",
+                                "expiry_date": "2025-06-03",
+                                "payment_term_name": "21 Days",
+                                "presale_orderline": [
+                                    {
+                                        "product_id": 2381,
+                                        "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 2,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 2,
+                                        "price_tax": 0.10000000000000009,
+                                        "price_total": 2.1,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 2,
+                                        "package_id": 503,
+                                        "package_name": "Kg",
+                                        "package_quantity": 2,
+                                        "order_line_id": 417,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": []
+                                    },
+                                    {
+                                        "product_id": 2373,
+                                        "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 113.4,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 113.4,
+                                        "price_tax": 5.6699999999999875,
+                                        "price_total": 119.07,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 113.4,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "package_quantity": 10,
+                                        "order_line_id": 418,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": [
+                                            {
+                                                "product_id": 2373,
+                                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                                "uom_id": 12,
+                                                "package_id": 1435,
+                                                "package_name": "Carton",
+                                                "foc_line_id": 39,
+                                                "order_qty": 1,
+                                                "foc_product_id": 2470,
+                                                "foc_product_name": "COFFEE BEANS VIETNAM",
+                                                "foc_product_packaging": 592,
+                                                "foc_product_packaging_name": "Kg",
+                                                "foc_qty": 5,
+                                                "max_foc_qty": 0
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "sale_order_line_ids": [
+                            {
+                                "product_id": 2381,
+                                "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 2,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 2,
+                                "price_tax": 0.10000000000000009,
+                                "price_total": 2.1,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 2,
+                                "package_id": 503,
+                                "package_name": "Kg",
+                                "package_quantity": 2,
+                                "order_line_id": 417,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": []
+                            },
+                            {
+                                "product_id": 2373,
+                                "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 113.4,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 113.4,
+                                "price_tax": 5.6699999999999875,
+                                "price_total": 119.07,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 113.4,
+                                "package_id": 1435,
+                                "package_name": "Carton",
+                                "package_quantity": 10,
+                                "order_line_id": 418,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": [
+                                    {
+                                        "product_id": 2373,
+                                        "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "uom_id": 12,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "foc_line_id": 39,
+                                        "order_qty": 1,
+                                        "foc_product_id": 2470,
+                                        "foc_product_name": "COFFEE BEANS VIETNAM",
+                                        "foc_product_packaging": 592,
+                                        "foc_product_packaging_name": "Kg",
+                                        "foc_qty": 5,
+                                        "max_foc_qty": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "note": null,
+                        "dispatch_date": "2025-05-14 00:00:00",
+                        "validated_by": null,
+                        "validated_by_name": null,
+                        "driver_emp_id": 1,
+                        "driver_emp_name": "Administrator",
+                        "driver_user_id": 1,
+                        "driver_user_name": "SynergiaBot",
+                        "location_id": 188,
+                        "location_name": "Cold Storage",
+                        "dest_location_id": null,
+                        "dest_location_name": null,
+                        "fleet_id": 4,
+                        "fleet_name": "Nissan/Nissan Patrol V 6/No Plate",
+                        "customer_ids": [
+                            {
+                                "customer_id": 16109,
+                                "name": "AL SABAYA GROCERY",
+                                "street": "Al Ain.",
+                                "street2": "Abu Dhabi",
+                                "city": null,
+                                "zip": null,
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": 2,
+                                "country_name": "United Arab Emirates",
+                                "currency_id": 128,
+                                "currency": "AED",
+                                "email": "alsaba",
+                                "website": null,
+                                "phone": null,
+                                "mobile": "0509847180",
+                                "trn": "100316453800003",
+                                "trade_reg": null,
+                                "trade_reg_expiry": null,
+                                "latitude": 24.221009,
+                                "longitude": 55.7589194,
+                                "pricelist_id": 12,
+                                "pricelist_name": "Special Price list",
+                                "customer_ref": "488",
+                                "payment_type": "credit",
+                                "credit_limit": 25000,
+                                "due_amount": null,
+                                "allow_overcredit_limit": null,
+                                "over_limit_amount": null,
+                                "confirmed_customer": null,
+                                "payment_terms_id": 3,
+                                "payment_terms_name": "21 Days",
+                                "logo_url": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=image_1920",
+                                "contact_name": "Mathew mon",
+                                "contact_phone": "072487346794",
+                                "customer": true,
+                                "supplier": false,
+                                "debit_limit": null,
+                                "current_credit_amount": 1260,
+                                "contact_list": [
+                                    {
+                                        "type": "contact",
+                                        "contact_id": 24160,
+                                        "contact_name": "Mathew mon",
+                                        "contact_title_id": null,
+                                        "contact_title": null,
+                                        "contact_function": null,
+                                        "contact_email": null,
+                                        "contact_mobile": null,
+                                        "contact_phone": "072487346794",
+                                        "street": "Al Ain.",
+                                        "street2": "Abu Dhabi",
+                                        "zip": null,
+                                        "state_id": null,
+                                        "state_name": null,
+                                        "country_id": 2,
+                                        "country_name": "United Arab Emirates"
+                                    }
+                                ],
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "barcode": null,
+                                "disable_loc_update": null,
+                                "employee_id": null,
+                                "employee_name": null,
+                                "company_registry": null,
+                                "is_contact": false,
+                                "planogram": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=planogram_image"
+                            }
+                        ],
+                        "unload_request_ids": null,
+                        "dispatch_product_ids": [
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": "LOR2025050009",
+                                "product_id": 2381,
+                                "product_name": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1443,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 1,
+                                "qty_in_package": 22.68,
+                                "dispatch_qty": 22.68,
+                                "check_for_packaging": true,
+                                "product_code": "SN100014",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 1
+                            },
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": "LOR2025050009",
+                                "product_id": 2373,
+                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1435,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 10,
+                                "qty_in_package": 11.34,
+                                "dispatch_qty": 113.4,
+                                "check_for_packaging": true,
+                                "product_code": "SN100006",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 2
+                            }
+                        ],
+                        "dispatch_product_stock_ids": null,
+                        "dispatch_return_product_stock_ids": null,
+                        "dispatch_payment_line_ids": null,
+                        "dispatch_payment_method_ids": null,
+                        "state": "submit",
+                        "total_sales": 1,
+                        "total_customers": 1,
+                        "total_areas": 1,
+                        "date": "2025-05-14 00:00:00",
+                        "picking_ids": null,
+                        "invoice_ids": null,
+                        "invoice_count": null,
+                        "return_count": null,
+                        "voucher_ids": null,
+                        "voucher_count": null,
+                        "pick_count": null,
+                        "picking_type_id": 7,
+                        "picking_type_name": "Internal Transfers",
+                        "picking_type_code": "internal",
+                        "received_date": null,
+                        "validate_sign": null,
+                        "accepted_by": null,
+                        "accept_sign": null,
+                        "approved_by": null,
+                        "approved_by_name": null,
+                        "approved_date": null,
+                        "move_line_ids": null,
+                        "move_line_count": null,
+                        "area_code_line_ids": null,
+                        "unload_req_count": null,
+                        "partner_act_ids": null,
+                        "time_from": null,
+                        "time_to": null,
+                        "last_visit_id": null,
+                        "allow_arrival": true,
+                        "start_point_id": 1,
+                        "start_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "end_point_id": 1,
+                        "end_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "start_lat": null,
+                        "start_long": null,
+                        "end_lat": null,
+                        "end_long": null,
+                        "total_visits": null,
+                        "total_visited": null,
+                        "del_start_date": null,
+                        "del_end_date": null,
+                        "strike_rate": 100,
+                        "end_journey_reason_id": null,
+                        "helper_employee_id": null,
+                        "helper_user_id": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Dispatch Confirm
+  
+  request: {
+    url: 192.168.1.119:8070/web/dispatch_order_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{
+          "data": {
+              "dispatch_id": 10,
+              "status": "confirm"
+              }
+      }}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 13 May 2025 13:54:49 GMT
+      Content-Length: 8693
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dispatch_status_change_details": {
+                        "dispatch_id": 10,
+                        "name": "LOR2025050009",
+                        "emp_checkin_id": null,
+                        "emp_checkin_time": null,
+                        "batch_picking_id": 9,
+                        "batch_picking_name": "BP2025050006",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "user_id": 2,
+                        "user_name": "Administrator",
+                        "department_id": 1,
+                        "department_name": "Administration",
+                        "employee_id": 1,
+                        "employee_name": "Administrator",
+                        "area_code_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "allowed_area_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "sale_order_ids": [
+                            {
+                                "presale_id": 243,
+                                "presale_name": "S00265",
+                                "presale_date": "2025-05-13 13:08:05",
+                                "customer_id": 16109,
+                                "partner_invoice_id": 16109,
+                                "partner_shipping_id": 16109,
+                                "origin": null,
+                                "discount_amount": null,
+                                "amount_untaxed": 115.4,
+                                "amount_tax": 5.77,
+                                "amount_total": 121.17,
+                                "user_id": 2,
+                                "payment_type": "credit",
+                                "state": "Sales Order",
+                                "expiry_date": "2025-06-03",
+                                "payment_term_name": "21 Days",
+                                "presale_orderline": [
+                                    {
+                                        "product_id": 2381,
+                                        "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 2,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 2,
+                                        "price_tax": 0.10000000000000009,
+                                        "price_total": 2.1,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 2,
+                                        "package_id": 503,
+                                        "package_name": "Kg",
+                                        "package_quantity": 2,
+                                        "order_line_id": 417,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": []
+                                    },
+                                    {
+                                        "product_id": 2373,
+                                        "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 113.4,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 113.4,
+                                        "price_tax": 5.6699999999999875,
+                                        "price_total": 119.07,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 113.4,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "package_quantity": 10,
+                                        "order_line_id": 418,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": [
+                                            {
+                                                "product_id": 2373,
+                                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                                "uom_id": 12,
+                                                "package_id": 1435,
+                                                "package_name": "Carton",
+                                                "foc_line_id": 39,
+                                                "order_qty": 1,
+                                                "foc_product_id": 2470,
+                                                "foc_product_name": "COFFEE BEANS VIETNAM",
+                                                "foc_product_packaging": 592,
+                                                "foc_product_packaging_name": "Kg",
+                                                "foc_qty": 5,
+                                                "max_foc_qty": 0
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "sale_order_line_ids": [
+                            {
+                                "product_id": 2381,
+                                "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 2,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 2,
+                                "price_tax": 0.10000000000000009,
+                                "price_total": 2.1,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 2,
+                                "package_id": 503,
+                                "package_name": "Kg",
+                                "package_quantity": 2,
+                                "order_line_id": 417,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": []
+                            },
+                            {
+                                "product_id": 2373,
+                                "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 113.4,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 113.4,
+                                "price_tax": 5.6699999999999875,
+                                "price_total": 119.07,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 113.4,
+                                "package_id": 1435,
+                                "package_name": "Carton",
+                                "package_quantity": 10,
+                                "order_line_id": 418,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": [
+                                    {
+                                        "product_id": 2373,
+                                        "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "uom_id": 12,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "foc_line_id": 39,
+                                        "order_qty": 1,
+                                        "foc_product_id": 2470,
+                                        "foc_product_name": "COFFEE BEANS VIETNAM",
+                                        "foc_product_packaging": 592,
+                                        "foc_product_packaging_name": "Kg",
+                                        "foc_qty": 5,
+                                        "max_foc_qty": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "note": null,
+                        "dispatch_date": "2025-05-14 00:00:00",
+                        "validated_by": null,
+                        "validated_by_name": null,
+                        "driver_emp_id": 1,
+                        "driver_emp_name": "Administrator",
+                        "driver_user_id": 1,
+                        "driver_user_name": "SynergiaBot",
+                        "location_id": 188,
+                        "location_name": "Cold Storage",
+                        "dest_location_id": null,
+                        "dest_location_name": null,
+                        "fleet_id": 4,
+                        "fleet_name": "Nissan/Nissan Patrol V 6/No Plate",
+                        "customer_ids": [
+                            {
+                                "customer_id": 16109,
+                                "name": "AL SABAYA GROCERY",
+                                "street": "Al Ain.",
+                                "street2": "Abu Dhabi",
+                                "city": null,
+                                "zip": null,
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": 2,
+                                "country_name": "United Arab Emirates",
+                                "currency_id": 128,
+                                "currency": "AED",
+                                "email": "alsaba",
+                                "website": null,
+                                "phone": null,
+                                "mobile": "0509847180",
+                                "trn": "100316453800003",
+                                "trade_reg": null,
+                                "trade_reg_expiry": null,
+                                "latitude": 24.221009,
+                                "longitude": 55.7589194,
+                                "pricelist_id": 12,
+                                "pricelist_name": "Special Price list",
+                                "customer_ref": "488",
+                                "payment_type": "credit",
+                                "credit_limit": 25000,
+                                "due_amount": null,
+                                "allow_overcredit_limit": null,
+                                "over_limit_amount": null,
+                                "confirmed_customer": null,
+                                "payment_terms_id": 3,
+                                "payment_terms_name": "21 Days",
+                                "logo_url": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=image_1920",
+                                "contact_name": "Mathew mon",
+                                "contact_phone": "072487346794",
+                                "customer": true,
+                                "supplier": false,
+                                "debit_limit": null,
+                                "current_credit_amount": 1260,
+                                "contact_list": [
+                                    {
+                                        "type": "contact",
+                                        "contact_id": 24160,
+                                        "contact_name": "Mathew mon",
+                                        "contact_title_id": null,
+                                        "contact_title": null,
+                                        "contact_function": null,
+                                        "contact_email": null,
+                                        "contact_mobile": null,
+                                        "contact_phone": "072487346794",
+                                        "street": "Al Ain.",
+                                        "street2": "Abu Dhabi",
+                                        "zip": null,
+                                        "state_id": null,
+                                        "state_name": null,
+                                        "country_id": 2,
+                                        "country_name": "United Arab Emirates"
+                                    }
+                                ],
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "barcode": null,
+                                "disable_loc_update": null,
+                                "employee_id": null,
+                                "employee_name": null,
+                                "company_registry": null,
+                                "is_contact": false,
+                                "planogram": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=planogram_image"
+                            }
+                        ],
+                        "unload_request_ids": null,
+                        "dispatch_product_ids": [
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": "LOR2025050009",
+                                "product_id": 2381,
+                                "product_name": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1443,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 1,
+                                "qty_in_package": 22.68,
+                                "dispatch_qty": 22.68,
+                                "check_for_packaging": true,
+                                "product_code": "SN100014",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 1
+                            },
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": "LOR2025050009",
+                                "product_id": 2373,
+                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1435,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 10,
+                                "qty_in_package": 11.34,
+                                "dispatch_qty": 113.4,
+                                "check_for_packaging": true,
+                                "product_code": "SN100006",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 2
+                            }
+                        ],
+                        "dispatch_product_stock_ids": null,
+                        "dispatch_return_product_stock_ids": null,
+                        "dispatch_payment_line_ids": [
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": "LOR2025050009",
+                                "payment_type": "credit",
+                                "total_sales": 1,
+                                "total_sale_amount": 121.17,
+                                "total_invoiced": null,
+                                "total_invoiced_amount": null,
+                                "currency_id": null,
+                                "currency_name": null,
+                                "line_number": 1
+                            }
+                        ],
+                        "dispatch_payment_method_ids": null,
+                        "state": "confirm",
+                        "total_sales": 1,
+                        "total_customers": 1,
+                        "total_areas": 1,
+                        "date": "2025-05-14 00:00:00",
+                        "picking_ids": null,
+                        "invoice_ids": null,
+                        "invoice_count": null,
+                        "return_count": null,
+                        "voucher_ids": null,
+                        "voucher_count": null,
+                        "pick_count": null,
+                        "picking_type_id": 7,
+                        "picking_type_name": "Internal Transfers",
+                        "picking_type_code": "internal",
+                        "received_date": null,
+                        "validate_sign": null,
+                        "accepted_by": null,
+                        "accept_sign": null,
+                        "approved_by": 19,
+                        "approved_by_name": "Sales 5",
+                        "approved_date": "2025-05-13 13:54:48",
+                        "move_line_ids": null,
+                        "move_line_count": null,
+                        "area_code_line_ids": null,
+                        "unload_req_count": null,
+                        "partner_act_ids": null,
+                        "time_from": null,
+                        "time_to": null,
+                        "last_visit_id": null,
+                        "allow_arrival": true,
+                        "start_point_id": 1,
+                        "start_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "end_point_id": 1,
+                        "end_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "start_lat": null,
+                        "start_long": null,
+                        "end_lat": null,
+                        "end_long": null,
+                        "total_visits": null,
+                        "total_visited": null,
+                        "del_start_date": null,
+                        "del_end_date": null,
+                        "strike_rate": 100,
+                        "end_journey_reason_id": null,
+                        "helper_employee_id": null,
+                        "helper_user_id": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Dispatch Cancel
+  
+  request: {
+    url: 192.168.1.119:8070/web/dispatch_order_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{
+          "data": {
+              "dispatch_id": 10,
+              "status": "cancel"
+              }
+      }}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 13 May 2025 13:45:15 GMT
+      Content-Length: 8400
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "dispatch_status_change_details": {
+                        "dispatch_id": 10,
+                        "name": null,
+                        "emp_checkin_id": null,
+                        "emp_checkin_time": null,
+                        "batch_picking_id": 9,
+                        "batch_picking_name": "BP2025050006",
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "user_id": 2,
+                        "user_name": "Administrator",
+                        "department_id": 1,
+                        "department_name": "Administration",
+                        "employee_id": 1,
+                        "employee_name": "Administrator",
+                        "area_code_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "allowed_area_ids": [
+                            {
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": null,
+                                "country_name": null
+                            }
+                        ],
+                        "sale_order_ids": [
+                            {
+                                "presale_id": 243,
+                                "presale_name": "S00265",
+                                "presale_date": "2025-05-13 13:08:05",
+                                "customer_id": 16109,
+                                "partner_invoice_id": 16109,
+                                "partner_shipping_id": 16109,
+                                "origin": null,
+                                "discount_amount": null,
+                                "amount_untaxed": 115.4,
+                                "amount_tax": 5.77,
+                                "amount_total": 121.17,
+                                "user_id": 2,
+                                "payment_type": "credit",
+                                "state": "Sales Order",
+                                "expiry_date": "2025-06-03",
+                                "payment_term_name": "21 Days",
+                                "presale_orderline": [
+                                    {
+                                        "product_id": 2381,
+                                        "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 2,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 2,
+                                        "price_tax": 0.10000000000000009,
+                                        "price_total": 2.1,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 2,
+                                        "package_id": 503,
+                                        "package_name": "Kg",
+                                        "package_quantity": 2,
+                                        "order_line_id": 417,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": []
+                                    },
+                                    {
+                                        "product_id": 2373,
+                                        "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "price_unit": 0,
+                                        "product_uom": 12,
+                                        "qty": 113.4,
+                                        "tax_ids": [
+                                            2
+                                        ],
+                                        "disc_amount": 0,
+                                        "discount_rate": 0,
+                                        "disc_type": null,
+                                        "price_subtotal": 113.4,
+                                        "price_tax": 5.6699999999999875,
+                                        "price_total": 119.07,
+                                        "qty_delivered": 0,
+                                        "qty_invoiced": 0,
+                                        "qty_to_invoice": 113.4,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "package_quantity": 10,
+                                        "order_line_id": 418,
+                                        "lot_details": [],
+                                        "foc_id": null,
+                                        "foc_id_name": null,
+                                        "foc_line_id": null,
+                                        "foc_details": [
+                                            {
+                                                "product_id": 2373,
+                                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                                "uom_id": 12,
+                                                "package_id": 1435,
+                                                "package_name": "Carton",
+                                                "foc_line_id": 39,
+                                                "order_qty": 1,
+                                                "foc_product_id": 2470,
+                                                "foc_product_name": "COFFEE BEANS VIETNAM",
+                                                "foc_product_packaging": 592,
+                                                "foc_product_packaging_name": "Kg",
+                                                "foc_qty": 5,
+                                                "max_foc_qty": 0
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "sale_order_line_ids": [
+                            {
+                                "product_id": 2381,
+                                "desc": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 2,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 2,
+                                "price_tax": 0.10000000000000009,
+                                "price_total": 2.1,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 2,
+                                "package_id": 503,
+                                "package_name": "Kg",
+                                "package_quantity": 2,
+                                "order_line_id": 417,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": []
+                            },
+                            {
+                                "product_id": 2373,
+                                "desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "price_unit": 0,
+                                "product_uom": 12,
+                                "qty": 113.4,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "disc_amount": 0,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "price_subtotal": 113.4,
+                                "price_tax": 5.6699999999999875,
+                                "price_total": 119.07,
+                                "qty_delivered": 0,
+                                "qty_invoiced": 0,
+                                "qty_to_invoice": 113.4,
+                                "package_id": 1435,
+                                "package_name": "Carton",
+                                "package_quantity": 10,
+                                "order_line_id": 418,
+                                "lot_details": [],
+                                "foc_id": null,
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": [
+                                    {
+                                        "product_id": 2373,
+                                        "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                        "uom_id": 12,
+                                        "package_id": 1435,
+                                        "package_name": "Carton",
+                                        "foc_line_id": 39,
+                                        "order_qty": 1,
+                                        "foc_product_id": 2470,
+                                        "foc_product_name": "COFFEE BEANS VIETNAM",
+                                        "foc_product_packaging": 592,
+                                        "foc_product_packaging_name": "Kg",
+                                        "foc_qty": 5,
+                                        "max_foc_qty": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "note": null,
+                        "dispatch_date": "2025-05-14 00:00:00",
+                        "validated_by": null,
+                        "validated_by_name": null,
+                        "driver_emp_id": 1,
+                        "driver_emp_name": "Administrator",
+                        "driver_user_id": 1,
+                        "driver_user_name": "SynergiaBot",
+                        "location_id": 188,
+                        "location_name": "Cold Storage",
+                        "dest_location_id": null,
+                        "dest_location_name": null,
+                        "fleet_id": 4,
+                        "fleet_name": "Nissan/Nissan Patrol V 6/No Plate",
+                        "customer_ids": [
+                            {
+                                "customer_id": 16109,
+                                "name": "AL SABAYA GROCERY",
+                                "street": "Al Ain.",
+                                "street2": "Abu Dhabi",
+                                "city": null,
+                                "zip": null,
+                                "state_id": null,
+                                "state_name": null,
+                                "country_id": 2,
+                                "country_name": "United Arab Emirates",
+                                "currency_id": 128,
+                                "currency": "AED",
+                                "email": "alsaba",
+                                "website": null,
+                                "phone": null,
+                                "mobile": "0509847180",
+                                "trn": "100316453800003",
+                                "trade_reg": null,
+                                "trade_reg_expiry": null,
+                                "latitude": 24.221009,
+                                "longitude": 55.7589194,
+                                "pricelist_id": 12,
+                                "pricelist_name": "Special Price list",
+                                "customer_ref": "488",
+                                "payment_type": "credit",
+                                "credit_limit": 25000,
+                                "due_amount": null,
+                                "allow_overcredit_limit": null,
+                                "over_limit_amount": null,
+                                "confirmed_customer": null,
+                                "payment_terms_id": 3,
+                                "payment_terms_name": "21 Days",
+                                "logo_url": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=image_1920",
+                                "contact_name": "Mathew mon",
+                                "contact_phone": "072487346794",
+                                "customer": true,
+                                "supplier": false,
+                                "debit_limit": null,
+                                "current_credit_amount": 1260,
+                                "contact_list": [
+                                    {
+                                        "type": "contact",
+                                        "contact_id": 24160,
+                                        "contact_name": "Mathew mon",
+                                        "contact_title_id": null,
+                                        "contact_title": null,
+                                        "contact_function": null,
+                                        "contact_email": null,
+                                        "contact_mobile": null,
+                                        "contact_phone": "072487346794",
+                                        "street": "Al Ain.",
+                                        "street2": "Abu Dhabi",
+                                        "zip": null,
+                                        "state_id": null,
+                                        "state_name": null,
+                                        "country_id": 2,
+                                        "country_name": "United Arab Emirates"
+                                    }
+                                ],
+                                "area_code_id": 445,
+                                "area_code_name": "Al Karama",
+                                "barcode": null,
+                                "disable_loc_update": null,
+                                "employee_id": null,
+                                "employee_name": null,
+                                "company_registry": null,
+                                "is_contact": false,
+                                "planogram": "http://localhost:8070/web/url_image?model=res.partner&id=16109&field=planogram_image"
+                            }
+                        ],
+                        "unload_request_ids": null,
+                        "dispatch_product_ids": [
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": false,
+                                "product_id": 2381,
+                                "product_name": "ALMOND INDY 22/24 BLUE DIAMOND",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1443,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 1,
+                                "qty_in_package": 22.68,
+                                "dispatch_qty": 22.68,
+                                "check_for_packaging": true,
+                                "product_code": "SN100014",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 1
+                            },
+                            {
+                                "dispatch_id": 10,
+                                "dispatch_name": false,
+                                "product_id": 2373,
+                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "uom_id": 12,
+                                "uom_name": "KG",
+                                "packaging_id": 1435,
+                                "packaging_name": "Carton",
+                                "dispatch_pack_qty": 10,
+                                "qty_in_package": 11.34,
+                                "dispatch_qty": 113.4,
+                                "check_for_packaging": true,
+                                "product_code": "SN100006",
+                                "product_barcode": null,
+                                "move_ids": null,
+                                "recv_qty": null,
+                                "recv_pack_qty": null,
+                                "line_number": 2
+                            }
+                        ],
+                        "dispatch_product_stock_ids": null,
+                        "dispatch_return_product_stock_ids": null,
+                        "dispatch_payment_line_ids": null,
+                        "dispatch_payment_method_ids": null,
+                        "state": "cancel",
+                        "total_sales": 1,
+                        "total_customers": 1,
+                        "total_areas": 1,
+                        "date": "2025-05-14 00:00:00",
+                        "picking_ids": null,
+                        "invoice_ids": null,
+                        "invoice_count": null,
+                        "return_count": null,
+                        "voucher_ids": null,
+                        "voucher_count": null,
+                        "pick_count": null,
+                        "picking_type_id": 7,
+                        "picking_type_name": "Internal Transfers",
+                        "picking_type_code": "internal",
+                        "received_date": null,
+                        "validate_sign": null,
+                        "accepted_by": null,
+                        "accept_sign": null,
+                        "approved_by": null,
+                        "approved_by_name": null,
+                        "approved_date": null,
+                        "move_line_ids": null,
+                        "move_line_count": null,
+                        "area_code_line_ids": null,
+                        "unload_req_count": null,
+                        "partner_act_ids": null,
+                        "time_from": null,
+                        "time_to": null,
+                        "last_visit_id": null,
+                        "allow_arrival": true,
+                        "start_point_id": 1,
+                        "start_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "end_point_id": 1,
+                        "end_point_name": "Synergia Softwares IT infrastructure LLC",
+                        "start_lat": null,
+                        "start_long": null,
+                        "end_lat": null,
+                        "end_long": null,
+                        "total_visits": null,
+                        "total_visited": null,
+                        "del_start_date": null,
+                        "del_end_date": null,
+                        "strike_rate": 100,
+                        "end_journey_reason_id": null,
+                        "helper_employee_id": null,
+                        "helper_user_id": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

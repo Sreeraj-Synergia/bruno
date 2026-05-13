@@ -1,0 +1,28 @@
+meta {
+  name: Allocate Vehicle
+  type: http
+  seq: 68
+}
+
+post {
+  url: http://localhost:8090/web/allocate_vehicle
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "mobilisation_id": 81,
+              "fleet_id": 1,
+              "driver_id": 10958,
+              "schedule_time": 9
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Complete Tasks
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://172.105.55.55:8074/web/do_complete_task
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "task_id": 1489
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

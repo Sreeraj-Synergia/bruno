@@ -1,0 +1,347 @@
+meta {
+  name: Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://192.168.1.119:8073/web/session/mobile_login?db=Zaramiz
+  body: json
+  auth: inherit
+}
+
+params:query {
+  db: Zaramiz
+}
+
+body:json {
+  {
+      "params": {
+          "db": "Zaramiz",
+          "login": "sameer@zarami.com",
+          "password": "12345",
+          "device_name": "Zebra Technologies TC15",
+          "imei_no": "e9121597ff48ba37",
+          "latitude": "25.26555",
+          "ip_address": "192.168.1.119",
+          "longitude": "50.695655",
+          "fcm_id": "flBiLUyuSiae3MpFC_HBOj:APA91bHFluPsXCQJMrF3zHOlIdLHPS5lXq0SxxUeU7VRzn1xBsjGFcYfEeSHJEvnndR5Y6oJj6rzPvBIwigFMO3qrxH2SY03aaJc9rjekWwHNYjXm-yJb8g"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Login
+  
+  request: {
+    url: http://192.168.1.119:8073/web/session/mobile_login?db=Zaramiz
+    method: POST
+    mode: json
+    params:query: {
+      db: Zaramiz
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "db": "Zaramiz",
+              "login": "sameer@zarami.com",
+              "password": "12345",
+              "device_name": "Zebra Technologies TC15",
+              "imei_no": "e9121597ff48ba37",
+              "latitude": "25.26555",
+              "ip_address": "192.168.1.119",
+              "longitude": "50.695655",
+              "fcm_id": "flBiLUyuSiae3MpFC_HBOj:APA91bHFluPsXCQJMrF3zHOlIdLHPS5lXq0SxxUeU7VRzn1xBsjGFcYfEeSHJEvnndR5Y6oJj6rzPvBIwigFMO3qrxH2SY03aaJc9rjekWwHNYjXm-yJb8g"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 22 Aug 2025 07:05:56 GMT
+      Content-Length: 2041
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=7zMMySo41lGX3imTl56CQCaGxdIJkuZLghJ7NvkH1MbN249MgkYbCknahj8aKzITAVcGA99OzKZvBXTxmpXD; Expires=Sat, 22 Aug 2026 07:05:56 GMT; Max-Age=604800; HttpOnly; Path=/
+      Set-Cookie: session_id=7zMMySo41lGX3imTl56CQCaGxdIJkuZLghJ7NvkH1MbN249MgkYbCknahj8aKzITAVcGA99OzKZvBXTxmpXD; Expires=Sat, 22 Aug 2026 07:05:56 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "name": "Sameer Ali",
+                    "username": "Sameer Ali",
+                    "user_name": "Sameer Ali",
+                    "user_id": 48,
+                    "uid": 48,
+                    "login_id": "sameer@zarami.com",
+                    "logo_url": "http://localhost:8073/web/url_image?model=hr.employee&id=51&field=image_1920",
+                    "user_signature": "http://localhost:8073/web/url_image?model=res.users&id=48&field=user_signature",
+                    "employee_id": 51,
+                    "employee_name": "Sameer Ali",
+                    "manager": "Mody Thomas",
+                    "coach": "Mody Thomas",
+                    "department": "Sales Department",
+                    "job_pos": "Salesman",
+                    "work_phone": "+966530255092",
+                    "work_mobile": null,
+                    "work_email": "sameer@zarami.com",
+                    "logo": null,
+                    "contact_us_link": false,
+                    "about_us_link": false,
+                    "faq_link": false,
+                    "company_id": 1,
+                    "company_name": "Zaramiz Company Ltd",
+                    "disable_offline_sales": false,
+                    "auto_pay_cash_invoice": true,
+                    "show_comp_details": "main_company",
+                    "user_journey_available": false,
+                    "running_actual_journey_id": null,
+                    "running_actual_journey_name": null,
+                    "support_email": null,
+                    "currency_ids": [
+                        {
+                            "currency_id": 128,
+                            "name": "AED",
+                            "full_name": "United Arab Emirates dirham",
+                            "currency_unit_label": "Dirham",
+                            "currency_subunit_label": "Fils",
+                            "symbol": "AED",
+                            "position": "after",
+                            "rounding": 0.0001,
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        },
+                        {
+                            "currency_id": 125,
+                            "name": "EUR",
+                            "full_name": "Euro",
+                            "currency_unit_label": "Euros",
+                            "currency_subunit_label": "Cents",
+                            "symbol": "€",
+                            "position": "after",
+                            "rounding": 0.01,
+                            "digits": [
+                                69,
+                                2
+                            ]
+                        },
+                        {
+                            "currency_id": 150,
+                            "name": "SAR",
+                            "full_name": "Saudi riyal",
+                            "currency_unit_label": "Riyal",
+                            "currency_subunit_label": "Halala",
+                            "symbol": "SAR",
+                            "position": "after",
+                            "rounding": 0.01,
+                            "digits": [
+                                69,
+                                2
+                            ]
+                        },
+                        {
+                            "currency_id": 1,
+                            "name": "USD",
+                            "full_name": "United States dollar",
+                            "currency_unit_label": "Dollars",
+                            "currency_subunit_label": "Cents",
+                            "symbol": "$",
+                            "position": "before",
+                            "rounding": 0.0001,
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        }
+                    ],
+                    "user_companies": false,
+                    "session_id": "7zMMySo41lGX3imTl56CQCaGxdIJkuZLghJ7NvkH1MbN249MgkYbCknahj8aKzITAVcGA99OzKZvBXTxmpXD"
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Login
+  
+  request: {
+    url: http://192.168.1.119:8073/web/session/mobile_login?db=Zaramiz
+    method: POST
+    mode: json
+    params:query: {
+      db: Zaramiz
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "db": "Zaramiz",
+              "login": "sameer@zarami.com",
+              "password": "12345",
+              "device_name": "Zebra Technologies TC15",
+              "imei_no": "e9121597ff48ba37",
+              "latitude": "25.26555",
+              "ip_address": "192.168.1.119",
+              "longitude": "50.695655",
+              "fcm_id": "flBiLUyuSiae3MpFC_HBOj:APA91bHFluPsXCQJMrF3zHOlIdLHPS5lXq0SxxUeU7VRzn1xBsjGFcYfEeSHJEvnndR5Y6oJj6rzPvBIwigFMO3qrxH2SY03aaJc9rjekWwHNYjXm-yJb8g"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 22 Aug 2025 07:05:56 GMT
+      Content-Length: 2041
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=7zMMySo41lGX3imTl56CQCaGxdIJkuZLghJ7NvkH1MbN249MgkYbCknahj8aKzITAVcGA99OzKZvBXTxmpXD; Expires=Sat, 22 Aug 2026 07:05:56 GMT; Max-Age=604800; HttpOnly; Path=/
+      Set-Cookie: session_id=7zMMySo41lGX3imTl56CQCaGxdIJkuZLghJ7NvkH1MbN249MgkYbCknahj8aKzITAVcGA99OzKZvBXTxmpXD; Expires=Sat, 22 Aug 2026 07:05:56 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "name": "Sameer Ali",
+                    "username": "Sameer Ali",
+                    "user_name": "Sameer Ali",
+                    "user_id": 48,
+                    "uid": 48,
+                    "login_id": "sameer@zarami.com",
+                    "logo_url": "http://localhost:8073/web/url_image?model=hr.employee&id=51&field=image_1920",
+                    "user_signature": "http://localhost:8073/web/url_image?model=res.users&id=48&field=user_signature",
+                    "employee_id": 51,
+                    "employee_name": "Sameer Ali",
+                    "manager": "Mody Thomas",
+                    "coach": "Mody Thomas",
+                    "department": "Sales Department",
+                    "job_pos": "Salesman",
+                    "work_phone": "+966530255092",
+                    "work_mobile": null,
+                    "work_email": "sameer@zarami.com",
+                    "logo": null,
+                    "contact_us_link": false,
+                    "about_us_link": false,
+                    "faq_link": false,
+                    "company_id": 1,
+                    "company_name": "Zaramiz Company Ltd",
+                    "disable_offline_sales": false,
+                    "auto_pay_cash_invoice": true,
+                    "show_comp_details": "main_company",
+                    "user_journey_available": false,
+                    "running_actual_journey_id": null,
+                    "running_actual_journey_name": null,
+                    "support_email": null,
+                    "currency_ids": [
+                        {
+                            "currency_id": 128,
+                            "name": "AED",
+                            "full_name": "United Arab Emirates dirham",
+                            "currency_unit_label": "Dirham",
+                            "currency_subunit_label": "Fils",
+                            "symbol": "AED",
+                            "position": "after",
+                            "rounding": 0.0001,
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        },
+                        {
+                            "currency_id": 125,
+                            "name": "EUR",
+                            "full_name": "Euro",
+                            "currency_unit_label": "Euros",
+                            "currency_subunit_label": "Cents",
+                            "symbol": "€",
+                            "position": "after",
+                            "rounding": 0.01,
+                            "digits": [
+                                69,
+                                2
+                            ]
+                        },
+                        {
+                            "currency_id": 150,
+                            "name": "SAR",
+                            "full_name": "Saudi riyal",
+                            "currency_unit_label": "Riyal",
+                            "currency_subunit_label": "Halala",
+                            "symbol": "SAR",
+                            "position": "after",
+                            "rounding": 0.01,
+                            "digits": [
+                                69,
+                                2
+                            ]
+                        },
+                        {
+                            "currency_id": 1,
+                            "name": "USD",
+                            "full_name": "United States dollar",
+                            "currency_unit_label": "Dollars",
+                            "currency_subunit_label": "Cents",
+                            "symbol": "$",
+                            "position": "before",
+                            "rounding": 0.0001,
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        }
+                    ],
+                    "user_companies": false,
+                    "session_id": "7zMMySo41lGX3imTl56CQCaGxdIJkuZLghJ7NvkH1MbN249MgkYbCknahj8aKzITAVcGA99OzKZvBXTxmpXD"
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

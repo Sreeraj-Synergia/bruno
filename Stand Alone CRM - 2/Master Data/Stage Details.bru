@@ -1,0 +1,85 @@
+meta {
+  name: Stage Details
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8070/web/get_stage_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{}}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Stage Details
+  
+  request: {
+    url: http://localhost:8070/web/get_stage_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{"data":{}}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 19 Jan 2026 11:11:53 GMT
+      Content-Length: 246
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "stage_details": [
+                        {
+                            "id": 1,
+                            "name": "New"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Qualified"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Proposition"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Won"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

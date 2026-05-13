@@ -1,0 +1,313 @@
+meta {
+  name: Delivery Put In pack
+  type: http
+  seq: 35
+}
+
+post {
+  url: https://wms.syntrack.app/web/delivery_put_in_pack?db=WMS_BASE_NEW
+  body: json
+  auth: inherit
+}
+
+params:query {
+  db: WMS_BASE_NEW
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "delivery_detailed_line_ids": [
+                  {
+                      "id": 895,
+                      "lot_id": 0,
+                      "package_id": 0,
+                      "product_id": 136,
+                      "quantity_done": 5
+                  }
+              ],
+              "delivery_id": 213
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Delivery Put In pack
+  
+  request: {
+    url: https://wms.syntrack.app/web/delivery_put_in_pack?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "delivery_detailed_line_ids": [
+                      {
+                          "id": 895,
+                          "lot_id": 0,
+                          "package_id": 0,
+                          "product_id": 136,
+                          "quantity_done": 5
+                      }
+                  ],
+                  "delivery_id": 213
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 05:55:17 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 05:55:17 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "delivery_put_in_pack_details": {
+                        "id": 213,
+                        "name": "WH/OUT/00056",
+                        "partner_id": 15,
+                        "partner_name": "Lulu Hypermarket",
+                        "picking_type_id": 2,
+                        "picking_type_name": "Synergia: Delivery Orders",
+                        "source_location_id": 8,
+                        "source_location_name": "WH/Stock",
+                        "scheduled_date": "2023-06-21 09:52:27",
+                        "date_done": "2023-06-21 00:00:00",
+                        "origin": null,
+                        "origin_date": "2023-06-21 09:52:27",
+                        "note": null,
+                        "state": "assigned",
+                        "asset_order": false,
+                        "sample_order": false,
+                        "delivery_line_ids": [
+                            {
+                                "id": 297,
+                                "product_id": 136,
+                                "product_name": "Material Crawler",
+                                "product_packaging_id": 225,
+                                "product_packaging_name": "Unit",
+                                "description": "Material Crawler",
+                                "date": "2023-06-21 09:52:27",
+                                "date_deadline": null,
+                                "product_uom_qty": 5,
+                                "quantity_done": 5,
+                                "pack_qty": 5,
+                                "recv_pack_qty": 5,
+                                "product_uom_id": 1,
+                                "product_uom": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/136/image_1920"
+                            }
+                        ],
+                        "delivery_detailed_line_ids": [
+                            {
+                                "id": 895,
+                                "product_id": 136,
+                                "product_name": "Material Crawler",
+                                "barcode": "2020340223",
+                                "location_dest_id": 5,
+                                "location_dest_name": "Partner Locations/Customers",
+                                "package_id": null,
+                                "package_name": null,
+                                "dest_package_id": 174,
+                                "dest_package_name": "PACK0000174",
+                                "product_packaging_id": 225,
+                                "product_packaging_name": "Unit",
+                                "lot_name": null,
+                                "expiration_date": null,
+                                "product_uom_qty": 5,
+                                "quantity_done": 5,
+                                "pack_qty": 5,
+                                "recv_pack_qty": 5,
+                                "product_uom_id": 1,
+                                "product_uom_name": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/136/image_1920",
+                                "stock_move_id": 297
+                            }
+                        ],
+                        "delivery_package_ids": [
+                            {
+                                "name": "PACK0000174",
+                                "packaging_id": null,
+                                "package_line_ids": null
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Delivery Put In pack
+  
+  request: {
+    url: https://wms.syntrack.app/web/delivery_put_in_pack?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "delivery_detailed_line_ids": [
+                      {
+                          "id": 895,
+                          "lot_id": 0,
+                          "package_id": 0,
+                          "product_id": 136,
+                          "quantity_done": 5
+                      }
+                  ],
+                  "delivery_id": 213
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 05:55:17 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 05:55:17 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "delivery_put_in_pack_details": {
+                        "id": 213,
+                        "name": "WH/OUT/00056",
+                        "partner_id": 15,
+                        "partner_name": "Lulu Hypermarket",
+                        "picking_type_id": 2,
+                        "picking_type_name": "Synergia: Delivery Orders",
+                        "source_location_id": 8,
+                        "source_location_name": "WH/Stock",
+                        "scheduled_date": "2023-06-21 09:52:27",
+                        "date_done": "2023-06-21 00:00:00",
+                        "origin": null,
+                        "origin_date": "2023-06-21 09:52:27",
+                        "note": null,
+                        "state": "assigned",
+                        "asset_order": false,
+                        "sample_order": false,
+                        "delivery_line_ids": [
+                            {
+                                "id": 297,
+                                "product_id": 136,
+                                "product_name": "Material Crawler",
+                                "product_packaging_id": 225,
+                                "product_packaging_name": "Unit",
+                                "description": "Material Crawler",
+                                "date": "2023-06-21 09:52:27",
+                                "date_deadline": null,
+                                "product_uom_qty": 5,
+                                "quantity_done": 5,
+                                "pack_qty": 5,
+                                "recv_pack_qty": 5,
+                                "product_uom_id": 1,
+                                "product_uom": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/136/image_1920"
+                            }
+                        ],
+                        "delivery_detailed_line_ids": [
+                            {
+                                "id": 895,
+                                "product_id": 136,
+                                "product_name": "Material Crawler",
+                                "barcode": "2020340223",
+                                "location_dest_id": 5,
+                                "location_dest_name": "Partner Locations/Customers",
+                                "package_id": null,
+                                "package_name": null,
+                                "dest_package_id": 174,
+                                "dest_package_name": "PACK0000174",
+                                "product_packaging_id": 225,
+                                "product_packaging_name": "Unit",
+                                "lot_name": null,
+                                "expiration_date": null,
+                                "product_uom_qty": 5,
+                                "quantity_done": 5,
+                                "pack_qty": 5,
+                                "recv_pack_qty": 5,
+                                "product_uom_id": 1,
+                                "product_uom_name": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/136/image_1920",
+                                "stock_move_id": 297
+                            }
+                        ],
+                        "delivery_package_ids": [
+                            {
+                                "name": "PACK0000174",
+                                "packaging_id": null,
+                                "package_line_ids": null
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

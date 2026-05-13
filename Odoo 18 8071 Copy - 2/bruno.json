@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Odoo 18 8071 Copy - 2",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

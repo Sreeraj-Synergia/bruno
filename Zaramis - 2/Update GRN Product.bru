@@ -1,0 +1,83 @@
+meta {
+  name: Update GRN Product
+  type: http
+  seq: 32
+}
+
+post {
+  url: 192.168.1.119:8070/web/update_product_done_qty
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "grn_id": 328,
+              "inbound_detailed_line_ids": [
+                  {   
+                      "move_id": 1016,
+                      "expiration_date": "2025-03-05 10:50:14",
+                      "id": 3531,
+                      "lot_id": 0,
+                      "lot_name": "LT 45664001",
+                      "package_id": false,
+                      "recv_pack_qty": false,
+                      "product_id": 2916,
+                      "quantity_done": 1000
+                  },
+                   {   
+                      "move_id": 1016,
+                      "expiration_date": "2025-03-05 10:50:14",
+                      "id": 3590,
+                      "lot_id": 0,
+                      "lot_name": "LT 456640012",
+                      "package_id": false,
+                      "recv_pack_qty": false,
+                      "product_id": 2916,
+                      "quantity_done": 1000
+                  },
+                  {   
+                      "move_id": 1017,
+                      "expiration_date": "2025-03-05 10:50:14",
+                      "id": 3532,
+                      "lot_id": 0,
+                      "lot_name": "LT 45664002",
+                      "package_id": 1473,
+                      "recv_pack_qty": 15,
+                      "product_id": 2411,
+                      "quantity_done": false
+                  },
+                  {   
+                      "move_id": 1017,
+                      "expiration_date": "2025-03-05 10:50:14",
+                      "id": 3591,
+                      "lot_id": 0,
+                      "lot_name": "LT 456640022",
+                      "package_id": 1473,
+                      "recv_pack_qty": 20,
+                      "product_id": 2411,
+                      "quantity_done": false
+                  },
+                  {   
+                      "move_id": 1018,
+                      "expiration_date": "2025-03-05 10:50:14",
+                      "id": 3533,
+                      "lot_id": 0,
+                      "lot_name": "LT 45664003",
+                      "package_id": 1467,
+                      "recv_pack_qty": 15,
+                      "product_id": 2411,
+                      "quantity_done": false
+                  }
+              ]
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

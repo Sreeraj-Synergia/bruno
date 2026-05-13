@@ -1,0 +1,165 @@
+meta {
+  name: Activity Completed
+  type: http
+  seq: 21
+}
+
+post {
+  url: http://localhost:8069/web/crm_activity_completed
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "activity_id": 138,
+              "feedback": "Feed Back From apui"
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Activity completed
+  
+  request: {
+    url: http://localhost:8069/web/crm_activity_completed
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 138,
+                  "feedback": "Feed Back From apui"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 486
+      Set-Cookie: session_id=3b53407d60c63c49acdb7092d5ed2e68f18e8e3b; Expires=Fri, 25-Oct-2024 07:26:43 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Sat, 27 Jul 2024 07:26:43 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_completed_details": {
+                        "id": 138,
+                        "summary": "Api Completeion test with feed back",
+                        "assigned_task_id": null,
+                        "assigned_task_name": null,
+                        "activity_type_id": 4,
+                        "activity_type_name": "To Do",
+                        "additional_assigned_ids": null,
+                        "date_deadline": "2024-07-27",
+                        "user_id": 133,
+                        "user_name": "Mariella Boongaling",
+                        "note": "<p>Sample Note<br></p>",
+                        "activity_state": "done"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity completed
+  
+  request: {
+    url: http://localhost:8069/web/crm_activity_completed
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 138,
+                  "feedback": "Feed Back From apui"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 486
+      Set-Cookie: session_id=3b53407d60c63c49acdb7092d5ed2e68f18e8e3b; Expires=Fri, 25-Oct-2024 07:26:43 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Sat, 27 Jul 2024 07:26:43 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_completed_details": {
+                        "id": 138,
+                        "summary": "Api Completeion test with feed back",
+                        "assigned_task_id": null,
+                        "assigned_task_name": null,
+                        "activity_type_id": 4,
+                        "activity_type_name": "To Do",
+                        "additional_assigned_ids": null,
+                        "date_deadline": "2024-07-27",
+                        "user_id": 133,
+                        "user_name": "Mariella Boongaling",
+                        "note": "<p>Sample Note<br></p>",
+                        "activity_state": "done"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

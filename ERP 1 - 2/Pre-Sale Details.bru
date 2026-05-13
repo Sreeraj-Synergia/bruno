@@ -1,0 +1,289 @@
+meta {
+  name: Pre-Sale Details
+  type: http
+  seq: 26
+}
+
+post {
+  url: https://erp.syntrack.app/web/get_user_presales_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "page": 0,
+          "user_lang": "en_us",
+          "data":{
+          
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Pre-Sale Details
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_user_presales_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "page": 0,
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 28 Feb 2025 07:54:03 GMT
+      Content-Length: 4200
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "presales_data": [
+                        {
+                            "presale_id": 83,
+                            "presale_name": "S00083",
+                            "presale_date": "2025-02-27 07:15:04",
+                            "customer_id": 11,
+                            "partner_invoice_id": 11,
+                            "partner_shipping_id": 11,
+                            "origin": null,
+                            "discount_amount": null,
+                            "amount_untaxed": 125,
+                            "amount_tax": 6.25,
+                            "amount_total": 131.25,
+                            "user_id": 2,
+                            "payment_type": "credit",
+                            "state": "Quotation",
+                            "expiry_date": "2025-03-29",
+                            "payment_term_name": "30 Days",
+                            "presale_orderline": [
+                                {
+                                    "product_id": 2811,
+                                    "desc": "ABUSALIM SUNFLOWER SEED ROASTED 25GM",
+                                    "price_unit": 0,
+                                    "product_uom": 27,
+                                    "qty": 125,
+                                    "tax_ids": [
+                                        2
+                                    ],
+                                    "disc_amount": 0,
+                                    "discount_rate": 0,
+                                    "disc_type": null,
+                                    "price_subtotal": 125,
+                                    "price_tax": 6.25,
+                                    "price_total": 131.25,
+                                    "qty_delivered": 0,
+                                    "qty_invoiced": 0,
+                                    "qty_to_invoice": 0,
+                                    "package_id": 1873,
+                                    "package_name": "Bag",
+                                    "package_quantity": 5,
+                                    "order_line_id": 112,
+                                    "lot_details": [],
+                                    "foc_id": null,
+                                    "foc_id_name": null,
+                                    "foc_line_id": null,
+                                    "foc_details": [
+                                        {
+                                            "product_id": 2811,
+                                            "product_name": "ABUSALIM SUNFLOWER SEED ROASTED 25GM",
+                                            "uom_id": null,
+                                            "package_id": 1873,
+                                            "foc_line_id": 6,
+                                            "order_qty": 5,
+                                            "foc_product_id": 2518,
+                                            "foc_product_name": "APRICOT SOFT JUMBO",
+                                            "foc_product_packaging": 1580,
+                                            "foc_product_packaging_name": "Carton",
+                                            "foc_qty": 1,
+                                            "max_foc_qty": 2
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "presale_id": 82,
+                            "presale_name": "S00082",
+                            "presale_date": "2025-02-21 04:55:51",
+                            "customer_id": 11,
+                            "partner_invoice_id": 11,
+                            "partner_shipping_id": 11,
+                            "origin": null,
+                            "discount_amount": null,
+                            "amount_untaxed": 3400,
+                            "amount_tax": 170,
+                            "amount_total": 3570,
+                            "user_id": 2,
+                            "payment_type": "credit",
+                            "state": "Sales Order",
+                            "expiry_date": "2025-03-23",
+                            "payment_term_name": "30 Days",
+                            "presale_orderline": [
+                                {
+                                    "product_id": 2368,
+                                    "desc": "ALMOND BLANCHED DICED 11.34KG",
+                                    "price_unit": 340,
+                                    "product_uom": 12,
+                                    "qty": 113.4,
+                                    "tax_ids": [
+                                        2
+                                    ],
+                                    "disc_amount": 0,
+                                    "discount_rate": 0,
+                                    "disc_type": null,
+                                    "price_subtotal": 3400,
+                                    "price_tax": 170,
+                                    "price_total": 3570,
+                                    "qty_delivered": 113.4,
+                                    "qty_invoiced": 113.4,
+                                    "qty_to_invoice": 0,
+                                    "package_id": 1430,
+                                    "package_name": "Carton",
+                                    "package_quantity": 10,
+                                    "order_line_id": 110,
+                                    "lot_details": [],
+                                    "foc_id": null,
+                                    "foc_id_name": null,
+                                    "foc_line_id": null,
+                                    "foc_details": []
+                                }
+                            ]
+                        },
+                        {
+                            "presale_id": 81,
+                            "presale_name": "S00081",
+                            "presale_date": "2025-02-20 05:44:35",
+                            "customer_id": 11,
+                            "partner_invoice_id": 11,
+                            "partner_shipping_id": 11,
+                            "origin": null,
+                            "discount_amount": null,
+                            "amount_untaxed": 3400,
+                            "amount_tax": 170,
+                            "amount_total": 3570,
+                            "user_id": 2,
+                            "payment_type": "credit",
+                            "state": "Sales Order",
+                            "expiry_date": "2025-03-22",
+                            "payment_term_name": "30 Days",
+                            "presale_orderline": [
+                                {
+                                    "product_id": 2368,
+                                    "desc": "ALMOND BLANCHED DICED 11.34KG",
+                                    "price_unit": 340,
+                                    "product_uom": 12,
+                                    "qty": 113.4,
+                                    "tax_ids": [
+                                        2
+                                    ],
+                                    "disc_amount": 0,
+                                    "discount_rate": 0,
+                                    "disc_type": null,
+                                    "price_subtotal": 3400,
+                                    "price_tax": 170,
+                                    "price_total": 3570,
+                                    "qty_delivered": 113.4,
+                                    "qty_invoiced": 113.4,
+                                    "qty_to_invoice": 0,
+                                    "package_id": 1430,
+                                    "package_name": "Carton",
+                                    "package_quantity": 10,
+                                    "order_line_id": 109,
+                                    "lot_details": [],
+                                    "foc_id": null,
+                                    "foc_id_name": null,
+                                    "foc_line_id": null,
+                                    "foc_details": []
+                                }
+                            ]
+                        },
+                        {
+                            "presale_id": 79,
+                            "presale_name": "S00079",
+                            "presale_date": "2025-02-20 04:14:17",
+                            "customer_id": 11,
+                            "partner_invoice_id": 11,
+                            "partner_shipping_id": 11,
+                            "origin": null,
+                            "discount_amount": null,
+                            "amount_untaxed": 3400,
+                            "amount_tax": 170,
+                            "amount_total": 3570,
+                            "user_id": 2,
+                            "payment_type": "credit",
+                            "state": "Sales Order",
+                            "expiry_date": "2025-03-22",
+                            "payment_term_name": "30 Days",
+                            "presale_orderline": [
+                                {
+                                    "product_id": 2368,
+                                    "desc": "ALMOND BLANCHED DICED 11.34KG",
+                                    "price_unit": 340,
+                                    "product_uom": 12,
+                                    "qty": 113.4,
+                                    "tax_ids": [
+                                        2
+                                    ],
+                                    "disc_amount": 0,
+                                    "discount_rate": 0,
+                                    "disc_type": null,
+                                    "price_subtotal": 3400,
+                                    "price_tax": 170,
+                                    "price_total": 3570,
+                                    "qty_delivered": 113.4,
+                                    "qty_invoiced": 0,
+                                    "qty_to_invoice": 113.4,
+                                    "package_id": 1430,
+                                    "package_name": "Carton",
+                                    "package_quantity": 10,
+                                    "order_line_id": 107,
+                                    "lot_details": [],
+                                    "foc_id": null,
+                                    "foc_id_name": null,
+                                    "foc_line_id": null,
+                                    "foc_details": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

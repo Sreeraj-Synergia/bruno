@@ -1,0 +1,170 @@
+meta {
+  name: Delivery Types
+  type: http
+  seq: 6
+}
+
+post {
+  url: localhost:8070/web/get_delivery_type_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Delivery Types
+  
+  request: {
+    url: localhost:8070/web/get_delivery_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 276
+      Set-Cookie: session_id=fdd016adc2e5b6fddf130a6a4d642af7aa092c8e; Expires=Wed, 11-Dec-2024 05:23:55 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Thu, 12 Sep 2024 05:23:55 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "country_details": [
+                        {
+                            "id": 1,
+                            "name": "Delivery"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Invoice Delivery"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Sample Delivery"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Branch Transfer"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Delivery Types new
+  
+  request: {
+    url: localhost:8070/web/get_delivery_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 567
+      Set-Cookie: session_id=cc178663b1de1f9868f34e4cc155129a56ee7379; Expires=Fri, 03-Jan-2025 23:53:50 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Sat, 05 Oct 2024 23:53:50 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "delivery_type_details": [
+                        {
+                            "id": 1,
+                            "name": "Delivery",
+                            "show_invoice_details": null
+                        },
+                        {
+                            "id": 2,
+                            "name": "Invoice Delivery",
+                            "show_invoice_details": [
+                                {
+                                    "name": "Cash On Delivery",
+                                    "required": true
+                                },
+                                {
+                                    "name": "Credit",
+                                    "required": false
+                                },
+                                {
+                                    "name": "Bill To BIll",
+                                    "required": false
+                                },
+                                {
+                                    "name": "Cash",
+                                    "required": false
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "Sample Delivery",
+                            "show_invoice_details": null
+                        },
+                        {
+                            "id": 4,
+                            "name": "Branch Transfer",
+                            "show_invoice_details": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

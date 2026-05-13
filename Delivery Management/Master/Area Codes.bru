@@ -1,0 +1,78 @@
+meta {
+  name: Area Codes
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://194.195.116.73:8070/web/get_areacode_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Area Codes
+  
+  request: {
+    url: http://194.195.116.73:8070/web/get_areacode_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 221
+      Set-Cookie: session_id=d43f5e4c65da434620c9c0ad16dc05d5e55b5f5d; Expires=Thu, 05-Dec-2024 14:07:51 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 06 Sep 2024 14:07:51 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "areacode_details": [
+                        {
+                            "id": 1,
+                            "name": "Karama",
+                            "code": "KRMA"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Burjman",
+                            "code": "BRJ"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

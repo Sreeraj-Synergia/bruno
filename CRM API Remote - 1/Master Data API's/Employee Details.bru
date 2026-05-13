@@ -1,0 +1,19 @@
+meta {
+  name: Employee Details
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://172.105.55.55:8074/web/get_employee_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}

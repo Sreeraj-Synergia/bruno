@@ -1,0 +1,21 @@
+meta {
+  name: Debug Mode
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://erp.syntrack.app/web/user_debug_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {}
+  }
+}
+
+settings {
+  encodeUrl: true
+}

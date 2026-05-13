@@ -1,0 +1,20 @@
+meta {
+  name: Customer Payments Copy
+  type: http
+  seq: 11
+}
+
+post {
+  url: https://erp.syntrack.app/web/get_customer_payment_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{"customer_id":23969},"page":0,"user_lang":"en_us"}}
+  
+}
+
+settings {
+  encodeUrl: true
+}

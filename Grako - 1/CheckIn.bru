@@ -1,0 +1,35 @@
+meta {
+  name: CheckIn
+  type: http
+  seq: 65
+}
+
+post {
+  url: http://localhost:8090/web/mobilisation_checkin
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "mobilisation_id": 79,
+              "checkin_data": [
+                  {
+                      "emp_code": "59689",
+                      "check_in": "03/12/2025 09:00:00"
+                  },
+                  {
+                      "emp_code": "58870",
+                      "check_in": "03/12/2025 09:00:00"
+                  }
+              ]
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,201 @@
+meta {
+  name: Branch Master Details
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{Gravity URL}}/SynTrack/getBranches
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: GravitySoftnet_YV5jbMLoBzPbqSDJ4AhB1xnN2xmeB74f
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Branch Details
+  
+  request: {
+    url: http://sonasgroup.dyndns.org:3015/SynTrack/getBranches
+    method: GET
+    mode: json
+  }
+  
+  response: {
+    headers: {
+      Content-Security-Policy: default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+      Cross-Origin-Opener-Policy: same-origin
+      Cross-Origin-Resource-Policy: same-origin
+      Origin-Agent-Cluster: ?1
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15552000; includeSubDomains
+      X-Content-Type-Options: nosniff
+      X-DNS-Prefetch-Control: off
+      X-Download-Options: noopen
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-XSS-Protection: 0
+      Access-Control-Allow-Origin: *
+      Access-Control-Allow-Credentials: true
+      Content-Type: application/json; charset=utf-8
+      Content-Length: 1569
+      ETag: W/"621-5O91N8ob5gRCooQkvhdk5tqPGhE"
+      Date: Mon, 30 Jun 2025 05:19:11 GMT
+      Connection: keep-alive
+      Keep-Alive: timeout=5
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "branch": [
+                {
+                    "branch_code": "05",
+                    "branch_name": "SAJJA-HYPER"
+                },
+                {
+                    "branch_code": "06",
+                    "branch_name": "SSM"
+                },
+                {
+                    "branch_code": "07",
+                    "branch_name": "SONA PRD"
+                },
+                {
+                    "branch_code": "08",
+                    "branch_name": "SFI OLD"
+                },
+                {
+                    "branch_code": "09",
+                    "branch_name": "SFI NEW"
+                },
+                {
+                    "branch_code": "10",
+                    "branch_name": "SWP-AJM"
+                },
+                {
+                    "branch_code": "11",
+                    "branch_name": "SWP-SHJ"
+                },
+                {
+                    "branch_code": "12",
+                    "branch_name": "BR-CITY"
+                },
+                {
+                    "branch_code": "13",
+                    "branch_name": "BR-1"
+                },
+                {
+                    "branch_code": "14",
+                    "branch_name": "BR-2"
+                },
+                {
+                    "branch_code": "15",
+                    "branch_name": "BR-3"
+                },
+                {
+                    "branch_code": "16",
+                    "branch_name": "BR-4"
+                },
+                {
+                    "branch_code": "17",
+                    "branch_name": "BR-5"
+                },
+                {
+                    "branch_code": "18",
+                    "branch_name": "BR-6"
+                },
+                {
+                    "branch_code": "19",
+                    "branch_name": "BR-7"
+                },
+                {
+                    "branch_code": "20",
+                    "branch_name": "BR-DXB"
+                },
+                {
+                    "branch_code": "21",
+                    "branch_name": "CKM"
+                },
+                {
+                    "branch_code": "22",
+                    "branch_name": "FROZEN"
+                },
+                {
+                    "branch_code": "24",
+                    "branch_name": "BR-8"
+                },
+                {
+                    "branch_code": "26",
+                    "branch_name": "SONA ROASTERY"
+                },
+                {
+                    "branch_code": "27",
+                    "branch_name": "SDC"
+                },
+                {
+                    "branch_code": "28",
+                    "branch_name": "BR-9"
+                },
+                {
+                    "branch_code": "29",
+                    "branch_name": "Sona Properties"
+                },
+                {
+                    "branch_code": "30",
+                    "branch_name": "CKM VANS"
+                },
+                {
+                    "branch_code": "31",
+                    "branch_name": "SFM"
+                },
+                {
+                    "branch_code": "32",
+                    "branch_name": "LYKA-MANGO SHOP"
+                },
+                {
+                    "branch_code": "33",
+                    "branch_name": "LYKA-LAYIK BR01"
+                },
+                {
+                    "branch_code": "34",
+                    "branch_name": "COUNTER - MADINA EMIRATES CITY"
+                },
+                {
+                    "branch_code": "35",
+                    "branch_name": "COUNTER - ABRAJ MADINA NAHDA"
+                },
+                {
+                    "branch_code": "36",
+                    "branch_name": "ZAHRAT AL BATOOL"
+                },
+                {
+                    "branch_code": "37",
+                    "branch_name": "COUNTER - RICHOOS"
+                },
+                {
+                    "branch_code": "70",
+                    "branch_name": "LAYALI CHOCO BAKES"
+                },
+                {
+                    "branch_code": "71",
+                    "branch_name": "SONAS BR-2-SHJ"
+                }
+            ]
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,29 @@
+meta {
+  name: Replace EMployee
+  type: http
+  seq: 75
+}
+
+post {
+  url: http://localhost:8090/web/mob_emp_replace
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "mobilisation_id": 85,
+              "mob_allocated_emp_id": 346,
+              "replace_employee": 1,
+              "replace_employee_id": 10696,
+              "replacement_reason_id": 1
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

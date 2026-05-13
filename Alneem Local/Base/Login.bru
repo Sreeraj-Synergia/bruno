@@ -1,0 +1,34 @@
+meta {
+  name: Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://194.195.116.73:8069/web/session/mobile_login?db=Syntrack_HRMS
+  body: json
+  auth: inherit
+}
+
+params:query {
+  db: Syntrack_HRMS
+}
+
+body:json {
+  {"params":{"login":"zneem","password":"123456789","device_name":"Test Device","imei_no":"12312323232"}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  | **Params** | **Datatype** |
+  | --- | --- |
+  | login | String |
+  | password | String |
+  | device_name | String |
+  | imei_no | String |
+  
+  Login to Mobile Application
+}

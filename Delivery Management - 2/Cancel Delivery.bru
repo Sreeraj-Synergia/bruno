@@ -1,0 +1,27 @@
+meta {
+  name: Cancel Delivery
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://194.195.116.73:8071/web/cancel_delivery
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "cancel_reason_id": 1,
+              "dispatch_line_id": 29,
+              "dispatch_id": 5
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

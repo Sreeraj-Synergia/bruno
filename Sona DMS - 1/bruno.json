@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Sona DMS - 1",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

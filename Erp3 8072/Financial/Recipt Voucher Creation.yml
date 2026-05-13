@@ -14,49 +14,59 @@ http:
           "data": {
             "payment_details": [
               {
-                "amount": 1000,
+                "amount": 80.0,
+                "batch_loading_id": 0,
+                "check_in_out": "1085",
                 "cheque_reference": "",
                 "currency_id": 128,
-                "date": "2026-05-01",
-                "invoice_id": 43277,
-                "invoice_origin": "INV/2026/01144",
+                "date": "2026-05-04",
+                "dispatch_id": 0,
+                "invoice_id": 43410,
+                "invoice_origin": "INV2026059838",
                 "journal_id": 37,
-                "move_narration": "Electronic",
-                "customer_id": 47622,
+                "move_narration": "ggg",
+                "customer_id": 47628,
+                "payee_id": 0,
                 "payment_method_line_id": 146,
-                "payment_origin": "RVPO174290092712830",
-                "transaction_no": "TCRN484545461",
-                "payment_difference": false,
-                "writeoff_journal_id": false,
-                "writeoff_account_id": false,
-                "writeoff_label": false,
-                "payment_difference_handling": false,
-                "writeoff_type": false
+                "payment_difference": 0.08,
+                "payment_difference_handling": "reconcile",
+                "payment_origin": "RVPO1777896807399_1",
+                "rebate_percent": 0.0,
+                "transaction_no": "",
+                "writeoff_account_id": 1742,
+                "writeoff_journal_id": 64,
+                "writeoff_label": "Write Off",
+                "writeoff_type": "adjustment"
               },
               {
-                "amount": 260,
+                "amount": 5.0,
+                "batch_loading_id": 0,
+                "check_in_out": "1085",
                 "cheque_reference": "",
                 "currency_id": 128,
-                "date": "2026-05-01",
-                "invoice_id": 43277,
-                "invoice_origin": "INV/2026/01144",
+                "date": "2026-05-04",
+                "dispatch_id": 0,
+                "invoice_id": 43410,
+                "invoice_origin": "INV2026059838",
                 "journal_id": 37,
-                "move_narration": "Electronic",
-                "customer_id": 47622,
+                "move_narration": "vgh",
+                "customer_id": 47628,
+                "payee_id": 0,
                 "payment_method_line_id": 146,
-                "payment_origin": "RVPO174290092712831",
-                "transaction_no": "TCRN484545461",
-                "payment_difference": 8.72,
-                "writeoff_journal_id": 64,
+                "payment_difference": 0.08,
+                "payment_difference_handling": "reconcile",
+                "payment_origin": "RVPO1777896807399_2",
+                "rebate_percent": 0.0,
+                "transaction_no": "",
                 "writeoff_account_id": 1742,
+                "writeoff_journal_id": 64,
                 "writeoff_label": "Write Off",
-                "payment_difference_handling": "reconcile", //"open",//"reconcile",
-                "writeoff_type": "rebate" //"rebate"//"adjustment"
+                "writeoff_type": "adjustment"
               }
             ]
-          }
-        },
-        "user_lang": "en_us"
+          },
+          "user_lang": "en_us"
+        }
       }
   auth: inherit
 

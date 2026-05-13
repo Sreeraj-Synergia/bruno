@@ -1,0 +1,46 @@
+meta {
+  name: Update Customer
+  type: http
+  seq: 7
+}
+
+post {
+  url: 192.168.1.119:8070/web/update_customer
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "customer_id": 23911,
+              "addr1": false,
+              "addr2": false,
+              "zip": 2664646,
+              "city": false,
+              "website": false,
+              "email": false,
+              "phone": false,
+              "arabic_name": false,
+              "trn": false,
+              "trade_reg": false,
+              "logo": false,
+              "mobile": false,
+              "payment_type": false,
+              "credit_limit": false,
+              "payment_terms_id": false,
+              "pricelist_id_offline": false,
+              "area_code_id": false,
+              "customer_type": false,
+              "contact_list": [],
+              "latitude": 25.197197,
+              "longitude": 55.2743764
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

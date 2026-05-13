@@ -1,0 +1,264 @@
+meta {
+  name: Create Vendor
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://wms.syntrack.app/web/create_customer?db=WMS_BASE_NEW
+  body: json
+  auth: inherit
+}
+
+params:query {
+  db: WMS_BASE_NEW
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "addr1": "Zabeel Street ",
+              "addr2": "12 B",
+              "city": "Al Karama",
+              "country_id": 2,
+              "country_name": "United Arab Emirates",
+              "currency_id": 131,
+              "customer_rank": false,
+              "email": "darjeeling@gmail.com",
+              "mobile": "056356669",
+              "name": "Darjeeling Cafe ",
+              "phone": "056642336",
+              "state_id": 548,
+              "state_name": "Dubai",
+              "supplier_rank": true,
+              "trn": "TRN 578990",
+              "website": "www.darjeeling.com",
+              "zip": "053326"
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Create Vendor
+  
+  request: {
+    url: https://wms.syntrack.app/web/create_customer?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "addr1": "Zabeel Street ",
+                  "addr2": "12 B",
+                  "city": "Al Karama",
+                  "country_id": 2,
+                  "country_name": "United Arab Emirates",
+                  "currency_id": 131,
+                  "customer_rank": false,
+                  "email": "darjeeling@gmail.com",
+                  "mobile": "056356669",
+                  "name": "Darjeeling Cafe ",
+                  "phone": "056642336",
+                  "state_id": 548,
+                  "state_name": "Dubai",
+                  "supplier_rank": true,
+                  "trn": "TRN 578990",
+                  "website": "www.darjeeling.com",
+                  "zip": "053326"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 06:38:45 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 06:38:45 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "partner_details": {
+                        "customer_id": 23,
+                        "name": "Darjeeling Cafe ",
+                        "street": "Zabeel Street ",
+                        "street2": "12 B",
+                        "city": "Al Karama",
+                        "zip": "053326",
+                        "customer_ref": null,
+                        "country": "United Arab Emirates",
+                        "country_id": 2,
+                        "country_name": "United Arab Emirates",
+                        "state_id": 548,
+                        "state_name": "Dubai",
+                        "currency": "AED",
+                        "currency_id": 131,
+                        "email": "darjeeling@gmail.com",
+                        "website": "http://www.darjeeling.com",
+                        "phone": "056642336",
+                        "trade_reg": null,
+                        "trn": "TRN 578990",
+                        "latitude": null,
+                        "longitude": null,
+                        "credit_limit": null,
+                        "payment_term_id": null,
+                        "payment_term_name": null,
+                        "customer_type": "Company",
+                        "logo_url": "http://172.105.51.175:8081/web/url_image/res.partner/23/image_1920",
+                        "active": true,
+                        "arabic_name": null,
+                        "contact_name": null,
+                        "contact_phone": null,
+                        "mobile": "056356669",
+                        "customer": true,
+                        "contact_list": []
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Create Vendor
+  
+  request: {
+    url: https://wms.syntrack.app/web/create_customer?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "addr1": "Zabeel Street ",
+                  "addr2": "12 B",
+                  "city": "Al Karama",
+                  "country_id": 2,
+                  "country_name": "United Arab Emirates",
+                  "currency_id": 131,
+                  "customer_rank": false,
+                  "email": "darjeeling@gmail.com",
+                  "mobile": "056356669",
+                  "name": "Darjeeling Cafe ",
+                  "phone": "056642336",
+                  "state_id": 548,
+                  "state_name": "Dubai",
+                  "supplier_rank": true,
+                  "trn": "TRN 578990",
+                  "website": "www.darjeeling.com",
+                  "zip": "053326"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 06:38:45 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 06:38:45 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "partner_details": {
+                        "customer_id": 23,
+                        "name": "Darjeeling Cafe ",
+                        "street": "Zabeel Street ",
+                        "street2": "12 B",
+                        "city": "Al Karama",
+                        "zip": "053326",
+                        "customer_ref": null,
+                        "country": "United Arab Emirates",
+                        "country_id": 2,
+                        "country_name": "United Arab Emirates",
+                        "state_id": 548,
+                        "state_name": "Dubai",
+                        "currency": "AED",
+                        "currency_id": 131,
+                        "email": "darjeeling@gmail.com",
+                        "website": "http://www.darjeeling.com",
+                        "phone": "056642336",
+                        "trade_reg": null,
+                        "trn": "TRN 578990",
+                        "latitude": null,
+                        "longitude": null,
+                        "credit_limit": null,
+                        "payment_term_id": null,
+                        "payment_term_name": null,
+                        "customer_type": "Company",
+                        "logo_url": "http://172.105.51.175:8081/web/url_image/res.partner/23/image_1920",
+                        "active": true,
+                        "arabic_name": null,
+                        "contact_name": null,
+                        "contact_phone": null,
+                        "mobile": "056356669",
+                        "customer": true,
+                        "contact_list": []
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

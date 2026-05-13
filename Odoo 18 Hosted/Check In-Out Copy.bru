@@ -1,0 +1,38 @@
+meta {
+  name: Check In/Out Copy
+  type: http
+  seq: 9
+}
+
+post {
+  url: https://erp.syntrack.app/web/update_user_checkins
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "lat": "25.15154515",
+              "lng": "55.15154515",
+              "type": "checkin"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  | **Params** | **Datatype** |
+  | --- | --- |
+  | login | String |
+  | password | String |
+  | device_name | String |
+  | imei_no | String |
+  
+  Login to Mobile Application
+}

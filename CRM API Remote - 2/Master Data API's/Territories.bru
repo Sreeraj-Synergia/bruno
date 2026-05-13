@@ -1,0 +1,79 @@
+meta {
+  name: Territories
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8069/web/get_territory_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Territories
+  
+  request: {
+    url: http://localhost:8069/web/get_territory_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 338
+      Set-Cookie: session_id=5c3ca46c86c87dc929486e914d344aceef2da3e9; Expires=Sun, 22-Sep-2024 08:57:33 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 24 Jun 2024 08:57:33 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "territories": [
+                        {
+                            "id": 1,
+                            "name": "Barsha",
+                            "code": "BS",
+                            "employee_id": 328,
+                            "employee_name": "Lance Dsouza",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "job_id": 117,
+                            "job_name": "Finance Manager UAE & KSA"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

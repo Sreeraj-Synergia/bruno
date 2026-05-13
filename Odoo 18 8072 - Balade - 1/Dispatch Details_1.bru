@@ -1,0 +1,23 @@
+meta {
+  name: Dispatch Details_1
+  type: http
+  seq: 55
+}
+
+post {
+  url: http://83.111.180.137:8069/web/get_dispatch_order_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{
+      "data": {
+          
+          }
+  }}
+}
+
+settings {
+  encodeUrl: true
+}

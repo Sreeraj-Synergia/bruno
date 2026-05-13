@@ -1,0 +1,28 @@
+meta {
+  name: Dispatch Line Start Journey
+  type: http
+  seq: 14
+}
+
+post {
+  url: http://194.195.116.73:8071/web/get_dispatch_line_start
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "dispatch_line_id": 114,
+              "journey_start_datetime": "2024-07-19 10:10:10",
+              "journey_start_latitude": 44.5454,
+              "journey_start_longitude": 25.54545
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

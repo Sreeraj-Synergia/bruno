@@ -1,0 +1,99 @@
+meta {
+  name: Employee Leave Allocation
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8070/web/get_employee_leave_allocation_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{
+      "employee_id": 45
+  }}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Employee Leave Allocation
+  
+  request: {
+    url: http://localhost:8070/web/get_employee_leave_allocation_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{"data":{
+          "employee_id": 45
+      }}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 03 Feb 2026 07:38:56 GMT
+      Content-Length: 740
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=7_C6jNbimIZnXyOd9yu9kCKVto6Ky-eITKccLs_Q2_YQ4bGn6PwT2p8ZlCz-BXp1fQ6_JBsc4ONE1COMRgaa; Expires=Wed, 03 Feb 2027 07:38:56 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "leave_allocation_details": [
+                        {
+                            "id": 198,
+                            "name": "AL2026020032",
+                            "holiday_status_id": 15,
+                            "holiday_status_name": "Paid Time Off - UAE",
+                            "allocation_type": "regular",
+                            "date_from": "2025-05-01",
+                            "date_to": "2026-04-30",
+                            "opening_balance": 10,
+                            "number_of_days_display": 5,
+                            "employee_id": 45,
+                            "employee_name": "Saravanan",
+                            "department_id": 7,
+                            "department_name": "Administration",
+                            "job_id": 20,
+                            "job_name": "Operation Manager",
+                            "manager_id": 43,
+                            "manager_name": "Administrator",
+                            "contract_id": null,
+                            "contract_name": null,
+                            "total_utilised_leave": null,
+                            "total_remaining_leave": 5,
+                            "leaves_accrued": null,
+                            "leave_history": null
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,35 @@
+meta {
+  name: Reschedule
+  type: http
+  seq: 64
+}
+
+post {
+  url: http://localhost:8090/web/mobilisation_reschedule
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "mobilisation_id": 73,
+              "reschedule_reason_id": 5,
+              "reschedule_date": "17/12/2025",
+              "reschedule_user_id": 2,
+              "reschedule_info": [
+                  {
+                      "id": 45,
+                      "reschedule_start_date": "17/12/2025",
+                      "reschedule_end_date": "20/12/2025"
+                  }
+              ]
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

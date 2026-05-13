@@ -1,0 +1,79 @@
+meta {
+  name: Database
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://saudimotors.syntrack.app/web/database_list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {}
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get Database Instance
+}
+
+example {
+  name: Database
+  
+  request: {
+    url: https://saudimotors.syntrack.app/web/database_list
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Fri, 28 Feb 2025 13:25:17 GMT
+      Content-Type: application/json
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=0075708057ed41948de70b98eda487ba103b7b64; Expires=Thu, 29-May-2025 13:25:17 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "database_list": [
+                        "Production_Latest"
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

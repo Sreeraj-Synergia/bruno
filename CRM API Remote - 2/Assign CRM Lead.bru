@@ -1,0 +1,26 @@
+meta {
+  name: Assign CRM Lead
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://172.105.55.55:8074/web/crm_lead_assign
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "lead_id": 313
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

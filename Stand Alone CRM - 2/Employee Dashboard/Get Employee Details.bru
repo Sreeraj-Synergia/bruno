@@ -1,0 +1,161 @@
+meta {
+  name: Get Employee Details
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8070/web/get_employee_details_for_dashboard
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{
+      "employee_id": false
+  }}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Get Employee Details
+  
+  request: {
+    url: http://localhost:8070/web/get_employee_details_for_dashboard
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{"data":{}}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 21 Jan 2026 13:11:53 GMT
+      Content-Length: 2510
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "employee_dashboard_details": {
+                        "id": 24,
+                        "name": "Omar Abdalla",
+                        "street": "Office No: 308, Business Venue Building",
+                        "street2": "Oud Metha",
+                        "city": null,
+                        "state_id": 548,
+                        "state_name": "Dubai",
+                        "country_id": 2,
+                        "country_name": "United Arab Emirates",
+                        "zip": null,
+                        "department_id": 3,
+                        "department_name": "Sales Department",
+                        "job_id": 27,
+                        "job_name": "Sales Executive",
+                        "job_position_title": "Sales Executive",
+                        "work_phone": "+971508922937",
+                        "work_mobile": null,
+                        "work_email": "omar@gmail.com",
+                        "user_id": 28,
+                        "user_name": "Omar Abdalla",
+                        "radius_restriction_not_applicable": false,
+                        "radius_restriction_skip": false,
+                        "employee_photo": "http://localhost:8070/web/url_image/hr.employee/24/image_1920",
+                        "face_image": null,
+                        "face_enroll": null,
+                        "check_in_time": null,
+                        "check_out_time": null,
+                        "documents": null,
+                        "subordinates": [
+                            {
+                                "id": 41,
+                                "name": "Riham",
+                                "street": "Office No: 308, Business Venue Building",
+                                "street2": "Oud Metha",
+                                "city": null,
+                                "state_id": 548,
+                                "state_name": "Dubai",
+                                "country_id": 2,
+                                "country_name": "United Arab Emirates",
+                                "zip": null,
+                                "department_id": 4,
+                                "department_name": "Inventory and Warehouse",
+                                "job_id": 30,
+                                "job_name": "Inventory Manager",
+                                "job_position_title": "Inventory Manager",
+                                "work_phone": "+971508922937",
+                                "work_mobile": null,
+                                "work_email": null,
+                                "user_id": null,
+                                "user_name": null,
+                                "radius_restriction_not_applicable": false,
+                                "radius_restriction_skip": false,
+                                "employee_photo": "http://localhost:8070/web/url_image/hr.employee/41/image_1920",
+                                "face_image": null,
+                                "face_enroll": null,
+                                "check_in_time": null,
+                                "check_out_time": null,
+                                "documents": null
+                            },
+                            {
+                                "id": 34,
+                                "name": "Simon Jones",
+                                "street": "Office No: 308, Business Venue Building",
+                                "street2": "Oud Metha",
+                                "city": null,
+                                "state_id": 548,
+                                "state_name": "Dubai",
+                                "country_id": 2,
+                                "country_name": "United Arab Emirates",
+                                "zip": null,
+                                "department_id": 9,
+                                "department_name": "Research & Development",
+                                "job_id": 39,
+                                "job_name": "Experienced Developer",
+                                "job_position_title": "Experienced Developer",
+                                "work_phone": "(555)-768-6230",
+                                "work_mobile": "(555)-768-6235",
+                                "work_email": "jones@mycompany.example.com",
+                                "user_id": null,
+                                "user_name": null,
+                                "radius_restriction_not_applicable": false,
+                                "radius_restriction_skip": false,
+                                "employee_photo": "http://localhost:8070/web/url_image/hr.employee/34/image_1920",
+                                "face_image": null,
+                                "face_enroll": null,
+                                "check_in_time": null,
+                                "check_out_time": null,
+                                "documents": null
+                            }
+                        ]
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

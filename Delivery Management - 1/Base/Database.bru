@@ -1,0 +1,73 @@
+meta {
+  name: Database
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://194.195.116.73:8069/web/database_list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get Database Instance
+}
+
+example {
+  name: Database
+  
+  request: {
+    url: http://194.195.116.73:8070/web/database_list
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 142
+      Set-Cookie: session_id=77868c19f24ec98fe5604f368e59ade6a68f3fcd; Expires=Wed, 11-Dec-2024 08:06:26 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Thu, 12 Sep 2024 08:06:26 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "database_list": [
+                        "HRMS_TEST2"
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

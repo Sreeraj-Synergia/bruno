@@ -1,0 +1,141 @@
+meta {
+  name: Dispatch Order Cancel Reasons
+  type: http
+  seq: 13
+}
+
+post {
+  url: 192.168.1.119:8072/web/get_direct_deliver_cancel_reasons
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {}
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Dispatch Order Cancel Reasons
+  
+  request: {
+    url: 192.168.1.119:8072/web/get_direct_deliver_cancel_reasons
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 09 Jun 2025 10:29:53 GMT
+      Content-Length: 283
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "direct_delivery_cancel_reasons": [
+                        {
+                            "id": 1,
+                            "name": "Customer asked to deliver later as the time is exceeded"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Customer Does not require the deliery"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Dispatch Order Cancel Reasons
+  
+  request: {
+    url: 192.168.1.119:8072/web/get_direct_deliver_cancel_reasons
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 09 Jun 2025 10:29:53 GMT
+      Content-Length: 283
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "direct_delivery_cancel_reasons": [
+                        {
+                            "id": 1,
+                            "name": "Customer asked to deliver later as the time is exceeded"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Customer Does not require the deliery"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

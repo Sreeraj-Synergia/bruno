@@ -1,0 +1,184 @@
+meta {
+  name: Complete Tasks
+  type: http
+  seq: 25
+}
+
+post {
+  url: http://localhost:8069/web/do_complete_task
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "task_id": 1235
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Accept CRM Lead Copy
+  
+  request: {
+    url: http://localhost:8069/web/do_complete_task
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "task_id": 1235
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 730
+      Set-Cookie: session_id=51968d47e0e0af5f98ae41eb7f9710bbebee2382; Expires=Tue, 01-Oct-2024 07:36:16 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Wed, 03 Jul 2024 07:36:16 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "completed_task_details": {
+                        "id": 1235,
+                        "name": "T20240703-888",
+                        "task": "Identify TCS ( Total customer spend)",
+                        "type": "task",
+                        "partner_id": 1720,
+                        "partner_name": "Qadar Express",
+                        "assigned_id": 328,
+                        "assigned_name": "Lance Dsouza",
+                        "assigned_by": 331,
+                        "assigned_by_name": "Mariella Boongaling",
+                        "date_assigned": "2024-07-03",
+                        "deadline": "2024-07-04",
+                        "completion_date": "2024-07-03",
+                        "create_date": "2024-07-03 06:51:10.261376",
+                        "is_mandatory": true,
+                        "priority": "3",
+                        "created_crm_lead_id": 188,
+                        "parent_id": null,
+                        "parent_name": null,
+                        "reason": null,
+                        "description": null,
+                        "status_id": 3,
+                        "status_name": "Completed"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Accept CRM Lead Copy
+  
+  request: {
+    url: http://localhost:8069/web/do_complete_task
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "task_id": 1235
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 730
+      Set-Cookie: session_id=51968d47e0e0af5f98ae41eb7f9710bbebee2382; Expires=Tue, 01-Oct-2024 07:36:16 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Wed, 03 Jul 2024 07:36:16 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "completed_task_details": {
+                        "id": 1235,
+                        "name": "T20240703-888",
+                        "task": "Identify TCS ( Total customer spend)",
+                        "type": "task",
+                        "partner_id": 1720,
+                        "partner_name": "Qadar Express",
+                        "assigned_id": 328,
+                        "assigned_name": "Lance Dsouza",
+                        "assigned_by": 331,
+                        "assigned_by_name": "Mariella Boongaling",
+                        "date_assigned": "2024-07-03",
+                        "deadline": "2024-07-04",
+                        "completion_date": "2024-07-03",
+                        "create_date": "2024-07-03 06:51:10.261376",
+                        "is_mandatory": true,
+                        "priority": "3",
+                        "created_crm_lead_id": 188,
+                        "parent_id": null,
+                        "parent_name": null,
+                        "reason": null,
+                        "description": null,
+                        "status_id": 3,
+                        "status_name": "Completed"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

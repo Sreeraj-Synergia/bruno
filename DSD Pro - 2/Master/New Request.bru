@@ -1,0 +1,19 @@
+meta {
+  name: New Request
+  type: http
+  seq: 12
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_stock_internal_locations
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,335 @@
+meta {
+  name: Activity Creation
+  type: http
+  seq: 18
+}
+
+post {
+  url: http://localhost:8069/web/create_crm_activity
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "activity_type_id": 2,
+              "date_deadline": "2024-07-19",
+              "summary": "Call The Customer",
+              "res_id": 304,
+              "additional_assigned_ids": [100],
+              "user_id": false,
+              "note": "Call At 9 o Clock",
+              "assigned_task_id": 1327,
+              "employee_task": false,
+              "employee_id": false
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Activity Creation For CRM / Task
+  
+  request: {
+    url: http://localhost:8069/web/create_crm_activity
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_type_id": 2,
+                  "date_deadline": "2024-07-19",
+                  "summary": "Call The Customer",
+                  "res_id": 225,
+                  "additional_assigned_ids": [],
+                  "user_id": false,
+                  "note": "Call At 9 o Clock",
+                  "assigned_task_id": 1327,
+                  "employee_task": false,
+                  "employee_id": false
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 421
+      Set-Cookie: session_id=3b53407d60c63c49acdb7092d5ed2e68f18e8e3b; Expires=Thu, 17-Oct-2024 10:22:19 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 19 Jul 2024 10:22:19 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "create_activity_details": {
+                        "id": 540,
+                        "summary": "Call The Customer",
+                        "assigned_task_id": 1327,
+                        "assigned_task_name": "T20240709-980",
+                        "activity_type_id": 2,
+                        "activity_type_name": "Call",
+                        "additional_assigned_ids": null,
+                        "date_deadline": "2024-07-19",
+                        "user_id": 96,
+                        "user_name": "Lance Dsouza",
+                        "note": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Creation For employee
+  
+  request: {
+    url: http://localhost:8069/web/create_crm_activity
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_type_id": 2,
+                  "date_deadline": "2024-07-19",
+                  "summary": "Call The Customer",
+                  "user_id": 127,
+                  "note": "Call At 9 o Clock",
+                  "assigned_task_id": 1327,
+                  "employee_task": true,
+                  "employee_id": 314
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 430
+      Set-Cookie: session_id=3b53407d60c63c49acdb7092d5ed2e68f18e8e3b; Expires=Thu, 17-Oct-2024 10:27:02 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 19 Jul 2024 10:27:02 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "create_activity_details": {
+                        "id": 542,
+                        "summary": "Call The Customer",
+                        "assigned_task_id": 1327,
+                        "assigned_task_name": "T20240709-980",
+                        "activity_type_id": 2,
+                        "activity_type_name": "Call",
+                        "additional_assigned_ids": null,
+                        "date_deadline": "2024-07-19",
+                        "user_id": 127,
+                        "user_name": "Analyn Badua",
+                        "note": "<p>127</p>"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Creation For employee
+  
+  request: {
+    url: http://localhost:8069/web/create_crm_activity
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_type_id": 2,
+                  "date_deadline": "2024-07-19",
+                  "summary": "Call The Customer",
+                  "user_id": 127,
+                  "note": "Call At 9 o Clock",
+                  "assigned_task_id": 1327,
+                  "employee_task": true,
+                  "employee_id": 314
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 430
+      Set-Cookie: session_id=3b53407d60c63c49acdb7092d5ed2e68f18e8e3b; Expires=Thu, 17-Oct-2024 10:27:02 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 19 Jul 2024 10:27:02 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "create_activity_details": {
+                        "id": 542,
+                        "summary": "Call The Customer",
+                        "assigned_task_id": 1327,
+                        "assigned_task_name": "T20240709-980",
+                        "activity_type_id": 2,
+                        "activity_type_name": "Call",
+                        "additional_assigned_ids": null,
+                        "date_deadline": "2024-07-19",
+                        "user_id": 127,
+                        "user_name": "Analyn Badua",
+                        "note": "<p>127</p>"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Creation For CRM / Task
+  
+  request: {
+    url: http://localhost:8069/web/create_crm_activity
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_type_id": 2,
+                  "date_deadline": "2024-07-19",
+                  "summary": "Call The Customer",
+                  "res_id": 225,
+                  "additional_assigned_ids": [],
+                  "user_id": false,
+                  "note": "Call At 9 o Clock",
+                  "assigned_task_id": 1327,
+                  "employee_task": false,
+                  "employee_id": false
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 421
+      Set-Cookie: session_id=3b53407d60c63c49acdb7092d5ed2e68f18e8e3b; Expires=Thu, 17-Oct-2024 10:22:19 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Fri, 19 Jul 2024 10:22:19 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "create_activity_details": {
+                        "id": 540,
+                        "summary": "Call The Customer",
+                        "assigned_task_id": 1327,
+                        "assigned_task_name": "T20240709-980",
+                        "activity_type_id": 2,
+                        "activity_type_name": "Call",
+                        "additional_assigned_ids": null,
+                        "date_deadline": "2024-07-19",
+                        "user_id": 96,
+                        "user_name": "Lance Dsouza",
+                        "note": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

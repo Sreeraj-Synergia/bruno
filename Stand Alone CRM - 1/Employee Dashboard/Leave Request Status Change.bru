@@ -1,0 +1,196 @@
+meta {
+  name: Leave Request Status Change
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8070/web/employee_request_leave_status_change
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "leave_request_id": 111,
+              "status": "refuse"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Leave Request Status Change - Approve
+  
+  request: {
+    url: http://localhost:8070/web/employee_request_leave_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "leave_request_id": 111,
+                  "status": "approve"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 03 Feb 2026 12:56:24 GMT
+      Content-Length: 943
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "leave_request_details": {
+                        "id": 111,
+                        "name": "Saravanan on Compensatory time off: 8:00 hours (04/02/2026 to 04/02/2026)",
+                        "employee_id": 45,
+                        "employee_name": "Saravanan",
+                        "barcode": null,
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "department_id": 7,
+                        "department_name": "Administration",
+                        "job_id": 20,
+                        "job_name": "Operation Manager",
+                        "manager_id": null,
+                        "manager_name": null,
+                        "leave_type_id": 23,
+                        "leave_type_name": "Compensatory time off",
+                        "request_date_from": "2026-02-04",
+                        "request_date_to": "2026-02-04",
+                        "request_unit_half": null,
+                        "request_unit_hours": null,
+                        "request_hour_from": null,
+                        "request_hour_to": null,
+                        "duration": "8:00 hours",
+                        "total_weekend": null,
+                        "total_accrued_leave": 5,
+                        "total_utilised_leave": null,
+                        "total_remaining_leave": 5,
+                        "description": "*****",
+                        "state": "validate"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Leave Request Status Change - Refuse
+  
+  request: {
+    url: http://localhost:8070/web/employee_request_leave_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "leave_request_id": 111,
+                  "status": "refuse"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 03 Feb 2026 12:59:14 GMT
+      Content-Length: 941
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "leave_request_details": {
+                        "id": 111,
+                        "name": "Saravanan on Compensatory time off: 8:00 hours (04/02/2026 to 04/02/2026)",
+                        "employee_id": 45,
+                        "employee_name": "Saravanan",
+                        "barcode": null,
+                        "company_id": 1,
+                        "company_name": "Synergia Softwares IT infrastructure LLC",
+                        "department_id": 7,
+                        "department_name": "Administration",
+                        "job_id": 20,
+                        "job_name": "Operation Manager",
+                        "manager_id": null,
+                        "manager_name": null,
+                        "leave_type_id": 23,
+                        "leave_type_name": "Compensatory time off",
+                        "request_date_from": "2026-02-04",
+                        "request_date_to": "2026-02-04",
+                        "request_unit_half": null,
+                        "request_unit_hours": null,
+                        "request_hour_from": null,
+                        "request_hour_to": null,
+                        "duration": "8:00 hours",
+                        "total_weekend": null,
+                        "total_accrued_leave": 5,
+                        "total_utilised_leave": null,
+                        "total_remaining_leave": 5,
+                        "description": "*****",
+                        "state": "refuse"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,102 @@
+meta {
+  name: Customers
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://194.195.116.73:8071/web/get_delivery_customers
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Customers
+  
+  request: {
+    url: http://194.195.116.73:8070/web/get_delivery_customers
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 888
+      Set-Cookie: session_id=77868c19f24ec98fe5604f368e59ade6a68f3fcd; Expires=Wed, 11-Dec-2024 08:07:11 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Thu, 12 Sep 2024 08:07:11 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "delivery_customers": [
+                        {
+                            "customer_id": 1340,
+                            "name": "Prime Logisitcs LLC",
+                            "street": "Warehouse G section 5",
+                            "street2": "Airport freezone",
+                            "city": null,
+                            "zip": null,
+                            "state_id": null,
+                            "state_name": null,
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "email": null,
+                            "website": null,
+                            "phone": null,
+                            "mobile": null,
+                            "trn": null,
+                            "trade_reg": null,
+                            "latitude": null,
+                            "longitude": null,
+                            "customer_ref": null,
+                            "logo_url": "http://194.195.116.73:8070/web/url_image/res.partner/1340/image_1920",
+                            "arabic_name": null,
+                            "customer": true,
+                            "supplier": false,
+                            "contact_list": [],
+                            "area_code_id": null,
+                            "area_code_code": null,
+                            "area_code_name": null,
+                            "sales_person_ids": [],
+                            "sales_executive_ids": [],
+                            "sales_supervisor_ids": [],
+                            "delivery_person_ids": [],
+                            "is_contact": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

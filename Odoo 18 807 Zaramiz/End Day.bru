@@ -1,0 +1,28 @@
+meta {
+  name: End Day
+  type: http
+  seq: 55
+}
+
+post {
+  url: 192.168.1.119:8071/web/end_customer_visit
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "check_in_out": 321,
+              "end_date": "2025-06-26 20:00:00",
+              "cancel_reason_id": 2
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

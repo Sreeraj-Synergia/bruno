@@ -1,0 +1,121 @@
+meta {
+  name: Logout
+  type: http
+  seq: 4
+}
+
+post {
+  url: 192.168.1.119:8072/web/session/mobile_logout
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{}}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Logout
+  
+  request: {
+    url: http://localhost:8070/web/session/mobile_logout
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{"data":{}}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 22 Jan 2025 08:12:03 GMT
+      Content-Length: 147
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: cids=; Expires=Thu, 22 Jan 2026 08:12:03 GMT; Max-Age=0; Path=/
+      Set-Cookie: session_id=jmaYCgITnRk_TR1pHAmKf3AxV_RpZOnzPIa26D2q53PXI3PuI7Ebpfob0UuDQl-6myShVyK6aEt9IB3MFZKb; Expires=Thu, 22 Jan 2026 08:12:03 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "message": "Logged out Successfully"
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Logout
+  
+  request: {
+    url: http://localhost:8070/web/session/mobile_logout
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{"data":{}}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 22 Jan 2025 08:12:03 GMT
+      Content-Length: 147
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: cids=; Expires=Thu, 22 Jan 2026 08:12:03 GMT; Max-Age=0; Path=/
+      Set-Cookie: session_id=jmaYCgITnRk_TR1pHAmKf3AxV_RpZOnzPIa26D2q53PXI3PuI7Ebpfob0UuDQl-6myShVyK6aEt9IB3MFZKb; Expires=Thu, 22 Jan 2026 08:12:03 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "message": "Logged out Successfully"
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

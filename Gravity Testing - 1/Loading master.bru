@@ -1,0 +1,143 @@
+meta {
+  name: Loading master
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{Gravity URL}}/SynTrack/getLoadingHead
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: GravitySoftnet_YV5jbMLoBzPbqSDJ4AhB1xnN2xmeB74f
+}
+
+body:json {
+  {
+      "A_VocTyp": "LD001",
+      "A_VocNo": "LDSDC63340"
+  } 
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Loading Master
+  
+  request: {
+    url: http://sonasgroup.dyndns.org:3015/SynTrack/getLoadingHead
+    method: POST
+    mode: json
+    body:json: {
+      {
+      "A_VocTyp": "LD001",
+      "A_VocNo": "LDSDC63340"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Security-Policy: default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+      Cross-Origin-Opener-Policy: same-origin
+      Cross-Origin-Resource-Policy: same-origin
+      Origin-Agent-Cluster: ?1
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15552000; includeSubDomains
+      X-Content-Type-Options: nosniff
+      X-DNS-Prefetch-Control: off
+      X-Download-Options: noopen
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-XSS-Protection: 0
+      Access-Control-Allow-Origin: *
+      Access-Control-Allow-Credentials: true
+      Content-Type: application/json; charset=utf-8
+      Content-Length: 1248
+      ETag: W/"4e0-u/73PaGBkSWzl/S3wvfuFMudnrk"
+      Date: Mon, 30 Jun 2025 05:26:06 GMT
+      Connection: keep-alive
+      Keep-Alive: timeout=5
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "head": [
+                {
+                    "loading_note_number": "LD001LDSDC63340",
+                    "generated_date": "2025-01-06T00:00:00.000Z",
+                    "driver_name": "TRUCK 001",
+                    "route_name": "",
+                    "number_of_deliveries": 4
+                }
+            ],
+            "detail": [
+                {
+                    "loading_note_number": "LD001LDSDC63340",
+                    "generated_date": "2025-01-06T00:00:00.000Z",
+                    "driver_name": "TRUCK 001",
+                    "route_name": "",
+                    "customer_code": "D15544",
+                    "customer_name": "ADVIK INTERNATIONAL FZE",
+                    "branch_code": "27",
+                    "branch_name": "SDC",
+                    "invoice_number": "WS001SISD316943",
+                    "invoice_date": "2025-01-05",
+                    "sales_order_number": "",
+                    "sales_order_date": "",
+                    "payment_type": "CREDIT",
+                    "delivery_lines": 481.95
+                },
+                {
+                    "customer_code": "D4288",
+                    "customer_name": "AL NOOR ROASTERY-AL NAHDA",
+                    "branch_code": "27",
+                    "branch_name": "SDC",
+                    "invoice_number": "WS001SISD317021",
+                    "invoice_date": "2025-01-05",
+                    "sales_order_number": "",
+                    "sales_order_date": "",
+                    "payment_type": "CREDIT",
+                    "payment_value": 5425.35
+                },
+                {
+                    "customer_code": "D4291",
+                    "customer_name": "AL NOOR ROASTERY-AL NAHDA (CASH SALES)",
+                    "branch_code": "27",
+                    "branch_name": "SDC",
+                    "invoice_number": "WS001SISD317026",
+                    "invoice_date": "2025-01-05",
+                    "sales_order_number": "",
+                    "sales_order_date": "",
+                    "payment_type": "CREDIT",
+                    "payment_value": 127.575
+                },
+                {
+                    "customer_code": "D14561",
+                    "customer_name": "NAJM AL LAIL CAFATERIA ",
+                    "branch_code": "27",
+                    "branch_name": "SDC",
+                    "invoice_number": "WS001SISD317078",
+                    "invoice_date": "2025-01-05",
+                    "sales_order_number": "",
+                    "sales_order_date": "",
+                    "payment_type": "CREDIT",
+                    "payment_value": 151.725
+                }
+            ]
+        }
+      '''
+    }
+  }
+}

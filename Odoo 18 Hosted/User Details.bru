@@ -1,0 +1,259 @@
+meta {
+  name: User Details
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://erp.syntrack.app/web/user_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{}}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: User Details
+  
+  request: {
+    url: https://erp.syntrack.app/web/user_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{"data":{}}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 29 Jan 2025 08:13:06 GMT
+      Content-Type: application/json; charset=utf-8
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=aWrJw7VrKNj8DL4oYsrY2R6igYgYoK6dHWKoVtoDRetQovCSflc90GRCBiuPdoFRwzL0LmXboKim5Ef5CS2-; Expires=Thu, 29 Jan 2026 08:13:06 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_details": {
+                        "user_name": "Sales User 2",
+                        "user_id": 10,
+                        "login_id": "sales2",
+                        "logo_url": "http://erp.syntrack.app/web/image/res.users/10/image_1920",
+                        "user_signature": "http://erp.syntrack.app/web/image/res.users/10/user_signature",
+                        "emlpoyee_id": 7,
+                        "emlpoyee_name": "Sales User 2",
+                        "manager": "Sales Supervisor",
+                        "department": "Sales Department",
+                        "job_pos": "Sales Executive",
+                        "work_phone": "+971508922937",
+                        "work_mobile": null,
+                        "work_email": "sales2",
+                        "logo": "http://erp.syntrack.app/web/image/res.company/1/logo",
+                        "contact_us_link": false,
+                        "about_us_link": false,
+                        "faq_link": false,
+                        "allow_geofencing": false,
+                        "geofencing_perimeter": null,
+                        "google_api_key": null,
+                        "support_email": null,
+                        "currency_ids": [
+                            {
+                                "currency_id": 128,
+                                "symbol": "AED",
+                                "position": "after",
+                                "digits": [
+                                    69,
+                                    4
+                                ]
+                            },
+                            {
+                                "currency_id": 1,
+                                "symbol": "$",
+                                "position": "before",
+                                "digits": [
+                                    69,
+                                    4
+                                ]
+                            }
+                        ],
+                        "return_reasons": [],
+                        "stock_location_id": null,
+                        "stock_location_name": null,
+                        "resellable_location_id": null,
+                        "resellable_location_name": null,
+                        "non_resellable_location_id": null,
+                        "non_resellable_location_name": null,
+                        "show_company": false,
+                        "show_offline_export": false,
+                        "allow_user_location_tracking": false,
+                        "show_direct_cust_inv": false,
+                        "show_pricelist_mobile": false,
+                        "show_price_check": false,
+                        "allow_fixed_pricelist_in_sale": false,
+                        "show_customers": false,
+                        "show_edit_mob_cust": false,
+                        "show_mob_presales": false,
+                        "show_liquidation": false,
+                        "show_day_close_report": false,
+                        "show_req_special_price": false,
+                        "allow_disc_in_sales": false,
+                        "allow_sales_history": false,
+                        "show_mob_presales_return": false,
+                        "disable_sale_print_mobile": false,
+                        "allow_sales_overdue": false,
+                        "show_prod_data": false,
+                        "show_foc_offers": false
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: User Details
+  
+  request: {
+    url: https://erp.syntrack.app/web/user_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{"data":{}}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Wed, 29 Jan 2025 08:13:06 GMT
+      Content-Type: application/json; charset=utf-8
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=aWrJw7VrKNj8DL4oYsrY2R6igYgYoK6dHWKoVtoDRetQovCSflc90GRCBiuPdoFRwzL0LmXboKim5Ef5CS2-; Expires=Thu, 29 Jan 2026 08:13:06 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "user_details": {
+                        "user_name": "Sales User 2",
+                        "user_id": 10,
+                        "login_id": "sales2",
+                        "logo_url": "http://erp.syntrack.app/web/image/res.users/10/image_1920",
+                        "user_signature": "http://erp.syntrack.app/web/image/res.users/10/user_signature",
+                        "emlpoyee_id": 7,
+                        "emlpoyee_name": "Sales User 2",
+                        "manager": "Sales Supervisor",
+                        "department": "Sales Department",
+                        "job_pos": "Sales Executive",
+                        "work_phone": "+971508922937",
+                        "work_mobile": null,
+                        "work_email": "sales2",
+                        "logo": "http://erp.syntrack.app/web/image/res.company/1/logo",
+                        "contact_us_link": false,
+                        "about_us_link": false,
+                        "faq_link": false,
+                        "allow_geofencing": false,
+                        "geofencing_perimeter": null,
+                        "google_api_key": null,
+                        "support_email": null,
+                        "currency_ids": [
+                            {
+                                "currency_id": 128,
+                                "symbol": "AED",
+                                "position": "after",
+                                "digits": [
+                                    69,
+                                    4
+                                ]
+                            },
+                            {
+                                "currency_id": 1,
+                                "symbol": "$",
+                                "position": "before",
+                                "digits": [
+                                    69,
+                                    4
+                                ]
+                            }
+                        ],
+                        "return_reasons": [],
+                        "stock_location_id": null,
+                        "stock_location_name": null,
+                        "resellable_location_id": null,
+                        "resellable_location_name": null,
+                        "non_resellable_location_id": null,
+                        "non_resellable_location_name": null,
+                        "show_company": false,
+                        "show_offline_export": false,
+                        "allow_user_location_tracking": false,
+                        "show_direct_cust_inv": false,
+                        "show_pricelist_mobile": false,
+                        "show_price_check": false,
+                        "allow_fixed_pricelist_in_sale": false,
+                        "show_customers": false,
+                        "show_edit_mob_cust": false,
+                        "show_mob_presales": false,
+                        "show_liquidation": false,
+                        "show_day_close_report": false,
+                        "show_req_special_price": false,
+                        "allow_disc_in_sales": false,
+                        "allow_sales_history": false,
+                        "show_mob_presales_return": false,
+                        "disable_sale_print_mobile": false,
+                        "allow_sales_overdue": false,
+                        "show_prod_data": false,
+                        "show_foc_offers": false
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

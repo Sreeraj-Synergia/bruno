@@ -1,0 +1,595 @@
+meta {
+  name: Payment Terms
+  type: http
+  seq: 6
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_payment_term_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {}
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Payment Trems
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_payment_term_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {}
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Sat, 01 Mar 2025 11:20:06 GMT
+      Content-Length: 4734
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=fe3zCbAc-3nyVRygtPAUMdrxxbqWgiR_riCv6pKEDFEPZC2OTTv54YHj_gRmgMeVai0RAdNV1E2DboYhAb94; Expires=Sun, 01 Mar 2026 11:20:06 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_term_details": [
+                        {
+                            "payment_term_id": 1,
+                            "description": "<p>Payment terms: Immediate Payment</p>",
+                            "name": "Cash on Delivery",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 0,
+                                    "payment_id": 1
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 2,
+                            "description": "<p>Payment terms: 15 Days</p>",
+                            "name": "15 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 15,
+                                    "payment_id": 2
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 3,
+                            "description": "<p>Payment terms: 21 Days</p>",
+                            "name": "21 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 21,
+                                    "payment_id": 3
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 4,
+                            "description": "<p>Payment terms: 30 Days</p>",
+                            "name": "30 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 30,
+                                    "payment_id": 4
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 5,
+                            "description": "<p>Payment terms: 45 Days</p>",
+                            "name": "45 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 45,
+                                    "payment_id": 5
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 6,
+                            "description": "<p>Payment terms: End of Following Month</p>",
+                            "name": "End of Following Month",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after_end_of_next_month",
+                                    "option_lable": "Days after end of next month",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 0,
+                                    "payment_id": 6
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 7,
+                            "description": "<p>Payment terms: 10 Days after End of Next Month</p>",
+                            "name": "10 Days after End of Next Month",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after_end_of_next_month",
+                                    "option_lable": "Days after end of next month",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 10,
+                                    "payment_id": 7
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 8,
+                            "description": "<p>Payment terms: 30% Now, Balance 60 Days</p>",
+                            "name": "30% Now, Balance 60 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 30,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 0,
+                                    "payment_id": 8
+                                },
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 70,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 60,
+                                    "payment_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 9,
+                            "description": "<p>Payment terms: 30 Days, 2% Early Payment Discount under 7 days</p>",
+                            "name": "2/7 Net 30",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 30,
+                                    "payment_id": 9
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 10,
+                            "description": "<p>Payment terms: 90 days, on the 10th</p>",
+                            "name": "90 days, on the 10th",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_end_of_month_on_the",
+                                    "option_lable": "Days end of month on the",
+                                    "display_days_next_month": true,
+                                    "days_next_month": "10",
+                                    "days": 90,
+                                    "payment_id": 10
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 11,
+                            "description": false,
+                            "name": "60 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 60,
+                                    "payment_id": 11
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 12,
+                            "description": false,
+                            "name": "90 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 90,
+                                    "payment_id": 12
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 13,
+                            "description": false,
+                            "name": "Advance Payment",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 0,
+                                    "payment_id": 13
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Payment Trems
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_payment_term_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {}
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Sat, 01 Mar 2025 11:20:06 GMT
+      Content-Length: 4734
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=fe3zCbAc-3nyVRygtPAUMdrxxbqWgiR_riCv6pKEDFEPZC2OTTv54YHj_gRmgMeVai0RAdNV1E2DboYhAb94; Expires=Sun, 01 Mar 2026 11:20:06 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "payment_term_details": [
+                        {
+                            "payment_term_id": 1,
+                            "description": "<p>Payment terms: Immediate Payment</p>",
+                            "name": "Cash on Delivery",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 0,
+                                    "payment_id": 1
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 2,
+                            "description": "<p>Payment terms: 15 Days</p>",
+                            "name": "15 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 15,
+                                    "payment_id": 2
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 3,
+                            "description": "<p>Payment terms: 21 Days</p>",
+                            "name": "21 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 21,
+                                    "payment_id": 3
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 4,
+                            "description": "<p>Payment terms: 30 Days</p>",
+                            "name": "30 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 30,
+                                    "payment_id": 4
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 5,
+                            "description": "<p>Payment terms: 45 Days</p>",
+                            "name": "45 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 45,
+                                    "payment_id": 5
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 6,
+                            "description": "<p>Payment terms: End of Following Month</p>",
+                            "name": "End of Following Month",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after_end_of_next_month",
+                                    "option_lable": "Days after end of next month",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 0,
+                                    "payment_id": 6
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 7,
+                            "description": "<p>Payment terms: 10 Days after End of Next Month</p>",
+                            "name": "10 Days after End of Next Month",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after_end_of_next_month",
+                                    "option_lable": "Days after end of next month",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 10,
+                                    "payment_id": 7
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 8,
+                            "description": "<p>Payment terms: 30% Now, Balance 60 Days</p>",
+                            "name": "30% Now, Balance 60 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 30,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 0,
+                                    "payment_id": 8
+                                },
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 70,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 60,
+                                    "payment_id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 9,
+                            "description": "<p>Payment terms: 30 Days, 2% Early Payment Discount under 7 days</p>",
+                            "name": "2/7 Net 30",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 30,
+                                    "payment_id": 9
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 10,
+                            "description": "<p>Payment terms: 90 days, on the 10th</p>",
+                            "name": "90 days, on the 10th",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_end_of_month_on_the",
+                                    "option_lable": "Days end of month on the",
+                                    "display_days_next_month": true,
+                                    "days_next_month": "10",
+                                    "days": 90,
+                                    "payment_id": 10
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 11,
+                            "description": false,
+                            "name": "60 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 60,
+                                    "payment_id": 11
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 12,
+                            "description": false,
+                            "name": "90 Days",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 90,
+                                    "payment_id": 12
+                                }
+                            ]
+                        },
+                        {
+                            "payment_term_id": 13,
+                            "description": false,
+                            "name": "Advance Payment",
+                            "payment_term_lines": [
+                                {
+                                    "term_type": "percent",
+                                    "value_amount": 100,
+                                    "pay_option": "days_after",
+                                    "option_lable": "Days after invoice date",
+                                    "display_days_next_month": false,
+                                    "days_next_month": "10",
+                                    "days": 0,
+                                    "payment_id": 13
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

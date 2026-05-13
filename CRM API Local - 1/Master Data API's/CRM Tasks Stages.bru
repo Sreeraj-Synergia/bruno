@@ -1,0 +1,165 @@
+meta {
+  name: CRM Tasks Stages
+  type: http
+  seq: 20
+}
+
+post {
+  url: http://localhost:8069/web/get_task_stages
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: CRM Tasks Stages
+  
+  request: {
+    url: http://localhost:8069/web/get_task_stages
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 324
+      Set-Cookie: session_id=5c3ca46c86c87dc929486e914d344aceef2da3e9; Expires=Tue, 24-Sep-2024 05:50:46 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Wed, 26 Jun 2024 05:50:46 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "task_management_stages": [
+                        {
+                            "id": 1,
+                            "name": "Assigned"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Pending"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Completed"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Rejected"
+                        },
+                        {
+                            "id": 5,
+                            "name": "Reassign"
+                        },
+                        {
+                            "id": 6,
+                            "name": "Cancelled"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: CRM Tasks Stages
+  
+  request: {
+    url: http://localhost:8069/web/get_task_stages
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 324
+      Set-Cookie: session_id=5c3ca46c86c87dc929486e914d344aceef2da3e9; Expires=Tue, 24-Sep-2024 05:50:46 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Wed, 26 Jun 2024 05:50:46 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "task_management_stages": [
+                        {
+                            "id": 1,
+                            "name": "Assigned"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Pending"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Completed"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Rejected"
+                        },
+                        {
+                            "id": 5,
+                            "name": "Reassign"
+                        },
+                        {
+                            "id": 6,
+                            "name": "Cancelled"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

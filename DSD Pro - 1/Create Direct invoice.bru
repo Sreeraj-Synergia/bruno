@@ -1,0 +1,1126 @@
+meta {
+  name: Create Direct invoice
+  type: http
+  seq: 14
+}
+
+post {
+  url: 192.168.1.119:8071/web/create_direct_invoice
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "act_del_time": "2025-05-03 15:44:39",
+              "actual_del_state": "delivered",
+              "allow_bonus_qty": false,
+              "category_id": 0,
+              "check_in_out": "71",
+              "customer_currency": "AED",
+              "customer_id": 23895,
+              "customer_name": "LuLu Hypermarket Mirdif City Center",
+              "customer_type": "credit",
+              "device_name": "Zebra Technologies TC15",
+              "device_serial": "954dd7c8d38db29c",
+              "global_discount": 0.0,
+              "discount_percentage": 0.0,
+              "ime_no": "954dd7c8d38db29c",
+              "inv_partner_type": "new",
+              "invoice_date": "2025-05-03 15:44:00",
+              "invoice_lines": [
+                  {
+                      "selling_lot_ids": [
+                          {
+                              "addedQuantity": 1.0,
+                              "alert_date": "2025-05-01 05:00:00",
+                              "availableQuantity": 0.0,
+                              "batch_id": 1015,
+                              "batch_number": "04032027",
+                              "batch_qty": 2.0,
+                              "batch_requested_qty": 0.0,
+                              "best_before_date": "2025-05-01 05:00:00",
+                              "expiry_date": "2025-05-01 05:00:00",
+                              "initial_qty": 0.0,
+                              "isSelected": false,
+                              "locationId": 41,
+                              "locationName": "DXB/Delivery 2",
+                              "no_of_pieces": 0.0,
+                              "pack_price": 0.0,
+                              "pack_qty": 0.0,
+                              "package_id": 0,
+                              "productId": 7654,
+                              "remove_date": "2025-05-01 05:00:00",
+                              "row_id_batch": 805,
+                              "selectedPackageStock": {
+                                  "cart_quantity": 0.0,
+                                  "discount_type": "percentage",
+                                  "focOffer": [],
+                                  "max_price": 0.0,
+                                  "min_price": 0.0,
+                                  "pack_id": 2876,
+                                  "pack_name": "Pcs",
+                                  "pack_price": 5.0,
+                                  "product_uom_name": "PCs",
+                                  "syn_discount": 0.0,
+                                  "total_pack_qty": 1.0,
+                                  "uom_rounding": 0.01
+                              },
+                              "uom_rounding": 0.01
+                          }
+                      ],
+                      "bonus_qty": 0,
+                      "discount": 0.0,
+                      "discount_rate": 0.0,
+                      "edited_price_line": false,
+                      "foc_id": 0,
+                      "foc_line_id": 0,
+                      "foc_qty": 0.0,
+                      "is_reason": false,
+                      "pack_qty": 1.0,
+                      "package_id": 2876,
+                      "package_name": "Pcs",
+                      "price": 5.0,
+                      "product_code": "D413",
+                      "product_desc": "BALADE - Almond Milk UHT 1Ltr",
+                      "product_id": 7654,
+                      "qty": 1.0,
+                      "special_price_line": false,
+                      "taxes": [
+                          1
+                      ]
+                  }
+              ],
+              "invoice_time": "15:44:39",
+              "ip_address": "5.30.190.158",
+              "isNewCustomer": false,
+              "latitude": 25.2418091,
+              "longitude": 55.3096005,
+              "origin": "1746272640INV192025053",
+              "payment_type": "credit",
+              "presale_id": 0,
+              "price_list_id": 14,
+              "price_list_name": "Wholesale Price list",
+              "receiver_id": 0,
+              "receiver_name": "",
+              "receiver_no": "",
+              "recv_id_img": "",
+              "recv_id_type": "",
+              "recv_sign": "",
+              "scanProducts": false
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Create Direct invoice
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_direct_invoice
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "act_del_time": "2025-03-05 14:34:38",
+                  "actual_del_state": "delivered",
+                  "allow_bonus_qty": false,
+                  "category_id": 0,
+                  "customer_currency": "AED",
+                  "customer_id": 16,
+                  "customer_name": "LuLu Hypermarket- Al Qusais",
+                  "customer_type": "credit",
+                  "discount_amount": 0.0,
+                  "discount_percentage": 0.0,
+                  "inv_partner_type": "new",
+                  "invoice_date": "2025-03-05 14:33:24",
+                  "invoice_lines": [
+                      {
+                          "bonus_qty": 0,
+                          "discount": 0.0,
+                          "discount_rate": 0.0,
+                          "edited_price_line": false,
+                          "foc_id": 0,
+                          "foc_qty": 0,
+                          "is_reason": false,
+                          "pack_qty": 1.0,
+                          "package_id": 640,
+                          "package_name": "Kg",
+                          "price": 40.0,
+                          "product_code": "SN100151",
+                          "product_desc": "APRICOT SOFT JUMBO",
+                          "product_id": 2518,
+                          "qty": 1.0,
+                          "special_price_line": false
+                      }
+                  ],
+                  "invoice_time": "14:33:43",
+                  "isNewCustomer": false,
+                  "latitude": 25.2418056,
+                  "longitude": 55.3095798,
+                  "origin": "1741170804INV102025032",
+                  "payment_type": "credit",
+                  "price_list_id": 2,
+                  "price_list_name": "Whole Sales Price List",
+                  "receiver_id": 0,
+                  "receiver_name": "resh",
+                  "receiver_no": "589079075",
+                  "recv_id_img": "",
+                  "recv_id_type": "",
+                  "recv_sign": "iVBORw0KGgoAAAANSUhEUgAAAhwAAAEsCAYAAACIbGpMAAAAAXNSR0IArs4c6QAAAARzQklUCAgI...",
+                  "scanProducts": false,
+                  "geo_latitude": 25.25455,
+                  "geo_longitude": 55.25656,
+                  "device_name": "Dell Vostro",
+                  "ime_no": "8bcec14a31df74b5",
+                  "device_serial": "SFJNDS5656",
+                  "ip_address": "192.168.128.35"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 05 Mar 2025 11:40:07 GMT
+      Content-Length: 6170
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "invoice_create_details": {
+                        "invoice_id": 1533,
+                        "invoice_number": "INV/2025/00050",
+                        "customer_id": 16,
+                        "customer_name": "LuLu Hypermarket- Al Qusais",
+                        "invoice_date": "2025-03-05",
+                        "inv_date_time": "2025-03-05 11:40:03",
+                        "payment_term_id": 3,
+                        "payment_term_name": "21 Days",
+                        "due_date": "2025-03-26",
+                        "due_status": false,
+                        "journal_id": 1,
+                        "journal_name": "Customer Invoices",
+                        "currency_id": 128,
+                        "rate_with_comp_currency": 1,
+                        "move_narration": null,
+                        "currency_name": "AED",
+                        "invoice_origin": "1741170804INV102025032",
+                        "origin": "INV2025031360",
+                        "amount_untaxed": 40,
+                        "amount_total": 42,
+                        "amount_residual": 42,
+                        "amount_untaxed_signed": null,
+                        "amount_untaxed_in_currency_signed": null,
+                        "amount_tax_signed": null,
+                        "amount_total_signed": null,
+                        "amount_residual_signed": null,
+                        "amount_total_in_currency_signed": null,
+                        "user_id": 10,
+                        "user_name": "Sales User 2",
+                        "state": "not_paid",
+                        "invoice_state": "posted",
+                        "created_by_id": 7,
+                        "created_by_name": "Sales User 2",
+                        "created_on": "2025-03-05 11:40:03",
+                        "geo_latitude": 25.25455,
+                        "geo_longitude": 55.25656,
+                        "device_name": "Dell Vostro",
+                        "ime_no": "8bcec14a31df74b5",
+                        "device_serial": "SFJNDS5656",
+                        "ip_address": "192.168.128.35",
+                        "invoice_lines": [
+                            {
+                                "invoice_line_id": 3462,
+                                "product_id": 2518,
+                                "product_name": "APRICOT SOFT JUMBO",
+                                "barcode": null,
+                                "account_id": 146,
+                                "account_name": "Sales Account",
+                                "unit_price": 40,
+                                "quantity": 1,
+                                "uom_id": 12,
+                                "discount": 0,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "price_subtotal": 40,
+                                "pack_price_after_disc": null,
+                                "unit_price_after_disc": null,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "description": null,
+                                "price_tax": null,
+                                "package_id": 640,
+                                "package_name": "Kg",
+                                "package_quantity": 1,
+                                "product_code": null,
+                                "edited_price_line": null,
+                                "item_arabic_name": null,
+                                "batch_number": null,
+                                "expiry_date": null,
+                                "lot_id": null,
+                                "return_to": null,
+                                "return_reason": null,
+                                "return_reason_id": null,
+                                "order_qty": null,
+                                "order_pack_qty": null,
+                                "order_price": null,
+                                "order_uom": null,
+                                "return_van_qty": null,
+                                "return_wh_qty": null,
+                                "special_price_line": null,
+                                "returned_pack_qty": null,
+                                "returned_line_qty": null,
+                                "foc_id": null,
+                                "return_in_unit": null,
+                                "lower_pack_id": null,
+                                "lower_pack_name": null,
+                                "lower_unit_price": null,
+                                "line_number": 1,
+                                "qty_in_pack": 1,
+                                "available_qty": 48,
+                                "available_qty_pack": 48,
+                                "maximum_sale_qty_pack": 48,
+                                "location_id": 31,
+                                "location_name": "90814",
+                                "batch_numb_list": [
+                                    160,
+                                    161
+                                ],
+                                "batch_numb_id": null,
+                                "ordered_pack_qty": 0,
+                                "ordered_qty": 0,
+                                "package_price": 40,
+                                "total_pack_qty": 1,
+                                "price_total": 42,
+                                "check_for_packaging": true,
+                                "discount_value": 0,
+                                "subtotal_before_disc": 40,
+                                "subtotal_before_disc_cc": 40,
+                                "proportional_weight": 1,
+                                "inv_fixed_disc": 0,
+                                "inv_fixed_allocated_disc": 0,
+                                "min_price": 0,
+                                "max_price": 0,
+                                "internal_ref": "SN100151",
+                                "product_packaging_id": 640,
+                                "product_packaging_qty": 1,
+                                "per_pack_qty_disc_value": 0,
+                                "product_tracking": "lot",
+                                "batches_info_ids": "sale.order.batches.info.lines()",
+                                "received_pack_qty": 0,
+                                "remaining_pack_qty": 1,
+                                "received_qty": 0,
+                                "remaining_qty": 1,
+                                "pricelist_id": 2,
+                                "sale_order_option_ids": null,
+                                "linked_line_id": null,
+                                "from_disc_move_line_id": null,
+                                "stock_status": "avail",
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": []
+                            }
+                        ],
+                        "payment_history": null,
+                        "payment_type": "credit",
+                        "credit_limit": 0,
+                        "from_quotation_id": null,
+                        "presale_id": null,
+                        "presale_name": null,
+                        "pricelist_id": 2,
+                        "pricelist_name": "Whole Sales Price List",
+                        "location_id": 31,
+                        "location_name": "90814",
+                        "amount_tax": 2,
+                        "total_before_disc": 40,
+                        "total_discount": 0,
+                        "direct_stock_transfer": true,
+                        "stock_transfer_details": [
+                            {
+                                "id": 330,
+                                "name": "MS/OUT/00153",
+                                "partner_id": 16,
+                                "partner_name": "LuLu Hypermarket- Al Qusais",
+                                "picking_type_code": "outgoing",
+                                "picking_type_id": 2,
+                                "picking_type_name": "Delivery Orders",
+                                "location_id": 31,
+                                "location_name": "90814",
+                                "scheduled_date": "2025-03-05 11:40:03",
+                                "date_done": "2025-03-05 11:40:04",
+                                "origin": "INV/2025/00050",
+                                "state": "done",
+                                "receiver_name": null,
+                                "receiver_no": null,
+                                "recv_id_img": "http://localhost:8070/web/image?model=stock.picking&id=330&field=receiver_identity",
+                                "act_del_time": null,
+                                "recv_sign": "http://localhost:8070/web/image?model=stock.picking&id=330&field=receiver_signature",
+                                "stock_move_details": [
+                                    {
+                                        "id": 1020,
+                                        "product_id": 2518,
+                                        "product_name": "APRICOT SOFT JUMBO",
+                                        "product_packaging_id": 640,
+                                        "product_packaging_name": "Kg",
+                                        "location_final_id": null,
+                                        "location_final_name": null,
+                                        "packaging_qty": 1,
+                                        "product_uom_qty": 1,
+                                        "received_package_qty": 1,
+                                        "quantity": 1,
+                                        "product_uom": 12,
+                                        "product_uom_name": "KG",
+                                        "lot_ids": [
+                                            161
+                                        ],
+                                        "state": "done",
+                                        "stock_move_line_details": [
+                                            {
+                                                "id": 3535,
+                                                "product_id": 2518,
+                                                "expiration_date": "2026-01-16 18:30:00",
+                                                "lot_id": 161,
+                                                "lot_name": "TR245",
+                                                "package_id": null,
+                                                "package_name": null,
+                                                "result_package_id": null,
+                                                "result_package_name": null,
+                                                "location_id": 31,
+                                                "location_name": "90814",
+                                                "location_dest_id": 5,
+                                                "location_dest_name": "Customers",
+                                                "picking_partner_id": 16,
+                                                "picking_partner_name": "LuLu Hypermarket- Al Qusais",
+                                                "company_id": 1,
+                                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                                "quantity": 1,
+                                                "product_uom_id": 12,
+                                                "product_uom_name": "KG",
+                                                "state": "done",
+                                                "manufacture_date": null,
+                                                "product_packaging_id": 640,
+                                                "product_packaging_name": "Kg",
+                                                "qty_in_pack": 1,
+                                                "packaging_qty": 1,
+                                                "owner_id": 1,
+                                                "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                                "transaction_type": "delivered",
+                                                "available_qty": 22,
+                                                "available_package_qty": 22,
+                                                "check_for_packaging": true,
+                                                "use_manufacture_date": null,
+                                                "hs_code": null,
+                                                "country_of_origin": null,
+                                                "country_of_origin_name": null,
+                                                "weight": null,
+                                                "total_weight": null
+                                            }
+                                        ],
+                                        "qty_in_pack": 1,
+                                        "received_pack_qty": 1,
+                                        "remaining_pack_qty": null,
+                                        "received_qty": 1,
+                                        "remaining_qty": null,
+                                        "internal_ref": "SN100151",
+                                        "barcode": null,
+                                        "available_qty": 48,
+                                        "transaction_type": "delivered",
+                                        "check_for_packaging": true,
+                                        "use_manufacture_date": null,
+                                        "hs_code": null,
+                                        "country_of_origin": null,
+                                        "country_of_origin_name": null
+                                    }
+                                ]
+                            }
+                        ],
+                        "foc_total": 0
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Create Direct invoice batch allocation
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_direct_invoice
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "params": {
+          "data": {
+            "act_del_time": "2025-03-14 11:22:12",
+            "actual_del_state": "delivered",
+            "allow_bonus_qty": false,
+            "category_id": 0,
+            "customer_currency": "AED",
+            "customer_id": 23935,
+            "customer_name": "Zebra",
+            "customer_type": "credit",
+            "device_name": "Zebra Technologies TC15",
+            "device_serial": "954dd7c8d38db29c",
+            "discount_amount": 0.0,
+            "discount_percentage": 0.0,
+            "ime_no": "954dd7c8d38db29c",
+            "inv_partner_type": "new",
+            "invoice_date": "2025-03-14 11:20:33",
+            "invoice_lines": [
+              {
+                "bonus_qty": 0,
+                "discount": 20.0,
+                "discount_rate": 0.0,
+                "disc_type": "fixed",
+                "edited_price_line": false,
+                "foc_id": 0,
+                "foc_qty": 0,
+                "is_reason": false,
+                "pack_qty": 3,
+                "package_id": 495,
+                "package_name": "Kg",
+                "price": 20.2,
+                "product_code": "SN100006",
+                "product_desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                "product_id": 2373,
+                "qty": 1.0,
+                "special_price_line": false,
+                "taxes": [2],
+                "selling_lot_ids": [
+                  {
+                    "lot_id": 97,
+                    "pcs_qty": 0.0,
+                    "picked_qty": 3.0,
+                    "price": 20.2
+                  }
+                ]
+              },
+              {
+                "bonus_qty": 0,
+                "discount": 0.0,
+                "discount_rate": 50.0,
+                "disc_type": "percentage",
+                "edited_price_line": false,
+                "foc_id": 0,
+                "foc_qty": 0,
+                "is_reason": false,
+                "pack_qty": 5.0,
+                "package_id": 499,
+                "package_name": "Kg",
+                "price": 17.4,
+                "product_code": "SN100010",
+                "product_desc": "ALMOND INDY 18/20 MARIANI",
+                "product_id": 2377,
+                "qty": 5.0,
+                "special_price_line": false,
+                "taxes": [2],
+                "selling_lot_ids": [
+                  {
+                    "lot_id": 118,
+                    "pcs_qty": 0.0,
+                    "picked_qty": 5.0,
+                    "price": 20.2
+                  }
+                ]
+              }
+            ],
+            "invoice_time": "11:21:55",
+            "ip_address": "192.168.1.176",
+            "isNewCustomer": false,
+            "latitude": 25.2417606,
+            "longitude": 55.3096054,
+            "origin": "1741936098INV192025033",
+            "payment_type": "credit",
+            "price_list_id": 9,
+            "price_list_name": "Sales 5 Price",
+            "receiver_id": 0,
+            "receiver_name": "resh",
+            "receiver_no": "589079078",
+            "recv_id_img": "",
+            "recv_id_type": "",
+            "recv_sign": "iVBORw0KGgoAAAANSUhEUgAAAhwAAAEsCAYAAACIbGpM...",
+            "scanProducts": false
+          },
+          "user_lang": "en_us"
+        }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 17 Mar 2025 08:36:47 GMT
+      Content-Length: 4752
+      Content-Type: application/json; charset=utf-8
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "error": {
+                "code": 200,
+                "message": "Odoo Server Error",
+                "data": {
+                    "name": "odoo.exceptions.UserError",
+                    "debug": "Traceback (most recent call last):\n  File \"/home/synergia/My_Projects/odoo18/odoo/http.py\", line 1955, in _transactioning\n    return service_model.retrying(func, env=self.env)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/odoo/service/model.py\", line 137, in retrying\n    result = func()\n             ^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/odoo/http.py\", line 1922, in _serve_ir_http\n    response = self.dispatcher.dispatch(rule.endpoint, args)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/odoo/http.py\", line 2169, in dispatch\n    result = self.request.registry['ir.http']._dispatch(endpoint)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/odoo/addons/base/models/ir_http.py\", line 329, in _dispatch\n    result = endpoint(**request.params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/odoo/http.py\", line 727, in route_wrapper\n    result = endpoint(self, *args, **params_ok)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Accounting and Finance Module/synergia_account_base/controllers/account.py\", line 280, in create_direct_invoice\n    inv_resp = inv_obj.create_direct_invoice(data)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Accounting and Finance Module/synergia_direct_stock_transfer/models/account_move.py\", line 37, in create_direct_invoice\n    return super(AccountMove, self).create_direct_invoice(data)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Accounting and Finance Module/synergia_account_base/models/account_move.py\", line 668, in create_direct_invoice\n    invoice = self.create_invoice(data)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Accounting and Finance Module/synergia_invoicing/models/account_move.py\", line 279, in create_invoice\n    invoice = super(AccountMove, self).create_invoice(data)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Accounting and Finance Module/synergia_account_base/models/account_move.py\", line 645, in create_invoice\n    self.invoice_line_creation(invoice, inv_line)\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Accounting and Finance Module/synergia_invoicing/models/account_move.py\", line 299, in invoice_line_creation\n    res.write(inv_line[\"line_discount_details\"])\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Sales Management Module/synergia_so_po_foc/models/account_move.py\", line 455, in write\n    res = super(AccountMoveLine, self).write(vals)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/addons/account_fleet/models/account_move.py\", line 57, in write\n    return super().write(vals)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/addons/account/models/account_move_line.py\", line 1563, in write\n    with self.move_id._check_balanced(move_container),\\\n  File \"/usr/lib/python3.12/contextlib.py\", line 144, in __exit__\n    next(self.gen)\n  File \"/home/synergia/My_Projects/odoo18/addons/account/models/account_move.py\", line 2322, in _check_balanced\n    raise UserError(error_msg)\nodoo.exceptions.UserError: An error has occurred.\n\nThe move (Draft Invoice ) is not balanced.\nThe total of debits equals 43.6300 AED and the total of credits equals 63.6300 AED.\nYou might want to specify a default account on journal \"Customer Invoices\" to automatically balance each move.\n",
+                    "message": "An error has occurred.\n\nThe move (Draft Invoice ) is not balanced.\nThe total of debits equals 43.6300 AED and the total of credits equals 63.6300 AED.\nYou might want to specify a default account on journal \"Customer Invoices\" to automatically balance each move.",
+                    "arguments": [
+                        "An error has occurred.\n\nThe move (Draft Invoice ) is not balanced.\nThe total of debits equals 43.6300 AED and the total of credits equals 63.6300 AED.\nYou might want to specify a default account on journal \"Customer Invoices\" to automatically balance each move."
+                    ],
+                    "context": {}
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Create Direct invoice
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_direct_invoice
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "act_del_time": "2025-03-05 14:34:38",
+                  "actual_del_state": "delivered",
+                  "allow_bonus_qty": false,
+                  "category_id": 0,
+                  "customer_currency": "AED",
+                  "customer_id": 16,
+                  "customer_name": "LuLu Hypermarket- Al Qusais",
+                  "customer_type": "credit",
+                  "discount_amount": 0.0,
+                  "discount_percentage": 0.0,
+                  "inv_partner_type": "new",
+                  "invoice_date": "2025-03-05 14:33:24",
+                  "invoice_lines": [
+                      {
+                          "bonus_qty": 0,
+                          "discount": 0.0,
+                          "discount_rate": 0.0,
+                          "edited_price_line": false,
+                          "foc_id": 0,
+                          "foc_qty": 0,
+                          "is_reason": false,
+                          "pack_qty": 1.0,
+                          "package_id": 640,
+                          "package_name": "Kg",
+                          "price": 40.0,
+                          "product_code": "SN100151",
+                          "product_desc": "APRICOT SOFT JUMBO",
+                          "product_id": 2518,
+                          "qty": 1.0,
+                          "special_price_line": false
+                      }
+                  ],
+                  "invoice_time": "14:33:43",
+                  "isNewCustomer": false,
+                  "latitude": 25.2418056,
+                  "longitude": 55.3095798,
+                  "origin": "1741170804INV102025032",
+                  "payment_type": "credit",
+                  "price_list_id": 2,
+                  "price_list_name": "Whole Sales Price List",
+                  "receiver_id": 0,
+                  "receiver_name": "resh",
+                  "receiver_no": "589079075",
+                  "recv_id_img": "",
+                  "recv_id_type": "",
+                  "recv_sign": "iVBORw0KGgoAAAANSUhEUgAAAhwAAAEsCAYAAACIbGpMAAAAAXNSR0IArs4c6QAAAARzQklUCAgI...",
+                  "scanProducts": false,
+                  "geo_latitude": 25.25455,
+                  "geo_longitude": 55.25656,
+                  "device_name": "Dell Vostro",
+                  "ime_no": "8bcec14a31df74b5",
+                  "device_serial": "SFJNDS5656",
+                  "ip_address": "192.168.128.35"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 05 Mar 2025 11:40:07 GMT
+      Content-Length: 6170
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "invoice_create_details": {
+                        "invoice_id": 1533,
+                        "invoice_number": "INV/2025/00050",
+                        "customer_id": 16,
+                        "customer_name": "LuLu Hypermarket- Al Qusais",
+                        "invoice_date": "2025-03-05",
+                        "inv_date_time": "2025-03-05 11:40:03",
+                        "payment_term_id": 3,
+                        "payment_term_name": "21 Days",
+                        "due_date": "2025-03-26",
+                        "due_status": false,
+                        "journal_id": 1,
+                        "journal_name": "Customer Invoices",
+                        "currency_id": 128,
+                        "rate_with_comp_currency": 1,
+                        "move_narration": null,
+                        "currency_name": "AED",
+                        "invoice_origin": "1741170804INV102025032",
+                        "origin": "INV2025031360",
+                        "amount_untaxed": 40,
+                        "amount_total": 42,
+                        "amount_residual": 42,
+                        "amount_untaxed_signed": null,
+                        "amount_untaxed_in_currency_signed": null,
+                        "amount_tax_signed": null,
+                        "amount_total_signed": null,
+                        "amount_residual_signed": null,
+                        "amount_total_in_currency_signed": null,
+                        "user_id": 10,
+                        "user_name": "Sales User 2",
+                        "state": "not_paid",
+                        "invoice_state": "posted",
+                        "created_by_id": 7,
+                        "created_by_name": "Sales User 2",
+                        "created_on": "2025-03-05 11:40:03",
+                        "geo_latitude": 25.25455,
+                        "geo_longitude": 55.25656,
+                        "device_name": "Dell Vostro",
+                        "ime_no": "8bcec14a31df74b5",
+                        "device_serial": "SFJNDS5656",
+                        "ip_address": "192.168.128.35",
+                        "invoice_lines": [
+                            {
+                                "invoice_line_id": 3462,
+                                "product_id": 2518,
+                                "product_name": "APRICOT SOFT JUMBO",
+                                "barcode": null,
+                                "account_id": 146,
+                                "account_name": "Sales Account",
+                                "unit_price": 40,
+                                "quantity": 1,
+                                "uom_id": 12,
+                                "discount": 0,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "price_subtotal": 40,
+                                "pack_price_after_disc": null,
+                                "unit_price_after_disc": null,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "description": null,
+                                "price_tax": null,
+                                "package_id": 640,
+                                "package_name": "Kg",
+                                "package_quantity": 1,
+                                "product_code": null,
+                                "edited_price_line": null,
+                                "item_arabic_name": null,
+                                "batch_number": null,
+                                "expiry_date": null,
+                                "lot_id": null,
+                                "return_to": null,
+                                "return_reason": null,
+                                "return_reason_id": null,
+                                "order_qty": null,
+                                "order_pack_qty": null,
+                                "order_price": null,
+                                "order_uom": null,
+                                "return_van_qty": null,
+                                "return_wh_qty": null,
+                                "special_price_line": null,
+                                "returned_pack_qty": null,
+                                "returned_line_qty": null,
+                                "foc_id": null,
+                                "return_in_unit": null,
+                                "lower_pack_id": null,
+                                "lower_pack_name": null,
+                                "lower_unit_price": null,
+                                "line_number": 1,
+                                "qty_in_pack": 1,
+                                "available_qty": 48,
+                                "available_qty_pack": 48,
+                                "maximum_sale_qty_pack": 48,
+                                "location_id": 31,
+                                "location_name": "90814",
+                                "batch_numb_list": [
+                                    160,
+                                    161
+                                ],
+                                "batch_numb_id": null,
+                                "ordered_pack_qty": 0,
+                                "ordered_qty": 0,
+                                "package_price": 40,
+                                "total_pack_qty": 1,
+                                "price_total": 42,
+                                "check_for_packaging": true,
+                                "discount_value": 0,
+                                "subtotal_before_disc": 40,
+                                "subtotal_before_disc_cc": 40,
+                                "proportional_weight": 1,
+                                "inv_fixed_disc": 0,
+                                "inv_fixed_allocated_disc": 0,
+                                "min_price": 0,
+                                "max_price": 0,
+                                "internal_ref": "SN100151",
+                                "product_packaging_id": 640,
+                                "product_packaging_qty": 1,
+                                "per_pack_qty_disc_value": 0,
+                                "product_tracking": "lot",
+                                "batches_info_ids": "sale.order.batches.info.lines()",
+                                "received_pack_qty": 0,
+                                "remaining_pack_qty": 1,
+                                "received_qty": 0,
+                                "remaining_qty": 1,
+                                "pricelist_id": 2,
+                                "sale_order_option_ids": null,
+                                "linked_line_id": null,
+                                "from_disc_move_line_id": null,
+                                "stock_status": "avail",
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": []
+                            }
+                        ],
+                        "payment_history": null,
+                        "payment_type": "credit",
+                        "credit_limit": 0,
+                        "from_quotation_id": null,
+                        "presale_id": null,
+                        "presale_name": null,
+                        "pricelist_id": 2,
+                        "pricelist_name": "Whole Sales Price List",
+                        "location_id": 31,
+                        "location_name": "90814",
+                        "amount_tax": 2,
+                        "total_before_disc": 40,
+                        "total_discount": 0,
+                        "direct_stock_transfer": true,
+                        "stock_transfer_details": [
+                            {
+                                "id": 330,
+                                "name": "MS/OUT/00153",
+                                "partner_id": 16,
+                                "partner_name": "LuLu Hypermarket- Al Qusais",
+                                "picking_type_code": "outgoing",
+                                "picking_type_id": 2,
+                                "picking_type_name": "Delivery Orders",
+                                "location_id": 31,
+                                "location_name": "90814",
+                                "scheduled_date": "2025-03-05 11:40:03",
+                                "date_done": "2025-03-05 11:40:04",
+                                "origin": "INV/2025/00050",
+                                "state": "done",
+                                "receiver_name": null,
+                                "receiver_no": null,
+                                "recv_id_img": "http://localhost:8070/web/image?model=stock.picking&id=330&field=receiver_identity",
+                                "act_del_time": null,
+                                "recv_sign": "http://localhost:8070/web/image?model=stock.picking&id=330&field=receiver_signature",
+                                "stock_move_details": [
+                                    {
+                                        "id": 1020,
+                                        "product_id": 2518,
+                                        "product_name": "APRICOT SOFT JUMBO",
+                                        "product_packaging_id": 640,
+                                        "product_packaging_name": "Kg",
+                                        "location_final_id": null,
+                                        "location_final_name": null,
+                                        "packaging_qty": 1,
+                                        "product_uom_qty": 1,
+                                        "received_package_qty": 1,
+                                        "quantity": 1,
+                                        "product_uom": 12,
+                                        "product_uom_name": "KG",
+                                        "lot_ids": [
+                                            161
+                                        ],
+                                        "state": "done",
+                                        "stock_move_line_details": [
+                                            {
+                                                "id": 3535,
+                                                "product_id": 2518,
+                                                "expiration_date": "2026-01-16 18:30:00",
+                                                "lot_id": 161,
+                                                "lot_name": "TR245",
+                                                "package_id": null,
+                                                "package_name": null,
+                                                "result_package_id": null,
+                                                "result_package_name": null,
+                                                "location_id": 31,
+                                                "location_name": "90814",
+                                                "location_dest_id": 5,
+                                                "location_dest_name": "Customers",
+                                                "picking_partner_id": 16,
+                                                "picking_partner_name": "LuLu Hypermarket- Al Qusais",
+                                                "company_id": 1,
+                                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                                "quantity": 1,
+                                                "product_uom_id": 12,
+                                                "product_uom_name": "KG",
+                                                "state": "done",
+                                                "manufacture_date": null,
+                                                "product_packaging_id": 640,
+                                                "product_packaging_name": "Kg",
+                                                "qty_in_pack": 1,
+                                                "packaging_qty": 1,
+                                                "owner_id": 1,
+                                                "owner_name": "Synergia Softwares IT infrastructure LLC",
+                                                "transaction_type": "delivered",
+                                                "available_qty": 22,
+                                                "available_package_qty": 22,
+                                                "check_for_packaging": true,
+                                                "use_manufacture_date": null,
+                                                "hs_code": null,
+                                                "country_of_origin": null,
+                                                "country_of_origin_name": null,
+                                                "weight": null,
+                                                "total_weight": null
+                                            }
+                                        ],
+                                        "qty_in_pack": 1,
+                                        "received_pack_qty": 1,
+                                        "remaining_pack_qty": null,
+                                        "received_qty": 1,
+                                        "remaining_qty": null,
+                                        "internal_ref": "SN100151",
+                                        "barcode": null,
+                                        "available_qty": 48,
+                                        "transaction_type": "delivered",
+                                        "check_for_packaging": true,
+                                        "use_manufacture_date": null,
+                                        "hs_code": null,
+                                        "country_of_origin": null,
+                                        "country_of_origin_name": null
+                                    }
+                                ]
+                            }
+                        ],
+                        "foc_total": 0
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Create Direct invoice batch allocation
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_direct_invoice
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "params": {
+          "data": {
+            "act_del_time": "2025-03-14 11:22:12",
+            "actual_del_state": "delivered",
+            "allow_bonus_qty": false,
+            "category_id": 0,
+            "customer_currency": "AED",
+            "customer_id": 23935,
+            "customer_name": "Zebra",
+            "customer_type": "credit",
+            "device_name": "Zebra Technologies TC15",
+            "device_serial": "954dd7c8d38db29c",
+            "discount_amount": 0.0,
+            "discount_percentage": 0.0,
+            "ime_no": "954dd7c8d38db29c",
+            "inv_partner_type": "new",
+            "invoice_date": "2025-03-14 11:20:33",
+            "invoice_lines": [
+              {
+                "bonus_qty": 0,
+                "discount": 20.0,
+                "discount_rate": 0.0,
+                "disc_type": "fixed",
+                "edited_price_line": false,
+                "foc_id": 0,
+                "foc_qty": 0,
+                "is_reason": false,
+                "pack_qty": 3,
+                "package_id": 495,
+                "package_name": "Kg",
+                "price": 20.2,
+                "product_code": "SN100006",
+                "product_desc": "ALMOND BLANCHED SLIVERED 11.34KG",
+                "product_id": 2373,
+                "qty": 1.0,
+                "special_price_line": false,
+                "taxes": [2],
+                "selling_lot_ids": [
+                  {
+                    "lot_id": 97,
+                    "pcs_qty": 0.0,
+                    "picked_qty": 3.0,
+                    "price": 20.2
+                  }
+                ]
+              },
+              {
+                "bonus_qty": 0,
+                "discount": 0.0,
+                "discount_rate": 50.0,
+                "disc_type": "percentage",
+                "edited_price_line": false,
+                "foc_id": 0,
+                "foc_qty": 0,
+                "is_reason": false,
+                "pack_qty": 5.0,
+                "package_id": 499,
+                "package_name": "Kg",
+                "price": 17.4,
+                "product_code": "SN100010",
+                "product_desc": "ALMOND INDY 18/20 MARIANI",
+                "product_id": 2377,
+                "qty": 5.0,
+                "special_price_line": false,
+                "taxes": [2],
+                "selling_lot_ids": [
+                  {
+                    "lot_id": 118,
+                    "pcs_qty": 0.0,
+                    "picked_qty": 5.0,
+                    "price": 20.2
+                  }
+                ]
+              }
+            ],
+            "invoice_time": "11:21:55",
+            "ip_address": "192.168.1.176",
+            "isNewCustomer": false,
+            "latitude": 25.2417606,
+            "longitude": 55.3096054,
+            "origin": "1741936098INV192025033",
+            "payment_type": "credit",
+            "price_list_id": 9,
+            "price_list_name": "Sales 5 Price",
+            "receiver_id": 0,
+            "receiver_name": "resh",
+            "receiver_no": "589079078",
+            "recv_id_img": "",
+            "recv_id_type": "",
+            "recv_sign": "iVBORw0KGgoAAAANSUhEUgAAAhwAAAEsCAYAAACIbGpM...",
+            "scanProducts": false
+          },
+          "user_lang": "en_us"
+        }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 17 Mar 2025 08:36:47 GMT
+      Content-Length: 4752
+      Content-Type: application/json; charset=utf-8
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "error": {
+                "code": 200,
+                "message": "Odoo Server Error",
+                "data": {
+                    "name": "odoo.exceptions.UserError",
+                    "debug": "Traceback (most recent call last):\n  File \"/home/synergia/My_Projects/odoo18/odoo/http.py\", line 1955, in _transactioning\n    return service_model.retrying(func, env=self.env)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/odoo/service/model.py\", line 137, in retrying\n    result = func()\n             ^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/odoo/http.py\", line 1922, in _serve_ir_http\n    response = self.dispatcher.dispatch(rule.endpoint, args)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/odoo/http.py\", line 2169, in dispatch\n    result = self.request.registry['ir.http']._dispatch(endpoint)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/odoo/addons/base/models/ir_http.py\", line 329, in _dispatch\n    result = endpoint(**request.params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/odoo/http.py\", line 727, in route_wrapper\n    result = endpoint(self, *args, **params_ok)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Accounting and Finance Module/synergia_account_base/controllers/account.py\", line 280, in create_direct_invoice\n    inv_resp = inv_obj.create_direct_invoice(data)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Accounting and Finance Module/synergia_direct_stock_transfer/models/account_move.py\", line 37, in create_direct_invoice\n    return super(AccountMove, self).create_direct_invoice(data)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Accounting and Finance Module/synergia_account_base/models/account_move.py\", line 668, in create_direct_invoice\n    invoice = self.create_invoice(data)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Accounting and Finance Module/synergia_invoicing/models/account_move.py\", line 279, in create_invoice\n    invoice = super(AccountMove, self).create_invoice(data)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Accounting and Finance Module/synergia_account_base/models/account_move.py\", line 645, in create_invoice\n    self.invoice_line_creation(invoice, inv_line)\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Accounting and Finance Module/synergia_invoicing/models/account_move.py\", line 299, in invoice_line_creation\n    res.write(inv_line[\"line_discount_details\"])\n  File \"/home/synergia/My_Projects/odoo18/SynTrack-ERP-Software-2025-Odoo-18-CE/Sales Management Module/synergia_so_po_foc/models/account_move.py\", line 455, in write\n    res = super(AccountMoveLine, self).write(vals)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/addons/account_fleet/models/account_move.py\", line 57, in write\n    return super().write(vals)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/synergia/My_Projects/odoo18/addons/account/models/account_move_line.py\", line 1563, in write\n    with self.move_id._check_balanced(move_container),\\\n  File \"/usr/lib/python3.12/contextlib.py\", line 144, in __exit__\n    next(self.gen)\n  File \"/home/synergia/My_Projects/odoo18/addons/account/models/account_move.py\", line 2322, in _check_balanced\n    raise UserError(error_msg)\nodoo.exceptions.UserError: An error has occurred.\n\nThe move (Draft Invoice ) is not balanced.\nThe total of debits equals 43.6300 AED and the total of credits equals 63.6300 AED.\nYou might want to specify a default account on journal \"Customer Invoices\" to automatically balance each move.\n",
+                    "message": "An error has occurred.\n\nThe move (Draft Invoice ) is not balanced.\nThe total of debits equals 43.6300 AED and the total of credits equals 63.6300 AED.\nYou might want to specify a default account on journal \"Customer Invoices\" to automatically balance each move.",
+                    "arguments": [
+                        "An error has occurred.\n\nThe move (Draft Invoice ) is not balanced.\nThe total of debits equals 43.6300 AED and the total of credits equals 63.6300 AED.\nYou might want to specify a default account on journal \"Customer Invoices\" to automatically balance each move."
+                    ],
+                    "context": {}
+                }
+            }
+        }
+      '''
+    }
+  }
+}

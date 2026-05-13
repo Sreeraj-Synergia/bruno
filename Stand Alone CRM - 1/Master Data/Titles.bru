@@ -1,0 +1,108 @@
+meta {
+  name: Titles
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8070/web/get_title_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {}
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Titles
+  
+  request: {
+    url: http://localhost:8070/web/get_title_details
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Mon, 12 Jan 2026 07:42:04 GMT
+      Content-Length: 478
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "title_details": [
+                        {
+                            "id": 4,
+                            "name": "Doctor",
+                            "shortname": "Dr."
+                        },
+                        {
+                            "id": 1,
+                            "name": "Madam",
+                            "shortname": "Mrs."
+                        },
+                        {
+                            "id": 2,
+                            "name": "Miss",
+                            "shortname": "Miss"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Mister",
+                            "shortname": "Mr."
+                        },
+                        {
+                            "id": 6,
+                            "name": "Mr",
+                            "shortname": false
+                        },
+                        {
+                            "id": 5,
+                            "name": "Professor",
+                            "shortname": "Prof."
+                        },
+                        {
+                            "id": 7,
+                            "name": "Sales Manager",
+                            "shortname": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

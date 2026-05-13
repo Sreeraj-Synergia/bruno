@@ -1,0 +1,227 @@
+meta {
+  name: Internal Transfer Mark as to do
+  type: http
+  seq: 40
+}
+
+post {
+  url: https://wms.syntrack.app/web/internal_change_status?db=WMS_BASE_NEW
+  body: json
+  auth: inherit
+}
+
+params:query {
+  db: WMS_BASE_NEW
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "internal_id": 214,
+              "status": "confirm"
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Internal Transfer Mark as to do
+  
+  request: {
+    url: https://wms.syntrack.app/web/internal_change_status?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "internal_id": 214,
+                  "status": "confirm"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 06:01:39 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 06:01:39 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "internal_change_status_details": {
+                        "id": 214,
+                        "name": "WH/INT/00028",
+                        "partner_id": 19,
+                        "partner_name": "Nesto Hypermarket ",
+                        "picking_type_id": 5,
+                        "picking_type_name": "Synergia: Internal Transfers",
+                        "source_location_id": 8,
+                        "source_location_name": "WH/Stock",
+                        "location_dest_id": 17,
+                        "location_dest_name": "Zone1",
+                        "scheduled_date": "2023-06-21 09:58:39",
+                        "date_done": "2023-06-21 00:00:00",
+                        "origin": null,
+                        "origin_date": "2023-06-21 09:58:39",
+                        "note": null,
+                        "state": "confirmed",
+                        "internal_line_ids": [
+                            {
+                                "id": 298,
+                                "product_id": 136,
+                                "product_name": "Material Crawler",
+                                "product_packaging_id": 225,
+                                "product_packaging_name": "Unit",
+                                "description": "Material Crawler",
+                                "date": "2023-06-21 09:58:39",
+                                "date_deadline": null,
+                                "product_uom_qty": 3,
+                                "quantity_done": null,
+                                "pack_qty": 3,
+                                "recv_pack_qty": null,
+                                "product_uom_id": 1,
+                                "product_uom": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/136/image_1920"
+                            }
+                        ],
+                        "internal_detailed_line_ids": null,
+                        "internal_package_ids": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Internal Transfer Mark as to do
+  
+  request: {
+    url: https://wms.syntrack.app/web/internal_change_status?db=WMS_BASE_NEW
+    method: POST
+    mode: json
+    params:query: {
+      db: WMS_BASE_NEW
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "internal_id": 214,
+                  "status": "confirm"
+              },
+              "user_lang": "en_us"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 2346
+      Set-Cookie: session_id=f802cf14a1519cd22118d86808640ec59b82805a; Expires=Tue, 19-Sep-2023 06:01:39 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.0 Python/3.8.10
+      Date: Wed, 21 Jun 2023 06:01:39 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "internal_change_status_details": {
+                        "id": 214,
+                        "name": "WH/INT/00028",
+                        "partner_id": 19,
+                        "partner_name": "Nesto Hypermarket ",
+                        "picking_type_id": 5,
+                        "picking_type_name": "Synergia: Internal Transfers",
+                        "source_location_id": 8,
+                        "source_location_name": "WH/Stock",
+                        "location_dest_id": 17,
+                        "location_dest_name": "Zone1",
+                        "scheduled_date": "2023-06-21 09:58:39",
+                        "date_done": "2023-06-21 00:00:00",
+                        "origin": null,
+                        "origin_date": "2023-06-21 09:58:39",
+                        "note": null,
+                        "state": "confirmed",
+                        "internal_line_ids": [
+                            {
+                                "id": 298,
+                                "product_id": 136,
+                                "product_name": "Material Crawler",
+                                "product_packaging_id": 225,
+                                "product_packaging_name": "Unit",
+                                "description": "Material Crawler",
+                                "date": "2023-06-21 09:58:39",
+                                "date_deadline": null,
+                                "product_uom_qty": 3,
+                                "quantity_done": null,
+                                "pack_qty": 3,
+                                "recv_pack_qty": null,
+                                "product_uom_id": 1,
+                                "product_uom": "Units",
+                                "image_url": "http://172.105.51.175:8081/web/url_image/product.product/136/image_1920"
+                            }
+                        ],
+                        "internal_detailed_line_ids": null,
+                        "internal_package_ids": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

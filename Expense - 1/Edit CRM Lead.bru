@@ -1,0 +1,27 @@
+meta {
+  name: Edit CRM Lead
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8069/web/edit_crm_lead
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "lead_id": 177,
+              "pricing_emp_ids":[312,326,330]
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

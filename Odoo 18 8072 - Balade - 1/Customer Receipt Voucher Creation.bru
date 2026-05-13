@@ -1,0 +1,2187 @@
+meta {
+  name: Customer Receipt Voucher Creation
+  type: http
+  seq: 17
+}
+
+post {
+  url: 192.168.1.119:8070/web/create_invoice_payment
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "params": {
+      "data": {
+        "amount": 21.21,
+        "cheque_reference": "",
+        "currency_id": 128,
+        "date": "2025-03-26",
+        "invoice_id": 2324,
+        "invoice_origin": "INV2025031879",
+        "journal_id": 19,
+        "move_narration": "test memo",
+        "customer_id": 23917,
+        "payment_method_line_id": 33,
+        "payment_origin": "RVPO1742900927123",
+        "transaction_no": ""
+      },
+      "user_lang": "en_us"
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Receipt Create Cash
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_customer_receipt_voucher
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "partner_id": 11,
+                  "journal_id": 6,
+                  "payment_method_line_id": 1,
+                  "currency_id": 128,
+                  "date": "2025-02-04",
+                  "cheque_date": false,
+                  "name": "sample receipt voucher",
+                  "move_narration": "sample narration",
+                  "transaction_no": false,
+                  "transaction_date": false,
+                  "bank_reference": false,
+                  "cheque_reference": false,
+                  "effective_date": false,
+                  "amount": 2500.00
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 04 Feb 2025 11:15:19 GMT
+      Content-Length: 3519
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "receipt_voucher_create_details": {
+                        "id": 47,
+                        "number": null,
+                        "partner_id": 11,
+                        "partner_name": "Lulu Hyper Market- Karama",
+                        "journal_id": 6,
+                        "journal_name": "RAK Bank  - 0182734647",
+                        "payment_method_line_id": 1,
+                        "payment_method_line_name": "Cash",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "account_id": 161,
+                        "account_name": "RAK Bank",
+                        "date": "2025-02-04",
+                        "cheque_date": null,
+                        "name": "sample receipt voucher",
+                        "move_narration": "sample narration",
+                        "transaction_no": null,
+                        "transaction_date": null,
+                        "pdc_state": null,
+                        "pdc_account_id": null,
+                        "pdc_account_name": null,
+                        "bank_reference": null,
+                        "cheque_reference": null,
+                        "effective_date": null,
+                        "line_ids": [
+                            {
+                                "id": 36,
+                                "line_number": 1,
+                                "product_id": null,
+                                "product_name": null,
+                                "account_id": 10,
+                                "account_name": "Accounts Receivable",
+                                "contact_id": null,
+                                "contact_name": null,
+                                "name": "sample receipt voucher",
+                                "account_analytic_id": null,
+                                "account_analytic_name": null,
+                                "quantity": 1,
+                                "price_unit": 2500,
+                                "tax_ids": [],
+                                "price_tax": null,
+                                "price_subtotal": 2500,
+                                "price_total": 2500,
+                                "comp_price_tax": null,
+                                "comp_price_subtotal": 2500,
+                                "comp_price_total": 2500,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "comp_currency_id": 128,
+                                "comp_currency_name": "AED",
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLLC",
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "voucher_type": "sale"
+                            }
+                        ],
+                        "payment_invoice_line_ids": [
+                            {
+                                "id": 78,
+                                "line_number": 1,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 536,
+                                "move_name": "INV/2025/00010",
+                                "invoice_date": "2025-01-30",
+                                "due_date": "2025-03-01",
+                                "due_days": "2025-03-01",
+                                "amount_total": 2883.7825,
+                                "residual": 2809.4325,
+                                "alloc_amount": 0,
+                                "balance_amount": 2809.4325,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 79,
+                                "line_number": 2,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 485,
+                                "move_name": "INV/2025/00009",
+                                "invoice_date": "2025-01-29",
+                                "due_date": "2025-02-28",
+                                "due_days": "2025-02-28",
+                                "amount_total": 4200,
+                                "residual": 4200,
+                                "alloc_amount": 0,
+                                "balance_amount": 4200,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 80,
+                                "line_number": 3,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 273,
+                                "move_name": "INV/2025/00006",
+                                "invoice_date": "2025-01-22",
+                                "due_date": "2025-02-21",
+                                "due_days": "2025-02-21",
+                                "amount_total": 27562.5,
+                                "residual": 27562.5,
+                                "alloc_amount": 0,
+                                "balance_amount": 27562.5,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 81,
+                                "line_number": 4,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 257,
+                                "move_name": "INV/2025/00005",
+                                "invoice_date": "2025-01-21",
+                                "due_date": "2025-03-05",
+                                "due_days": "2025-03-05",
+                                "amount_total": 9870,
+                                "residual": 7870,
+                                "alloc_amount": 0,
+                                "balance_amount": 7870,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 82,
+                                "line_number": 5,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 212,
+                                "move_name": "INV/2025/00003",
+                                "invoice_date": "2025-01-16",
+                                "due_date": "2025-03-05",
+                                "due_days": "2025-03-05",
+                                "amount_total": 5406.6325,
+                                "residual": 2389.2825,
+                                "alloc_amount": 0,
+                                "balance_amount": 2389.2825,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            }
+                        ],
+                        "untaxed_amount": 2500,
+                        "tax_amount": 2500,
+                        "amount": 2500,
+                        "comp_untaxed_amount": 2500,
+                        "comp_tax_amount": 2500,
+                        "comp_amount": 2500
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Receipt Create Electronic
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_customer_receipt_voucher
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "partner_id": 11,
+                  "journal_id": 6,
+                  "payment_method_line_id": 12,
+                  "currency_id": 128,
+                  "date": "2025-02-04",
+                  "cheque_date": false,
+                  "name": "sample receipt voucher electronic",
+                  "move_narration": "sample narration electronic",
+                  "transaction_no": "HGIHJ564",
+                  "transaction_date": "2025-02-04",
+                  "bank_reference": false,
+                  "cheque_reference": false,
+                  "effective_date": false,
+                  "amount": 2150.00
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 04 Feb 2025 11:35:30 GMT
+      Content-Length: 3587
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "receipt_voucher_create_details": {
+                        "id": 49,
+                        "number": null,
+                        "partner_id": 11,
+                        "partner_name": "Lulu Hyper Market- Karama",
+                        "journal_id": 6,
+                        "journal_name": "RAK Bank  - 0182734647",
+                        "payment_method_line_id": 12,
+                        "payment_method_line_name": "Electronic",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "account_id": 161,
+                        "account_name": "RAK Bank",
+                        "date": "2025-02-04",
+                        "cheque_date": "2025-02-04",
+                        "name": "sample receipt voucher electronic",
+                        "move_narration": "sample narration electron",
+                        "transaction_no": "HGIHJ564",
+                        "transaction_date": "2025-02-04",
+                        "pdc_state": "2025-02-04",
+                        "pdc_account_id": null,
+                        "pdc_account_name": null,
+                        "bank_reference": null,
+                        "cheque_reference": null,
+                        "effective_date": null,
+                        "line_ids": [
+                            {
+                                "id": 38,
+                                "line_number": 1,
+                                "product_id": null,
+                                "product_name": null,
+                                "account_id": 10,
+                                "account_name": "Accounts Receivable",
+                                "contact_id": null,
+                                "contact_name": null,
+                                "name": "sample receipt voucher electronic",
+                                "account_analytic_id": null,
+                                "account_analytic_name": null,
+                                "quantity": 1,
+                                "price_unit": 2150,
+                                "tax_ids": [],
+                                "price_tax": null,
+                                "price_subtotal": 2150,
+                                "price_total": 2150,
+                                "comp_price_tax": null,
+                                "comp_price_subtotal": 2150,
+                                "comp_price_total": 2150,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "comp_currency_id": 128,
+                                "comp_currency_name": "AED",
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLLC",
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "voucher_type": "sale"
+                            }
+                        ],
+                        "payment_invoice_line_ids": [
+                            {
+                                "id": 88,
+                                "line_number": 1,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 536,
+                                "move_name": "INV/2025/00010",
+                                "invoice_date": "2025-01-30",
+                                "due_date": "2025-03-01",
+                                "due_days": "2025-03-01",
+                                "amount_total": 2883.7825,
+                                "residual": 2809.4325,
+                                "alloc_amount": 0,
+                                "balance_amount": 2809.4325,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 89,
+                                "line_number": 2,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 485,
+                                "move_name": "INV/2025/00009",
+                                "invoice_date": "2025-01-29",
+                                "due_date": "2025-02-28",
+                                "due_days": "2025-02-28",
+                                "amount_total": 4200,
+                                "residual": 4200,
+                                "alloc_amount": 0,
+                                "balance_amount": 4200,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 90,
+                                "line_number": 3,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 273,
+                                "move_name": "INV/2025/00006",
+                                "invoice_date": "2025-01-22",
+                                "due_date": "2025-02-21",
+                                "due_days": "2025-02-21",
+                                "amount_total": 27562.5,
+                                "residual": 27562.5,
+                                "alloc_amount": 0,
+                                "balance_amount": 27562.5,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 91,
+                                "line_number": 4,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 257,
+                                "move_name": "INV/2025/00005",
+                                "invoice_date": "2025-01-21",
+                                "due_date": "2025-03-05",
+                                "due_days": "2025-03-05",
+                                "amount_total": 9870,
+                                "residual": 7870,
+                                "alloc_amount": 0,
+                                "balance_amount": 7870,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 92,
+                                "line_number": 5,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 212,
+                                "move_name": "INV/2025/00003",
+                                "invoice_date": "2025-01-16",
+                                "due_date": "2025-03-05",
+                                "due_days": "2025-03-05",
+                                "amount_total": 5406.6325,
+                                "residual": 2389.2825,
+                                "alloc_amount": 0,
+                                "balance_amount": 2389.2825,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            }
+                        ],
+                        "untaxed_amount": 2150,
+                        "tax_amount": 2150,
+                        "amount": 2150,
+                        "comp_untaxed_amount": 2150,
+                        "comp_tax_amount": 2150,
+                        "comp_amount": 2150
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Receipt Create Cheque
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_customer_receipt_voucher
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "partner_id": 11,
+                  "journal_id": 6,
+                  "payment_method_line_id": 27,
+                  "currency_id": 128,
+                  "date": "2025-02-04",
+                  "cheque_date": "2025-02-04",
+                  "name": "sample receipt voucher",
+                  "move_narration": "sample narration",
+                  "transaction_no": false,
+                  "transaction_date": false,
+                  "bank_reference": "BKMN6454",
+                  "cheque_reference": "CHK457541545",
+                  "effective_date": "2025-02-12",
+                  "amount": 9850.00
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 04 Feb 2025 11:40:38 GMT
+      Content-Length: 3582
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "receipt_voucher_create_details": {
+                        "id": 52,
+                        "number": null,
+                        "partner_id": 11,
+                        "partner_name": "Lulu Hyper Market- Karama",
+                        "journal_id": 6,
+                        "journal_name": "RAK Bank  - 0182734647",
+                        "payment_method_line_id": 27,
+                        "payment_method_line_name": "Checks",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "account_id": 161,
+                        "account_name": "RAK Bank",
+                        "date": "2025-02-04",
+                        "cheque_date": "2025-02-04",
+                        "name": "sample receipt voucher",
+                        "move_narration": "sample narration",
+                        "transaction_no": null,
+                        "transaction_date": null,
+                        "pdc_state": null,
+                        "pdc_account_id": 12,
+                        "pdc_account_name": "Post Dated Cheques Received",
+                        "bank_reference": "BKMN6454",
+                        "cheque_reference": "CHK457541545",
+                        "effective_date": "2025-02-12",
+                        "line_ids": [
+                            {
+                                "id": 41,
+                                "line_number": 1,
+                                "product_id": null,
+                                "product_name": null,
+                                "account_id": 10,
+                                "account_name": "Accounts Receivable",
+                                "contact_id": null,
+                                "contact_name": null,
+                                "name": "sample receipt voucher",
+                                "account_analytic_id": null,
+                                "account_analytic_name": null,
+                                "quantity": 1,
+                                "price_unit": 9850,
+                                "tax_ids": [],
+                                "price_tax": null,
+                                "price_subtotal": 9850,
+                                "price_total": 9850,
+                                "comp_price_tax": null,
+                                "comp_price_subtotal": 9850,
+                                "comp_price_total": 9850,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "comp_currency_id": 128,
+                                "comp_currency_name": "AED",
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLLC",
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "voucher_type": "sale"
+                            }
+                        ],
+                        "payment_invoice_line_ids": [
+                            {
+                                "id": 103,
+                                "line_number": 1,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 536,
+                                "move_name": "INV/2025/00010",
+                                "invoice_date": "2025-01-30",
+                                "due_date": "2025-03-01",
+                                "due_days": "2025-03-01",
+                                "amount_total": 2883.7825,
+                                "residual": 2809.4325,
+                                "alloc_amount": 0,
+                                "balance_amount": 2809.4325,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 104,
+                                "line_number": 2,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 485,
+                                "move_name": "INV/2025/00009",
+                                "invoice_date": "2025-01-29",
+                                "due_date": "2025-02-28",
+                                "due_days": "2025-02-28",
+                                "amount_total": 4200,
+                                "residual": 4200,
+                                "alloc_amount": 0,
+                                "balance_amount": 4200,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 105,
+                                "line_number": 3,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 273,
+                                "move_name": "INV/2025/00006",
+                                "invoice_date": "2025-01-22",
+                                "due_date": "2025-02-21",
+                                "due_days": "2025-02-21",
+                                "amount_total": 27562.5,
+                                "residual": 27562.5,
+                                "alloc_amount": 0,
+                                "balance_amount": 27562.5,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 106,
+                                "line_number": 4,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 257,
+                                "move_name": "INV/2025/00005",
+                                "invoice_date": "2025-01-21",
+                                "due_date": "2025-03-05",
+                                "due_days": "2025-03-05",
+                                "amount_total": 9870,
+                                "residual": 7870,
+                                "alloc_amount": 0,
+                                "balance_amount": 7870,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 107,
+                                "line_number": 5,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 212,
+                                "move_name": "INV/2025/00003",
+                                "invoice_date": "2025-01-16",
+                                "due_date": "2025-03-05",
+                                "due_days": "2025-03-05",
+                                "amount_total": 5406.6325,
+                                "residual": 2389.2825,
+                                "alloc_amount": 0,
+                                "balance_amount": 2389.2825,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            }
+                        ],
+                        "untaxed_amount": 9850,
+                        "tax_amount": 9850,
+                        "amount": 9850,
+                        "comp_untaxed_amount": 9850,
+                        "comp_tax_amount": 9850,
+                        "comp_amount": 9850
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Invoice Payment Creation
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_invoice_payment
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "params": {
+          "data": {
+            "amount": 21.21,
+            "cheque_reference": "",
+            "currency_id": 128,
+            "date": "2025-03-26",
+            "invoice_id": 2324,
+            "invoice_origin": "INV2025031879",
+            "journal_id": 19,
+            "move_narration": "test memo",
+            "customer_id": 23917,
+            "payment_method_line_id": 33,
+            "payment_origin": "RVPO1742900927123",
+            "transaction_no": ""
+          },
+          "user_lang": "en_us"
+        }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 26 Mar 2025 10:27:31 GMT
+      Content-Length: 8502
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "receipt_voucher_create_details": {
+                        "id": 158,
+                        "number": "RV2025030064",
+                        "customer_id": 23917,
+                        "partner_name": "Al MADEENA-DEIRA",
+                        "journal_id": 19,
+                        "journal_name": "Cash in Hand 5",
+                        "payment_method_line_id": 33,
+                        "payment_method_line_name": "Cash",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "account_id": 193,
+                        "account_name": "Cash in Hand Sales 5",
+                        "date": "2025-03-26",
+                        "account_date": "2025-03-26",
+                        "cheque_date": null,
+                        "name": null,
+                        "move_narration": "test memo",
+                        "transaction_no": null,
+                        "transaction_date": null,
+                        "pdc_state": null,
+                        "pdc_account_id": null,
+                        "pdc_account_name": null,
+                        "bank_reference": null,
+                        "cheque_reference": null,
+                        "effective_date": null,
+                        "payment_origin": "RVPO1742900927123",
+                        "line_ids": [
+                            {
+                                "id": 130,
+                                "line_number": 1,
+                                "product_id": null,
+                                "product_name": null,
+                                "account_id": 10,
+                                "account_name": "Accounts Receivable",
+                                "contact_id": null,
+                                "contact_name": null,
+                                "name": null,
+                                "account_analytic_id": null,
+                                "account_analytic_name": null,
+                                "quantity": 1,
+                                "price_unit": 21.21,
+                                "tax_ids": [],
+                                "price_tax": null,
+                                "price_subtotal": 21.21,
+                                "price_total": 21.21,
+                                "comp_price_tax": null,
+                                "comp_price_subtotal": 21.21,
+                                "comp_price_total": 21.21,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "comp_currency_id": 128,
+                                "comp_currency_name": "AED",
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "partner_id": 23917,
+                                "partner_name": "Al MADEENA-DEIRA",
+                                "voucher_type": "sale"
+                            }
+                        ],
+                        "payment_invoice_line_ids": [
+                            {
+                                "id": 529,
+                                "line_number": 1,
+                                "customer_id": 23917,
+                                "partner_name": "Al MADEENA-DEIRA",
+                                "move_id": 2181,
+                                "move_name": "INV/2025/00226",
+                                "invoice_date": "2025-03-21",
+                                "due_date": "2025-03-21",
+                                "due_days": "2025-03-21",
+                                "amount_total": 21.21,
+                                "residual": 21.21,
+                                "alloc_amount": 0,
+                                "balance_amount": 21.21,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 530,
+                                "line_number": 2,
+                                "customer_id": 23917,
+                                "partner_name": "Al MADEENA-DEIRA",
+                                "move_id": 2179,
+                                "move_name": "INV/2025/00225",
+                                "invoice_date": "2025-03-21",
+                                "due_date": "2025-03-21",
+                                "due_days": "2025-03-21",
+                                "amount_total": 21.21,
+                                "residual": 21.21,
+                                "alloc_amount": 0,
+                                "balance_amount": 21.21,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 531,
+                                "line_number": 3,
+                                "customer_id": 23917,
+                                "partner_name": "Al MADEENA-DEIRA",
+                                "move_id": 2177,
+                                "move_name": "INV/2025/00224",
+                                "invoice_date": "2025-03-21",
+                                "due_date": "2025-03-21",
+                                "due_days": "2025-03-21",
+                                "amount_total": 21.21,
+                                "residual": 21.21,
+                                "alloc_amount": 0,
+                                "balance_amount": 21.21,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 532,
+                                "line_number": 4,
+                                "customer_id": 23917,
+                                "partner_name": "Al MADEENA-DEIRA",
+                                "move_id": 1820,
+                                "move_name": "INV/2025/00124",
+                                "invoice_date": "2025-03-11",
+                                "due_date": null,
+                                "due_days": null,
+                                "amount_total": 190.89,
+                                "residual": 190.89,
+                                "alloc_amount": 0,
+                                "balance_amount": 190.89,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            }
+                        ],
+                        "untaxed_amount": 21.21,
+                        "tax_amount": 21.21,
+                        "amount": 21.21,
+                        "comp_untaxed_amount": 21.21,
+                        "comp_tax_amount": 21.21,
+                        "comp_amount": 21.21,
+                        "payment_state": "posted",
+                        "eligible_reconciled_amount": 21.21,
+                        "eligible_reconciled_amount_currency": 21.21,
+                        "reconciled_amount": null,
+                        "residual_amount": 21.21,
+                        "reconciled_amount_currency": null,
+                        "residual_amount_currency": 21.21,
+                        "reconciliation_state": "not_reconciled"
+                    },
+                    "invoice_details": {
+                        "invoice_id": 2324,
+                        "invoice_number": "INV/2025/00255",
+                        "customer_id": 23994,
+                        "customer_name": "Aster Medical Center",
+                        "invoice_date": "2025-03-25",
+                        "inv_date_time": "2025-03-25 11:40:13",
+                        "payment_term_id": 3,
+                        "payment_term_name": "21 Days",
+                        "due_date": "2025-04-15",
+                        "due_status": null,
+                        "journal_id": 1,
+                        "journal_name": "Customer Invoices",
+                        "currency_id": 128,
+                        "rate_with_comp_currency": 1,
+                        "move_narration": null,
+                        "currency_name": "AED",
+                        "invoice_origin": "1742902746INV192025031",
+                        "origin": "INV2025031999",
+                        "amount_untaxed": 20.2,
+                        "amount_total": 21.21,
+                        "amount_residual": 21.21,
+                        "amount_untaxed_signed": null,
+                        "amount_untaxed_in_currency_signed": null,
+                        "amount_tax_signed": null,
+                        "amount_total_signed": null,
+                        "amount_residual_signed": null,
+                        "amount_total_in_currency_signed": null,
+                        "user_id": false,
+                        "user_name": false,
+                        "state": "not_paid",
+                        "invoice_state": "posted",
+                        "created_by_id": 16,
+                        "created_by_name": "Sales 5",
+                        "created_on": "2025-03-25 11:40:13",
+                        "geo_latitude": 25.2418,
+                        "geo_longitude": 55.30954,
+                        "receiver_id": 24063,
+                        "receiver_name": "resgvh",
+                        "receiver_no": "84825868",
+                        "recv_id_img": "http://localhost:8070/web/image?model=account.move&id=2324&field=receiver_identity",
+                        "act_del_time": "2025-03-25 15:40:11",
+                        "recv_sign": "http://localhost:8070/web/image?model=account.move&id=2324&field=receiver_signature",
+                        "device_name": "Zebra Technologies TC15",
+                        "ime_no": "954dd7c8d38db29c",
+                        "device_serial": "954dd7c8d38db29c",
+                        "ip_address": "192.168.1.176",
+                        "invoice_lines": [
+                            {
+                                "invoice_line_id": 5602,
+                                "product_id": 2373,
+                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "barcode": null,
+                                "account_id": 146,
+                                "account_name": "Sales Account",
+                                "unit_price": 20.2,
+                                "quantity": 1,
+                                "uom_id": 12,
+                                "discount": 0,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "price_subtotal": 20.2,
+                                "pack_price_after_disc": null,
+                                "unit_price_after_disc": null,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "description": null,
+                                "price_tax": null,
+                                "package_id": 495,
+                                "package_name": "Kg",
+                                "package_quantity": 1,
+                                "product_code": null,
+                                "edited_price_line": null,
+                                "item_arabic_name": null,
+                                "batch_number": null,
+                                "expiry_date": null,
+                                "lot_id": null,
+                                "return_to": null,
+                                "return_reason": null,
+                                "return_reason_id": null,
+                                "order_qty": null,
+                                "order_pack_qty": null,
+                                "order_price": null,
+                                "order_uom": null,
+                                "return_van_qty": null,
+                                "return_wh_qty": null,
+                                "special_price_line": null,
+                                "returned_pack_qty": null,
+                                "returned_line_qty": null,
+                                "foc_id": null,
+                                "return_in_unit": null,
+                                "lower_pack_id": null,
+                                "lower_pack_name": null,
+                                "lower_unit_price": null,
+                                "line_number": 1,
+                                "qty_in_pack": 1,
+                                "available_qty": 593.06,
+                                "available_qty_pack": 593.06,
+                                "maximum_sale_qty_pack": 593,
+                                "location_id": 41,
+                                "location_name": "Route 5",
+                                "batch_numb_list": [
+                                    97
+                                ],
+                                "batch_numb_id": null,
+                                "ordered_pack_qty": 0,
+                                "ordered_qty": 0,
+                                "package_price": 20.2,
+                                "total_pack_qty": 1,
+                                "price_total": 21.21,
+                                "check_for_packaging": true,
+                                "discount_value": 0,
+                                "subtotal_before_disc": 20.2,
+                                "subtotal_before_disc_cc": 20.2,
+                                "proportional_weight": 1,
+                                "inv_fixed_disc": 0,
+                                "inv_fixed_allocated_disc": 0,
+                                "min_price": 0,
+                                "max_price": 0,
+                                "internal_ref": "SN100006",
+                                "product_packaging_id": 495,
+                                "product_packaging_qty": 1,
+                                "per_pack_qty_disc_value": 0,
+                                "product_tracking": "lot",
+                                "received_pack_qty": 0,
+                                "remaining_pack_qty": 1,
+                                "received_qty": 0,
+                                "remaining_qty": 1,
+                                "pricelist_id": 9,
+                                "sale_order_option_ids": null,
+                                "linked_line_id": null,
+                                "from_disc_move_line_id": null,
+                                "stock_status": "avail",
+                                "batches_info_ids": [],
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": []
+                            }
+                        ],
+                        "partner_details": {
+                            "customer_id": 23994,
+                            "name": "Aster Medical Center",
+                            "street": "2839283748",
+                            "street2": "Muroor Street",
+                            "city": "Musaffa",
+                            "zip": "1829292",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "currency_id": 128,
+                            "currency": "AED",
+                            "email": "info@aster.com",
+                            "website": "http://aster.com",
+                            "phone": "04248461840",
+                            "mobile": null,
+                            "trn": "1929384182939",
+                            "trade_reg": "19293828282",
+                            "trade_reg_expiry": null,
+                            "latitude": 25.2614445,
+                            "longitude": 55.297454,
+                            "pricelist_id": 9,
+                            "pricelist_name": "Sales 5 Price",
+                            "customer_ref": "787354",
+                            "payment_type": "cash",
+                            "credit_limit": 150000,
+                            "due_amount": null,
+                            "allow_overcredit_limit": null,
+                            "over_limit_amount": null,
+                            "confirmed_customer": null,
+                            "payment_terms_id": 3,
+                            "payment_terms_name": "21 Days",
+                            "logo_url": "http://localhost:8070/web/image?model=res.partner&id=23994&field=image_1920",
+                            "contact_name": null,
+                            "contact_phone": null,
+                            "customer": true,
+                            "supplier": false,
+                            "debit_limit": null,
+                            "current_credit_amount": 3516.8994,
+                            "contact_list": [],
+                            "area_code_id": null,
+                            "area_code_name": null,
+                            "barcode": null,
+                            "disable_loc_update": null,
+                            "employee_id": null,
+                            "employee_name": null,
+                            "company_registry": "1741418698CUST202503",
+                            "is_contact": false
+                        },
+                        "payment_history": null,
+                        "payment_type": "cash",
+                        "credit_limit": 0,
+                        "from_quotation_id": null,
+                        "presale_id": null,
+                        "presale_name": null,
+                        "pricelist_id": 9,
+                        "pricelist_name": "Sales 5 Price",
+                        "location_id": 41,
+                        "location_name": "Route 5",
+                        "direct_stock_transfer": true,
+                        "foc_total": 0
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Receipt Create Cash
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_customer_receipt_voucher
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "partner_id": 11,
+                  "journal_id": 6,
+                  "payment_method_line_id": 1,
+                  "currency_id": 128,
+                  "date": "2025-02-04",
+                  "cheque_date": false,
+                  "name": "sample receipt voucher",
+                  "move_narration": "sample narration",
+                  "transaction_no": false,
+                  "transaction_date": false,
+                  "bank_reference": false,
+                  "cheque_reference": false,
+                  "effective_date": false,
+                  "amount": 2500.00
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 04 Feb 2025 11:15:19 GMT
+      Content-Length: 3519
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "receipt_voucher_create_details": {
+                        "id": 47,
+                        "number": null,
+                        "partner_id": 11,
+                        "partner_name": "Lulu Hyper Market- Karama",
+                        "journal_id": 6,
+                        "journal_name": "RAK Bank  - 0182734647",
+                        "payment_method_line_id": 1,
+                        "payment_method_line_name": "Cash",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "account_id": 161,
+                        "account_name": "RAK Bank",
+                        "date": "2025-02-04",
+                        "cheque_date": null,
+                        "name": "sample receipt voucher",
+                        "move_narration": "sample narration",
+                        "transaction_no": null,
+                        "transaction_date": null,
+                        "pdc_state": null,
+                        "pdc_account_id": null,
+                        "pdc_account_name": null,
+                        "bank_reference": null,
+                        "cheque_reference": null,
+                        "effective_date": null,
+                        "line_ids": [
+                            {
+                                "id": 36,
+                                "line_number": 1,
+                                "product_id": null,
+                                "product_name": null,
+                                "account_id": 10,
+                                "account_name": "Accounts Receivable",
+                                "contact_id": null,
+                                "contact_name": null,
+                                "name": "sample receipt voucher",
+                                "account_analytic_id": null,
+                                "account_analytic_name": null,
+                                "quantity": 1,
+                                "price_unit": 2500,
+                                "tax_ids": [],
+                                "price_tax": null,
+                                "price_subtotal": 2500,
+                                "price_total": 2500,
+                                "comp_price_tax": null,
+                                "comp_price_subtotal": 2500,
+                                "comp_price_total": 2500,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "comp_currency_id": 128,
+                                "comp_currency_name": "AED",
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLLC",
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "voucher_type": "sale"
+                            }
+                        ],
+                        "payment_invoice_line_ids": [
+                            {
+                                "id": 78,
+                                "line_number": 1,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 536,
+                                "move_name": "INV/2025/00010",
+                                "invoice_date": "2025-01-30",
+                                "due_date": "2025-03-01",
+                                "due_days": "2025-03-01",
+                                "amount_total": 2883.7825,
+                                "residual": 2809.4325,
+                                "alloc_amount": 0,
+                                "balance_amount": 2809.4325,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 79,
+                                "line_number": 2,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 485,
+                                "move_name": "INV/2025/00009",
+                                "invoice_date": "2025-01-29",
+                                "due_date": "2025-02-28",
+                                "due_days": "2025-02-28",
+                                "amount_total": 4200,
+                                "residual": 4200,
+                                "alloc_amount": 0,
+                                "balance_amount": 4200,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 80,
+                                "line_number": 3,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 273,
+                                "move_name": "INV/2025/00006",
+                                "invoice_date": "2025-01-22",
+                                "due_date": "2025-02-21",
+                                "due_days": "2025-02-21",
+                                "amount_total": 27562.5,
+                                "residual": 27562.5,
+                                "alloc_amount": 0,
+                                "balance_amount": 27562.5,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 81,
+                                "line_number": 4,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 257,
+                                "move_name": "INV/2025/00005",
+                                "invoice_date": "2025-01-21",
+                                "due_date": "2025-03-05",
+                                "due_days": "2025-03-05",
+                                "amount_total": 9870,
+                                "residual": 7870,
+                                "alloc_amount": 0,
+                                "balance_amount": 7870,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 82,
+                                "line_number": 5,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 212,
+                                "move_name": "INV/2025/00003",
+                                "invoice_date": "2025-01-16",
+                                "due_date": "2025-03-05",
+                                "due_days": "2025-03-05",
+                                "amount_total": 5406.6325,
+                                "residual": 2389.2825,
+                                "alloc_amount": 0,
+                                "balance_amount": 2389.2825,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            }
+                        ],
+                        "untaxed_amount": 2500,
+                        "tax_amount": 2500,
+                        "amount": 2500,
+                        "comp_untaxed_amount": 2500,
+                        "comp_tax_amount": 2500,
+                        "comp_amount": 2500
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Invoice Payment Creation
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_invoice_payment
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "params": {
+          "data": {
+            "amount": 21.21,
+            "cheque_reference": "",
+            "currency_id": 128,
+            "date": "2025-03-26",
+            "invoice_id": 2324,
+            "invoice_origin": "INV2025031879",
+            "journal_id": 19,
+            "move_narration": "test memo",
+            "customer_id": 23917,
+            "payment_method_line_id": 33,
+            "payment_origin": "RVPO1742900927123",
+            "transaction_no": ""
+          },
+          "user_lang": "en_us"
+        }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 26 Mar 2025 10:27:31 GMT
+      Content-Length: 8502
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "receipt_voucher_create_details": {
+                        "id": 158,
+                        "number": "RV2025030064",
+                        "customer_id": 23917,
+                        "partner_name": "Al MADEENA-DEIRA",
+                        "journal_id": 19,
+                        "journal_name": "Cash in Hand 5",
+                        "payment_method_line_id": 33,
+                        "payment_method_line_name": "Cash",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "account_id": 193,
+                        "account_name": "Cash in Hand Sales 5",
+                        "date": "2025-03-26",
+                        "account_date": "2025-03-26",
+                        "cheque_date": null,
+                        "name": null,
+                        "move_narration": "test memo",
+                        "transaction_no": null,
+                        "transaction_date": null,
+                        "pdc_state": null,
+                        "pdc_account_id": null,
+                        "pdc_account_name": null,
+                        "bank_reference": null,
+                        "cheque_reference": null,
+                        "effective_date": null,
+                        "payment_origin": "RVPO1742900927123",
+                        "line_ids": [
+                            {
+                                "id": 130,
+                                "line_number": 1,
+                                "product_id": null,
+                                "product_name": null,
+                                "account_id": 10,
+                                "account_name": "Accounts Receivable",
+                                "contact_id": null,
+                                "contact_name": null,
+                                "name": null,
+                                "account_analytic_id": null,
+                                "account_analytic_name": null,
+                                "quantity": 1,
+                                "price_unit": 21.21,
+                                "tax_ids": [],
+                                "price_tax": null,
+                                "price_subtotal": 21.21,
+                                "price_total": 21.21,
+                                "comp_price_tax": null,
+                                "comp_price_subtotal": 21.21,
+                                "comp_price_total": 21.21,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "comp_currency_id": 128,
+                                "comp_currency_name": "AED",
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLC",
+                                "partner_id": 23917,
+                                "partner_name": "Al MADEENA-DEIRA",
+                                "voucher_type": "sale"
+                            }
+                        ],
+                        "payment_invoice_line_ids": [
+                            {
+                                "id": 529,
+                                "line_number": 1,
+                                "customer_id": 23917,
+                                "partner_name": "Al MADEENA-DEIRA",
+                                "move_id": 2181,
+                                "move_name": "INV/2025/00226",
+                                "invoice_date": "2025-03-21",
+                                "due_date": "2025-03-21",
+                                "due_days": "2025-03-21",
+                                "amount_total": 21.21,
+                                "residual": 21.21,
+                                "alloc_amount": 0,
+                                "balance_amount": 21.21,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 530,
+                                "line_number": 2,
+                                "customer_id": 23917,
+                                "partner_name": "Al MADEENA-DEIRA",
+                                "move_id": 2179,
+                                "move_name": "INV/2025/00225",
+                                "invoice_date": "2025-03-21",
+                                "due_date": "2025-03-21",
+                                "due_days": "2025-03-21",
+                                "amount_total": 21.21,
+                                "residual": 21.21,
+                                "alloc_amount": 0,
+                                "balance_amount": 21.21,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 531,
+                                "line_number": 3,
+                                "customer_id": 23917,
+                                "partner_name": "Al MADEENA-DEIRA",
+                                "move_id": 2177,
+                                "move_name": "INV/2025/00224",
+                                "invoice_date": "2025-03-21",
+                                "due_date": "2025-03-21",
+                                "due_days": "2025-03-21",
+                                "amount_total": 21.21,
+                                "residual": 21.21,
+                                "alloc_amount": 0,
+                                "balance_amount": 21.21,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 532,
+                                "line_number": 4,
+                                "customer_id": 23917,
+                                "partner_name": "Al MADEENA-DEIRA",
+                                "move_id": 1820,
+                                "move_name": "INV/2025/00124",
+                                "invoice_date": "2025-03-11",
+                                "due_date": null,
+                                "due_days": null,
+                                "amount_total": 190.89,
+                                "residual": 190.89,
+                                "alloc_amount": 0,
+                                "balance_amount": 190.89,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            }
+                        ],
+                        "untaxed_amount": 21.21,
+                        "tax_amount": 21.21,
+                        "amount": 21.21,
+                        "comp_untaxed_amount": 21.21,
+                        "comp_tax_amount": 21.21,
+                        "comp_amount": 21.21,
+                        "payment_state": "posted",
+                        "eligible_reconciled_amount": 21.21,
+                        "eligible_reconciled_amount_currency": 21.21,
+                        "reconciled_amount": null,
+                        "residual_amount": 21.21,
+                        "reconciled_amount_currency": null,
+                        "residual_amount_currency": 21.21,
+                        "reconciliation_state": "not_reconciled"
+                    },
+                    "invoice_details": {
+                        "invoice_id": 2324,
+                        "invoice_number": "INV/2025/00255",
+                        "customer_id": 23994,
+                        "customer_name": "Aster Medical Center",
+                        "invoice_date": "2025-03-25",
+                        "inv_date_time": "2025-03-25 11:40:13",
+                        "payment_term_id": 3,
+                        "payment_term_name": "21 Days",
+                        "due_date": "2025-04-15",
+                        "due_status": null,
+                        "journal_id": 1,
+                        "journal_name": "Customer Invoices",
+                        "currency_id": 128,
+                        "rate_with_comp_currency": 1,
+                        "move_narration": null,
+                        "currency_name": "AED",
+                        "invoice_origin": "1742902746INV192025031",
+                        "origin": "INV2025031999",
+                        "amount_untaxed": 20.2,
+                        "amount_total": 21.21,
+                        "amount_residual": 21.21,
+                        "amount_untaxed_signed": null,
+                        "amount_untaxed_in_currency_signed": null,
+                        "amount_tax_signed": null,
+                        "amount_total_signed": null,
+                        "amount_residual_signed": null,
+                        "amount_total_in_currency_signed": null,
+                        "user_id": false,
+                        "user_name": false,
+                        "state": "not_paid",
+                        "invoice_state": "posted",
+                        "created_by_id": 16,
+                        "created_by_name": "Sales 5",
+                        "created_on": "2025-03-25 11:40:13",
+                        "geo_latitude": 25.2418,
+                        "geo_longitude": 55.30954,
+                        "receiver_id": 24063,
+                        "receiver_name": "resgvh",
+                        "receiver_no": "84825868",
+                        "recv_id_img": "http://localhost:8070/web/image?model=account.move&id=2324&field=receiver_identity",
+                        "act_del_time": "2025-03-25 15:40:11",
+                        "recv_sign": "http://localhost:8070/web/image?model=account.move&id=2324&field=receiver_signature",
+                        "device_name": "Zebra Technologies TC15",
+                        "ime_no": "954dd7c8d38db29c",
+                        "device_serial": "954dd7c8d38db29c",
+                        "ip_address": "192.168.1.176",
+                        "invoice_lines": [
+                            {
+                                "invoice_line_id": 5602,
+                                "product_id": 2373,
+                                "product_name": "ALMOND BLANCHED SLIVERED 11.34KG",
+                                "barcode": null,
+                                "account_id": 146,
+                                "account_name": "Sales Account",
+                                "unit_price": 20.2,
+                                "quantity": 1,
+                                "uom_id": 12,
+                                "discount": 0,
+                                "tax_ids": [
+                                    2
+                                ],
+                                "price_subtotal": 20.2,
+                                "pack_price_after_disc": null,
+                                "unit_price_after_disc": null,
+                                "discount_rate": 0,
+                                "disc_type": null,
+                                "description": null,
+                                "price_tax": null,
+                                "package_id": 495,
+                                "package_name": "Kg",
+                                "package_quantity": 1,
+                                "product_code": null,
+                                "edited_price_line": null,
+                                "item_arabic_name": null,
+                                "batch_number": null,
+                                "expiry_date": null,
+                                "lot_id": null,
+                                "return_to": null,
+                                "return_reason": null,
+                                "return_reason_id": null,
+                                "order_qty": null,
+                                "order_pack_qty": null,
+                                "order_price": null,
+                                "order_uom": null,
+                                "return_van_qty": null,
+                                "return_wh_qty": null,
+                                "special_price_line": null,
+                                "returned_pack_qty": null,
+                                "returned_line_qty": null,
+                                "foc_id": null,
+                                "return_in_unit": null,
+                                "lower_pack_id": null,
+                                "lower_pack_name": null,
+                                "lower_unit_price": null,
+                                "line_number": 1,
+                                "qty_in_pack": 1,
+                                "available_qty": 593.06,
+                                "available_qty_pack": 593.06,
+                                "maximum_sale_qty_pack": 593,
+                                "location_id": 41,
+                                "location_name": "Route 5",
+                                "batch_numb_list": [
+                                    97
+                                ],
+                                "batch_numb_id": null,
+                                "ordered_pack_qty": 0,
+                                "ordered_qty": 0,
+                                "package_price": 20.2,
+                                "total_pack_qty": 1,
+                                "price_total": 21.21,
+                                "check_for_packaging": true,
+                                "discount_value": 0,
+                                "subtotal_before_disc": 20.2,
+                                "subtotal_before_disc_cc": 20.2,
+                                "proportional_weight": 1,
+                                "inv_fixed_disc": 0,
+                                "inv_fixed_allocated_disc": 0,
+                                "min_price": 0,
+                                "max_price": 0,
+                                "internal_ref": "SN100006",
+                                "product_packaging_id": 495,
+                                "product_packaging_qty": 1,
+                                "per_pack_qty_disc_value": 0,
+                                "product_tracking": "lot",
+                                "received_pack_qty": 0,
+                                "remaining_pack_qty": 1,
+                                "received_qty": 0,
+                                "remaining_qty": 1,
+                                "pricelist_id": 9,
+                                "sale_order_option_ids": null,
+                                "linked_line_id": null,
+                                "from_disc_move_line_id": null,
+                                "stock_status": "avail",
+                                "batches_info_ids": [],
+                                "foc_id_name": null,
+                                "foc_line_id": null,
+                                "foc_details": []
+                            }
+                        ],
+                        "partner_details": {
+                            "customer_id": 23994,
+                            "name": "Aster Medical Center",
+                            "street": "2839283748",
+                            "street2": "Muroor Street",
+                            "city": "Musaffa",
+                            "zip": "1829292",
+                            "state_id": 548,
+                            "state_name": "Dubai",
+                            "country_id": 2,
+                            "country_name": "United Arab Emirates",
+                            "currency_id": 128,
+                            "currency": "AED",
+                            "email": "info@aster.com",
+                            "website": "http://aster.com",
+                            "phone": "04248461840",
+                            "mobile": null,
+                            "trn": "1929384182939",
+                            "trade_reg": "19293828282",
+                            "trade_reg_expiry": null,
+                            "latitude": 25.2614445,
+                            "longitude": 55.297454,
+                            "pricelist_id": 9,
+                            "pricelist_name": "Sales 5 Price",
+                            "customer_ref": "787354",
+                            "payment_type": "cash",
+                            "credit_limit": 150000,
+                            "due_amount": null,
+                            "allow_overcredit_limit": null,
+                            "over_limit_amount": null,
+                            "confirmed_customer": null,
+                            "payment_terms_id": 3,
+                            "payment_terms_name": "21 Days",
+                            "logo_url": "http://localhost:8070/web/image?model=res.partner&id=23994&field=image_1920",
+                            "contact_name": null,
+                            "contact_phone": null,
+                            "customer": true,
+                            "supplier": false,
+                            "debit_limit": null,
+                            "current_credit_amount": 3516.8994,
+                            "contact_list": [],
+                            "area_code_id": null,
+                            "area_code_name": null,
+                            "barcode": null,
+                            "disable_loc_update": null,
+                            "employee_id": null,
+                            "employee_name": null,
+                            "company_registry": "1741418698CUST202503",
+                            "is_contact": false
+                        },
+                        "payment_history": null,
+                        "payment_type": "cash",
+                        "credit_limit": 0,
+                        "from_quotation_id": null,
+                        "presale_id": null,
+                        "presale_name": null,
+                        "pricelist_id": 9,
+                        "pricelist_name": "Sales 5 Price",
+                        "location_id": 41,
+                        "location_name": "Route 5",
+                        "direct_stock_transfer": true,
+                        "foc_total": 0
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Receipt Create Electronic
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_customer_receipt_voucher
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "partner_id": 11,
+                  "journal_id": 6,
+                  "payment_method_line_id": 12,
+                  "currency_id": 128,
+                  "date": "2025-02-04",
+                  "cheque_date": false,
+                  "name": "sample receipt voucher electronic",
+                  "move_narration": "sample narration electronic",
+                  "transaction_no": "HGIHJ564",
+                  "transaction_date": "2025-02-04",
+                  "bank_reference": false,
+                  "cheque_reference": false,
+                  "effective_date": false,
+                  "amount": 2150.00
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 04 Feb 2025 11:35:30 GMT
+      Content-Length: 3587
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "receipt_voucher_create_details": {
+                        "id": 49,
+                        "number": null,
+                        "partner_id": 11,
+                        "partner_name": "Lulu Hyper Market- Karama",
+                        "journal_id": 6,
+                        "journal_name": "RAK Bank  - 0182734647",
+                        "payment_method_line_id": 12,
+                        "payment_method_line_name": "Electronic",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "account_id": 161,
+                        "account_name": "RAK Bank",
+                        "date": "2025-02-04",
+                        "cheque_date": "2025-02-04",
+                        "name": "sample receipt voucher electronic",
+                        "move_narration": "sample narration electron",
+                        "transaction_no": "HGIHJ564",
+                        "transaction_date": "2025-02-04",
+                        "pdc_state": "2025-02-04",
+                        "pdc_account_id": null,
+                        "pdc_account_name": null,
+                        "bank_reference": null,
+                        "cheque_reference": null,
+                        "effective_date": null,
+                        "line_ids": [
+                            {
+                                "id": 38,
+                                "line_number": 1,
+                                "product_id": null,
+                                "product_name": null,
+                                "account_id": 10,
+                                "account_name": "Accounts Receivable",
+                                "contact_id": null,
+                                "contact_name": null,
+                                "name": "sample receipt voucher electronic",
+                                "account_analytic_id": null,
+                                "account_analytic_name": null,
+                                "quantity": 1,
+                                "price_unit": 2150,
+                                "tax_ids": [],
+                                "price_tax": null,
+                                "price_subtotal": 2150,
+                                "price_total": 2150,
+                                "comp_price_tax": null,
+                                "comp_price_subtotal": 2150,
+                                "comp_price_total": 2150,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "comp_currency_id": 128,
+                                "comp_currency_name": "AED",
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLLC",
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "voucher_type": "sale"
+                            }
+                        ],
+                        "payment_invoice_line_ids": [
+                            {
+                                "id": 88,
+                                "line_number": 1,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 536,
+                                "move_name": "INV/2025/00010",
+                                "invoice_date": "2025-01-30",
+                                "due_date": "2025-03-01",
+                                "due_days": "2025-03-01",
+                                "amount_total": 2883.7825,
+                                "residual": 2809.4325,
+                                "alloc_amount": 0,
+                                "balance_amount": 2809.4325,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 89,
+                                "line_number": 2,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 485,
+                                "move_name": "INV/2025/00009",
+                                "invoice_date": "2025-01-29",
+                                "due_date": "2025-02-28",
+                                "due_days": "2025-02-28",
+                                "amount_total": 4200,
+                                "residual": 4200,
+                                "alloc_amount": 0,
+                                "balance_amount": 4200,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 90,
+                                "line_number": 3,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 273,
+                                "move_name": "INV/2025/00006",
+                                "invoice_date": "2025-01-22",
+                                "due_date": "2025-02-21",
+                                "due_days": "2025-02-21",
+                                "amount_total": 27562.5,
+                                "residual": 27562.5,
+                                "alloc_amount": 0,
+                                "balance_amount": 27562.5,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 91,
+                                "line_number": 4,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 257,
+                                "move_name": "INV/2025/00005",
+                                "invoice_date": "2025-01-21",
+                                "due_date": "2025-03-05",
+                                "due_days": "2025-03-05",
+                                "amount_total": 9870,
+                                "residual": 7870,
+                                "alloc_amount": 0,
+                                "balance_amount": 7870,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 92,
+                                "line_number": 5,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 212,
+                                "move_name": "INV/2025/00003",
+                                "invoice_date": "2025-01-16",
+                                "due_date": "2025-03-05",
+                                "due_days": "2025-03-05",
+                                "amount_total": 5406.6325,
+                                "residual": 2389.2825,
+                                "alloc_amount": 0,
+                                "balance_amount": 2389.2825,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            }
+                        ],
+                        "untaxed_amount": 2150,
+                        "tax_amount": 2150,
+                        "amount": 2150,
+                        "comp_untaxed_amount": 2150,
+                        "comp_tax_amount": 2150,
+                        "comp_amount": 2150
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Receipt Create Cheque
+  
+  request: {
+    url: 192.168.1.119:8070/web/create_customer_receipt_voucher
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "partner_id": 11,
+                  "journal_id": 6,
+                  "payment_method_line_id": 27,
+                  "currency_id": 128,
+                  "date": "2025-02-04",
+                  "cheque_date": "2025-02-04",
+                  "name": "sample receipt voucher",
+                  "move_narration": "sample narration",
+                  "transaction_no": false,
+                  "transaction_date": false,
+                  "bank_reference": "BKMN6454",
+                  "cheque_reference": "CHK457541545",
+                  "effective_date": "2025-02-12",
+                  "amount": 9850.00
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 04 Feb 2025 11:40:38 GMT
+      Content-Length: 3582
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "receipt_voucher_create_details": {
+                        "id": 52,
+                        "number": null,
+                        "partner_id": 11,
+                        "partner_name": "Lulu Hyper Market- Karama",
+                        "journal_id": 6,
+                        "journal_name": "RAK Bank  - 0182734647",
+                        "payment_method_line_id": 27,
+                        "payment_method_line_name": "Checks",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "rate_with_comp_currency": 1,
+                        "account_id": 161,
+                        "account_name": "RAK Bank",
+                        "date": "2025-02-04",
+                        "cheque_date": "2025-02-04",
+                        "name": "sample receipt voucher",
+                        "move_narration": "sample narration",
+                        "transaction_no": null,
+                        "transaction_date": null,
+                        "pdc_state": null,
+                        "pdc_account_id": 12,
+                        "pdc_account_name": "Post Dated Cheques Received",
+                        "bank_reference": "BKMN6454",
+                        "cheque_reference": "CHK457541545",
+                        "effective_date": "2025-02-12",
+                        "line_ids": [
+                            {
+                                "id": 41,
+                                "line_number": 1,
+                                "product_id": null,
+                                "product_name": null,
+                                "account_id": 10,
+                                "account_name": "Accounts Receivable",
+                                "contact_id": null,
+                                "contact_name": null,
+                                "name": "sample receipt voucher",
+                                "account_analytic_id": null,
+                                "account_analytic_name": null,
+                                "quantity": 1,
+                                "price_unit": 9850,
+                                "tax_ids": [],
+                                "price_tax": null,
+                                "price_subtotal": 9850,
+                                "price_total": 9850,
+                                "comp_price_tax": null,
+                                "comp_price_subtotal": 9850,
+                                "comp_price_total": 9850,
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "comp_currency_id": 128,
+                                "comp_currency_name": "AED",
+                                "company_id": 1,
+                                "company_name": "Synergia Softwares IT infrastructure LLLC",
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "voucher_type": "sale"
+                            }
+                        ],
+                        "payment_invoice_line_ids": [
+                            {
+                                "id": 103,
+                                "line_number": 1,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 536,
+                                "move_name": "INV/2025/00010",
+                                "invoice_date": "2025-01-30",
+                                "due_date": "2025-03-01",
+                                "due_days": "2025-03-01",
+                                "amount_total": 2883.7825,
+                                "residual": 2809.4325,
+                                "alloc_amount": 0,
+                                "balance_amount": 2809.4325,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 104,
+                                "line_number": 2,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 485,
+                                "move_name": "INV/2025/00009",
+                                "invoice_date": "2025-01-29",
+                                "due_date": "2025-02-28",
+                                "due_days": "2025-02-28",
+                                "amount_total": 4200,
+                                "residual": 4200,
+                                "alloc_amount": 0,
+                                "balance_amount": 4200,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 105,
+                                "line_number": 3,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 273,
+                                "move_name": "INV/2025/00006",
+                                "invoice_date": "2025-01-22",
+                                "due_date": "2025-02-21",
+                                "due_days": "2025-02-21",
+                                "amount_total": 27562.5,
+                                "residual": 27562.5,
+                                "alloc_amount": 0,
+                                "balance_amount": 27562.5,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 106,
+                                "line_number": 4,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 257,
+                                "move_name": "INV/2025/00005",
+                                "invoice_date": "2025-01-21",
+                                "due_date": "2025-03-05",
+                                "due_days": "2025-03-05",
+                                "amount_total": 9870,
+                                "residual": 7870,
+                                "alloc_amount": 0,
+                                "balance_amount": 7870,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            },
+                            {
+                                "id": 107,
+                                "line_number": 5,
+                                "partner_id": 11,
+                                "partner_name": "Lulu Hyper Market- Karama",
+                                "move_id": 212,
+                                "move_name": "INV/2025/00003",
+                                "invoice_date": "2025-01-16",
+                                "due_date": "2025-03-05",
+                                "due_days": "2025-03-05",
+                                "amount_total": 5406.6325,
+                                "residual": 2389.2825,
+                                "alloc_amount": 0,
+                                "balance_amount": 2389.2825,
+                                "currency_id": 128,
+                                "currency_name": "AED"
+                            }
+                        ],
+                        "untaxed_amount": 9850,
+                        "tax_amount": 9850,
+                        "amount": 9850,
+                        "comp_untaxed_amount": 9850,
+                        "comp_tax_amount": 9850,
+                        "comp_amount": 9850
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

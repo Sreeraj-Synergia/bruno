@@ -1,0 +1,125 @@
+meta {
+  name: Database List
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://erp.syntrack.app/web/database_list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Database List
+  
+  request: {
+    url: https://erp.syntrack.app/web/database_list
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Tue, 21 Jan 2025 11:20:46 GMT
+      Content-Type: application/json; charset=utf-8
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=PV9JVaPK3O_yLK2ecYEJtQBIIEH2kdKK9tbCwlJkktCUY4kF4pDdmvP9KXgboaFCd5w87lBL5ZTPlyAc92u6; Expires=Wed, 21 Jan 2026 11:20:46 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "database_list": [
+                        "SynergiaERP"
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Database List
+  
+  request: {
+    url: https://erp.syntrack.app/web/database_list
+    method: POST
+    mode: json
+    body:json: {
+      {}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: nginx/1.18.0 (Ubuntu)
+      Date: Tue, 21 Jan 2025 11:20:46 GMT
+      Content-Type: application/json; charset=utf-8
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      Set-Cookie: session_id=PV9JVaPK3O_yLK2ecYEJtQBIIEH2kdKK9tbCwlJkktCUY4kF4pDdmvP9KXgboaFCd5w87lBL5ZTPlyAc92u6; Expires=Wed, 21 Jan 2026 11:20:46 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Content-Encoding: gzip
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "database_list": [
+                        "SynergiaERP"
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

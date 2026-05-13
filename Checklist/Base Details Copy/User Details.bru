@@ -1,0 +1,19 @@
+meta {
+  name: User Details
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8069/web/user_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}

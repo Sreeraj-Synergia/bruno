@@ -1,0 +1,242 @@
+meta {
+  name: Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: 192.168.1.119:8074/web/session/mobile_login?db=CKM
+  body: json
+  auth: inherit
+}
+
+params:query {
+  db: CKM
+}
+
+body:json {
+  {
+      "params": {
+          "db": "Zaramiz",
+          "login": "ghulamabbas",
+          "password": "12345",
+          "device_name": "Zebra Technologies TC15",
+          "imei_no": "13-27-27.00-TG-U00-STD-GRT-04",
+          "latitude": "25.26555",
+          "ip_address": "192.168.1.119",
+          "longitude": "50.695655",
+          "fcm_id":"c1-Os3VhTRaauhOwTTJJnq:APA91bE31bGEABhsggq_uhhsQwEq5UsxdNXwc53S6DYoLtngG0FFMhHo65qqytvpPuTW1_Ze0EM0oSZ2Mx-eIOulktl3HWCI3GVTyU7yhlaDI_J93hZx1qI"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Login Failure
+  
+  request: {
+    url: http://localhost:8070/web/session/mobile_login?db=Migration
+    method: POST
+    mode: json
+    params:query: {
+      db: Migration
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "db": "Migration",
+              "login": "puser",
+              "password": "2",
+              "device_name": "Dell PC",
+              "imei_no": "12312323232",
+              "latitude": "25.26555",
+              "longitude": "50.695655",
+              "fcm_id": "123456456789AAAAAAAAAADFFFFFFFFFFFFRRRRRRRRRRRRRRRRR"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 22 Jan 2025 08:11:31 GMT
+      Content-Length: 140
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": false,
+                "payload": {},
+                "error": {
+                    "code": 200,
+                    "message": "Wrong Username or Password"
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Login Success
+  
+  request: {
+    url: 192.168.1.119:8071/web/session/mobile_login?db=2ERP
+    method: POST
+    mode: json
+    params:query: {
+      db: 2ERP
+    }
+  
+    headers: {
+      Accept: application/json
+    }
+  
+    body:json: {
+      {
+          "params": {
+              "db": "2ERP",
+              "login": "sales7",
+              "password": "123",
+              "device_name": "Zebra Technologies TC15",
+              "imei_no": "e9121597ff48ba37",
+              "latitude": "25.26555",
+              "ip_address": "192.168.1.119",
+              "longitude": "50.695655",
+              "fcm_id": "flBiLUyuSiae3MpFC_HBOj:APA91bHFluPsXCQJMrF3zHOlIdLHPS5lXq0SxxUeU7VRzn1xBsjGFcYfEeSHJEvnndR5Y6oJj6rzPvBIwigFMO3qrxH2SY03aaJc9rjekWwHNYjXm-yJb8g"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 22 May 2025 08:35:47 GMT
+      Content-Length: 1893
+      Content-Type: application/json; charset=utf-8
+      Set-Cookie: session_id=llkOfwKpsEvYTCL_GqMkdpV8x9fh_eRfWJ8ia3xOvoJSGx9JoESeG8p_dqEvBnX-TYdLuk2jzBr4ATYPXBhX; Expires=Fri, 22 May 2026 08:35:47 GMT; Max-Age=604800; HttpOnly; Path=/
+      Set-Cookie: session_id=llkOfwKpsEvYTCL_GqMkdpV8x9fh_eRfWJ8ia3xOvoJSGx9JoESeG8p_dqEvBnX-TYdLuk2jzBr4ATYPXBhX; Expires=Fri, 22 May 2026 08:35:47 GMT; Max-Age=604800; HttpOnly; Path=/
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "name": "Sales 7",
+                    "username": "Sales 7",
+                    "user_name": "Sales 7",
+                    "user_id": 23,
+                    "uid": 23,
+                    "login_id": "sales7",
+                    "logo_url": "http://localhost:8071/web/url_image?model=hr.employee&id=21&field=image_1920",
+                    "user_signature": "http://localhost:8071/web/url_image?model=res.users&id=23&field=user_signature",
+                    "employee_id": 21,
+                    "employee_name": "Sales 7",
+                    "manager": "Sales Supervisor",
+                    "coach": "Sales Supervisor",
+                    "department": "Sales Department",
+                    "job_pos": null,
+                    "work_phone": "+971-90290201910",
+                    "work_mobile": "200239400234",
+                    "work_email": "sales7",
+                    "logo": "http://localhost:8071/web/url_image?model=res.company&id=1&field=logo",
+                    "contact_us_link": false,
+                    "about_us_link": false,
+                    "faq_link": false,
+                    "company_id": 1,
+                    "company_name": "Synergia Softwares IT infrastructure LLC",
+                    "disable_offline_sales": false,
+                    "auto_pay_cash_invoice": true,
+                    "user_journey_available": true,
+                    "running_actual_journey_id": 27,
+                    "running_actual_journey_name": "PSDJ2025050008-1-4-1",
+                    "support_email": null,
+                    "currency_ids": [
+                        {
+                            "currency_id": 128,
+                            "name": "AED",
+                            "full_name": "United Arab Emirates dirham",
+                            "currency_unit_label": "Dirham",
+                            "currency_subunit_label": "Fils",
+                            "symbol": "AED",
+                            "position": "after",
+                            "rounding": 0.0001,
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        },
+                        {
+                            "currency_id": 20,
+                            "name": "INR",
+                            "full_name": "Indian rupee",
+                            "currency_unit_label": "Rupees",
+                            "currency_subunit_label": "Paise",
+                            "symbol": "₹",
+                            "position": "before",
+                            "rounding": 0.0001,
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        },
+                        {
+                            "currency_id": 1,
+                            "name": "USD",
+                            "full_name": "United States dollar",
+                            "currency_unit_label": "Dollars",
+                            "currency_subunit_label": "Cents",
+                            "symbol": "$",
+                            "position": "before",
+                            "rounding": 0.0001,
+                            "digits": [
+                                69,
+                                4
+                            ]
+                        }
+                    ],
+                    "user_companies": false,
+                    "session_id": "llkOfwKpsEvYTCL_GqMkdpV8x9fh_eRfWJ8ia3xOvoJSGx9JoESeG8p_dqEvBnX-TYdLuk2jzBr4ATYPXBhX"
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Loading Note
+  type: http
+  seq: 55
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_picking_loading_details_driver
+  body: text
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+}
+
+body:text {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}

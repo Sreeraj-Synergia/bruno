@@ -1,0 +1,167 @@
+meta {
+  name: Container Types
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://localhost:8069/web/get_container_type_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Container Types
+  
+  request: {
+    url: http://localhost:8069/web/get_container_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 393
+      Set-Cookie: session_id=8b81c9d4212b10fef167a337b7f2576b55062368; Expires=Mon, 04-Nov-2024 12:36:06 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Tue, 06 Aug 2024 12:36:06 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "container_type_details": [
+                        {
+                            "id": 1,
+                            "name": "40 Ft Container",
+                            "code": "40Ft"
+                        },
+                        {
+                            "id": 2,
+                            "name": "20 Ft Container",
+                            "code": "20ft"
+                        },
+                        {
+                            "id": 3,
+                            "name": "LCL",
+                            "code": "LCL"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Loose Truck Load",
+                            "code": "LTL"
+                        },
+                        {
+                            "id": 5,
+                            "name": "Full Truck Load",
+                            "code": "FTL"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Container Types
+  
+  request: {
+    url: http://localhost:8069/web/get_container_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 393
+      Set-Cookie: session_id=8b81c9d4212b10fef167a337b7f2576b55062368; Expires=Mon, 04-Nov-2024 12:36:06 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Tue, 06 Aug 2024 12:36:06 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "container_type_details": [
+                        {
+                            "id": 1,
+                            "name": "40 Ft Container",
+                            "code": "40Ft"
+                        },
+                        {
+                            "id": 2,
+                            "name": "20 Ft Container",
+                            "code": "20ft"
+                        },
+                        {
+                            "id": 3,
+                            "name": "LCL",
+                            "code": "LCL"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Loose Truck Load",
+                            "code": "LTL"
+                        },
+                        {
+                            "id": 5,
+                            "name": "Full Truck Load",
+                            "code": "FTL"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

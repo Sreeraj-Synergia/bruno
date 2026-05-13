@@ -1,0 +1,23 @@
+meta {
+  name: Database
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8069/web/database_list
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Get Database Instance
+}

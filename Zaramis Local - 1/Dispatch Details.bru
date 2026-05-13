@@ -1,0 +1,21 @@
+meta {
+  name: Dispatch Details
+  type: http
+  seq: 46
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_dispatch_order_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{
+      "page": 0
+  }}
+}
+
+settings {
+  encodeUrl: true
+}

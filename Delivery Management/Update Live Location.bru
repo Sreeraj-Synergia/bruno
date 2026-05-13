@@ -1,0 +1,27 @@
+meta {
+  name: Update Live Location
+  type: http
+  seq: 12
+}
+
+post {
+  url: http://194.195.116.73:8071/web/update_live_location
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "dispatch_id": 6,
+              "latitude": 44.5454,
+              "longitude": 25.54545
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

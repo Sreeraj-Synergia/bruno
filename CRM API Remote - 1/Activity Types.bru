@@ -1,0 +1,164 @@
+meta {
+  name: Activity Types
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://172.105.55.55:8074/web/get_mail_activity_type_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Activity Types
+  
+  request: {
+    url: http://172.105.55.55:8074/web/get_mail_activity_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 1195
+      Set-Cookie: session_id=e154b3dd36f0b6ba576b023a84c640dcbdc19664; Expires=Sun, 20-Oct-2024 12:40:43 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 22 Jul 2024 12:40:43 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "mail_activity_types": [
+                        {
+                            "id": 1,
+                            "name": "Email"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Call"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Meeting"
+                        },
+                        {
+                            "id": 7,
+                            "name": "Order Upsell"
+                        },
+                        {
+                            "id": 8,
+                            "name": "Expense Approval"
+                        },
+                        {
+                            "id": 9,
+                            "name": "Time Off Approval"
+                        },
+                        {
+                            "id": 10,
+                            "name": "Time Off Second Approve"
+                        },
+                        {
+                            "id": 11,
+                            "name": "Allocation Approval"
+                        },
+                        {
+                            "id": 12,
+                            "name": "Allocation Second Approve"
+                        },
+                        {
+                            "id": 13,
+                            "name": "pre call planning"
+                        },
+                        {
+                            "id": 14,
+                            "name": "Invitation or agenda"
+                        },
+                        {
+                            "id": 17,
+                            "name": "Shipment Details"
+                        },
+                        {
+                            "id": 18,
+                            "name": "Mode of Transport"
+                        },
+                        {
+                            "id": 19,
+                            "name": "Trade license of the customer"
+                        },
+                        {
+                            "id": 20,
+                            "name": "Identify the opportunity"
+                        },
+                        {
+                            "id": 21,
+                            "name": "Identify TCS ( Total customer spend)"
+                        },
+                        {
+                            "id": 22,
+                            "name": "Alert Date Reached"
+                        },
+                        {
+                            "id": 23,
+                            "name": "Get the Customer KYC info"
+                        },
+                        {
+                            "id": 24,
+                            "name": "Visit the Customers Office before any activity is starting"
+                        },
+                        {
+                            "id": 25,
+                            "name": "Test task"
+                        },
+                        {
+                            "id": 4,
+                            "name": "To Do"
+                        },
+                        {
+                            "id": 5,
+                            "name": "Upload Document"
+                        },
+                        {
+                            "id": 16,
+                            "name": "Account Manager have to accept the Prospect"
+                        },
+                        {
+                            "id": 15,
+                            "name": "Notify Manager for non-acceptance"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

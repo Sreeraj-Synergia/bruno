@@ -1,0 +1,26 @@
+meta {
+  name: crm_lead_create_rfp
+  type: http
+  seq: 18
+}
+
+post {
+  url: http://172.105.55.55:8074/web/crm_lead_create_rfp
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "lead_id": 325
+          },
+          "user_lang": "en_us"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

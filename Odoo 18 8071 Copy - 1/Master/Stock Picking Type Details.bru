@@ -1,0 +1,323 @@
+meta {
+  name: Stock Picking Type Details
+  type: http
+  seq: 7
+}
+
+post {
+  url: 192.168.1.119:8070/web/get_picking_types
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {}
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Stock Picking Type Details
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_picking_types
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 18 Mar 2025 07:22:03 GMT
+      Content-Length: 2313
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "stock_picking_types": [
+                        {
+                            "id": 1,
+                            "name": "GRN",
+                            "code": "incoming",
+                            "default_location_src_id": 4,
+                            "default_location_src_name": "Vendors",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 9,
+                            "name": "Sample Receipt",
+                            "code": "incoming",
+                            "default_location_src_id": 4,
+                            "default_location_src_name": "Vendors",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 14,
+                            "name": "Sales Return",
+                            "code": "incoming",
+                            "default_location_src_id": 4,
+                            "default_location_src_name": "Vendors",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 7,
+                            "name": "Internal Transfers",
+                            "code": "internal",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 11,
+                            "name": "Inventory Adjustment",
+                            "code": "internal",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Delivery Orders",
+                            "code": "outgoing",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 5,
+                            "default_location_dest_name": "Customers"
+                        },
+                        {
+                            "id": 10,
+                            "name": "Sample Delivery Orders",
+                            "code": "outgoing",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 5,
+                            "default_location_dest_name": "Customers"
+                        },
+                        {
+                            "id": 13,
+                            "name": "Purchase Return",
+                            "code": "outgoing",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 5,
+                            "default_location_dest_name": "Customers"
+                        },
+                        {
+                            "id": 18,
+                            "name": "Manufacturing",
+                            "code": "mrp_operation",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 15,
+                            "name": "Load Request",
+                            "code": "internal",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 19,
+                            "name": "Unload Request",
+                            "code": "internal",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Stock Picking Type Details
+  
+  request: {
+    url: 192.168.1.119:8070/web/get_picking_types
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {}
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 18 Mar 2025 07:22:03 GMT
+      Content-Length: 2313
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "stock_picking_types": [
+                        {
+                            "id": 1,
+                            "name": "GRN",
+                            "code": "incoming",
+                            "default_location_src_id": 4,
+                            "default_location_src_name": "Vendors",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 9,
+                            "name": "Sample Receipt",
+                            "code": "incoming",
+                            "default_location_src_id": 4,
+                            "default_location_src_name": "Vendors",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 14,
+                            "name": "Sales Return",
+                            "code": "incoming",
+                            "default_location_src_id": 4,
+                            "default_location_src_name": "Vendors",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 7,
+                            "name": "Internal Transfers",
+                            "code": "internal",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 11,
+                            "name": "Inventory Adjustment",
+                            "code": "internal",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Delivery Orders",
+                            "code": "outgoing",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 5,
+                            "default_location_dest_name": "Customers"
+                        },
+                        {
+                            "id": 10,
+                            "name": "Sample Delivery Orders",
+                            "code": "outgoing",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 5,
+                            "default_location_dest_name": "Customers"
+                        },
+                        {
+                            "id": 13,
+                            "name": "Purchase Return",
+                            "code": "outgoing",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 5,
+                            "default_location_dest_name": "Customers"
+                        },
+                        {
+                            "id": 18,
+                            "name": "Manufacturing",
+                            "code": "mrp_operation",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 15,
+                            "name": "Load Request",
+                            "code": "internal",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        },
+                        {
+                            "id": 19,
+                            "name": "Unload Request",
+                            "code": "internal",
+                            "default_location_src_id": 8,
+                            "default_location_src_name": "Stock",
+                            "default_location_dest_id": 8,
+                            "default_location_dest_name": "Stock"
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

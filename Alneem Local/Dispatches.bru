@@ -1,0 +1,19 @@
+meta {
+  name: Dispatches
+  type: http
+  seq: 3
+}
+
+post {
+  url: localhost:8070/web/get_dispatch_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}

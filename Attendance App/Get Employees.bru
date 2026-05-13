@@ -1,0 +1,25 @@
+meta {
+  name: Get Employees
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://194.195.116.73:8070/web/get_employee_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "work_location": 929
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

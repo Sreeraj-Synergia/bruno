@@ -1,0 +1,153 @@
+meta {
+  name: Package Types
+  type: http
+  seq: 18
+}
+
+post {
+  url: http://localhost:8069/web/get_package_type_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Package Types
+  
+  request: {
+    url: http://localhost:8069/web/get_package_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 344
+      Set-Cookie: session_id=8b81c9d4212b10fef167a337b7f2576b55062368; Expires=Mon, 04-Nov-2024 11:51:10 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Tue, 06 Aug 2024 11:51:10 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "package_types": [
+                        {
+                            "id": 1,
+                            "name": "Container Based",
+                            "code": "CB",
+                            "show_dimension": false
+                        },
+                        {
+                            "id": 2,
+                            "name": "Volume Based",
+                            "code": "VB",
+                            "show_dimension": true
+                        },
+                        {
+                            "id": 3,
+                            "name": "Road",
+                            "code": "RD",
+                            "show_dimension": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Package Types
+  
+  request: {
+    url: http://localhost:8069/web/get_package_type_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 344
+      Set-Cookie: session_id=8b81c9d4212b10fef167a337b7f2576b55062368; Expires=Mon, 04-Nov-2024 11:51:10 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Tue, 06 Aug 2024 11:51:10 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "package_types": [
+                        {
+                            "id": 1,
+                            "name": "Container Based",
+                            "code": "CB",
+                            "show_dimension": false
+                        },
+                        {
+                            "id": 2,
+                            "name": "Volume Based",
+                            "code": "VB",
+                            "show_dimension": true
+                        },
+                        {
+                            "id": 3,
+                            "name": "Road",
+                            "code": "RD",
+                            "show_dimension": false
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

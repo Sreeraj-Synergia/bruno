@@ -1,0 +1,38 @@
+meta {
+  name: Check In/Out
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://194.195.116.73:8070/web/update_user_checkins
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "lat": "25.15154515",
+              "lng": "55.15154515",
+              "type": "checkout"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  | **Params** | **Datatype** |
+  | --- | --- |
+  | login | String |
+  | password | String |
+  | device_name | String |
+  | imei_no | String |
+  
+  Login to Mobile Application
+}

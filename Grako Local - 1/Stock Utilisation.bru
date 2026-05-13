@@ -1,0 +1,2093 @@
+meta {
+  name: Stock Utilisation
+  type: http
+  seq: 59
+}
+
+post {
+  url: 192.168.1.119:8075/web/project_stock_utilise_mobilisation
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "mobilisation_id": 68,
+              "stock_utilisation_line": [
+                  {
+                      "product_id": 51,
+                      "quantity": 5
+                  },
+                  {
+                      "product_id": 52,
+                      "quantity": 5
+                  }
+              ]
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Stock Utilisation
+  
+  request: {
+    url: 192.168.1.119:8075/web/project_stock_utilise_mobilisation
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "mobilisation_id": 68,
+                  "stock_utilisation_line": [
+                      {
+                          "product_id": 51,
+                          "quantity": 5
+                      },
+                      {
+                          "product_id": 52,
+                          "quantity": 5
+                      }
+                  ]
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 10 Dec 2025 05:32:21 GMT
+      Content-Length: 30330
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "project_stock_utilise_details": {
+                        "id": 68,
+                        "name": "MOB20250068",
+                        "project_id": 24,
+                        "project_name": "Dubai Creek Harbour - DCP Cleaning",
+                        "project_ref": "PR20250023",
+                        "project_location": "Dubai Creek",
+                        "task_ids": [
+                            {
+                                "id": 76,
+                                "name": "Main Building (4sides) External Pressure washing of aluminum 1.1 claddings and glass using applicator\nonly."
+                            }
+                        ],
+                        "project_manager_id": 10902,
+                        "project_manager_name": "Sean Patrick Rogers",
+                        "date_start": "2025-10-22",
+                        "date": "2025-11-30",
+                        "mob_allocated_emp_ids": [
+                            {
+                                "id": 286,
+                                "mobilisation_id": "mobilisation.info(68,)",
+                                "task_assign_emp_id": null,
+                                "task_id": null,
+                                "project_id": null,
+                                "barcode": "60000",
+                                "employee_id": "hr.employee(10902,)",
+                                "department_id": "hr.department(868,)",
+                                "job_position_id": "hr.job(2091,)",
+                                "replacement_emp_id": null,
+                                "replacement_reason_id": null,
+                                "check_in": null,
+                                "check_out": null,
+                                "attendance_type": "present",
+                                "checkin_status": "scheduled",
+                                "actual_time": null,
+                                "actual_time_sec": null,
+                                "actual_time_str": null,
+                                "company_id": "res.company(1,)",
+                                "currency_id": "res.currency(128,)",
+                                "line_number": 1
+                            }
+                        ],
+                        "is_replacement_done": null,
+                        "mobilisation_date": "2025-12-03",
+                        "supervisor_emp_list": [
+                            {
+                                "id": 10671,
+                                "name": "Ansar Mehmood Ansar"
+                            },
+                            {
+                                "id": 10696,
+                                "name": "Arif Mia"
+                            },
+                            {
+                                "id": 10733,
+                                "name": "Arunkumar Mamidipally"
+                            },
+                            {
+                                "id": 11070,
+                                "name": "Azadul Islam Abdul Kader                                    "
+                            },
+                            {
+                                "id": 10743,
+                                "name": "Ek Bahadur Sarki"
+                            },
+                            {
+                                "id": 10730,
+                                "name": "Faryad Ali"
+                            },
+                            {
+                                "id": 10807,
+                                "name": "Hiwaga  Endozo"
+                            },
+                            {
+                                "id": 10667,
+                                "name": "Jamir Hossain Idris Miah"
+                            },
+                            {
+                                "id": 10676,
+                                "name": "Kaicher Hamed"
+                            },
+                            {
+                                "id": 10697,
+                                "name": "Kiran Abdur Rohim"
+                            },
+                            {
+                                "id": 10672,
+                                "name": "Man Bahadur Thapa"
+                            },
+                            {
+                                "id": 10677,
+                                "name": "Maruthi Dommati"
+                            },
+                            {
+                                "id": 10798,
+                                "name": "Matevs Mesquita"
+                            },
+                            {
+                                "id": 10681,
+                                "name": "Md Rana"
+                            },
+                            {
+                                "id": 10682,
+                                "name": "Md. Akshed Ali"
+                            },
+                            {
+                                "id": 10686,
+                                "name": "Md. Monirujjaman"
+                            },
+                            {
+                                "id": 10668,
+                                "name": "Mizan Khalek Majhi"
+                            },
+                            {
+                                "id": 10729,
+                                "name": "Mohammad Salim Hossain"
+                            },
+                            {
+                                "id": 11069,
+                                "name": "Monir Hossain Faragee"
+                            },
+                            {
+                                "id": 10715,
+                                "name": "Muhammad Rehaman"
+                            },
+                            {
+                                "id": 10925,
+                                "name": "Naveen Ponna"
+                            },
+                            {
+                                "id": 10723,
+                                "name": "Prashanth Chittapuram"
+                            },
+                            {
+                                "id": 10736,
+                                "name": "Prateep Singh Rasaputhra"
+                            },
+                            {
+                                "id": 10717,
+                                "name": "Praveen Kumar Dasari"
+                            },
+                            {
+                                "id": 10722,
+                                "name": "Raj Sekh"
+                            },
+                            {
+                                "id": 10849,
+                                "name": "Rakesh Gangavaram"
+                            },
+                            {
+                                "id": 11016,
+                                "name": "Saikiran Thatikonda"
+                            },
+                            {
+                                "id": 10745,
+                                "name": "Sainath Adish Korgaonkar"
+                            },
+                            {
+                                "id": 11026,
+                                "name": "Vishnu Kurumali Rajan"
+                            },
+                            {
+                                "id": 10905,
+                                "name": "Vrundavan Vasudev Kawlekar"
+                            },
+                            {
+                                "id": 10706,
+                                "name": "Zafor Hossain"
+                            },
+                            {
+                                "id": 10812,
+                                "name": "shree ram sah"
+                            }
+                        ],
+                        "driver_emp_list": [
+                            {
+                                "id": 10825,
+                                "name": "Mohammad Alamin"
+                            },
+                            {
+                                "id": 11050,
+                                "name": "Dipendra Tamang"
+                            },
+                            {
+                                "id": 11040,
+                                "name": "Anurag Meethale.P"
+                            },
+                            {
+                                "id": 10664,
+                                "name": "Feroz Ahmed Mohammed"
+                            },
+                            {
+                                "id": 11044,
+                                "name": "Sarichand Badhavath"
+                            },
+                            {
+                                "id": 10665,
+                                "name": "Sasi Vasu"
+                            },
+                            {
+                                "id": 10872,
+                                "name": "Mallesh Bodasu"
+                            },
+                            {
+                                "id": 10846,
+                                "name": "Altabur Rahman"
+                            },
+                            {
+                                "id": 10826,
+                                "name": "Md Nurnabi Mollah"
+                            },
+                            {
+                                "id": 10738,
+                                "name": "Rajashekhar Potaraju"
+                            },
+                            {
+                                "id": 10733,
+                                "name": "Arunkumar Mamidipally"
+                            },
+                            {
+                                "id": 10660,
+                                "name": "Kevin Mathew Philipose"
+                            },
+                            {
+                                "id": 10830,
+                                "name": "Mohammad Farid Hossain"
+                            },
+                            {
+                                "id": 10662,
+                                "name": "Anwar Abdelrahim"
+                            },
+                            {
+                                "id": 10666,
+                                "name": "Abdul Waheed"
+                            },
+                            {
+                                "id": 10661,
+                                "name": "Vivina Marie Ytoc"
+                            },
+                            {
+                                "id": 10823,
+                                "name": "Arman Hussain"
+                            },
+                            {
+                                "id": 10667,
+                                "name": "Jamir Hossain Idris Miah"
+                            },
+                            {
+                                "id": 10663,
+                                "name": "Analyn Mendoza"
+                            },
+                            {
+                                "id": 10929,
+                                "name": "Mohammad Riyaz Hossain"
+                            }
+                        ],
+                        "supervisor_ids": [
+                            {
+                                "id": 11070,
+                                "name": "Azadul Islam Abdul Kader                                    "
+                            }
+                        ],
+                        "emp_replace_history_ids": null,
+                        "veh_replace_history_ids": null,
+                        "fleet_id": null,
+                        "fleet_name": null,
+                        "driver_id": null,
+                        "driver_name": null,
+                        "schedule_time": null,
+                        "new_fleet_id": null,
+                        "new_fleet_name": null,
+                        "new_driver_id": null,
+                        "new_driver_name": null,
+                        "new_schedule_time": null,
+                        "geo_latitude": null,
+                        "geo_longitude": null,
+                        "project_sow": "<p data-last-history-steps=\",59734591674650,2658158289441987,1435838530279774,1808458622490805,1134855701798507,3343053612458934,3563895251930907,858525988023221,2587338985786978,3847260696599468,3814542223011836,4074682126922083,2585257680821381,4434486375681058,2579458029044127,1983894313165109,88277632430628,2103767328260578,1174259192158303,481326344882263,4196464753190580,1125953438401425,4104145270744251,2487752940107766,672160873652047,2849200795891014,3028619903173309,3427827254854435,1492036864168030,2141376170294053,2218663242196853,1599439037384385,2418252708848037,2840469346017245,2727079659473886,1334386984579087,1892426334206865,112640966104956,1151621485586035,3651764017474643,3513967375522515,2092360692965483,3739159549924098,1517055438949723,2353438082864396,1155003449056675,2348479127209713,4412152387637106,2637266640657497,1397101926405835,281774975418026,4188821846405664,1587332746886929,1352070185572027,1245014550420399,338527227480591,2765321237167904,1983276470536829,1309783378357677,3389335848934826,1846743160531309,4313705692140163,3752823280218886,2238519442104304,479434149040148,4105537522510224,113201355038292,2623082275885491,3433025510185092,3496556802068107,1688631005874814,1623823932594002,518646356591705,1448668887369569,580997636990056,1309409483817829,1812632991184610,3592843694948000,2629145570318529,103985588692887,1396379102785242,2144755914609861,2066109192244740,4184213446752302,4130587326301753,424787754232345,2361942989415647,1478064027232911,550947560549262,2808019999619393,4076357435734295,933325009365306,3385600352272036,520878552817148,3123485665442939,3792521342773819,3298780190038287,3466914322730128,728495894237769,2562749267375173,1450711058900280,1296202629809592,3403153229044113,4315740168636992\">Emaar properties looking for DCP cleaning and contated by Mr Anil&nbsp;</p>",
+                        "partner_id": 11930,
+                        "partner_name": "Emaar Community Management",
+                        "customer_ref": null,
+                        "contact_name_id": 11931,
+                        "contact_name_name": "Anil V S",
+                        "total_outstanding": null,
+                        "con_state": "draft",
+                        "blacklist_status": "no",
+                        "blacklist_reason": null,
+                        "requested_on": "2025-12-03",
+                        "requested_by": 1,
+                        "requested_by_name": "Administrator",
+                        "user_id": 2,
+                        "user_name": "Administrator",
+                        "company_id": 1,
+                        "company_name": "GRAKO LLC",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "state": "location",
+                        "display_replace_btn": null,
+                        "hide_replace_vehicle": null,
+                        "vehicle_type": null,
+                        "replacement_reason_id": null,
+                        "vehicle_history_ids": null,
+                        "driver_history_ids": null,
+                        "stock_location_id": 44,
+                        "stock_location_name": "Stock - Dubai Creek",
+                        "site_location_id": 45,
+                        "site_location_name": "Dubai Creek",
+                        "utilisation_count": 4,
+                        "utilisation_ids": [
+                            {
+                                "name": "UT20250036",
+                                "project_id": "project.project(24,)",
+                                "project_ref": "PR20250023",
+                                "project_location": "Dubai Creek",
+                                "task_ids": "project.task(76,)",
+                                "project_manager_id": 10902,
+                                "project_manager_name": "Sean Patrick Rogers",
+                                "date_start": "2025-10-22",
+                                "date": "2025-11-30",
+                                "project_sow": "<p data-last-history-steps=\",59734591674650,2658158289441987,1435838530279774,1808458622490805,1134855701798507,3343053612458934,3563895251930907,858525988023221,2587338985786978,3847260696599468,3814542223011836,4074682126922083,2585257680821381,4434486375681058,2579458029044127,1983894313165109,88277632430628,2103767328260578,1174259192158303,481326344882263,4196464753190580,1125953438401425,4104145270744251,2487752940107766,672160873652047,2849200795891014,3028619903173309,3427827254854435,1492036864168030,2141376170294053,2218663242196853,1599439037384385,2418252708848037,2840469346017245,2727079659473886,1334386984579087,1892426334206865,112640966104956,1151621485586035,3651764017474643,3513967375522515,2092360692965483,3739159549924098,1517055438949723,2353438082864396,1155003449056675,2348479127209713,4412152387637106,2637266640657497,1397101926405835,281774975418026,4188821846405664,1587332746886929,1352070185572027,1245014550420399,338527227480591,2765321237167904,1983276470536829,1309783378357677,3389335848934826,1846743160531309,4313705692140163,3752823280218886,2238519442104304,479434149040148,4105537522510224,113201355038292,2623082275885491,3433025510185092,3496556802068107,1688631005874814,1623823932594002,518646356591705,1448668887369569,580997636990056,1309409483817829,1812632991184610,3592843694948000,2629145570318529,103985588692887,1396379102785242,2144755914609861,2066109192244740,4184213446752302,4130587326301753,424787754232345,2361942989415647,1478064027232911,550947560549262,2808019999619393,4076357435734295,933325009365306,3385600352272036,520878552817148,3123485665442939,3792521342773819,3298780190038287,3466914322730128,728495894237769,2562749267375173,1450711058900280,1296202629809592,3403153229044113,4315740168636992\">Emaar properties looking for DCP cleaning and contated by Mr Anil&nbsp;</p>",
+                                "warehouse_id": null,
+                                "warehouse_name": null,
+                                "utilisation_date": "2025-12-10",
+                                "mobilisation_id": 68,
+                                "mobilisation_name": "MOB20250068",
+                                "geo_latitude": null,
+                                "geo_longitude": null,
+                                "utilisation_line_ids": [
+                                    {
+                                        "id": 104,
+                                        "utilisation_id": 36,
+                                        "utilisation_name": "UT20250036",
+                                        "quotation_line_id": 654,
+                                        "product_id": 51,
+                                        "product_name": "Multi cleaner 5Ltr",
+                                        "name": "Multi cleaner 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 100,
+                                        "transfered_qty": 100,
+                                        "available_qty": 99,
+                                        "utilised_qty": 5,
+                                        "balanced_qty": 94,
+                                        "price_unit": 542.5,
+                                        "total": 2712.5,
+                                        "line_number": 1,
+                                        "mobilisation_id": null,
+                                        "mobilisation_name": null,
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    },
+                                    {
+                                        "id": 105,
+                                        "utilisation_id": 36,
+                                        "utilisation_name": "UT20250036",
+                                        "quotation_line_id": 655,
+                                        "product_id": 52,
+                                        "product_name": "Green & Safe Chemical 5Ltr",
+                                        "name": "Green & Safe Chemical 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 50,
+                                        "transfered_qty": 50,
+                                        "available_qty": 49,
+                                        "utilised_qty": 5,
+                                        "balanced_qty": 44,
+                                        "price_unit": 62.5,
+                                        "total": 312.5,
+                                        "line_number": 2,
+                                        "mobilisation_id": null,
+                                        "mobilisation_name": null,
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    }
+                                ],
+                                "partner_id": 11930,
+                                "partner_name": "Emaar Community Management",
+                                "customer_ref": null,
+                                "contact_name_id": 11931,
+                                "contact_name_name": "Anil V S",
+                                "total_outstanding": null,
+                                "con_state": "draft",
+                                "blacklist_status": "no",
+                                "blacklist_reason": null,
+                                "requested_on": "2025-12-10",
+                                "requested_by": 10902,
+                                "requested_name": "Sean Patrick Rogers",
+                                "user_id": 7,
+                                "user_name": "Sean Patrick Rogers",
+                                "company_id": 1,
+                                "company_name": "GRAKO LLC",
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "state": "confirmed",
+                                "stock_location_id": 44,
+                                "stock_location_name": "Stock - Dubai Creek",
+                                "site_location_id": 45,
+                                "site_location_name": "Dubai Creek",
+                                "pick_count": null,
+                                "picking_ids": null
+                            },
+                            {
+                                "name": "UT20250035",
+                                "project_id": "project.project(24,)",
+                                "project_ref": "PR20250023",
+                                "project_location": "Dubai Creek",
+                                "task_ids": "project.task(76,)",
+                                "project_manager_id": 10902,
+                                "project_manager_name": "Sean Patrick Rogers",
+                                "date_start": "2025-10-22",
+                                "date": "2025-11-30",
+                                "project_sow": "<p data-last-history-steps=\",59734591674650,2658158289441987,1435838530279774,1808458622490805,1134855701798507,3343053612458934,3563895251930907,858525988023221,2587338985786978,3847260696599468,3814542223011836,4074682126922083,2585257680821381,4434486375681058,2579458029044127,1983894313165109,88277632430628,2103767328260578,1174259192158303,481326344882263,4196464753190580,1125953438401425,4104145270744251,2487752940107766,672160873652047,2849200795891014,3028619903173309,3427827254854435,1492036864168030,2141376170294053,2218663242196853,1599439037384385,2418252708848037,2840469346017245,2727079659473886,1334386984579087,1892426334206865,112640966104956,1151621485586035,3651764017474643,3513967375522515,2092360692965483,3739159549924098,1517055438949723,2353438082864396,1155003449056675,2348479127209713,4412152387637106,2637266640657497,1397101926405835,281774975418026,4188821846405664,1587332746886929,1352070185572027,1245014550420399,338527227480591,2765321237167904,1983276470536829,1309783378357677,3389335848934826,1846743160531309,4313705692140163,3752823280218886,2238519442104304,479434149040148,4105537522510224,113201355038292,2623082275885491,3433025510185092,3496556802068107,1688631005874814,1623823932594002,518646356591705,1448668887369569,580997636990056,1309409483817829,1812632991184610,3592843694948000,2629145570318529,103985588692887,1396379102785242,2144755914609861,2066109192244740,4184213446752302,4130587326301753,424787754232345,2361942989415647,1478064027232911,550947560549262,2808019999619393,4076357435734295,933325009365306,3385600352272036,520878552817148,3123485665442939,3792521342773819,3298780190038287,3466914322730128,728495894237769,2562749267375173,1450711058900280,1296202629809592,3403153229044113,4315740168636992\">Emaar properties looking for DCP cleaning and contated by Mr Anil&nbsp;</p>",
+                                "warehouse_id": null,
+                                "warehouse_name": null,
+                                "utilisation_date": "2025-12-10",
+                                "mobilisation_id": 68,
+                                "mobilisation_name": "MOB20250068",
+                                "geo_latitude": null,
+                                "geo_longitude": null,
+                                "utilisation_line_ids": [
+                                    {
+                                        "id": 102,
+                                        "utilisation_id": 35,
+                                        "utilisation_name": "UT20250035",
+                                        "quotation_line_id": 654,
+                                        "product_id": 51,
+                                        "product_name": "Multi cleaner 5Ltr",
+                                        "name": "Multi cleaner 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 100,
+                                        "transfered_qty": 100,
+                                        "available_qty": 99,
+                                        "utilised_qty": 5,
+                                        "balanced_qty": 94,
+                                        "price_unit": 542.5,
+                                        "total": 2712.5,
+                                        "line_number": 1,
+                                        "mobilisation_id": null,
+                                        "mobilisation_name": null,
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    },
+                                    {
+                                        "id": 103,
+                                        "utilisation_id": 35,
+                                        "utilisation_name": "UT20250035",
+                                        "quotation_line_id": 655,
+                                        "product_id": 52,
+                                        "product_name": "Green & Safe Chemical 5Ltr",
+                                        "name": "Green & Safe Chemical 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 50,
+                                        "transfered_qty": 50,
+                                        "available_qty": 49,
+                                        "utilised_qty": 5,
+                                        "balanced_qty": 44,
+                                        "price_unit": 62.5,
+                                        "total": 312.5,
+                                        "line_number": 2,
+                                        "mobilisation_id": null,
+                                        "mobilisation_name": null,
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    }
+                                ],
+                                "partner_id": 11930,
+                                "partner_name": "Emaar Community Management",
+                                "customer_ref": null,
+                                "contact_name_id": 11931,
+                                "contact_name_name": "Anil V S",
+                                "total_outstanding": null,
+                                "con_state": "draft",
+                                "blacklist_status": "no",
+                                "blacklist_reason": null,
+                                "requested_on": "2025-12-10",
+                                "requested_by": 10902,
+                                "requested_name": "Sean Patrick Rogers",
+                                "user_id": 7,
+                                "user_name": "Sean Patrick Rogers",
+                                "company_id": 1,
+                                "company_name": "GRAKO LLC",
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "state": "confirmed",
+                                "stock_location_id": 44,
+                                "stock_location_name": "Stock - Dubai Creek",
+                                "site_location_id": 45,
+                                "site_location_name": "Dubai Creek",
+                                "pick_count": null,
+                                "picking_ids": null
+                            },
+                            {
+                                "name": "UT20250034",
+                                "project_id": "project.project(24,)",
+                                "project_ref": "PR20250023",
+                                "project_location": "Dubai Creek",
+                                "task_ids": "project.task(76,)",
+                                "project_manager_id": 10902,
+                                "project_manager_name": "Sean Patrick Rogers",
+                                "date_start": "2025-10-22",
+                                "date": "2025-11-30",
+                                "project_sow": "<p data-last-history-steps=\",59734591674650,2658158289441987,1435838530279774,1808458622490805,1134855701798507,3343053612458934,3563895251930907,858525988023221,2587338985786978,3847260696599468,3814542223011836,4074682126922083,2585257680821381,4434486375681058,2579458029044127,1983894313165109,88277632430628,2103767328260578,1174259192158303,481326344882263,4196464753190580,1125953438401425,4104145270744251,2487752940107766,672160873652047,2849200795891014,3028619903173309,3427827254854435,1492036864168030,2141376170294053,2218663242196853,1599439037384385,2418252708848037,2840469346017245,2727079659473886,1334386984579087,1892426334206865,112640966104956,1151621485586035,3651764017474643,3513967375522515,2092360692965483,3739159549924098,1517055438949723,2353438082864396,1155003449056675,2348479127209713,4412152387637106,2637266640657497,1397101926405835,281774975418026,4188821846405664,1587332746886929,1352070185572027,1245014550420399,338527227480591,2765321237167904,1983276470536829,1309783378357677,3389335848934826,1846743160531309,4313705692140163,3752823280218886,2238519442104304,479434149040148,4105537522510224,113201355038292,2623082275885491,3433025510185092,3496556802068107,1688631005874814,1623823932594002,518646356591705,1448668887369569,580997636990056,1309409483817829,1812632991184610,3592843694948000,2629145570318529,103985588692887,1396379102785242,2144755914609861,2066109192244740,4184213446752302,4130587326301753,424787754232345,2361942989415647,1478064027232911,550947560549262,2808019999619393,4076357435734295,933325009365306,3385600352272036,520878552817148,3123485665442939,3792521342773819,3298780190038287,3466914322730128,728495894237769,2562749267375173,1450711058900280,1296202629809592,3403153229044113,4315740168636992\">Emaar properties looking for DCP cleaning and contated by Mr Anil&nbsp;</p>",
+                                "warehouse_id": null,
+                                "warehouse_name": null,
+                                "utilisation_date": "2025-12-09",
+                                "mobilisation_id": 68,
+                                "mobilisation_name": "MOB20250068",
+                                "geo_latitude": null,
+                                "geo_longitude": null,
+                                "utilisation_line_ids": [
+                                    {
+                                        "id": 100,
+                                        "utilisation_id": 34,
+                                        "utilisation_name": "UT20250034",
+                                        "quotation_line_id": 654,
+                                        "product_id": 51,
+                                        "product_name": "Multi cleaner 5Ltr",
+                                        "name": "Multi cleaner 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 100,
+                                        "transfered_qty": 100,
+                                        "available_qty": 99,
+                                        "utilised_qty": 5,
+                                        "balanced_qty": 94,
+                                        "price_unit": 542.5,
+                                        "total": 2712.5,
+                                        "line_number": 1,
+                                        "mobilisation_id": null,
+                                        "mobilisation_name": null,
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    },
+                                    {
+                                        "id": 101,
+                                        "utilisation_id": 34,
+                                        "utilisation_name": "UT20250034",
+                                        "quotation_line_id": 655,
+                                        "product_id": 52,
+                                        "product_name": "Green & Safe Chemical 5Ltr",
+                                        "name": "Green & Safe Chemical 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 50,
+                                        "transfered_qty": 50,
+                                        "available_qty": 49,
+                                        "utilised_qty": 5,
+                                        "balanced_qty": 44,
+                                        "price_unit": 62.5,
+                                        "total": 312.5,
+                                        "line_number": 2,
+                                        "mobilisation_id": null,
+                                        "mobilisation_name": null,
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    }
+                                ],
+                                "partner_id": 11930,
+                                "partner_name": "Emaar Community Management",
+                                "customer_ref": null,
+                                "contact_name_id": 11931,
+                                "contact_name_name": "Anil V S",
+                                "total_outstanding": null,
+                                "con_state": "draft",
+                                "blacklist_status": "no",
+                                "blacklist_reason": null,
+                                "requested_on": "2025-12-09",
+                                "requested_by": 10902,
+                                "requested_name": "Sean Patrick Rogers",
+                                "user_id": 7,
+                                "user_name": "Sean Patrick Rogers",
+                                "company_id": 1,
+                                "company_name": "GRAKO LLC",
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "state": "confirmed",
+                                "stock_location_id": 44,
+                                "stock_location_name": "Stock - Dubai Creek",
+                                "site_location_id": 45,
+                                "site_location_name": "Dubai Creek",
+                                "pick_count": null,
+                                "picking_ids": null
+                            },
+                            {
+                                "name": "UT20250026",
+                                "project_id": "project.project(24,)",
+                                "project_ref": "PR20250023",
+                                "project_location": "Dubai Creek",
+                                "task_ids": "project.task(76,)",
+                                "project_manager_id": 10902,
+                                "project_manager_name": "Sean Patrick Rogers",
+                                "date_start": "2025-10-22",
+                                "date": "2025-11-30",
+                                "project_sow": "<p data-last-history-steps=\",59734591674650,2658158289441987,1435838530279774,1808458622490805,1134855701798507,3343053612458934,3563895251930907,858525988023221,2587338985786978,3847260696599468,3814542223011836,4074682126922083,2585257680821381,4434486375681058,2579458029044127,1983894313165109,88277632430628,2103767328260578,1174259192158303,481326344882263,4196464753190580,1125953438401425,4104145270744251,2487752940107766,672160873652047,2849200795891014,3028619903173309,3427827254854435,1492036864168030,2141376170294053,2218663242196853,1599439037384385,2418252708848037,2840469346017245,2727079659473886,1334386984579087,1892426334206865,112640966104956,1151621485586035,3651764017474643,3513967375522515,2092360692965483,3739159549924098,1517055438949723,2353438082864396,1155003449056675,2348479127209713,4412152387637106,2637266640657497,1397101926405835,281774975418026,4188821846405664,1587332746886929,1352070185572027,1245014550420399,338527227480591,2765321237167904,1983276470536829,1309783378357677,3389335848934826,1846743160531309,4313705692140163,3752823280218886,2238519442104304,479434149040148,4105537522510224,113201355038292,2623082275885491,3433025510185092,3496556802068107,1688631005874814,1623823932594002,518646356591705,1448668887369569,580997636990056,1309409483817829,1812632991184610,3592843694948000,2629145570318529,103985588692887,1396379102785242,2144755914609861,2066109192244740,4184213446752302,4130587326301753,424787754232345,2361942989415647,1478064027232911,550947560549262,2808019999619393,4076357435734295,933325009365306,3385600352272036,520878552817148,3123485665442939,3792521342773819,3298780190038287,3466914322730128,728495894237769,2562749267375173,1450711058900280,1296202629809592,3403153229044113,4315740168636992\">Emaar properties looking for DCP cleaning and contated by Mr Anil&nbsp;</p>",
+                                "warehouse_id": null,
+                                "warehouse_name": null,
+                                "utilisation_date": "2025-12-03",
+                                "mobilisation_id": 68,
+                                "mobilisation_name": "MOB20250068",
+                                "geo_latitude": null,
+                                "geo_longitude": null,
+                                "utilisation_line_ids": [
+                                    {
+                                        "id": 94,
+                                        "utilisation_id": 26,
+                                        "utilisation_name": "UT20250026",
+                                        "quotation_line_id": 654,
+                                        "product_id": 51,
+                                        "product_name": "Multi cleaner 5Ltr",
+                                        "name": "Multi cleaner 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 100,
+                                        "transfered_qty": 100,
+                                        "available_qty": 100,
+                                        "utilised_qty": 1,
+                                        "balanced_qty": 99,
+                                        "price_unit": 542.5,
+                                        "total": 542.5,
+                                        "line_number": 1,
+                                        "mobilisation_id": 68,
+                                        "mobilisation_name": "MOB20250068",
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    },
+                                    {
+                                        "id": 95,
+                                        "utilisation_id": 26,
+                                        "utilisation_name": "UT20250026",
+                                        "quotation_line_id": 655,
+                                        "product_id": 52,
+                                        "product_name": "Green & Safe Chemical 5Ltr",
+                                        "name": "Green & Safe Chemical 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 50,
+                                        "transfered_qty": 50,
+                                        "available_qty": 50,
+                                        "utilised_qty": 1,
+                                        "balanced_qty": 49,
+                                        "price_unit": 62.5,
+                                        "total": 62.5,
+                                        "line_number": 2,
+                                        "mobilisation_id": 68,
+                                        "mobilisation_name": "MOB20250068",
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    }
+                                ],
+                                "partner_id": 11930,
+                                "partner_name": "Emaar Community Management",
+                                "customer_ref": null,
+                                "contact_name_id": 11931,
+                                "contact_name_name": "Anil V S",
+                                "total_outstanding": null,
+                                "con_state": "draft",
+                                "blacklist_status": "no",
+                                "blacklist_reason": null,
+                                "requested_on": "2025-12-03",
+                                "requested_by": 1,
+                                "requested_name": "Administrator",
+                                "user_id": 2,
+                                "user_name": "Administrator",
+                                "company_id": 1,
+                                "company_name": "GRAKO LLC",
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "state": "done",
+                                "stock_location_id": 44,
+                                "stock_location_name": "Stock - Dubai Creek",
+                                "site_location_id": 45,
+                                "site_location_name": "Dubai Creek",
+                                "pick_count": 1,
+                                "picking_ids": [
+                                    {
+                                        "id": 80,
+                                        "name": "Grako/INT/00018",
+                                        "partner_details": {
+                                            "customer_id": 11930,
+                                            "name": "Emaar Community Management",
+                                            "street": "Sheikh Zayed Road",
+                                            "street2": null,
+                                            "city": null,
+                                            "zip": null,
+                                            "state_id": 548,
+                                            "state_name": "Dubai",
+                                            "country_id": 2,
+                                            "country_name": "United Arab Emirates",
+                                            "currency_id": 128,
+                                            "currency": "AED",
+                                            "email": null,
+                                            "website": null,
+                                            "phone": "+971 50 957 6443|",
+                                            "mobile": null,
+                                            "trn": null,
+                                            "trade_reg": null,
+                                            "trade_reg_expiry": null,
+                                            "latitude": null,
+                                            "longitude": null,
+                                            "pricelist_id": 1,
+                                            "pricelist_name": "Default",
+                                            "customer_ref": null,
+                                            "payment_type": null,
+                                            "property_credit_limit": null,
+                                            "property_over_credit_limit": null,
+                                            "property_allow_over_credit_limit": false,
+                                            "confirmed_customer": false,
+                                            "customer_blocked": false,
+                                            "payment_terms_id": null,
+                                            "payment_terms_name": null,
+                                            "logo_url": "http://localhost:8075/web/url_image?model=res.partner&id=11930&field=image_1920",
+                                            "contact_name": null,
+                                            "contact_phone": null,
+                                            "customer": true,
+                                            "supplier": false,
+                                            "debit_limit": null,
+                                            "customer_due_amount": 0,
+                                            "customer_overdue_amount": 0,
+                                            "days_sales_outstanding": 0,
+                                            "skip_overdue_check_for_sales": false,
+                                            "contact_list": [],
+                                            "area_code_id": null,
+                                            "area_code_name": null,
+                                            "barcode": null,
+                                            "disable_loc_update": null,
+                                            "employee_id": 10848,
+                                            "employee_name": "Stephani Tannous",
+                                            "company_registry": null,
+                                            "parent_id": null,
+                                            "parent_company_name": null,
+                                            "parent_company_code": null,
+                                            "is_parent_company": false,
+                                            "parent_due_amount": 0,
+                                            "parent_over_due_amount": 0,
+                                            "parent_remain_credit_amount": 0,
+                                            "child_companies": [],
+                                            "child_cont_count": 1,
+                                            "geofencing_feature": false,
+                                            "geofencing_perimeter": 0,
+                                            "total_invoices": 0,
+                                            "total_cancelled_invoices": 0,
+                                            "total_overdue_invoices": 0,
+                                            "total_credit_notes": 0,
+                                            "allow_cust_disc": false,
+                                            "default_cust_disc_percent": null,
+                                            "is_contact": false,
+                                            "total_no_visit": 0,
+                                            "last_visited": false,
+                                            "bounced_payment_count": null,
+                                            "asset_details": null,
+                                            "check_pending_invoices": false,
+                                            "allowed_pending_invoices": 0,
+                                            "overdue_invoices": 0,
+                                            "total_sales_history": 0,
+                                            "top_selling_products": [],
+                                            "sales_history": [],
+                                            "return_history": [],
+                                            "most_returned_products": []
+                                        },
+                                        "partner_id": 11930,
+                                        "partner_name": "Emaar Community Management",
+                                        "picking_type_code": "internal",
+                                        "picking_type_id": 7,
+                                        "picking_type_name": "Internal Transfers",
+                                        "location_id": 44,
+                                        "location_name": "Stock - Dubai Creek",
+                                        "location_dest_id": 45,
+                                        "location_dest_name": "Dubai Creek",
+                                        "scheduled_date": "2025-12-03 13:39:57",
+                                        "date_done": "2025-12-03 13:39:58",
+                                        "origin": "UT20250026 (PR20250023)",
+                                        "system_origin": "OR00080",
+                                        "state": "done",
+                                        "receiver_name": null,
+                                        "receiver_no": null,
+                                        "all_qty_submitted": null,
+                                        "recv_id_img": "http://localhost:8075/web/url_image?model=stock.picking&id=80&field=receiver_identity",
+                                        "act_del_time": null,
+                                        "recv_sign": "http://localhost:8075/web/url_image?model=stock.picking&id=80&field=receiver_signature",
+                                        "stock_move_details": [
+                                            {
+                                                "id": 183,
+                                                "product_id": 51,
+                                                "product_name": "Multi cleaner 5Ltr",
+                                                "tracking": "none",
+                                                "use_expiration_date": false,
+                                                "use_manufacturing_date": false,
+                                                "product_packaging_id": null,
+                                                "product_packaging_name": null,
+                                                "location_final_id": null,
+                                                "location_final_name": null,
+                                                "location_id": 44,
+                                                "location_name": "Stock - Dubai Creek",
+                                                "location_dest_id": 45,
+                                                "location_dest_name": "Dubai Creek",
+                                                "packaging_qty": null,
+                                                "product_uom_qty": 1,
+                                                "received_package_qty": null,
+                                                "quantity": 1,
+                                                "product_uom": 30,
+                                                "product_uom_name": "CAN",
+                                                "lot_ids": [],
+                                                "state": "done",
+                                                "stock_move_line_details": [
+                                                    {
+                                                        "id": 235,
+                                                        "product_id": 51,
+                                                        "expiration_date": null,
+                                                        "lot_id": null,
+                                                        "lot_name": null,
+                                                        "package_id": null,
+                                                        "package_name": null,
+                                                        "result_package_id": null,
+                                                        "result_package_name": null,
+                                                        "location_id": 44,
+                                                        "location_name": "Stock - Dubai Creek",
+                                                        "location_dest_id": 45,
+                                                        "location_dest_name": "Dubai Creek",
+                                                        "picking_partner_id": 11930,
+                                                        "picking_partner_name": "Emaar Community Management",
+                                                        "company_id": 1,
+                                                        "company_name": "GRAKO LLC",
+                                                        "quantity": 1,
+                                                        "product_uom_id": 30,
+                                                        "product_uom_name": "CAN",
+                                                        "state": "done",
+                                                        "qty_submitted": false,
+                                                        "manufacture_date": null,
+                                                        "product_packaging_id": null,
+                                                        "product_packaging_name": null,
+                                                        "qty_in_pack": null,
+                                                        "packaging_qty": null,
+                                                        "owner_id": 1,
+                                                        "owner_name": "GRAKO LLC",
+                                                        "transaction_type": "delivered",
+                                                        "available_qty": 99,
+                                                        "available_package_qty": null,
+                                                        "check_for_packaging": null,
+                                                        "use_manufacture_date": null,
+                                                        "hs_code": null,
+                                                        "country_of_origin": null,
+                                                        "country_of_origin_name": null,
+                                                        "weight": null,
+                                                        "total_weight": null,
+                                                        "return_reason_id": null,
+                                                        "return_reason_name": null,
+                                                        "qty_returned": null
+                                                    }
+                                                ],
+                                                "qty_in_pack": null,
+                                                "received_pack_qty": null,
+                                                "remaining_pack_qty": null,
+                                                "received_qty": 1,
+                                                "remaining_qty": null,
+                                                "internal_ref": "00088686",
+                                                "barcode": null,
+                                                "available_qty": 100,
+                                                "transaction_type": "delivered",
+                                                "check_for_packaging": null,
+                                                "use_manufacture_date": null,
+                                                "hs_code": null,
+                                                "country_of_origin": null,
+                                                "country_of_origin_name": null,
+                                                "invoice_line_id": null,
+                                                "return_reason_id": null,
+                                                "return_reason_name": null
+                                            },
+                                            {
+                                                "id": 184,
+                                                "product_id": 52,
+                                                "product_name": "Green & Safe Chemical 5Ltr",
+                                                "tracking": "none",
+                                                "use_expiration_date": false,
+                                                "use_manufacturing_date": false,
+                                                "product_packaging_id": null,
+                                                "product_packaging_name": null,
+                                                "location_final_id": null,
+                                                "location_final_name": null,
+                                                "location_id": 44,
+                                                "location_name": "Stock - Dubai Creek",
+                                                "location_dest_id": 45,
+                                                "location_dest_name": "Dubai Creek",
+                                                "packaging_qty": null,
+                                                "product_uom_qty": 1,
+                                                "received_package_qty": null,
+                                                "quantity": 1,
+                                                "product_uom": 30,
+                                                "product_uom_name": "CAN",
+                                                "lot_ids": [],
+                                                "state": "done",
+                                                "stock_move_line_details": [
+                                                    {
+                                                        "id": 236,
+                                                        "product_id": 52,
+                                                        "expiration_date": null,
+                                                        "lot_id": null,
+                                                        "lot_name": null,
+                                                        "package_id": null,
+                                                        "package_name": null,
+                                                        "result_package_id": null,
+                                                        "result_package_name": null,
+                                                        "location_id": 44,
+                                                        "location_name": "Stock - Dubai Creek",
+                                                        "location_dest_id": 45,
+                                                        "location_dest_name": "Dubai Creek",
+                                                        "picking_partner_id": 11930,
+                                                        "picking_partner_name": "Emaar Community Management",
+                                                        "company_id": 1,
+                                                        "company_name": "GRAKO LLC",
+                                                        "quantity": 1,
+                                                        "product_uom_id": 30,
+                                                        "product_uom_name": "CAN",
+                                                        "state": "done",
+                                                        "qty_submitted": false,
+                                                        "manufacture_date": null,
+                                                        "product_packaging_id": null,
+                                                        "product_packaging_name": null,
+                                                        "qty_in_pack": null,
+                                                        "packaging_qty": null,
+                                                        "owner_id": 1,
+                                                        "owner_name": "GRAKO LLC",
+                                                        "transaction_type": "delivered",
+                                                        "available_qty": 49,
+                                                        "available_package_qty": null,
+                                                        "check_for_packaging": null,
+                                                        "use_manufacture_date": null,
+                                                        "hs_code": null,
+                                                        "country_of_origin": null,
+                                                        "country_of_origin_name": null,
+                                                        "weight": null,
+                                                        "total_weight": null,
+                                                        "return_reason_id": null,
+                                                        "return_reason_name": null,
+                                                        "qty_returned": null
+                                                    }
+                                                ],
+                                                "qty_in_pack": null,
+                                                "received_pack_qty": null,
+                                                "remaining_pack_qty": null,
+                                                "received_qty": 1,
+                                                "remaining_qty": null,
+                                                "internal_ref": "00088688",
+                                                "barcode": null,
+                                                "available_qty": 50,
+                                                "transaction_type": "delivered",
+                                                "check_for_packaging": null,
+                                                "use_manufacture_date": null,
+                                                "hs_code": null,
+                                                "country_of_origin": null,
+                                                "country_of_origin_name": null,
+                                                "invoice_line_id": null,
+                                                "return_reason_id": null,
+                                                "return_reason_name": null
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "pick_count": 1,
+                        "picking_ids": "stock.picking(80,)",
+                        "timesheet_ids": "account.analytic.line(260,)",
+                        "emp_log_time": "checkout",
+                        "cancel_reason_id": null,
+                        "cancel_date": null,
+                        "cancel_user_id": null,
+                        "reshedule_reason_id": null,
+                        "reshedule_date": null,
+                        "reshedule_user_id": null,
+                        "reshedule_info_ids": null,
+                        "notified_absent_emp": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Stock Utilisation
+  
+  request: {
+    url: 192.168.1.119:8075/web/project_stock_utilise_mobilisation
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "mobilisation_id": 68,
+                  "stock_utilisation_line": [
+                      {
+                          "product_id": 51,
+                          "quantity": 5
+                      },
+                      {
+                          "product_id": 52,
+                          "quantity": 5
+                      }
+                  ]
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Wed, 10 Dec 2025 05:32:21 GMT
+      Content-Length: 30330
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "project_stock_utilise_details": {
+                        "id": 68,
+                        "name": "MOB20250068",
+                        "project_id": 24,
+                        "project_name": "Dubai Creek Harbour - DCP Cleaning",
+                        "project_ref": "PR20250023",
+                        "project_location": "Dubai Creek",
+                        "task_ids": [
+                            {
+                                "id": 76,
+                                "name": "Main Building (4sides) External Pressure washing of aluminum 1.1 claddings and glass using applicator\nonly."
+                            }
+                        ],
+                        "project_manager_id": 10902,
+                        "project_manager_name": "Sean Patrick Rogers",
+                        "date_start": "2025-10-22",
+                        "date": "2025-11-30",
+                        "mob_allocated_emp_ids": [
+                            {
+                                "id": 286,
+                                "mobilisation_id": "mobilisation.info(68,)",
+                                "task_assign_emp_id": null,
+                                "task_id": null,
+                                "project_id": null,
+                                "barcode": "60000",
+                                "employee_id": "hr.employee(10902,)",
+                                "department_id": "hr.department(868,)",
+                                "job_position_id": "hr.job(2091,)",
+                                "replacement_emp_id": null,
+                                "replacement_reason_id": null,
+                                "check_in": null,
+                                "check_out": null,
+                                "attendance_type": "present",
+                                "checkin_status": "scheduled",
+                                "actual_time": null,
+                                "actual_time_sec": null,
+                                "actual_time_str": null,
+                                "company_id": "res.company(1,)",
+                                "currency_id": "res.currency(128,)",
+                                "line_number": 1
+                            }
+                        ],
+                        "is_replacement_done": null,
+                        "mobilisation_date": "2025-12-03",
+                        "supervisor_emp_list": [
+                            {
+                                "id": 10671,
+                                "name": "Ansar Mehmood Ansar"
+                            },
+                            {
+                                "id": 10696,
+                                "name": "Arif Mia"
+                            },
+                            {
+                                "id": 10733,
+                                "name": "Arunkumar Mamidipally"
+                            },
+                            {
+                                "id": 11070,
+                                "name": "Azadul Islam Abdul Kader                                    "
+                            },
+                            {
+                                "id": 10743,
+                                "name": "Ek Bahadur Sarki"
+                            },
+                            {
+                                "id": 10730,
+                                "name": "Faryad Ali"
+                            },
+                            {
+                                "id": 10807,
+                                "name": "Hiwaga  Endozo"
+                            },
+                            {
+                                "id": 10667,
+                                "name": "Jamir Hossain Idris Miah"
+                            },
+                            {
+                                "id": 10676,
+                                "name": "Kaicher Hamed"
+                            },
+                            {
+                                "id": 10697,
+                                "name": "Kiran Abdur Rohim"
+                            },
+                            {
+                                "id": 10672,
+                                "name": "Man Bahadur Thapa"
+                            },
+                            {
+                                "id": 10677,
+                                "name": "Maruthi Dommati"
+                            },
+                            {
+                                "id": 10798,
+                                "name": "Matevs Mesquita"
+                            },
+                            {
+                                "id": 10681,
+                                "name": "Md Rana"
+                            },
+                            {
+                                "id": 10682,
+                                "name": "Md. Akshed Ali"
+                            },
+                            {
+                                "id": 10686,
+                                "name": "Md. Monirujjaman"
+                            },
+                            {
+                                "id": 10668,
+                                "name": "Mizan Khalek Majhi"
+                            },
+                            {
+                                "id": 10729,
+                                "name": "Mohammad Salim Hossain"
+                            },
+                            {
+                                "id": 11069,
+                                "name": "Monir Hossain Faragee"
+                            },
+                            {
+                                "id": 10715,
+                                "name": "Muhammad Rehaman"
+                            },
+                            {
+                                "id": 10925,
+                                "name": "Naveen Ponna"
+                            },
+                            {
+                                "id": 10723,
+                                "name": "Prashanth Chittapuram"
+                            },
+                            {
+                                "id": 10736,
+                                "name": "Prateep Singh Rasaputhra"
+                            },
+                            {
+                                "id": 10717,
+                                "name": "Praveen Kumar Dasari"
+                            },
+                            {
+                                "id": 10722,
+                                "name": "Raj Sekh"
+                            },
+                            {
+                                "id": 10849,
+                                "name": "Rakesh Gangavaram"
+                            },
+                            {
+                                "id": 11016,
+                                "name": "Saikiran Thatikonda"
+                            },
+                            {
+                                "id": 10745,
+                                "name": "Sainath Adish Korgaonkar"
+                            },
+                            {
+                                "id": 11026,
+                                "name": "Vishnu Kurumali Rajan"
+                            },
+                            {
+                                "id": 10905,
+                                "name": "Vrundavan Vasudev Kawlekar"
+                            },
+                            {
+                                "id": 10706,
+                                "name": "Zafor Hossain"
+                            },
+                            {
+                                "id": 10812,
+                                "name": "shree ram sah"
+                            }
+                        ],
+                        "driver_emp_list": [
+                            {
+                                "id": 10825,
+                                "name": "Mohammad Alamin"
+                            },
+                            {
+                                "id": 11050,
+                                "name": "Dipendra Tamang"
+                            },
+                            {
+                                "id": 11040,
+                                "name": "Anurag Meethale.P"
+                            },
+                            {
+                                "id": 10664,
+                                "name": "Feroz Ahmed Mohammed"
+                            },
+                            {
+                                "id": 11044,
+                                "name": "Sarichand Badhavath"
+                            },
+                            {
+                                "id": 10665,
+                                "name": "Sasi Vasu"
+                            },
+                            {
+                                "id": 10872,
+                                "name": "Mallesh Bodasu"
+                            },
+                            {
+                                "id": 10846,
+                                "name": "Altabur Rahman"
+                            },
+                            {
+                                "id": 10826,
+                                "name": "Md Nurnabi Mollah"
+                            },
+                            {
+                                "id": 10738,
+                                "name": "Rajashekhar Potaraju"
+                            },
+                            {
+                                "id": 10733,
+                                "name": "Arunkumar Mamidipally"
+                            },
+                            {
+                                "id": 10660,
+                                "name": "Kevin Mathew Philipose"
+                            },
+                            {
+                                "id": 10830,
+                                "name": "Mohammad Farid Hossain"
+                            },
+                            {
+                                "id": 10662,
+                                "name": "Anwar Abdelrahim"
+                            },
+                            {
+                                "id": 10666,
+                                "name": "Abdul Waheed"
+                            },
+                            {
+                                "id": 10661,
+                                "name": "Vivina Marie Ytoc"
+                            },
+                            {
+                                "id": 10823,
+                                "name": "Arman Hussain"
+                            },
+                            {
+                                "id": 10667,
+                                "name": "Jamir Hossain Idris Miah"
+                            },
+                            {
+                                "id": 10663,
+                                "name": "Analyn Mendoza"
+                            },
+                            {
+                                "id": 10929,
+                                "name": "Mohammad Riyaz Hossain"
+                            }
+                        ],
+                        "supervisor_ids": [
+                            {
+                                "id": 11070,
+                                "name": "Azadul Islam Abdul Kader                                    "
+                            }
+                        ],
+                        "emp_replace_history_ids": null,
+                        "veh_replace_history_ids": null,
+                        "fleet_id": null,
+                        "fleet_name": null,
+                        "driver_id": null,
+                        "driver_name": null,
+                        "schedule_time": null,
+                        "new_fleet_id": null,
+                        "new_fleet_name": null,
+                        "new_driver_id": null,
+                        "new_driver_name": null,
+                        "new_schedule_time": null,
+                        "geo_latitude": null,
+                        "geo_longitude": null,
+                        "project_sow": "<p data-last-history-steps=\",59734591674650,2658158289441987,1435838530279774,1808458622490805,1134855701798507,3343053612458934,3563895251930907,858525988023221,2587338985786978,3847260696599468,3814542223011836,4074682126922083,2585257680821381,4434486375681058,2579458029044127,1983894313165109,88277632430628,2103767328260578,1174259192158303,481326344882263,4196464753190580,1125953438401425,4104145270744251,2487752940107766,672160873652047,2849200795891014,3028619903173309,3427827254854435,1492036864168030,2141376170294053,2218663242196853,1599439037384385,2418252708848037,2840469346017245,2727079659473886,1334386984579087,1892426334206865,112640966104956,1151621485586035,3651764017474643,3513967375522515,2092360692965483,3739159549924098,1517055438949723,2353438082864396,1155003449056675,2348479127209713,4412152387637106,2637266640657497,1397101926405835,281774975418026,4188821846405664,1587332746886929,1352070185572027,1245014550420399,338527227480591,2765321237167904,1983276470536829,1309783378357677,3389335848934826,1846743160531309,4313705692140163,3752823280218886,2238519442104304,479434149040148,4105537522510224,113201355038292,2623082275885491,3433025510185092,3496556802068107,1688631005874814,1623823932594002,518646356591705,1448668887369569,580997636990056,1309409483817829,1812632991184610,3592843694948000,2629145570318529,103985588692887,1396379102785242,2144755914609861,2066109192244740,4184213446752302,4130587326301753,424787754232345,2361942989415647,1478064027232911,550947560549262,2808019999619393,4076357435734295,933325009365306,3385600352272036,520878552817148,3123485665442939,3792521342773819,3298780190038287,3466914322730128,728495894237769,2562749267375173,1450711058900280,1296202629809592,3403153229044113,4315740168636992\">Emaar properties looking for DCP cleaning and contated by Mr Anil&nbsp;</p>",
+                        "partner_id": 11930,
+                        "partner_name": "Emaar Community Management",
+                        "customer_ref": null,
+                        "contact_name_id": 11931,
+                        "contact_name_name": "Anil V S",
+                        "total_outstanding": null,
+                        "con_state": "draft",
+                        "blacklist_status": "no",
+                        "blacklist_reason": null,
+                        "requested_on": "2025-12-03",
+                        "requested_by": 1,
+                        "requested_by_name": "Administrator",
+                        "user_id": 2,
+                        "user_name": "Administrator",
+                        "company_id": 1,
+                        "company_name": "GRAKO LLC",
+                        "currency_id": 128,
+                        "currency_name": "AED",
+                        "state": "location",
+                        "display_replace_btn": null,
+                        "hide_replace_vehicle": null,
+                        "vehicle_type": null,
+                        "replacement_reason_id": null,
+                        "vehicle_history_ids": null,
+                        "driver_history_ids": null,
+                        "stock_location_id": 44,
+                        "stock_location_name": "Stock - Dubai Creek",
+                        "site_location_id": 45,
+                        "site_location_name": "Dubai Creek",
+                        "utilisation_count": 4,
+                        "utilisation_ids": [
+                            {
+                                "name": "UT20250036",
+                                "project_id": "project.project(24,)",
+                                "project_ref": "PR20250023",
+                                "project_location": "Dubai Creek",
+                                "task_ids": "project.task(76,)",
+                                "project_manager_id": 10902,
+                                "project_manager_name": "Sean Patrick Rogers",
+                                "date_start": "2025-10-22",
+                                "date": "2025-11-30",
+                                "project_sow": "<p data-last-history-steps=\",59734591674650,2658158289441987,1435838530279774,1808458622490805,1134855701798507,3343053612458934,3563895251930907,858525988023221,2587338985786978,3847260696599468,3814542223011836,4074682126922083,2585257680821381,4434486375681058,2579458029044127,1983894313165109,88277632430628,2103767328260578,1174259192158303,481326344882263,4196464753190580,1125953438401425,4104145270744251,2487752940107766,672160873652047,2849200795891014,3028619903173309,3427827254854435,1492036864168030,2141376170294053,2218663242196853,1599439037384385,2418252708848037,2840469346017245,2727079659473886,1334386984579087,1892426334206865,112640966104956,1151621485586035,3651764017474643,3513967375522515,2092360692965483,3739159549924098,1517055438949723,2353438082864396,1155003449056675,2348479127209713,4412152387637106,2637266640657497,1397101926405835,281774975418026,4188821846405664,1587332746886929,1352070185572027,1245014550420399,338527227480591,2765321237167904,1983276470536829,1309783378357677,3389335848934826,1846743160531309,4313705692140163,3752823280218886,2238519442104304,479434149040148,4105537522510224,113201355038292,2623082275885491,3433025510185092,3496556802068107,1688631005874814,1623823932594002,518646356591705,1448668887369569,580997636990056,1309409483817829,1812632991184610,3592843694948000,2629145570318529,103985588692887,1396379102785242,2144755914609861,2066109192244740,4184213446752302,4130587326301753,424787754232345,2361942989415647,1478064027232911,550947560549262,2808019999619393,4076357435734295,933325009365306,3385600352272036,520878552817148,3123485665442939,3792521342773819,3298780190038287,3466914322730128,728495894237769,2562749267375173,1450711058900280,1296202629809592,3403153229044113,4315740168636992\">Emaar properties looking for DCP cleaning and contated by Mr Anil&nbsp;</p>",
+                                "warehouse_id": null,
+                                "warehouse_name": null,
+                                "utilisation_date": "2025-12-10",
+                                "mobilisation_id": 68,
+                                "mobilisation_name": "MOB20250068",
+                                "geo_latitude": null,
+                                "geo_longitude": null,
+                                "utilisation_line_ids": [
+                                    {
+                                        "id": 104,
+                                        "utilisation_id": 36,
+                                        "utilisation_name": "UT20250036",
+                                        "quotation_line_id": 654,
+                                        "product_id": 51,
+                                        "product_name": "Multi cleaner 5Ltr",
+                                        "name": "Multi cleaner 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 100,
+                                        "transfered_qty": 100,
+                                        "available_qty": 99,
+                                        "utilised_qty": 5,
+                                        "balanced_qty": 94,
+                                        "price_unit": 542.5,
+                                        "total": 2712.5,
+                                        "line_number": 1,
+                                        "mobilisation_id": null,
+                                        "mobilisation_name": null,
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    },
+                                    {
+                                        "id": 105,
+                                        "utilisation_id": 36,
+                                        "utilisation_name": "UT20250036",
+                                        "quotation_line_id": 655,
+                                        "product_id": 52,
+                                        "product_name": "Green & Safe Chemical 5Ltr",
+                                        "name": "Green & Safe Chemical 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 50,
+                                        "transfered_qty": 50,
+                                        "available_qty": 49,
+                                        "utilised_qty": 5,
+                                        "balanced_qty": 44,
+                                        "price_unit": 62.5,
+                                        "total": 312.5,
+                                        "line_number": 2,
+                                        "mobilisation_id": null,
+                                        "mobilisation_name": null,
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    }
+                                ],
+                                "partner_id": 11930,
+                                "partner_name": "Emaar Community Management",
+                                "customer_ref": null,
+                                "contact_name_id": 11931,
+                                "contact_name_name": "Anil V S",
+                                "total_outstanding": null,
+                                "con_state": "draft",
+                                "blacklist_status": "no",
+                                "blacklist_reason": null,
+                                "requested_on": "2025-12-10",
+                                "requested_by": 10902,
+                                "requested_name": "Sean Patrick Rogers",
+                                "user_id": 7,
+                                "user_name": "Sean Patrick Rogers",
+                                "company_id": 1,
+                                "company_name": "GRAKO LLC",
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "state": "confirmed",
+                                "stock_location_id": 44,
+                                "stock_location_name": "Stock - Dubai Creek",
+                                "site_location_id": 45,
+                                "site_location_name": "Dubai Creek",
+                                "pick_count": null,
+                                "picking_ids": null
+                            },
+                            {
+                                "name": "UT20250035",
+                                "project_id": "project.project(24,)",
+                                "project_ref": "PR20250023",
+                                "project_location": "Dubai Creek",
+                                "task_ids": "project.task(76,)",
+                                "project_manager_id": 10902,
+                                "project_manager_name": "Sean Patrick Rogers",
+                                "date_start": "2025-10-22",
+                                "date": "2025-11-30",
+                                "project_sow": "<p data-last-history-steps=\",59734591674650,2658158289441987,1435838530279774,1808458622490805,1134855701798507,3343053612458934,3563895251930907,858525988023221,2587338985786978,3847260696599468,3814542223011836,4074682126922083,2585257680821381,4434486375681058,2579458029044127,1983894313165109,88277632430628,2103767328260578,1174259192158303,481326344882263,4196464753190580,1125953438401425,4104145270744251,2487752940107766,672160873652047,2849200795891014,3028619903173309,3427827254854435,1492036864168030,2141376170294053,2218663242196853,1599439037384385,2418252708848037,2840469346017245,2727079659473886,1334386984579087,1892426334206865,112640966104956,1151621485586035,3651764017474643,3513967375522515,2092360692965483,3739159549924098,1517055438949723,2353438082864396,1155003449056675,2348479127209713,4412152387637106,2637266640657497,1397101926405835,281774975418026,4188821846405664,1587332746886929,1352070185572027,1245014550420399,338527227480591,2765321237167904,1983276470536829,1309783378357677,3389335848934826,1846743160531309,4313705692140163,3752823280218886,2238519442104304,479434149040148,4105537522510224,113201355038292,2623082275885491,3433025510185092,3496556802068107,1688631005874814,1623823932594002,518646356591705,1448668887369569,580997636990056,1309409483817829,1812632991184610,3592843694948000,2629145570318529,103985588692887,1396379102785242,2144755914609861,2066109192244740,4184213446752302,4130587326301753,424787754232345,2361942989415647,1478064027232911,550947560549262,2808019999619393,4076357435734295,933325009365306,3385600352272036,520878552817148,3123485665442939,3792521342773819,3298780190038287,3466914322730128,728495894237769,2562749267375173,1450711058900280,1296202629809592,3403153229044113,4315740168636992\">Emaar properties looking for DCP cleaning and contated by Mr Anil&nbsp;</p>",
+                                "warehouse_id": null,
+                                "warehouse_name": null,
+                                "utilisation_date": "2025-12-10",
+                                "mobilisation_id": 68,
+                                "mobilisation_name": "MOB20250068",
+                                "geo_latitude": null,
+                                "geo_longitude": null,
+                                "utilisation_line_ids": [
+                                    {
+                                        "id": 102,
+                                        "utilisation_id": 35,
+                                        "utilisation_name": "UT20250035",
+                                        "quotation_line_id": 654,
+                                        "product_id": 51,
+                                        "product_name": "Multi cleaner 5Ltr",
+                                        "name": "Multi cleaner 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 100,
+                                        "transfered_qty": 100,
+                                        "available_qty": 99,
+                                        "utilised_qty": 5,
+                                        "balanced_qty": 94,
+                                        "price_unit": 542.5,
+                                        "total": 2712.5,
+                                        "line_number": 1,
+                                        "mobilisation_id": null,
+                                        "mobilisation_name": null,
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    },
+                                    {
+                                        "id": 103,
+                                        "utilisation_id": 35,
+                                        "utilisation_name": "UT20250035",
+                                        "quotation_line_id": 655,
+                                        "product_id": 52,
+                                        "product_name": "Green & Safe Chemical 5Ltr",
+                                        "name": "Green & Safe Chemical 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 50,
+                                        "transfered_qty": 50,
+                                        "available_qty": 49,
+                                        "utilised_qty": 5,
+                                        "balanced_qty": 44,
+                                        "price_unit": 62.5,
+                                        "total": 312.5,
+                                        "line_number": 2,
+                                        "mobilisation_id": null,
+                                        "mobilisation_name": null,
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    }
+                                ],
+                                "partner_id": 11930,
+                                "partner_name": "Emaar Community Management",
+                                "customer_ref": null,
+                                "contact_name_id": 11931,
+                                "contact_name_name": "Anil V S",
+                                "total_outstanding": null,
+                                "con_state": "draft",
+                                "blacklist_status": "no",
+                                "blacklist_reason": null,
+                                "requested_on": "2025-12-10",
+                                "requested_by": 10902,
+                                "requested_name": "Sean Patrick Rogers",
+                                "user_id": 7,
+                                "user_name": "Sean Patrick Rogers",
+                                "company_id": 1,
+                                "company_name": "GRAKO LLC",
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "state": "confirmed",
+                                "stock_location_id": 44,
+                                "stock_location_name": "Stock - Dubai Creek",
+                                "site_location_id": 45,
+                                "site_location_name": "Dubai Creek",
+                                "pick_count": null,
+                                "picking_ids": null
+                            },
+                            {
+                                "name": "UT20250034",
+                                "project_id": "project.project(24,)",
+                                "project_ref": "PR20250023",
+                                "project_location": "Dubai Creek",
+                                "task_ids": "project.task(76,)",
+                                "project_manager_id": 10902,
+                                "project_manager_name": "Sean Patrick Rogers",
+                                "date_start": "2025-10-22",
+                                "date": "2025-11-30",
+                                "project_sow": "<p data-last-history-steps=\",59734591674650,2658158289441987,1435838530279774,1808458622490805,1134855701798507,3343053612458934,3563895251930907,858525988023221,2587338985786978,3847260696599468,3814542223011836,4074682126922083,2585257680821381,4434486375681058,2579458029044127,1983894313165109,88277632430628,2103767328260578,1174259192158303,481326344882263,4196464753190580,1125953438401425,4104145270744251,2487752940107766,672160873652047,2849200795891014,3028619903173309,3427827254854435,1492036864168030,2141376170294053,2218663242196853,1599439037384385,2418252708848037,2840469346017245,2727079659473886,1334386984579087,1892426334206865,112640966104956,1151621485586035,3651764017474643,3513967375522515,2092360692965483,3739159549924098,1517055438949723,2353438082864396,1155003449056675,2348479127209713,4412152387637106,2637266640657497,1397101926405835,281774975418026,4188821846405664,1587332746886929,1352070185572027,1245014550420399,338527227480591,2765321237167904,1983276470536829,1309783378357677,3389335848934826,1846743160531309,4313705692140163,3752823280218886,2238519442104304,479434149040148,4105537522510224,113201355038292,2623082275885491,3433025510185092,3496556802068107,1688631005874814,1623823932594002,518646356591705,1448668887369569,580997636990056,1309409483817829,1812632991184610,3592843694948000,2629145570318529,103985588692887,1396379102785242,2144755914609861,2066109192244740,4184213446752302,4130587326301753,424787754232345,2361942989415647,1478064027232911,550947560549262,2808019999619393,4076357435734295,933325009365306,3385600352272036,520878552817148,3123485665442939,3792521342773819,3298780190038287,3466914322730128,728495894237769,2562749267375173,1450711058900280,1296202629809592,3403153229044113,4315740168636992\">Emaar properties looking for DCP cleaning and contated by Mr Anil&nbsp;</p>",
+                                "warehouse_id": null,
+                                "warehouse_name": null,
+                                "utilisation_date": "2025-12-09",
+                                "mobilisation_id": 68,
+                                "mobilisation_name": "MOB20250068",
+                                "geo_latitude": null,
+                                "geo_longitude": null,
+                                "utilisation_line_ids": [
+                                    {
+                                        "id": 100,
+                                        "utilisation_id": 34,
+                                        "utilisation_name": "UT20250034",
+                                        "quotation_line_id": 654,
+                                        "product_id": 51,
+                                        "product_name": "Multi cleaner 5Ltr",
+                                        "name": "Multi cleaner 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 100,
+                                        "transfered_qty": 100,
+                                        "available_qty": 99,
+                                        "utilised_qty": 5,
+                                        "balanced_qty": 94,
+                                        "price_unit": 542.5,
+                                        "total": 2712.5,
+                                        "line_number": 1,
+                                        "mobilisation_id": null,
+                                        "mobilisation_name": null,
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    },
+                                    {
+                                        "id": 101,
+                                        "utilisation_id": 34,
+                                        "utilisation_name": "UT20250034",
+                                        "quotation_line_id": 655,
+                                        "product_id": 52,
+                                        "product_name": "Green & Safe Chemical 5Ltr",
+                                        "name": "Green & Safe Chemical 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 50,
+                                        "transfered_qty": 50,
+                                        "available_qty": 49,
+                                        "utilised_qty": 5,
+                                        "balanced_qty": 44,
+                                        "price_unit": 62.5,
+                                        "total": 312.5,
+                                        "line_number": 2,
+                                        "mobilisation_id": null,
+                                        "mobilisation_name": null,
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    }
+                                ],
+                                "partner_id": 11930,
+                                "partner_name": "Emaar Community Management",
+                                "customer_ref": null,
+                                "contact_name_id": 11931,
+                                "contact_name_name": "Anil V S",
+                                "total_outstanding": null,
+                                "con_state": "draft",
+                                "blacklist_status": "no",
+                                "blacklist_reason": null,
+                                "requested_on": "2025-12-09",
+                                "requested_by": 10902,
+                                "requested_name": "Sean Patrick Rogers",
+                                "user_id": 7,
+                                "user_name": "Sean Patrick Rogers",
+                                "company_id": 1,
+                                "company_name": "GRAKO LLC",
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "state": "confirmed",
+                                "stock_location_id": 44,
+                                "stock_location_name": "Stock - Dubai Creek",
+                                "site_location_id": 45,
+                                "site_location_name": "Dubai Creek",
+                                "pick_count": null,
+                                "picking_ids": null
+                            },
+                            {
+                                "name": "UT20250026",
+                                "project_id": "project.project(24,)",
+                                "project_ref": "PR20250023",
+                                "project_location": "Dubai Creek",
+                                "task_ids": "project.task(76,)",
+                                "project_manager_id": 10902,
+                                "project_manager_name": "Sean Patrick Rogers",
+                                "date_start": "2025-10-22",
+                                "date": "2025-11-30",
+                                "project_sow": "<p data-last-history-steps=\",59734591674650,2658158289441987,1435838530279774,1808458622490805,1134855701798507,3343053612458934,3563895251930907,858525988023221,2587338985786978,3847260696599468,3814542223011836,4074682126922083,2585257680821381,4434486375681058,2579458029044127,1983894313165109,88277632430628,2103767328260578,1174259192158303,481326344882263,4196464753190580,1125953438401425,4104145270744251,2487752940107766,672160873652047,2849200795891014,3028619903173309,3427827254854435,1492036864168030,2141376170294053,2218663242196853,1599439037384385,2418252708848037,2840469346017245,2727079659473886,1334386984579087,1892426334206865,112640966104956,1151621485586035,3651764017474643,3513967375522515,2092360692965483,3739159549924098,1517055438949723,2353438082864396,1155003449056675,2348479127209713,4412152387637106,2637266640657497,1397101926405835,281774975418026,4188821846405664,1587332746886929,1352070185572027,1245014550420399,338527227480591,2765321237167904,1983276470536829,1309783378357677,3389335848934826,1846743160531309,4313705692140163,3752823280218886,2238519442104304,479434149040148,4105537522510224,113201355038292,2623082275885491,3433025510185092,3496556802068107,1688631005874814,1623823932594002,518646356591705,1448668887369569,580997636990056,1309409483817829,1812632991184610,3592843694948000,2629145570318529,103985588692887,1396379102785242,2144755914609861,2066109192244740,4184213446752302,4130587326301753,424787754232345,2361942989415647,1478064027232911,550947560549262,2808019999619393,4076357435734295,933325009365306,3385600352272036,520878552817148,3123485665442939,3792521342773819,3298780190038287,3466914322730128,728495894237769,2562749267375173,1450711058900280,1296202629809592,3403153229044113,4315740168636992\">Emaar properties looking for DCP cleaning and contated by Mr Anil&nbsp;</p>",
+                                "warehouse_id": null,
+                                "warehouse_name": null,
+                                "utilisation_date": "2025-12-03",
+                                "mobilisation_id": 68,
+                                "mobilisation_name": "MOB20250068",
+                                "geo_latitude": null,
+                                "geo_longitude": null,
+                                "utilisation_line_ids": [
+                                    {
+                                        "id": 94,
+                                        "utilisation_id": 26,
+                                        "utilisation_name": "UT20250026",
+                                        "quotation_line_id": 654,
+                                        "product_id": 51,
+                                        "product_name": "Multi cleaner 5Ltr",
+                                        "name": "Multi cleaner 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 100,
+                                        "transfered_qty": 100,
+                                        "available_qty": 100,
+                                        "utilised_qty": 1,
+                                        "balanced_qty": 99,
+                                        "price_unit": 542.5,
+                                        "total": 542.5,
+                                        "line_number": 1,
+                                        "mobilisation_id": 68,
+                                        "mobilisation_name": "MOB20250068",
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    },
+                                    {
+                                        "id": 95,
+                                        "utilisation_id": 26,
+                                        "utilisation_name": "UT20250026",
+                                        "quotation_line_id": 655,
+                                        "product_id": 52,
+                                        "product_name": "Green & Safe Chemical 5Ltr",
+                                        "name": "Green & Safe Chemical 5Ltr",
+                                        "est_type": "material",
+                                        "requested_qty": 50,
+                                        "transfered_qty": 50,
+                                        "available_qty": 50,
+                                        "utilised_qty": 1,
+                                        "balanced_qty": 49,
+                                        "price_unit": 62.5,
+                                        "total": 62.5,
+                                        "line_number": 2,
+                                        "mobilisation_id": 68,
+                                        "mobilisation_name": "MOB20250068",
+                                        "main_mobilisation_id": null,
+                                        "main_mobilisation_name": null
+                                    }
+                                ],
+                                "partner_id": 11930,
+                                "partner_name": "Emaar Community Management",
+                                "customer_ref": null,
+                                "contact_name_id": 11931,
+                                "contact_name_name": "Anil V S",
+                                "total_outstanding": null,
+                                "con_state": "draft",
+                                "blacklist_status": "no",
+                                "blacklist_reason": null,
+                                "requested_on": "2025-12-03",
+                                "requested_by": 1,
+                                "requested_name": "Administrator",
+                                "user_id": 2,
+                                "user_name": "Administrator",
+                                "company_id": 1,
+                                "company_name": "GRAKO LLC",
+                                "currency_id": 128,
+                                "currency_name": "AED",
+                                "state": "done",
+                                "stock_location_id": 44,
+                                "stock_location_name": "Stock - Dubai Creek",
+                                "site_location_id": 45,
+                                "site_location_name": "Dubai Creek",
+                                "pick_count": 1,
+                                "picking_ids": [
+                                    {
+                                        "id": 80,
+                                        "name": "Grako/INT/00018",
+                                        "partner_details": {
+                                            "customer_id": 11930,
+                                            "name": "Emaar Community Management",
+                                            "street": "Sheikh Zayed Road",
+                                            "street2": null,
+                                            "city": null,
+                                            "zip": null,
+                                            "state_id": 548,
+                                            "state_name": "Dubai",
+                                            "country_id": 2,
+                                            "country_name": "United Arab Emirates",
+                                            "currency_id": 128,
+                                            "currency": "AED",
+                                            "email": null,
+                                            "website": null,
+                                            "phone": "+971 50 957 6443|",
+                                            "mobile": null,
+                                            "trn": null,
+                                            "trade_reg": null,
+                                            "trade_reg_expiry": null,
+                                            "latitude": null,
+                                            "longitude": null,
+                                            "pricelist_id": 1,
+                                            "pricelist_name": "Default",
+                                            "customer_ref": null,
+                                            "payment_type": null,
+                                            "property_credit_limit": null,
+                                            "property_over_credit_limit": null,
+                                            "property_allow_over_credit_limit": false,
+                                            "confirmed_customer": false,
+                                            "customer_blocked": false,
+                                            "payment_terms_id": null,
+                                            "payment_terms_name": null,
+                                            "logo_url": "http://localhost:8075/web/url_image?model=res.partner&id=11930&field=image_1920",
+                                            "contact_name": null,
+                                            "contact_phone": null,
+                                            "customer": true,
+                                            "supplier": false,
+                                            "debit_limit": null,
+                                            "customer_due_amount": 0,
+                                            "customer_overdue_amount": 0,
+                                            "days_sales_outstanding": 0,
+                                            "skip_overdue_check_for_sales": false,
+                                            "contact_list": [],
+                                            "area_code_id": null,
+                                            "area_code_name": null,
+                                            "barcode": null,
+                                            "disable_loc_update": null,
+                                            "employee_id": 10848,
+                                            "employee_name": "Stephani Tannous",
+                                            "company_registry": null,
+                                            "parent_id": null,
+                                            "parent_company_name": null,
+                                            "parent_company_code": null,
+                                            "is_parent_company": false,
+                                            "parent_due_amount": 0,
+                                            "parent_over_due_amount": 0,
+                                            "parent_remain_credit_amount": 0,
+                                            "child_companies": [],
+                                            "child_cont_count": 1,
+                                            "geofencing_feature": false,
+                                            "geofencing_perimeter": 0,
+                                            "total_invoices": 0,
+                                            "total_cancelled_invoices": 0,
+                                            "total_overdue_invoices": 0,
+                                            "total_credit_notes": 0,
+                                            "allow_cust_disc": false,
+                                            "default_cust_disc_percent": null,
+                                            "is_contact": false,
+                                            "total_no_visit": 0,
+                                            "last_visited": false,
+                                            "bounced_payment_count": null,
+                                            "asset_details": null,
+                                            "check_pending_invoices": false,
+                                            "allowed_pending_invoices": 0,
+                                            "overdue_invoices": 0,
+                                            "total_sales_history": 0,
+                                            "top_selling_products": [],
+                                            "sales_history": [],
+                                            "return_history": [],
+                                            "most_returned_products": []
+                                        },
+                                        "partner_id": 11930,
+                                        "partner_name": "Emaar Community Management",
+                                        "picking_type_code": "internal",
+                                        "picking_type_id": 7,
+                                        "picking_type_name": "Internal Transfers",
+                                        "location_id": 44,
+                                        "location_name": "Stock - Dubai Creek",
+                                        "location_dest_id": 45,
+                                        "location_dest_name": "Dubai Creek",
+                                        "scheduled_date": "2025-12-03 13:39:57",
+                                        "date_done": "2025-12-03 13:39:58",
+                                        "origin": "UT20250026 (PR20250023)",
+                                        "system_origin": "OR00080",
+                                        "state": "done",
+                                        "receiver_name": null,
+                                        "receiver_no": null,
+                                        "all_qty_submitted": null,
+                                        "recv_id_img": "http://localhost:8075/web/url_image?model=stock.picking&id=80&field=receiver_identity",
+                                        "act_del_time": null,
+                                        "recv_sign": "http://localhost:8075/web/url_image?model=stock.picking&id=80&field=receiver_signature",
+                                        "stock_move_details": [
+                                            {
+                                                "id": 183,
+                                                "product_id": 51,
+                                                "product_name": "Multi cleaner 5Ltr",
+                                                "tracking": "none",
+                                                "use_expiration_date": false,
+                                                "use_manufacturing_date": false,
+                                                "product_packaging_id": null,
+                                                "product_packaging_name": null,
+                                                "location_final_id": null,
+                                                "location_final_name": null,
+                                                "location_id": 44,
+                                                "location_name": "Stock - Dubai Creek",
+                                                "location_dest_id": 45,
+                                                "location_dest_name": "Dubai Creek",
+                                                "packaging_qty": null,
+                                                "product_uom_qty": 1,
+                                                "received_package_qty": null,
+                                                "quantity": 1,
+                                                "product_uom": 30,
+                                                "product_uom_name": "CAN",
+                                                "lot_ids": [],
+                                                "state": "done",
+                                                "stock_move_line_details": [
+                                                    {
+                                                        "id": 235,
+                                                        "product_id": 51,
+                                                        "expiration_date": null,
+                                                        "lot_id": null,
+                                                        "lot_name": null,
+                                                        "package_id": null,
+                                                        "package_name": null,
+                                                        "result_package_id": null,
+                                                        "result_package_name": null,
+                                                        "location_id": 44,
+                                                        "location_name": "Stock - Dubai Creek",
+                                                        "location_dest_id": 45,
+                                                        "location_dest_name": "Dubai Creek",
+                                                        "picking_partner_id": 11930,
+                                                        "picking_partner_name": "Emaar Community Management",
+                                                        "company_id": 1,
+                                                        "company_name": "GRAKO LLC",
+                                                        "quantity": 1,
+                                                        "product_uom_id": 30,
+                                                        "product_uom_name": "CAN",
+                                                        "state": "done",
+                                                        "qty_submitted": false,
+                                                        "manufacture_date": null,
+                                                        "product_packaging_id": null,
+                                                        "product_packaging_name": null,
+                                                        "qty_in_pack": null,
+                                                        "packaging_qty": null,
+                                                        "owner_id": 1,
+                                                        "owner_name": "GRAKO LLC",
+                                                        "transaction_type": "delivered",
+                                                        "available_qty": 99,
+                                                        "available_package_qty": null,
+                                                        "check_for_packaging": null,
+                                                        "use_manufacture_date": null,
+                                                        "hs_code": null,
+                                                        "country_of_origin": null,
+                                                        "country_of_origin_name": null,
+                                                        "weight": null,
+                                                        "total_weight": null,
+                                                        "return_reason_id": null,
+                                                        "return_reason_name": null,
+                                                        "qty_returned": null
+                                                    }
+                                                ],
+                                                "qty_in_pack": null,
+                                                "received_pack_qty": null,
+                                                "remaining_pack_qty": null,
+                                                "received_qty": 1,
+                                                "remaining_qty": null,
+                                                "internal_ref": "00088686",
+                                                "barcode": null,
+                                                "available_qty": 100,
+                                                "transaction_type": "delivered",
+                                                "check_for_packaging": null,
+                                                "use_manufacture_date": null,
+                                                "hs_code": null,
+                                                "country_of_origin": null,
+                                                "country_of_origin_name": null,
+                                                "invoice_line_id": null,
+                                                "return_reason_id": null,
+                                                "return_reason_name": null
+                                            },
+                                            {
+                                                "id": 184,
+                                                "product_id": 52,
+                                                "product_name": "Green & Safe Chemical 5Ltr",
+                                                "tracking": "none",
+                                                "use_expiration_date": false,
+                                                "use_manufacturing_date": false,
+                                                "product_packaging_id": null,
+                                                "product_packaging_name": null,
+                                                "location_final_id": null,
+                                                "location_final_name": null,
+                                                "location_id": 44,
+                                                "location_name": "Stock - Dubai Creek",
+                                                "location_dest_id": 45,
+                                                "location_dest_name": "Dubai Creek",
+                                                "packaging_qty": null,
+                                                "product_uom_qty": 1,
+                                                "received_package_qty": null,
+                                                "quantity": 1,
+                                                "product_uom": 30,
+                                                "product_uom_name": "CAN",
+                                                "lot_ids": [],
+                                                "state": "done",
+                                                "stock_move_line_details": [
+                                                    {
+                                                        "id": 236,
+                                                        "product_id": 52,
+                                                        "expiration_date": null,
+                                                        "lot_id": null,
+                                                        "lot_name": null,
+                                                        "package_id": null,
+                                                        "package_name": null,
+                                                        "result_package_id": null,
+                                                        "result_package_name": null,
+                                                        "location_id": 44,
+                                                        "location_name": "Stock - Dubai Creek",
+                                                        "location_dest_id": 45,
+                                                        "location_dest_name": "Dubai Creek",
+                                                        "picking_partner_id": 11930,
+                                                        "picking_partner_name": "Emaar Community Management",
+                                                        "company_id": 1,
+                                                        "company_name": "GRAKO LLC",
+                                                        "quantity": 1,
+                                                        "product_uom_id": 30,
+                                                        "product_uom_name": "CAN",
+                                                        "state": "done",
+                                                        "qty_submitted": false,
+                                                        "manufacture_date": null,
+                                                        "product_packaging_id": null,
+                                                        "product_packaging_name": null,
+                                                        "qty_in_pack": null,
+                                                        "packaging_qty": null,
+                                                        "owner_id": 1,
+                                                        "owner_name": "GRAKO LLC",
+                                                        "transaction_type": "delivered",
+                                                        "available_qty": 49,
+                                                        "available_package_qty": null,
+                                                        "check_for_packaging": null,
+                                                        "use_manufacture_date": null,
+                                                        "hs_code": null,
+                                                        "country_of_origin": null,
+                                                        "country_of_origin_name": null,
+                                                        "weight": null,
+                                                        "total_weight": null,
+                                                        "return_reason_id": null,
+                                                        "return_reason_name": null,
+                                                        "qty_returned": null
+                                                    }
+                                                ],
+                                                "qty_in_pack": null,
+                                                "received_pack_qty": null,
+                                                "remaining_pack_qty": null,
+                                                "received_qty": 1,
+                                                "remaining_qty": null,
+                                                "internal_ref": "00088688",
+                                                "barcode": null,
+                                                "available_qty": 50,
+                                                "transaction_type": "delivered",
+                                                "check_for_packaging": null,
+                                                "use_manufacture_date": null,
+                                                "hs_code": null,
+                                                "country_of_origin": null,
+                                                "country_of_origin_name": null,
+                                                "invoice_line_id": null,
+                                                "return_reason_id": null,
+                                                "return_reason_name": null
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "pick_count": 1,
+                        "picking_ids": "stock.picking(80,)",
+                        "timesheet_ids": "account.analytic.line(260,)",
+                        "emp_log_time": "checkout",
+                        "cancel_reason_id": null,
+                        "cancel_date": null,
+                        "cancel_user_id": null,
+                        "reshedule_reason_id": null,
+                        "reshedule_date": null,
+                        "reshedule_user_id": null,
+                        "reshedule_info_ids": null,
+                        "notified_absent_emp": null
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

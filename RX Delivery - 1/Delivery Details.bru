@@ -1,0 +1,233 @@
+meta {
+  name: Delivery Details
+  type: http
+  seq: 4
+}
+
+post {
+  url: localhost:8078/web/get_simple_delivery_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{}}}
+}
+
+script:post-response {
+  var template = `
+  <style type="text/css">
+      .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}
+      .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}
+      .tftable tr {background-color:#ffffff;}
+      .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}
+      .tftable tr:hover {background-color:#e0ffff;}
+  </style>
+  
+  <table class="tftable" border="1">
+      <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Partner ID</th>
+          <th>Partner Name</th>
+          <th>Picking Type Code</th>
+          <th>Picking Type ID</th>
+          <th>Picking Type Name</th>
+          <th>Location ID</th>
+          <th>Location Name</th>
+          <th>Scheduled Date</th>
+          <th>Date Done</th>
+          <th>State</th>
+      </tr>
+      
+      {{#each response.result.payload.get_delivery_details}}
+          <tr>
+              <td>{{id}}</td>
+              <td>{{name}}</td>
+              <td>{{partner_id}}</td>
+              <td>{{partner_name}}</td>
+              <td>{{picking_type_code}}</td>
+              <td>{{picking_type_id}}</td>
+              <td>{{picking_type_name}}</td>
+              <td>{{location_id}}</td>
+              <td>{{location_name}}</td>
+              <td>{{scheduled_date}}</td>
+              <td>{{date_done}}</td>
+              <td>{{state}}</td>
+          </tr>
+      {{/each}}
+  </table>
+  `;
+  
+  function constructVisualizerPayload() {
+      return {response: res.getBody()};
+  }
+  
+  bru.visualize("html", {
+      template: template,
+      data: constructVisualizerPayload()
+  });
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Delivery Details Copy
+  
+  request: {
+    url: localhost:8078/web/get_simple_delivery_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{"data":{}}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Thu, 14 Aug 2025 05:35:31 GMT
+      Content-Length: 2928
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "get_delivery_details": [
+                        {
+                            "id": 1040,
+                            "name": "MS/OUT/00001",
+                            "partner_id": 24166,
+                            "partner_name": "Aster Pharmacy",
+                            "picking_type_code": "outgoing",
+                            "picking_type_id": 2,
+                            "picking_type_name": "Delivery Orders",
+                            "location_id": 8,
+                            "location_name": "Stock",
+                            "scheduled_date": "2025-08-04 13:38:52",
+                            "date_done": "2025-08-04 13:38:52",
+                            "origin": "INV/2025/00001",
+                            "system_origin": "OR00070",
+                            "state": "done",
+                            "receiver_name": null,
+                            "receiver_no": null,
+                            "all_qty_submitted": null,
+                            "recv_id_img": "http://localhost:8078/web/url_image?model=stock.picking&id=1040&field=receiver_identity",
+                            "act_del_time": null,
+                            "recv_sign": "http://localhost:8078/web/url_image?model=stock.picking&id=1040&field=receiver_signature",
+                            "stock_move_details": [
+                                {
+                                    "id": 2507,
+                                    "product_id": 6288,
+                                    "product_name": "MRXP BI-EST (50:50) 2MG / TESTOSTERONE 1MG / PROGESTERONE 10MG / 1 ML TRANSDERMAL CREAM",
+                                    "tracking": "lot",
+                                    "use_expiration_date": true,
+                                    "use_manufacturing_date": true,
+                                    "product_packaging_id": null,
+                                    "product_packaging_name": null,
+                                    "location_final_id": null,
+                                    "location_final_name": null,
+                                    "packaging_qty": null,
+                                    "product_uom_qty": 1,
+                                    "received_package_qty": null,
+                                    "quantity": 1,
+                                    "product_uom": 1,
+                                    "product_uom_name": "Units",
+                                    "lot_ids": [
+                                        2681
+                                    ],
+                                    "state": "done",
+                                    "stock_move_line_details": [
+                                        {
+                                            "id": 11018,
+                                            "product_id": 6288,
+                                            "expiration_date": "2025-11-02 11:49:47",
+                                            "lot_id": 2681,
+                                            "lot_name": "RX201",
+                                            "package_id": null,
+                                            "package_name": null,
+                                            "result_package_id": null,
+                                            "result_package_name": null,
+                                            "location_id": 8,
+                                            "location_name": "Stock",
+                                            "location_dest_id": 5,
+                                            "location_dest_name": "Customers",
+                                            "picking_partner_id": 24166,
+                                            "picking_partner_name": "Aster Pharmacy",
+                                            "company_id": 1,
+                                            "company_name": "Magenta Rx Compounding Pharmacy",
+                                            "quantity": 1,
+                                            "product_uom_id": 1,
+                                            "product_uom_name": "Units",
+                                            "state": "done",
+                                            "qty_submitted": false,
+                                            "manufacture_date": "2025-08-04 11:49:47",
+                                            "product_packaging_id": null,
+                                            "product_packaging_name": null,
+                                            "qty_in_pack": null,
+                                            "packaging_qty": null,
+                                            "owner_id": 1,
+                                            "owner_name": "Magenta Rx Compounding Pharmacy",
+                                            "transaction_type": "delivered",
+                                            "available_qty": null,
+                                            "available_package_qty": null,
+                                            "check_for_packaging": null,
+                                            "use_manufacture_date": true,
+                                            "hs_code": null,
+                                            "country_of_origin": null,
+                                            "country_of_origin_name": null,
+                                            "weight": null,
+                                            "total_weight": null,
+                                            "return_reason_id": null,
+                                            "return_reason_name": null,
+                                            "qty_returned": null
+                                        }
+                                    ],
+                                    "qty_in_pack": null,
+                                    "received_pack_qty": null,
+                                    "remaining_pack_qty": null,
+                                    "received_qty": 1,
+                                    "remaining_qty": null,
+                                    "internal_ref": null,
+                                    "barcode": null,
+                                    "available_qty": 1,
+                                    "transaction_type": "delivered",
+                                    "check_for_packaging": null,
+                                    "use_manufacture_date": true,
+                                    "hs_code": null,
+                                    "country_of_origin": null,
+                                    "country_of_origin_name": null,
+                                    "invoice_line_id": 7173,
+                                    "return_reason_id": null,
+                                    "return_reason_name": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,764 @@
+meta {
+  name: Activity Change Status
+  type: http
+  seq: 39
+}
+
+post {
+  url: 192.168.1.119:8070/web/activity_status_change
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "params": {
+          "data": {
+              "activity_id": 350,
+              "status": "approve"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Activity Change Status - Skip
+  
+  request: {
+    url: 192.168.1.119:8070/web/activity_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 345,
+                  "status": "skip",
+                  "note": "Oru Resathinu indakkiya activitiyaaaaneeey canceled"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 02 May 2025 08:53:11 GMT
+      Content-Length: 571
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_status_change_details": {
+                        "id": 345,
+                        "name": "ACT00344",
+                        "res_name": "GACT00020",
+                        "activity_type_id": 8,
+                        "activity_type_name": "Contract to Renew",
+                        "create_date": "2025-05-02 08:20:41",
+                        "date_deadline": "2025-05-02",
+                        "assigned_employee_id": 1,
+                        "assigned_employee_name": "Administrator",
+                        "employee_id": null,
+                        "employee_name": null,
+                        "approved_employee_id": 12,
+                        "approved_employee_name": "Finance Manager",
+                        "summary": null,
+                        "note": null,
+                        "state": "skip"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Change Status - Cancel
+  
+  request: {
+    url: 192.168.1.119:8070/web/activity_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 347,
+                  "status": "cancel",
+                  "note": "Oru Resathinu indakkiya activitiyaaaaneeey canceled"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 02 May 2025 08:55:16 GMT
+      Content-Length: 611
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_status_change_details": {
+                        "id": 347,
+                        "name": "ACT00346",
+                        "res_name": "GACT00024",
+                        "activity_type_id": 3,
+                        "activity_type_name": "Meeting",
+                        "create_date": "2025-05-02 08:47:57",
+                        "date_deadline": "2025-05-02",
+                        "assigned_employee_id": 1,
+                        "assigned_employee_name": "Administrator",
+                        "employee_id": 17,
+                        "employee_name": "Sales User 6",
+                        "approved_employee_id": 1,
+                        "approved_employee_name": "Administrator",
+                        "summary": "Meeting with clients",
+                        "note": "<p>Meeting with clients</p>",
+                        "state": "cancel"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Change Status - Snooze
+  
+  request: {
+    url: 192.168.1.119:8070/web/activity_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 346,
+                  "status": "snooze",
+                  "note": "Oru Resathinu indakkiya activitiyaaaaneeey canceled"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 02 May 2025 09:12:33 GMT
+      Content-Length: 590
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_status_change_details": {
+                        "id": 346,
+                        "name": "ACT00345",
+                        "res_name": "GACT00023",
+                        "activity_type_id": 8,
+                        "activity_type_name": "Contract to Renew",
+                        "create_date": "2025-05-02 08:26:42",
+                        "date_deadline": "2025-05-09",
+                        "assigned_employee_id": 1,
+                        "assigned_employee_name": "Administrator",
+                        "employee_id": 10,
+                        "employee_name": "Inventory Manager",
+                        "approved_employee_id": 11,
+                        "approved_employee_name": "Accounts Executive",
+                        "summary": null,
+                        "note": null,
+                        "state": "planned"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Change Status - Done
+  
+  request: {
+    url: 192.168.1.119:8070/web/activity_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 346,
+                  "status": "done",
+                  "note": "Completed Success fully"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 02 May 2025 09:16:25 GMT
+      Content-Length: 592
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_status_change_details": {
+                        "id": 346,
+                        "name": "ACT00345",
+                        "res_name": "GACT00023",
+                        "activity_type_id": 8,
+                        "activity_type_name": "Contract to Renew",
+                        "create_date": "2025-05-02 08:26:42",
+                        "date_deadline": "2025-05-09",
+                        "assigned_employee_id": 1,
+                        "assigned_employee_name": "Administrator",
+                        "employee_id": 10,
+                        "employee_name": "Inventory Manager",
+                        "approved_employee_id": 11,
+                        "approved_employee_name": "Accounts Executive",
+                        "summary": null,
+                        "note": null,
+                        "state": "submitted"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Change Status - Approved
+  
+  request: {
+    url: 192.168.1.119:8070/web/activity_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 350,
+                  "status": "approve"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 06 May 2025 05:26:38 GMT
+      Content-Length: 571
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_status_change_details": {
+                        "id": 350,
+                        "name": "ACT00350",
+                        "res_name": "GACT00022",
+                        "activity_type_id": 7,
+                        "activity_type_name": "Order Upsell",
+                        "create_date": "2025-05-06 05:22:02",
+                        "date_deadline": "2025-05-06",
+                        "assigned_employee_id": 1,
+                        "assigned_employee_name": "Administrator",
+                        "employee_id": 17,
+                        "employee_name": "Sales User 6",
+                        "approved_employee_id": 17,
+                        "approved_employee_name": "Sales User 6",
+                        "summary": null,
+                        "note": null,
+                        "state": "done"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Change Status - Snooze
+  
+  request: {
+    url: 192.168.1.119:8070/web/activity_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 346,
+                  "status": "snooze",
+                  "note": "Oru Resathinu indakkiya activitiyaaaaneeey canceled"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 02 May 2025 09:12:33 GMT
+      Content-Length: 590
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_status_change_details": {
+                        "id": 346,
+                        "name": "ACT00345",
+                        "res_name": "GACT00023",
+                        "activity_type_id": 8,
+                        "activity_type_name": "Contract to Renew",
+                        "create_date": "2025-05-02 08:26:42",
+                        "date_deadline": "2025-05-09",
+                        "assigned_employee_id": 1,
+                        "assigned_employee_name": "Administrator",
+                        "employee_id": 10,
+                        "employee_name": "Inventory Manager",
+                        "approved_employee_id": 11,
+                        "approved_employee_name": "Accounts Executive",
+                        "summary": null,
+                        "note": null,
+                        "state": "planned"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Change Status - Cancel
+  
+  request: {
+    url: 192.168.1.119:8070/web/activity_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 347,
+                  "status": "cancel",
+                  "note": "Oru Resathinu indakkiya activitiyaaaaneeey canceled"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 02 May 2025 08:55:16 GMT
+      Content-Length: 611
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_status_change_details": {
+                        "id": 347,
+                        "name": "ACT00346",
+                        "res_name": "GACT00024",
+                        "activity_type_id": 3,
+                        "activity_type_name": "Meeting",
+                        "create_date": "2025-05-02 08:47:57",
+                        "date_deadline": "2025-05-02",
+                        "assigned_employee_id": 1,
+                        "assigned_employee_name": "Administrator",
+                        "employee_id": 17,
+                        "employee_name": "Sales User 6",
+                        "approved_employee_id": 1,
+                        "approved_employee_name": "Administrator",
+                        "summary": "Meeting with clients",
+                        "note": "<p>Meeting with clients</p>",
+                        "state": "cancel"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Change Status - Done
+  
+  request: {
+    url: 192.168.1.119:8070/web/activity_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 346,
+                  "status": "done",
+                  "note": "Completed Success fully"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 02 May 2025 09:16:25 GMT
+      Content-Length: 592
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_status_change_details": {
+                        "id": 346,
+                        "name": "ACT00345",
+                        "res_name": "GACT00023",
+                        "activity_type_id": 8,
+                        "activity_type_name": "Contract to Renew",
+                        "create_date": "2025-05-02 08:26:42",
+                        "date_deadline": "2025-05-09",
+                        "assigned_employee_id": 1,
+                        "assigned_employee_name": "Administrator",
+                        "employee_id": 10,
+                        "employee_name": "Inventory Manager",
+                        "approved_employee_id": 11,
+                        "approved_employee_name": "Accounts Executive",
+                        "summary": null,
+                        "note": null,
+                        "state": "submitted"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Change Status - Approved
+  
+  request: {
+    url: 192.168.1.119:8070/web/activity_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 350,
+                  "status": "approve"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Tue, 06 May 2025 05:26:38 GMT
+      Content-Length: 571
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_status_change_details": {
+                        "id": 350,
+                        "name": "ACT00350",
+                        "res_name": "GACT00022",
+                        "activity_type_id": 7,
+                        "activity_type_name": "Order Upsell",
+                        "create_date": "2025-05-06 05:22:02",
+                        "date_deadline": "2025-05-06",
+                        "assigned_employee_id": 1,
+                        "assigned_employee_name": "Administrator",
+                        "employee_id": 17,
+                        "employee_name": "Sales User 6",
+                        "approved_employee_id": 17,
+                        "approved_employee_name": "Sales User 6",
+                        "summary": null,
+                        "note": null,
+                        "state": "done"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Activity Change Status - Skip
+  
+  request: {
+    url: 192.168.1.119:8070/web/activity_status_change
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "params": {
+              "data": {
+                  "activity_id": 345,
+                  "status": "skip",
+                  "note": "Oru Resathinu indakkiya activitiyaaaaneeey canceled"
+              }
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Server: Werkzeug/3.0.1 Python/3.12.3
+      Date: Fri, 02 May 2025 08:53:11 GMT
+      Content-Length: 571
+      Content-Type: application/json; charset=utf-8
+      X-Content-Type-Options: nosniff
+      Connection: close
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "activity_status_change_details": {
+                        "id": 345,
+                        "name": "ACT00344",
+                        "res_name": "GACT00020",
+                        "activity_type_id": 8,
+                        "activity_type_name": "Contract to Renew",
+                        "create_date": "2025-05-02 08:20:41",
+                        "date_deadline": "2025-05-02",
+                        "assigned_employee_id": 1,
+                        "assigned_employee_name": "Administrator",
+                        "employee_id": null,
+                        "employee_name": null,
+                        "approved_employee_id": 12,
+                        "approved_employee_name": "Finance Manager",
+                        "summary": null,
+                        "note": null,
+                        "state": "skip"
+                    }
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

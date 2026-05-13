@@ -1,0 +1,225 @@
+meta {
+  name: Segments
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8069/web/get_segment_details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Segments
+  
+  request: {
+    url: http://localhost:8069/web/get_segment_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 1207
+      Set-Cookie: session_id=5c3ca46c86c87dc929486e914d344aceef2da3e9; Expires=Sun, 22-Sep-2024 08:54:11 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 24 Jun 2024 08:54:11 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "main_segments": [
+                        {
+                            "id": 1,
+                            "name": "COURIER",
+                            "opportunity_id": 14,
+                            "opportunity_name": "Courier",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "create_quot_contract": null
+                        },
+                        {
+                            "id": 2,
+                            "name": "IMPORT",
+                            "opportunity_id": 15,
+                            "opportunity_name": "Freight Forwarding",
+                            "department_id": 68,
+                            "department_name": "Import",
+                            "create_quot_contract": null
+                        },
+                        {
+                            "id": 3,
+                            "name": "EXPORT",
+                            "opportunity_id": 15,
+                            "opportunity_name": "Freight Forwarding",
+                            "department_id": 64,
+                            "department_name": "Export",
+                            "create_quot_contract": null
+                        },
+                        {
+                            "id": 4,
+                            "name": "BROKERAGE",
+                            "opportunity_id": 15,
+                            "opportunity_name": "Freight Forwarding",
+                            "department_id": 62,
+                            "department_name": "Brokerage",
+                            "create_quot_contract": null
+                        },
+                        {
+                            "id": 5,
+                            "name": "TRANSHIPMENT",
+                            "opportunity_id": 15,
+                            "opportunity_name": "Freight Forwarding",
+                            "department_id": 65,
+                            "department_name": "Freight Forwarding Department",
+                            "create_quot_contract": null
+                        },
+                        {
+                            "id": 6,
+                            "name": "WAREHOUSE",
+                            "opportunity_id": 15,
+                            "opportunity_name": "Freight Forwarding",
+                            "department_id": 75,
+                            "department_name": "Warehouse",
+                            "create_quot_contract": true
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: Segments
+  
+  request: {
+    url: http://localhost:8069/web/get_segment_details
+    method: POST
+    mode: json
+    body:json: {
+      {"params":{}}
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+      Content-Length: 1207
+      Set-Cookie: session_id=5c3ca46c86c87dc929486e914d344aceef2da3e9; Expires=Sun, 22-Sep-2024 08:54:11 GMT; Max-Age=7776000; HttpOnly; Path=/
+      Server: Werkzeug/0.16.1 Python/3.10.12
+      Date: Mon, 24 Jun 2024 08:54:11 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "jsonrpc": "2.0",
+            "id": null,
+            "result": {
+                "success": true,
+                "payload": {
+                    "main_segments": [
+                        {
+                            "id": 1,
+                            "name": "COURIER",
+                            "opportunity_id": 14,
+                            "opportunity_name": "Courier",
+                            "department_id": 74,
+                            "department_name": "Sales Department",
+                            "create_quot_contract": null
+                        },
+                        {
+                            "id": 2,
+                            "name": "IMPORT",
+                            "opportunity_id": 15,
+                            "opportunity_name": "Freight Forwarding",
+                            "department_id": 68,
+                            "department_name": "Import",
+                            "create_quot_contract": null
+                        },
+                        {
+                            "id": 3,
+                            "name": "EXPORT",
+                            "opportunity_id": 15,
+                            "opportunity_name": "Freight Forwarding",
+                            "department_id": 64,
+                            "department_name": "Export",
+                            "create_quot_contract": null
+                        },
+                        {
+                            "id": 4,
+                            "name": "BROKERAGE",
+                            "opportunity_id": 15,
+                            "opportunity_name": "Freight Forwarding",
+                            "department_id": 62,
+                            "department_name": "Brokerage",
+                            "create_quot_contract": null
+                        },
+                        {
+                            "id": 5,
+                            "name": "TRANSHIPMENT",
+                            "opportunity_id": 15,
+                            "opportunity_name": "Freight Forwarding",
+                            "department_id": 65,
+                            "department_name": "Freight Forwarding Department",
+                            "create_quot_contract": null
+                        },
+                        {
+                            "id": 6,
+                            "name": "WAREHOUSE",
+                            "opportunity_id": 15,
+                            "opportunity_name": "Freight Forwarding",
+                            "department_id": 75,
+                            "department_name": "Warehouse",
+                            "create_quot_contract": true
+                        }
+                    ]
+                },
+                "error": {
+                    "code": 0,
+                    "message": ""
+                }
+            }
+        }
+      '''
+    }
+  }
+}

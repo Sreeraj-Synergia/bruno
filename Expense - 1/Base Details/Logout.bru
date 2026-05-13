@@ -1,0 +1,19 @@
+meta {
+  name: Logout
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8070/web/session/mobile_logout
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"params":{"data":{}}}
+}
+
+settings {
+  encodeUrl: true
+}
