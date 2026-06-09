@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{Erp3-Local-8072}}/web/database_list"
+  url: "{{Hadeel-Local-8071}}/web/database_list"
   body:
     type: json
     data: "{}"

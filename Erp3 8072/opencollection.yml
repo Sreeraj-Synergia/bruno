@@ -88,6 +88,8 @@ request:
       value: http://172.105.39.211:8071
     - name: db
       value: ""
+    - name: Hadeel-Test
+      value: http://13.204.123.74:8070
 bundled: false
 extensions:
   bruno:

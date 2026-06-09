@@ -1,0 +1,18 @@
+info:
+  name: Internal Locations
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{Hadeel-Local-8071}}/web/get_stock_internal_locations"
+  body:
+    type: json
+    data: '{"params":{}}'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
